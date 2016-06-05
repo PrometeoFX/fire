@@ -2291,7 +2291,9 @@ input.x-form-text {
 }
 .classical.syno-sds-appview {
     padding-left: 22px;
-    position: absolute
+    position: absolute;
+    bottom: 40px;
+    left: -20px;
 }
 .classical.syno-sds-appview .crossbrowser-background {
     background-color: #fff;
