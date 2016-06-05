@@ -1166,8 +1166,10 @@ a,
 	.synohdpackdebug #sds-taskbar-startbutton .x-btn-mc{
 		background-image:url("http://ecore.cloud/web/static/src/img/logo.png") !important;
 		background-size:89px 117px;
-		outline:1px green dashed}}
-#sds-taskbar-startbutton .x-btn-over .x-btn-mc{
+		outline:1px green dashed
+		}
+	}
+/*#sds-taskbar-startbutton .x-btn-over .x-btn-mc{
 		background-position:0px -39px !important;
 	}
 #sds-taskbar-startbutton .x-btn-click .x-btn-mc{
@@ -1175,7 +1177,8 @@ a,
 	}
 #sds-taskbar-startbutton .x-btn-pressed .x-btn-mc{
 		background-position:0px -78px !important;
-	}
+	}*/
+	
 /*Sombra derecha start button*/	
 #sds-taskbar-startbutton .x-btn-mr{
 	display: none;
