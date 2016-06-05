@@ -2272,10 +2272,10 @@ input.x-form-text {
     padding-top: 8px
 }
 .syno-sds-appview .ux-float-layout-ct.sds-float-layout-ct-animate .x-box-item {
-    -moz-transition-property: top, left;
-    -o-transition-property: top, left;
-    -webkit-transition-property: top, left;
-    transition-property: top, left;
+    -moz-transition-property: bottom, left;
+    -o-transition-property: bottom, left;
+    -webkit-transition-property: bottom, left;
+    transition-property: bottom, left;
     -moz-transition-timing-function: ease-in;
     -o-transition-timing-function: ease-in;
     -webkit-transition-timing-function: ease-in;
