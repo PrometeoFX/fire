@@ -823,13 +823,13 @@ a,
 }
 /*Barra de tareas*/
 #sds-taskbar{
-	z-index:5;
+	z-index:11000;
 	position: absolute;
 	bottom: 0;
 	height:40px;
 	width: 100%;
 	background: #fff;
-	box-shadow: 2px -4px 10px#ccc;
+	box-shadow: 2px -3px 5px rgba(191, 191, 191, 0.5);
 }
 
 #sds-taskbar .x-btn-tl,#sds-taskbar .x-btn-tc,#sds-taskbar .x-btn-tr,#sds-taskbar .x-btn-bl,#sds-taskbar .x-btn-bc,#sds-taskbar .x-btn-br{
