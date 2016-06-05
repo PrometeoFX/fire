@@ -1,3 +1,3 @@
-/* Copyright (c) 2015 Synology Inc. All rights reserved. */
+/* All rights reserved. */
 
 (function(){var a=new XMLHttpRequest();document.title=_.a;document.getElementById("b").innerHTML=_.b;document.getElementById("c").innerHTML=_.c;a.onreadystatechange=function(){if(a.readyState==4&&(a.status==200||a.status==304)){var c=String(a.responseText),e=document.open("text/html","replace");e.write(c);e.close()}else{var b=document.styleSheets[0],d=b.rules||b.cssRules;d[0].style.cssText=""}};a.open("GET","/missing",true);a.send()})();

@@ -1,4 +1,4 @@
-/* Copyright (c) 2015 Synology Inc. All rights reserved. */
+/* All rights reserved. */
 
 /*
  * Ext JS Library 3.4.0

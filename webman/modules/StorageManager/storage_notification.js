@@ -1,3 +1,3 @@
-/* Copyright (c) 2015 Synology Inc. All rights reserved. */
+/* All rights reserved. */
 
 Ext.namespace("SYNO.SDS.StorageManager.Notify");SYNO.SDS.StorageManager.Notify.Instance=Ext.extend(SYNO.SDS.AppInstance,{shouldNotifyMsg:function(a,b){return false},onOpen:function(a){this.createUpdater().start()},createUpdater:function(){return this.addAjaxTask({url:"modules/StorageManager/storagehandler.cgi",method:"POST",params:{action:"login_check"},callback:this.updaterHandler,single:true,scope:this})},updaterHandler:function(b,e,a){if(!e){return}var d=Ext.util.JSON.decode(a.responseText);if(!d.success){return}function c(g){var h="";h=_T("volume","volume_warn_ebox_missing");h=String.format(h,g);var f=new SYNO.SDS.MessageBoxV5({modal:true,draggable:false,renderTo:document.body,isAlwaysOnTop:function(){return true}});f.alert(_T("volume","storage_manager"),h)}if(d.isDisplay&&d.disk_contains_crashed_space){c(d.disk_contains_crashed_space)}this.destroy()}});
