@@ -1150,7 +1150,7 @@ a,
 	height:39px;
 }
 #sds-taskbar-startbutton .x-btn-mc{
-	    background-image: url("http://ecore.cloud/web/static/src/img/logo.png") !important;
+	    background-image: url("/webman/resources/images/ecore_logo.png" ) !important !important;
 	    background-size: contain;
 	    background-repeat: no-repeat;
 	    text-align: center;
@@ -1159,12 +1159,12 @@ a,
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-resolution: 144dpi){
 	.synohdpack #sds-taskbar-startbutton .x-btn-mc{
-		background-image:url("http://ecore.cloud/web/static/src/img/logo.png") !important;
+		background-image:url("/webman/resources/images/ecore-logo.png" ) !important;
 		background-size:89px 117px;
 	}}
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-resolution: 144dpi){
 	.synohdpackdebug #sds-taskbar-startbutton .x-btn-mc{
-		background-image:url("http://ecore.cloud/web/static/src/img/logo.png") !important;
+		background-image: url("/webman/resources/images/ecore_.png" ) !important;
 		background-size:89px 117px;
 		outline:1px green dashed
 		}
@@ -1178,7 +1178,7 @@ a,
 #sds-taskbar-startbutton .x-btn-pressed .x-btn-mc{
 		background-position:0px -78px !important;
 	}*/
-	
+
 /*Sombra derecha start button*/	
 #sds-taskbar-startbutton .x-btn-mr{
 	display: none;
