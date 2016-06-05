@@ -2,8 +2,9 @@
     padding: 0;
     color: #505050;
     width: 340px;
-    box-shadow: -2px 5px 8px rgba(0, 0, 0, 0.5);
-    background: url("/synoSDSjslib/images/taskbar/taskbar_shadow.png") #fff repeat-x
+    box-shadow: -2px -2px 8px rgba(0, 0, 0, 0.5);
+    background:  #fff;
+    top: 0 !important;
 }
 .sds-notify-tray-panel .sds-notify-empty-text {
     vertical-align: middle;
