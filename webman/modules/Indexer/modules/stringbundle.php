@@ -33,10 +33,7 @@ class StringBundle {
 		return array_keys($this->strings);
 
 	}
-	/**
-		Search strings for a given key pattern.
-		Return an arry of matched string value
-	*/
+	
 	function getSectionStringsByReg($sec, $keyreg) {
 		$keys = array_keys($this->strings[$sec]);
 		$resultkeys = preg_grep($keyreg, $keys);
@@ -80,13 +77,13 @@ class StringBundle {
 
 	}
 	function ReplaceStringByProduct($s) {
-		$origin = array("_OSNAME_", "_DISKSTATION_");
+		$origin = array("_OSNAME_", "_SERVER_");
 		if ("SRM" === CURRENT_PRODUCT) {
-			$result = array("SRM", "Synology Router");
+			$result = array("SRM", "eCore Router");
 		} else if ("NVR" === CURRENT_PRODUCT) {
-                        $result = array("DSM", "Synology NVR");
+                        $result = array("eCore", "eCore NVR");
 		} else {
-			$result = array("DSM", "eCore Server");
+			$result = array("eCore", "eCore Server");
 		}
 		return str_replace($origin, $result, $s);
 	}
