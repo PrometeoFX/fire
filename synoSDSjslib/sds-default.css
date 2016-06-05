@@ -1150,7 +1150,7 @@ a,
 	height:39px;
 }
 #sds-taskbar-startbutton .x-btn-mc{
-	    background-image: url("/webman/resources/images/ecore_logo.png" ) !important !important;
+	    background-image: url("/webman/resources/images/ecore_logo.png" ) !important;
 	    background-size: contain;
 	    background-repeat: no-repeat;
 	    text-align: center;
