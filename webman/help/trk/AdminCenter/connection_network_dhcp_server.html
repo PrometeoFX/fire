@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DHCP Server</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>DHCP Server</h2>
+<p>DiskStation sunucunuz bir DHCP sunucusunun görevini üstlenebilir ve yerel ağ alanınız içindeki DHCP istemcilerine dinamik IP adreslerini atayabilir.</p>
+
+<h4>DHCP sunucusunu etkinleştirmek için:</h4>
+<ol>
+<li><strong>Denetim Masası</strong> > <strong>Ağ</strong> > <strong>Ağ Arabirimi</strong>'ne gidin.</li>
+<li>Bir ağ arabirimi (ör. LAN) seçin ve <strong>Düzenle</strong> üzerine tıklayın.</li>
+<li><strong>DHCP Sunucusu</strong> sekmesine gidin ve <b>DHCP Sunucusunu etkinleştir</b> öğesini işaretleyin.</li>
+<li>DHCP istemcilerine atanan IP adresleri için DHCP kira süresini (dakika olarak) ayarlamak amacıyla <b>Adres kira süresi</b> alanına bir değer girin.</li>
+<li>
+DHCP istemcilerinin DNS adresini <b>Birincil DNS</b> (gerekli) ve <b>İkincil DNS</b> (isteğe bağlı) alanlarına girin.
+</li>
+<li>
+DHCP sunucusu için etki alanı adını <b>Etki alanı ismi</b> (isteğe bağlı) alanında ayarlayın.
+</li>
+<li>
+<b>Tamam</b>'a tıklayın.
+</li>
+</ol>
+<h4>Alt ağ eklemek için:</h4>
+<ol>
+<li>
+<b>Ekle</b>'ye tıklayın ve ardınan aşağıdaki sütunlarda bulunan bilgileri belirleyin:
+</li>
+<ul>
+<li>
+<b>Etkinleştir</b>: Alt ağı etkinleştirin veya devre dışı bırakın.
+</li>
+<li>
+<b>Başlangıç</b>: Alt ağın birinci IP adresi.
+</li>
+<li>
+<b>Bitiş</b>: Alt ağın sonuncu IP adresi.
+</li>
+<li>
+<b>Ağ maskesi</b>: Alt ağ maskesi.
+</li>
+<li>
+<b>Ağ geçidi</b>: Alt ağın ağ geçidi.
+</li>
+</ul>
+<li>
+<b>Tamam</b>'a tıklayın.
+</li>
+</ol>
+
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>Sadece en fazla 32 alt ağ ekleyebilirsiniz.</li>
+</ul>
+</div>
+
+
+
+<h3>DHCP İstemcileri</h3>
+
+<p>DHCP istemcilerinin listesini ve ağ yapılandırmalarını (ör. MAC adresi, IP adresi, ana bilgisayar adı ve DHCP kira süresi dolmadan önce kalan süre) görmek için, <strong>DHCP İstemcileri</strong> sekmesine gidebilirsiniz.</p>
+
+
+<h3>DHCP Rezervasyonu</h3>
+
+<p>Bir istemcinin DHCP kira yenilemesi sırasında daima aynı IP adresini almasını istiyorsanız, istemciyi adres ayırma listesine ekleyebilirsiniz.</p>
+
+<h4>Bir istemciyi adres ayırma listesine eklemek için:</h4>
+
+<ul>
+<li><b>Ekle</b>'ye tıklayın.</li>
+<li>İstemcinin MAC adresini, istemciye atamak istediğiniz IP adresini ve istemcinin ana bilgisayar adını belirtin. </li>
+<li>Ayarlarınızı kaydetmek için <b>Tamam</b>'a tıklayın.</li>
+</ul>
+
+
+</body>
+</html>

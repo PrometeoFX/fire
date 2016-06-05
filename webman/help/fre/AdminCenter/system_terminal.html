@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Terminal</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Terminal</h2>
+
+<p>L'activation des options dans <strong>Panneau de configuration</strong> &gt; <strong>Terminal &amp; SNMP</strong> &gt; <strong>Terminal</strong> permet &agrave; votre DiskStation de prendre en charge les services d'interface de ligne de commande Telnet et SSH. Vous pouvez &eacute;galement modifier le niveau de s&eacute;curit&eacute; de l'algorithme de chiffrement SSH.</p>
+
+<h4>Pour activer le service Telnet/SSH&nbsp;:</h4>
+<ol>
+<li>V&eacute;rifiez la case &agrave; c&ocirc;t&eacute; du protocole d&eacute;sir&eacute; (SSH ou Telnet).</li>
+<li>Cliquez sur <b>Appliquer</b>.</li>
+</ol>
+<h4>Pour changer le port du service SSH :</h4>
+<ol>
+<li>Dans <strong>Port</strong>, entrez un nouveau num&eacute;ro de port.</li>
+<li>Cliquez sur <b>Appliquer</b>.</li>
+</ol>
+
+<p>Toute une gamme d'algorithmes de chiffrement avec des niveaux de s&eacute;curit&eacute; diff&eacute;rents sont utilis&eacute;s dans le cadre des connexions SSH. Vous pouvez d&eacute;cider des algorithmes &agrave; utiliser afin de r&eacute;pondre au mieux &agrave; vos besoins.</p>
+<h4>Pour modifier le niveau de s&eacute;curit&eacute; d'un algorithme de chiffrement SSH&nbsp;:</h4>
+<ol>
+<li>Cliquez sur <b>Param&egrave;tres avanc&eacute;s</b>.</li>
+<li>S&eacute;lectionnez un niveau de s&eacute;curit&eacute; pour les algorithmes de chiffrement. Si vous souhaitez sp&eacute;cifier exactement les algorithmes qui peuvent &ecirc;tre utilis&eacute;s, s&eacute;lectionnez <b>Personnaliser</b> pour choisir parmi trois groupes&nbsp;: Chiffrement, KEX (Key Exchange) et MAC (Message Authentication Code).</li>
+<li>Cliquez sur <b>Appliquer</b>.</li>
+</ol>
+<p>Certains mod&egrave;les prennent en charge l'acc&eacute;l&eacute;ration mat&eacute;rielle pour certains algorithmes de cryptage. Vous pouvez cocher l'option <b>Utiliser uniquement les chiffrements &agrave; acc&eacute;l&eacute;ration mat&eacute;rielle</b> afin d'am&eacute;liorer les vitesses de transfert des services relatifs &agrave; SSH, notamment la sauvegarde r&eacute;seau chiffr&eacute;e et les services SFPT. Sur la page avanc&eacute;e, les algorithmes en mesure d'utiliser l'acc&eacute;l&eacute;ration mat&eacute;rielle sont indiqu&eacute;s en rouge.</p>
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<ul>
+
+<li>Certains services (par exe. sauvegarde du r&eacute;seau, SFTP) activent automatiquement le SSH et ouvrent le port 22.. Dans ce cas, vous devez activer le service SSH dans <strong>Panneau de configuration</strong> &gt; <strong>Terminal &amp; SNMP</strong> &gt; <strong>Terminal</strong> pour s'enregistrer dans DSM en utilisant SSH.</li>
+<li>SSH/Telnet ne prend en charge la connexion dans le syst&egrave;me qu'avec les comptes <strong>root</strong> ou <strong>admin</strong>.</li>
+<li>Le mot de passe ne peut pas &ecirc;tre laiss&eacute; vide, lorsque vous vous connectez dans le syst&egrave;me avec SSH/Telnet.</li>
+<li>Lorsque SSH est d&eacute;sactiv&eacute;, toutes les connexions SSH sont interrompues, y compris toutes les t&acirc;ches de sauvegarde chiffr&eacute;es du r&eacute;seau qui sont en cours. Nous sugg&eacute;rons d'accomplir les t&acirc;ches de sauvegarde du r&eacute;seau &agrave; nouveau une fois que le service SSH est d&eacute;sactiv&eacute;.</li>
+<li>Merci de noter qu'une mauvaise manipulation ou modification du DiskStation peut causer un dysfonctionnement de la machine ou une perte de donn&eacute;es.</li>
+<li>S&eacute;lectionner un niveau de s&eacute;curit&eacute; sup&eacute;rieur ou utiliser uniquement des cchiffrement &agrave; acc&eacute;l&eacute;ration mat&eacute;rielle peut emp&ecirc;cher des clients SSH de se connecter en raison de probl&egrave;mes de compatibilit&eacute;.</li>
+<li>Selon le niveau de s&eacute;curit&eacute; s&eacute;lectionn&eacute;, il est possible que certains algorithmes qui prennent en charge l'acc&eacute;l&eacute;ration mat&eacute;rielle ne soient pas disponibles.</li>
+</ul>
+</div>
+
+</body>
+</html>

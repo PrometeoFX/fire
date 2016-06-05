@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Cloud Station kullanarak PC/Mac'imdeki verileri nasıl yedeklerim</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Cloud Station kullanarak PC/Mac'imdeki verileri nasıl yedeklerim</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/backup_from_PC/07_1_back_up_your_data_from_pc.png" />
+<h2>Genel Bakış</h2>
+<p>Cloud Station sadece sofistike bir platformlar arası senkronizasyon yazılımı değil, kullanıcılar onu kişisel bilgisayarlarını yedeklemenin daha akıllı bir yöntemi olarak da kullanabilirler. Cloud Station'ı yedekleme ortağınız olarak kullanmanın bazı faydaları burada. Öncelikle, gerçek zamanlı çoğaltım daha iyi bir RPO sağlar, büyük bir olay sonucu bilgisayarınızdaki verilerin kaybedilebileceği (kurtarılamayacağı) süre daha kısa olur. Anlık olmasının yanı sıra, herhangi bir anda büyük miktarda bant genişliği kullanan geleneksel yedeklemelere göre bant genişliğinden önemli ölçüde tasarruf etmenize yardımcı olur. PC istemcinizde dosya boyutunu veya dosya tipini ayarlayarak aynı klasör içinde yedeklenmelerini istemediğiniz dosyaları kolaylıkla filtreleyebilirsiniz. Cloud Station ayrıca tek bir dosyanın 32 geçmiş sürümüne kadar koruyabilir ve sunucu (NAS) tarafından PC istemcinize geri yüklemenizi sağlayabilir.</p>
+
+<h3 class="list_head">1. Cloud Station'ın Synology NAS üzerinde kurulması</h3>
+<ol>
+
+<li>DSM'de <strong>administrator</strong>'a ait bir hesapla oturum açın.</li>
+<li><b>Cloud Station</b>'ı başlatın.</li>
+<li>Kullanıcı ana sayfa özelliğini etkinleştirmediyseniz, etkinleştirmeniz istenecektir. <strong>Tamam</strong>'a tıklayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/01.png" border="1" />
+<li>Kullanıcı ayarları sayfasına yönlendirileceksiniz. Kullanıcı ana sayfalarını etkinleştirerek <b>Uygula</b>'ya tıklayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" />
+<li>Ardından <b>Cloud Station</b>'a geri dönün, etkinleştirmeniz istenecek. <b>Evet</b>'e tıklayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" />
+<div class="code_div"><b>Not:</b> QuickConnect, Synology NAS'ınızı yerel ağınızın dışından kolayca bağlayabilmenizi sağlayan bir aktarma hizmetidir. Evinizde veya ofisinizde değilken dosyalarınızı senkronize etmek istiyorsanız, <b>Denetim Masası</b> > <b>QuickConnect</b> öğesine giderek QuickConnect'i kurmanızı öneririz.</div>
+
+<li><b>Ayrıcalıklar</b> bölümüne giderek hangi kullanıcıların Cloud Station'ı kullanabileceklerini belirleyin. <b>Kaydet</b>'e tıklayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" />
+<li>Yedekleme amacıyla Synology NAS'ınızda bir paylaşımlı klasör ayarlayın. Bunu yapabilmek için, <strong>Denetim Masası</strong> &gt; <strong>Paylaşımlı Klasör</strong> öğesine gidin ve <strong>Oluştur</strong>'a tıklayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" />
+<li>Klasörünüzü adlandırarak ayrıntıları uygun biçimde doldurun. <strong>Tamam</strong>'a tıklayın. Örneğin, dosyayı <strong>Backup</strong> olarak adlandıralım.</li>
+<img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" />
+<li><strong>İzinler</strong> sekmesinde hangi kullanıcıların klasöre erişebileceklerini belirleyin. Örneğin, <strong>admin</strong> kullanıcılarına klasörde <strong>okuma/yazma</strong> izinleri verelim. <strong>Tamam</strong>'a tıklayın. </li>
+<img src="../../images/Backup/1x/backup_from_PC/07.png" border="1" />
+<li><strong>Cloud Station</strong> &gt; <strong>Ayarlar</strong> > <strong>Paylaşım</strong> öğesine gidin ve <b>Yedekleme</b> klasörünü seçin ve <strong>Etkinleştir</strong>'e tıklayın. </li>
+<img src="../../images/Backup/1x/backup_from_PC/08.png" border="1" />
+</ol>
+
+<h3 class="list_head">2. Cloud Station'ın Windows PC'niz üzerinde kurulması</h3>
+<p>Cloud Station'ı Mac veya PC'nizde kurma adımlarını takip edin</p>
+
+<h4>2,1 PC için</h4>
+
+<ol>
+
+<li><strong>Cloud Station</strong> &gt; <strong>Genel Bakış</strong> öğesine gidin ve <strong>İndir</strong> düğmesine tıklayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/09.png" border="1" />
+<li>Windows PC için Cloud Station'ı indirmek için düğmeye tıklayın. (Cloud Station'ı <a href="https://www.synology.com/en-us/support/download" target="_blank">Synology İndirme Merkezi</a>'nden de indirebilirsiniz.)</li>
+<li>Yükleyiciyi bilgisayarınızda başlatarak Cloud Station yükleme talimatlarını takip edin. </li>
+<li>Yüklemeden sonra <strong>Cloud Station</strong>'ı bilgisayarınızda çalıştırın. <strong>Şimdi Başlat</strong>'a tıklayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" />
+<li>Cloud Station çalıştıran Synology NAS'ın adresini (veya QuickConnect ID'sini), kullanıcı adını ve parolayı girin. (Ayrıca sağ taraftaki arama simgesine de tıklayabilirsiniz; Cloud Station otomatik olarak LAN dahilindeki diğer Synology NAS sunucuları arayacaktır). <strong>İleri</strong>'ye tıklayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" />
+<div class="code_div"><b>Not:</b> Girdiğiniz hesaba Synology NAS'taki <strong>Cloud Station</strong> > <strong>Ayrıcalıklar</strong> konumunda ayrıcalık verildiğinden emin olun.</div>
+<li>Görevinizi nasıl kurmak istediğinizi seçin (burada <strong>Gelişmiş Kurulum</strong>'u seçeceğiz, zira yedekleme için özel bir klasör kuruyoruz). <strong>İleri</strong>'ye tıklayın. </li>
+<img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
+<li>Daha önce Synology NAS'ınızda oluşturduğunuz Backup klasörü ile senkronize tutmak için bilgisayarınızda bir klasör seçin. <strong>İleri</strong>'ye tıklayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" />
+<li><strong>Bitti</strong>'ye tıklayarak kurulumu tamamlayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" />
+</ol>
+
+<p><strong>Başka bir görev oluşturmak için</strong>:
+<ol>
+<li><strong>Cloud Station </strong>> <strong>Ayarlar</strong> öğesine giderek bu yeni görev için paylaşımlı bir klasörü etkinleştirin. Örneğin<strong> photo</strong>.​ <strong>photo</strong> için okuma/yazma ayrıcalıklarınızın olduğundan emin olun.</li>
+<img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
+<li>PC'nizde Cloud Station'da <strong>Oluştur</strong> üzerine tıklayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" />
+<li>​Yeni göreviniz için bir Synology NAS seçin. Burada <strong>Bağlı Synology NAS</strong> seçimi yapacağız zira aynı Synology NAS için başka bir görev oluşturuyoruz. <strong>İleri</strong>'ye tıklayın.​</li>
+<img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" />
+<li><strong>Gelişmiş kurulum</strong> öğesini seçin ve kuruluma devam etmek için sihirbazın kalanını izleyin. </li>
+<img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
+</ol>
+
+<h4>2.2 Mac için</h4>
+  <ol>
+    <li><strong>Cloud Station</strong> &gt; <strong>Genel Bakış</strong> öğesine gidin ve <strong>İndir</strong> düğmesine tıklayın.</li>
+
+    <li>Mac için Cloud Station'ı indirmek için düğmeye tıklayın. (Cloud Station'ı <a href="https://www.synology.com/en-us/support/download" target="_blank">Synology İndirme Merkezi</a>'nden de indirebilirsiniz.)</li>
+<img src="../../images/Backup/1x/backup_from_PC/18.png" border="1" />
+    <li>Yükleyiciyi bilgisayarınızda başlatarak Cloud Station yükleme talimatlarını takip edin. </li>
+    <li>Yüklemeden sonra <strong>Cloud Station</strong>'ı bilgisayarınızda çalıştırın. <strong>Şimdi Başlat</strong>'a tıklayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" />      
+<li>Cloud Station çalıştıran Synology NAS'ın adresini (veya QuickConnect ID'sini), kullanıcı adını ve parolayı girin. (Ayrıca sağ taraftaki arama simgesine de tıklayabilirsiniz; Cloud Station otomatik olarak LAN dahilindeki diğer Synology NAS sunucuları arayacaktır). <strong>İleri</strong>'ye tıklayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" />   
+    <div class="code_div"><b>Not:</b> Girdiğiniz hesaba Synology NAS'taki <strong>Cloud Station</strong> > <strong>Ayrıcalıklar</strong> konumunda ayrıcalık verildiğinden emin olun.</div>
+<li>Görevinizi nasıl kurmak istediğinizi seçin (burada <strong>Gelişmiş Kurulum</strong>'u seçeceğiz, zira yedekleme için özel bir klasör kuruyoruz). <strong>İleri</strong>'ye tıklayın. </li>
+<img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
+<li>Daha önce Synology NAS'ınızda oluşturduğunuz Backup klasörü ile senkronize tutmak için bilgisayarınızda bir klasör seçin. <strong>İleri</strong>'ye tıklayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" />
+<li><strong>Bitti</strong>'ye tıklayarak kurulumu tamamlayın.</li>
+  </ol>
+  
+<p><strong>Yeni bir görev oluşturmak için</strong>:
+<ol>
+<li><strong>Cloud Station </strong>> <strong>Ayarlar</strong> öğesine giderek bu yeni görev için paylaşımlı bir klasörü etkinleştirin. Örneğin<strong> photo</strong>.​ <strong>photo</strong> için okuma/yazma ayrıcalıklarınızın olduğundan emin olun.</li>
+<img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
+<li>Bilgisayarınızdaki Cloud Station'da <strong>Oluştur</strong> üzerine tıklayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" />
+<li>​Yeni göreviniz için bir Synology NAS seçin. Burada <strong>Bağlı Synology NAS</strong> seçimi yapacağız zira aynı Synology NAS için başka bir görev oluşturuyoruz. <strong>İleri</strong>'ye tıklayın.​</li>
+<img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" />
+<li><strong>Gelişmiş kurulum</strong> öğesini seçin ve kuruluma devam etmek için sihirbazın kalanını izleyin. </li>
+<img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
+</ol> 
+
+<h3 class="list_head">3. Cloud Station'dan veri alınması</h3>
+<p>Bir dosyayı yanlışlıkla kaldırır veya üzerine yazarsanız, Cloud Station onu kolaylıkla geri alabilmenizi sağlar. </p>  
+<h3>4.1 Senkronizasyonlu bir dosyanın önceki bir sürümünü PC'ye indirme</h3>  
+  <ol>
+      <li>Sistem tepsinizdeki Cloud Station simgesine tıklayın ve klasör simgesine tıklayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/25.png" border="1" />       
+      <li>Seçtiğiniz dosyaya sağ tıklayın ve ardından <strong>Synology Cloud Station</strong> &gt; <strong>Önceki sürümlere gözat</strong> seçimini yapın. </li>
+<img src="../../images/Backup/1x/backup_from_PC/26.png" border="1" />    
+   <li>İndirmek istediğiniz sürümü bulup indirme simgesine tıklayın. </li>
+<img src="../../images/Backup/1x/backup_from_PC/27.png" border="1" />    
+  </ul>
+    <li>Dosya adını girin ve dosyayı kaydetmek için hedefi seçin. 
+</ol>
+<h3>4.1 Senkronizasyonlu bir dosyanın önceki bir sürümünü Mac'e indirme</h3>  
+  <ol>
+      <li>Sistem tepsinizdeki Cloud Station simgesine tıklayın ve klasör simgesine tıklayın.</li>
+<img src="../../images/Backup/1x/backup_from_PC/28.png" border="1" />         
+      <li>Seçtiğiniz dosyaya sağ tıklayın ve ardından <strong>Synology Cloud Station</strong> &gt; <strong>Önceki sürümlere gözat</strong> seçimini yapın. </li>
+<img src="../../images/Backup/1x/backup_from_PC/29.png" border="1" />        
+   <li>İndirmek istediğiniz sürümü bulup indirme simgesine tıklayın. </li>
+<img src="../../images/Backup/1x/backup_from_PC/30.png" border="1" />       
+    <li>Dosya adını girin ve dosyayı kaydetmek için hedefi seçin. 
+</ol>
+<h3>4.3 Senkronizasyonlu bir dosyanın önceki bir sürümünü Cloud Station'dan indirme veya geri yükleme</h3>   
+<ol>
+    <li><strong>Cloud Station </strong>&gt; <strong>Sürüm Geçmişi</strong>&gt; öğesine giderek daha önce oluşturduğunuz <strong>Backup</strong> klasörünü seçin. </li>
+<img src="../../images/Backup/1x/backup_from_PC/31.png" border="1" />    
+    <li>Geri almak istediğiniz dosyayı seçerek <strong>Eylem</strong> > <strong>Önceki sürümlere gözat</strong> öğesine tıklayın. </li>
+<img src="../../images/Backup/1x/backup_from_PC/34.png" border="1" />      
+    <li>İndirmek istediğiniz dosyanın sürümünü seçerek <strong>İndir</strong>'e tıklayın. Ya da seçili sürümün geri yüklenmesini istediğinizden eminseniz <strong>Geri Yükle</strong>'ye tıklayın, geçerli sürümünüzün üzerine yazılır.</li>
+<img src="../../images/Backup/1x/backup_from_PC/35.png" border="1" />    
+  </ol>
+
+<h3 class="list_head">4. Önemli notlar</h3>  
+  <ol>
+<li>Bir dosyanın kazayla silinmesi veya üzerine yazılması durumuna karşın eski sürümleri her zaman saklayın.</li>
+<li>Genel Ayarlar bölümünde, bir dosyayı bilgisayarınızdan sildiğinizde o dosyanın NAS'ınızdan tekrar getirilmesini ya da NAS'ınızdan silinmesini ayarlayabilirsiniz.</li>
+</ol>
+  <h3 class="list_head">5. Verilerinizin daha fazla korunması</h3>
+  
+<p>Verilerinizi korumaya ve yedeklemeye dair daha fazla yöntem için DSM'de sunulan diğer yedekleme hizmetleri hakkında ayrıntılı eğitimleri görmek amacıyla <a href="https://www.synology.com/en-global/knowledgebase/tutorials#BackupRestore" target="_blank">buraya</a> tıklayın.</p>
+
+</div>
+<div class="page-info">
+  <ul>
+    <li>Bu konudaki sonraki: <a href="backup_backup.html">Synology NAS sunucusundaki verilerinizi yedekleyin</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

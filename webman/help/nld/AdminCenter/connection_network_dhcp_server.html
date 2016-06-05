@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DHCP Server</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>DHCP Server</h2>
+<p>Uw DiskStation kan de rol van een DHCP server overnemen en dynamische IP-adressen toewijzen aan DHCP-clients binnen uw lokaal netwerk.</p>
+
+<h4>Om DHCP Server in te schakelen:</h4>
+<ol>
+<li>Ga naar <strong>Configuratiescherm</strong> > <strong>Netwerk</strong> > <strong>Netwerkinterface</strong>.</li>
+<li>Selecteer een netwerkinterface (bijv. LAN) en klik op <strong>Bewerken</strong>.</li>
+<li>Ga naar het tabblad <strong>DHCP Server</strong> en schakel <b>DHCP Server inschakelen</b> in.</li>
+<li>Voer een waarde in het veld <b>Adres leasetijd</b> in om de leasetijd van de DHCP (in minuten) in te stellen voor IP-adressen die aan DHCP-clients worden toegewezen.</li>
+<li>
+Voer het DNS-adres voor DHCP-clients in de velden <b>Primaire DNS</b> (verplicht) en <b>Secundaire DNS</b> (optioneel) in.
+</li>
+<li>
+Stel de domeinnaam voor de DHCP Server in het veld <b>Domeinnaam</b> (optioneel) in.
+</li>
+<li>
+Klik op <b>OK</b>.
+</li>
+</ol>
+<h4>Om een subnet toe te voegen:</h4>
+<ol>
+<li>
+Klik op <b>Toevoegen</b> en specificeer de informatie van de volgende kolommen:
+</li>
+<ul>
+<li>
+<b>Inschakelen</b>: het subnet in- of uitschakelen.
+</li>
+<li>
+<b>Start</b>: het eerste IP-adres van het subnet.
+</li>
+<li>
+<b>Einde</b>: het laatste IP-adres van het subnet.
+</li>
+<li>
+<b>Netmasker</b>: het subnetmasker.
+</li>
+<li>
+<b>Gateway</b>: de gateway van het subnet.
+</li>
+</ul>
+<li>
+Klik op <b>OK</b>.
+</li>
+</ol>
+
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>U kunt slechts 32 subnets toevoegen.</li>
+</ul>
+</div>
+
+
+
+<h3>DHCP-clients</h3>
+
+<p>Om een lijst te zien van DHCP-clients en hun netwerkconfiguraties (bijv. MAC-adres, IP-adres, hostnaam en de resterende tijd voordat de DHCP-lease vervalt), gaat u naar het tabblad <strong>DHCP-clients</strong>.</p>
+
+
+<h3>DHCP-reservering</h3>
+
+<p>Als u wilt dat een client altijd hetzelfde IP-adres ontvangt tijdens de verlenging van de DHCP-lease kunt u de client aan de adresreserveringslijst toevoegen.</p>
+
+<h4>Om een client aan de adresreserveringslijst toe te voegen:</h4>
+
+<ul>
+<li>Klik op <b>Toevoegen</b>.</li>
+<li>Geef het MAC-adres, het IP-adres en de hostnaam voor de client op. </li>
+<li>Klik op <b>OK</b> om uw instellingen op te slaan.</li>
+</ul>
+
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Možnosti</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_user"></a>Účet</h2>
+
+<p>Karta Účet nabízí možnosti úprav základních nastavení účtu, jako je popis, heslo, e-mail a dvoufázové ověřování. Chcete-li zobrazit tuto kartu, klikněte na ikonu ve tvaru osoby v pravé horní části plochy a vyberte položku <strong>Možnosti</strong>.</p>
+
+
+
+<h3>Úprava nastavení účtu</h3>
+
+<p>Můžete upravit následující nastavení účtu:</p>
+<ul>
+<li><strong>Popis:</strong> Zadejte popis účtu. Popis uživatele může obsahovat maximálně 64 zobrazitelných znaků Unicode.</li>
+<li><strong>Nové heslo:</strong> Pokud chcete změnit heslo účtu, zadejte nové heslo a potvrďte jej v níže uvedeném poli <strong>Potvrdit heslo</strong>. V hesle se rozlišují malá a velká písmena a může obsahovat maximálně 127 zobrazitelných znaků včetně písmen, čísel, symbolů a mezer.</li>
+<li><strong>E-mail:</strong> Zadejte e-mailovou adresu uživatele (pouze pro uživatele bez oprávnění uživatele admin).</li>
+<li><strong>Jazyk zobrazení:</strong> Zadejte jazyk zobrazení účtu. Jazyk zobrazení, který zadáte v této části, má přednost před jazykem nastaveným v části <b>Ovládací panel</b> > <b>Místní nastavení</b> > <b>Jazyk</b>.</li>
+</ul>
+<p>Po dokončení úprav nastavení uložte změny kliknutím na tlačítko <b>OK</b>.</p>
+
+
+<h3>Dvoufázové ověření</h3>
+
+<p>Dvoufázové ověření nabízí větší zabezpečení účtu DSM. Pokud je dvoufázové ověření povoleno, budete kromě jednorázového ověřovacího kódu pro přihlášení do systému DSM potřebovat také heslo. Ověřovací kódy lze získat z ověřovacích aplikací nainstalovaných na vašem mobilním zařízení. Bude-li některá osoba chtít získat přístup k vašemu účtu, nebude potřebovat uživatelské jméno a heslo, ale bude potřebovat vaše mobilní zařízení.</p>
+
+<div class="section">
+<h4>Požadavky:</h4>
+<p>Dvoufázové ověření vyžaduje mobilní zařízení a ověřovací aplikaci, která podporuje protokol Time-based One-Time Password (TOTP). Příkladem ověřovací aplikace může být Google Authenticator (Android/iPhone/BlackBerry) nebo Authenticator (Windows Phone).</p>
+</div>
+
+<h4>Postup povolení dvoufázového ověření:</h4>
+
+<ol>
+<li>Přejděte na kartu <strong>Možnosti</strong> > <strong>Účet</strong> a zaškrtnutím políčka <strong>Povolit dvoufázové ověření</strong> spusťte průvodce dvoufázovým ověřením.</li>
+<li>Na první obrazovce zadejte e-mailovou adresu. Dojde-li ke ztrátě mobilního zařízení, bude vám na e-mailovou adresou zadanou v této části odeslán nouzový ověřovací kód.</li>
+<li>Stáhněte a nainstalujte si ověřovací aplikaci, např. Google Authenticator (Android/iPhone/BlackBerry) nebo Authenticator (Windows Phone).</li>
+<li>Na další obrazovce otevřete ověřovací aplikaci a naskenujte kód QR. Můžete také kliknutím na odkaz ručně zadat tajný klíč.</li>
+<li>Poté ověřovací aplikace vygeneruje 6místný ověřovací kód. Zadáním tohoto kódu do textového pole v průvodci potvrdíte správnost konfigurací. Dojde-li k chybě, přesvědčte se, zda je systémový čas mobilního zařízení synchronizován s časem v rámci systému DSM. Ověřovací kódy jsou pravidelně aktualizovány, ověřte, zda neskončila platnost zadaného kódu.</li>
+<li>Po dokončení průvodce nastavením uložte změny kliknutím na možnost <strong>OK</strong>.</li>
+</ol>
+
+
+
+<h4>Postup přihlášení k systému DSM pomocí dvoufázového ověření:</h4>
+
+<p>Pokud je dvoufázové ověření povoleno, budete při přihlášení do systému DSM požádáni o 6místný ověřovací kód.</p>
+
+<ol>
+<li>Na obrazovce přihlášení do systému DSM zadejte jako obvykle uživatelské jméno a heslo.</li>
+<li>Při výzvě o zadání ověřovacího kódu otevřete ověřovací aplikaci na vašem mobilním zařízení.</li>
+<li>Vyhledejte a zadejte 6místný ověřovací kód vašeho účtu. Dojde-li ke ztrátě mobilního zařízení, klikněte na odkaz <b>Ztratili jste telefon?</b> a na e-mailovou adresu vám bude odeslán ověřovací kód.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li><strong>Nastavení SMTP:</strong> Chcete-li dostávat kódy e-mailem, musí být správně nakonfigurována nastavení serveru SMTP v části <b>Ovládací panel</b> > <b>Upozornění</b>.</li>
+<li><strong>Omezení nouzového kódu:</strong> Každý uživatel může použít maximálně 5 nouzových kódů. Po překročení tohoto limitu bude nutné před odesláním dalších nouzových kódů deaktivovat a opět povolit dvoufázové ověření.</li>
+</ul>
+</div>
+
+
+<h4>Postup obnovení nastavení dvoufázového ověření uživatele:</h4>
+
+<p>Obnovení nastavení dvoufázového ověření pro ostatní uživatele mohou provádět pouze uživatelé ze skupiny <strong>administrators</strong>. 
+<ol>
+<li>Přejděte do části <strong>Ovládací panel</strong> > <strong>Uživatel</strong>.</li>
+<li>Klikněte dvakrát na uživatele, pro kterého chcete obnovit dvoufázové ověření.</li>
+<li>Na kartě <strong>Údaje uživatele</strong> klikněte na tlačítko <strong>Obnovit dvoufázové ověření</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Pokud uživatel ze skupiny <strong>administrators</strong> není k dispozici, můžete obnovit nastavení DSM a deaktivovat dvoufázové ověření stisknutím fyzického tlačítka Reset na zařízení DiskStation.</p>
+</div>
+
+
+<h3>Aktivita účtu</h3>
+<p>Aktivita účtu zobrazuje informace o aktivitě posledních přihlášení k účtu DSM, jako například aktuální připojení nebo historii přihlášení.</p>
+
+<h4>Postup ověření aktivity účtu:</h4>
+<p>Klikněte na tlačítko <strong>Aktivita účtu</strong>. Zobrazí se automaticky otevírané okno s následujícími kartami:
+
+<ul>
+<li><strong>Připojení uživatelé:</strong> Tato karta obsahuje níže uvedené informace:
+  <ul>
+<li><strong>Datum a čas:</strong> Čas přístupu k účtu.</li>
+<li><strong>Název klienta a IP adresa:</strong> Název a IP adresa zařízení, ze kterého byl uskutečněn přístup k účtu. Název klientského zařízení je zobrazen pouze tehdy, pokud byl přístup k účtu uskutečněn pomocí protokolu CIFS.</li>
+<li><strong>Služba:</strong> Protokol používaný pro přístup k účtu.</li>
+<li><strong>Prostředky:</strong> Systémové prostředky využité v rámci účtu.</li>
+</ul></li>
+<li><strong>Historie přihlášení:</strong> Tato karta obsahuje seznam posledních relací přihlášení a následující informace:
+<ul>
+<li><strong>Datum a čas:</strong> Čas přístupu k účtu.</li>
+<li><strong>Událost:</strong> Zobrazuje uživatelské jméno a IP adresu.</li>
+</ul>
+</li>
+</ul>
+
+
+</body>
+</html>

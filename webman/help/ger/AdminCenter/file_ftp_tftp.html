@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TFTP/PXE</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>TFTP/PXE</h2>
+
+<p>Die Optionen unter <strong>Systemsteuerung</strong> &gt; <strong>Dateidienste</strong> &gt; <strong>TFTP/PXE</strong> erm&ouml;glichen Ihnen die Konfiguration von TFTP- und PXE-Einstellungen.</p>
+
+<h3>TFTP</h3>
+<p>Das Trivial File Transfer Protocol (TFTP) ist ein einfaches Datei&uuml;bertragungsprotokoll, das im Allgemeinen f&uuml;r die &Uuml;bertragung von Konfigurations- oder Bootdateien in Situationen verwendet wird, in denen eine Authentifizierung nicht ben&ouml;tigt wird. Die Aktivierung des TFTP-Dienstes erm&ouml;glicht es DiskStation, Bootloader auf Client-Ger&auml;te zu &uuml;bertragen.</p>
+<h4>TFTP-Einstellungen &auml;ndern:</h4>
+<ol>
+<li>Markieren Sie die Option <strong>TFTP-Dienst aktivieren</strong>.</li>
+<li>Geben Sie im Feld <strong>TFTP Root-Ordner</strong> an, auf welchen Ordner von DiskStation von TFTP-Clients zugegriffen werden kann.</li>
+<li>Sie k&ouml;nnen auf <strong>Erweiterte Einstellungen</strong> klicken, um die folgenden Einstellungen anzuzeigen und zu &auml;ndern:</li>
+<ul>
+<li><strong>TFTP-Datei&uuml;bertragungsprotokoll aktivieren:</strong> Diese Optionen erm&ouml;glicht Ihnen die Verfolgung von Daten, die &uuml;ber TFTP &uuml;bertragen wurden.</li>
+<li><strong>Zugriffsrecht f&uuml;r TFTP-Client:</strong> W&auml;hlen Sie die Lese- und Schreibberechtigungen f&uuml;r TFTP-Clients aus. Wenn <strong>Nur lesen</strong> ausgew&auml;hlt ist, k&ouml;nnen TFTP-Clients nur Inhalte des Root-Ordners anzeigen. Wenn <strong>Beschreibbar</strong> ausgew&auml;hlt ist, k&ouml;nnen TFTP-Clients die Inhalte des Root-Ordners &auml;ndern.</li>
+<li><strong>Erlaubte Clients:</strong> W&auml;hlen Sie aus, welche Clients sich &uuml;ber TFTP verbinden d&uuml;rfen. Sie k&ouml;nnen alle Clients das Verbinden erlauben, indem Sie <strong>Alle Verbindungen</strong> ausw&auml;hlen, oder schr&auml;nken Sie ein, welche Clients sich verbinden k&ouml;nnen, indem Sie einen IP-Adressbereich angeben.</li>
+</ul>
+<li>Klicken Sie nach dem &Auml;ndern der Einstellungen zum Speichern auf <strong>&Uuml;bernehmen</strong>.</li>
+</ol>
+
+
+<h3>Einrichten des DHCP-Dienstes f&uuml;r PXE mit DiskStation</h3>
+<p>Zus&auml;tzlich zu TFTP kann DiskStation auch DHCP-Dienste anbieten, um eine umfassende PXE-Konfiguration zu implementieren. Pre-boot Execution Environment (PXE) ist eine Netzwerkumgebung, die es Client-Ger&auml;ten erm&ouml;glicht, &uuml;ber eine Netzwerk-Schnittstelle anstatt eines Datenspeicherger&auml;tes (z.&nbsp;B. Festplatten) zu starten. Mit der Implementierung von PXE kann ein Bootloader auf DiskStation gespeichert werden und Client Ger&auml;te k&ouml;nnen &uuml;ber das Netzwerk mit dem Bootloader gestartet werden.</p>
+
+<p>Um DHCP-Dienste mit DiskStation anbieten zu k&ouml;nnen, stellen Sie bitte sicher, dass das Synology DHCP Server-Paket installiert ist.</p>
+
+<h4>DHCP-Dienst f&uuml;r PXE einrichten:</h4>
+<ol>
+<li>Aktivieren Sie die Option <strong>DHCP-Dienst auf diesem Server f&uuml;r PXE einrichten</strong>. Sie werden zur Installation des DHCP Server-Paketes aufgefordert, wenn es noch nicht auf DiskStation installiert wurde.</li>
+<li>W&auml;hlen Sie einen Bootloader aus dem TFTP-Root-Ordner aus und geben Sie andere DHCP-bezogene Einstellungen ein.</li>
+<li>Klicken Sie auf <strong>&Uuml;bernehmen</strong>, um die Einstellungen zu speichern.</li>
+</ol>
+</body>
+</html>

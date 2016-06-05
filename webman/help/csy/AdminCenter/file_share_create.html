@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Vytvoření sdílené složky – Nápověda Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Shared folders are the basic directories where you can store and manage files and folders on your DiskStation. This article shows you how to create a shared folder."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Vytvoření sdílené složky</h2>
+<p>Sdílené složky představují základní adresáře, ve kterých můžete ukládat a provádět správu souborů a složek zařízení DiskStation. Dříve než začnete ukládat jakékoli soubory, musíte v systému DSM vytvořit alespoň jednu sdílenou složku. </p>
+
+<h4>Postup vytvoření sdílené složky:</h4>
+<ol>
+		<li><strong>Skrýt tuto sdílenou složku v části Místa v síti:</strong> Deaktivuje zobrazení sdílené složky v části „Síť“ v programu Průzkumník souborů systému Windows. Tato možnost nemá vliv na přístupová oprávnění sdílené složky.<div class="section"><h4>Poznámka:</h4>
+				<p>Skrytí sdílené složky v části Místa v síti nemá vliv na přístupová oprávnění. Přístupová oprávnění ke skryté sdílené složce zůstanou nezměněna. Uživatelé, kteří mají správná přístupová oprávnění ke sdílené složce, mohou složku otevřít zadáním cesty „\\název serveru\název sdílené složky“.</p>
+			</div>
+		</li>
+		<li><strong>Skrýt podsložky a soubory uživatelů bez oprávnění:</strong> Pokud je povolena možnost <strong>Skrýt podsložky a soubory uživatelů bez oprávnění</strong>, nemůže uživatel bez oprávnění ke čtení zobrazovat podsložky nebo soubory v rámci sdílené složky prostřednictvím protokolu sdílení souborů systému Windows. Díky tomu nebude docházet ke zmatkům v situaci, kdy se uživatelé připojují k produktům společnosti Synology a je zobrazen velký počet souborů a podsložek, ke kterým nemají přístup.<div class="section"><h4>Poznámka:</h4>
+				<ul>
+					<li>Tato funkce je podporována pouze v rámci protokolu sdílení souborů systému Windows.</li>
+					<li>Úpravu nastavení oprávnění jednotlivých složek a souborů provedete v aplikaci File Station kliknutím pravým tlačítkem myši. Z rozevírací nabídky vyberte položku <strong>Vlastnosti</strong> a klikněte na kartu <strong>Oprávnění</strong>.</li>
+					<li>Povolením možnosti <strong>Skrýt podsložky a soubory uživatelů bez oprávnění</strong> nebude uživatelům skryta samotná sdílená složka. Budou skryty pouze podsložky a soubory v rámci této sdílené složky.</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+
+
+<li><strong>Povolit koš:</strong> Pokud jsou soubory ze sdílené složky odstraněny, budou přesunuty do složky s názvem <strong>#recycle</strong>. Přístup ke koši lze omezit na uživatele ze skupiny <strong>administrators</strong>.</li>
+
+<li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"><strong>Nastavit snímek jako viditelný:</strong> Ke složkám a souborům ve snímku lze získat přístup přes souborové služby ve složkách <strong>#snapshot</strong> sdílené složky. Snímky budou při pořízení pojmenovány podle greenwichského času (GMT).<div class="section"><h4>Poznámka:</h4>
+		<ul>
+			<li>Uživatelé nemají oprávnění do žádné kopie snímku zapisovat.</li>
+			<li>Uživatelé mají oprávnění ke čtení kopií snímků pouze v případě, že v okamžiku vytvoření snímku byly jejich uživatelské účty již vytvořeny a mají přiděleno oprávnění ke čtení sdílené složky.</li>
+		</ul>
+	</div>
+	</li><a name="sharequota"></a><li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"><strong>Povolit kvótu sdílené složky:</strong> Chcete-li stanovit maximální kapacitu pro každou sdílenou složku, zaškrtněte políčko <strong>Povolit kvótu sdílené složky</strong> a do následujícího políčka zadejte maximální kapacitu (např. 10 GB).<div class="section"><h4>Poznámka:</h4>
+		<ul>
+			<li>Pouze tehdy, pokud úložiště používá systém souborů Btrfs, budou pro sdílené složky k dispozici možnosti <strong>Nastavit snímek jako viditelný</strong> a <strong>Povolit kvótu sdílené složky</strong>.</li>
+			<li>Celkové využití úložiště všemi uživateli adresářů <strong>home</strong> nemůže překročit kvótu složky „<strong>homes</strong>“.</li>
+		</ul>
+		</div>
+	</li><a name="integrity_protection"></a><li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"><strong>Povolit pokročilou ochranu integrity dat:</strong> Chcete-li chránit sdílenou složku strategiemi <strong>Kontrolní součet CRC32</strong> a <strong>copy-on-write</strong>, můžete během vytváření sdílené složky <strong>povolit pokročilou ochranu integrity dat</strong>. Strategie Kontrolní součet CRC32 se používá ke kontrole toho, zda data zůstávají identická s časem, kdy byla původně zapsána, a uvědomí uživatele, jakmile bude zjištěno nějaké poškození. Strategie copy-on-write pomáhá zlepšovat konzistenci dat při neobvyklém vypnutí systému.<div class="section"><h4>Poznámka:</h4>
+	<ul>
+		<li>Tato možnost je k dispozici pouze pro svazky využívající systém souborů Btrfs.</li>
+		<li>Tuto možnost můžete povolit nebo zakázat pro každou sdílenou složku během jejího vytváření. Tato možnost nemůže být upravena, jakmile byla sdílená složka vytvořena.</li>
+		<li>Pokud je tato možnost povolena, může to mít vliv na výkonnost systému.</li>
+	</ul>
+	</div></li>
+
+	<li><strong>Šifrovat tuto sdílenou složku:</strong> Pokud chcete sdílenou složku šifrovat, postupujte takto:<ol>
+		<li>Zadejte a potvrďte nový šifrovací klíč. Šifrovací klíč nesmí obsahovat čárky (,) ani symbol rovná se (=). </li>
+		<li>V případě potřeby můžete zaškrtnutím možnosti <b>Automaticky připojit při spuštění</b> automaticky připojit šifrovanou složku a umožnit přístup k této složce. Pokud je tato možnost zakázána, bude šifrovaná složka při příštím restartování zařízení DiskStation odpojena. Chcete-li zobrazit odpojenou složku nebo získat přístup k této složce, musíte složku připojit ručně importováním nebo zadáním šifrovacího klíče.</li>
+	</ol>
+</ul>
+<li>Postup dokončíte kliknutím na možnost <b>OK</b>.</li>
+
+</ol>
+
+<div class="section">
+<h4>Pravidla pro zadávání názvů sdílených složek:</h4>
+<ul>
+<li>V názvech sdílených složek se rozlišují velká a malá písmena a názvy mohou obsahovat 1 až 32 znaků. Názvy nesmí obsahovat následující znaky: <strong>! " # $ % & ' ( ) * + , / : ; <= > ? @ [ ] \ ^ ` { } | ~</strong></li>
+<li>Následující názvy jsou vyhrazeny pro systémové použití: <strong>.</strong>, <strong>..</strong>, <strong>global</strong>, <strong>home</strong>, <strong>homes</strong>, <strong>printers</strong>, <strong>public</strong>, <strong>satashare</strong>, <strong>surveillance</strong>, <strong>usbbackup</strong>, <strong>usbshare</strong>. </li>
+<li>Prvním znakem názvu sdílené složky nesmí být znaménko mínus nebo mezera a posledním znakem nesmí být znak mezery.</li>
+<li>V části <strong>Popis</strong> sdílené složky se rozlišují velká a malá písmena a popis je omezen na 64 zobrazitelných znaků Unicode.</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Šifrování sdílených složek:</h4>
+
+<p>256bitové šifrování AES chrání data zablokováním všech neoprávněných pokusů o přístup k datům. Jakmile dokončíte šifrování sdílené složky, není možné bez šifrovacího klíče získat přístup k šifrovaným datům a tato data upravovat ani tehdy, pokud dojde k odebrání pevných disků ze zařízení DiskStation a jejich připojení k jinému zařízení. </p>
+
+<h4>Poznámka:</h4>
+<ul>
+<li>Sdílené složky lze šifrovat pouze při vytváření. </li>
+<li>Názvy souborů a složek v rámci šifrovaných sdílených složek nesmí obsahovat více než 143 znaků anglické abecedy nebo 43 asijských znaků.</li>
+<li>K šifrovaným sdíleným složkám nelze získat přístup přes protokol NFS.</li>
+<li>Pokud obnovíte výchozí hesla pomocí tlačítka restartování umístěného na zařízení DiskStation, budou sdílené složky odpojeny a možnost automatického připojení šifrovaných sdílených složek bude zakázána.</li>
+</ul>
+
+</div>
+
+
+</body>
+</html>

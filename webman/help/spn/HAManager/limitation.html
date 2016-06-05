@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>Limitaciones y requisitos del sistema - Ayuda de Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article explains the limitations of the Synology High Availability package.">
+
+
+ </head>
+ <body>
+ 
+ 
+<h1>Limitaciones y requisitos del sistema</h1>
+
+ <p>La implementación de Synology High Availability necesita dos servidores Synology idénticos que actúen como servidores activo y pasivo. Antes de que los dos servidores se combinen formando un clúster High-Availability, el Asistente de Synology High Availability comprobará las siguientes limitaciones de hardware y software para garantizar que puede crearse un clúster High-Availability.</p>
+ 
+  
+ <h3>Requisitos del sistema</h3>
+ 
+  <p>Tenga en cuenta las siguientes directrices sobre software y hardware:</p>
+  <ul>
+   <li><b>Servidor Synology:</b> tanto el servidor activo como el pasivo deben ser modelos idénticos y compatibles con Synology High Availability.</li>
+   <li><b>Versión de DSM:</b> tanto el servidor activo como el pasivo deben tener instalada la misma versión de DSM. </li>
+   <li><b>Versión de paquete:</b> los dos servidores de Synology deben tener instalada la misma versión de Synology High Availability.</li>
+  </ul>
+
+  
+ <h3>Volumen y disco</h3>
+ 
+  <p>Tenga en cuenta las siguientes directrices sobre la administración de espacios de almacenamiento (p. ej., volúmenes, grupos de discos y RAID Group, etc.) y discos duros.</p>
+  <ul>
+   <li><b>Capacidad de disco:</b> para permitir la replicación de los datos, la capacidad del disco del servidor pasivo debe ser igual o superior a la capacidad del servidor activo. Es muy aconsejable que la capacidad de los discos de ambos servidores sea totalmente idéntica para reducir la posibilidad de inconsistencias. </li>
+   <li><b>Número y tipo de discos:</b> tanto el servidor activo como el pasivo deben tener la misma cantidad de discos. Además, la posición de los discos debe coincidir en ambos servidores, y los tipos de discos (p. ej. SSD/HDD, SAS/SATA) y especificaciones (p. ej. tamaño de sector de 512 byte o 4 K) deben ser idénticas en ambos servidores. Tenga en cuenta que los dispositivos externos, como discos duros USB, no se incluirán a la hora de contar el número de discos.</li>
+   <li><b>Formato SHR no admitido:</b> no se admiten los volúmenes de formato SHR. Asegúrese de que el servidor de Synology que actuará como servidor activo no contenga volúmenes SHR. </li>
+  </ul>
+  
+  
+  <h3>Entorno de red</h3>
+  <p>Observe las siguientes directrices referentes a las configuraciones de red cuando intente formar un clúster de High-Availability.</p>
+  <ul>
+    <li><b>Configuración de red:</b> Ambos servidores deben tener direcciones IP estáticas que pertenezcan a la misma subred.</li>
+    <li><b>Número de puertos LAN:</b> Ambos servidores deben tener el mismo número de puertos LAN. Si su Synology NAS cuenta con interfaces de tarjeta de red adicionales, estas tarjetas de red se considerarán puertos LAN adicionales. </li>
+    <li><b>Restricciones de conexión:</b> Los servidores no se pueden conectar a la red mediante un servidor proxy, DHCP, IPv6, PPPoE, ni Wi-Fi. Asegúrese de que estas funciones se deshabiliten antes de intentar formar un clúster High-Availability.</li>
+    <li><strong>Sin servicio DHCP:</strong> Los servidores no pueden utilizar las opciones de DHCP server incorporadas al combinarlos en un clúster.</li>
+   <li><strong>Configuración de Link Aggregation:</strong> Ambos servidores deben tener la misma configuración de Link Aggregation para la red de datos y la conexión Heartbeat. Cuando se haya creado el clúster de High-Availability, la configuración de Link Aggregation no se podrá modificar.</li>
+
+  </ul>
+  <div class="section">
+    <h4>Nota:</h4>
+    <ul>
+      <li>SSH y el servicio NTP se habilitarán automáticamente en el servidor activo cuando se cree el clúster de High-Availability.</li>
+    </ul>
+  </div>
+  <h3>Limitaciones del Administrador de almacenamiento</h3>
+  <p>Cuando se haya formado un clúster de High-Availability, la opción de cambiar el tipo de RAID ya no estará disponible en el Administrador de almacenamiento. Sin embargo, las siguientes opciones estarán disponibles:<ul>
+<li>Expandir los espacios de almacenamiento (por ejemplo, volúmenes, iSCSI LUNs a nivel de bloque, grupos de discos, RAID Groups, etc.).</li>
+    <li>Crear, eliminar o reparar volúmenes, iSCSI LUNs, SSD de solo lectura y cachés de lectura-escritura.</li>
+    <li>Cambiar el tamaño y la ubicación de iSCSI LUN (nivel de archivo).</li>
+    <li>Cambiar el iSCSI LUN objetivo.   </li>
+  </ul>
+
+  <div class="section">
+    <h4>Nota:</h4>
+    <ul>
+      <li>No cambie la posición de las unidades una vez que el clúster High-Availability haya sido creado; de lo contrario, el espacio de almacenamiento se perderá.</li>
+    </ul>
+  </div>
+
+ 
+<h3>Limitaciones del software y de paquetes</h3> 
+
+<p>Cuando ya se ha formado el clúster de High-Availability, los siguientes paquetes y características no son compatibles:</p>
+	<ul>
+
+    <li>Característica de clúster CIFS de escalado horizontal en CMS</li>
+    <li>La característica para reiniciar/apagar el clúster de High-Availability en CMS</li>
+    </ul>
+
+    
+<h3>Añadir unidades de expansión</h3>
+  <p>Una vez que se ha creado un clúster High-Availability, se pueden añadir unidades de expansión a la configuración de clúster High-Availability existente para ampliar la capacidad de almacenamiento. Al igual que con otros requisitos de hardware, se necesitan unidades de expansión idénticas para los servidores activo y pasivo. Para evitar errores de inconsistencia, tenga cuidado de seguir estas instrucciones al añadir cualquier unidad de expansión.</p>
+  
+  <h4>Para añadir unidades de expansión:</h4>
+   <ol>
+    <li>Añada únicamente unidades de expansión y discos duros idénticos a los servidores activo y pasivo. Tal y como hemos dicho anteriormente, el hardware de los servidores activo y pasivo debe ser idéntico, incluyendo el modelo de hardware, los tipos y el tamaño y la posición de los discos.</li>
+    <li>Asegúrese de eliminar todos los datos y volúmenes existentes en los discos duros de las unidades de expansión.</li>
+    <li>Conecte las unidades de expansión a los servidores activo y pasivo cuando ambos servidores estén encendidos y en funcionamiento.</li>
+    <li>Cree un nuevo espacio de almacenamiento (p. ej., volúmenes, grupos de discos, RAID Groups, etc.) en la unidad de expansión antes de apagar cualquiera de los servidores.</li>
+   </ol>
+<div class="section">
+<h4>Notas:</h4>
+<p>Para obtener información básica sobre la instalación de unidades de expansión, no olvide consultar la guía de usuario de su unidad de expansión.</p>
+</div>
+
+   
+ </body>
+</html>

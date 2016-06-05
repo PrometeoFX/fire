@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DSM-indstillinger</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="https"></a>DSM-indstillinger</h2>
+
+<p>Under <strong>Kontrolpanel</strong> > <strong>Netværk</strong> > <strong>DSM-indstillinger</strong> kan du ændre det portnummer, som klienterne bruger til at få adgang til DSM. Når HTTPS er aktiveret, vil forbindelserne blive krypteret med SSL/TLS.</p>
+
+<h4>Sådan ændrer du standardportnummeret:</h4>
+<ol>
+<li>Indtast portnummeret i feltet <b>HTTP</b> eller <b>HTTPS</b>.</li>
+<li>Klik på <b>Anvend</b>.</li>
+</ol>
+
+<h4>Sådan aktiverer du HTTPS-forbindelser:</h4>
+<ol>
+<li>
+Marker <b>Aktiver HTTPS-forbindelse</b>.
+</li>
+<li>Hvis du vil omdirigere klienter til HTTPS-porten (5001) ved forsøg på at få adgang til DSM via HTTP-porten (5000), skal du markere feltet <b>Omdiriger automatisk HTTP-forbindelser til HTTPS</b>.</li>
+<li>
+Klik på <b>Anvend</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Porte, der bruges til HTTPS-forbindelse:</h4>
+<ul>
+  <li><b>DSM</b>: Standardportnummeret er 5001, så du sikkert kan få adgang til DSM ved at indtaste følgende adresse: https://server-hostname:5001/</li>
+<li><b>Web Station og Photo Station</b>: Standardportnummeret er 443, så du sikkert kan få adgang til Web Station og Photo Station ved at indtaste følgende adresse: https://server-hostname/</li>
+</ul>
+
+</div>
+
+<h4>Sådan gør du DiskStation registrerbar via Windows-netværksregistrering:</h4>
+<ol>
+<li>
+Marker <b>Aktiver Windows-netværksregistrering</b>.
+</li>
+<li>
+Klik på <b>Anvend</b>.
+</li>
+</ol>
+
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DSM-beállítások</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="https"></a>DSM-beállítások</h2>
+
+<p>A <strong>Vezérlőpult</strong> > <strong>Hálózat</strong> > <strong>DSM-beállítások</strong> menüpontban módosíthatja a kliensek által a DSM eléréséhez használt portszámot. Ha a HTTPS engedélyezve van, a kapcsolatok SSL/TLS segítségével kerülnek titkosításra.</p>
+
+<h4>Az alapértelmezett portszám megváltoztatása:</h4>
+<ol>
+<li>Adja meg a portszámot a <b>HTTP</b> vagy <b>HTTPS</b> mezőben.</li>
+<li>Kattintson az <b>Alkalmaz</b> gombra.</li>
+</ol>
+
+<h4>HTTPS csatlakozások engedélyezése:</h4>
+<ol>
+<li>
+Jelölje be a <b>HTTPS kapcsolat engedélyezése</b> lehetőséget.
+</li>
+<li>Ha vissza szeretné irányítani a klienseket a HTTPS-portra (5001), amikor a HTTP-porton (5000) át próbál meg hozzáférni a DSM-hez, jelölje be a <b>HTTP kapcsolatok automatikus átirányítása a következőre: HTTPS</b> jelölőnégyzetet.</li>
+<li>
+Kattintson az <b>Alkalmaz</b> gombra.
+</li>
+</ol>
+
+<div class="section">
+<h4>HTTPS csatlakozáshoz használt portok:</h4>
+<ul>
+  <li><b>DSM</b>: Az alapértelmezett portszám 5001, úgyhogy a következő cím megadásával biztonságosan hozzáférhet a DSM-hez: https://server-hostname:5001/</li>
+<li><b>Web Station és Photo Station</b>: Az alapértelmezett portszám 443, úgyhogy a következő cím megadásával biztonságosan hozzáférhet a Web Stationhöz és Photo Stationhöz: https://server-hostname/</li>
+</ul>
+
+</div>
+
+<h4>A(z) DiskStation eszköz észlelhetővé tétele a Windows hálózatfelfedezés segítségével:</h4>
+<ol>
+<li>
+Jelölje be a <b>Windows network discovery (hálózatfelfedezés) engedélyezése</b> lehetőséget.
+</li>
+<li>
+Kattintson az <b>Alkalmaz</b> gombra.
+</li>
+</ol>
+
+</body>
+</html>
+

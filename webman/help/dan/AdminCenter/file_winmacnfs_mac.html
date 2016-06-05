@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Mac-filservice</h2>
+
+<p>
+Under <strong>Kontrolpanel</strong> > <strong>Filtjenester</strong> > <strong>Win/Mac/NFS</strong> kan du aktivere Mac-filtjenesten for at gøre DiskStation-enheden til en Mac-filserver (AFP-server).</p>
+
+<h4>Sådan aktiverer du Mac-filtjeneste:</h4>
+<ol>
+<li>
+Marker <b>Aktiver Mac-filservice</b> for at gøre DiskStation til en Mac-filserver (AFP-server).
+</li>
+<li>
+Angiv en <b>Time Machine</b>-backupmappe efter behov. (Se i nedenstående afsnit for at få flere oplysninger).
+</li>
+
+<li>
+Klik på <b>Anvend</b>.
+</li>
+
+</ol>
+<div class="section">
+<h4>Om Time Machine-sikkerhedskopieringsmappe:</h4>
+<p>Sikkerhedskopier data fra Time Machine til DiskStation ved at vælge en delt mappe i rullemenuen. </p>
+<p><span class="note_head">Bemærk:</span> Delte mapper, der bruges til andre servicer, er ikke tilgængelige for Time Machine.</p>
+</div>
+<h3>Avancerede indstillinger</h3>
+<h4>Anvend standard UNIX-tilladelser:</h4>
+<p>Aktivering af denne mulighed anvender standard UNIX-tilladelser ved upload eller oprettelse af filer og mapper. Anvendte tilladelser er de samme som tilladelser, der anvendes af UNIX-kommandoen <strong>unmask</strong>. Når denne valgmulighed er aktiveret, er UNIX-tilladelser 644 til filer og 755 til mapper. Når denne valgmulighed er deaktiveret, er UNIX-tilladelser 666 til filer og 777 til mapper. Standard unmask-værdien er 022.</p>
+<p><span class="note_head">Bemærk: </span>Aktivering af denne mulighed kan medføre inkonsekvente tilladelsesproblemer mellem forskellige protokoller. Hvis du vil undgå inkonsekvenser, foreslår vi, at du deaktiverer denne mulighed.</p>
+<h4>Frigiv ressourcer øjeblikkeligt efter afbrydelse:</h4>
+<p>Aktivering af denne valgmulighed frigiver ressourcer, når AFP-serverforbindelsen uventet afbrydes. Hvis du modtager fejlmeddelelsen "Diskenhed i brug" under bruge af Time Machine, skal du aktivere denne valgmulighed.</p>
+<h4>Sådan aktiverer du Bonjour-printerrundkastning:</h4>
+<p>Marker <b>Aktiver Bonjour-printerrundkastning</b>, så Mac-klienter kan gennemse og finde den printer, der er tilsluttet til DiskStation .</p>
+</body>
+</html>

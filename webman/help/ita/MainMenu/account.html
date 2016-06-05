@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Opzioni</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_user"></a>Account</h2>
+
+<p>La scheda Account offre opzioni per modificare le impostazioni account di base, come descrizione, password, e-mail e verifica in due passaggi. Per visualizzare questa scheda, fare clic sull&apos;icona a forma di persona in alto a destra del desktop e selezionare <strong>Opzioni</strong>.</p>
+
+
+
+<h3>Modificare le impostazioni dell&apos;account</h3>
+
+<p>Le seguenti impostazioni dell&apos;account possono essere modificate:</p>
+<ul>
+<li><strong>Descrizione:</strong> inserire una descrizione dell&apos;account. La descrizione utente pu&ograve; contenere fino a 64 caratteri Unicode visualizzabili.</li>
+<li><strong>Nuova password:</strong> per cambiare la password dell&apos;account, inserire una nuova password e confermarla nel campo <strong>Conferma password</strong>. Le password fanno distinzione tra minuscole e maiuscole e possono contenere fino a 127 caratteri, tra cui lettere, numeri, simboli e spazi.</li>
+<li><strong>E-mail:</strong> immettere un indirizzo e-mail (solo per utenti non-admin).</li>
+<li><strong>Lingua di visualizzazione:</strong> specificare la lingua di visualizzazione per l&apos;account. Le impostazioni della lingua di visualizzazione specificata qui avranno priorit&agrave; pi&ugrave; alta rispetto a quella specificata nel <b>Pannello di controllo</b> &gt; <b>Opzioni regionali</b> &gt; <b>Lingua</b>.</li>
+</ul>
+<p>Una volta modificate le impostazioni dell&apos;account, fare clic su <b>OK</b> per salvare le modifiche.</p>
+
+
+<h3>Verifica in due passaggi</h3>
+
+<p>La verifica in due passaggi offre una maggiore sicurezza per l&apos;account DSM. Se la verifica in due passaggi &egrave; abilitata, sar&agrave; necessario inserire la password oltre al codice di verifica utilizzabile una sola volta quando si accede al DSM. I codici di verifica possono essere ottenuti dalle applicazioni di autenticazione sul dispositivo mobile. Pertanto, se una persona desidera accedere all&apos;account, oltre al nome utente e alla password, sar&agrave; necessario anche il dispositivo mobile.</p>
+
+<div class="section">
+<h4>Requisiti:</h4>
+<p>la verifica in due passaggi richiede un dispositivo mobile e un applicazione di autenticazione che supporti il protocollo TOTP (Time-based One-Time Password). Le applicazioni di autenticazione comprendono Google Authenticator (Android/iPhone/BlackBerry) o Authenticator (Windows Phone).</p>
+</div>
+
+<h4>Per abilitare la verifica in due passaggi:</h4>
+
+<ol>
+<li>Andare sulla scheda <strong>Opzioni</strong> &gt; <strong>Account</strong> e selezionare la casella <strong>Abilita verifica in due passaggi</strong> per avviare la Configurazione guidata della verifica in due passaggi.</li>
+<li>Nella prima schermata, inserire l&apos;indirizzo e-mail. I codici di verifica di emergenza possono essere inviati a questo indirizzo e-mail in caso di perdita del dispositivo mobile.</li>
+<li>Scaricare e installare l&apos;applicazione di autenticazione, ad esempio Google Authenticator (Android/iPhone/BlackBerry) o Authenticator (Windows Phone).</li>
+<li>Nella schermata seguente, aprire l&apos;applicazione di autenticazione e scansionare il codice QR. In alternativa, &egrave; possibile fare clic sul collegamento per inserire manualmente la chiave segreta.</li>
+<li>A questo punto l&apos;applicazione di autenticazione genera un codice di verifica di 6 cifre. Inserire il codice nel campo di testo della configurazione guidata per confermare che le configurazioni siano corrette. In caso di errori, assicurarsi che l&apos;ora di sistema del dispositivo mobile sia sincronizzata con l&apos;ora di sistema di DSM. Inoltre, i codici di verifica vengono aggiornati periodicamente per garantire che il codice inserito non sia scaduto.</li>
+<li>Una volta completata la configurazione guidata fare clic su <strong>OK</strong> per salvare le impostazioni.</li>
+</ol>
+
+
+
+<h4>Per accedere al DSM con la verifica in due passaggi:</h4>
+
+<p>Una volta abilitata la verifica in due passaggi, sar&agrave; chiesto di inserire il codice di verifica a 6 cifre quando si accede al DSM.</p>
+
+<ol>
+<li>Nella schermata di accesso del DSM, inserire il nome utente e la password.</li>
+<li>Quando viene chiesto di inserire il codice di verifica, aprire l&apos;applicazione di autenticazione sul dispositivo mobile.</li>
+<li>Trovare e inserire il codice di verifica di 6 cifre per l&apos;account. In caso di perdita del dispositivo mobile, fare clic sul collegamento <b>Smarrito il telefono?</b> per inviare un codice di emergenza all&apos;indirizzo e-mail.</li>
+</ol>
+
+<div class="section">
+<h4>Nota.</h4>
+<ul>
+<li><strong>Impostazioni SMTP:</strong> per ricevere il codice di emergenza tramite e-mail, le impostazioni del server SMTP nel <b>Pannello di controllo</b> &gt; <b>Notifica</b> devono essere configurate correttamente.</li>
+<li><strong>Limite codice di emergenza:</strong> ciascun utente ha un limite di 5 codici di emergenza. Se viene superato il limite, sar&agrave; necessario disabilitare e abilitare la verifica in due passaggi prima di ricevere altri codici di emergenza.</li>
+</ul>
+</div>
+
+
+<h4>Per ripristinare le impostazioni di verifica in due passaggi dell&apos;utente:</h4>
+
+<p>Gli utenti che appartengono al gruppo <strong>administrators</strong> possono ripristinare le impostazioni di verifica in due passaggi degli altri utenti.<ol>
+<li>Andare su <strong>Pannello di controllo</strong> &gt; <strong>Utente</strong>.</li>
+<li>Fare doppio clic sull&apos;utente di cui ripristinare la verifica in due passaggi.</li>
+<li>Nella scheda <strong>Informazioni utente</strong>, fare clic sul pulsante <strong>Ripristina verifica in due passaggi</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota.</h4>
+<p>Se un utente appartiene al gruppo <strong>administrators</strong> non &egrave; disponibile, &egrave; possibile premere il pulsante di reset manuale su DiskStation per ripristinare le impostazioni DSM e disabilitare la verifica in due fasi.</p>
+</div>
+
+
+<h3>Attivit&agrave; account</h3>
+<p>Attivit&agrave; account consente di visualizzare le attivit&agrave; di accesso dell&apos;account DSM, ad esempio le connessioni correnti o la cronologia degli accessi.</p>
+
+<h4>Per verificare le attivit&agrave; dell&apos;account:</h4>
+<p>Fare clic sul pulsante <strong>Attivit&agrave; account</strong>. Viene visualizzata una finestra con le seguenti schede:<ul>
+<li><strong>Utenti connessi:</strong> la scheda mostra le seguenti informazioni:<ul>
+<li><strong>Data e ora:</strong> la data e ora di accesso all&apos;account.</li>
+<li><strong>Nome client e IP:</strong> il nome e l&apos;indirizzo IP del dispositivo che ha eseguito l&apos;accesso all&apos;account. Il nome client viene visualizzato solo quando l&apos;accesso all&apos;account viene eseguito con il protocollo CIFS.</li>
+<li><strong>Servizio:</strong> il protocollo utilizzato per accedere all&apos;account.</li>
+<li><strong>Risorse:</strong> le risorse di sistema utilizzate dall&apos;account.</li>
+</ul></li>
+<li><strong>Cronologia accessi:</strong> la scheda mostra le sessioni di accesso recenti e le seguenti informazioni:<ul>
+<li><strong>Data e ora:</strong> la data e ora di accesso all&apos;account.</li>
+<li><strong>Evento:</strong> mostra il nome utente e l&apos;indirizzo IP.</li>
+</ul>
+</li>
+</ul>
+
+
+</body>
+</html>

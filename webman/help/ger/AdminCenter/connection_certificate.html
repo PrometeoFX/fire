@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="certificate"></a>Zertifikat</h2>
+
+<p>Ein Zertifikat kann verwendet werden, um SSL-Dienste aus der DiskStation zu sichern, z. B. Web (alle HTTPS Dienste), E-Mail oder FTP. Der Besitz eines Zertifikats ermöglicht es Benutzern, die Identität eines Servers und des Administrators zu validieren, bevor vertrauliche Informationen gesendet werden. </p>
+
+<p>Die Registerkarte <strong>Zertifikat</strong> (findet sich unter <strong>Systemsteuerung</strong> > <strong>Sicherheit</strong> > <strong>Zertifikat</strong>) bietet Optionen zur Verwaltung und Anzeige des Status der DiskStation-Zertifikate und ermöglicht die Erstellung, den Import/Export oder die Neuerstellung von Zertifikaten. Der Zertifikat Einrichtungsassistent hilft Ihnen bei der Erstellung selbst unterzeichneter Zertifikate oder dem Download von Zertifikatsregistrierungsanforderungen (Certificate Signing Requests, CSR) zur Registrierung mit Zertifizierungsstellen (Certificate Authorities, CA).</p>
+
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Das hier eingestellte Zertifikat wird automatisch von OpenVPN Server verwendet, wenn VPN Server installiert ist.</p>
+</div>
+
+
+<h3>Selbst unterzeichnete Zertifikate</h3>
+
+<p>Ein selbst unterzeichnetes Zertifikat bezieht sich auf ein Zertifikat, das von derselben Stelle erstellt und unterzeichnet wurde, deren Identität es zertifiziert (in diesem Fall die DiskStation). Selbst unterzeichnete Zertifikate werden mit dem von der DiskStation erzeugten privaten Schlüssel unterzeichnet.  Da selbst unterzeichnete Zertifikate nicht von Drittstellen ausgegeben werden, bieten sie weniger Beweiskraft über die Identität des Servers und werden normalerweise nur für sichere Kanäle zwischen dem Server und einer Gruppe von bekannten Nutzern verwendet.</p>
+
+
+<h4>Selbst unterzeichnetes Zertifikat erstellen:</h4>
+<ol>
+	<li>Klicken Sie auf <b>Zertifikat erstellen</b>.</li>
+	<li>Folgen Sie den Anweisungen des Einrichtungsassistenten.</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Die Erstellung eines selbst unterzeichneten Zertifikats wird das bestehende Zertifikat der DiskStation ersetzen.</p>
+</div>
+
+
+<h3>Zertifikatsregistrierungsanforderungen</h3>
+
+<p>Um ein Zertifikat von einer anderen Zertifikatsstelle zu beantragen, müssen Sie zuerst eine Zertifikatsregistrierungsanforderung (CSR) erstellen. Eine Zertifikatsregistrierungsanforderung ist ein von der DiskStation erzeugter verschlüsselter Textkörper, der Informationen enthält, die in Ihrem Zertifikat enthalten sein werden, z. B. der Domainname, der Name der Organisation, der allgemeine Standort und die E-Mail Adresse. Der Einrichtungsassistent kann Ihnen bei der Erstellung der Zertifikatsregistrierungsanforderung helfen, um ein unterzeichnetes Zertifikat für die DiskStation zu beantragen.</p>
+
+<p>Um ein Zertifikat von einer kommerziellen oder anderen Zertifikatsstelle zu erhalten, müssen Sie Ihre private oder die Identifizierung Ihrer Organisation angeben und nachweisen, dass Sie der Eigentümer des Domainnamens sind, der in das Common-Name-Feld der Zertifikatsregistrierungsanforderung eingegeben wurde.</p>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Neben der Zertifikatsregistrierungsanforderung sollte auch ein privater Schlüssel erzeugt werden. Zertifikatsstellen benötigen diesen privaten Schlüssel nicht. Bitte bewahren Sie den privaten Schlüssel für Ihre DiskStation sicher und geheim auf.</p>
+</div>
+
+<h4>Zertifikatsregistrierungsanforderung erstellen:</h4>
+<ol>
+	<li>Klicken Sie auf <b>Zertifikat erstellen</b>.</li>
+	<li>Folgen Sie den Anweisungen des Einrichtungsassistenten, um die Zertifikatsregistrierungsanforderung zu erstellen und herunterzuladen.</li>
+</ol>
+
+<p>Nachdem Ihr Zertifikat von der Zertifizierungsstelle ausgestellt wurde, kann es zusammen mit Ihrem privaten Schlüssel importiert werden (Anweisungen siehe unten).
+
+
+
+<h3>Zertifikate exportieren</h3>
+
+<p>Bestehende Zertifikate können zur Verwaltung oder Archivierung heruntergeladen werden. Die exportiere Datei enthält das Zertifikat, den privaten Schlüssel und das selbst unterzeichnete Zertifikat der DiskStation.</p>
+
+<h4>Ein Zertifikat exportieren:</h4>
+<ul>
+<li>Klicken Sie auf die Schaltfläche <b>Zertifikat exportieren</b>.</li>
+</ul>
+
+
+
+<h3>Zertifikate importieren</h3>
+
+<p>Mit dieser Option können Sie von Zertifikatsstellen ausgegebene Zertifikate oder zuvor exportierte Zertifikate zusammen mit einem privaten Schlüssel importieren.</p>
+
+<h4>Ein Zertifikat importieren:</h4>
+<ul>
+	<li>Klicken Sie auf die Schaltfläche <b>Zertifikat importieren</b>.</li>
+</ul>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Zwischenzertifikate sind für einige von Zertifizierungsstellen ausgegebene Zertifikate optional.</li>
+<li>Die Zertifikate müssen im X.509 PEM-Format vorliegen.</li>
+<li>Private Schlüssel müssen im RSA-Format vorliegen und dürfen nicht Passwort-geschützt sein.</li>
+</ul>
+</div>
+
+
+
+<h3>Zertifikate erneuern</h3>
+
+<p>Wenn Ihr Zertifikat bald abläuft, kann es mit dieser Option erneuert werden.</p>
+
+<h4>Ein Zertifikat erneuern:</h4>
+<ol>
+	<li>Klicken Sie auf <b>Zertifikat erstellen</b>.</li>
+	<li>Wählen Sie <b>Zertifikat erneuern</b> aus und klicken Sie auf <b>Weiter</b>.</li>
+	<li>Ein neuer privater Schlüssel und eine Zertifikatsregistrierungsanforderung werden erstellt.</li>
+</ol>
+
+
+
+<h3>Zertifikatsregistrierungsanforderung (Certificate Signing Request (CSR)) signieren</h3>
+
+<p>Mit dieser Option können Sie eine Anforderung zur Signierung eines Zertifikat mit dem Root-Zertifikat von DiskStation signieren.</p>
+
+<h4>Zertifikatsregistrierungsanforderung signieren:</h4>
+<ol>
+	<li>Klicken Sie auf <b>Zertifikat erstellen</b>.</li>
+	<li>Klicken Sie auf <b>Zertifikatsregistrierungsanforderung (CSR) signieren</b>.</li>
+	<li>Laden Sie die Zertifikatsregistrierungsanforderung hoch und geben Sie die entsprechenden Informationen ein. </li>
+	<li>Klicken Sie auf <b>Weiter</b>, dann signiert das System die Zertifikatsanforderung und erstellt ein entsprechendes Zertifikat.</li>
+</ol>
+
+
+</body>
+</html>
+

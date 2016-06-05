@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>ファイルまたはフォルダの検索</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>ファイルまたはフォルダの検索</h2>
+<p>
+File Station の<strong>フィルタ</strong>を使用すると、指定した条件に合ったファイルかフォルダだけを検索し、表示します。現在のフォルダ内のファイルやフォルダをフィルタにかけることができます。あるいは、高度な検索を行うと、すべてのサブフォルダもカバーしてより正確な結果を得ることができます。</p>
+<h4>現在のフォルダのファイルやフォルダを検索する：</h4>
+
+<ol>
+<li>
+File Station を使用して検索するコンテンツを含んでいるフォルダに移動します。
+</li>
+<li>
+右上隅の <b>[フィルタ]</b> 欄にキーワードを入力すると、ウィンドウのメインエリアにフィルタ化された結果が表示されます。
+</li>
+</ol>
+<h4>詳細検索を実施する：</h4>
+<ol>
+<li>
+File Station を使用して検索するコンテンツを含んでいるフォルダに移動します。
+</li>
+<li>
+右上にある<b>［フィルタ］</b>欄の隣の拡大鏡をクリックすると、詳細検索メニューが開きます。
+</li>
+
+<li>
+以下の検索条件に情報を入力するか、ドロップダウンメニューから選択してください。</li>
+<ul>
+<li>
+<b>キーワード</b>：キーワードを入力して一致する名前のファイルやフォルダを検索します。
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>
+キーワードにワイルドカード [*]（ゼロかその他の文字を意味します）や [?]（1個のランダムな文字を意味します）を使用することができます。例えば、[a<span class="note_content">*</span>n] は [a<span class="note_content">ctio</span>n]、[a<span class="note_content">ttentio</span>n]、または [an] などを代表できます。
+</li>
+<li>
+複数のキーワードを分ける場合は、カンマ（,）をお使いください。例えば、[<span class="note_content">a,tion</span>] は、[<span class="note_content">a</span>c<span class="note_content">tion</span>]、[<span class="note_content">a</span> func<span class="note_content">tion</span>]、[func<span class="note_content">tion</span> <span class="note_content">a</span>dded]、またはn<span class="note_content">ation</span>を表すことができます。
+</li>
+<li>
+キーワードの先頭と最後に二重引用符 [&quot;] を追加して完全一致の検索を行うことができます。例えば、[<span class="note_content">&quot;a typ&quot;</span>] は、[<span class="note_content">a typ</span>e] を表すことができますが、[<span class="note_content">typ</span>ic<span class="note_content">a</span>l] を表すことはできません。
+</li>
+</ul>
+</div>
+</li>
+
+
+<li>
+<b>位置</b>：高度な検索の対象範囲と深さをドロップダウン メニューから選択します。その他の共有フォルダを選択すると、検索範囲をカスタマイズすることもできます。
+</li>
+<li>
+<b>ファイルタイプ</b>：特定のファイルタイプに絞り込む場合は<b>［拡張子］</b>を選択します。フォルダだけを検索する場合は、<b>［すべてのフォルダ］</b>を選択します。
+</li>
+<li>
+<strong>日付</strong>：<b>[変更日]</b>、<b>[作成日]</b>、または <strong>[最後にアクセスした日時]</strong> を選択し、カレンダーから検索する日付を選択します。
+</li>
+<li>
+<b>サイズ (MB)</b>：<b>[等しい]</b>、<b>[より大きい]</b>、および <b>[より小さい]</b> から選択して、サイズを入力して一致するサイズのファイルを検索します（<strong>同等</strong>を選択すると、指定されたサイズとほぼ同じサイズのファイルが検索結果に含まれます）。
+</li>
+<li>
+<b>所有者/グループ</b>：<b>[所有者]</b> または <b>[グループ]</b> を選択して、ドロップダウンメニューから選択して選択した所有者やグループに属するファイルやフォルダを検索します。
+
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>
+高度な検索を行うには、<b>位置</b>と最低1個は別の検索条件を指定する必要があります。
+</li>
+<li>
+ISO フォルダまたはリモート フォルダがインデックス付きの共有フォルダにマウントされている場合は、高度な検索を使ってこの中にあるファイルを見ることはできません。
+</li>
+</ul>
+</div>
+</li>
+
+<li>
+<b>[検索]</b> をクリックして検索を開始するか、<b>[リセット]</b> をクリックして再度検索条件を指定します。検索が完了すると、一致したファイルが File Station のメインエリアに表示されます。
+</li>
+
+</ol>
+</body>
+</html>

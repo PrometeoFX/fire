@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>應用程式入口</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1>應用程式入口</h1>
+<p>透過應用程式入口，您可以編輯各種應用程式的連線設定，讓您可在獨立的瀏覽頁籤或視窗中存取並執行這些應用程式。 </p>
+<p>例如，您可以在網頁瀏覽器上輸入 <strong>http://:diskstation:5000/file/</strong> 來直接開啟 File Station。可供使用的連線設定包含了自訂別名、HTTP 埠、HTTPS埠。若要使用此功能，請前往<strong>控制台</strong> &gt; <strong>應用程式入口</strong>。</p>
+
+<div class="section">
+<h4>注意：</h4>
+<p>可透過應用程式入口編輯存取設定的應用程式有：Audio Station、Download Station、Surveillance Station、Video Station、File Station 等。</p>
+</div>
+
+
+<h2><a name="session"></a>自訂別名</h2>
+<p>有了您自訂的別名，您便可以在網頁瀏覽器上輸入如 <b>http://:diskstation:5000/file/</b> 的位址，輕鬆開啟 File Station 等應用程式。 </p>
+<h4>若要啟動自訂別名：</h4>
+<ol>
+<li>選擇一個應用程式。</li>
+<li>按一下<b>編輯</b>。</li>
+<li>在顯示的視窗中，勾選<b>啟動自訂別名</b>。</li>
+<li>自訂一個別名</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>您可以勾選<strong>由此重新導向</strong>核取方塊，使用較簡單好記的別名來登入該應用程式。 </li>
+<li>以下分別為 Audio Station、Download Station、Surveillance Station、Video Station 及 File Station 的預設別名：<strong>audio</strong>、<strong>download</strong>、<strong>cam</strong>、<strong>video</strong>、<strong>file</strong>。</li>
+<li>自訂的別名名稱不能和系統保留的名稱及瀏覽器相同，也不能是其他應用程式的名稱，名稱字數須限制在 2 到 20 個字元。 </li>
+<li>別名名稱的組成可以是大小寫字母、數字、兩個特殊字元 - 和 _，但這兩個特殊字元只可出現在字首和字尾以外的其他字元。
+</li>
+</ul>
+</div>
+
+<h2><a name="session"></a>自訂 HTTP 或 HTTPS 埠</h2>
+<p>有了您自訂的 HTTP 或 HTTPS 埠，您便可以在網頁瀏覽器上輸入如 <b>http://diskstation:7000</b> 或 <b>http://diskstation:7001</b> 的位址，輕鬆開啟應用程式。</p>
+<h4>若要啟動自訂的 HTTP 或 HTTPS 埠</h4>
+<ol>
+<li>選擇一個應用程式。</li>
+<li>按一下<b>編輯</b>。</li>
+<li>在顯示的視窗中，勾選<b>啟動自訂連接埠 (HTTP)</b> 或<b>啟動自訂連接埠 (HTTPS)</b>。</li>
+<li>自訂一個連接埠編號</li></ol>
+<div class="section">
+  <h4>注意：</h4>
+<ol>
+<li>連接埠可為 1 到 65535 的任何數字，但不可為下列編號，因為它們已保留給系統使用：20, 21, 22, 23, 25, 80, 110, 137, 138, 139, 143, 199, 443, 445, 515, 543, 548, 587, 873, 993, 995, 3306, 3689, 5000, 5001, 5005, 5006, 5335, 5432, 6881, 8080, 7000, 7001, 8081, 9997, 9998, 9999, 50001, 50002, eMule 預設埠：4662 (TCP), 4672　(UDP), 以及 FTP 預設埠範圍：實際範圍因機種而異。</li>
+</ol>
+</div>
+</body> </html>

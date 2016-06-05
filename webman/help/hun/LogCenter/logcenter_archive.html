@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Napló központ</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Tárolási beállítások</h2>
+
+<p>A <strong>Tárolási beállítások</strong> oldal lehetőségeket biztosít annak konfigurálásához, hogyan és hova kerüljenek archiválásra a Napló központ által kapott naplók. Az alábbi opciók használatával határozza meg a tárolási helyet, illetve a naplóarchivumok automatikus létrehozásának szabályait.</p>
+
+
+<h3>Tárolási célhely archívumok számára</h3>
+
+<p>A célhely azt a mappát jelenti, amelyikben a Napló központ által kapott naplók tárolásra és archiválásra kerülnek. A mappa kiválasztásához kattintson a <strong>Hely kiválasztása</strong> lehetőségre.</p>
+<p>Ha ugyanarra a célhelyre szeretné archiválni a(z) DiskStation helyi naplóit is, jelölje be a <strong>Helyi naplók archiválása a fent meghatározott tárolóhelyre</strong> feliratú jelölőnégyzetet. Az esetek többségében ez több tárolóteret biztosít a helyi naplók számára, lehetővé téve, hogy ön teljesebb rendszernaplókat tarthasson fent.</p>
+
+ <!--DSM#61793: Describe how logs are archived in data volume-->
+<div class="section">
+<h4>Megjegyzés:</h4>
+<p>A helyi naplók (Rendszer-, Kapcsolat- és Fájlátviteli napló) mentése egy korlátozott tárolóterületű rendszerpartícióba történik. A <strong>Helyi naplók archiválása a fent meghatározott tárolóhelyre</strong> beállítás engedélyezésével az <strong>Archívumszabályok</strong> szerint történik meg az összes napló archiválása. Archivált helyi naplók böngészéséhez kattintson a <strong>Naplóarchívum megnyitása</strong> gombra és jelölje ki a <strong>SYNOSYSLOGDB__LOCALARCH.DB</strong> archívumot.</p>
+</div>
+
+
+<h3>Archívumszabályok</h3>
+
+<p>A naplók automatikusan az <strong>Archívumszabályok</strong> részben meghatározott kritériumok szerint kerülnek archiválásra. A naplók automatikusan archiválhatók, amikor a napló adatbázis mérete elér egy meghatározott méretet, az egyes naplók száma elér egy meghatározott számot, illetve a naplók elérnek egy meghatározott kort.</p>
+
+<h3>Archívumformátum</h3>
+<p>Ez a rész a következő lehetőségeket tartalmazza.</p>
+<ul>
+<li><strong>Naplók archiválása az alapértelmezett formátumon kívül szöveges formátumban is:</strong> Az archívumokat az alapértelmezett SQLite fájlokon kívül sima szövegfájlokként is elmenti.</li>
+<li><strong>Napló archívumok tömörítése:</strong> A napló archívumokat tömörített ZIP formátumú fájlokként is elmenti.</li>
+<li><strong>Naplók archiválása eszköz szerint külön:</strong> Külön archívumokat ment el az olyan egyedi kliens eszközök számára, amelyek naplókat küldenek a(z) DiskStation eszközre.</li>
+</ul>
+
+</body>

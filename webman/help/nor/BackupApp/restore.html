@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Gjenopprett</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Gjenopprett</h2>
+<p>Gå til <strong>Sikkerhetskopiering & kopiering</strong> > <strong>Gjenopprett</strong> for å gjenopprette sikkerhetskopiert data.</p>
+
+<h4><a name="restore"></a>Slik gjenoppretter du en sikkerhetskopioppgave:</h4>
+<ol class="disable-eds14">
+<li>Velg en sikkerhetskopioppgave og klikk deretter på <b>Gjenopprett</b>. Hvis oppgaven er en sikkerhetskopi med flere versjoner, velger du <strong>Gjenopprett</strong> > <strong>Hele oppgaven</strong>.</li>
+<li>Du kan bli bedt om å velge systemkonfigurasjon, ulike versjoner av sikkerhetskopidata og mer. Dette er avhengig av om dette er en datasikkerhetskopioppgave, LUN-sikkerhetskopioppgave*, et sikkerhetskopimål med én versjon (dvs. delt mappe) eller et sikkerhetskopimål med flere versjoner (dvs. volum).</li>
+<li>Følg veiviseren for å fullføre installasjonen.</li>
+</ol>
+<ol class="enable-eds14">
+<li>Velg en sikkerhetskopioppgave og klikk deretter på <b>Gjenopprett</b>.</li>
+<li>Du kan bli bedt om å velge systemkonfigurasjon, ulike versjoner av sikkerhetskopidata og mer. Dette er avhengig av om dette er en datasikkerhetskopioppgave, LUN-sikkerhetskopioppgave, et sikkerhetskopimål med én versjon (dvs. delt mappe) eller et sikkerhetskopimål med flere versjoner (dvs. volum).</li>
+<li>Følg veiviseren for å fullføre installasjonen.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Merk:</h4>
+<ul>
+<li>Gjenoppretting for enkelte programmer er støttet. For å se om en bestemt pakke støtter gjenoppretting, samt eventuelle begrensninger, kan du se hjelpsiden for hvert program.</li>
+<li>Når du gjenoppretter en pakke som ikke er installert, vil systemet automatisk installere den samme, eller den nyeste, versjonen av programmet. Hvis programmet er installert, men med en versjon som er eldre enn den sikkerhetskopierte versjonen, vil systemet automatisk oppgradere det til den opprinnelige sikkerhetskopierte versjonen.</li>
+<li>Programmer som sikkerhetskopieres i DSM 5.1 eller nyere kan ikke gjenopprettes i DSM 5.0 eller eldre. </li>
+</ul>
+</div>
+
+<div class="section disable-eds14">
+<h4>Merk:</h4>
+<ul>
+<li>Når gjenopprettingen er fullført, vil et sikkerhetskopi-LUN bli gjenopprettet til en filbasert LUN på det valgte målvolumet.*</li>
+
+<li>Gjenoppretting for enkelte programmer er støttet. For å se om en bestemt pakke støtter gjenoppretting, samt eventuelle begrensninger, kan du se hjelpsiden for hvert program.</li>
+<li>Når du gjenoppretter en pakke som ikke er installert, vil systemet automatisk installere den samme, eller den nyeste, versjonen av programmet. Hvis programmet er installert, men med en versjon som er eldre enn den sikkerhetskopierte versjonen, vil systemet automatisk oppgradere det til den opprinnelige sikkerhetskopierte versjonen.</li>
+<li>Programmer som sikkerhetskopieres i DSM 5.1 eller nyere kan ikke gjenopprettes i DSM 5.0 eller eldre. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Slik gjenoppretter du en enkeltfil eller -mappe for sikkerhetskopioppgaver med flere versjoner:</h4>
+<ol>
+<li>Kjør <strong>Filversjonutforsker</strong>. Dette kan du gjøre med en av metodene nedenfor:</li>
+<ul>
+<li>Klikk på <strong>Gjenopprett</strong> og velg <strong>Individuelle filer/mapper</strong> fra rullegardinmenyen. </li>
+<li>Gå til <strong>Sikkerhetskopimål</strong> og utvid ditt valgte sikkerhetskopimål. Klikk på ikonet <strong>Informasjon om sikkerhetskopiversjon</strong>. I vinduet som åpnes velger du sikkerhetskopiversjonen du vil gjenopprette og klikk på ikonet <strong>Filversjonutforsker</strong>.</li>
+</ul>
+<li>Du kan bla gjennom versjonene av en fil eller mappe ved å bruke tidslinje- eller kalenderikonet nederst på skjermen. </li>
+<li>Velg versjonen du vil administrere og klikk på <strong>Gjenopprett</strong>. </li>
+<li>Eller så kan du kopiere en fil eller mappe til en annen plassering, eller laste den ned med knappen <strong>Kopier til...</strong> eller <strong>Last ned</strong>. </li>
+<li>Du kan også høyreklikke på filen eller mappen og velge disse alternativene fra rullegardinmenyen. </li>
+</ol>
+<h4>Slik søker du etter en bestemt versjon:</h4>
+<ol>
+  <li>Klikk på pilen i filterlinjen øverst til høyre.</li>
+  <li>I rullegardinmenyen kan du filtrere filer etter:</li>
+  <ul>
+    <li><strong>Nøkkelord: </strong>Angi navnet til en fil eller mappe. Du kan bruke jokertegnene [*] (som representerer ett eller flere tegn) og [?] (som representerer et vilkårlig tegn) i nøkkelordene dine. For eksempel kan , [a<span class="note_content">*</span>n] representere [a<span class="note_content">ctio</span>n], [a<span class="note_content">ttentio</span>n], eller [an].</li>
+    <li><strong>Filtype:</strong> i rullegardinmenyen kan du velge blant <strong>Enhver</strong>, <strong>Enhver mappe</strong> eller <strong>Enhver fil</strong> for å begrense søket ditt.</li>
+    <li><strong>Størrelse:</strong> velg <strong>Enhver</strong> eller velg <strong>er lik</strong>, <strong>er større enn</strong>, <strong>er mindre enn</strong> og angi en verdi.</li>    
+    <li><strong>Datoområde: </strong>velg mellom <strong>I dag</strong>, <strong>I går</strong>, <strong>Forrige uke</strong> eller <strong>Forrige måned</strong> eller <strong>Tilpass</strong> for å angi en start- og sluttdato for å finne versjoner innenfor en spesifikk periode.</li>
+
+  </ul>
+  <li>For å ta i bruk filterne dine, klikker du på <strong>Filter</strong>. </li>
+  <li>For å tilbakestille filtersøket ditt, klikker du på knappen <strong>Tilbakestill</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Merk:</h4>
+<ul>
+<li>Kun sikkerhetskopioppgaver med flere versjoner tilbyr funksjonen Filversjonutforsker.</li>
+<li>Filversjonutforsker har kun delvise funksjoner i DSM 5.1 eller eldre.</li>
+<li dir="ltr">Systemkonfigurasjon og programmer kan kun gjenopprettes via <strong>Gjenopprett</strong> > <strong>Hele oppgaven</strong>. </li>
+<li>Metadata vil ikke være inkludert i handlingene <strong>Kopier til...</strong> og <strong>Last ned</strong>. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Slik gjenoppretter du sikkerhetskopioppgaver fra andre sikkerhetskopimål:</h4>
+<ol>
+<li>Klikk på <b>Gjenopprett fra...</b>.</li>
+<li>Velg ett av følgende for å lokalisere sikkerhetskopioppgaven og klikk på <b>Neste</b>:</li>
+<ul>
+<li><b>Lokal gjenoppretting</b>: Velg dette alternativet hvis du vil gjenopprette data fra en lokal delt mappe eller ekstern disk.</li>
+<li><b>Nettverksgjenoppretting</b>: Velg dette alternativet hvis du vil gjenopprette data fra en annen DiskStation eller rsync-kompatibel server. </li>
+
+<li><b>Gjenoppretting fra offentlig skytjeneste</b>: Velg dette alternativet for å gjenopprette data fra en offentlig skyserver. </li>
+
+</ul>
+<li>Når du blir bedt om det, velger du kilden hvor sikkerhetskopioppgaven ligger og velger et mål å gjenopprette dataene til.</li>
+<li>Følg veiviseren for å fullføre.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Merk:</h4>
+<ul>
+
+  <li>Embedded DataStation kan kun gjenopprette delte mapper til eksterne enheter med ext3/ext4.</li>
+  
+<li>Embedded DataStation støtter ikke programgjenoppretting uten en ekstern enhet med ext3/ext4.</li>
+
+</ul>
+</div>
+
+<p>____<br /> * Bare tilgjengelig på bestemte modeller.</p>
+</body></html>

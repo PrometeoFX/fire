@@ -1,0 +1,1 @@
+/usr/syno/synoman/webman/index.cgi

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<h2><a name="certificate"></a>Certificado</h2>
+
+<p>Se puede usar un certificado para proteger los servicios SSL de DiskStation, como por ejemplo web (todos los servicios HTTPS), correo o FTP. El hecho de tener un certificado permite a los usuarios validar la identidad de un servidor y del administrador antes de enviar cualquier informaci&oacute;n confidencial. </p>
+
+<p>La pesta&ntilde;a <strong>Certificado</strong> (situada en <strong>Panel de control</strong> &gt; <strong>Seguridad</strong> &gt; <strong>Certificado</strong>) ofrece opciones para administrar y ver el estado de los certificados de DiskStation, lo que le permite crear, importar/exportar o renovar certificados. El asistente de configuraci&oacute;n de certificado le ayuda a crear certificados autofirmados o descargar peticiones de firma de certificado (CSR) para el registro con entidades certificadoras (CA).</p>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<p>El certificado configurado aqu&iacute; se utilizar&aacute; autom&aacute;ticamente en el OpenVPN Server si el VPN Server est&aacute; instalado.</p>
+</div>
+
+
+<h3>Certificados autofirmados</h3>
+
+<p>Un certificado autofirmado es un certificado creado y firmado por la misma entidad cuya identidad certifica (en este caso, la unidad DiskStation). Los certificados autofirmados se firman con la clave privada generada por la unidad DiskStation. Dado que los certificados autofirmados no son emitidos por ninguna entidad certificadora, ofrecen una menor prueba de identidad del servidor y normalmente solo se utilizan para proteger canales entre el servidor y un grupo de usuarios conocidos.</p>
+
+
+<h4>Para crear un certificado autofirmado:</h4>
+<ol>
+	<li>Haga clic en <b>Crear certificado.</b></li>
+	<li>Siga las instrucciones del asistente de configuraci&oacute;n.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>La creaci&oacute;n de un certificado autofirmado sustituir&aacute; al certificado existente de la unidad DiskStation.</p>
+</div>
+
+
+<h3>Peticiones de firma de certificado</h3>
+
+<p>Para solicitar un certificado de una entidad certificadora, debe crear primero una petici&oacute;n de firma de certificado (CSR). Una petici&oacute;n de firma de certificado es un cuerpo de texto cifrado que genera la unidad DiskStation y contiene la informaci&oacute;n que se incluir&aacute; en su certificado, como el nombre de dominio, el nombre de la organizaci&oacute;n, la ubicaci&oacute;n general y la direcci&oacute;n de correo electr&oacute;nico. El asistente de configuraci&oacute;n puede ayudarle a generar una petici&oacute;n de firma de certificado para solicitar un certificado firmado para la unidad DiskStation.</p>
+
+<p>Para adquirir un certificado de una entidad certificadora comercial o de otro tipo, tendr&aacute; que proporcionar su identificaci&oacute;n personal o la identificaci&oacute;n de la organizaci&oacute;n, y demostrar que es el propietario del nombre de dominio introducido en el campo de nombre com&uacute;n de la petici&oacute;n de firma de certificado.</p>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Se generar&aacute; tambi&eacute;n una clave privada junto a la petici&oacute;n de firma de certificado. Las entidades certificadoras no necesitan esta clave privada. Mantenga la clave privada de su unidad DiskStation en un lugar seguro y secreto.</p>
+</div>
+
+<h4>Para crear una petici&oacute;n de firma de certificado:</h4>
+<ol>
+	<li>Haga clic en <b>Crear certificado.</b></li>
+	<li>Siga las instrucciones del asistente de configuraci&oacute;n para crear y descargar la petici&oacute;n de firma de certificado.</li>
+</ol>
+
+<p>Una vez que la entidad certificadora haya emitido su certificado, se puede importar junto con su clave privada (consulte las instrucciones a continuaci&oacute;n).<h3>Exportar certificados</h3>
+
+<p>Los certificados existentes se pueden descargar para fines de administraci&oacute;n y archivado. El archivo exportado contiene el certificado, la clave privada y el certificado ra&iacute;z autofirmado de la unidad DiskStation.</p>
+
+<h4>Para exportar un certificado:</h4>
+<ul>
+<li>Haga clic en el bot&oacute;n <b>Exportar certificado</b>.</li>
+</ul>
+
+
+
+<h3>Importar certificados</h3>
+
+<p>Esta opci&oacute;n le permite importar certificados emitidos por entidades certificadoras o certificados exportados previamente, junto con la clave privada.</p>
+
+<h4>Para importar un certificado:</h4>
+<ul>
+	<li>Haga clic en el bot&oacute;n <b>Importar certificado</b>.</li>
+</ul>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Los certificados intermedios son opcionales para algunos certificados emitidos por entidades certificadoras.</li>
+<li>Los certificados deben tener el formato X.509 PEM.</li>
+<li>Las claves privadas deben tener formato RSA y no pueden estar protegidas con una frase de contrase&ntilde;a.</li>
+</ul>
+</div>
+
+
+
+<h3>Renovar certificados</h3>
+
+<p>Cuando su certificado est&eacute; a punto de caducar, se puede renovar utilizando esta opci&oacute;n.</p>
+
+<h4>Para renovar un certificado:</h4>
+<ol>
+	<li>Haga clic en <b>Crear certificado.</b></li>
+	<li>Seleccione <b>Renovar certificado</b> y haga clic en <b>Siguiente</b></li>
+	<li>Se crear&aacute; una nueva clave privada y una nueva petici&oacute;n de firma de certificado.</li>
+</ol>
+
+
+
+<h3>Crear petici&oacute;n de firma de certificado (CSR)</h3>
+
+<p>Esta opci&oacute;n le permite firmar una petici&oacute;n de firma de certificado utilizando el certificado ra&iacute;z de DiskStation.</p>
+
+<h4>Para firmar una petici&oacute;n de firma de certificado:</h4>
+<ol>
+	<li>Haga clic en <b>Crear certificado.</b></li>
+	<li>Haga clic en <b>Firmar una petici&oacute;n de firma de certificado (CSR)</b>.</li>
+	<li>Cargue la petici&oacute;n de firma de certificado e introduzca la informaci&oacute;n relevante. </li>
+	<li>Haga clic en <b>Siguiente</b> y el sistema firmar&aacute; l petici&oacute;n de certificado y crear&aacute; el certificado correspondiente.</li>
+</ol>
+
+
+</body>
+</html>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Yedekleme ve Çoğaltma</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>LUN Yedeklemesi*</h2>
+<p><b>Yedekleme ve Çoğaltma</b>'nın <b>Yedekleme</b> sekmesi altında DiskStation sunucunuzun iSCSI LUN'larını yerel paylaşımlı klasörlere yedeklemek için <b>Yerel LUN Yedeklemesi</b> öğesini kullanabilirsiniz. Başka bir DiskStation sunucusuna yedeklemek için <b>Ağ LUN Yedeklemesi</b>'ni de kullanabilirsiniz.</p>
+
+<h4>Bir iSCSI LUN'u yedeklemek için:</h4>
+<ol>
+<li>
+<b>LUN Yedekleme Sihirbazı</b>'nı açmak için <b>Oluştur</b> > <b>LUN yedekleme görevi</b> seçimini yapın ve <b>İleri</b>'ye tıklayın.
+</li>
+<li>
+Bir hedef türü seçmeniz istendiğinde, aşağıdakilerden birini seçin:
+</li>
+<ul>
+<li>
+<b>Yerel LUN Yedeklemesi</b>: LUN yedeklemesini DiskStation sunucunuzdan bir yerel paylaşımlı klasöre ya da DiskStation sunucunuzun USB veya eSATA bağlantı noktasına bağlı bir harici depolama aygıtına yapmak için bu seçeneği seçin.
+</li>
+<li><b>Ağ LUN Yedeklemesi</b>: LUN yedeklemesini DiskStation sunucunuzdan başka bir DiskStation sunucusuna yapmak için bu seçeneği seçin.
+</li>
+</ul>
+<li>
+Sorulduğunda, yedekleme hedefini ve kaynak LUN'u belirleyin ve yedekleme zamanlamasını ayarlayın.
+</li>
+<li>
+Kurulumu tamamlamak için sihirbazı izleyin.
+</li>
+</ol>
+<p>Yedekleme görevi oluşturulduktan sonra, DiskStation yedekleme görevini programa göre gerçekleştirecek ve yedeklenmiş LUN'u hedefte depolayacaktır. Yedeklenmiş LUN yalnız yedekleme amacıyla kullanılır. Yedek LUN'a erişmek için, daha fazla bilgi için <a href="restore.html">Yedek LUN'u geri yüklemek için</a> konusuna bakın.</p>
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>Normal Dosya ve Blok Seviyesi LUN'lar hedefte dosya görüntüleri olarak yedeklenecektir. Geri yüklenirse, tüm Blok Seviyesi LUN'lar Dosya LUN'larına değiştirilir.</li>
+<li>Herbir yedekleme görevi yedekleme kaynağı olarak yalnız bir adet LUN içerebilir.</li>
+<li>LUN'lar, FAT, FAT32, HFS, HFS Plus veya NTFS formatındaki harici bir diske yedeklenemezler.</li>
+<li>Ağ Network LUN Yedeklemesi yapmadan önce, Ağ Yedekleme hizmetinin <b>Yedekleme ve Çoğaltma</b> > <b>Yedekleme Hizmetleri</b>'nde etkinleştirildiğinden emin olmak için lütfen DiskStation hedefinde oturum açın.</li>
+<li>DiskStation sunucunuz ağa bir yönlendirici üzerinden bağlanıyorsa, Ağ LUN Yedeklemesi gerçekleştirmeden önce yönlendirici üzerinde iSCSI hizmeti için (TCP port 3260) bir bağlantı noktası yönlendirme kuralı belirlediğinizden emin olun.</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Tam Yedekleme ve Artımlı Yedekleme:</h4>
+<p>
+DiskStation ilk olarak seçilen LUN için tam bir yedekleme ve daha sonra da artımlı yedekleme gerçekleştirecektir. Ancak, yedekleme hedefinin paylaşımlı klasör adı veya dizin adı değiştirilirse, DiskStation görev için tekrar tam bir yedekleme gerçekleştirecektir.
+</p>
+</div>
+
+<p>____<br /> * Sadece belirli modellerde vardır.</p>
+</body></html>

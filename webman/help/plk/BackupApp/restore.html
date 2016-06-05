@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Przywracanie</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Przywracanie</h2>
+<p>Wybierz pozycje <strong>Kopia zapasowa i replikacja</strong> > <strong>Przywróć</strong>, aby przywrócić dane z kopii zapasowej.</p>
+
+<h4><a name="restore"></a>Aby przywrócić dane z kopii zapasowej:</h4>
+<ol class="disable-eds14">
+<li>Wybierz zadanie kopii zapasowej, a następnie kliknij przycisk <b>Przywróć</b>. Jeżeli kopia zapasowa ma wiele wersji, wybierz pozycje <strong>Przywróć</strong> > <strong>Całe zadanie</strong>.</li>
+<li>Może pojawić się monit o wybranie konfiguracji systemu, różnych wersji danych kopii zapasowej i innych elementów. Zależy to od rodzaju zadania, tj. czy jest to zadanie kopii zapasowej danych, zadanie kopii zapasowej jednostki LUN*, miejsce docelowe kopii zapasowej z jedną wersją (np. folder udostępniony) czy miejsce docelowe kopii zapasowej z wieloma wersjami (np. wolumin).</li>
+<li>Postępuj zgodnie z instrukcjami kreatora, aby zakończyć konfigurację.</li>
+</ol>
+<ol class="enable-eds14">
+<li>Wybierz zadanie kopii zapasowej, a następnie kliknij przycisk <b>Przywróć</b>.</li>
+<li>Może pojawić się monit o wybranie konfiguracji systemu, różnych wersji danych kopii zapasowej i innych elementów. Zależy to od rodzaju zadania kopii zapasowej.</li>
+<li>Postępuj zgodnie z instrukcjami kreatora, aby zakończyć konfigurację.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Uwaga:</h4>
+<ul>
+<li>Obsługiwane jest przywracanie w przypadku niektórych aplikacji. Aby sprawdzić, czy dany pakiet obsługuje przywracanie, a także poznać jego ograniczenia, skorzystaj z pomocy do danego pakietu.</li>
+<li>Jeżeli przywracany pakiet nie będzie zainstalowany, system automatycznie zainstaluje tę samą lub najnowszą wersję danej aplikacji. Jeżeli aplikacja będzie zainstalowana, ale w wersji starszej niż wersja z kopii zapasowej, system automatycznie zaktualizuje ją do wersji z kopii zapasowej.</li>
+<li>Aplikacji, których kopię zapasową wykonano w systemie DSM 5.1 lub nowszej wersji, nie można przywrócić w systemie DSM 5.0 lub starszym. </li>
+</ul>
+</div>
+
+<div class="section disable-eds14">
+<h4>Uwaga:</h4>
+<ul>
+<li>Po zakończeniu zadania przywracania jednostka LUN z kopii zapasowej zostanie przywrócona do plikowej jednostki LUN na wybranym woluminie docelowym.*</li>
+
+<li>Obsługiwane jest przywracanie w przypadku niektórych aplikacji. Aby sprawdzić, czy dany pakiet obsługuje przywracanie, a także poznać jego ograniczenia, skorzystaj z pomocy do danego pakietu.</li>
+<li>Jeżeli przywracany pakiet nie będzie zainstalowany, system automatycznie zainstaluje tę samą lub najnowszą wersję danej aplikacji. Jeżeli aplikacja będzie zainstalowana, ale w wersji starszej niż wersja z kopii zapasowej, system automatycznie zaktualizuje ją do wersji z kopii zapasowej.</li>
+<li>Aplikacji, których kopię zapasową wykonano w systemie DSM 5.1 lub nowszej wersji, nie można przywrócić w systemie DSM 5.0 lub starszym. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Aby przywrócić jeden plik lub folder z zadania kopii zapasowej z wieloma wersjami:</h4>
+<ol>
+<li>Uruchom aplikację <strong>Przeglądarka wersji plików</strong>. Można to zrobić, wykonując jedną z następujących czynności:</li>
+<ul>
+<li>Kliknij przycisk <strong>Przywróć</strong> i z listy rozwijanej wybierz polecenie <strong>Poszczególne pliki/foldery</strong>. </li>
+<li>Przejdź do <strong>Miejsce docelowe kopii zapasowej</strong> i rozwiń widok wybranego miejsca docelowego kopii zapasowej. Kliknij ikonę <strong>Informacje o wersji kopii zapasowej</strong>. W wyświetlonym oknie wybierz wersję kopii zapasowej, która ma być przywrócona, i kliknij ikonę <strong>Przeglądarka wersji plików</strong>.</li>
+</ul>
+<li>Wersje pliku lub folderu można przeglądać, używając osi czasu lub ikony kalendarza na dole ekranu. </li>
+<li>Wybierz wersję, która ma być przywrócona, i kliknij przycisk <strong>Przywróć</strong>. </li>
+<li>Alternatywnie można skopiować plik lub folder do innej lokalizacji bądź pobrać go za pomocą przycisku <strong>Kopiuj do</strong> lub <strong>Pobierz</strong>. </li>
+<li>Plik lub folder można też kliknąć prawym przyciskiem myszy, a następnie z listy rozwijanej wybrać jedno z dostępnych poleceń. </li>
+</ol>
+<h4>Aby wyszukać konkretną wersję:</h4>
+<ol>
+  <li>W prawym górnym rogu kliknij strzałkę na pasku filtrowania.</li>
+  <li>Lista rozwijana umożliwia filtrowanie plików na podstawie następujących kryteriów:</li>
+  <ul>
+    <li><strong>Słowo kluczowe: </strong>Wprowadź nazwę pliku lub folderu. W słowach kluczowych można używać symboli wieloznacznych [*] (zastępujących jeden lub więcej znaków) i [?] (zastępującego jeden dowolny znak). Na przykład [z<span class="note_content">*</span>e] może oznaczać [z<span class="note_content">darzeni</span>e], [z<span class="note_content">dani</span>e] lub [ze].</li>
+    <li><strong>Typ pliku</strong>: z listy rozwijanej wybierz pozycję <strong>Dowolny</strong>, <strong>Dowolny folder</strong> lub <strong>Dowolny plik</strong> w celu zawężenia wyników wyszukiwania.</li>
+    <li><strong>Rozmiar</strong>: wybierz pozycję <strong>Dowolny</strong> lub <strong>równa się</strong>, <strong>jest większe niż</strong> i <strong>jest mniejsze niż</strong>, a następnie wprowadź wartość.</li>    
+    <li><strong>Zakres dat: </strong>wybierz pozycję <strong>Dzisiaj</strong>, <strong>Wczoraj</strong>, <strong>Ubiegły tydzień</strong> lub <strong>Ubiegły miesiąc</strong> albo <strong>Dostosuj</strong> w celu wprowadzenia daty początkowej i daty końcowej konkretnego okresu wyszukiwania wersji.</li>
+
+  </ul>
+  <li>Kliknij przycisk <strong>Filtruj</strong>, aby zastosować filtry. </li>
+  <li>Kliknij przycisk <strong>Resetuj</strong>, aby zresetować wyniki wyszukiwania.</li>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Funkcja Przeglądarka wersji plików jest dostępna tylko w przypadku zadań kopii zapasowych z wieloma wersjami.</li>
+<li>W systemie operacyjnym DSM w wersji 5.1 lub starszej narzędzie Przeglądarka wersji plików ma ograniczoną funkcjonalność.</li>
+<li dir="ltr">Konfigurację systemu i aplikacje można przywracać tylko za pomocą polecenia <strong>Przywróć</strong> > <strong>Całe zadanie</strong>. </li>
+<li>Funkcje <strong>Kopiuj do</strong> i <strong>Pobierz </strong> nie uwzględniają metadanych. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Aby przywrócić zadania kopii zapasowej z innego miejsca docelowego kopii zapasowej:</h4>
+<ol>
+<li>Kliknij przycisk <b>Przywróć z</b>.</li>
+<li>Wybierz jedną z następujących pozycji, aby znaleźć zadanie kopii zapasowej, a następnie kliknij przycisk <b>Dalej</b>:</li>
+<ul>
+<li><b>Przywracanie lokalne</b>: przywracanie danych z lokalnego folderu udostępnionego lub dysku zewnętrznego.</li>
+<li><b>Przywracanie sieciowe</b>: przywracanie danych z innego serwera DiskStation lub serwera zgodnego z protokołem rsync.</li>
+
+<li><b>Przywracanie danych z usługi chmury publicznej</b>: przywracanie danych z serwera chmury publicznej. </li>
+
+</ul>
+<li>Gdy pojawi się monit, wybierz źródło zadania kopii zapasowej, a następnie wybierz miejsce docelowe przywracania danych.</li>
+<li>Postępuj zgodnie z instrukcjami kreatora, aby ukończyć zadanie.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Uwaga:</h4>
+<ul>
+
+  <li>Aplikacja Embedded DataStation umożliwia przywracanie folderów udostępnionych tylko na urządzeniach zewnętrznych z systemem plików ext3/ext4.</li>
+  
+<li>Aplikacja Embedded DataStation nie obsługuje przywracania aplikacji bez urządzenia zewnętrznego z systemem plików ext3/ext4.</li>
+
+</ul>
+</div>
+
+<p>____<br /> * Funkcja dostępna tylko w niektórych modelach.</p>
+</body></html>

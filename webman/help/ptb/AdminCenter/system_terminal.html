@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Terminal</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Terminal</h2>
+
+<p>Ativar as op&ccedil;&otilde;es em <strong>Painel de Controle</strong> &gt; <strong>Terminal e SNMP</strong> &gt; <strong>Terminal</strong> permite que o seu DiskStation suporte os servi&ccedil;os de interface de linha de comando Telnet e SSH. Voc&ecirc; tamb&eacute;m pode alterar o n&iacute;vel de seguran&ccedil;a do algoritmo de criptografia SSH.</p>
+
+<h4>Para ativar o servi&ccedil;o Telnet/SSH:</h4>
+<ol>
+<li>Marque a caixa ao lado do protocolo desejado (SSH ou Telnet).</li>
+<li>Clique em <b>Aplicar</b>.</li>
+</ol>
+<h4>Para alterar a porta de servi&ccedil;o SSH:</h4>
+<ol>
+<li>Em <strong>Porta</strong>, digite um novo n&uacute;mero de porta.</li>
+<li>Clique em <b>Aplicar</b>.</li>
+</ol>
+
+<p>V&aacute;rios algoritmos de criptografia com diferentes n&iacute;veis de seguran&ccedil;a s&atilde;o usados para proteger as conex&otilde;es SSH. Voc&ecirc; pode decidir quais algoritmos s&atilde;o usados para atender melhor suas necessidades.</p>
+<h4>Para alterar o n&iacute;vel de seguran&ccedil;a do algoritmo de criptografia SSH:</h4>
+<ol>
+<li>Clique em <b>Configura&ccedil;&otilde;es avan&ccedil;adas</b>.</li>
+<li>Selecione um n&iacute;vel de seguran&ccedil;a para os algoritmos de criptografia. Se voc&ecirc; quiser especificar exatamente quais algoritmos podem ser usados, selecione <b>Personalizar</b> para escolher de tr&ecirc;s grupos: Cipher (Codifica&ccedil;&atilde;o), KEX (Key Exchange (Troca de Chave)) e MAC (Message Authentication Code -(C&oacute;digo de autentica&ccedil;&atilde;o de Mensagem)).</li>
+<li>Clique em <b>Aplicar</b>.</li>
+</ol>
+<p>Alguns modelos suportam acelera&ccedil;&atilde;o de hardware para certos algoritmos de criptografia. Voc&ecirc; pode marcar a op&ccedil;&atilde;o <b>Usar apenas codifica&ccedil;&otilde;es aceleradas por hardware</b> para aprimorar as velocidades de transfer&ecirc;ncia de servi&ccedil;os relacionados ao SSH incluindo os servi&ccedil;os de backup de rede criptografada e SFTP. Na p&aacute;gina avan&ccedil;ada, os algoritmos capazes de usar a acelera&ccedil;&atilde;o de hardware s&atilde;o exibidos em vermelho.</p>
+
+<div class="section">
+<h4>Observa&ccedil;&atilde;o:</h4>
+<ul>
+
+<li>Alguns servi&ccedil;os (ex.: backup de rede, SFTP) habilitam automaticamente o SSH e abrem a porta 22. Nesse caso, &eacute; necess&aacute;rio habilitar o servi&ccedil;o SSH em <strong>Painel de controle</strong> &gt; <strong>Terminal e SNMP</strong> &gt; <strong>Terminal</strong> para entrar no DSM usando SSH.</li>
+<li>O SSH/Telnet suportam apenas login no sistema com as contas <strong>root</strong> ou <strong>admin</strong>.</li>
+<li>A senha n&atilde;o pode ser deixada em branco ao fazer login no sistema com SSH/Telnet.</li>
+<li>Quando o servi&ccedil;o SSH estiver desativado, todas as conex&otilde;es SSH ser&atilde;o encerrados, incluindo todas as tarefas de backup de rede criptografada que estiverem sendo executadas. Sugerimos realizar tarefas de backup de rede novamente ap&oacute;s desativar o servi&ccedil;o SSH.</li>
+<li>A manipula&ccedil;&atilde;o impr&oacute;pria ou modifica&ccedil;&otilde;es do DiskStation podem resultar em mau funcionamento ou perda de dados.</li>
+<li>A sele&ccedil;&atilde;o de um n&iacute;vel de seguran&ccedil;a maior ou usar apenas codificadores acelerador por hardware pode fazer com que alguns clientes SSH n&atilde;o consigam se conectar devido a conflitos de compatibilidade.</li>
+<li>Dependendo do n&iacute;vel de seguran&ccedil;a selecionado, alguns algoritmos que suportam a acelera&ccedil;&atilde;o de hardware podem n&atilde;o estar dispon&iacute;veis.</li>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+{
+	"privilege": "SYNO.SDS.App.FileStation3.Instance",
+	"allow_user": ["admin", "local", "ldap", "domain"]
+}

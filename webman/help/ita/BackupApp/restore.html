@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Ripristina</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Ripristina</h2>
+<p>Andare su <strong>Backup e Replica</strong> > <strong>Ripristina</strong> per ripristinare i dati di backup.</p>
+
+<h4><a name="restore"></a>Per ripristinare un'attività di backup:</h4>
+<ol class="disable-eds14">
+<li>Selezionare un'attività di backup e fare clic su <b>Ripristina</b>. Se l'attività è un backup multi-versione, selezionare<strong> Ripristina</strong> > <strong>Attività completa</strong>.</li>
+<li>Può essere chiesto di selezionare la configurazione del sistema, versioni diverse di dati di backup o altro. Dipende se l'attività è un'attività di backup di dati, attività di backup LUN*, destinazione di backup versione singola (ad es. cartella condivisa) o destinazione di backup a più versioni (ad es. volume).</li>
+<li>Seguire la procedura guidata per completare la configurazione.</li>
+</ol>
+<ol class="enable-eds14">
+<li>Selezionare un'attività di backup e fare clic su <b>Ripristina</b>.</li>
+<li>Può essere chiesto di selezionare la configurazione del sistema, versioni diverse di dati di backup o altro. Dipende dal tipo di attività di backup in questione.</li>
+<li>Seguire la procedura guidata per completare la configurazione.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Nota:</h4>
+<ul>
+<li>Il ripristino di certe applicazioni è supportato. Per visualizzare se un pacchetto specifico supporti il ripristino e per visualizzarne i limiti, fare riferimento alla guida di ciascuna applicazione.</li>
+<li>Quando si ripristina un pacchetto, se non è installato, verrà installata automaticamente la stessa o l'ultima versione dell'applicazione. Se l'applicazione viene installata ma in un versione più vecchia di quella di cui si è eseguito il backup, verrà aggiornato automaticamente alla versione di cui si dispone il backup.</li>
+<li>Le applicazioni di cui è stato effettuato il backup in DSM 5.1 o superiore non possono essere ripristinate in DSM 5.0 o inferiore. </li>
+</ul>
+</div>
+
+<div class="section disable-eds14">
+<h4>Nota:</h4>
+<ul>
+<li>Una volta completato il ripristino, il backup dei LUN sarà ripristinato in un LUN basato su file nel volume di destinazione selezionato.*</li>
+
+<li>Il ripristino di certe applicazioni è supportato. Per visualizzare se un pacchetto specifico supporti il ripristino e per visualizzarne i limiti, fare riferimento alla guida di ciascuna applicazione.</li>
+<li>Quando si ripristina un pacchetto, se non è installato, verrà installata automaticamente la stessa o l'ultima versione dell'applicazione. Se l'applicazione viene installata ma in un versione più vecchia di quella di cui si è eseguito il backup, verrà aggiornato automaticamente alla versione di cui si dispone il backup.</li>
+<li>Le applicazioni di cui è stato effettuato il backup in DSM 5.1 o superiore non possono essere ripristinate in DSM 5.0 o inferiore. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Per ripristinare un singolo file o cartella per l'attività di backup multi-versione:</h4>
+<ol>
+<li>Launch <strong>Browser versione file</strong>. È possibile procedere scegliendo uno dei metodi seguenti:</li>
+<ul>
+<li>Fare clic su <strong>Ripristina</strong> e selezionare <strong>File/cartelle singole</strong> dal menu a discesa. </li>
+<li>Andare su <strong>Destinazione di backup</strong> ed espandere la destinazione di backup selezionata. Fare clic sull'icona <strong>Informazioni versione di backup</strong>. Nella finestra visualizzata, selezionare la versione di backup da ripristinare e fare clic sull'icona <strong>Browser versione file</strong>.</li>
+</ul>
+<li>È possibile sfogliare le versioni di un file o di una cartella desiderata utilizzando l'icona della timeline o del calendario alla base della schermata. </li>
+<li>Selezionare la versione che si desidera gestire, quindi fare clic su <strong>Ripristina</strong>. </li>
+<li>In alternativa, è possibile copiare un file o una cartella in un'altra posizione, oppure scaricarla utilizzando il pulsante <strong> Copia in...</strong> o<strong> Download</strong>. </li>
+<li>È possibile anche fare clic con il tasto destro del mouse sul file o la cartella e selezionare queste opzioni dal menu a discesa. </li>
+</ol>
+<h4>Per cercare una versione specifica:</h4>
+<ol>
+  <li>Fare clic sulla freccia nella barra del filtro nell'angolo in alto a destra.</li>
+  <li>Nel menu a discesa, è possibile filtrare i file per:</li>
+  <ul>
+    <li><strong>Parola chiave: </strong>inserire il nome di un qualsiasi file o cartella Nelle parole chiave, è possibile utilizzare i caratteri jolly [*] (per indicare uno o più caratteri) e il simbolo [?] (per indicare un carattere casuale). Ad esempio, [a<span class="note_content">*</span>n] può rappresentare [a<span class="note_content">ctio</span>n], [a<span class="note_content">ttentio</span>n] o [an].</li>
+    <li><strong>Tipo di file:</strong> nel menu a discesa è possibile scegliere fra <strong>Qualsiasi</strong>, <strong>Qualsiasi cartella</strong> o <strong>Qualsiasi file</strong> per restringere la ricerca.</li>
+    <li><strong>Dimensione:</strong> scegliere <strong>Qualsiasi</strong> o selezionare <strong>è uguale a</strong>, <strong>è maggiore di</strong>, <strong>è minore di</strong>, quindi inserire un valore.</li>    
+    <li><strong>Intervallo data: </strong>scegliere tra <strong>Oggi</strong>, <strong>Ieri</strong>, <strong>Settimana scorsa</strong> o <strong>Mese scorso</strong> o <strong>Personalizza</strong> per inserire una data di inizio e di fine per trovare le versioni che rientrano in uno specifico periodo.</li>
+
+  </ul>
+  <li>Per applicare i filtri, fare clic su <strong>Filtro</strong>. </li>
+  <li>Per reimpostare la ricerca filtrata, fare clic sul pulsante <strong>Reset</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Solo le attività di backup multi-versione forniscono la funzione Browser versione file.</li>
+<li>La funzione Browser versione file presenta soltanto funzioni parziali in DSM 5.1 o inferiori.</li>
+<li dir="ltr">La configurazione di sistema e le applicazioni possono essere ripristinate mediante <strong>Ripristina</strong> > <strong>Attività completa</strong>. </li>
+<li>I metadati non saranno inclusi nelle azioni <strong>Copia in...</strong> e <strong>Download</strong>. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Per ripristinare attività di backup da un'altra destinazione di backup:</h4>
+<ol>
+<li>Fare clic su <b>Ripristina da...</b>.</li>
+<li>Scegliere uno dei seguenti per individuare il backup dei LUN e fare clic su <b>Avanti</b>:</li>
+<ul>
+<li><b>Ripristino locale</b>: scegliere questa opzione per ripristinare dati da una cartella condivisa locale o un disco esterno.</li>
+<li><b>Ripristino rete</b>: scegliere questa opzione per ripristinare dati da un'altra DiskStation o server compatibile rsync.</li>
+
+<li><b>Ripristino servizio cloud pubblico</b>: scegliere questa opzione per ripristinare i dati da un server cloud pubblico. </li>
+
+</ul>
+<li>Quando chiesto, selezionare l'origine dove è conservato il backup, quindi selezionare la destinazione per ripristinare i dati.</li>
+<li>Seguire la procedura guidata per completare.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Nota:</h4>
+<ul>
+
+  <li>Con Embedded DataStation è possibile solo ripristinare le cartelle condivise nei dispositivi esterni EXT3/EXT4.</li>
+  
+<li>Embedded DataStation non supporta il ripristino di applicazioni senza un dispositivo esterno EXT3/EXT4.</li>
+
+</ul>
+</div>
+
+<p>____<br /> * Disponibile solo su alcuni modelli.</p>
+</body></html>

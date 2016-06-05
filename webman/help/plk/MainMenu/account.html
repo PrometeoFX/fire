@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Opcje</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_user"></a>Konto</h2>
+
+<p>Karta Konto zawiera opcje umożliwiające edycję podstawowych ustawień konta, takich jak opis, hasło, adres e-mail i weryfikacja 2-etapowa. Aby wyświetlić tę kartę, kliknij ikonę postaci w prawym górnym rogu pulpitu i wybierz pozycję <strong>Opcje</strong>.</p>
+
+
+
+<h3>Modyfikacja ustawień konta</h3>
+
+<p>Można edytować następujące ustawienia konta:</p>
+<ul>
+
+<li><strong>Opis:</strong> Wprowadź opis konta. Opis użytkownika może się składać z maksymalnie 64 wyświetlanych znaków Unicode.</li>
+<li><strong>Nowe hasło:</strong> Jeżeli chcesz zmienić hasło do konta, wprowadź tu nowe hasło i potwierdź je w polu <strong>Potwierdź hasło</strong> poniżej. W haśle ważna jest wielkość liter i jest ono ograniczone do 127 wyświetlanych znaków, w tym liter, cyfr, symboli i spacji.</li>
+<li><strong>E-mail:</strong> Wprowadź adres e-mail (dotyczy tylko użytkowników innych niż admin).</li>
+<li><strong>Język wyświetlania:</strong> Określ język wyświetlania swojego konta. Określony tutaj język wyświetlania będzie mieć większy priorytet niż język określony na stronie <b>Panel sterowania</b> > <b>Opcje regionalne</b> > <b>Język</b>.</li>
+</ul>
+<p>Po zmodyfikowaniu ustawień kliknij przycisk <b>OK</b>, aby zapisać zmiany.</p>
+
+
+<h3>Weryfikacja 2-etapowa</h3>
+
+<p>Weryfikacja 2-etapowa zapewnia lepszą ochronę konta DSM. Po włączeniu weryfikacji 2-etapowej w celu zalogowania się do systemu DSM będzie potrzebne hasło oraz jednorazowy kod weryfikacyjny. Kody weryfikacyjne uzyskuje się z aplikacji uwierzytelniających zainstalowanych w urządzeniu mobilnym. Jeżeli więc ktoś będzie chciał uzyskać dostęp do Twojego konta, będzie potrzebować nie tylko Twojej nazwy użytkownika i hasła, ale też i urządzenia mobilnego.</p>
+
+<div class="section">
+<h4>Wymagania:</h4>
+<p>Weryfikacja 2-etapowa wymaga urządzenia mobilnego i aplikacji uwierzytelniającej, które obsługują protokół czasowego hasła jednorazowego (Time-based One-Time Password, TOTP). Do aplikacji uwierzytelniających należą Google Authenticator (Android, iPhone, BlackBerry) oraz Authenticator (Windows Phone).</p>
+</div>
+
+<h4>Aby włączyć weryfikację 2-etapową:</h4>
+
+<ol>
+<li>Przejdź do karty <strong>Opcje</strong> > <strong>Konto</strong> i zaznacz pole wyboru <strong>Włącz weryfikację 2-etapową</strong>, aby uruchomić kreator konfiguracji weryfikacji 2-etapowej.</li>
+<li>Na pierwszym ekranie wprowadź adres e-mail. W razie utraty urządzenia mobilnego można będzie przesłać na ten adres awaryjny kod weryfikacyjny.</li>
+<li>Pobierz i zainstaluj aplikację uwierzytelniającą, taką jak Google Authenticator (Android, iPhone, BlackBerry) oraz Authenticator (Windows Phone).</li>
+<li>Po przejściu do następnego ekranu otwórz aplikację uwierzytelniającą i zeskanuj kod QR. Zamiast tego możesz także kliknąć łącze, aby ręcznie wprowadzić tajny klucz.</li>
+<li>Aplikacja uwierzytelniająca wygeneruje następnie 6-cyfrowy kod weryfikacyjny. Wprowadź ten kod w polu tekstowym kreatora, aby potwierdzić poprawność konfiguracji. Jeżeli wystąpi błąd, sprawdź, czy czas systemu urządzenia mobilnego jest zsynchronizowany z czasem systemu DSM. Kody weryfikacyjne są aktualizowane co pewien czas, dlatego należy uważać, aby nie wprowadzić nieważnego już kodu.</li>
+<li>Kiedy kreator konfiguracji zakończy działanie, kliknij przycisk <strong>OK</strong>, aby zapisać ustawienia.</li>
+</ol>
+
+
+
+<h4>Aby zalogować się do DSM przy użyciu weryfikacji 2-etapowej:</h4>
+
+<p>Po włączeniu weryfikacji 2-etapowej w celu zalogowania się do systemu DSM będzie wymagane wprowadzenie 6-znakowego kodu weryfikacyjnego.</p>
+
+<ol>
+<li>Na ekranie logowania systemu DSM wprowadź w zwykły sposób nazwę użytkownika i hasło.</li>
+<li>Kiedy wyświetli się monit o wprowadzenie kodu weryfikacyjnego, otwórz aplikację uwierzytelniającą w urządzeniu mobilnym.</li>
+<li>Znajdź i wprowadź 6-cyfrowy kod weryfikacyjny do swojego konta. W razie utraty urządzenia mobilnego możesz kliknąć łącze <b>Utracony telefon?</b>, aby otrzymać pocztą e-mail awaryjny kod weryfikacyjny.</li>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li><strong>Ustawienia SMTP:</strong> W celu odbierania kodów awaryjnych za pośrednictwem poczty e-mail należy prawidłowo skonfigurować ustawienia serwera SMTP na stronie <b>Panel sterowania</b> > <b>Powiadomienia</b>.</li>
+<li><strong>Limit kodów awaryjnych:</strong> Każdego użytkownika obowiązuje limit 5 kodów awaryjnych. Po przekroczeniu tego limitu należy wyłączyć i włączyć ponownie weryfikację 2-etapową, zanim będzie można odbierać kolejne kody awaryjne.</li>
+</ul>
+</div>
+
+
+<h4>Aby zresetować ustawienia 2-etapowej weryfikacji użytkownika:</h4>
+
+<p>Użytkownicy należący do grupy <strong>administrators</strong> mogą resetować ustawienia weryfikacji 2-etapowej pozostałych użytkowników. 
+<ol>
+<li>Przejdź do pozycji <strong>Panel sterowania</strong> > <strong>Użytkownik</strong>.</li>
+<li>Kliknij dwukrotnie użytkownika, którego weryfikację 2-etapową chcesz zresetować.</li>
+<li>Na karcie <strong>Informacje użytkownika</strong> kliknij przycisk <strong>Resetuj weryfikację 2-etapową</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Jeżeli nie ma dostępnego użytkownika należącego do grupy <strong>administrators</strong>, możesz nacisnąć fizyczny przycisk resetowania na serwerze DiskStation, aby zresetować ustawienia DSM i wyłączyć weryfikację 2-etapową.</p>
+</div>
+
+
+<h3>Aktywność na koncie</h3>
+<p>Okno Aktywność na koncie przedstawia informacje o próbach logowania na Twoje konto w systemie DSM, na przykład bieżące połączenia lub historię logowania.</p>
+
+<h4>Aby sprawdzić aktywność na koncie:</h4>
+<p>Kliknij przycisk <strong>Aktywność na koncie</strong>. Pojawi się okno wyskakujące z następującymi kartami:
+
+<ul>
+<li><strong>Połączeni użytkownicy:</strong> Ta karta przedstawia następujące informacje:
+  <ul>
+<li><strong>Data i godzina:</strong> Data i godzina dostępu do konta.</li>
+<li><strong>Nazwa i IP klienta:</strong> Nazwa i adres IP urządzenia, z którego uzyskano dostęp do konta. Nazwa klienta pojawia się tylko wtedy, gdy do konta uzyskano dostęp przy użyciu protokołu CIFS.</li>
+<li><strong>Usługa:</strong> Protokół używany do uzyskania dostępu do konta.</li>
+<li><strong>Zasoby:</strong> Zasoby systemowe używane przez konto.</li>
+</ul></li>
+<li><strong>Historia logowania:</strong> Ta karta przedstawia ostatnie sesje logowania i następujące informacje:
+<ul>
+<li><strong>Data i godzina:</strong> Data i godzina dostępu do konta.</li>
+<li><strong>Zdarzenie:</strong> Przedstawia nazwę użytkownika i adres IP.</li>
+</ul>
+</li>
+</ul>
+
+
+</body>
+</html>

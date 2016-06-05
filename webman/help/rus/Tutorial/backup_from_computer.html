@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Как резервировать данные на ПК/Mac с помощью Cloud Station</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Как резервировать данные на ПК/Mac с помощью Cloud Station</h1>
+<div class="tutorials_content"><img src="../../images/Backup/1x/backup_from_PC/07_1_back_up_your_data_from_pc.png" /><h2>Обзор</h2>
+<p>Cloud Station – современная кроссплатформенная программа синхронизации – может также использоваться как гибкий инструмент резервирования пользовательских данных. Использование Cloud Station в таком качестве дает ряд преимуществ. Прежде всего, репликация данных в режиме реального времени улучшает показатели целевых точек восстановления и уменьшает период времени, в течение которого в результате чрезвычайной ситуации данные компьютера могут быть потеряны без возможности восстановления. Cloud Station не только осуществляет мгновенное резервирование данных, но и существенно снижает использование пропускной способности за единицу времени по сравнению с традиционным методом резервирования. На клиентском компьютере в папке для резервирования можно выбрать файлы, которые резервировать не нужно, отфильтровав их по размеру или типу файла. Кроме того, Cloud Station может хранить до 32 версий файла и восстанавливать их с NAS-сервера на компьютер.</p>
+
+<h3 class="list_head">1. Настройка Cloud Station на NAS Synology</h3>
+<ol>
+
+<li>Выполните вход в DSM с учетной записью пользователя, принадлежащего группе <strong>administrator</strong>.</li>
+<li>Запустите <b>Cloud Station</b>.</li>
+<li>Если вы не активировали функцию главной папки пользователя, вам будет предложено это сделать. Нажмите <strong>OK</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/01.png" border="1" /><li>Вы будете перенаправлены на страницу настроек пользователя. Активируйте homes пользователей и нажмите <b>Применить</b>.</li><img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" /><li>Вернитесь в <b>Cloud Station</b>, вам будет предложено активировать приложение. Нажмите <b>Да</b>.</li><img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" /><div class="code_div"><b>Примечание.</b> QuickConnect — это служба ретрансляции, которая позволяет легко подключаться к NAS-серверу Synology вне локальной сети. Чтобы синхронизировать файлы, находясь вдали от дома или офиса, рекомендуем установить QuickConnect, выбрав <b>Панель управления</b> > <b>QuickConnect</b>.</div>
+
+<li>Выберите <b>Права доступа</b> и укажите пользователей, которые будут иметь доступ к Cloud Station. Нажмите<b> Сохранить</b>.</li><img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" /><li>Настройте папку общего доступа на NAS-устройстве Synology для целей резервирования. Выберите <strong>Панель управления</strong> > <strong>Папка общего доступа</strong> и нажмите <strong>Создать</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" /><li>Задайте имя папки и заполните соответствующие поля. Нажмите <strong>OK</strong>. Например, назовем папку <strong>Резервирование</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" /><li>На вкладке <strong>Разрешения</strong> укажите пользователей, которые будут иметь право доступа к папке. Например, зададим пользователю <strong>admin</strong> права на <strong>чтение/запись</strong>. Нажмите <strong>OK</strong>. </li><img src="../../images/Backup/1x/backup_from_PC/07.png" border="1" /><li>Выберите <strong>Cloud Station</strong> > <strong>Настройки</strong> > <strong>Общий доступ</strong>, выберите папку <b>Резервирование</b> и нажмите <strong>Включить</strong>. </li><img src="../../images/Backup/1x/backup_from_PC/08.png" border="1" /></ol>
+
+<h3 class="list_head">2. Настройка Cloud Station на ПК под управлением Windows</h3>
+<p>Для настройки Cloud Station на ПК или Mac выполните следующие действия</p>
+
+<h4>2.1 Для ПК</h4>
+
+<ol>
+
+<li>Выберите <strong>Cloud Station</strong> > <strong>Обзор</strong> и нажмите кнопку <strong>Загрузить</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/09.png" border="1" /><li>Нажмите кнопку, чтобы загрузить Cloud Station для ПК под управлением Windows. (Вы также можете загрузить Cloud Station из <a href="https://www.synology.com/en-us/support/download" target="_blank">Центра загрузок Synology</a>.)</li>
+<li>Запустите на компьютере средство установки и следуйте инструкциям по установке Cloud Station. </li>
+<li>После установки запустите <strong>Cloud Station</strong> на компьютере. Нажмите <strong>Запустить сейчас</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" /><li>Введите адрес NAS-устройства Synology, на котором установлено приложение Cloud Station (или QuickConnect ID), имя пользователя и пароль. (Можно также нажать на значок поиска справа, и Cloud Station автоматически начнет искать другие NAS Synology в вашей локальной сети.) Нажмите <strong>Далее</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" /><div class="code_div"><b>Примечание.</b> Для указанной учетной записи должны быть заданы права доступа в меню <strong>Cloud Station</strong> > <strong>Права доступа</strong> NAS Synology.</div>
+<li>Укажите параметры настройки задачи (здесь мы выберем <strong>Расширенная настройка</strong>, так как настраиваем специальную папку для резервирования). Нажмите <strong>Далее</strong>. </li><img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" /><li>Выберите папку на компьютере, чтобы синхронизировать ее с папкой "Резервирование", созданной на NAS-устройстве Synology. Нажмите <strong>Далее</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" /><li>Нажмите <strong>Готово</strong> для завершения настройки.</li><img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" /></ol>
+
+<p><strong>Создание новой задачи</strong>:<ol>
+<li>Выберите <strong>Cloud Station</strong> > <strong>Настройки</strong> и включите папку общего доступа для новой задачи. В нашем примере это папка <strong>photo</strong>.​ Убедитесь, что вы имеете права на чтение/запись для папки <strong>photo</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" /><li>В программе Cloud Station на своем компьютере нажмите <strong>Создать</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" /><li>Выберите NAS Synology для новой задачи. Здесь мы выберем <strong>Подключенное NAS-устройство Synology</strong>, так как создаем новую задачу для того же NAS-устройства Synology. Нажмите <strong>Далее</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" /><li>Нажмите <strong>Расширенная настройка</strong> и следуйте инструкциям мастера для завершения настройки. </li><img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" /></ol>
+
+<h4>2.2 Для Mac</h4>
+  <ol>
+    <li>Выберите <strong>Cloud Station</strong> > <strong>Обзор</strong> и нажмите кнопку <strong>Загрузить</strong>.</li>
+
+    <li>Нажмите кнопку, чтобы загрузить Cloud Station для Mac. (Вы также можете загрузить Cloud Station из <a href="https://www.synology.com/en-us/support/download" target="_blank">Центра загрузок Synology</a>.)</li><img src="../../images/Backup/1x/backup_from_PC/18.png" border="1" /><li>Запустите на компьютере средство установки и следуйте инструкциям по установке Cloud Station. </li>
+    <li>После установки запустите <strong>Cloud Station</strong> на компьютере. Нажмите <strong>Запустить сейчас</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" /><li>Введите адрес NAS-устройства Synology, на котором установлено приложение Cloud Station (или QuickConnect ID), имя пользователя и пароль. (Можно также нажать на значок поиска справа, и Cloud Station автоматически начнет искать другие NAS Synology в вашей локальной сети.) Нажмите <strong>Далее</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" /><div class="code_div"><b>Примечание.</b> Для указанной учетной записи должны быть заданы права доступа в меню <strong>Cloud Station</strong> > <strong>Права доступа</strong> NAS Synology.</div>
+<li>Укажите параметры настройки задачи (здесь мы выберем <strong>Расширенная настройка</strong>, так как настраиваем специальную папку для резервирования). Нажмите <strong>Далее</strong>. </li><img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" /><li>Выберите папку на компьютере, чтобы синхронизировать ее с папкой "Резервирование", созданной на NAS-устройстве Synology. Нажмите <strong>Далее</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" /><li>Нажмите <strong>Готово</strong> для завершения настройки.</li>
+  </ol>
+  
+<p><strong>Создание новой задачи</strong>:<ol>
+<li>Выберите <strong>Cloud Station</strong> > <strong>Настройки</strong> и включите папку общего доступа для новой задачи. В нашем примере это папка <strong>photo</strong>.​ Убедитесь, что вы имеете права на чтение/запись для папки <strong>photo</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" /><li>В программе Cloud Station на своем компьютере нажмите <strong>Создать</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" /><li>Выберите NAS Synology для новой задачи. Здесь мы выберем <strong>Подключенное NAS-устройство Synology</strong>, так как создаем новую задачу для того же NAS-устройства Synology. Нажмите <strong>Далее</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" /><li>Нажмите <strong>Расширенная настройка</strong> и следуйте инструкциям мастера для завершения настройки. </li><img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" /></ol> 
+
+<h3 class="list_head">3. Извлечение данных из Cloud Station</h3>
+<p>Если вы случайно удалили или перезаписали файл, его можно восстановить с помощью Cloud Station. </p>  
+<h3>4.1 Загрузка предыдущих версий синхронизированного файла на ПК</h3>  
+  <ol>
+      <li>Нажмите значок Cloud Station на панели задач компьютера и нажмите значок папки.</li><img src="../../images/Backup/1x/backup_from_PC/25.png" border="1" /><li>Нажмите нужный файл правой кнопкой мыши и выберите <strong>Synology Cloud Station</strong> > <strong>Обзор предыдущих версий</strong>. </li><img src="../../images/Backup/1x/backup_from_PC/26.png" border="1" /><li>Выберите версию для загрузки и нажмите значок загрузки. </li><img src="../../images/Backup/1x/backup_from_PC/27.png" border="1" /></ul>
+    <li>Введите имя файла и выберите место для сохранения файла.</ol>
+<h3>4.1 Загрузка предыдущих версий синхронизированного файла на Mac</h3>  
+  <ol>
+      <li>Нажмите значок Cloud Station на панели задач компьютера и нажмите значок папки.</li><img src="../../images/Backup/1x/backup_from_PC/28.png" border="1" /><li>Нажмите нужный файл правой кнопкой мыши и выберите <strong>Synology Cloud Station</strong> > <strong>Обзор предыдущих версий</strong>. </li><img src="../../images/Backup/1x/backup_from_PC/29.png" border="1" /><li>Выберите версию для загрузки и нажмите значок загрузки. </li><img src="../../images/Backup/1x/backup_from_PC/30.png" border="1" /><li>Введите имя файла и выберите место для сохранения файла.</ol>
+<h3>4.3 Загрузка и восстановление предыдущей версии синхронизированного файла из Cloud Station</h3>   
+<ol>
+    <li>Выберите <strong>Cloud Station </strong>> <strong>Журнал версий</strong> и выберите созданную ранее папку <strong>Резервирование</strong>. </li><img src="../../images/Backup/1x/backup_from_PC/31.png" border="1" /><li>Выберите файл для извлечения и нажмите <strong>Действие</strong> > <strong>Обзор предыдущих версий</strong>. </li><img src="../../images/Backup/1x/backup_from_PC/34.png" border="1" /><li>Выберите версию файла, которую вы хотите загрузить, и нажмите <strong>Загрузить</strong>. Если вы хотите восстановить выбранную версию файла, нажмите <strong>Восстановить</strong>, чтобы перезаписать текущую версию файла.</li><img src="../../images/Backup/1x/backup_from_PC/35.png" border="1" /></ol>
+
+<h3 class="list_head">4. Важно!</h3>  
+  <ol>
+<li>Обязательно сохраняйте предыдущие версии файла – так вы сможете его восстановить в случае случайного удаления или перезаписи.</li>
+<li>В меню "Глобальные настройки" вы можете настроить действия, которые будут выполняться на NAS при удалении файла с компьютера: извлечение версии файла или полное его удаление.</li>
+</ol>
+  <h3 class="list_head">5. Дополнительные способы защиты данных</h3>
+  
+<p>Для получения информации о дополнительных способах защиты и резервирования данных перейдите по этой <a href="https://www.synology.com/en-global/knowledgebase/tutorials#BackupRestore" target="_blank">сслыке</a> и ознакомьтесь с руководствами по использованию других служб резервирования на DSM.</p>
+
+</div>
+<div class="page-info">
+  <ul>
+    <li>Далее в этом разделе: <a href="backup_backup.html">Резервирование данных с Synology NAS</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

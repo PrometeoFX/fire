@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Aper&ccedil;u</h2>
+	<p>Cette page affiche des informations de base concernant le cluster high-availability et les serveurs membres. En outre, cette page fournit des outils pour cr&eacute;er, supprimer ou effectuer l&apos;entretien sur les clusters high-availability et les serveurs membres.</p>
+
+<h3>&Eacute;tat du cluster high-availability</h3>
+  <p>Ce champ affiche l&apos;&eacute;tat global de votre cluster high-availability et vous alerte en cas d&apos;erreurs &eacute;ventuelles. Voici une liste de conditions possibles affich&eacute;es dans ce champ&nbsp;:</p>
+    <table>
+     <tr>
+      <th>&Eacute;tat</th>
+      <th>Description</th>
+     </tr>
+     <tr>
+      <td align="center"><strong>Autonome</strong></td>
+      <td>Les serveurs ne sont pas combin&eacute;s dans un cluster high-availability.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Sain</strong></td>
+      <td>La condition g&eacute;n&eacute;rale de votre cluster high-availability est bonne. La r&eacute;plication des donn&eacute;es du serveur actif vers le serveur passif fonctionne normalement.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Pr&eacute;paration</strong></td>
+	  <td>Les serveurs ont &eacute;t&eacute; combin&eacute;s avec succ&egrave;s dans un cluster high-availability, mais la r&eacute;plication initiale des donn&eacute;es n&apos;est pas encore termin&eacute;e. Le basculement ne peut pas &ecirc;tre ex&eacute;cut&eacute; &agrave; ce moment. Pour plus de d&eacute;tails, veuillez consulter <a href="switchover_fail.html">Basculement</a>.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Chargement</strong></td>
+	  <td>Le syst&egrave;me charge l&apos;&eacute;tat du cluster. Le <b>basculement</b> ne peut pas &ecirc;tre effectu&eacute; tant que le chargement de l&apos;&eacute;tat n&apos;est pas fini.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Avertissement</strong></td>
+      <td>L&apos;&eacute;tat du cluster HA est anormal, mais les services sont toujours en fonction.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Danger</strong></td>
+	  <td>Le serveur actif et le serveur passif sont tous les deux d&eacute;fectueux. Le cluster high-availability ne peut pas fonctionner normalement. Veuillez v&eacute;rifier l&apos;&eacute;tat de tous les espaces de stockage (p.ex. RAID Groups, groupes de disques, volumes et iSCSI LUN).</td>
+     </tr>
+    </table>
+<h3>Messages d&apos;avertissement</h3>
+   <p>Le tableau suivant affiche les messages d&apos;avertissements qui peuvent appara&icirc;tre lorsqu&apos;une erreur se produit sur ​​le syst&egrave;me. Lorsque plus d&apos;un message d&apos;avertissement appara&icirc;t, vous pouvez naviguer entre eux avec les boutons avance/retour. </p>
+    <table>
+     <tr>
+      <th>Avertissement/Erreur</th>
+      <th>Description</th>
+     </tr>
+     <tr>
+      <td align="center"><strong>Erreur de service surveill&eacute;</strong></td>
+      <td>Une erreur s&apos;est produite sur un ou plusieurs services surveill&eacute;s.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Espace de stockage d&eacute;grad&eacute;</strong></td>
+      <td>Un espace de stockage (par ex. RAID Group, groupes de disques, volumes, iSCSI LUN et cache SSD) sur le serveur actif ou le serveur passif est d&eacute;grad&eacute;. Veuillez v&eacute;rifier la page <b>&Eacute;tat du stockage</b>.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Espace de stockage plant&eacute;</strong></td>
+      <td>Un espace de stockage (par ex. RAID Group, groupes de disques, volumes, iSCSI LUN et cache SSD) sur le serveur actif ou le serveur passif est en panne. Veuillez v&eacute;rifier la page <b>&Eacute;tat du stockage</b>.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>&Eacute;chec de d&eacute;tection du serveur passif</strong></td>
+      <td>Cette erreur peut se produire car le serveur passif est hors ligne ou bien parce que le serveur actif et le serveur passif ne peuvent pas se connecter via la connexion Heartbeat. Dans ce cas, le basculement ne sera pas disponible.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Les donn&eacute;es ne peuvent pas &ecirc;tre r&eacute;pliqu&eacute;es sur le serveur passif</strong></td>
+      <td>Cette erreur peut se produire en raison d&apos;une panne de volume de stockage ou de disque. Dans ce cas, le basculement ne sera pas disponible. Veuillez v&eacute;rifier la page <b>&Eacute;tat du stockage</b>.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Le serveur passif n&apos;est pas s&eacute;lectionn&eacute;.</strong></td>
+	  <td>Si le serveur passif est d&eacute;li&eacute; du cluster high-availability, cet &eacute;tat sera affich&eacute;. Dans ce cas, le basculement ne sera pas disponible. Si vous souhaitez lier &agrave; nouveau le serveur passif, cliquez sur le menu d&eacute;roulant <b>Entretien</b>, puis cliquez sur <b>Lier</b>. Lorsque vous liez &agrave; nouveau le serveur passif, une r&eacute;plication compl&egrave;te des donn&eacute;es sera n&eacute;cessaire.</td>
+     </tr>
+    </table>
+
+
+<h3>Informations du cluster high-availability</h3>
+	<p>Ce champ est situ&eacute; en dessous de l&apos;&eacute;tat du cluster high-availability et affiche des informations de base sur le cluster. Si un cluster high-availability n&apos;existe pas, ce champ fournira uniquement une explication de la fonction des clusters high-availability.</p>
+    <p>Ce champ comprend les informations suivantes&nbsp;:</p>
+ <ul>
+    	<li><b>Nom du serveur cluster :</b> Le nom de serveur utilis&eacute; par le cluster high-availability. </li>
+   <li><b>Adresse IP du cluster&nbsp;:</b>  L&apos;adresse IP utilis&eacute;e par le cluster high-availability. Quel que soit le serveur qui ex&eacute;cute les services, les utilisateurs peuvent se connecter au cluster high-availability en utilisant cette adresse IP.</li>
+        <li><b>Temps de construction&nbsp;:</b> Temps &eacute;coul&eacute; depuis que le cluster high-availability a &eacute;t&eacute; cr&eacute;&eacute;.</li>
+ </ul>
+
+
+<h3>Boutons des op&eacute;rations du cluster high-availability</h3>
+
+<p>Les deux boutons suivants sont situ&eacute;s sous les informations du cluster high-availability&nbsp;:</p>
+
+<ol>
+<li><b>Cr&eacute;er le cluster HA&nbsp;:</b> En l&apos;absence de cluster high-availability, vous pouvez cliquer sur ce bouton pour combiner deux serveurs et cr&eacute;er un cluster high-availability. Pour plus d&apos;informations sur la cr&eacute;ation d&apos;un cluster high-availability, veuillez consulter <a href="wizard.html">Assistant Synology High Availability</a>.</li>
+<li><b>Gestion&nbsp;:</b> Ce bouton est uniquement disponible lorsqu&apos;un cluster high-availability existe d&eacute;j&agrave;. Comprend les options suivantes :<ul>
+<li><b>Assistant de gestion&nbsp;:</b> Lance un assistant qui contient des instructions concernant diverses proc&eacute;dures de gestion.</li>
+<li><b>Basculement&nbsp;:</b> Basculez les services depuis le serveur actif vers le serveur passif. Pendant ce processus, le serveur actif cesse de fournir les services et devient serveur passif. Ensuite, le serveur passif devient le serveur actif et commence &agrave; fournir tous les services du cluster high-availability. Cette option est indisponible quand le serveur passif est en statut d&apos;<b>erreur</b> ou n&apos;est pas s&eacute;lectionn&eacute;.</li>
+<li><b>Mettre &agrave; jour DSM&nbsp;:</b> Ouvre la page <strong>Mise &agrave; jour DSM</strong> du <strong>Panneau de configuration</strong>. Ici, les deux serveurs peuvent &ecirc;tre mis &agrave; jour.</li>
+<li><b>Supprimer le cluster HA&nbsp;:</b> Suppression du cluster high-availability.</li>
+<li><b>Arr&ecirc;t de la liaison du serveur passif&nbsp;:</b> D&eacute;liez le serveur passif du cluster. Quand un serveur est ajout&eacute; au cluster high-availability &agrave; nouveau apr&egrave;s avoir &eacute;t&eacute; d&eacute;li&eacute;, une r&eacute;plication compl&egrave;te des donn&eacute;es sera n&eacute;cessaire. Par cons&eacute;quent, il est recommand&eacute; d&apos;utiliser cette option que si vous souhaitez remplacer le serveur passif existant par un nouveau.</li>
+<li><b>Lier le serveur passif&nbsp;:</b> Ajoute un serveur passif dans le cluster. Cette option n&apos;est disponible que lorsqu&apos;il n&apos;y a pas de serveur passif dans le cluster high-availability.</li>
+<li><b>Arr&ecirc;ter le cluster HA&nbsp;:</b> Arr&ecirc;te &agrave; la fois les serveurs actif et passif.</li>
+<li><b>Arr&ecirc;ter le serveur actif&nbsp;:</b> Arr&ecirc;te le serveur actif.</li>
+<li><b>Arr&ecirc;ter le serveur passif&nbsp;:</b> Arr&ecirc;te le serveur passif.</li>
+<li><b>Red&eacute;marrer le serveur passif&nbsp;:</b> Red&eacute;marre le serveur passif.</li>
+<li><b>D&eacute;sactivation du bip sur le serveur passif :</b> Interrompt le bip du serveur passif lorsqu&apos;une erreur se produit. Le serveur passif &eacute;mettra toujours un bip si une autre erreur se produit ult&eacute;rieurement.</li>
+</ul>
+</li>
+</ol>
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<ul>
+<li>Une fois un cluster high-availability supprim&eacute;, la r&eacute;plication des donn&eacute;es sera n&eacute;cessaire lorsque vous souhaitez en cr&eacute;er un nouveau.</li>
+<li>Si vous arr&ecirc;tez ou d&eacute;liez le serveur passif, il ne sera plus possible de basculer si une erreur se produit sur le serveur actif.</li>
+</ul>
+</div>
+
+<h3>&Eacute;tat des serveurs et de la r&eacute;plication des donn&eacute;es</h3>
+<p>Cette section contient des images qui indiquent l&apos;&eacute;tat du serveur actif et du serveur passif, ainsi que le flux de r&eacute;plication des donn&eacute;es entre les serveurs.</p>
+<p>L&apos;image de la r&eacute;plication des donn&eacute;es indique les conditions suivantes possibles&nbsp;:</p>
+	<ul>
+    	<li><b>La r&eacute;plication des donn&eacute;es fonctionne normalement&nbsp;:</b> Indiqu&eacute; par les donn&eacute;es qui circulent du serveur actif vers le serveur passif.</li>
+    	<li><b>Pas de r&eacute;plication des donn&eacute;es&nbsp;:</b> Indiqu&eacute; par l&apos;absence de l&apos;image de flux des donn&eacute;es.</li>
+    </ul>
+
+
+<h3> Informations du serveur</h3>
+ <p>Cette section est situ&eacute;e sous les images des serveurs. Les informations concernant le serveur actif et le serveur passif sont affich&eacute;es dans cette section. Si aucun serveur passif n&apos;a &eacute;t&eacute; s&eacute;lectionn&eacute;, cette section indiquera <b>N/A</b>.</p>
+  <ul>
+   <li><b>Nom du serveur&nbsp;:</b> Nom du serveur Synology.</li>
+   <li><b>Nom de mod&egrave;le&nbsp;:</b> Mod&egrave;le serveur Synology.</li>
+   <li><b>Num&eacute;ro de s&eacute;rie :</b> Num&eacute;ro de s&eacute;rie du serveur Synology.</li>
+   <li><b>&Eacute;tat du ventilateur&nbsp;:</b> &Eacute;tat des ventilateurs de refroidissement d&apos;un serveur. Si un ventilateur dysfonctionne, un avertissement appara&icirc;tra. Dans ce cas, veuillez contacter votre distributeur local pour obtenir de l&apos;aide.</li>
+   <li><b>Temp&eacute;rature&nbsp;:</b> Temp&eacute;rature du serveur Synology. </li>
+   <li><b>&Eacute;tat de l&apos;alimentation&nbsp;:</b> Indique si les alimentations sur un serveur fonctionnent toutes normalement ou non. Si le mod&egrave;le de serveur est &eacute;quip&eacute; d&apos;alimentations redondantes, un avertissement appara&icirc;tra si l&apos;une d&apos;elle dysfonctionne.</li>
+  </ul>
+
+ </body>
+</html>

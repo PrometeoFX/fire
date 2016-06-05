@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>ストレージマネージャ</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_iscsilun"></a>iSCSI LUN*</h2>
+<p>iSCSI は、ローカル ネットワークまたは長距離でのデータをやり取りを行う、ストレージ ネットワーキング機能です。iSCSI LUN を iSCSI Target にマッピングすると、クライアントがそのスペースをローカルディスクのようにアクセスできるようになります。iSCSI LUN (logical unit number) を 1 つ、または複数の iSCSI Target にマップして、iSCSI ストレージ サービスを提供します。<strong>[ストレージマネージャ]</strong> &gt; <strong>[iSCSI LUN]</strong> を選択して iSCSI LUN を管します。</p>
+
+<div class="section"><h4>注意：</h4>
+<p>サポートされる iSCSI LUN の数は、DiskStation のモデルにより異なります。詳しい製品仕様については、<a href="http://www.synology.com/" target="_blank">www.synology.com</a> のウェブサイトをご覧ください。</p>
+</div>
+
+<p>DiskStation は現時点で、次のタイプの iSCSI LUN に対応しています。</p>
+<ul>
+	<li><b>iSCSI LUN (通常ファイル)</b>：iSCSI LUN は、使用するボリュームスペースの範囲を指定して作成します。必要に応じて、いつでもそのサイズを拡張することができます。Thin Provisioning と VMware VAAI ハードウェア アクセラレーションのサポート、Windows ODX サポート、LUN スナップショット、LUN クローンにより、このタイプの iSCSI LUN では、ダイナミックに容量を管理することができます。</li>
+	<li class="disable-rs10613xsp disable-3615xs disable-rs3413xsp disable-rs3614xs disable-rs3614rpxs disable-rs3614xsp disable-es3614xsp disable-rc18015xsp disable-rs18016xsp disable-rs2416p disable-rs2416rpp disable-ds1616p"><b>iSCSI LUN (ブロックレベル)－RAID上の単体LUN</b>：ボリュームのすべてのスペースを使って、iSCSI LUN が作成されます。ボリュームと同様に、修復、増設、または RAID タイプを変更できます。詳細は、ヘルプ ファイルの「<a href="space.html">ボリューム</a>」を参照してください。</li>
+	<li class="disable-rs10613xsp disable-3615xs disable-rs3413xsp disable-rs3614xs disable-rs3614rpxs disable-rs3614xsp disable-es3614xsp disable-rc18015xsp disable-rs18016xsp disable-rs2416p disable-rs2416rpp disable-ds1616p"><b>iSCSI LUN (ブロックレベル)－RAID上の複数LUN</b>：iSCSI LUN は、ディスク グループに特定のスペースを割り当てて作成します。ディスク グループに有効なスペースがある場合は、iSCSI LUN を後から拡張することができます。詳細は、ヘルプ ファイルの「<a href="raid.html">ディスク グループ</a>」を参照してください。</li>
+	<li class="enable-rs10613xsp enable-3615xs enable-rs3413xsp enable-rs3614xs enable-rs3614rpxs enable-rs3614xsp enable-es3614xsp enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp enable-ds1616p"><b>iSCSI LUN（ブロックレベル）</b>：このタイプの iSCSI LUN は RAID Group 上で作成され、最適化されたアクセス速度でダイナミックに容量を管理することができます。このタイプの iSCSI LUN は、RAID Group でまだ割り当てられていないスペースを使って、いつでも拡張することができます。詳細は、ヘルプ ファイルの「<a href="raid.html">RAID Group</a>」を参照してください。</li>
+</ul>
+ 
+<div class="section"><h4>注意：</h4>
+<p>高度な LUN 機能を備えた iSCSI LUN は、ext4<span style="display: inline;" class="enable-rs10613xsp enable-3615xs enable-rs3413xsp enable-rs3614xs enable-rs3614rpxs enable-rs3614xsp enable-es3614xsp enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp enable-ds1616p">/Btrfs</span> ファイル システムでしか使用できません。</p>
+</div>
+
+<h4>iSCSI LUN を作成する：</h4>
+	<ol>
+		<li><b>[作成]</b> をクリックします。</li>
+		<li>作成する iSCSI LUN タイプを選択します。</li>
+		<li>ウィザードに従って処理を終了します。</li>
+	</ol>
+
+<div class="section"><h4>注意：</h4>
+<p>高度な LUN 機能は、iSCSI LUN の初期構築時にしか有効にすることができません。後からこの設定を変更することはできません。</p>
+</div>
+
+<p>Microsoft Exchange や SQL Server、仮想化サーバー、 Microsoft Windows ODX や VMware VAAI などのストレージ アクセラレーション技術など、アプリケーション サーバーの特定の機能については、高度な LUN 割り当てユニット サイズを最適化できます。次のいずれかを行ってください。</p>
+
+<ul>
+	<li>最初にボリュームに高度な LUN を構築したときに割り当てユニット サイズを設定します。</li>
+	<li>最初にボリュームに高度な LUN を構築する前に、<strong>[構成]</strong> から割り当てユニット サイズを設定します。</li>
+</ul>
+
+<p>アプリケーション サーバーからダイレクト接続を使用するか、DiskStation 上で高度な iSCSI LUN で作業を行う RDM（パススルー) を使用するときに、アプリケーションに割り当てユニット サイズを指定するようお薦めします。Synology Advanced LUN テクノロジーを活用してWindows ODX のクローンを行うには、DSM で指定したものと同じ（またはそれ以上）サイズの割り当てユニット サイズで NTFS ボリュームをフォーマットするようお薦めします。</p>
+
+<div class="section"><h4>注意：</h4>
+<p>各ボリュームの Advanced LUN 割り当てユニットは 1 回しか設定できません。</p>
+</div>
+
+<h4>iSCSI LUN を削除する：</h4>
+	<p>iSCSI LUN を削除すると、iSCSI LUN 上のデータもすべて削除されます。iSCSI LUN とマップされている iSCSI Target との接続も失われます。</p>
+<ol>
+<li>削除する iSCSI LUN を選択します。</li>
+<li><b>[削除]</b> ボタンをクリックし、ウィザードに従って作業を完了します。</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<p>DiskStation 上の VAAI LUN を削除しても、すぐにディスク スペースが空けられるわけではありません。データはシステム用に確保されている <strong>@EP_trash</strong> というフォルダに移され、１ つずつ削除されます。例えば DiskStation から 100 GB VAAI LUN を削除した場合、ディスク ボリューム上の 100 GB が完全に開放されるには約 15-20 分かかります。</p>
+</div>
+<h4>iSCSI LUN（ブロックレベル）を強制マウントする：</h4>
+<p>iSCSI LUN（ブロックレベル）のキャッシュがない場合、ブートアップ時にシステムは iSCSI LUN（ブロックレベル）をマウントしません。キャッシュを復元できず、iSCSI LUN（ブロックレベル）にアクセスしたい場合は、<b>[強制マウント]</b> を選択できます。</p>
+<div class="section">
+<h4>注意：</h4>
+<p>この機能は、一部のモデルでしか使用できません。</p>
+</div>
+<h4>iSCSI LUN を編集する：</h4>
+	<ol>
+		<li>編集する iSCSI LUN を選択します。</li>
+		<li><b>[編集]</b> をクリックします。</li>
+		<li>任意のプロパティを編集します。</li>
+		<li><b>[OK] </b>をクリックして、設定を保存します。</li>
+	</ol>	
+<div class="section">
+<h4>注意：</h4>
+<p>iSCSI LUN の容量を変更する際にデータを損失しないように、現在のサイズより大きい容量にしか変更できないようになっています。</p>
+</div>
+<h4>iSCSI LUN のスナップショットを取得する：</h4>
+<p>iSCSI LUN のスナップショットでは、ある瞬間が取得され、iSCSI LUN の読み取り専用コピーが作成されます。</p>
+<ol>
+	<li>取得したい iSCSI LUN を選択します。</li>
+	<li><strong>[スナップショット]</strong> をクリックし、<strong>[スナップショットを撮影]</strong> を選択します。</li>
+	<li>このスナップショットの説明を入力してください。</li>
+	<li>必要に応じて、スナップショットの形式を選択してください。
+		<ul>
+			<li><strong>アプリケーション コンシステント</strong>：このタイプのスナップショットは、DSM とコミュニケートする操作環境によって、Windows サーバーまたは VMware vCenter サーバーに Synology Snapshot Manager がインストールされている場合に限って取得されます。DSM でアプリケーション コンシステントなスナップショットが取得されると、アプリケーションに通知が送信され、データの統合性を図るために、メモリからスナップショットが取得された LUN へすべてのデータを転送します。</li>
+			<li><strong>クラッシュ コンシステント</strong>：クライアントに Synology Snapshot Manager がインストールされていなければ、LUN のクラッシュ コンシステントなスナップショットしか取得されません。これが取得されると、メモリから LUN にデータをフラッシュするためにアプリケーションには通知が送信されません。したがって、データの整合性も保証されません。</li>
+		</ul>
+	</li>
+	<li><strong>[OK]</strong> をクリックします。</li>
+</ol>
+
+<h4>iSCSI LUN を修復する：</h4>
+<p>iSCSI LUN のデータを復元するために、スナップショットを 1 つ選択します。</p>
+<ol>
+	<li>復元する iSCSI LUN を選択します。</li>
+	<li><strong>[スナップショット]</strong> をクリックし、<strong>[Snapshot Manager]</strong> を選択します。</li>
+	<li>復元ポイント（時点）となるスナップショットを選択し、<strong>[復元]</strong> をクリックします。</li>
+</ol>
+
+<h4>iSCSI LUN またはスナップショットをクローンする：</h4>
+<p>iSCSI LUN の書き込み可能なコピー、または iSCSI LUN スナップショットを作成します。</p>
+<ul>
+<li>リストから iSCSI LUN を選択し、<strong>[クローン]</strong> をクリックします。</li>
+<li><strong>Snapshot Manager</strong> から iSCSI LUN スナップショットを選択し、<strong>[クローン]</strong> をクリックします。</li>
+</ul>
+
+<div class="section"><h4>注意：</h4>
+<ul>
+	<li>接続された iSCSI セッションが 1 つでも LUN と関連付けられており、Windows Server または VMware ESXi Server によって使用されている場合は、<b>Synology Snapshot Manager</b> プラグインをインストールしてデータの不整合が発生する可能性を防止するようお勧めします。そうしなければ、処理を開始する前に、アプリケーションを停止して、これらのセッションをイニシエータからログオフする必要があります。</li>
+	<li>LUN スナップショット、復元、およびクローン機能は、高度な LUN 機能を備えた iSCSI LUN でしか使用できません。</li>
+	<li>スナップショットを撮影、またはクローンを作成したとき、ステータスが <strong>異常</strong>/<strong>クラッシュ</strong> になってしまった場合は、このスナップショット/クローンを削除して、もう一度撮影/作成し直してください。</li>
+	<li>スナップショットを撮影した後で LUN に加えられた変更は、このスナップショットで LUN を復元しても、その部分の内容は反映されません。</li>
+	<li>iSCSI LUN の状態が<b>利用不可</b> になった場合は、iSCSI LUN にアクセスしようとしてデータ関連のエラーが発生したことを意味しています。システム上でのデータ消失を防止するために、この iSCSI LUN には一時的にアクセスできなくなります。早急に Synology にサポートを依頼してください。</li>
+</ul>
+</div>
+
+<div class="section"><h4>用語集：</h4>
+<ul>
+	<li><b>Thin Provisioning</b>：Thin Provisioning は、ストレージスペースを必要なときに必要なだけ割り当ててストレージを最適化する方法です。この設定は、<b>iSCSI LUN（通常ファイル）</b>でのみ利用可能です。</li>
+	<li><b>VMware VAAI</b>：Array Integration (VAAI) の VMware vStorage API は、仮想ストレージ アレイでの標準作業を VMware vSphere 環境の iSCSI デバイスに渡すことで、ストレージの性能を高めます。</li>
+	<li><b>Windows ODX</b>：Windows が開発し、Windows Server 2012 と 8 に組み込まれた新しいデータ転送技術で、オフロード データ転送 (ODX) と呼ばれます。ODX は、ストレージ アレイへの一部の負荷をオフロードすることで、転送率を高めます。<br />データ ソースとクローン先が同一ボリュームの LUN にある場合は、ストレージ スペースの消費量を 99.9% まで節約し、同時にクローン処理も加速できる Synology 高度な LUN テクノロジーでクローンが行われます。</li>
+	<li><b>iSCSI Target のマッピング</b>：iSCSI LUN をひとつ、または複数の iSCSI Target にマッピングします。</li>
+	<li><b>Synology Snapshot Manager</b>：Synology Snapshot Manager は、アプリケーション コンシステントなスナップショットを DiskStation Manager (DSM) から直接撮影するためのソフトウェア プラグインです。
+		<ul>
+			<li>VMware 環境では、VMware vCenter Server がインストールされた Windows サーバーに Synology Snapshot Manager をインストールする必要があります。DSM でスナップショットが撮影されると、VMware vCenter Server に通知が送信され、データの統合性を図るために、メモリからスナップショットが撮影された LUN へすべてのデータを転送します。スナップショットの撮影が完了すると、VMware vCenter Server は VMware の通常の データ保存の I/O 作業を続行します。Synology Snapshot Manager for VMware vCenter Server は、vSphere 5.1 以降のバージョンに対応しています。</li>
+			<li>Windows 環境では、Windows サーバーに Synology Snapshot Manager をインストールする必要があります。DSM でスナップショットが撮影されると、Synology Snapshot Manager は Microsoft ボリューム シャドウ コピーサービス（VSS）テクノロジーを利用して、整合性が取れた、その時点でのデータ コピーを作成します。Synology Snapshot Manager for Windows は、Windows Server 2008 R2、2012、2012 R2 に対応しています。</li>
+			<li>Synology Snapshot Manager は <a href="http://www.synology.com/" target="_blank">www.synology.com</a> から無償でダウンロードできます。</li>
+		</ul>
+	</li>
+</ul>
+</div>
+<p>____<br />*一部のモデルでのみ対応しています。</p>
+
+</body>
+</html>

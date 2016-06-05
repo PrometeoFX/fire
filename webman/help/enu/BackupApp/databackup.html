@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Data Backup</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Data Backup</h2>
+
+<p>Under the <b>Backup</b> tab of <b>Backup &amp; Replication</b>, you can back up specific data on the DiskStation manually or according to a custom schedule. With this feature, system configuration, the content of shared folders, and package data can be backed up to a local, network, or cloud backup destination.</p>
+
+<h4>To create a backup task:</h4>
+<ol>
+<li>Choose <b>Create</b> > <b>Data backup task</b>.</li>
+<li>Follow the wizard to complete the setup. Visit <a href="repository.html">Backup Destination</a> for more information.</li>
+</ol>
+
+<h4>To manage backup tasks:</h4>
+<p>Select an existing task and click one of the below buttons:</p>
+<ul>
+<li><strong>Edit:</strong> Modify destination, source, schedule, and other settings of the selected task.</li>
+<li><strong>Delete:</strong> Delete the selected task.</li>
+<li><strong>Cancel:</strong> Cancel the selected, currently running task.</li>
+<li><strong>Back up now:</strong> Immediately performs backup of the selected task.</li>
+</ul>
+
+
+<h3>Backup Rotation</h3>
+<p>Backup rotation is a version management mechanism. It helps to manage backup versions by automatically deleting older, unnecessary versions and potentially freeing up storage space. You can enable this function at <b>Task Settings</b> or configure it when you create a backup task.</p>
+<h4>To rotate versions:</h4>
+<ol>
+<li>Select the backup task you want to apply version rotation to and click <strong>Edit</strong>.</li>
+<li>Go to the <strong>Task Settings</strong> tab and check<strong> Enable backup rotation</strong>. </li>
+<li>Here you can choose one of two rotation methods:</li>
+<ul>
+<li><b>From the earliest version:</b> This is a basic version rotation method. When the rotation condition is triggered, the earliest version will be removed first. </li>
+<li><b>Smart Recycle:</b> This is an intelligent version rotation method. When the rotation condition is triggered, the system will remove the versions selected by the retention mechanism. The retention mechanism is as follows:</li>
+<ul>
+	<li><b>Hourly versions from the past 24 hours:</b> The system keeps the earliest version that's created each hour.</li>
+	<li><b>Daily versions from the past 1 day to 1 month:</b> The system keeps the earliest version that's created each day.</li>
+	<li><b>Weekly version older 1 month:</b> The system keeps the earliest version that's created each week.</li>
+</ul>
+</ul>
+<li>Specify the maximum <b>number of versions</b>. When the version number exceeds this number, version rotation will begin. The number does  not include locked versions.</li>
+<li>If you have configured a repeated backup schedule, a preview of the estimation of how your backup versions will be retained and the earliest recovery point time based on your rotation settings will be shown. &nbsp;&nbsp;</li>
+<li>Click <strong>OK</strong> to save your settings. </li>
+</ol>
+
+<div class="section">
+  <h4>Notes:</h4>
+  <ul>
+  <li>Locked versions will never be removed. Visit <a href="repository.html#lock_version">Backup Destination</a> for more information.</li>
+  
+  <li>Only multi-version backup tasks provide version rotation functions.</li>
+  <li>Version rotation is not supported in DSM 5.1 or below.</li>
+  <li>Rotation will be triggered right after the setting is changed or the backup task is completed.</li>
+  <li>Locked versions are excluded when calculating the maximum number of versions.</li>
+  </ul>
+</div>
+
+
+<div class="section">
+<h4>General notes:</h4>
+<ul>
+<li>Names of tasks may include 1 to 32 Unicode characters, but cannot contain the following characters:<br>
+<span class="letterSpace5">! " # $ % &amp; ' ( ) * + , / : ; &lt; = &gt; ? @ [ ] \ ^ ` { } | ~</span></li>
+<li>The maximum length of the complete folder path for backup is 2048 characters.</li>
+<li>If over 32000 files or folders are uploaded to an EXT3 shared folder via AFP, all backup tasks including the shared folder will fail.</li>
+<li>An encrypted folder can be backed up either mounted or unmounted. However, it will always be restored as unmounted and will not mount automatically on startup. You will be required to enter or import the encryption key of the encrypted shared folder to mount it.</li>
+<li>Backing up an encrypted folder to another encrypted folder is not supported.</li>
+<li>Using remote folders as backup source or backup destination is not supported.</li><li>If the backup destination is a volume, only the task owner will be able to perform the backup task. Visit <a href="repository.html">Backup Destination</a> for more information.</li>
+<li>Backup for certain applications is supported. To see whether a specific package supports backup, and the backup content and limitations, please refer to the help of each application.</li>
+<li class="enable-eds14">DiskStation does not support application backup without a writable EXT3/EXT4 external device.</li>
+<li class="enable-eds14">DiskStation does not support backing up to a volume without a writable EXT3/EXT4 external device.</li>
+<li class="enable-eds14">DiskStation can only backup shared folders created on EXT3/EXT4 external devices.</li>
+<li class="disable-eds14">The system cannot back up applications without a writable volume.</li
+></ul>
+</div>
+<div class="section disable-eds14">
+<h4>Backing up Windows ACL settings:</h4>
+<p>The Windows ACL settings of the files on the DiskStation may also be backed up depending on the file systems of the destination:</p>
+<ul>
+
+<li><strong>Local Backup Destination</strong>, <strong>Network Backup Destination</strong>, and <strong>Public Cloud Backup Destination </strong> can back up Windows ACL settings regardless of the file system of the destination</li>
+
+<li><strong>Shared Folder Sync</strong> can back up Windows ACL settings when the file system of the destination is EXT4<span style="display: inline;" class="enable-rc18015xsp">/BTRFS</span>.</li>
+
+</ul>
+</div>
+
+</body></html>

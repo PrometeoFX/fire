@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DHCP Server</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>DHCP Server</h2>
+<p>Your DiskStation can assume the role of a DHCP server and assign dynamic IP addresses to DHCP clients within your local area network.</p>
+
+<h4>To enable DHCP server:</h4>
+<ol>
+<li>Go to <strong>Control Panel</strong> > <strong>Network</strong> > <strong>Network Interface</strong>.</li>
+<li>Select a network interface (e.g. LAN) and click <strong>Edit</strong>.</li>
+<li>Go to the <strong>DHCP Server</strong> tab and tick <b>Enable DHCP Server</b>.</li>
+<li>Enter a value in the <b>Address lease time</b> field to set the DHCP lease time (in minutes) for IP addresses assigned to DHCP clients.</li>
+<li>
+Enter the DNS address for DHCP clients in the <b>Primary DNS</b> (required) and <b>Secondary DNS</b> (optional) fields.
+</li>
+<li>
+Set the domain name for DHCP server in the <b>Domain name</b> (optional) field.
+</li>
+<li>
+Click <b>OK</b>.
+</li>
+</ol>
+<h4>To add a subnet:</h4>
+<ol>
+<li>
+Click <b>Add</b> and then specify the information under the following columns:
+</li>
+<ul>
+<li>
+<b>Enable</b>: Enable or disable the subnet.
+</li>
+<li>
+<b>Start</b>: The first IP address of the subnet.
+</li>
+<li>
+<b>End</b>: The last IP address of the subnet.
+</li>
+<li>
+<b>Netmask</b>: The subnet mask.
+</li>
+<li>
+<b>Gateway</b>: The gateway of the subnet.
+</li>
+</ul>
+<li>
+Click <b>OK</b>.
+</li>
+</ol>
+
+
+<div class="section">
+<h4>Note:</h4>
+<ul>
+<li>You can only add up to 32 subnets.</li>
+</ul>
+</div>
+
+
+
+<h3>DHCP Clients</h3>
+
+<p>To see a list of DHCP clients and their network configurations (e.g. MAC address, IP address, hostname, and the amount of time left before the DHCP lease expires), you can go to the <strong>DHCP Clients</strong> tab.</p>
+
+
+<h3>DHCP Reservation</h3>
+
+<p>If you want a client to always receive the same IP address during DHCP lease renewal, you can add the client to the address reservation list.</p>
+
+<h4>To add a client to the address reservation list:</h4>
+
+<ul>
+<li>Click <b>Add</b>.</li>
+<li>Specify the client's MAC address, the IP address you want to assign to the client, and the client's hostname. </li>
+<li>Click <b>OK</b> to save your settings.</li>
+</ul>
+
+
+</body>
+</html>

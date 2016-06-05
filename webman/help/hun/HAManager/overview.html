@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Áttekintés</h2>
+	<p>Ez az oldal alapvető információkat jelenít meg a high-availability klaszterről és annak tag-kiszolgálóiról. IEz az oldal ráadásul eszközöket biztosít a high-availability klaszterek létrehozásához, eltávolításához, valamint az azokon, illetve a tag-kiszolgálókon elvégzendő karbantartáshoz.</p>
+
+<h3>High availability klaszter állapota</h3>
+  <p>Ez a mező a high-availability klaszter általános állapotát jeleníti meg, figyelmeztetve a hibákra. Az alábbi táblázat az ebbben a mezőben megjelenített lehetséges állapotokat foglalja össze:</p>
+    <table>
+     <tr>
+      <th>Állapot</th>
+      <th>Leírás</th>
+     </tr>
+     <tr>
+      <td align="center"><strong>Önálló</strong></td>
+      <td>A kiszolgálók nincsenek high-availability klaszterbe kombinálva.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Hibátlan</strong></td>
+      <td>A high-availability klaszter általános állapota jó. Az adatok replikációja az aktív kiszolgálóról a passzív kiszolgálóra rendesen működik.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Előkészítés folyamatban</strong></td>
+	  <td>A kiszolgálók sikeresen high-availability klaszterbe kombinálódtak, de a kiinduló adatreplikáció még nem fejeződött be. Ilyenkor nem hajtható végre átkapcsolás. További részleteket lásd az <a href="switchover_fail.html">Átkapcsolás</a> c. részben.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Betöltés</strong></td>
+	  <td>A rendszer betölti a klaszter állapotát. Az <b>Átkapcsolás</b> nem hajtható végre az állapotbetöltés befejeztéig.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Figyelmeztetés</strong></td>
+      <td>A HA klaszter állapota rendellenes, de a szolgáltatások még működnek.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Veszély</strong></td>
+	  <td>Mind az aktív, mind pedig a passzív kiszolgáló hibásan működik. A high-availability klaszter képtelen rendesen működni. Ellenőrizze valamennyi tárolótér (pl. RAID Group, lemezcsoport, kötet, és iSCSI LUN) állapotát.</td>
+     </tr>
+    </table>
+<h3>Figyelmeztető üzenetek</h3>
+   <p>A következő táblázat megmutatja azokat a figyelmeztető üzeneteket, amelyek megjelenhetnek, ha hiba történik a rendszerben. Ha egynél több figyelmeztető üzenet jelenik meg, akkor az előre/hátra gombokkal navigálhat köztük. </p>
+    <table>
+     <tr>
+      <th>Figyelmeztetés/Hiba</th>
+      <th>Leírás</th>
+     </tr>
+     <tr>
+      <td align="center"><strong>Ellenőrzött szolgáltatás hiba</strong></td>
+      <td>Hiba történt egy vagy több ellenőrzött szolgáltatásban.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Tárolótér lecsökkent</strong></td>
+      <td>Az aktív vagy passzív kiszolgálón található tárolótér (pl. RAID Group, lemezcsoport, kötet, és iSCSI LUN és SSD-gyorsítótár) lecsökkent. Ellenőrizze a <b>Tárolási állapot</b> oldalt.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Tárolótér összeomlott</strong></td>
+      <td>Az aktív vagy passzív kiszolgálón található tárolótér (pl. RAID Group, lemezcsoport, kötet, és iSCSI LUN és SSD-gyorsítótár) tönkrement. Ellenőrizze a <b>Tárolási állapot</b> oldalt.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Passzív kiszolgáló érzékelése sikertelen</strong></td>
+      <td>Ez a hiba azért fordulhat elő, mert a passzív kiszolgáló offline állapotban van, vagy az aktív és passzív kiszolgáló nem tud kapcsolódni a Heartbeat kapcsolaton keresztül. Ez esetben az átkapcsolás nem elérhető.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Az adatok nem replikálhatók a passzív kiszolgálóra</strong></td>
+      <td>Ez a hiba a tárolókötet vagy a lemez hibája miatt fordulhat elő. Ez esetben az átkapcsolás nem elérhető. Ellenőrizze a <b>Tárolási állapot</b> oldalt.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Nincs kijelölt passzív kiszolgáló</strong></td>
+	  <td>Ha a passzív kiszolgáló lecsatlakoztatásra kerül a high-availability klaszterről, ez az állapot kerül megjelenítésre. Ez esetben az átkapcsolás nem elérhető. Ha a passzív kiszolgálót újra vissza szeretné csatlakoztatni, kattintson a <b>Karbantartás</b> legördülő menüre, majd a <b>Csatlakozás</b> menüpontra. Ha visszacsatlakoztatja a passzív kiszolgálót, teljes adatreplikáció szükséges.</td>
+     </tr>
+    </table>
+
+
+<h3>High availability klaszter információ</h3>
+	<p>Ez a mező a high-availability klaszter állapota alatt helyezkedik el, és a klaszterre vonatkozó alapvető információkat jelenít meg. Ha egy high-availability klaszter nem létezik, ez a mező csak a high-availability klaszterek funkciójára vonatkozó magyarázatot tartalmaz.</p>
+    <p>Ez a mező a következő információkat tartalmazza:</p>
+ <ul>
+    	<li><b>Klaszter kiszolgáló név:</b> A high-availability klaszter által használt kiszolgáló név. </li>
+   <li><b>Klaszter IP-cím:</b> A high-availability klaszter által használt IP-cím. Tekintet nélkül arra, hogy melyik kiszolgáló futtatja a szolgáltatásokat, a felhasználók ennek az IP-címnek a használatával csatlakozni tudnak a high-availability klaszterhez.</li>
+        <li><b>Kiépítés időpontja:</b> A high-availability klaszter létrehozásának dátuma.</li>
+ </ul>
+
+
+<h3>High availability klaszter kezelőgombjai</h3>
+
+<p>Az alábbi két gomb a high-availability klaszter információk alatt helyezkedik el:</p>
+
+<ol>
+<li><b>HA klaszter létrehozása:</b> Ha nem létezik high-availability klaszter, akkor erre a gombra kattintva két kiszolgálót kombinálva egy high-availability klaszter hozható létre. A high-availability klaszter létrehozására vonatkozó további információkért lásd a <a href="wizard.html">Synology High Availability varázsló</a> c. részt.</li>
+<li><b>Kezelés:</b> Ez a gomb csak akkor áll rendelkezésre, ha már létezik egy high-availability klaszter. A következő opciókat tartalmazza:
+<ul>
+<li><b>Kezelés varázsló:</b> Elindít egy varázslót, amely útmutatásokat tartalmaz a különféle kezelési eljárásokhoz. </li>
+<li><b>Átkapcsolás:</b> Átkapcsolást kezdeményez az aktív kiszolgálóról a passzív kiszolgálóra. A folyamat során az aktív kiszolgáló leáll a szolgáltatások nyújtásával, és az új passzív kiszolgáló válik belőle. Majd a régi passzív kiszolgáló az új aktív kiszolgálóvá válik, és megkezdi a high-availability klaszter valamennyi szolgáltatásának nyújtását. Ez a lehetőség nem elérhető, ha a passzív kiszolgáló állapota <b>hiba</b> vagy nincs is kijelölve.</li>
+<li><b>A DSM frissítése:</b> Megnyitja a <strong>Vezérlőpult</strong> <strong>DSM frissítése</strong> oldalát. Innen mindkét kiszolgáló frissíthető.</li>
+<li><b>HA klaszter eltávolítása:</b> Eltávolítja a high-availability klasztert.</li>
+<li><b>Passzív kiszolgáló lecsatlakoztatása:</b> Eltávolítja a passzív kiszolgálót a klaszterből. Ha a kiszolgáló a lecsatlakozást követően újra hozzáadásra kerül a high-availability klaszterhez, teljes adatreplikáció szükséges. Ajánlatos tehát ezt a lehetőséget csak akkor használni, ha a létező passzív kiszolgálót újra szeretnénk cserélni.</li>
+<li><b>Passzív kiszolgáló csatlakoztatása:</b> Passzív kiszolgálót ad hozzá a klaszterhez. Ez az opció csak akkor áll rendelkezésre, ha nincs passzív kiszolgáló a high-availability klaszterben.</li>
+<li><b>HA klaszter leállítása:</b> Leállítja mind az aktív, mind pedig a passzív kiszolgálót.</li>
+<li><b>Aktív kiszolgáló leállítása:</b> Állítsa le az aktív kiszolgálót.</li>
+<li><b>Passzív kiszolgáló leállítása:</b> Leállítja a passzív kiszolgálót.</li>
+<li><b>Passzív kiszolgáló újrabootolása:</b> Újrabootolja a passzív kiszolgálót.</li>
+<li><b>Sípolás kikapcsolása a passzív kiszolgálón:</b> Hiba előfordulásakor megakadályozza a passzív kiszolgáló sípoló hangját. Újabb hiba későbbi előfordulása esetén a passzív kiszolgáló továbbra is hangjelzést ad.</li>
+</ul>
+</li>
+</ol>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<ul>
+<li>Egy high-availability klaszter eltávolítását követően egy új létrehozása előtt teljes adatreplikáció szükséges.</li>
+<li>Ha a passzív kiszolgálót leállítja vagy lecsatlakoztatja, az aktív kiszolgálón előforduló hibák esetén a szolgáltatások nem kapcsolhatók át.</li>
+</ul>
+</div>
+
+<h3>Kiszolgáló és adatreplikáció állapota</h3>
+<p>Ez a rész az aktív és passzív kiszolgálók, valamint a kiszolgálók közti adatreplikáció folyamatának állapotát jelző képeket tartalmaz.</p>
+<p>Az adatreplikáció képe a következő lehetséges állapotokat jelzi:</p>
+	<ul>
+    	<li><b>Az adatreplikáció rendesen működik:</b> Ezt az aktív kiszolgálóról a passzív kiszolgálóra folyó adatok jelzik.</li>
+    	<li><b>Nincs adatreplikáció:</b> Ezt az adatfolyam-kép hiánya jelzi.</li>
+    </ul>
+
+
+<h3> Szerverinformáció</h3>
+ <p>Ez a rész a kiszolgálóképek alatt található. Ebben a részben az aktív és passzív kiszolgálóra vonatkozó információ kerül megjelenítésre. Ha nincs kijelölt passzív kiszolgáló, a megjelenített adat <b>N/A</b>.</p>
+  <ul>
+   <li><b>Kisz. név:</b> Synology kiszolgáló név.</li>
+   <li><b>Modellnév:</b> Synology kiszolgáló modell.</li>
+   <li><b>Sorozatszám:</b> A Synology kiszolgáló sorozatszáma.</li>
+   <li><b>Ventillátor állapot:</b> A kiszolgáló hűtőventillátorainak állapota. Egy ventillátor meghibásodása esetén figyelmeztetés jelenik meg. Ez esetben kérjen segítséget helyi képviselőjétől.</li>
+   <li><b>Hőmérséklet:</b> A Synology kiszolgáló hőmérséklete. </li>
+   <li><b>Tápfeszültség állapota:</b> Azt jelzi, hogy egy kiszolgálón rendesen működik-e vagy sem az összes tápfeszültség-ellátás. Ha a kiszolgáló modell redundáns tápfeszültség-ellátással van ellátva, figyelmeztetés jelenik meg, ha az egyikük hibásan működik.</li>
+  </ul>
+
+ </body>
+</html>

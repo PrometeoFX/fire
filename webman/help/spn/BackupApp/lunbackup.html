@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Copias de seguridad y replicación</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Copia de seguridad LUN*</h2>
+<p>En la pestaña <b>Copia de seguridad</b> de <b>Copias de seguridad y replicación</b>, puede utilizar <b>Copia de seguridad LUN local</b> para realizar la copia de seguridad de los iSCSI LUN de su DiskStation en carpetas locales compartidas. También puede utilizar <b>Copia de seguridad del LUN de la red</b> para realizar la copia de seguridad en otro DiskStation.</p>
+
+<h4>Para realizar una copia de seguridad de un iSCSI LUN:</h4>
+<ol>
+<li>Elija <b>Crear</b> > <b>Tarea de copia de seguridad del LUN</b> para abrir el <b>Asistente de copia de seguridad del LUN</b> y haga clic en <b>Siguiente</b>.</li>
+<li>Cuando se le pida que elija un tipo de destino, elija cualquiera de los siguientes:</li>
+<ul>
+<li><b>Copia de seguridad de LUN local</b>: elija esta opción para realizar la copia de seguridad del LUN desde su DiskStation en una carpeta compartida o un almacenamiento externo conectado al puerto USB o eSATA de su DiskStation.</li>
+<li><b>Copia de seguridad del LUN de la red</b>: elija esta opción para realizar la copia de seguridad del LUN desde su DiskStation en otro DiskStation.</li>
+</ul>
+<li>Cuando se le pregunte, especifique el LUN de destino y origen de la copia de seguridad y configure el programa de copia de seguridad.</li>
+<li>Siga el asistente para completar la configuración.</li>
+</ol>
+<p>Después de crear la tarea de copia de seguridad, DiskStation realizará la tarea de copia de seguridad de acuerdo con el programa y restaurará el LUN de copia de seguridad en el destino. El LUN de copia de seguridad se utilizará sólo para fines de copia de seguridad. Para acceder al LUN de copia de seguridad, consulte <a href="restore.html">Para restaurar el LUN de copia de seguridad</a> a fin de obtener más información.</p>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Se realizarán copias de seguridad tanto de los archivos normales como de los LUN de nivel de bloques, en forma de archivos de imágenes en el destino. Si se restauran, todos los LUN a nivel de bloque cambiarán a LUN de archivo.</li>
+<li>Cada tarea de copia de seguridad puede incluir sólo un LUN como origen de la copia de seguridad.</li>
+<li>No se pueden realizar copias de seguridad de los LUN a discos externos con formatos FAT, FAT32, HFS, HFS Plus ni NTFS.</li>
+<li>Antes de realizar la copia de seguridad del LUN de la red, inicie sesión en el DiskStation de destino para asegurarse de que su servicio de copia de seguridad de red está habilitado en <b>Copias de seguridad y replicación</b> > <b>Servicios de copia de seguridad</b>.</li>
+<li>Si su DiskStation se conecta a la red a través de un enrutador, compruebe que ha especificado una regla de reenvío de puerto para el servicio iSCSI (puerto TCP 3260) en el enrutador antes de realizar la copia de seguridad del LUN de la red.</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Acerca de la copia de seguridad completa y copia de seguridad por incrementos:</h4>
+<p>DiskStation realizará una copia de seguridad completa del LUN seleccionado por primera vez y luego realizará copias de seguridad por incrementos. Sin embargo, si el nombre de la carpeta compartida o el nombre del directorio del destino de la copia de seguridad se modifica, DiskStation realizará de nuevo una copia de seguridad completa de la tarea.</p>
+</div>
+
+<p>____<br /> * Solo disponible en determinados modelos.</p>
+</body></html>

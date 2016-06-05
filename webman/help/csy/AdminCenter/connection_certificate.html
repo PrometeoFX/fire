@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<h2><a name="certificate"></a>Certifik&aacute;t</h2>
+
+<p>Certifik&aacute;t se použ&iacute;v&aacute; pro zabezpečen&iacute; služeb SSL zař&iacute;zen&iacute; DiskStation. Jedn&aacute; se např&iacute;klad o&nbsp;službu web (v&scaron;echny služby HTTPS), po&scaron;ta nebo FTP. Certifik&aacute;t umožňuje uživatelům ověřit identitu serveru a&nbsp;spr&aacute;vce je&scaron;tě před t&iacute;m, než bude zah&aacute;jeno odes&iacute;l&aacute;n&iacute; důvěrn&yacute;ch informac&iacute;. </p>
+
+<p>Karta <strong>Certifik&aacute;t</strong> (v&nbsp;č&aacute;sti <strong>Ovl&aacute;dac&iacute; panel</strong> &gt; <strong>Zabezpečen&iacute;</strong> &gt; <strong>Certifik&aacute;t</strong>) nab&iacute;z&iacute; možnosti spr&aacute;vy a&nbsp;zobrazen&iacute; stavu certifik&aacute;tů zař&iacute;zen&iacute; DiskStation a&nbsp;umožňuje vytv&aacute;řen&iacute;, importov&aacute;n&iacute;/exportov&aacute;n&iacute; nebo obnovov&aacute;n&iacute; certifik&aacute;tů. Průvodce nastaven&iacute;m certifik&aacute;tů v&aacute;m pomůže s&nbsp;vytv&aacute;řen&iacute;m certifik&aacute;tů podepsan&yacute;ch držitelem nebo se stahov&aacute;n&iacute;m ž&aacute;dost&iacute; o&nbsp;podpis certifik&aacute;tů (CSR) určen&yacute;ch pro registraci u&nbsp;certifikačn&iacute; autority (CA).</p>
+
+
+<div class="section">
+<h4>Pozn&aacute;mka:</h4>
+<p>Certifik&aacute;t zde nastaven&yacute; bude automaticky použit serverem OpenVPN, pokud je nainstalov&aacute;n server VPN.</p>
+</div>
+
+
+<h3>Certifik&aacute;ty podepsan&eacute; držitelem</h3>
+
+<p>Pojem &bdquo;certifik&aacute;t podepsan&yacute; držitelem&ldquo; označuje certifik&aacute;t, kter&yacute; byl vytvořen a&nbsp;podeps&aacute;n stejn&yacute;m subjektem, jehož identita je v&nbsp;r&aacute;mci certifik&aacute;tu ověřov&aacute;na (v&nbsp;tomto př&iacute;padě se jedn&aacute; o&nbsp;zař&iacute;zen&iacute; DiskStation). Certifik&aacute;ty podepsan&eacute; držitelem jsou podeps&aacute;ny priv&aacute;tn&iacute;m kl&iacute;čem, kter&yacute; byl vygenerov&aacute;n zař&iacute;zen&iacute;m DiskStation. Vzhledem k&nbsp;tomu, že certifik&aacute;ty podepsan&eacute; držitelem nebyly vyd&aacute;ny certifikačn&iacute;mi autoritami třet&iacute;ch stran, nepředstavuj&iacute; dostatečn&yacute; důkaz identity serveru a&nbsp;použ&iacute;vaj&iacute; se obvykle pro zabezpečen&iacute; spojen&iacute; mezi serverem a&nbsp;skupinou zn&aacute;m&yacute;ch uživatelů.</p>
+
+
+<h4>Postup vytvořen&iacute; certifik&aacute;tu podepsan&eacute;ho držitelem:</h4>
+<ol>
+	<li>Klikněte na možnost <b>Vytvořit certifik&aacute;t</b>.</li>
+	<li>Postupujte podle pokynů průvodce nastaven&iacute;m.</li>
+</ol>
+
+<div class="section">
+<h4>Pozn&aacute;mka:</h4>
+<p>Vytvořen&iacute;m certifik&aacute;tu podepsan&eacute;ho držitelem dojde k&nbsp;odstraněn&iacute; st&aacute;vaj&iacute;c&iacute;ho certifik&aacute;tu zař&iacute;zen&iacute; DiskStation.</p>
+</div>
+
+
+<h3>Ž&aacute;dosti o&nbsp;podpis certifik&aacute;tu</h3>
+
+<p>Chcete-li pož&aacute;dat o&nbsp;certifik&aacute;t vydan&yacute; certifikačn&iacute; autoritou třet&iacute;ch stran, mus&iacute;te nejdř&iacute;ve vytvořit ž&aacute;dost o&nbsp;podpis certifik&aacute;tu (CSR). Ž&aacute;dost o&nbsp;podpis certifik&aacute;tu je &scaron;ifrovan&yacute; text vygenerovan&yacute; zař&iacute;zen&iacute;m DiskStation, kter&yacute; obsahuje informace, jež budou souč&aacute;st&iacute; certifik&aacute;tu. Mezi tyto informace patř&iacute; n&aacute;zev dom&eacute;ny, n&aacute;zev organizace, obecn&yacute; popis oblasti a&nbsp;e-mailov&aacute; adresa. Průvodce nastaven&iacute;m v&aacute;m pomůže vytvořit ž&aacute;dost o&nbsp;podpis a&nbsp;vystaven&iacute; podepsan&eacute;ho certifik&aacute;tu určen&eacute;ho pro zař&iacute;zen&iacute; DiskStation.</p>
+
+<p>Chcete-li z&iacute;skat certifik&aacute;t od komerčn&iacute; instituce nebo certifikačn&iacute; autority třet&iacute;ch stran, mus&iacute;te sdělit identifikaci va&scaron;&iacute; osoby nebo organizace a&nbsp;poskytnout důkaz o&nbsp;tom, že jste vlastn&iacute;kem n&aacute;zvu dom&eacute;ny zadan&eacute;ho v&nbsp;poli &bdquo;Běžn&yacute; n&aacute;zev&ldquo; ž&aacute;dosti o&nbsp;podpis certifik&aacute;tu.</p>
+
+<div class="section">
+<h4>Pozn&aacute;mka:</h4>
+<p>Společně s&nbsp;ž&aacute;dost&iacute; o&nbsp;podpis certifik&aacute;tu bude vygenerov&aacute;n tak&eacute; priv&aacute;tn&iacute; kl&iacute;č. Certifikačn&iacute; autority tento priv&aacute;tn&iacute; kl&iacute;č nepotřebuj&iacute;. Tento priv&aacute;tn&iacute; kl&iacute;č zař&iacute;zen&iacute; DiskStation uschovejte na bezpečn&eacute;m m&iacute;stě.</p>
+</div>
+
+<h4>Postup vytvořen&iacute; ž&aacute;dosti o&nbsp;podpis certifik&aacute;tu:</h4>
+<ol>
+	<li>Klikněte na možnost <b>Vytvořit certifik&aacute;t</b>.</li>
+	<li>Ž&aacute;dost o&nbsp;podpis certifik&aacute;tu vytvoř&iacute;te a&nbsp;st&aacute;hnete podle pokynů průvodce nastaven&iacute;m.</li>
+</ol>
+
+<p>Jakmile certifikačn&iacute; autorita vyd&aacute; př&iacute;slu&scaron;n&yacute; certifik&aacute;t, můžete prov&eacute;st import tohoto certifik&aacute;tu a&nbsp;tak&eacute; priv&aacute;tn&iacute;ho kl&iacute;če (pokyny najdete n&iacute;že).<h3>Exportov&aacute;n&iacute; certifik&aacute;tů</h3>
+
+<p>St&aacute;vaj&iacute;c&iacute; certifik&aacute;ty si lze st&aacute;hnout za &uacute;čelem spr&aacute;vy a&nbsp;archivov&aacute;n&iacute;. Exportovan&yacute; soubor obsahuje certifik&aacute;t, priv&aacute;tn&iacute; kl&iacute;č a&nbsp;kořenov&yacute; certifik&aacute;t zař&iacute;zen&iacute; DiskStation podepsan&yacute; sv&yacute;m držitelem.</p>
+
+<h4>Postup exportov&aacute;n&iacute; certifik&aacute;tu:</h4>
+<ul>
+<li>Klikněte na tlač&iacute;tko <b>Exportovat certifik&aacute;t</b>.</li>
+</ul>
+
+
+
+<h3>Importov&aacute;n&iacute; certifik&aacute;tů</h3>
+
+<p>Tato možnost nab&iacute;z&iacute; možnost importov&aacute;n&iacute; certifik&aacute;tů vydan&yacute;ch certifikačn&iacute; autoritou nebo dř&iacute;ve exportovan&yacute;ch certifik&aacute;tů a&nbsp;tak&eacute; priv&aacute;tn&iacute;ho kl&iacute;če.</p>
+
+<h4>Postup importov&aacute;n&iacute; certifik&aacute;tu:</h4>
+<ul>
+	<li>Klikněte na tlač&iacute;tko <b>Importovat certifik&aacute;t</b>.</li>
+</ul>
+
+<div class="section">
+<h4>Pozn&aacute;mka:</h4>
+<ul>
+<li>Někter&eacute; certifik&aacute;ty vydan&eacute; certifikačn&iacute; autoritou vyžaduj&iacute; zprostředkuj&iacute;c&iacute; certifik&aacute;ty.</li>
+<li>Certifik&aacute;ty mus&iacute; m&iacute;t form&aacute;t X.509 PEM.</li>
+<li>Priv&aacute;tn&iacute; kl&iacute;če mus&iacute; m&iacute;t form&aacute;t&nbsp;RSA a&nbsp;nesm&iacute; b&yacute;t chr&aacute;něny př&iacute;stupov&yacute;m heslem.</li>
+</ul>
+</div>
+
+
+
+<h3>Obnoven&iacute; certifik&aacute;tů</h3>
+
+<p>Pokud se bl&iacute;ž&iacute; datum skončen&iacute; platnosti certifik&aacute;tu, lze certifik&aacute;t pomoc&iacute; t&eacute;to možnosti obnovit.</p>
+
+<h4>Postup obnoven&iacute; certifik&aacute;tu:</h4>
+<ol>
+	<li>Klikněte na možnost <b>Vytvořit certifik&aacute;t</b>.</li>
+	<li>Vyberte možnost <b>Obnovit certifik&aacute;t</b> a&nbsp;klikněte na možnost <b>Dal&scaron;&iacute;</b></li>
+	<li>Bude vytvořen nov&yacute; priv&aacute;tn&iacute; kl&iacute;č a&nbsp;ž&aacute;dost o&nbsp;podpis certifik&aacute;tu.</li>
+</ol>
+
+
+
+<h3>Podepisov&aacute;n&iacute; ž&aacute;dosti o&nbsp;podpis certifik&aacute;tu (CSR)</h3>
+
+<p>Tato možnost umožňuje podepisov&aacute;n&iacute; ž&aacute;dosti o&nbsp;podpis certifik&aacute;tu pomoc&iacute; kořenov&eacute;ho certifik&aacute;tu zař&iacute;zen&iacute; DiskStation.</p>
+
+<h4>Postup podeps&aacute;n&iacute; ž&aacute;dosti o&nbsp;podpis certifik&aacute;tu:</h4>
+<ol>
+	<li>Klikněte na možnost <b>Vytvořit certifik&aacute;t</b>.</li>
+	<li>Klikněte na možnost <b>Podepsat ž&aacute;dost o&nbsp;podpis certifik&aacute;tu (CSR)</b>.</li>
+	<li>Ode&scaron;lete ž&aacute;dost o&nbsp;podpis certifik&aacute;tu a&nbsp;zadejte př&iacute;slu&scaron;n&eacute; &uacute;daje. </li>
+	<li>Klikněte na možnost <b>Dal&scaron;&iacute;</b> a&nbsp;syst&eacute;m podep&iacute;&scaron;e ž&aacute;dost o&nbsp;certifik&aacute;t a&nbsp;vytvoř&iacute; př&iacute;slu&scaron;n&yacute; certifik&aacute;t.</li>
+</ol>
+
+
+</body>
+</html>
+

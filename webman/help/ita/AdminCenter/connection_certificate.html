@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="certificate"></a>Certificato</h2>
+
+<p>È possibile utilizzare un certificato per proteggere i servizi SSL della DiskStation, ad esempio web (tutti i servizi HTTPS), e-mail o FTP. Il certificato consente agli utenti di convalidare l'identità di un server e l'amministratore prima di inviare qualsiasi informazione confidenziale. </p>
+
+<p>La scheda <strong>Certificato</strong> (in <strong>Pannello di controllo</strong> > <strong>Sicurezza</strong> > <strong>Certificato</strong>) consente di gestire e visualizzare lo stato dei certificati della DiskStation, consentendo agli utenti di creare, importare/esportare o rinnovare i certificati. L'impostazione guidata del certificato aiuta a creare certificati auto-firmati o a scaricare le richieste di firma del certificato (CSR) per la registrazione con le autorità di certificazione (CA).</p>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<p>il certificato impostato qui verrà usato automaticamente dal server OpenVPN se il server VPN è installato.</p>
+</div>
+
+
+<h3>Certificati auto-firmati</h3>
+
+<p>Un certificato auto-firmato è un certificato che è stato creato e firmato dalla stessa entità di cui viene certificata l'identità (in questo caso la DiskStation). I certificati auto-firmati sono firmati utilizzando la chiave privata generata dalla DiskStation.  Poiché i certificati auto-firmati non sono emessi da autorità di certificazione di terze parti, questi forniscono una prova meno attendibile dell'identità del server e vengono in genere utilizzati per proteggere i canali tra il server e un gruppo di utenti conosciuti.</p>
+
+
+<h4>Per creare un certificato auto-firmato:</h4>
+<ol>
+	<li>Fare clic su <b>Crea certificato</b>.</li>
+	<li>Seguire le istruzioni della procedura guidata.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>creando un certificato auto-firmato, sarà sostituito il certificato esistente sulla DiskStation.</p>
+</div>
+
+
+<h3>Richieste di firma del certificato</h3>
+
+<p>Per applicare un certificato da un'autorità di certificazione di terze parti, è necessario prima creare una richiesta di firma del certificato (CSR). Una richiesta di firma del certificato è un corpo di testo crittografato generato dalla DiskStation che contiene le informazioni che saranno incluse nel certificato, ad esempio il nome dominio, il nome dell'organizzazione, la posizione generale e l'indirizzo e-mail. La procedura guidata aiuta a generare la richiesta di firma del certificato in modo da poter applicare il certificato firmato per la DiskStation.</p>
+
+<p>Per acquisire un certificato da un'autorità di certificazione di terze parti o commerciale, sarà necessario specificare l'ID personale o dell'organizzazione e provare che si è il proprietario del nome di dominio che è stato inserito nel campo nome comune della richiesta di firma del certificato.</p>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>insieme alla richiesta di firma del certificato sarà generata anche una chiave privata. Le autorità di certificazione non richiedono la chiave privata. Conservare la chiave privata della DiskStation segreta e in luogo sicuro.</p>
+</div>
+
+<h4>Per creare una richiesta di firma del certificato:</h4>
+<ol>
+	<li>Fare clic su <b>Crea certificato</b>.</li>
+	<li>Seguire le istruzioni della procedura guidata per creare e scaricare la richiesta di firma del certificato.</li>
+</ol>
+
+<p>Una volta che il certificato è stato emesso dall'autorità di certificazione, questo può essere importato insieme alla chiave privata (consultare le istruzioni di seguito).
+
+
+
+<h3>Esportare i certificati</h3>
+
+<p>È possibile scaricare i certificati esistenti per la gestione o l'archiviazione. I file esportato contiene il certificato, la chiave privata e il certificato radice auto-firmato della DiskStation.</p>
+
+<h4>Per esportare un certificato:</h4>
+<ul>
+<li>Fare clic sul pulsante <b>Esporta certificato</b>.</li>
+</ul>
+
+
+
+<h3>Importare i certificati</h3>
+
+<p>Questa opzione consente di importare i certificati emessi dalle autorità di certificazione o i certificati esportati in precedenza, insieme alla chiave privata.</p>
+
+<h4>Per importare un certificato:</h4>
+<ul>
+	<li>Fare clic sul pulsante <b>Importa certificato</b>.</li>
+</ul>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>i certificati intermedi sono facoltativi per alcuni certificati emessi dalle autorità di certificazione.</li>
+<li>I certificati devono essere nel formato X.509 PEM.</li>
+<li>Le chiavi private devono essere in formato RSA e non possono essere protette da frase password.</li>
+</ul>
+</div>
+
+
+
+<h3>Rinnovare i certificati</h3>
+
+<p>Quando il certificato sta per scadere, è possibile rinnovarlo utilizzando questa opzione.</p>
+
+<h4>Per rinnovare un certificato:</h4>
+<ol>
+	<li>Fare clic su <b>Crea certificato</b>.</li>
+	<li>Selezionare <b>Rinnova certificato</b> e fare clic su <b>Avanti</b></li>
+	<li>Sarà creata una nuova chiave privata e una richiesta di firma del certificato.</li>
+</ol>
+
+
+
+<h3>Firmare la richiesta di firma del certificato (CSR)</h3>
+
+<p>Questa opzione consente di formare una richiesta di firma del certificato usando il certificato radice della DiskStation.</p>
+
+<h4>Per firmare una richiesta di firma del certificato:</h4>
+<ol>
+	<li>Fare clic su <b>Crea certificato</b>.</li>
+	<li>Fare clic su <b>Firmare una richiesta di firma del certificato (CSR)</b>.</li>
+	<li>Caricare la richiesta di firma del certificato e inserire le relative informazioni. </li>
+	<li>Fare clic su <b>Avanti</b>, e il sistema firmerà la richiesta di certificato e creerà un certificato corrispondente.</li>
+</ol>
+
+
+</body>
+</html>
+

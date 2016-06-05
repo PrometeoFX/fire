@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>還原</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>還原</h2>
+<p>前往<strong>備份 &amp; 同步</strong> &gt; <strong>還原</strong>來還原已備份的資料。</p>
+
+<h4><a name="restore"></a>若要還原備份任務：</h4>
+<ol class="disable-eds14">
+<li>選擇備份任務，然後按一下<b>還原</b>。 多重版本備份，請點選<strong>還原</strong> &gt; <strong>任務還原 </strong>。</li>
+<li>您可能會需要選擇系統設定檔、不同版本的備份資料等等。 實際情況將視其為資料備份任務、LUN 備份任務*、單一版本備份目的地 (即：共用資料夾) 或多重版本備份目的地 (即：儲存空間) 而定。</li>
+<li>依照設定精靈的指示完成設定。</li>
+</ol>
+<ol class="enable-eds14">
+<li>選擇備份任務，然後按一下<b>還原</b>。</li>
+<li>您可能會需要選擇系統設定檔、不同版本的備份資料等等。 實際情況將視其為資料備份任務類型而定。</li>
+<li>依照設定精靈的指示完成設定。</li>
+</ol>
+<div class="section enable-eds14">
+<h4>注意：</h4>
+<ul>
+<li>系統支援備份特定的套件。 關於套件是否支援備份，以及備份的具體內容與限制，請參閱應用程式內各套件說明。</li>
+<li>還原套件時若沒有安裝該套件，系統會自動為您安裝同一版本或最新版本的套件。 若已有安裝套件，且比當初備份的版本舊，系統會自動為您升級到當初備份的版本。</li>
+<li>DSM 5.1 以上備份的應用程式，無法在 DSM 5.0 及 DSM 5.0 以下的系統中還原。  </li>
+</ul>
+</div>
+
+<div class="section disable-eds14">
+<h4>注意：</h4>
+<ul>
+<li>還原完畢後，系統會將所備份的 LUN 還原成檔案類型的 LUN，並存放在您選擇的目的地儲存空間裡。*</li>
+
+<li>系統支援備份特定的套件。 關於套件是否支援備份，以及備份的具體內容與限制，請參閱應用程式內各套件說明。</li>
+<li>還原套件時若沒有安裝該套件，系統會自動為您安裝同一版本或最新版本的套件。 若已有安裝套件，且比當初備份的版本舊，系統會自動為您升級到當初備份的版本。</li>
+<li>DSM 5.1 以上備份的應用程式，無法在 DSM 5.0 及 DSM 5.0 以下的系統中還原。 </li>
+</ul>
+</div><h4><a name="restore"></a>若要還原多重版本備份任務裡的單一檔案或資料夾：</h4>
+<ol>
+<li>開啟<strong>檔案版本瀏覽器 </strong>。 您可以使用以下任一個方式：</li>
+<ul>
+<li>點一下<strong>還原</strong>並從下拉選單選擇<strong>檔案/資料夾還原</strong>。 </li>
+<li>前往<strong>備份目的地</strong>並展開您所選的備份目的地。 點一下<strong>備份版本資訊</strong>圖示。 在視窗裡選擇您想要還原的被分版本並點一下<strong>檔案版本瀏覽器</strong>圖示。</li>
+</ul>
+<li>您可以使用月曆圖示或時間線來瀏覽不同版本的檔案或資料夾。 </li>
+<li>選擇您要管理的版本，然後按一下<strong>還原</strong>。 </li>
+<li>您也能使用<strong>複製到</strong>或<strong>下載</strong>來複製或下載您的檔案。 </li>
+<li>您也能在資料夾或檔案上點擊右鍵並從下拉式選單選擇此選項。 </li>
+</ol>
+<h4>若要搜尋特定版本：</h4>
+<ol>
+  <li>點一下右上角搜尋欄位裡的箭頭。</li>
+  <li>在下拉選單您可以用以下的條件來過濾檔案：</li>
+  <ul>
+    <li><strong>關鍵字：</strong>輸入任何檔案/資料夾名稱。您可以在關鍵字中使用萬用字元 [*] (表示零個以上的字元) 以及 [?]  (表示一個隨機字元)。例如，[a<span class="note_content">*</span>n] 可以代表 [a<span class="note_content">ctio</span>n]、[a<span class="note_content">ttentio</span>n] 或 [an]。</li>
+    <li><strong>檔案類型：</strong>選擇<strong>任何</strong>、<strong>任何資料夾</strong>或<strong>任何檔案</strong>來限制搜尋範圍。</li>
+    <li><strong>大小：</strong>選擇<strong>任何</strong>、<strong>等於</strong>、<strong>大於</strong>或<strong>小於</strong>並輸入數值。</li>    
+    <li><strong>日期區間：</strong>從<strong>今天</strong>，<strong>昨天</strong>，<strong>上週</strong>，<strong>上個月</strong>選擇您想要的日期區間，或選擇<strong>自訂</strong>並輸入開始和結束日期來搜尋特定日期區間裡的版本。</li>
+
+  </ul>
+  <li>若要套用您的過濾設定，點一下<strong>過濾</strong>。 </li>
+  <li>若您想重新設定您的搜尋條件，點一下<strong>重置</strong>。</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>只有多版本備份任務提供備份檔案瀏覽器功能。</li>
+<li>備份目的地為 DSM 5.1 以下版本僅提供備份檔案瀏覽器部分功能。</li>
+<li dir="ltr">系統設定檔和應用程式僅能由<strong>還原</strong>&gt;<strong>任務還原</strong>還原。 </li>
+<li>檔案屬性將不會包含在<strong>複製到</strong>或<strong>下載</strong>操作。 </li>
+</ul>
+</div><h4><a name="restore"></a>若要從其它備份目的地還原備份任務：</h4>
+<ol>
+<li>按一下<b>還原至...</b>。</li>
+<li>選擇以下任一項目來找到備份任務，並按一下<b>下一步</b>：</li>
+<ul>
+<li><b>本地還原</b>：選擇此選項來從本地共用資料夾或外接硬碟還原資料。</li>
+<li><b>網路還原</b>：選擇此選項來從另一台 DiskStation 或 rsync 相容伺服器還原資料。</li>
+
+<li><b>公有雲還原</b>：選擇此選項來從公有雲伺服器還原資料。 </li>
+
+</ul>
+<li>當畫面上出現提示時，請選擇備份任務的來源，然後選擇要還原資料的目的地。</li>
+<li>依照精靈的指示來完成操作。</li>
+</ol>
+<div class="section enable-eds14">
+<h4>注意：</h4>
+<ul>
+
+  <li>Embedded DataStation 機種僅能還原共用資料夾至 ext3 或 ext4 外接裝置上。</li>
+  
+<li>系統不支援 Embedded DataStation 機種在沒有 ext3 或 ext4 外接裝置的情況下還原應用程式。</li>
+
+</ul>
+</div>
+
+<p>____<br /> * 僅適用於特定機型。</p>
+
+</body></html>

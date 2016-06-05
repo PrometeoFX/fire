@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TFTP/PXE</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>TFTP/PXE</h2>
+
+<p>As op&ccedil;&otilde;es em <strong>Painel de Controlo</strong> &gt; <strong>Servi&ccedil;os de Ficheiros</strong> &gt; <strong>TFTP/PXE</strong> permitem configurar as defini&ccedil;&otilde;es de TFTP e PXE.</p>
+
+<h3>TFTP</h3>
+<p>TFTP (Protocolo Trivial de Transfer&ecirc;ncia de Ficheiros) &eacute; um simples protocolo de transfer&ecirc;ncia de ficheiros, normalmente utilizado para transferir ficheiros de configura&ccedil;&atilde;o ou arranque, em situa&ccedil;&otilde;es em que n&atilde;o &eacute; necess&aacute;ria autentica&ccedil;&atilde;o. Ativar o servi&ccedil;o TFTP permite ao DiskStation transferir carregadores de arranque para dispositivos cliente.</p>
+<h4>Para modificar as defini&ccedil;&otilde;es TFTP:</h4>
+<ol>
+<li>Assinale a caixa marcada <strong>Ativar servi&ccedil;o TFTP</strong>.</li>
+<li>No campo <strong>Pasta de raiz TFTP</strong>, especifique que pasta no DiskStation pode ser acedida por clientes TFTP.</li>
+<li>Pode clicar no bot&atilde;o <strong>Defini&ccedil;&otilde;es Avan&ccedil;adas</strong> para ver e modificar as seguintes defini&ccedil;&otilde;es:</li>
+<ul>
+<li><strong>Ativar o registo de transfer&ecirc;ncia do ficheiro TFTP:</strong> Esta op&ccedil;&atilde;o permite-lhe manter um registo dos dados transferidos por TFTP.</li>
+<li><strong>Permiss&atilde;o de cliente TFTP:</strong> Selecione as permiss&otilde;es leitura e escrita para clientes TFTP. Quando est&aacute; selecionado <strong>S&oacute; de leitura</strong>, os clientes TFTP apenas podem ver o conte&uacute;do da pasta de raiz. Quando est&aacute; selecionado <strong>Grav&aacute;vel</strong>, os clientes TFTP podem modificar o conte&uacute;do da pasta de raiz.</li>
+<li><strong>Clientes permitidos:</strong> Escolha que clientes podem ligar atrav&eacute;s de TFTP. Pode permitir todos os clientes selecionando <strong>Todas as liga&ccedil;&otilde;es</strong> ou pode limitar quais os clientes que podem efetuar a liga&ccedil;&atilde;o especificando um intervalo de endere&ccedil;os IP.</li>
+</ul>
+<li>Depois de modificar as defini&ccedil;&otilde;es, clique em <strong>Aplicar</strong> para guardar.</li>
+</ol>
+
+
+<h3>Configura&ccedil;&atilde;o do servi&ccedil;o DHCP para PXE com o seu DiskStation</h3>
+<p>Para al&eacute;m de TFTP, o DiskStation pode tamb&eacute;m providenciar um servi&ccedil;o DHCP para implementar uma configura&ccedil;&atilde;o tudo-em-um PXE. O Ambiente de Execu&ccedil;&atilde;o Pr&eacute;-Arranque (PXE, Pre-boot Execution Environment) &eacute; um ambiente de rede que permite que dispositivos cliente arranquem utilizando uma interface de rede em vez de um dispositivo de armazenamento de dados (por exemplo, discos r&iacute;gidos). Quando implementa o PXE, pode ser armazenado um carregador de arranque no DiskStation e os dispositivos cliente podem arrancar atrav&eacute;s da rede utilizando o carregador de arranque.</p>
+
+<p>Para providenciar servi&ccedil;os de DHCP com o DiskStation, certifique-se de que instalou o pacote Synology DHCP Server.</p>
+
+<h4>Para configurar o servi&ccedil;o DHCP para PXE:</h4>
+<ol>
+<li>Assinale a caixa marcada <strong>Configurar servi&ccedil;o DHCP neste servidor para PXE</strong>. Ser&aacute; solicitado que instale o pacote DHCP Server se ainda n&atilde;o estiver instalado no seu DiskStation.</li>
+<li>Selecione um ficheiro de carregador de arranque da pasta de raiz TFTP e especifique outras defini&ccedil;&otilde;es relativas a DHCP.</li>
+<li>Clique em <strong>Aplicar</strong> para guardar as defini&ccedil;&otilde;es.</li>
+</ol>
+</body>
+</html>

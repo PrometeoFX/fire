@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Firewall</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_firewall"></a>Firewall</h2>
+<p>Durch das Erstellen von Firewall-Regeln unter <strong>Systemsteuerung</strong> &gt; <strong>Sicherheit</strong> &gt; <strong>Firewall</strong> kann eine nicht autorisierte Anmeldung und Zugriff auf Steuerungsdienste verhindert werden. Sie k&ouml;nnen entscheiden, ob der Zugriff auf bestimmte Netzwerk-Ports von bestimmten IP-Adressen aus erlaubt oder verweigert wird.</p><h3>Erstellen von Firewall-Regeln:</h3>
+<ol>
+<li>W&auml;hlen Sie eine Netzwerkschnittstelle aus dem Drop-down-Men&uuml; in der oberen rechten Ecke.</li>
+<li>Klicken Sie auf <b>Erstellen</b>.</li>
+<li>W&auml;hlen Sie im Abschnitt <b>Ports</b> eine der folgenden Optionen aus:</li>
+<ul>
+<li>W&auml;hlen Sie <b>Alle</b>, um diese Firewall-Regel auf alle Ports anzuwenden.</li>
+<li>W&auml;hlen Sie <b>Aus der Liste der integrierten Anwendungen ausw&auml;hlen</b>, und klicken Sie auf <strong>Ausw&auml;hlen</strong>. W&auml;hlen Sie die integrierten Anwendungen, auf welche diese Firewall-Regel angewendet werden soll.</li>
+<li>W&auml;hlen Sie <b>Benutzerdefiniert</b>, und klicken Sie auf <b>Benutzerdefiniert</b>. Geben Sie bis zu 15 durch Kommas getrennte Ports oder einen Portbereich ein, auf welche diese Firewall-Regel anzuwenden ist.</li>
+</ul>
+<li>W&auml;hlen Sie im Abschnitt <b>Quell-IP</b> eine der folgenden Optionen aus:</li>
+<ul>
+<li>W&auml;hlen Sie <b>Alle</b>, damit diese Firewall-Regel auf alle IP-Adressen angewendet wird.</li>
+<li>W&auml;hlen Sie <b>Spezifische IP</b>, und klicken Sie auf <strong>Ausw&auml;hlen</strong>. Sie k&ouml;nnen eine IP-Adresse oder einen IP-Adressbereich festlegen, auf den diese Firewall-Regel anzuwenden ist.</li>
+<li>W&auml;hlen Sie <b>Region</b> und geben Sie dann bis zu 15 L&auml;nder an, auf welche diese Firewall-Regel anzuwenden ist.</li>
+</ul>
+<li>W&auml;hlen Sie im Abschnitt <b>Aktion</b> eine der folgenden Optionen aus:</li>
+<ul>
+	<li>W&auml;hlen Sie <b>Zulassen</b>, um den Zugriff von den von Ihnen angegebenen Ports und IP-Adressen zu erlauben.</li>
+	<li>W&auml;hlen Sie <b>Verweigern</b>, um den Zugriff von den von Ihnen angegebenen Ports und IP-Adressen zu verweigern.</li>
+</ul>
+</ol>
+
+<p>LAN- und PPPoE-Firewall-Regeln lassen sich durch Auswahl dieser Schnittstellen im Feld in der oberen rechten Ecke anzeigen. Am Ende der Regelliste k&ouml;nnen Sie <b>Zugriff erlauben</b> oder <b>Zugriff verweigern</b> ausw&auml;hlen, um Zugriffsanforderungen zuzulassen oder zu verweigern, die mit keiner vorhandenen Firewall-Regel f&uuml;r die entsprechende Schnittstelle &uuml;bereinstimmen.</p>
+
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Sie k&ouml;nnen bis zu 100 Regeln f&uuml;r eine Netzwerkschnittstelle erstellen. </li>
+<li>Ordnen Sie mit Drag-and-Drop die Regeln in der Liste neu.</li>
+<li>Die Priorit&auml;t der Regeln richtet sich nach ihrer Position in der Liste.</li>
+<li>Wenn mehrere Netzwerkports mit demselben Subnetz verbunden sind, funktionieren die Firewall-Regeln m&ouml;glicherweise nicht korrekt.* </li>
+<li>Wenn Sie mehrere LAN-Ports mit Link Aggregation kombinieren, &uuml;bernimmt die Firewall die Regeln der ersten Netzwerk-Schnittstelle und merkt sich die Regeln der zweiten Netzwerk-Schnittstelle.</li>
+<li>Wenn Ihr DiskStation eine Verbindung mit dem Internet &uuml;ber PPPoE herstellt, m&uuml;ssen die damit verbundenen Firewall-Regeln in der entsprechenden PPPoE-Schnittstelle eingerichtet werden.</li>
+</ul>
+</div>
+<h3>Verhalten gem&auml;&szlig; den Firewall-Regeln:</h3>
+<p>Die DSM-Firewall &uuml;berpr&uuml;ft die &Uuml;bereinstimmung mit den Regeln nach ihrer Priorit&auml;t. <strong>Sobald eine Regel zutrifft, wird sie durchgesetzt und die DSM-Firewall beachtet die verbleibenden Regeln nicht weiter</strong>. Falls keine Regel zutrifft, f&uuml;hrt DSM Firewall die Standardaktion durch, die in jeder Schnittstelle angegeben ist.</p>
+<h4>Priorit&auml;t der Firewall-Regeln:</h4>
+<ol> 
+<li>Regeln, die unter &bdquo;Alle Schnittstellen&ldquo; definiert sind.</li>
+<li>Regeln, die in den entsprechenden Schnittstellen definiert sind, zu welchen die Verbindung geh&ouml;rt.</li>
+<li>Standardregeln in den entsprechenden Schnittstellen, zu welchen die Verbindung geh&ouml;rt.</li>
+</ol>
+<p>____<br> * Gilt nur f&uuml;r bestimmte Modelle.<br> # Diese Funktion umfasst GeoLite-Daten, erstellt von MaxMind und verf&uuml;gbar unter <a href="http://www.maxmind.com" target="_blank">http://www.maxmind.com</a>.</p><br></body>
+</html>

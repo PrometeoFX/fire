@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Pare-feu</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_firewall"></a>Pare-feu</h2>
+<p>La cr&eacute;ation de r&egrave;gles de pare-feu dans <strong>Panneau de configuration</strong> &gt; <strong>S&eacute;curit&eacute;</strong> &gt; <strong>Pare-feu</strong> permet d&apos;emp&ecirc;cher les connexions non autoris&eacute;es et de contr&ocirc;ler l&apos;acc&egrave;s aux services. Vous pouvez choisir d&rsquo;autoriser ou refuser l&rsquo;acc&egrave;s &agrave; certains ports r&eacute;seaux par certaines adresses IP sp&eacute;cifiques.</p><h3>Pour cr&eacute;er une r&egrave;gle de pare-feu&nbsp;:</h3>
+<ol>
+<li>S&eacute;lectionnez une interface r&eacute;seau dans le menu d&eacute;roulant dans le coin sup&eacute;rieur droit.</li>
+<li>Cliquez sur <b>Cr&eacute;er</b>.</li>
+<li>Dans la section <b>Ports</b>, s&eacute;lectionnez l&apos;une des r&egrave;gles suivantes&nbsp;:</li>
+<ul>
+<li>S&eacute;lectionnez <b>Tous</b> pour appliquer ces r&egrave;gles de pare-feu &agrave; tous les ports.</li>
+<li>Choisissez <b>S&eacute;lectionner dans une liste d&rsquo;applications int&eacute;gr&eacute;es</b> et cliquez sur <strong>S&eacute;lectionner</strong>. S&eacute;lectionnez les applications int&eacute;gr&eacute;es que vous voulez appliquer &agrave; cette r&egrave;gle de pare-feu.</li>
+<li>Choisissez <b>Personnalisation</b> et cliquez sur <b>Personnaliser</b>. Entrez jusqu&apos;&agrave; 15 ports s&eacute;par&eacute;s par un point ou sp&eacute;cifiez une gamme de port pour appliquer cette r&egrave;gle de pare-feu.</li>
+</ul>
+<li>Dans la section <b>Source IP</b>, s&eacute;lectionnez l&apos;une des r&egrave;gles suivantes&nbsp;:</li>
+<ul>
+<li>S&eacute;lectionnez <b>Tous</b> pour appliquer cette r&egrave;gle de pare-feu &agrave; toutes les adresses IP.</li>
+<li>S&eacute;lectionnez <b>IP sp&eacute;cifique</b> et cliquez sur <strong>S&eacute;lectionner</strong>. Vous pouvez sp&eacute;cifier une adresse IP ou une gamme IP pour appliquer cette r&egrave;gle de pare-feu.</li>
+<li>Choisissez <b>R&eacute;gion</b> et ensuite sp&eacute;cifiez jusqu&apos;&agrave; 15 pays pour appliquer cette r&egrave;gle de pare-feu.</li>
+</ul>
+<li>Dans la section <b>Action</b>, s&eacute;lectionnez l&apos;une des r&egrave;gles suivantes&nbsp;:</li>
+<ul>
+	<li>Choisissez <b>Autoriser</b> pour autoriser l&apos;acc&egrave;s par les ports et les adresses IP source que vous avez sp&eacute;cifi&eacute;s.</li>
+	<li>Choisissez <b>Refuser</b> pour refuser l&apos;acc&egrave;s par les ports et les adresses IP source que vous avez sp&eacute;cifi&eacute;s.</li>
+</ul>
+</ol>
+
+<p>Vous pouvez voir les r&egrave;gles de pare-feu LAN et PPPoE en s&eacute;lectionnant ces interfaces &agrave; partir de la case dans le coin sup&eacute;rieur droit. En bas de la liste de r&egrave;gle, vous pouvez s&eacute;lectionner <b>Autoriser l&rsquo;acc&egrave;s</b> ou <b>Refuser acc&egrave;s</b> pour autoriser ou refuser les demandes d&apos;acc&egrave;s qui ne correspondent pas &agrave; une r&egrave;gle de pare-feu existante pour l&apos;interface respective.</p>
+
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<ul>
+<li>Vous pouvez cr&eacute;er jusqu&apos;&agrave; 100 r&egrave;gles pour une interface r&eacute;seau. </li>
+<li>Reclassez la liste des r&egrave;gles par glisser-d&eacute;poser.</li>
+<li>Les r&egrave;gles sont hi&eacute;rarchis&eacute;es selon leur position dans la liste.</li>
+<li>Si votre syst&egrave;me poss&egrave;de plusieurs ports r&eacute;seaux connect&eacute;s au m&ecirc;me sous-r&eacute;seau, les r&egrave;gles de pare-feu peuvent ne pas fonctionner correctement.* </li>
+<li>Lorsque vous combinez plusieurs ports r&eacute;seau par Link Aggregation, le pare-feu applique les r&egrave;gles de la premi&egrave;re interface r&eacute;seau et r&eacute;serve les r&egrave;gles de la seconde.</li>
+<li>Si votre DiskStation se connecte &agrave; Internet via PPPoE, les r&egrave;gles du pare-feu li&eacute;es doivent &ecirc;tre configur&eacute;es sur l&apos;interface PPPoE correspondante.</li>
+</ul>
+</div>
+<h3>Comportement de la r&egrave;gle de pare-feu :</h3>
+<p>DSM Firewall correspondra aux r&egrave;gles selon la priorit&eacute;. <strong>Une fois qu&apos;une r&egrave;gle correspond, elle sera renforc&eacute;e et le pare-feu DSM ne continuera pas &agrave; correspondre aux r&egrave;gles restantes</strong>. Si aucune r&egrave;gle ne correspond, le pare-feu DSM effectuera l&apos;action par d&eacute;faut sp&eacute;cifi&eacute;e dans chaque interface.</p>
+<h4>Priorit&eacute; de la r&egrave;gle de pare-feu :</h4>
+<ol> 
+<li>R&egrave;gles d&eacute;finies dans &quot;Toute l&apos;interface&quot;.</li>
+<li>Les r&egrave;gles d&eacute;finies dans les interfaces respectives &agrave; laquelle la connexion appartient.</li>
+<li>Les r&egrave;gles par d&eacute;faut dans les interfaces respectives auxquelles la connexion appartient.</li>
+</ol>
+<p>____<br> * S&apos;applique uniquement sur certains mod&egrave;les.<br> # Cette fonction inclut les donn&eacute;es GeoLite cr&eacute;&eacute;es par MaxMind, disponible sur <a href="http://www.maxmind.com" target="_blank">http://www.maxmind.com</a>.</p><br></body>
+</html>

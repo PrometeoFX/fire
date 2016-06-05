@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Rece&ccedil;&atilde;o de Registos - Ajuda do Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Turn your DiskStation into a syslog server to receive logs from other network devices.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Rece&ccedil;&atilde;o de Registos</h2>
+<p>O seu DiskStation pode funcionar como um servidor syslog para receber registos do dispositivo cliente atrav&eacute;s da rede. S&atilde;o suportados tr&ecirc;s formatos para a rece&ccedil;&atilde;o de registos:  <strong>BSD </strong>(RFC 3164), <strong>IETF </strong>(RFC 5424) e <strong>Personalizado</strong>. Todos os registos recebidos s&atilde;o armazenados na base de dados de registos.</p>
+
+<div class="section">
+<h4>Antes de come&ccedil;ar:</h4>
+<p>Aceda a <strong>Centro de Registos</strong> &gt; <strong>Defini&ccedil;&otilde;es de Armazenamento</strong> e escolha a localiza&ccedil;&atilde;o para armazenar e arquivar registos.</p>
+</div>
+<h3>Para configurar a rece&ccedil;&atilde;o de registos padr&atilde;o:</h3>
+<ol>
+<li>Aceda a <strong>Centro de Registos</strong> &gt; <strong>Rece&ccedil;&atilde;o de Registos</strong> &gt; <strong>Padr&atilde;o</strong>.</li>
+<li>Pode ativar a rece&ccedil;&atilde;o de registos BSD e IETF assinalando a op&ccedil;&atilde;o <b>Receber registos de outros dispositivos</b> no(s) formato(s) que precisa.</li>
+<li>Selecione <strong>UDP</strong> ou <strong>TCP</strong> em <strong>Protocolo de transfer&ecirc;ncia</strong>.</li>
+<li>Especifique um n&uacute;mero de porta para a rece&ccedil;&atilde;o de mensagens do syslog em <strong>Porta</strong>. O n&uacute;mero predefinido da porta &eacute; <strong>514</strong>.</li>
+<li>Se pretender transferir registos em seguran&ccedil;a, assinale a op&ccedil;&atilde;o <strong>Ativar liga&ccedil;&atilde;o protegida (SSL)</strong>. A op&ccedil;&atilde;o est&aacute; dispon&iacute;vel apenas quando o <b>TCP</b> est&aacute; selecionado.
+  </p>
+	</div>
+</li>
+<li>Clique em <b>Aplicar</b> para guardar as defini&ccedil;&otilde;es.</li>
+</ol>
+<!--DSM#62962: Customized rule receiving-->
+
+<h3>Para configurar a rece&ccedil;&atilde;o de registos personalizada:</h3>
+
+	<ol>
+	<li>Aceda a <strong>Centro de Registos</strong> &gt; <strong>Rece&ccedil;&atilde;o de Registos</strong> &gt; <strong>Personalizar</strong>.</li>
+	<li>Clique em <strong>Criar</strong>.</li>
+	<li>Introduza um nome de regra exclusivo em <strong>Nome</strong>.</li>
+	<li>Introduza uma regra de an&aacute;lise em <strong>Par&acirc;metros da Regra</strong>. Consulte a nota abaixo para obter informa&ccedil;&otilde;es detalhadas sobre a cria&ccedil;&atilde;o de padr&otilde;es de an&aacute;lises.</li>
+	<li>Selecione <strong>UDP</strong> ou <strong>TCP</strong> em <strong>Protocolo de transfer&ecirc;ncia</strong>.</li>
+	<li>Especifique um n&uacute;mero de porta para a rece&ccedil;&atilde;o de mensagens do syslog em <strong>Porta</strong>. O n&uacute;mero predefinido da porta &eacute; <strong>514</strong>.</li>
+	<li>Se pretender transferir registos em seguran&ccedil;a, assinale a op&ccedil;&atilde;o <strong>Ativar liga&ccedil;&atilde;o protegida (SSL)</strong>. A op&ccedil;&atilde;o est&aacute; dispon&iacute;vel apenas quando o <b>TCP</b> est&aacute; selecionado.</li>
+	<li>Clique em <b>OK</b> para guardar as defini&ccedil;&otilde;es.</li>
+	</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Pode encontrar informa&ccedil;&otilde;es detalhadas sobre padr&otilde;es de an&aacute;lises <a href="http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/syslog-ng-patterndb-using-parsers.html">aqui</a>. Tamb&eacute;m pode descarregar um <a href="http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/patterndb-download.html">padr&atilde;o de amostra</a> para refer&ecirc;ncia.</p>
+</div>
+
+<h3>Para gerir regras personalizadas:</h3>
+
+	<ol>
+	<li>Selecione uma regra personalizada existente.</li>
+	<li>Escolha entre as seguintes op&ccedil;&otilde;es:</li>
+    <ul>
+    <li><strong>Editar:</strong> Edita a regra personalizada seleccionada.</li>
+<li><strong>Eliminar:</strong> Elimina a regra personalizada seleccionada.</li>
+<li><strong>Ativar:</strong> Activa a regra personalizada seleccionada.</li>
+<li><strong>Desativar:</strong> Desactiva a regra personalizada seleccionada.</li>
+    </ul>
+	</ol>
+
+
+<h3>Exportar o Certificado</h3>
+<p>Se assinalou a op&ccedil;&atilde;o <strong>Ativar liga&ccedil;&atilde;o protegida (SSL)</strong>, pode clicar no bot&atilde;o <strong>Exportar certificado</strong> para exportar o certificado utilizado para autenticar outros dispositivos ao enviar registos para o seu DiskStation.</p>
+
+</body>

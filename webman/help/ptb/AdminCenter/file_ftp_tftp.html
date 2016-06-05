@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TFTP/PXE</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>TFTP/PXE</h2>
+
+<p>As op&ccedil;&otilde;es em <strong>Painel de Controle</strong> &gt; <strong>Servi&ccedil;os de Arquivo</strong> &gt; <strong>TFTP / PXE</strong> permitem que voc&ecirc; configure as configura&ccedil;&otilde;es de TFTP e PXE.</p>
+
+<h3>TFTP</h3>
+<p>O protocolo de transfer&ecirc;ncia de arquivo trivial (TFTP) &eacute; um protocolo de transfer&ecirc;ncia de arquivo simples, usado geralmente para transferir arquivos de configura&ccedil;&atilde;o ou reinicializa&ccedil;&atilde;o em situa&ccedil;&otilde;es onde a autentica&ccedil;&atilde;o n&atilde;o &eacute; necess&aacute;ria. A habilita&ccedil;&atilde;o do servi&ccedil;o TFTP permite que o DiskStation transfira carregadores de inicializa&ccedil;&atilde;o para os dispositivos clientes.</p>
+<h4>Para modificar as configura&ccedil;&otilde;es de TFTP:</h4>
+<ol>
+<li>Marque a caixa de sele&ccedil;&atilde;o <strong>Habilitar servi&ccedil;o TFTP</strong>.</li>
+<li>No campo <strong>pasta TFTP raiz</strong>, especifique qual pasta do DiskStation pode ser acessada pelos clientes TFTP.</li>
+<li>Voc&ecirc; pode clicar no bot&atilde;o <strong>Configura&ccedil;&otilde;es avan&ccedil;adas</strong> para visualizar e modificar as seguintes configura&ccedil;&otilde;es:</li>
+<ul>
+<li><strong>Habilitar registro de transfer&ecirc;ncia de arquivos por TFTP:</strong> Essa op&ccedil;&atilde;o permite que voc&ecirc; mantenha o registro dos dados transferidos via TFTP.</li>
+<li><strong>Permiss&atilde;o de cliente TFTP:</strong> Selecione as permiss&otilde;es de leitura e grava&ccedil;&atilde;o para clientes TFTP. Quando <strong>Somente leitura</strong> estiver selecionado, os clientes TFTP poder&atilde;o visualizar apenas conte&uacute;dos da pasta raiz. Quando <strong>Grav&aacute;vel</strong> estiver selecionado, os clientes TFTP poder&atilde;o modificar conte&uacute;dos da pasta raiz.</li>
+<li><strong>Clientes permitidos:</strong> Escolha quais clientes t&ecirc;m permiss&atilde;o para se conectar via TFTP. Voc&ecirc; pode permitir que todos os clientes se conectem selecionando <strong>Todas as conex&otilde;es</strong> ou limitar quais clientes podem se conectar especificando uma faixa de endere&ccedil;os IP.</li>
+</ul>
+<li>Ap&oacute;s modificar as configura&ccedil;&otilde;es, clique em <strong>Aplicar</strong> para salvar.</li>
+</ol>
+
+
+<h3>Configure o servi&ccedil;o DHCP para PXE com seu DiskStation</h3>
+<p>Al&eacute;m do TFTP, o DiskStation tamb&eacute;m pode fornecer servi&ccedil;o DHCP para implementar uma configura&ccedil;&atilde;o PXE tudo em um. O ambiente de execu&ccedil;&atilde;o pr&eacute;-inicializa&ccedil;&atilde;o (PXE) &eacute; um ambiente de rede que permite que os dispositivos clientes sejam inicializados usando uma interface de rede em vez de um dispositivo de armazenagem de dados (por exemplo, discos r&iacute;gidos). Ao implementar o PXE, um carregador de inicializa&ccedil;&atilde;o pode ser armazenado no DiskStation e os dispositivos do cliente podem ser inicializados atrav&eacute;s da rede usando-se o carregador de inicializa&ccedil;&atilde;o.</p>
+
+<p>Para fornecer servi&ccedil;os DHCP com o DiskStation, certifique-se de ter o pacote do DHCP Server da Synology instalado.</p>
+
+<h4>Para configurar o servi&ccedil;o DHCP para o PXE:</h4>
+<ol>
+<li>Marque a caixa <strong>Configura&ccedil;&atilde;o do servi&ccedil;o DHCP nesse servidor para PXE</strong>. O sistema pedir&aacute; a instala&ccedil;&atilde;o do pacote DHCP Server se ele ainda n&atilde;o estiver instalado em seu DiskStation.</li>
+<li>Selecione um arquivo carregador de inicializa&ccedil;&atilde;o da pasta raiz do TFTP e especifique as outras configura&ccedil;&otilde;es relacionadas ao DHCP.</li>
+<li>Clique em <strong>Aplicar</strong> para salvar as configura&ccedil;&otilde;es.</li>
+</ol>
+</body>
+</html>

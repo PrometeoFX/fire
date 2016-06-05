@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>데이터 백업</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>데이터 백업</h2>
+
+<p><b>백업 및 복제</b>의 <b>백업</b> 탭 아래에서, DiskStation의 특정 데이터를 수동 또는 사용자 지정 일정에 따라 백업할 수 있습니다. 이 기능을 통해, 시스템 구성, 공유 폴더 내용 및 패키지 데이터를 로컬, 네트워크 또는 클라우드 백업 대상으로 백업할 수 있습니다.</p>
+
+<h4>백업 작업 생성하기:</h4>
+<ol>
+<li><b>생성</b> &gt; <b>데이터 백업 작업</b>을 선택합니다.</li>
+<li>마법사를 따라 설치를 완료하십시오. 자세한 내용은 <a href="repository.html">백업 대상</a>을 참조하십시오.</li>
+</ol>
+
+<h4>백업 작업 관리하기:</h4>
+<p>기존 작업을 선택하고 아래 단추 중 하나를 클릭합니다:</p>
+<ul>
+<li><strong>편집:</strong> 선택한 작업의 대상, 소스, 일정 및 기타 설정을 편집합니다.</li>
+<li><strong>삭제:</strong> 선택한 작업을 삭제합니다.</li>
+<li><strong>취소:</strong> 선택한 현재 실행 중인 작업을 취소합니다.</li>
+<li><strong>지금 백업:</strong> 선택한 작업의 백업을 즉시 수행합니다.</li>
+</ul>
+
+
+<h3>백업 회전</h3>
+<p>백업 회전은 버전 관리 메커니즘입니다. 이 기능은 오래되고 불필요한 버전을 자동 삭제하여 잠재적인 저장소 공간을 확보함으로써 백업 버전 관리하는 것을 도와줍니다. <b>작업 설정</b>에서 이 기능을 활성화하거나 백업 작업을 생성할 때 이를 구성할 수 있습니다.</p>
+<h4>버전을 회전하려면:</h4>
+<ol>
+<li>버전 회전을 적용할 백업 작업을 선택하고 <strong>편집</strong>을 클릭합니다.</li>
+<li><strong>작업 설정</strong> 탭으로 이동하여 <strong>백업 회전 활성화</strong>를 선택합니다. </li>
+<li>여기에서 두 가지 회전 방법 중 하나를 선택할 수 있습니다:</li>
+<ul>
+<li><b>가장 초기 버전에서:</b> 이것은 기본 버전 회전 방법입니다. 회전 조건이 트리거되면, 가장 초기 버전이 먼저 제거됩니다. </li>
+<li><b>Smart Recycle:</b> 이것은 지능형 버전 회전 방법입니다. 회전 조건이 트리거되면, 시스템은 보존 메커니즘에 의해 선택된 버전을 제거합니다. 보존 메커니즘은 다음과 같습니다:</li>
+<ul>
+	<li><b>과거 24시간부터 매시간 버전:</b> 시스템이 매 시간 가장 초기에 생성된 버전을 보관합니다.</li>
+	<li><b>과거 1일에서 1개월 사이의 매일 버전:</b> 시스템이 매일 가장 초기에 생성된 버전을 보관합니다.</li>
+	<li><b>1개월 이상된 매주 버전:</b> 시스템이 매주의 가장 초기에 생성된 버전을 보관합니다.</li>
+</ul>
+</ul>
+<li>최대 <b>버전 수</b>를 지정하십시오. 버전 수가 이 숫자를 초과하면 버전 회전이 시작됩니다. 잠긴 버전은 숫자에 포함되지 않습니다.</li>
+<li>반복적인 백업 일정을 구성한 경우, 회전 설정을 토대로 백업 버전이 보유되는 방식과 가장 빠른 복구 포인트의 미리보기가 표시됩니다. &nbsp;&nbsp;</li>
+<li><strong>확인</strong>을 클릭하여 설정을 저장합니다. </li>
+</ol>
+
+<div class="section">
+  <h4>참고:</h4>
+  <ul>
+  <li>잠근 버전은 절대로 제거되지 않습니다. 자세한 내용은 <a href="repository.html#lock_version">백업 대상</a>을 참조하십시오.</li>
+  
+  <li>복수 버전 백업 작업만이 버전 회전 기능을 제공합니다.</li>
+  <li>DSM 5.1 이하에서는 버전 회전이 지원되지 않습니다.</li>
+  <li>회전은 설정이 변경되거나 백업 작업이 완료된 직후 트리거됩니다.</li>
+  <li>잠근 버전은 최대 버전 수 계산에서 제외됩니다.</li>
+  </ul>
+</div>
+
+
+<div class="section">
+<h4>일반 참고 사항:</h4>
+<ul>
+<li>작업 이름은 1-32자의 Unicode 문자를 포함할 수 있지만 다음 문자는 포함할 수 없습니다:<br> <span class="letterSpace5">! &quot; # $ % &amp; ' ( ) * + , / : ; &lt; = &gt; ? @ [ ] \ ^ ` { } | ~</span></li>
+<li>백업의 전체 폴더 경로의 최대 길이는 2048자입니다.</li>
+<li>AFP를 통해 32000개 이상의 파일 또는 폴더를 EXT3 공유 폴더에 업로드하는 경우 이 공유 폴더를 포함한 모든 백업 작업이 실패합니다.</li>
+<li>암호화된 폴더는 마운트되거나 마운트되지 않고 백업될 수 있습니다. 그러나, 복원은 항상 마운트되지 않은 상태로 수행되며, 시작할 때 자동으로 마운트되지 않습니다. 암호화된 공유 폴더를 마운트하기 위해서는 암호화 키를 가져오거나 입력해야 합니다.</li>
+<li>암호화된 폴더를 다른 암호화된 폴더로 백업하는 것은 지원되지 않습니다.</li>
+<li>백업 소스 또는 백업 대상으로 원격 폴더를 사용하는 것은 지원되지 않습니다.</li><li>백업 대상이 볼륨이면 작업 소유자만 백업 작업을 수행할 수 있습니다. 자세한 내용은 <a href="repository.html">백업 대상</a>을 참조하십시오.</li>
+<li>특정 응용 프로그램에 대한 백업이 지원됩니다. 특정 패키지가 백업을 지원하는지, 백업 내용 및 제한에 대해서 알아보려면 각 응용 프로그램의 도움말을 참조하십시오.</li>
+<li class="enable-eds14">DiskStation은(는) 쓰기 가능한 EXT3/EXT4 외부 장치가 없으면 응용 프로그램 백업을 지원하지 않습니다.</li>
+<li class="enable-eds14">DiskStation은(는) 쓰기 가능한 EXT3/EXT4 외부 장치가 없으면 볼륨으로의 백업을 지원하지 않습니다.</li>
+<li class="enable-eds14">DiskStation은(는) EXT3/EXT4 외부 장치에서 생성된 공유 폴더만 백업할 수 있습니다.</li>
+<li class="disable-eds14">쓰기 가능한 볼륨이 없으면 시스템에서 응용 프로그램을 백업할 수 없습니다.</li
+></ul>
+</div>
+<div class="section disable-eds14">
+<h4>Windows ACL 설정 백업:</h4>
+<p>DiskStation에 있는 파일의 Windows ACL 설정 또한 대상의 파일 시스템에 따라 백업될 수 있습니다:</p>
+<ul>
+
+<li><strong>로컬 백업 대상</strong>, <strong>네트워크 백업 대상</strong> 및 <strong>공용 클라우드 백업 대상</strong>은 대상의 파일 시스템과 관계 없이 Windows ACL 설정을 백업할 수 있습니다.</li>
+
+<li><strong>공유 폴더 동기화</strong>는 대상의 파일 시스템이 EXT4<span style="display: inline;" class="enable-rc18015xsp">/BTRFS</span>일 때 Windows ACL 설정을 백업할 수 있습니다.</li>
+
+</ul>
+</div>
+
+</body></html>

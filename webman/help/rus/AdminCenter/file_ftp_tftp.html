@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TFTP/PXE</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>TFTP/PXE</h2>
+
+<p>Параметры в пункте <strong>Панель управления</strong> > <strong>Файловые службы</strong> > <strong>TFTP/PXE</strong> позволяют настраивать параметры TFTP и PXE.</p>
+
+<h3>TFTP</h3>
+<p>TFTP (Trivial File Transfer Protocol) — простой протокол передачи файлов, который обычно используется для передачи конфигураций или загрузки файлов, когда проверка подлинности не требуется. Включение службы TFTP позволяет DiskStation передавать загрузчики на клиентские устройства.</p>
+<h4>Изменение настроек TFTP:</h4>
+<ol>
+<li>Установите флажок <strong>Включить службу TFTP</strong>.</li>
+<li>В поле <strong>Корневая папка TFTP</strong> укажите папку на DiskStation, к которой будут иметь доступ клиенты TFTP.</li>
+<li>Нажмите кнопку <strong>Дополнительные настройки</strong>, чтобы просмотреть и изменить следующие настройки:</li>
+<ul>
+<li><strong>Включить журнал передачи по TFTP:</strong> Данный параметр позволяет отслеживать передачу данных по TFTP.</li>
+<li><strong>Права клиента TFTP:</strong> Выберите для клиента TFTP права на чтение и запись. Если выбран параметр <strong>Только для чтения</strong>, клиенты TFTP смогут только просматривать содержимое корневой папки. Если выбран параметр <strong>Для записи</strong>, клиенты TFTP смогут изменять содержимое корневой папки.</li>
+<li><strong>Разрешенные клиенты:</strong> Выберите клиентов, которые смогут подключаться с помощью TFTP. Вы можете разрешить подключение для всех клиентов, выбрав <strong>Все подключения</strong>; либо ограничить подключение клиентов, указав определенный диапазон IP-адресов.</li>
+</ul>
+<li>Нажмите <strong>Применить</strong>, чтобы сохранить настройки.</li>
+</ol>
+
+
+<h3>Настройка службы DHCP для PXE с помощью DiskStation</h3>
+<p>Помимо TFTP устройство DiskStation также предоставляет службу DHCP для выполнения комплексной установки PXE. PXE (Pre-boot Execution Environment) – это сетевая среда, которая позволяет клиентским устройствам выполнять загрузку с помощью сетевого интерфейса, а не устройства хранения данных (например, жестких дисков). При внедрении PXE загрузчик можно хранить на DiskStation и загружать клиентские устройства по сети с помощью этого загрузчика.</p>
+
+<p>Для предоставления служб DHCP с помощью DiskStation установите пакет Synology DHCP Server.</p>
+
+<h4>Настройка службы DHCP для PXE:</h4>
+<ol>
+<li>Установите флажок <strong>Настроить службу DHCP на данном сервере для PXE</strong>. Вам будет предложено установить пакет DHCP Server, если он еще не установлен на DiskStation.</li>
+<li>Выберите файл загрузчика из корневой папки TFTP и задайте другие настройки DHCP.</li>
+<li>Нажмите <strong>Применить</strong>, чтобы сохранить настройки.</li>
+</ol>
+</body>
+</html>

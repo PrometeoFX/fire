@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DHCP Server</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>DHCP Server</h2>
+<p>Din DiskStation kan ta på seg rollen som DHCP-server og tilordner dynamiske IP-adresser til DHCP-klienter på ditt lokale nettverk.</p>
+
+<h4>Slik aktiverer du DHCP-server:</h4>
+<ol>
+<li>Gå til <strong>Kontrollpanel</strong> > <strong>Nettverk</strong> > <strong>Nettverksgrensesnitt</strong>.</li>
+<li>Velg et nettverksgrensesnitt (f.eks. LAN) og klikk på <strong>Rediger</strong>.</li>
+<li>Gå til fanen <strong>DHCP Server</strong> og merk av for <b>Aktiver DHCP Server</b>.</li>
+<li>Angi en verdi i feltet <b>Adresseleietid</b> for å sette DHCP-leietid (i minutter) for IP-adresser tilordnet til DHCP-klienter.</li>
+<li>
+Angi DNS-adressen for DHCP-klienter i feltene <b>Primær DNS</b> (obligatorisk) og <b>Sekundær DNS</b> (valgfritt).
+</li>
+<li>
+Angi domenenavn for DHCP-server i feltet <b>Domenenavn</b> (valgfritt).
+</li>
+<li>
+Klikk på <b>OK</b>.
+</li>
+</ol>
+<h4>Slik legger du til et delnett:</h4>
+<ol>
+<li>
+Klikk på <b>Legg til</b> og angi deretter informasjonen under følgende kolonner:
+</li>
+<ul>
+<li>
+<b>Aktiver</b>: Aktiver eller deaktiver delnettet.
+</li>
+<li>
+<b>Start</b>: Den første IP-adressen til delnettet.
+</li>
+<li>
+<b>Avslutt</b>: Den siste IP-adressen til delnettet.
+</li>
+<li>
+<b>Nettmaske</b>: Delnettmasken.
+</li>
+<li>
+<b>Systemport</b>: Systemporten til delnettet.
+</li>
+</ul>
+<li>
+Klikk på <b>OK</b>.
+</li>
+</ol>
+
+
+<div class="section">
+<h4>Merk:</h4>
+<ul>
+<li>Du kan kun legge til opp til 32 delnett.</li>
+</ul>
+</div>
+
+
+
+<h3>DHCP-klienter</h3>
+
+<p>For å se en liste over DHCP-klienter og deres nettverkskonfigurasjoner (f.eks. MAC-adresse, IP-adresse, vertsnavn og gjenstående tid før DHCP-leien utgår), kan du gå til fanen <strong>DHCP-klienter</strong>.</p>
+
+
+<h3>DHCP-reservasjon</h3>
+
+<p>Hvis du vil at en klient alltid skal få samme IP-adresse under fornyelse av DHCP-leie, kan du i tillegg legge til klienten i adressereservasjonslisten.</p>
+
+<h4>Slik legger du til en klient i adressereservasjonslisten:</h4>
+
+<ul>
+<li>Klikk på <b>Legg til</b>.</li>
+<li>Spesifiser klientens MAC-adresse, IP-adressen du vil tilordne til klienten og klientens vertsnavn. </li>
+<li>Klikk på <b>OK</b> for å lagre innstillingene.</li>
+</ul>
+
+
+</body>
+</html>

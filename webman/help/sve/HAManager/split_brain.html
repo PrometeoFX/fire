@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Redundans-klyvning</h2>
+
+<p>N&auml;r ett high-availability-kluster fungerar normalt, skall endast en av medlemsservrarna inneha rollen som aktiv server. I detta fall uppt&auml;cker den passiva servern f&ouml;rekomsten av den aktiva servern b&aring;de via Heartbeat-anslutningen och dataanslutningen.</p>
+
+<p>Om alla Heartbeat- och dataanslutning g&aring;r f&ouml;rlorad kan det h&auml;nda att b&aring;da servrarna f&ouml;rs&ouml;ker anta roller som aktiv server. Denna situation kallas f&ouml;r &quot;redundansklyvning&quot;. N&auml;r s&aring; &auml;r fallet kommer anslutningar till IP-adressen som tilldelats high-availability-klustret att omdirigeras till vilken som av de tv&aring; servrarna, vilket resulterar i felaktiga tj&auml;nster.</p>
+        
+<h4>Om redundansklyvning uppst&aring;r:</h4>
+	<ol>
+		<li>Anslutningar till IP-adressen som tilldelats high-availability-klustret kommer att omdirigeras till vilken som av de tv&aring; servrarna, vilket resulterar i felaktiga tj&auml;nster. Du upplever problem med att ansluta till vilken som av servrarna.</li>
+		<li>Systemet kommer att uppt&auml;cka redundansklyvningen och ta bort high-availability-klustret samt h&auml;va bindningen av de b&aring;da servrarna.</li>
+		<li>N&auml;r b&aring;da servrarna &aring;terg&aring;r till status som <b>Frist&aring;ende</b>, kommer du att kunna logga in p&aring; DiskStation Manager (DSM). I detta l&auml;ge kommer data som ackumulerats f&ouml;re high-availability-klustret togs bort att finnas kvar p&aring; b&aring;da servrarna. Efter att du identifierat den server som har den mest uppdaterade informationen kan du &aring;ter binda servrarna f&ouml;r att skapa ett high-availability-kluster igen.</li>
+	</ol>
+ </body>
+</html>

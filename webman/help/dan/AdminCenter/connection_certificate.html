@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="certificate"></a>Certifikat</h2>
+
+<p>Et certifikat kan bruges til at sikre SSL-tjenester til DiskStation, f.eks. net (alle HTTPS-tjenester), mail eller FTP. Et certifikat gør det muligt for brugere at validere identiteten af en server og administratoren, før de sender eventuelle fortrolige oplysninger. </p>
+
+<p>Fanen <strong>Certifikat</strong> (under <strong>Kontrolpanel</strong> > <strong>Sikkerhed</strong> > <strong>Certifikat</strong>) indeholder valgmuligheder til styring og visning af status for DiskStation-certifikater, så du kan oprette, importere/eksportere eller forny certifikater. Certifikaternes konfigurationsguide hjælper med at oprette certifikater eller downloade anmodninger om certifikatunderskrift (CSR) for registrering hos certifikatmyndigheder (CA).</p>
+
+
+<div class="section">
+<h4>Bemærk:</h4>
+<p>Det her viste certifikat vil automatisk blive anvendt af OpenVPN Server, hvis VPN Server installeres.</p>
+</div>
+
+
+<h3>Selvunderskrevne certifikater</h3>
+
+<p>Et selvunderskrevet certifikat refererer til et certifikat, der blev oprettet og underskrevet af den samme entitet, hvis identitet den certificerer (i dette tilfælde DiskStation). Selvunderskrevet certifikater er underskrevet med den private nøgle, der er genereret af DiskStation.  Eftersom selvunderskrevne certifikater ikke udstedes af tredjeparts certifikatmyndigheder, giver de mindre bevis for identiteten af serveren og bruges normalt kun til sikre kanaler mellem serveren og en gruppe kendte brugere.</p>
+
+
+<h4>Sådan opretter du et selvunderskrevet certifikat:</h4>
+<ol>
+	<li>Klik på <b>Opret certifikat</b>.</li>
+	<li>Følg guiden for at fuldføre opsætningen.</li>
+</ol>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<p>Oprettelse af et selvunderskrevet certifikat erstatter det eksisterende certifikat for DiskStation.</p>
+</div>
+
+
+<h3>Anmodninger om certifikatunderskrivning</h3>
+
+<p>Du skal for at kunne ansøge om et certifikat fra en tredjeparts certifikatmyndighed først oprette en anmodning om certifikatunderskrift (CSR). En anmodning om certifikatunderskrift er en krypteret tekst, der genereres af DiskStation og indeholder oplysninger, der inkluderes i dit certifikat, f.eks. domænenavn, organisationsnavn, placering og e-mail-adresse. Konfigurationsguiden kan hjælpe dig med at generere anmodningen om certifikatunderskrift for at ansøge om et underskrevet certifikat til DiskStation.</p>
+
+<p>Få et certifikat fra en kommerciel eller tredjeparts certifikatmyndighed ved at fremsende dine personlige eller din organisations id, og du skal bevise, at du ejer det domænenavn, som blev indtastet i feltet Common name i anmodningen om certifikatunderskrift.</p>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<p>En privat nøgle skal også genereres sammen med anmodningen om certifikatunderskrift. Certifikatmyndighederne har ikke brug for denne private nøgle. Opbevar den private nøgle til din DiskStation sikkert og hemmeligt.</p>
+</div>
+
+<h4>Sådan opretter du en anmodning om certifikatunderskrift:</h4>
+<ol>
+	<li>Klik på <b>Opret certifikat</b>.</li>
+	<li>Følg vejledningen i konfigurationsguiden til at oprette og downloade anmodningenom certifikatunderskrift.</li>
+</ol>
+
+<p>Når certifikatet er udstedt af certifikatmyndigheden, kan den importeres sammen med din private nøgle (se nedenfor for at få en vejledning).
+
+
+
+<h3>Eksport af certifikater</h3>
+
+<p>Eksisterende certifikater kan downloades til administrations- eller arkivformål. Den eksporterede fil indeholder certifikatet, privat nøgle og selvunderskrevet rodcertifikat til DiskStation.</p>
+
+<h4>Sådan eksporterer du et certifikat:</h4>
+<ul>
+<li>Klik på knappen <b>Eksporter certifikat</b>.</li>
+</ul>
+
+
+
+<h3>Import af certifikater</h3>
+
+<p>Denne mulighed sætter dig i stand til importere certifikater, der er udstedt fra certifikatmyndigheder eller tidligere eksporterede certifikater sammen med den private nøgle.</p>
+
+<h4>Sådan importerer du et certifikat:</h4>
+<ul>
+	<li>Klik på knappen <b>Importer certifikat</b>.</li>
+</ul>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+<li>Midlertidige certifikater er valgfrie til nogle certifikater, der er udstedt af certifikatmyndigheder.</li>
+<li>Certifikater skal være i X.509 PEM-format.</li>
+<li>Private nøgler skal være i RSA-formatet og kan ikke beskyttes med adgangskode.</li>
+</ul>
+</div>
+
+
+
+<h3>Fornyelse af certifikater</h3>
+
+<p>Når dit certifikat er ved at udløbe, kan de fornys med denne mulighed.</p>
+
+<h4>Sådan fornyer du et certifikat:</h4>
+<ol>
+	<li>Klik på <b>Opret certifikat</b>.</li>
+	<li>Vælg <b>Forny certifikat</b>, og klik på <b>Næste</b></li>
+	<li>En ny privat nøgle og anmodning om certifikatunderskrift oprettes.</li>
+</ol>
+
+
+
+<h3>Underskrift af anmodning om certifikatunderskrift (CSR)</h3>
+
+<p>Denne mulighed sætter dig i stand til at underskrive en anmodning om certifikatunderskrift med rodcertifikatet for DiskStation.</p>
+
+<h4>Sådan underskriver du en anmodning om certifikatunderskrift:</h4>
+<ol>
+	<li>Klik på <b>Opret certifikat</b>.</li>
+	<li>Klik på <b>Underskriv anmodning om certifikatunderskrift (CSR)</b>.</li>
+	<li>Upload anmodningen om certifikatunderskrift, og indtast relevante oplysninger. </li>
+	<li>Klik på <b>Næste</b>, hvorefter systemet vil underskrive certifikatanmodningen og oprette et tilhørende certifikat.</li>
+</ol>
+
+
+</body>
+</html>
+

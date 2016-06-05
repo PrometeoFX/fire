@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Mount Remote Folders</h2>
+
+<p>
+You can mount remote folders from remote servers (such as network computers or other DiskStation) to easily navigate available network resources with File Station.
+</p>
+
+<h4>To mount a remote folder:</h4>
+<ol>
+<li>Click <b>Tools</b> > <b>Mount Remote Folder</b>.</li>
+
+
+<li>Enter "<b>\\Remote_Server\Remote_Folder</b>" in the <b>Folder</b> field to specify the path of the remote folder. For example, "\\192.168.0.2\share" or "\\chad\cheeseburger\pictures".</li>
+<li>If access privilege to the remote folder is required by the remote server, enter your user credentials of the remote server in the <b>Account name</b> and <b>Password</b> fields.</li>
+<li>Click <b>Browse</b> to select or create an empty destination folder on your DiskStation for mounting the remote folder.</li>
+
+
+<li>Tick <b>Mount automatically on startup</b> if you want DiskStation to mount this remote folder on every system startup or reboot.</li>
+<li>Click <b>Mount</b>. Now you can navigate to the destination folder where the remote folder is mounted, and manage the contents of the remote folders.</li>
+</ol>
+
+
+<h4>To unmount a remote folder:</h4>
+<ol>
+<li>Select the remote folder you want to unmount, and click <b>Tools</b> > <b>Unmount</b>.</li>
+
+
+<li>Alternatively, simply right-click on the remote folder and select <b>Unmount</b>.</li>
+
+
+</ol>
+
+<div class="section">
+<h4>Note:</h4>
+<ul>
+<li>The maximum number of concurrent remote folders is 100.</li>
+<li>You are only allowed to mount remote folders from a remote server that supports the CIFS protocol.
+</li>
+</ul>
+</div>
+</body>
+</html>

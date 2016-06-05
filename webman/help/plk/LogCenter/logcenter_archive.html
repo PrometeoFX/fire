@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Centrum logów</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Ustawienia przechowywania</h2>
+
+<p>Strona <strong>Ustawienia przechowywania</strong> udostępnia opcje umożliwiające konfigurację sposobu i miejsca archiwizacji logów odebranych przez Centrum logów. Używając poniższych opcji, określ miejsce przechowywania archiwów logów oraz reguły ich automatycznego tworzenia.</p>
+
+
+<h3>Docelowa pamięć masowa archiwów</h3>
+
+<p>Pamięć docelowa to folder, w którym są przechowywane i archiwizowane logi odebrane przez Centrum logów. Aby wybrać folder, kliknij <strong>Wybierz lokalizację</strong>.</p>
+<p>Jeżeli chcesz, aby logi lokalne serwera DiskStation były archiwizowane w tej samej pamięci docelowej, zaznacz pole wyboru <strong>Archiwizuj logi lokalne w określonej powyżej pamięci masowej</strong>. W większości przypadków zapewnia to więcej miejsca do przechowywania logów lokalnych, dzięki czemu logi systemu mogą być bardziej kompletne.</p>
+
+ <!--DSM#61793: Describe how logs are archived in data volume-->
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Lokalne logi (Logi transferu plików, System i Połączenie) są zapisywane na partycji systemowej mającej ograniczone miejsce w pamięci masowej. Po włączeniu ustawienia <strong>Archiwizuj logi lokalne w określonej powyżej pamięci masowej</strong> wszystkie logi będą archiwizowane w miejscu docelowym określonym przez <strong>Reguły archiwizacji</strong>. Aby przeglądać zarchiwizowane logi lokalne, kliknij <strong>Otwórz archiwum logów</strong> i wybierz <strong>SYNOSYSLOGDB__LOCALARCH.DB</strong>.</p>
+</div>
+
+
+<h3>Reguły archiwizacji</h3>
+
+<p>Logi są archiwizowane automatycznie na podstawie kryteriów określonych w sekcji <strong>Reguły archiwizacji</strong>. Logi mogą być archiwizowane automatycznie, kiedy rozmiar bazy danych logów osiągnie określony rozmiar, liczba poszczególnych logów osiągnie określony limit lub logi osiągną określony wiek.</p>
+
+<h3>Format archiwum</h3>
+<p>Ta sekcja zawiera następujące opcje.</p>
+<ul>
+<li><strong>Archiwizuj logi oprócz formatu domyślnego także w formacie tekstowym:</strong> Powoduje zapisywanie archiwów jako plików tekstowych w dodatku do domyślnych plików SQLite.</li>
+<li><strong>Kompresuj archiwa logów:</strong> Powoduje zapisywanie archiwów logów jako skompresowanych plików w formacie ZIP.</li>
+<li><strong>Archiwizuj logi osobno w zależności od urządzenia:</strong> Powoduje zapisywanie osobnych archiwów poszczególnych urządzeń klienckich, które przesyłają logi do serwera DiskStation.</li>
+</ul>
+
+</body>

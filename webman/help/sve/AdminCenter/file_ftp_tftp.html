@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TFTP/PXE</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>TFTP/PXE</h2>
+
+<p>Alternativen i <strong>Kontrollpanel</strong> > <strong>Filtjänster</strong> > <strong>TFTP/PXE</strong> låter dig konfigurera inställningar för TFTP och PXE.</p>
+
+<h3>TFTP</h3>
+<p>TFTP (Mindre avancerat filöverföringsprotokoll) är ett enkelt filöverföringsprotokoll som allmänt används för att konfigurationer eller bootfiler, i situationer där autentisering inte krävs. Att aktivera tjänsten TFTP tillåter DiskStation att överföra bootloaderfiler till klientenheter.</p>
+<h4>Ändra inställningar för TFTP:</h4>
+<ol>
+<li>Markera rutan med texten <strong>Aktivera TFTP-tjänst</strong>.</li>
+<li>I fältet <strong>TFTP rootmapp</strong>, specificera till vilken mapp på DiskStation TFTP-klienter har åtkomst.</li>
+<li>Du kan klicka på knappen <strong>Avancerade inställningar</strong> för att visa och ändra följande inställningar:</li>
+<ul>
+<li><strong>Aktivera loggfil för TFTP-filöverföring:</strong> Detta alternativ låter dig hålla reda på data som överförs med TFTP.</li>
+<li><strong>TFTP-klientbehörigheter:</strong> Välj läs- och skrivbehörigheter för TFTP-klienter. När <strong>Endast läsbar</strong> är valt kan TFTP-klienter bara visa innehållet i rotmappen. När <strong>Skrivbar</strong> är valt kan TFTP-klienter ändra innehållet i rotmappen.</li>
+<li><strong>Tillåtna klienter:</strong> Välj vilka klienter som är tillåtna att ansluta via TFTP. Du kan tillåta alla klienter att ansluta genom att välja <strong>Alla anslutningar</strong>; eller så kan du begränsa vilka klienter som kan ansluta genom att specificera ett intervall av IP-adresser.</li>
+</ul>
+<li>Efter ändring av inställningarna, klicka på <strong>Tillämpa</strong> för att spara.</li>
+</ol>
+
+
+<h3>Konfigurera DHCP-tjänsten för PXE med din DiskStation</h3>
+<p>Förutom TFTP kan DiskStation också tillhandahålla tjänster för DHCP, för att implementera en allt-i-ett-installation av PXE. Pre-boot Execution Environment (PXE) är en nätverksmiljö som låter klientenheterna starta genom att använda ett nätverkskort istället för en datalagringsenhet (dvs. hårddisk). När PXE implementeras kan en bootloader lagras på DiskStation och klientenheter kan starta över nätverket genom att använda bootloadern.</p>
+
+<p>För att tillhandahålla DHCP-tjänster med DiskStation, vänligen tillse att du har installerat filpaketet Synology DHCP Server.</p>
+
+<h4>Konfigurera DHCP-tjänsten för PXE:</h4>
+<ol>
+<li>Markera rutan som är med texten <strong>Konfigurera DHCP-tjänst för PXE på denna server</strong>. Du blir uppmanad att installera filpaketet DHCP Server om det inte redan finns installerat på din DiskStation.</li>
+<li>Välj en boatloaderfil från TFTP rootmapp och specificera andra DHCP-relaterade inställningar.</li>
+<li>Klicka på <strong>Tillämpa</strong> för att spara inställningarna.</li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Task Scheduler</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1>Task Scheduler</h1>
+<p>Task Scheduler allows you to schedule and run services or scripts at pre-defined times.</p>
+<h2>Supported tasks</h2>
+<p>Tasks can be created to do the following:</p>
+<ul class="disable-eds14">
+<li><strong>User-defined script:</strong> Run user-defined scripts or commands.</li>
+<li><strong>Recycle bin:</strong> Empty the Recycle Bin of specific shared folders. In addition, <strong>Retention Policy</strong> settings allow you to control what files are permanently deleted when emptying the Recycle Bin. For example, files can be deleted or kept according to size, deletion time, or file format.</li>
+<li><strong>Beep Control:</strong> Make the DiskStation beep.</li> 
+<li><strong>Service:</strong> Start or stop network services, such as Windows File Service, FTP, Auto Block, etc.</li>
+</ul>
+
+
+<ul class="enable-eds14">
+<li><strong>User-defined script:</strong> Run user-defined scripts or commands.</li>
+<li><strong>Recycle bin:</strong> Empty the Recycle Bin of specific shared folders. In addition, <strong>Retention Policy</strong> settings allow you to control what files are permanently deleted when emptying the Recycle Bin. For example, files can be deleted or kept according to size, deletion time, or file format.</li>
+<li><strong>Service:</strong> Start or stop network services, such as Windows File Service, FTP, Auto Block, etc.</li>
+</ul>
+
+
+<h2>Managing Tasks</h2>
+<p>The main page of Task Scheduler displays all existing tasks and provides options to create, edit, or run tasks.</p>
+<h4>To create a task:</h4>
+<ol>
+<li>Click <strong>Create</strong> and select the type of task you want to schedule.</li>
+<li>When the <strong>Create task</strong> window appears, modify the following settings on the <strong>General</strong> tab:</li>
+<ul>
+<li><strong>General Settings:</strong> Enter a task name, select a user, and enable or disable the task. </li>
+<li><strong>Other settings:</strong> Additional task-specific settings can be modified on this tab (only for certain tasks). For example, when creating a task to empty a recycle bin, you need to select the recycle bin of a certain shared folder.</li>
+</ul>
+<li>On the <strong>Schedule</strong> tab, modify the following settings:</li>
+<ul>
+<li><strong>Date:</strong> Specify when to run the task. Tasks can be scheduled to run on certain days of the week (e.g. daily, weekends, or every Sunday, etc.) or on specific dates (e.g. 2015/10/21).</li>
+<li><strong>Time:</strong> Specify how many times the task runs each day, as well as the first and last run time.</li>
+</ul>
+<li>Modify task-specific settings on the <strong>Task Settings</strong> tab (only for certain tasks).</li>
+</ul>
+<li>Click <strong>OK</strong> to finish</li>
+</ol>
+<h4>To edit task settings:</h4>
+<ol>
+<li>Select an existing task.</li>
+<li>Click <strong>Edit</strong>.</li>
+<li>A window appears where you can modify task settings.</li>
+</ol>
+<h4>To delete a task:</h4>
+<ol>
+<li>Select an existing task.</li>
+<li>Click <strong>Delete</strong>.</li>
+</ol>
+
+<h4>To enable or disable a task:</h4>
+<ol>
+<li>On the <strong>Task Scheduler</strong> main page, check or uncheck the appropriate checkbox under <strong>Enabled</strong> to enable or disable a task.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+
+
+<h4>To manually run a task:</h4>
+<ol>
+<li>Select one or more existing tasks.</li>
+<li>Click <strong>Run</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Task Scheduler Limitations:</h4>
+<ul class="disable-eds14">
+<li>Task names can include 512 displayable characters.</li>
+<li>Maximum number of tasks: 1024.</li>
+<li>Maximum length of script path or command line: 4095.</li>
+<li>Beep duration can be set from 1 to 600 seconds.</li>
+</ul>
+
+
+<ul class="enable-eds14">
+<li>Task names can include 512 displayable characters.</li>
+<li>Maximum number of tasks: 1024.</li>
+<li>Maximum length of script path or command line: 4095.</li>
+</ul>
+
+</div>
+
+</body> </html>

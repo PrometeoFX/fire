@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Mac 파일 서비스</h2>
+
+<p>
+<strong>제어판</strong> &gt; <strong>파일 서비스</strong> &gt; <strong>Win/Mac/NFS</strong>에서 Mac 파일 서비스를 활성화하여 DiskStation을(를) Mac 파일 서버(AFP 서버)로 설정할 수 있습니다.</p>
+
+<h4>Mac 파일 서비스 활성화하기:</h4>
+<ol>
+<li>
+DiskStation을(를) Mac 파일 서버(AFP 서버)로 설정하려면 <b>Mac 파일 서비스 활성화</b>를 선택합니다.
+</li>
+<li>
+필요하면 <b>Time Machine</b> 백업 폴더를 설정합니다. (자세한 정보는 아래의 섹션을 참조하십시오.)
+</li>
+
+<li>
+<b>적용</b>을 클릭합니다.
+</li>
+
+</ol>
+<div class="section">
+<h4>Time Machine 백업 폴더 관련 정보:</h4>
+<p>Time Machine에서 DiskStation(으)로 데이터를 백업하려면 드롭다운 메뉴에서 공유 폴더를 선택합니다. </p>
+<p><span class="note_head">참고:</span> 다른 서비스에서 사용 중인 공유 폴더는 Time Machine에서 사용할 수 없습니다.</p>
+</div>
+<h3>고급 설정</h3>
+<h4>기본 UNIX 권한 적용:</h4>
+<p>이 옵션을 활성화하면 파일 및 폴더를 업로드하거나 생성할 때 기본 UNIX 권한에 적용됩니다. 적용된 권한은 UNIX command <strong>umask</strong>에 의해 적용된 권한과 동일합니다. 이 옵션을 활성화하면, UNIX 권한은 파일에 대해서는 644이고 폴더에 대해서는 755입니다. 이 옵션을 비활성화하면, UNIX 권한은 파일에 대해서는 666이고 폴더에 대해서는 777입니다. 기본 umask 값은 022입니다.</p>
+<p><span class="note_head">참고: </span>이 옵션을 활성화하면 다른 프로토콜 사이에서 권한 문제가 일관되지 않을 수 있습니다. 일관성을 유지하려면 이 옵션을 비활성화 상태를 유지하는 것이 좋습니다.</p>
+<h4>연결이 끊긴 후 즉시 리소스 해제:</h4>
+<p>이 옵션을 활성화하면 AFP 서버 연결이 예기치 않게 끊길 때 리소스를 즉시 해제합니다. Time Machine을 사용하는 동안 &quot;볼륨이 사용 중&quot; 오류 메시지가 발생하면, 이 옵션을 활성화하십시오.</p>
+<h4>Bonjour 프린터 브로드캐스트 활성화하기:</h4>
+<p>Mac 클라이언트가 DiskStation에 연결된 프린터를 찾고 검색할 수 있게 하려면 <b>Bonjour 프린터 브로드캐스트 활성화</b>를 선택합니다.</p>
+</body>
+</html>

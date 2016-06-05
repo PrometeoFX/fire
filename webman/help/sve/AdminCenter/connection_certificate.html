@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="certificate"></a>Certifikat</h2>
+
+<p>Ett certifikat kan användas för att säkra SSL-tjänster på DiskStation, såsom webb (alla HTTPS-tjänster), e-post eller FTP. Att ha ett certifikat låter användare validera serverns identitet och administrator innan någon konfidentiell information överförs. </p>
+
+<p>Fliken <strong>Certifikat</strong> (finns i <strong>Kontrollpanel</strong> > <strong>Säkerhet</strong> > <strong>Certifikat</strong>) tillhandahåller alternativ för att hantera och se statusen för certifikat på DiskStation och låter dig skapa, importera/exportera eller förnya certifikat. Guiden för att installera certifikat hjälper till att skapa självsignerade certifikat eller ladda ned signeringsförfrågan (CSR) för registrering med certifikatutfärdare (CA).</p>
+
+
+<div class="section">
+<h4>Obs:</h4>
+<p>Certifikatet som konfigureras här kommer automatiskt att användas av OpenVPN Server om VPN Server är installerad.</p>
+</div>
+
+
+<h3>Självsignerade certifikat</h3>
+
+<p>Ett självsignerat certifikat är ett certifikat som har skapats och signerats av samma enhet vars identitet det certifierar (i detta fall DiskStation). Självsignerade certifikat signeras med en privat nyckel som genereras av DiskStation.  Eftersom självsignerade certifikat inte är utfärdade av tredjeparts certifikatutfärdare ger de mindre bevis för serverns identitet och används vanligtvis bara för att säkra kanaler mellan servern och en grupp av kända användare.</p>
+
+
+<h4>Så här gör du för att skapa ett självsignerat certifikat:</h4>
+<ol>
+	<li>Klicka på <b>Skapa certifikat.</b></li>
+	<li>Följ instruktionerna i installationsguiden.</li>
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>Att skapa ett självsignerat certifikat ersätter befintligt certifikat på DiskStation.</p>
+</div>
+
+
+<h3>Signeringsförfrågan för certifikat</h3>
+
+<p>För att kunna ansöka om ett certifikat från en tredjeparts certifikatutfärdare måste du först skapa en signeringsförfrågan (CSR). En signeringsförfrågan är en krypterad textmassa som genererats av DiskStation som innehåller information som kommer att inkluderas i ditt certifikat, såsom ditt domännamn, organisationsnamn, platsangivelse och e-postadress. Installationsguiden kan hjälpa dig att generera signeringsförfrågan för certifikat för att kunna ansöka om ett signerat certifikat för DiskStation.</p>
+
+<p>För att erhålla ett certifikat från en kommersiell eller tredjeparts certifkatutfärdare behöver du bifoga din personliga eller din organisations identitet och bevis på att du är ägare av domännamnet som skrevs i namnfältet för signeringsförfrågan för certifikat.</p>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>En privat nyckel ska också genereras tillsammans med signeringsförfrågan. Certifikatutfärdare behöver inte denna privata nyckel. Vänligen förvara den privata nyckeln för din DiskStation säkert och hemligt.</p>
+</div>
+
+<h4>Skapa en signeringsförfrågan för certifikat:</h4>
+<ol>
+	<li>Klicka på <b>Skapa certifikat.</b></li>
+	<li>Följ installationsguidens instruktioner för att skapa och ladda ned signeringsförfrågan för certifikatet.</li>
+</ol>
+
+<p>När ditt certifikat har blivit utfärdat av certifikatutfärdaren kan det importeras tillsammans med din privata nyckel (se här nedanför för instruktioner).
+
+
+
+<h3>Exportera certifikat</h3>
+
+<p>Befintliga certifikat kan laddas ned för att hanteras och arkiveras. Den exporterade filen innehåller certifikatet, privat nyckel och självsignerat root-certifikat för DiskStation.</p>
+
+<h4>Exportera ett certifikat:</h4>
+<ul>
+<li>Klicka på knappen <b>Exportera certifikat</b>.</li>
+</ul>
+
+
+
+<h3>Importera certifikat</h3>
+
+<p>Detta alternativ låter dig importera certifikat som utfärdats av certifikatutfärdare eller tidigare exporterade certifikat, tillsammans med en privat nyckel.</p>
+
+<h4>Importera ett certifikat:</h4>
+<ul>
+	<li>Klicka på knappen <b>Importera certifikat</b>.</li>
+</ul>
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Mellanliggande certifikat är valfritt för vissa av de certifikat som utfärdas av certifkatutfärdare.</li>
+<li>Certifikat måste vara i formatet X.509 PEM.</li>
+<li>Privata nycklar måste vara i formatet RSA och kan inte vara skyddade med lösenordsfras.</li>
+</ul>
+</div>
+
+
+
+<h3>Förnya certifikat</h3>
+
+<p>När ditt certifikat håller på att upphöra kan det förnyas genom att använda detta alternativ.</p>
+
+<h4>Förnya ett certifikat:</h4>
+<ol>
+	<li>Klicka på <b>Skapa certifikat.</b></li>
+	<li>Välj <b>Förnya certifikat</b> och klicka på <b>Nästa</b></li>
+	<li>En ny privat nyckel och signeringsförfrågan skapas.</li>
+</ol>
+
+
+
+<h3>Signera signeringsförfrågan (CSR)</h3>
+
+<p>Detta alternativ låter dig signera en signeringsförfrågan genom att använda rootcertifikatet för DiskStation.</p>
+
+<h4>Att signera en signeringsförfrågan:</h4>
+<ol>
+	<li>Klicka på <b>Skapa certifikat.</b></li>
+	<li>Klicka på <b>Signera signeringsförfrågan (CSR)</b>.</li>
+	<li>Ladda upp signeringsförfrågan och ange relevant information. </li>
+	<li>Klicka på <b>Nästa</b> så signerar systemet signeringsförfrågan och skapar ett motsvarande certifikat.</li>
+</ol>
+
+
+</body>
+</html>
+

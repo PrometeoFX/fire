@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Terminal</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Terminal</h2>
+
+<p><strong>Denetim Masası</strong> &gt; <strong>Terminal ve SNMP</strong> &gt; <strong>Terminal</strong> &ouml;ğesindeki se&ccedil;eneklerin etkinleştirilmesi, DiskStation aygıtının Telnet ve SSH komut satırı aray&uuml;z hizmetlerini desteklemesine olanak sağlar. SSH şifreleme algoritmasının g&uuml;venlik d&uuml;zeyini de değiştirebilirsiniz.</p>
+
+<h4>Telnet/SSH hizmetini etkinleştirmek i&ccedil;in:</h4>
+<ol>
+<li>İstenilen protokol&uuml;n (SSH veya Telnet) bitişiğindeki kutuyu işaretleyin.</li>
+<li><b>Uygula</b>'ya tıklayın.</li>
+</ol>
+<h4>SSH servis bağlantı noktasını değiştirmek i&ccedil;in:</h4>
+<ol>
+<li><strong>Bağlantı Noktası</strong> &ouml;ğesinde, yeni bir bağlantı noktasını girin.</li>
+<li><b>Uygula</b>'ya tıklayın.</li>
+</ol>
+
+<p>SSH bağlantılarının g&uuml;venliğinin sağlanmasında farklı g&uuml;venlik seviyelerine sahip &ccedil;eşitli şifreleme algoritmaları kullanılır. İhtiya&ccedil;larınızı en iyi şekilde karşılamak i&ccedil;in hangi algoritmaların kullanılacağına karar verebilirsiniz.</p>
+<h4>SSH şifreleme algoritması g&uuml;venlik seviyesini değiştirmek i&ccedil;in:</h4>
+<ol>
+<li><b>Gelişmiş Ayarlar</b>'a tıklayın.</li>
+<li>Şifreleme algoritmaları i&ccedil;in bir g&uuml;venlik seviyesi se&ccedil;in. Hangi algoritmaların kullanılabileceğini tam olarak belirtmek istiyorsanız, &uuml;&ccedil; gruptan se&ccedil;im yapmak &uuml;zere <b>&Ouml;zelleştir</b> &ouml;ğesini se&ccedil;in: Cipher, KEX (Key Exchange) ve MAC (Mesaj Doğrulama Kodu).</li>
+<li><b>Uygula</b>'ya tıklayın.</li>
+</ol>
+<p>Bazı modeller belirli şifreleme algoritmaları i&ccedil;in donanım hızlandırmayı destekler. Şifrelenen Ağ Yedeklemesi ve SFTP hizmetleri dahil olma &uuml;zere SSH ilişkili hizmetlerin aktarım hızlarını iyileştirmek i&ccedil;in <b>Sadece donanım hızlandırmalı şifreler kullan</b> se&ccedil;eneğini işaretleyebilirsiniz. Gelişmiş sayfasında, donanım hızlandırmasını kullanabilen algoritmalar kırmızı renkte g&ouml;sterilmiştir.</p>
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+
+<li>Bazı hizmetler (&ouml;r. ağ yedeklemesi, SFTP) SSH'yi otomatik olarak etkinleştirir ve bağlantı noktası 22'yi a&ccedil;ar. Bu durumda SSH'yi kullanarak DSM'de oturum a&ccedil;mak i&ccedil;in <strong>Denetim Masası</strong> &gt; <strong>Terminal ve SNMP</strong> &gt; <strong>Terminal</strong> &ouml;ğesinde SSH hizmetini etkinleştirmeniz gerekir.</li>
+<li>SSH/Telnet sadece <strong>root</strong> veya <strong>admin</strong> hesapları ile sistemde oturum a&ccedil;mayı destekler.</li>
+<li>Şifre SSH/Telnet ile sistemde oturum a&ccedil;arken boş bırakılamaz.</li>
+<li>SSH hizmeti devre dışı bırakıldığında, halen &ccedil;alışmakta olan her t&uuml;rl&uuml; şifreli ağ yedeklemesi g&ouml;revi dahil olmak &uuml;zere t&uuml;m SSH bağlantıları sonlandırılır. SSH hizmeti devre dışı bırakıldıktan sonra ağ yedeklemesi g&ouml;revlerinin yapılmasını &ouml;neririz.</li>
+<li>DiskStation sunucusunun yanlış manip&uuml;le edilmesi veya değiştirilmesi arızalara veya veri kaybına neden olabilir.</li>
+<li>Daha y&uuml;ksek bir g&uuml;venlik seviyesinin se&ccedil;ilmesi veya sadece donanım hızlandırmalı şifreler kullanılması bazı istemcilerin uyumluluk sorunları nedeniyle bağlanamamasına neden olabilir.</li>
+<li>Se&ccedil;ilen g&uuml;venlik d&uuml;zeyine bağlı olarak, donanım hızlandırmasını destekleyen belirli algoritmalar kullanılamayabilir.</li>
+</ul>
+</div>
+
+</body>
+</html>

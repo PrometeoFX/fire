@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>D&eacute;doublement du cerveau</h2>
+
+<p>Quand un cluster high-availability fonctionne normalement, un seul des serveurs membres devrait assumer le r&ocirc;le de serveur actif. Dans ce cas, le serveur passif d&eacute;tecte la pr&eacute;sence du serveur actif via la connexion HeartBeat et via la connexion des donn&eacute;es.</p>
+
+<p>Si toutes les connexions HeartBeat et les connexions de donn&eacute;es sont perdues, les deux serveurs peuvent tenter d'assumer le r&ocirc;le de serveur actif.  Cette situation est appel&eacute;e erreur de &laquo;&nbsp;d&eacute;doublement du cerveau&nbsp;&raquo;. Dans ce cas, les connexions vers l'adresse IP attribu&eacute;e au cluster high-availability seront redirig&eacute;es vers l'un ou l'autre des deux serveurs, entra&icirc;nant des erreurs de services.</p>
+        
+<h4>Dans le cas o&ugrave; une erreur de d&eacute;doublement du cerveau se produit&nbsp;:</h4>
+	<ol>
+		<li>Les connexions &agrave; l'adresse IP du cluster seront redirig&eacute;es vers l'un ou l'autre des serveurs, entra&icirc;nant des erreurs de service. Vous rencontrerez des difficult&eacute;s de connexion &agrave; l'un ou l'autre des serveurs.</li>
+		<li>Le syst&egrave;me d&eacute;tectera l'erreur de d&eacute;doublement du cerveau et supprimera le cluster high-availability, d&eacute;liant les deux serveurs.</li>
+		<li>Une fois les serveurs retourn&eacute;s &agrave; l'&eacute;tat <b>Autonome</b>, vous pourrez vous connecter &agrave; DiskStation Manager (DSM). &Agrave; ce moment, les donn&eacute;es accumul&eacute;es avant la suppression du cluster high-availability resteront sur les deux serveurs. Apr&egrave;s avoir identifi&eacute; quel serveur contient les donn&eacute;es les plus r&eacute;centes, vous pouvez lier &agrave; nouveau les serveurs pour cr&eacute;er un cluster high-availability.</li>
+	</ol>
+ </body>
+</html>

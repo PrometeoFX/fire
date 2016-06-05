@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<h2><a name="certificate"></a>Tan&uacute;s&iacute;tv&aacute;ny</h2>
+
+<p>Egy tan&uacute;s&iacute;tv&aacute;ny haszn&aacute;lhat&oacute; a(z) DiskStation SSL szolg&aacute;ltat&aacute;sainak, p&eacute;ld&aacute;ul a web (valamennyi HTTPS szolg&aacute;ltat&aacute;s), mail vagy FTP biztos&iacute;t&aacute;s&aacute;hoz. Ha a felhaszn&aacute;l&oacute;k tan&uacute;s&iacute;tv&aacute;nnyal rendelkeznek, ez lehetőv&eacute; teszi a sz&aacute;mukra, hogy b&aacute;rmely bizalmas adat elk&uuml;ld&eacute;se előtt ellenőrizz&eacute;k a kiszolg&aacute;l&oacute; &eacute;s az adminisztr&aacute;tor szem&eacute;lyazonoss&aacute;g&aacute;t. </p>
+
+<p>A (<strong>Vez&eacute;rlőpult</strong> &gt; <strong>Biztons&aacute;g</strong> &gt; <strong>Tan&uacute;s&iacute;tv&aacute;ny</strong> men&uuml;pontban tal&aacute;lhat&oacute;) <strong>Tan&uacute;s&iacute;tv&aacute;ny</strong> f&uuml;l lehetős&eacute;geket biztos&iacute;t a(z) DiskStation tan&uacute;s&iacute;tv&aacute;nyok kezel&eacute;s&eacute;hez &eacute;s &aacute;llapotuk megtekint&eacute;s&eacute;hez, lehetőv&eacute; t&eacute;ve tan&uacute;s&iacute;tv&aacute;nyok l&eacute;trehoz&aacute;s&aacute;t, import&aacute;l&aacute;s&aacute;t/export&aacute;l&aacute;s&aacute;t, illetve meg&uacute;j&iacute;t&aacute;s&aacute;t. A tan&uacute;s&iacute;tv&aacute;nybe&aacute;ll&iacute;t&oacute; var&aacute;zsl&oacute; seg&iacute;t saj&aacute;t al&aacute;&iacute;r&aacute;s&uacute; tan&uacute;s&iacute;tv&aacute;nyok l&eacute;trehoz&aacute;s&aacute;ban, illetve tan&uacute;s&iacute;tv&aacute;nyal&aacute;&iacute;r&oacute; k&eacute;relmek (CSR) let&ouml;lt&eacute;s&eacute;ben a tan&uacute;s&iacute;tv&aacute;nyhat&oacute;s&aacute;gokn&aacute;l (CA) t&ouml;rt&eacute;nő regisztr&aacute;ci&oacute; c&eacute;lj&aacute;b&oacute;l.</p>
+
+
+<div class="section">
+<h4>Megjegyz&eacute;s:</h4>
+<p>Az ebben a men&uuml;pontban meghat&aacute;rozott tan&uacute;s&iacute;tv&aacute;nyt automatikusan ig&eacute;nybe veszi az OpenVPN kiszolg&aacute;l&oacute;, VPN Server telep&iacute;tett &aacute;llapota eset&eacute;n.</p>
+</div>
+
+
+<h3>Saj&aacute;t al&aacute;&iacute;r&aacute;s&uacute; tan&uacute;s&iacute;tv&aacute;nyok</h3>
+
+<p>A saj&aacute;t al&aacute;&iacute;r&aacute;s&uacute; tan&uacute;s&iacute;tv&aacute;ny olyan tan&uacute;s&iacute;tv&aacute;nyra utal, amit ugyanaz a jogalany hozott l&eacute;tre &eacute;s &iacute;rt al&aacute;, akinek a szem&eacute;lyazonoss&aacute;g&aacute;t az tan&uacute;s&iacute;tja (jelen esetben a(z) DiskStation). A saj&aacute;t al&aacute;&iacute;r&aacute;s&uacute; tan&uacute;s&iacute;tv&aacute;nyok al&aacute;&iacute;r&aacute;sa a(z) DiskStation &aacute;ltal gener&aacute;lt mag&aacute;n kulccsal t&ouml;rt&eacute;nik. Mivel a saj&aacute;t al&aacute;&iacute;r&aacute;s&uacute; tan&uacute;s&iacute;tv&aacute;nyokat nem harmadik f&eacute;l tan&uacute;s&iacute;tv&aacute;nyhat&oacute;s&aacute;gok bocs&aacute;tj&aacute;k ki, kev&eacute;sb&eacute; bizony&iacute;tj&aacute;k a kiszolg&aacute;l&oacute; szem&eacute;lyazonoss&aacute;g&aacute;t, &eacute;s rendszerint csak a kiszolg&aacute;l&oacute; &eacute;s ismert felhaszn&aacute;l&oacute;k egy csoportja k&ouml;zti csatorn&aacute;k biztos&iacute;t&aacute;s&aacute;ra haszn&aacute;latosak.</p>
+
+
+<h4>Saj&aacute;t al&aacute;&iacute;r&aacute;s&uacute; tan&uacute;s&iacute;tv&aacute;ny l&eacute;trehoz&aacute;sa:</h4>
+<ol>
+	<li>Kattintson a <b>Tan&uacute;s&iacute;tv&aacute;ny l&eacute;trehoz&aacute;sa</b> gombra.</li>
+	<li>K&ouml;vesse a be&aacute;ll&iacute;t&oacute; var&aacute;zsl&oacute; utas&iacute;t&aacute;sait.</li>
+</ol>
+
+<div class="section">
+<h4>Megjegyz&eacute;s:</h4>
+<p>Egy saj&aacute;t al&aacute;&iacute;r&aacute;s&uacute; tan&uacute;s&iacute;tv&aacute;ny l&eacute;trehoz&aacute;sa felv&aacute;ltja a(z) DiskStation l&eacute;tező tan&uacute;s&iacute;tv&aacute;ny&aacute;t.</p>
+</div>
+
+
+<h3>Tan&uacute;s&iacute;tv&aacute;nyal&aacute;&iacute;r&oacute; k&eacute;relmek</h3>
+
+<p>Ha egy harmadik f&eacute;l tan&uacute;s&iacute;tv&aacute;nyhat&oacute;s&aacute;gt&oacute;l szeretne tan&uacute;s&iacute;tv&aacute;nyt k&eacute;rni, akkor elősz&ouml;r l&eacute;tre kell hoznia egy tan&uacute;s&iacute;tv&aacute;nyal&aacute;&iacute;r&oacute; k&eacute;relmet (CSR). A tan&uacute;s&iacute;tv&aacute;nyal&aacute;&iacute;r&oacute; k&eacute;relem egy, a(z) DiskStation &aacute;ltal gener&aacute;lt olyan titkos&iacute;tott sz&ouml;vegtest, ami tartalmazza a tan&uacute;s&iacute;tv&aacute;nyba belefoglaland&oacute; inform&aacute;ci&oacute;kat, p&eacute;ld&aacute;ul a tartom&aacute;nynevet, a szervezet nev&eacute;t, a c&iacute;met &eacute;s az e-mail c&iacute;met. A be&aacute;ll&iacute;t&oacute; var&aacute;zsl&oacute; seg&iacute;t tan&uacute;s&iacute;tv&aacute;nyal&aacute;&iacute;r&oacute; k&eacute;relmet gener&aacute;lni, hogy &iacute;gy al&aacute;&iacute;rt tan&uacute;s&iacute;tv&aacute;nyt k&eacute;rhessen a(z) DiskStation sz&aacute;m&aacute;ra.</p>
+
+<p>Ha kereskedelmi vagy harmadik f&eacute;l tan&uacute;s&iacute;tv&aacute;nyhat&oacute;s&aacute;gt&oacute;l szeretne tan&uacute;s&iacute;tv&aacute;nyt k&eacute;rni, akkor meg kell adnia szem&eacute;lyes vagy szervezeti adatait, &eacute;s bizony&iacute;tania kell, hogy &ouml;n annak a tartom&aacute;nyn&eacute;vnek a tulajdonosa, amelyet a tan&uacute;s&iacute;tv&aacute;nyal&aacute;&iacute;r&oacute; k&eacute;relem n&eacute;v mezőj&eacute;ben megadott.</p>
+
+<div class="section">
+<h4>Megjegyz&eacute;s:</h4>
+<p>A tan&uacute;s&iacute;tv&aacute;nyal&aacute;&iacute;r&oacute; k&eacute;relem mell&eacute; egy mag&aacute;n kulcs is gener&aacute;l&aacute;sra ker&uuml;l. A tan&uacute;s&iacute;tv&aacute;nyhat&oacute;s&aacute;goknak nincs sz&uuml;ks&eacute;g&uuml;k erre a mag&aacute;n kulcsra. Tartsa biztons&aacute;gban &eacute;s titokban a(z) DiskStation eszk&ouml;zh&ouml;z tartoz&oacute; mag&aacute;n kulcsot.</p>
+</div>
+
+<h4>Tan&uacute;s&iacute;tv&aacute;nyal&aacute;&iacute;r&oacute; k&eacute;relem l&eacute;trehoz&aacute;sa:</h4>
+<ol>
+	<li>Kattintson a <b>Tan&uacute;s&iacute;tv&aacute;ny l&eacute;trehoz&aacute;sa</b> gombra.</li>
+	<li>A tan&uacute;s&iacute;tv&aacute;nyal&aacute;&iacute;r&oacute; k&eacute;relem l&eacute;trehoz&aacute;s&aacute;hoz &eacute;s let&ouml;lt&eacute;s&eacute;hez k&ouml;vesse a be&aacute;ll&iacute;t&oacute; var&aacute;zsl&oacute; utas&iacute;t&aacute;sait.</li>
+</ol>
+
+<p>Ha m&aacute;r egyszer a tan&uacute;s&iacute;tv&aacute;nyhat&oacute;s&aacute;g kibocs&aacute;totta a tan&uacute;s&iacute;tv&aacute;nyt, az a mag&aacute;n kulcs&aacute;val egy&uuml;tt import&aacute;lhat&oacute; (l&aacute;sd az al&aacute;bbi utas&iacute;t&aacute;sokat).<h3>Tan&uacute;s&iacute;tv&aacute;nyok export&aacute;l&aacute;sa</h3>
+
+<p>A l&eacute;tező tan&uacute;s&iacute;tv&aacute;nyok feldolgoz&aacute;s vagy archiv&aacute;l&aacute;s c&eacute;lj&aacute;b&oacute;l let&ouml;lthetők. Az export&aacute;lt f&aacute;jl tartalmazza a tan&uacute;s&iacute;tv&aacute;nyt, a mag&aacute;n kulcsot, valamint a(z) DiskStation saj&aacute;t al&aacute;&iacute;r&aacute;s&uacute; gy&ouml;k&eacute;rtan&uacute;s&iacute;tv&aacute;ny&aacute;t.</p>
+
+<h4>Tan&uacute;s&iacute;tv&aacute;ny export&aacute;l&aacute;sa:</h4>
+<ul>
+<li>Kattintson a <b>Tan&uacute;s&iacute;tv&aacute;ny export&aacute;l&aacute;sa</b> gombra.</li>
+</ul>
+
+
+
+<h3>Tan&uacute;s&iacute;tv&aacute;nyok import&aacute;l&aacute;sa</h3>
+
+<p>Ez a lehetős&eacute;g lehetőv&eacute; teszi az &ouml;n sz&aacute;m&aacute;ra a tan&uacute;s&iacute;tv&aacute;nyhat&oacute;s&aacute;gok &aacute;ltal kibocs&aacute;tott tan&uacute;s&iacute;tv&aacute;nyok, illetve az előzőleg export&aacute;lt tan&uacute;s&iacute;tv&aacute;nyok mag&aacute;n kulccsal egy&uuml;tt t&ouml;rt&eacute;nő import&aacute;l&aacute;s&aacute;t.</p>
+
+<h4>Tan&uacute;s&iacute;tv&aacute;ny import&aacute;l&aacute;sa:</h4>
+<ul>
+	<li>Kattintson a <b>Tan&uacute;s&iacute;tv&aacute;ny import&aacute;l&aacute;sa</b> gombra.</li>
+</ul>
+
+<div class="section">
+<h4>Megjegyz&eacute;s:</h4>
+<ul>
+<li>Egyes tan&uacute;s&iacute;tv&aacute;nyhat&oacute;s&aacute;g &aacute;ltal kibocs&aacute;tott tan&uacute;s&iacute;tv&aacute;nyokhoz k&ouml;zbenső tan&uacute;s&iacute;tv&aacute;nyok k&eacute;rhetők.</li>
+<li>A tan&uacute;s&iacute;tv&aacute;nyoknak X.509 PEM form&aacute;tummal kell rendelkezni&uuml;k.</li>
+<li>A priv&aacute;t kulcsoknak RSA form&aacute;tummal kell rendelkezni&uuml;k, &eacute;s nem lehetnek jelsz&oacute;val v&eacute;dettek.</li>
+</ul>
+</div>
+
+
+
+<h3>Tan&uacute;s&iacute;tv&aacute;nyok meg&uacute;j&iacute;t&aacute;sa</h3>
+
+<p>Amikor a tan&uacute;s&iacute;tv&aacute;nya lej&aacute;r&oacute; f&eacute;lben van, ennek a lehetős&eacute;gnek a haszn&aacute;lat&aacute;val meg&uacute;j&iacute;that&oacute;.</p>
+
+<h4>Tan&uacute;s&iacute;tv&aacute;ny meg&uacute;j&iacute;t&aacute;sa:</h4>
+<ol>
+	<li>Kattintson a <b>Tan&uacute;s&iacute;tv&aacute;ny l&eacute;trehoz&aacute;sa</b> gombra.</li>
+	<li>V&aacute;lassza a <b>Tan&uacute;s&iacute;tv&aacute;ny meg&uacute;j&iacute;t&aacute;sa</b> lehetős&eacute;get, majd kattintson a <b>Tov&aacute;bb</b> gombra</li>
+	<li>&Uacute;j mag&aacute;n kulcs &eacute;s tan&uacute;s&iacute;tv&aacute;nyal&aacute;&iacute;r&oacute; k&eacute;relem ker&uuml;l l&eacute;trehoz&aacute;sra.</li>
+</ol>
+
+
+
+<h3>Tan&uacute;s&iacute;tv&aacute;nyal&aacute;&iacute;r&oacute; k&eacute;relem (CSR) al&aacute;&iacute;r&aacute;sa</h3>
+
+<p>Ez az opci&oacute; lehetőv&eacute; teszi, hogy &ouml;n al&aacute;&iacute;rjon egy tan&uacute;s&iacute;tv&aacute;nyal&aacute;&iacute;r&oacute; k&eacute;relmet a(z) DiskStation gy&ouml;k&eacute;rtan&uacute;s&iacute;tv&aacute;ny&aacute;nak felhaszn&aacute;l&aacute;s&aacute;val.</p>
+
+<h4>Tan&uacute;s&iacute;tv&aacute;nyal&aacute;&iacute;r&oacute; k&eacute;relem al&aacute;&iacute;r&aacute;sa:</h4>
+<ol>
+	<li>Kattintson a <b>Tan&uacute;s&iacute;tv&aacute;ny l&eacute;trehoz&aacute;sa</b> gombra.</li>
+	<li>Kattintson a <b>Tan&uacute;s&iacute;tv&aacute;nyal&aacute;&iacute;r&oacute; k&eacute;relem (CSR) al&aacute;&iacute;r&aacute;sa</b> lehetős&eacute;gre.</li>
+	<li>T&ouml;ltse fel a tan&uacute;s&iacute;tv&aacute;nyal&aacute;&iacute;r&oacute; k&eacute;relmet, &eacute;s adja meg a sz&uuml;ks&eacute;ges inform&aacute;ci&oacute;kat. </li>
+	<li>Kattintson a <b>Tov&aacute;bb</b> lehetős&eacute;gre, &eacute;s a rendszer al&aacute;&iacute;rja a tan&uacute;s&iacute;tv&aacute;ny-k&eacute;relmet &eacute;s l&eacute;trehoz egy megfelelő tan&uacute;s&iacute;tv&aacute;nyt.</li>
+</ol>
+
+
+</body>
+</html>
+

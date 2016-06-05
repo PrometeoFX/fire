@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>B&ouml;l&uuml;nm&uuml;ş Beyin</h2>
+
+<p>Bir high-availability k&uuml;mesi normal &ccedil;alışırken, &uuml;ye sunuculardan sadece bir tanesi aktif sunucu g&ouml;revini &uuml;stlenebilir. Bu durumda, pasif sunucu aktif sunucunun varlığını hem Heartbeat bağlantısı hem de veri bağlantısı yoluyla saptar.</p>
+
+<p>T&uuml;m Heartbeat ve veri bağlantıları kaybolursa, her iki sunucu aktif sunucunun g&ouml;revini &uuml;stlenmek isteyebilir. Bu duruma &quot;b&ouml;l&uuml;nm&uuml;ş beyin&quot; hatası adı verilir. Bu durumda, high-availability k&uuml;mesine atanmış IP adresine bağlantılar iki sunucudan bir tanesine yeniden y&ouml;nlendirilerek servis hatalarına neden olur.</p>
+        
+<h4>B&ouml;l&uuml;nm&uuml;ş beyin durumunun meydana gelmesi durumunda:</h4>
+	<ol>
+		<li>K&uuml;me IP adresine bağlantılar iki sunucudan bir tanesine yeniden y&ouml;nlendirilir ve bu da servis hatalarına neden olur. Her iki sunucuya da bağlantı g&uuml;&ccedil;l&uuml;ğ&uuml; yaşarsınız.</li>
+		<li>Sistem b&ouml;l&uuml;nm&uuml;ş beyin hatasını saptar ve high-availability k&uuml;mesini kaldırarak her iki sunucunun bağlantısını keser.</li>
+		<li>Her iki sunucu <b>Tek başına</b> durumuna geri d&ouml;nd&uuml;ğ&uuml;nde, DiskStation Manager'da (DSM) oturum a&ccedil;abilirsiniz. Bu sırada, high-availability k&uuml;mesinin kaldırılması &ouml;ncesinde biriktirilen veri her iki sunucuda kalır. Hangi sunucunun en g&uuml;ncel verileri i&ccedil;erdiği belirlendikten sonra, tekrar bir high-availability k&uuml;mesini oluşturmak i&ccedil;in sunucuları yeniden birleştirebilirsiniz.</li>
+	</ol>
+ </body>
+</html>

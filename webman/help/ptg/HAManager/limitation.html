@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Limita&ccedil;&otilde;es e Requisitos do Sistema - Ajuda do Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article explains the limitations of the Synology High Availability package.">
+
+
+ </head>
+ <body>
+ 
+ 
+<h1>Limita&ccedil;&otilde;es e Requisitos do Sistema</h1>
+
+ <p>A implementa&ccedil;&atilde;o do Synology High Availability requer dois servidores Synology id&ecirc;nticos para funcionarem como servidor ativo e passivo. Antes que os dois servidores sejam combinados num cluster de high-availability, o Assistente de Synology High Availability verificar&aacute; as seguintes limita&ccedil;&otilde;es de hardware e de software para garantir a cria&ccedil;&atilde;o de um cluster de high-availability.</p>
+ 
+  
+ <h3>Requisitos do Sistema</h3>
+ 
+  <p>Tenha em aten&ccedil;&atilde;o as seguintes diretrizes sobre software e hardware:</p>
+  <ul>
+   <li><b>Servidor Synology:</b> Os servidores activo e passivo devem ser modelos id&ecirc;nticos e suportarem o Synology High Availability.</li>
+   <li><b>Vers&atilde;o do DSM:</b> A mesma vers&atilde;o do DSM deve ser instalada em ambos os servidores activo e passivo. </li>
+   <li><b>Vers&atilde;o do Pacote:</b> A mesma vers&atilde;o de Synology High Availability deve ser instalada em ambos os servidores Synology.</li>
+  </ul>
+
+  
+ <h3>Volume e Unidade</h3>
+ 
+  <p>Tenha em aten&ccedil;&atilde;o as seguintes diretrizes sobre os espa&ccedil;os de armazenamento (por exemplo, volumes, Grupos de Discos, RAID Groups, etc.) e a gest&atilde;o da unidade de disco r&iacute;gido.</p>
+  <ul>
+   <li><b>Capacidade da unidade</b> Para acomodar a duplica&ccedil;&atilde;o de dados, a capacidade da unidade do servidor passivo deve ser igual ou superior &agrave; capacidade do servidor ativo. &Eacute; fortemente recomend&aacute;vel que a capacidade da unidade de ambos os servidores seja completamente id&ecirc;ntica para reduzir o risco de inconsist&ecirc;ncias. </li>
+   <li><b>N&uacute;mero e Tipo de Unidades:</b> Os servidores ativo e passivo devem ter o mesmo n&uacute;mero de unidades de discos r&iacute;gidos. Al&eacute;m, a posi&ccedil;&atilde;o da unidade deve corresponder em ambos os servidores e os tipos de unidades (por exemplo SSD/HDD, SAS/SATA e as especifica&ccedil;&otilde;es (por exemplo tamanho do sector de 4K ou 512 byte) em ambos os servidores devem ser id&ecirc;nticas. Tenha em aten&ccedil;&atilde;o que os dispositivos externos, tais como as unidades de discos r&iacute;gidos USB, n&atilde;o estar&atilde;o inclu&iacute;dos durante a contagem do n&uacute;mero de discos.</li>
+   <li><b>Formato SHR N&atilde;o Suportado:</b> Os volumes do formato SHR n&atilde;o s&atilde;o suportados. Certifique-se de que o servidor Synology, que ser&aacute; o servidor ativo, n&atilde;o cont&eacute;m volumes SHR. </li>
+  </ul>
+  
+  
+  <h3>Ambiente de Rede</h3>
+  <p>Tenha em aten&ccedil;&atilde;o as seguintes diretrizes sobre defini&ccedil;&otilde;es de rede quando tentar formar um cluster de high-availability.</p>
+  <ul>
+    <li><b>Defini&ccedil;&otilde;es de Rede:</b> Os dois servidores t&ecirc;m de ter endere&ccedil;os IP est&aacute;ticos pertencentes &agrave; mesma sub-rede.</li>
+    <li><b>N&uacute;mero de Portas LAN:</b> Ambos os servidores devem ter o mesmo n&uacute;mero de portas LAN. Se o seu Synology NAS estiver equipado com interfaces de placa de rede adicionais, estas placas de rede tamb&eacute;m ser&atilde;o consideradas portas LAN adicionais. </li>
+    <li><b>Restri&ccedil;&otilde;es de Liga&ccedil;&atilde;o:</b> Os servidores n&atilde;o podem estabelecer liga&ccedil;&atilde;o &agrave; rede atrav&eacute;s de um servidor proxy, DHCP, IPv6, PPPoE e Wi-Fi. Certifique-se de que estas fun&ccedil;&otilde;es est&atilde;o desativadas antes de tentar formar um cluster de high-availability.</li>
+    <li><strong>Nenhum servi&ccedil;o DHCP:</strong> Os servidores n&atilde;o podem utilizar as op&ccedil;&otilde;es de servidor DHCP incorporadas quando estiverem combinados num cluster.</li>
+   <li><strong>Defini&ccedil;&otilde;es Link Aggregation:</strong> Ambos os servidores devem ter as mesmas defini&ccedil;&otilde;es link aggregation para a rede de dados e liga&ccedil;&atilde;o heartbeat. Assim que o cluster high-availability for criado, as defini&ccedil;&otilde;es link aggregation n&atilde;o podem ser modificadas.</li>
+
+  </ul>
+  <div class="section">
+    <h4>Nota:</h4>
+    <ul>
+      <li>O servi&ccedil;o NTP e SSH ser&atilde;o automaticamente ativados quando o servidor ativo do cluster de high-availability for criado.</li>
+    </ul>
+  </div>
+  <h3>Limita&ccedil;&otilde;es do Gestor de Armazenamento</h3>
+  <p>Assim que um cluster de high-availability &eacute; formado, a op&ccedil;&atilde;o para alterar o tipo RAID j&aacute; n&atilde;o estar&aacute; dispon&iacute;vel no Gestor de Armazenamento. No entanto, as seguintes op&ccedil;&otilde;es estar&atilde;o dispon&iacute;veis:
+<ul>
+<li>Expandir os espa&ccedil;os de armazenamento (por exemplo, volumes, iSCSI LUNs de N&iacute;vel de Bloqueio, Grupos de Discos, RAID Groups, etc).</li>
+    <li>Criar, eliminar ou reparar volumes, iSCSI LUN, caches SSD s&oacute; de leitura e de leitura e escrita.</li>
+    <li>Alterar o tamanho e a localiza&ccedil;&atilde;o de iSCSI LUN (N&iacute;vel de Ficheiros).</li>
+    <li>Alterar o alvo de iSCSI LUN.   </li>
+  </ul>
+
+  <div class="section">
+    <h4>Nota:</h4>
+    <ul>
+      <li>N&atilde;o altere a posi&ccedil;&atilde;o da unidade uma vez criado o high-availability cluster; de contr&aacute;rio, o espa&ccedil;o de armazenamento estar&aacute; em falta.</li>
+    </ul>
+  </div>
+
+ 
+<h3>Limita&ccedil;&otilde;es de Pacote e Software</h3> 
+
+<p>Ap&oacute;s a forma&ccedil;&atilde;o do cluster de high-availability, os seguintes pacotes e funcionalidades n&atilde;o ser&atilde;o suportados:</p>
+	<ul>
+
+    <li>Funcionalidade Cluster Escal&aacute;vel do CIFS no CMS</li>
+    <li>A funcionalidade para reiniciar/encerrar o cluster de high-availability no CMS</li>
+    </ul>
+
+    
+<h3>Adicionar Unidades de Expans&atilde;o</h3>
+  <p>Quando criar um cluster de high-availability, pode adicionar unidades de expans&atilde;o &agrave; configura&ccedil;&atilde;o do seu cluster de high-availability existente para expandir a capacidade de armazenamento. Tal como acontece com os outros requisitos de hardware, as unidades de expans&atilde;o devem ser id&ecirc;nticas para os servidores ativo e passivo. Para evitar erros de inconsist&ecirc;ncia, siga as instru&ccedil;&otilde;es abaixo quando adicionar qualquer unidade de expans&atilde;o.</p>
+  
+  <h4>Para adicionar unidades de expans&atilde;o:</h4>
+   <ol>
+    <li>Adicione s&oacute; unidades de expans&atilde;o e discos r&iacute;gidos id&ecirc;nticos aos servidores ativo e passivo. Como indicado em cima, o hardware dos servidores ativo e passivo deve ser id&ecirc;ntico, incluindo o modelo de hardware, tipos e tamanho e posi&ccedil;&atilde;o dos discos r&iacute;gidos.</li>
+    <li>Certifique-se de que elimina todos os dados e volumes existentes nos discos r&iacute;gidos das unidades de expans&atilde;o.</li>
+    <li>Ligue as unidades de expans&atilde;o aos servidores ativo e passivo quando ambos os servidores forem ligados e estiverem a funcionar.</li>
+    <li>Crie um novo espa&ccedil;o de armazenamento (por exemplo, volumes, Grupos de Discos, RAID Groups, etc.) na unidade de expans&atilde;o antes de desligar qualquer um dos servidores.</li>
+   </ol>
+<div class="section">
+<h4>Notas:</h4>
+<p>Para obter as informa&ccedil;&otilde;es b&aacute;sicas sobre a instala&ccedil;&atilde;o da unidade de expans&atilde;o, n&atilde;o se esque&ccedil;a de consultar o guia do utilizador da sua unidade de expans&atilde;o.</p>
+</div>
+
+   
+ </body>
+</html>

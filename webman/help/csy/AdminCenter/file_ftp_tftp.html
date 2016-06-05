@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TFTP/PXE</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>TFTP/PXE</h2>
+
+<p>Možnosti v části <strong>Ovládací panel</strong> > <strong>Souborové služby</strong> > <strong>TFTP/PXE</strong> umožňují konfiguraci nastavení TFTP a PXE.</p>
+
+<h3>TFTP</h3>
+<p>Trivial File Transfer Protocol (TFTP) je jednoduchý protokol pro přenos souborů, který se používá převážně pro přenos konfiguračních a spouštěcích souborů, při kterém není vyžadováno ověření. Povolením služby TFTP umožníte zařízení DiskStation přenos spouštěcích zavaděčů na klientská zařízení.</p>
+<h4>Postup změny nastavení TFTP:</h4>
+<ol>
+<li>Zaškrtněte políčko <strong>Povolit službu TFTP</strong>.</li>
+<li>V poli <strong>Kořenová složka TFTP</strong> zadejte, ke kterým složkám zařízení DiskStation budou mít klientská zařízení TFTP přístup.</li>
+<li>Kliknutím na tlačítko <strong>Rozšířená nastavení</strong> zobrazíte a provedete změny následujících nastavení:</li>
+<ul>
+<li><strong>Povolit protokol přenosu souborů TFTP:</strong> Díky této možnosti budete mít přehled o datech přenesených přes protokol TFTP.</li>
+<li><strong>Oprávnění klientů FTP:</strong> Vyberte pro klientská zařízení TFTP oprávnění ke čtení a zápisu. Pokud vyberete možnost <strong>Jen pro čtení</strong>, mohou klientská zařízení TFTP pouze zobrazovat obsah kořenové složky. Pokud vyberete možnost <strong>Zapisovatelné</strong>, mohou klientská zařízení TFTP provádět změny obsahu kořenové složky.</li>
+<li><strong>Povolená klientská zařízení:</strong> Zadejte, která klientská zařízení se mohou připojit prostřednictvím protokolu TFTP. Pomocí možnosti <strong>Všechna připojení</strong> můžete povolit připojení pro všechna klientská zařízení; zadáním konkrétního rozsahu IP adres můžete omezit počet klientských zařízení, kterým bude připojení povoleno.</li>
+</ul>
+<li>Změny nastavení uložíte kliknutím na možnost <strong>Použít</strong>.</li>
+</ol>
+
+
+<h3>Nastavení aplikace DHCP Service pro protokol PXE pomocí zařízení DiskStation</h3>
+<p>Kromě protokolu TFTP může zařízení DiskStation zajišťovat také službu DHCP. Díky tomu lze vytvořit kompletní nastavení PXE. Pre-Boot Execution Environment (PXE) je síťové prostředí, které umožňuje klientským zařízením spouštění pomocí síťového prostředí, a nikoli zařízení pro ukládání dat (např. pevného disku). Při implementaci služby PXE lze na zařízení DiskStation uložit spouštěcí zavaděč. Klientská zařízení lze pak spouštět prostřednictvím sítě a pomocí tohoto spouštěcího zavaděče.</p>
+
+<p>Aby zařízení DiskStation mohlo zajišťovat služby DHCP, ověřte, zda jste nainstalovali balíček DHCP Server od společnosti Synology.</p>
+
+<h4>Postup nastavení služby DHCP pro protokol PXE:</h4>
+<ol>
+<li>Zaškrtněte políčko <strong>Nastavit na tomto serveru službu DHCP pro protokol PXE</strong>. Pokud není na zařízení DiskStation nainstalován balíček DHCP Server, budete vyzváni k instalaci tohoto balíčku.</li>
+<li>Z kořenové složky TFTP vyberte soubor spouštěcího zavaděče a zadejte další nastavení související se službou DHCP.</li>
+<li>Nastavení uložíte kliknutím na možnost <strong>Použít</strong>.</li>
+</ol>
+</body>
+</html>

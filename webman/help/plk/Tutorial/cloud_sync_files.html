@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Pierwsze kroki z&nbsp;aplikacją Cloud Station</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Synchronizacja plik&oacute;w między serwerem Synology NAS a&nbsp;komputerem za pomocą aplikacji Cloud Station</h1>
+<div class="tutorials_content">
+
+<img src="../../images/BuildCloud/1x/cloud_sync_files/02_1_build_your_private_cloud_CloudStation.png"/>
+
+<h2>Om&oacute;wienie</h2>
+<p>Cloud Station dla serwer&oacute;w Synology NAS jest aplikacją przeznaczoną do synchronizacji plik&oacute;w, kt&oacute;ra umożliwia synchronizację plik&oacute;w przechowywanych na serwerze Synology NAS z&nbsp;innymi urządzeniami, takimi jak komputery lub urządzenia przenośne (za pomocą aplikacji DS cloud). Po zainstalowaniu aplikacji Cloud Station na zar&oacute;wno serwerze Synology NAS, jak i&nbsp;komputerze, pliki przechowywane w&nbsp;określonym folderze komputera będą automatycznie synchronizowane z&nbsp;serwerem Synology NAS.</p>
+
+<iframe width="640" height="360" src="//www.youtube.com/embed/kZX8XK9Wy2Y" frameborder="0" allowfullscreen></iframe>
+
+<h3 class="list_head">1. Instalowanie aplikacji Cloud Station</h3>
+<ol>
+<li>Przejdź do <b>Centrum pakiet&oacute;w</b>, znajdź pakiet <b>Cloud Station</b>, a&nbsp;następnie kliknij przycisk <strong>Instaluj</strong>.</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/1.png" />
+</ol>
+
+<h3 class="list_head">2. Włączanie aplikacji Cloud Station</h3>
+<ol>
+<li>Uruchom aplikację <b>Cloud Station</b>.
+
+<li>Jeżeli jeszcze nie została włączona funkcja folder&oacute;w domowych użytkownik&oacute;w, pojawi się odpowiedni monit. Kliknij przycisk <b>OK</b>.</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/01.png" />
+<li>Nastąpi przekierowanie do strony Ustawienia użytkownika. Zaznacz pole wyboru Włącz foldery homes użytkownik&oacute;w i&nbsp;kliknij przycisk <b>Zastosuj</b>.</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/02.png" />
+<li>Po powrocie do <b>Cloud Station</b> zostanie wyświetlony monit o jej włączenie. Kliknij przycisk <b>Tak</b>.</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/03.png" />
+<li>Przejdź do strony <b>Uprawnienia</b> i określ, kt&oacute;rzy użytkownicy mogą korzystać z&nbsp;aplikacji Cloud Station. Kliknij przycisk <b>Zapisz</b>.</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/04.png" />
+</ol>
+
+<h3 class="list_head">3. Instalowanie klienta i&nbsp;jego włączanie</h3>
+<ol>
+<li>Wybierz pozycje <b>Cloud Station</b> &gt; <b>Przegląd</b>, a następnie kliknij przycisk <b>Komputery</b>.</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/05.png" />
+<li>Kliknij przycisk, aby pobrać aplikację Cloud Station przeznaczoną do posiadanego systemu operacyjnego. (Aplikację Cloud Station można także pobrać z <a href="https://www.synology.com/en-us/support/download" target="_blank">Centrum pobierania Synology</a>).</li>
+<li>Na komputerze uruchom instalator i postępuj zgodnie z instrukcjami wyświetlanymi na ekranie.</li>
+<li>Po instalacji uruchom aplikację <strong>Cloud Station</strong> na komputerze. Kliknij przycisk <strong>Rozpocznij teraz</strong>.</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/06.png" />
+<li>Wprowadź adres serwera Synology NAS z&nbsp;uruchomioną aplikacją Cloud Station (lub identyfikator QuickConnect ID), nazwę użytkownika i hasło. Można kliknąć ikonę wyszukiwania po prawej stronie, aby wyszukać adresy IP w&nbsp;sieci lokalnej. Kliknij przycisk <strong>Dalej</strong>.</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/07.png" />
+<li>Określ spos&oacute;b konfiguracji zadania (w&nbsp;tym przykładzie zostanie wybrana opcja <strong>Szybka konfiguracja</strong>), a&nbsp;następnie kliknij przycisk <strong>Dalej</strong>. </li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/08.png" />
+<li>Kliknij przycisk <strong>Zakończ</strong>, aby zakończyć konfigurację folderu Cloud Station.</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/09.png" />
+<li>Kliknij przycisk <strong>Otw&oacute;rz teraz</strong>, aby otworzyć folder Cloud Station.</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/10.png" />
+<li>Ikonę aplikacji Cloud Station można znaleźć na pasku zadań. </li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/14.png" />
+<li>Kliknij dwukrotnie ikonę aplikacji Cloud Station, aby otworzyć menu paska zadań. W&nbsp;menu paska zadań wyświetlany jest postęp synchronizacji i&nbsp;stan plik&oacute;w. Kliknij polecenie <strong>Gł&oacute;wna aplikacja</strong>, aby uruchomić aplikację Cloud Station. </li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/15.png" />
+<li>Po uruchomieniu zostaną wyświetlone porady dotyczące korzystania z&nbsp;aplikacji Cloud Station. Kliknij strzałkę w&nbsp;prawo, aby wyświetlić następną poradę, lub kliknij polecenie <strong>Przejdź do samouczk&oacute;w online</strong>, aby uzyskać więcej informacji. Aby wyłączyć porady, zaznacz pole wyboru <strong>Nie pokazuj tego ponownie</strong>.</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/16.png" />
+<li>Można przystąpić do zarządzania zadaniami synchronizacji w&nbsp;aplikacji Cloud Station. </li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/17.png" />
+</ol>
+
+<h3 class="list_head">4. Synchronizowanie danych z&nbsp;urządzeniami przenośnymi</h3>
+<p>Aplikacja DS cloud jest dostępna bezpłatnie w sklepach <a href="https://itunes.apple.com/us/app/ds-cloud/id590216612?mt=8" target="_blank">Apple App Store</a> i <a href="https://play.google.com/store/apps/details?id=com.synology.dscloud" target="_blank">Google Play Store</a>. Można także zeskanować poniższy kod QR, aby pobrać ją bezpośrednio.</p>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/13.png" width="475" height="219" />
+</div>
+<div class="page-info">
+  <ul>
+    <li>Kolejne w tym temacie:<a href="cloud_set_up_quickconnect.html">Dostęp do serwera Synology NAS przez Internet i udostępnianie plików</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

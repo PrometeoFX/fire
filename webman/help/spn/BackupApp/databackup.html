@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Copia de seguridad de datos</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Copia de seguridad de datos</h2>
+
+<p>En la pestaña <b>Copia de seguridad</b> de <b>Copia de seguridad y replicación</b>, puede realizar copias de seguridad de datos en DiskStation manualmente o de acuerdo con un programa personalizado. Con esta característica se pueden realizar copias de seguridad de la configuración del sistema, del contenido de las carpetas compartidas y de los datos del paquete a un destino de copia de seguridad local, de red o en la nube.</p>
+
+<h4>Para crear una tarea de copia de seguridad:</h4>
+<ol>
+<li>Elija <b>Crear</b> > <b>Tarea de copia de seguridad de datos</b>.</li>
+<li>Siga el asistente para completar la configuración. Visite <a href="repository.html">Destino de copia de seguridad</a> para obtener más información.</li>
+</ol>
+
+<h4>Para administrar tareas de copia de seguridad:</h4>
+<p>Seleccione una tarea existente y haga clic en uno de los botones siguientes:</p>
+<ul>
+<li><strong>Editar:</strong> Para modificar el destino, el origen, el programa y otras configuraciones de la tarea seleccionada.</li>
+<li><strong>Eliminar:</strong> Para eliminar la tarea seleccionada.</li>
+<li><strong>Cancelar:</strong> Para cancelar la tarea seleccionada que se está ejecutando actualmente.</li>
+<li><strong>Realizar copia de seguridad ahora:</strong> Realiza una copia de seguridad de la tarea seleccionada inmediatamente.</li>
+</ul>
+
+
+<h3>Rotación de copia de seguridad</h3>
+<p>La rotación de copia de seguridad es un mecanismo de administración de versiones. Ayuda a administrar las versiones de copias de seguridad mediante la eliminación automática de versiones anteriores no necesarias y así potencialmente liberar espacio de almacenamiento. Puede habilitar esta función en <b>Configuración de tarea</b> o configurarla cuando cree una tarea de copia de seguridad.</p>
+<h4>Para rotar versiones:</h4>
+<ol>
+<li>Seleccione la tarea a la que desea aplicar la rotación de versiones y haga clic en <strong>Editar</strong>.</li>
+<li>Vaya a la pestaña <strong>Configuración de tarea</strong> y marque <strong>Habilitar la rotación de copias de seguridad</strong>. </li>
+<li>Aquí puede elegir uno de los dos métodos de rotación:</li>
+<ul>
+<li><b>A partir de la versión más antigua:</b> Este es un método de rotación básico. Cuando se active la condición de rotación, la versión más antigua se eliminará primero. </li>
+<li><b>Smart Recycle:</b> Este es un método de rotación inteligente. Cuando se active la condición de rotación, el sistema eliminará las versiones seleccionadas por el mecanismo de retención. El mecanismo de retención funciona de la siguiente manera:</li>
+<ul>
+	<li><b>Versiones cada hora desde las últimas 24 horas:</b> El sistema conserva la versión más antigua creada cada hora.</li>
+	<li><b>Versiones diarias desde hace 1 día a hace 1 mes:</b> El sistema conserva la versión más antigua creada cada día.</li>
+	<li><b>Versión semanal después de 1 mes:</b> El sistema conserva la versión más antigua creada cada semana.</li>
+</ul>
+</ul>
+<li>Indique el <b>número máximo de versiones</b>. Cuando el número de versiones supera este número, la rotación de versiones se iniciará. El número no incluye las versiones bloqueadas.</li>
+<li>Si ha configurado un programa de copia de seguridad repetitivo, se conservará una vista previa del cálculo de la manera de retener versiones de copias de seguridad y se mostrará la hora del punto de recuperación más antiguo basado en la configuración de la rotación.   </li>
+<li>Haga clic en <strong><b>OK</b></strong> para guardar su configuración. </li>
+</ol>
+
+<div class="section">
+  <h4>Notas:</h4>
+  <ul>
+  <li>Las versiones bloqueadas no se eliminarán nunca. Visite <a href="repository.html#lock_version">Destino de copia de seguridad</a> para obtener más información.</li><li>Solo las tareas de copia de seguridad de varias versiones proporcionan funciones de rotación de versiones.</li><li>La rotación de versiones no es compatible con DSM 5.1 o versiones inferiores.</li>
+  <li>La rotación se activará inmediatamente después de que la configuración se cambie o de que se complete la tarea de copia de seguridad.</li>
+  <li>Las versiones bloqueadas quedan excluidas cuando se calcula el número máximo de versiones.</li>
+  </ul>
+</div>
+
+
+<div class="section">
+<h4>Notas generales:</h4>
+<ul>
+<li>Los nombres de tareas pueden incluir entre 1 y 32 caracteres Unicode, pero no pueden contener los siguientes caracteres:<br> <span class="letterSpace5">! " # $ % & ' ( ) * + , / : ; < = > ? @ [ ] \ ^ ` { } | ~</span></li>
+<li>La longitud máxima de la ruta de carpeta completa para copias de seguridad es de 2048 caracteres.</li>
+<li>Si se cargan más de 32 000 archivos o carpetas en una carpeta compartida EXT3 mediante AFP, todas las tareas de copia de seguridad, incluida la carpeta compartida, producirán errores.</li>
+<li>Se puede hacer copia de seguridad de una carpeta cifrada montada o desmontada. Sin embargo, siempre se restaurará como desmontada y no se montará automáticamente al arrancar. Deberá introducir o importar la clave de cifrado de la carpeta compartida cifrada para que se monte.</li>
+<li>Realizar copias de seguridad de una carpeta cifrada a otra carpeta cifrada no es compatible.</li>
+<li>Utilizar carpetas remotas como origen o como destino de copia de seguridad no es compatible.</li><li>Si el destino de copia de seguridad es un volumen, solo el propietario de la tarea podrá realizar la tarea de la copia de seguridad. Visite <a href="repository.html">Destino de copia de seguridad</a> para obtener más información.</li>
+<li>La realización de copias de seguridad en algunas aplicaciones es compatible. Para comprobar si un paquete específico es compatible con la realización de copias de seguridad, además del contenido de dichas copias y sus limitaciones, consulte la sección de ayuda de cada aplicación.</li>
+<li class="enable-eds14">DiskStation no es compatible con la realización de copias de seguridad para aplicaciones sin un dispositivo externo EXT3/EXT4 grabable.</li>
+<li class="enable-eds14">DiskStation no es compatible con la realización de copias de seguridad a volúmenes sin un dispositivo externo EXT3/EXT4 grabable.</li>
+<li class="enable-eds14">DiskStation sólo puede realizar copias de seguridad de carpetas compartidas creadas en dispositivos externos EXT3/EXT4.</li>
+<li class="disable-eds14">El sistema no puede realizar copias de seguridad de aplicación sin un volumen grabable.</li
+></ul>
+</div>
+<div class="section disable-eds14">
+<h4>Copias de seguridad de la configuración ACL de Windows:</h4>
+<p>También se pueden realizar copias de seguridad de la configuración ACL de Windows de los archivos en DiskStation dependiendo de los sistemas de archivos en el destino:</p>
+<ul>
+
+<li><strong>Destino de copia de seguridad local</strong>, <strong>Destino de copia de seguridad de red</strong> y <strong>Destino de copia de seguridad en nube pública</strong> pueden realizar una copia de seguridad de la configuración Windows ACL, independientemente del sistema de archivos del destino</li>
+
+<li><strong>Sincronización de carpetas compartidas</strong> puede sincronizar la configuración ACL de Windows cuando el sistema de archivos del destino sea EXT4<span style="display: inline;" class="enable-rc18015xsp">/BTRFS</span>.</li>
+
+</ul>
+</div>
+
+</body></html>

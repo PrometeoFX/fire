@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Réception des journaux - Aide de Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Turn your DiskStation into a syslog server to receive logs from other network devices.">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Réception des journaux</h2>
+<p>Votre DiskStation peut fonctionner comme un serveur syslog afin de recevoir des journaux d'un appareil client du réseau. Trois formats sont pris en charge pour la réception des journaux :  <strong>BSD </strong>(RFC 3164), <strong>IETF </strong>(RFC 5424), et <strong>Personnalisé</strong>. Tous les journaux reçus sont stockés dans la base de données des journaux.</p>
+<div class="section">
+<h4>Avant de commencer :</h4>
+<p>Accédez à <strong>Centre des journaux</strong> > <strong>Paramètres de stockage</strong> et choisissez un emplacement de stockage et archivez les journaux.</p>
+</div>
+<h3>Pour configurer la réception standard des journaux :</h3>
+<ol>
+<li>Accédez à <strong>Centre des journaux</strong> > <strong>Réception des journaux</strong> > <strong>Standard</strong>.</li>
+<li>Vous pouvez activer la réception de journaux BSD et IETF en cochant l'option <b>Recevoir des journaux d'autres appareils</b> sous le ou les formats nécessaires.</li>
+<li>Sélectionnez <strong>UDP</strong> ou <strong>TCP</strong> depuis <strong>Protocole de transfert</strong>.</li>
+<li>Spécifiez un numéro de port pour la réception des messages syslog dans <strong>Port</strong>. Le numéro de port par défaut est <strong>514</strong>.</li>
+<li>Si vous souhaitrez transférer des journaux en toute sécurité, cochez l'option <strong>Activer la connexion sécurisée (SSL)</strong>. Cette option est disponible uniquement lorsque le protocole <b>TCP</b> est sélectionné.
+  </p>
+	</div>
+</li>
+<li>Cliquez sur <b>Appliquer</b> pour enregistrer les paramètres.</li>
+</ol>
+<!--DSM#62962: Customized rule receiving-->
+<h3>Pour configurer la réception personnalisée des journaux :</h3>
+	<ol>
+	<li>Allez dans <strong>Centre des journaux</strong> > <strong>Réception des journaux</strong> > <strong>Personnalisé</strong>.</li>
+	<li>Cliquez sur <strong>Créer</strong>.</li>
+	<li>Entrez un nom de règle unique dans <strong>Nom</strong>.</li>
+	<li>Entrez une règle d'analyse dans <strong>Paramètres de règle</strong>. Veuillez lire la remarque ci-dessous pour obtenir des informations détaillées à propos de la création d'analyseurs de modèle.</li>
+	<li>Sélectionnez <strong>UDP</strong> ou <strong>TCP</strong> depuis <strong>Protocole de transfert</strong>.</li>
+	<li>Spécifiez un numéro de port pour la réception des messages syslog dans <strong>Port</strong>. Le numéro de port par défaut est <strong>514</strong>.</li>
+	<li>Si vous souhaitrez transférer des journaux en toute sécurité, cochez l'option <strong>Activer la connexion sécurisée (SSL)</strong>. Cette option est disponible uniquement lorsque le protocole <b>TCP</b> est sélectionné.</li>
+	<li>Cliquez sur <b>OK</b> pour enregistrer les paramètres.</li>
+	</ol>
+<div class="section">
+<h4>Remarque :</h4>
+<p>Vous trouverez des informations détaillées à propos de analyseurs de modèle <a href="http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/syslog-ng-patterndb-using-parsers.html">ici</a> Vous pouvez également télécharger un <a href="http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/patterndb-download.html">exemple de modèle</a> pour référence.</p>
+</div>
+<h3>Pour gérer les règles personnalisées :</h3>
+	<ol>
+	<li>Sélectionnez une règle personnalisée existante.</li>
+	<li>Choisissez à partir des éléments suivants :</li>
+    <ul>
+    <li><strong>Modifier :</strong> Modifier une règle personnalisée.</li>
+<li><strong>Supprimer :</strong> Supprimer une règle personnalisée.</li>
+<li><strong>Activer :</strong> Activer une règle personnalisée.</li>
+<li><strong>Désactiver :</strong> Désactiver une règle personnalisée.</li>
+    </ul>
+	</ol>
+<h3>Exporter le certificat</h3>
+<p>Si vous avez coché l'option <strong>Activer la connexion sécurisée (SSL)</strong>, vous pouvez cliquer sur le bouton <strong>Exporter le certificat</strong> pour exporter le certificat utilisé pour authentifier d'autres appareils lorsque vous envoyez des journaux dans DiskStation.</p>
+</body>

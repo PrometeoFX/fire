@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Serviço de diretório</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Usuários ou grupos de domínio/LDAP</h2>
+<p>Se o seu DiskStation tiver ingressado em um serviço de diretório como um domínio Windows ou cliente LDAP, você pode configurar e modificar a permissão de acesso de usuários ou grupos de domínio/LDAP nas pastas compartilhadas DiskStation e aplicativos DSM e habilitar o serviço de base para todos os usuários do domínio/LDAP.</p>
+<h3>Usuários de domínio/LDAP</h3>
+<p>Dependendo do tipo do serviço de diretório em que você está ingressando, clique na guia <b>Usuários de domínio</b> ou <b>Usuários de LDAP</b> para configurar as permissões da pasta compartilhada e do aplicativo e a cota da capacidade do disco de cada usuário.</p>
+<h4>As regras de configurações de privilégio incluem o seguinte:</h4>
+<ul>
+<li>Em caso de conflitos de privilégio, a prioridade de privilégio será: NA &gt; RW &gt; RO.</li>
+<li>Visualizar privilégio: Os privilégios do usuário são mostrados aqui, e isso é definido baseado nas configurações de privilégio do usuário e dos grupos dos quais faz parte.</li>
+<li>Privilégios de grupo: Atribua privilégios aos grupos de acesso para acessar pastas compartilhadas.</li>
+</ul>
+<h3>Base do usuário</h3>
+<p>Da mesma forma que os usuários locais, todos os usuários do domínio/LDAP podem acessar sua própria pasta <b>home</b> através de CIFS, AFP, FTP ou File Station. </p>
+<p>
+Usuários com privilégios de administrador podem acessar todas as pastas personalizadas localizadas na pasta compartilhada <b>homes</b>. Todas as pastas base dos usuários estão localizadas em uma das sub pastas da pasta chamada &quot;<b>@DH-nome do domínio</b>&quot; (para usuários do domínio) ou &quot;<b>@LH-nome do FQDN</b>&quot; (para usuários do LDAP). O nome da pasta base do usuário é a conta de usuário mais um número exclusivo.</p>
+<ol>
+<span class="note_head">Observação: </span>
+<li>Para excluir a pasta <span class="bold_general">homes</span>, o serviço de base do usuário deve ser desabilitado primeiro.</li>
+<li>A habilitação do serviço base para usuários do domínio/LDAP também habilitará o serviço base para usuários locais se ainda não estiver habilitado.
+</li>
+</ol> 
+<h3>Grupo de domínio/LDAP</h3> 
+<p>Dependendo do tipo de serviço de diretório em que você está ingressando, clique na guia <b>Grupo de domínio</b> ou <b>Grupo de LDAP</b> para configurar os privilégios de acesso dos grupos de domínio/LDAP às pastas compartilhadas. A prioridade de privilégios é: NA &gt; RW &gt; RO.</p> 
+</body> </html> 

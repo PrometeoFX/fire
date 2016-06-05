@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta charset="UTF-8">
+</head>
+<body>
+<h2>Pillanatfelv&eacute;telek</h2>
+	<p>Ez az oldal t&aacute;j&eacute;koztat&aacute;st biztos&iacute;t pillanatfelv&eacute;telek k&eacute;sz&iacute;t&eacute;s&eacute;ről, elt&aacute;vol&iacute;t&aacute;s&aacute;r&oacute;l &eacute;s szerkeszt&eacute;s&eacute;ről, valamint &uacute;tmutat&aacute;ssal szolg&aacute;l pillanatfelv&eacute;telek be&uuml;temez&eacute;s&eacute;nek &eacute;s megőrz&eacute;si be&aacute;ll&iacute;t&aacute;sainak konfigur&aacute;l&aacute;s&aacute;ra vonatkoz&oacute;an.</p>
+    <p>Minden egyes megosztott mapp&aacute;r&oacute;l vagy iSCSI LUN-r&oacute;l egy adott időben maximum 256 pillanatk&eacute;pet t&aacute;rolhat. A pillanatfelv&eacute;telek minimaliz&aacute;lj&aacute;k a t&aacute;rhelyhaszn&aacute;latot, mivel az egyes blokkokat t&aacute;rolj&aacute;k, nem a teljes f&aacute;jlokat. T&ouml;bblet t&aacute;rhelyig&eacute;ny mer&uuml;lhet fel a megosztott mapp&aacute;kban vagy iSCSI LUN blokkokban tal&aacute;lhat&oacute; f&aacute;jlok friss&iacute;t&eacute;se vagy elt&aacute;vol&iacute;t&aacute;sa sor&aacute;n.</p>
+
+<h3>Megosztott mappa</h3>
+<h4>Pillanatfelv&eacute;tel k&eacute;sz&iacute;t&eacute;se megosztott mapp&aacute;r&oacute;l:</h4>
+<ol>
+  <li>V&aacute;lassza ki a megosztott mapp&aacute;t, amelyikről pillanatfelv&eacute;telt k&iacute;v&aacute;n k&eacute;sz&iacute;teni.</li>
+	<li>Kattintson a <strong>Pillanatfelv&eacute;tel k&eacute;sz&iacute;t&eacute;se</strong> gombra.</li>
+	<li>Adja meg a k&eacute;sz&iacute;tendő pillanatfelv&eacute;telre vonatkoz&oacute; le&iacute;r&aacute;st a <strong>Le&iacute;r&aacute;s</strong> mezőben.</li>
+	<li>Pip&aacute;lja ki vagy t&aacute;vol&iacute;tsa el a kijel&ouml;l&eacute;st a <strong>Z&aacute;rol&aacute;s</strong> jel&ouml;lőn&eacute;gyzetből aszerint, hogy k&iacute;v&aacute;nja-e, hogy a pillanatfelv&eacute;telre ne vonatkozzanak a megőrz&eacute;si be&aacute;ll&iacute;t&aacute;sok automatikus elt&aacute;vol&iacute;t&aacute;s sor&aacute;n.</li>
+  <li>A pillanatfelv&eacute;tel k&eacute;sz&iacute;t&eacute;s&eacute;nek megkezd&eacute;s&eacute;hez kattintson az <strong>OK</strong> gombra.</li>
+</ol>
+
+<div class="section"><h4>Megjegyz&eacute;s:</h4>
+<ul><li>A <strong>Vez&eacute;rlőpult</strong> &gt; <strong>Megosztott mappa</strong> &gt; <strong>Szerkeszt&eacute;s</strong> oldal be&aacute;ll&iacute;t&aacute;sai k&ouml;z&uuml;l kiz&aacute;r&oacute;lag a Windows ACL enged&eacute;lyt fogja tartalmazni a pillanatfelv&eacute;tel.</li></ul>
+</div>
+
+<h4>Megosztott mapp&aacute;k pillanatfelv&eacute;teleinek b&ouml;ng&eacute;sz&eacute;se:</h4>
+<ol>
+  <li>V&aacute;lasszon ki egy megosztott mapp&aacute;t, amelynek pillanatfelv&eacute;teleit b&ouml;ng&eacute;szni k&iacute;v&aacute;nja.</li>
+	<li>Kattintson a <strong>Pillanatfelv&eacute;tel-lista</strong> lehetős&eacute;gre.</li>
+  <li>V&aacute;lassza ki a b&ouml;ng&eacute;szni k&iacute;v&aacute;nt pillanatfelv&eacute;telt, &eacute;s kattintson a <strong>B&ouml;ng&eacute;sz&eacute;s</strong> gombra.</li>
+</ol>
+
+<div class="section"><h4>Megjegyz&eacute;s:</h4>
+	<ul>
+		<li>A pillanatfelv&eacute;telek <strong>B&ouml;ng&eacute;sz&eacute;s</strong> parancsa nem alkalmazhat&oacute; titkos&iacute;tott megosztott mapp&aacute;k eset&eacute;n.</li>
+		<li>Amennyiben nem tud b&ouml;ng&eacute;szni a pillanatfelv&eacute;telek k&ouml;z&ouml;tt, ugorjon a <strong>Vez&eacute;rlőpult</strong> &gt; <strong>Megosztott mappa</strong> &gt; <strong>Szerkeszt&eacute;s</strong> men&uuml;pontra, &eacute;s itt enged&eacute;lyezze a <strong>Pillanatfelv&eacute;telek megjelen&iacute;t&eacute;se</strong> lehetős&eacute;get.</li>
+	</ul>
+</div>
+
+<h4>Megosztott mapp&aacute;k pillanatfelv&eacute;teleinek elt&aacute;vol&iacute;t&aacute;sa:</h4>
+<ol>
+	<li>V&aacute;lasszon ki egy megosztott mapp&aacute;t, amelynek pillanatfelv&eacute;teleit el k&iacute;v&aacute;nja t&aacute;vol&iacute;tani.</li>
+	<li>Kattintson a <strong>Pillanatfelv&eacute;tel-lista</strong> lehetős&eacute;gre.</li>
+	<li>V&aacute;lassza ki a t&ouml;r&ouml;lni k&iacute;v&aacute;nt egy vagy t&ouml;bb pillanatfelv&eacute;telt, majd kattintson az <strong>Elt&aacute;vol&iacute;t&aacute;s</strong> parancsra. (T&ouml;bbsz&ouml;r&ouml;s kijel&ouml;l&eacute;s k&ouml;zben tartsa lenyomva a Shift vagy Ctrl billentyűt.)</li>
+	<li>Megjelenik egy megerős&iacute;tő &uuml;zenet. Az elt&aacute;vol&iacute;t&aacute;s megerős&iacute;t&eacute;s&eacute;hez kattintson a <strong>T&ouml;rl&eacute;s</strong> gombra.</li>
+</ol>
+
+<h4>Megosztott mapp&aacute;kr&oacute;l k&eacute;sz&uuml;lt pillanatfelv&eacute;telek szerkeszt&eacute;se:</h4>
+<ol>
+	<li>V&aacute;lasszon ki egy megosztott mapp&aacute;t, amelynek pillanatfelv&eacute;teleit szerkeszteni k&iacute;v&aacute;nja.</li>
+	<li>Kattintson a <strong>Pillanatfelv&eacute;tel-lista</strong> lehetős&eacute;gre.</li>
+	<li>V&aacute;lassza ki a szerkeszteni k&iacute;v&aacute;nt pillanatfelv&eacute;telt, majd kattintson a <strong>Szerkeszt&eacute;s</strong> gombra.</li>
+	<li>Lehetős&eacute;ge van a pillanatfelv&eacute;tel le&iacute;r&aacute;s&aacute;nak m&oacute;dos&iacute;t&aacute;s&aacute;ra a <strong>Le&iacute;r&aacute;s</strong> mezőben, valamint kipip&aacute;lhatja vagy elt&aacute;vol&iacute;thatja a kijel&ouml;l&eacute;st a <strong>Z&aacute;rol&aacute;s</strong> jel&ouml;lőn&eacute;gyzetből aszerint, hogy k&iacute;v&aacute;nja-e, hogy a pillanatfelv&eacute;telre ne vonatkozzanak a megőrz&eacute;si be&aacute;ll&iacute;t&aacute;sok automatikus elt&aacute;vol&iacute;t&aacute;s sor&aacute;n.</li>
+	<li>A be&aacute;ll&iacute;t&aacute;sok ment&eacute;s&eacute;hez kattintson az <strong>OK</strong> gombra.</li>
+</ol>
+
+<h4>Be&uuml;temezett pillanatfelv&eacute;telek konfigur&aacute;l&aacute;sa:</h4>
+<p>Be&uuml;temezett pillanatfelv&eacute;telek eset&eacute;n az Adatv&eacute;delmi kezelőprogram automatikusan pillanatfelv&eacute;teleket k&eacute;sz&iacute;t a megadott időben &eacute;s frekvenci&aacute;val, &iacute;gy megk&ouml;nny&iacute;ti a manu&aacute;lis pillanatfelv&eacute;tel k&eacute;sz&iacute;t&eacute;s feladat&aacute;t.</p>
+<ol>
+	<li>V&aacute;lasszon ki egy megosztott mapp&aacute;t.</li>
+	<li>Kattintson az <strong>Időz&iacute;t&eacute;s be&aacute;ll&iacute;t&aacute;sa</strong> gombra.</li>
+	<li>Az <strong>&Uuml;temez&eacute;s</strong> f&uuml;l&ouml;n pip&aacute;lja ki a <strong>Pillanatfelv&eacute;tel &uuml;temez&eacute;s&eacute;nek enged&eacute;lyez&eacute;se</strong> jel&ouml;lőn&eacute;gyzetet, majd hat&aacute;rozza meg a pillanatfelv&eacute;tel k&eacute;sz&iacute;t&eacute;s&eacute;nek idej&eacute;t &eacute;s frekvenci&aacute;j&aacute;t. Amennyiben vissza k&iacute;v&aacute;nja vonni a mapp&aacute;r&oacute;l val&oacute; pillanatfelv&eacute;tel k&eacute;sz&iacute;t&eacute;s &uuml;temez&eacute;s&eacute;t, t&aacute;vol&iacute;tsa el a jel&ouml;lőn&eacute;gyzetből a pip&aacute;t.</li>
+  <li>A be&aacute;ll&iacute;t&aacute;sok ment&eacute;s&eacute;hez kattintson az <strong>OK</strong> gombra.</li>
+  <li>Megjelenik egy megerős&iacute;tő &uuml;zenet. A konfigur&aacute;ci&oacute; megerős&iacute;t&eacute;s&eacute;hez nyomja meg az <strong>OK</strong> gombot.</li>
+</ol>
+
+<div class="section"><h4>Megjegyz&eacute;s:</h4>
+	<ul>
+	  <li>A be&uuml;temezett pillanatfelv&eacute;telek konfigur&aacute;ci&oacute; nem k&eacute;pezi r&eacute;sz&eacute;t a <strong>Vez&eacute;rlőpult</strong> &gt; <strong>Friss&iacute;t&eacute;s &eacute;s vissza&aacute;ll&iacute;t&aacute;s</strong> &gt; <strong>Konfigur&aacute;ci&oacute; biztons&aacute;gi ment&eacute;se</strong> funkci&oacute;nak.</li>
+	</ul>
+</div>
+
+<h4>A be&uuml;temezett pillanatfelv&eacute;telek megőrz&eacute;si be&aacute;ll&iacute;t&aacute;sainak konfigur&aacute;l&aacute;sa:</h4>
+<ol>
+<li>V&aacute;lasszon ki egy megosztott mapp&aacute;t.</li>
+<li>Kattintson az <strong>Időz&iacute;t&eacute;s be&aacute;ll&iacute;t&aacute;sa</strong> gombra.</li>
+<li>Kattintson a <strong>Megőrz&eacute;s</strong> f&uuml;lre.</li>
+<li>Konfigur&aacute;lja a megőrz&eacute;si be&aacute;ll&iacute;t&aacute;sokat. V&aacute;lassza a k&ouml;vetkezők egyik&eacute;t:<ul>
+		<li><strong>R&eacute;gi pillanatfelv&eacute;telek elt&aacute;vol&iacute;t&aacute;sa hat&aacute;r&eacute;rt&eacute;k el&eacute;r&eacute;se eset&eacute;n:</strong> Miut&aacute;n a pillanatfelv&eacute;telek sz&aacute;ma el&eacute;rte a maxim&aacute;lis &eacute;rt&eacute;ket, az &uacute;jonnan k&eacute;sz&uuml;lt pillanatfelv&eacute;telek fel&uuml;l&iacute;rj&aacute;k a legr&eacute;gebbi pillanatfelv&eacute;teleket.</li>
+		<li><strong>Mindig őrizze meg a pillanatfelv&eacute;teleket:</strong> A pillanatfelv&eacute;telek maxim&aacute;lis mennyis&eacute;g&eacute;nek el&eacute;r&eacute;s&eacute;t k&ouml;vetően az Adatv&eacute;delmi kezelőprogram nem k&eacute;sz&iacute;t &uacute;j pillanatfelv&eacute;teleket, &iacute;gy nem t&aacute;vol&iacute;tja el a r&eacute;gi pillanatfelv&eacute;teleket.</li>
+		<li><strong>Pillanatfelv&eacute;telek megőrz&eacute;se az al&aacute;bbi ir&aacute;nyelv szerint:</strong> Megőrz&eacute;si szab&aacute;lyokat konfigur&aacute;lhat meghat&aacute;rozott időtartom&aacute;nyokban. Tov&aacute;bbi inform&aacute;ci&oacute;&eacute;rt l&aacute;sd a <a href="#smart_retention">Megőrz&eacute;si szab&aacute;lyok</a> megjegyz&eacute;st.</li>
+	</ul>
+</li>
+<li>A be&aacute;ll&iacute;t&aacute;sok ment&eacute;s&eacute;hez kattintson az <strong>OK</strong> gombra.</li>
+</ol>
+
+
+<h3>iSCSI LUN</h3>
+
+<h4>Pillanatfelv&eacute;tel k&eacute;sz&iacute;t&eacute;se iSCSI LUN-r&oacute;l:</h4>
+<ol>
+<li>V&aacute;lassza ki az iSCSI LUN-t, amelyikről pillanatfelv&eacute;telt k&iacute;v&aacute;n k&eacute;sz&iacute;teni.</li>
+<li>Kattintson a <strong>Pillanatfelv&eacute;tel k&eacute;sz&iacute;t&eacute;se</strong> gombra.</li>
+<li>Adja meg a k&eacute;sz&iacute;tendő pillanatfelv&eacute;telre vonatkoz&oacute; le&iacute;r&aacute;st a <strong>Le&iacute;r&aacute;s</strong> mezőben.</li>
+<li>A <strong>Z&aacute;rol&aacute;s</strong> leg&ouml;rd&uuml;lő list&aacute;b&oacute;l v&aacute;lassza ki az <strong>Igen</strong>/<strong>Nem</strong> &eacute;rt&eacute;ket aszerint, hogy k&iacute;v&aacute;nja-e, hogy a pillanatfelv&eacute;telre ne vonatkozzanak a megőrz&eacute;si be&aacute;ll&iacute;t&aacute;sok automatikus elt&aacute;vol&iacute;t&aacute;s sor&aacute;n.</li>
+<li>A pillanatfelv&eacute;tel k&eacute;sz&iacute;t&eacute;s&eacute;nek megkezd&eacute;s&eacute;hez kattintson az <strong>OK</strong> gombra.</li>
+</ol>
+
+<h4>iSCSI LUN-r&oacute;l k&eacute;sz&uuml;lt pillanatfelv&eacute;tel elt&aacute;vol&iacute;t&aacute;sa:</h4>
+<ol>
+<li>V&aacute;lasszon ki egy iSCSI LUN-t, amelynek pillanatfelv&eacute;teleit el k&iacute;v&aacute;nja t&aacute;vol&iacute;tani.</li>
+<li>Kattintson a <strong>Pillanatfelv&eacute;tel-lista</strong> lehetős&eacute;gre.</li>
+<li>V&aacute;lassza ki a t&ouml;r&ouml;lni k&iacute;v&aacute;nt egy vagy t&ouml;bb pillanatfelv&eacute;telt, majd kattintson az <strong>Elt&aacute;vol&iacute;t&aacute;s</strong> parancsra. (T&ouml;bbsz&ouml;r&ouml;s kijel&ouml;l&eacute;s k&ouml;zben tartsa lenyomva a Shift vagy Ctrl billentyűt.)</li>
+<li>Megjelenik egy megerős&iacute;tő &uuml;zenet. Az elt&aacute;vol&iacute;t&aacute;s megerős&iacute;t&eacute;s&eacute;hez kattintson az <strong>Igen</strong> lehetős&eacute;gre.</li>
+</ol>
+
+<h4>iSCSI LUN-r&oacute;l k&eacute;sz&uuml;lt pillanatfelv&eacute;tel szerkeszt&eacute;se:</h4>
+<ol>
+<li>V&aacute;lasszon ki egy iSCSI LUN-t, amelynek pillanatfelv&eacute;teleit szerkeszteni k&iacute;v&aacute;nja.</li>
+<li>Kattintson a <strong>Pillanatfelv&eacute;tel-lista</strong> lehetős&eacute;gre.</li>
+<li>V&aacute;lassza ki a szerkeszteni k&iacute;v&aacute;nt pillanatfelv&eacute;telt, majd kattintson a <strong>Szerkeszt&eacute;s</strong> gombra.</li>
+<li>A pillanatfelv&eacute;telek szerkeszt&eacute;se b&aacute;rmely al&aacute;bbi m&oacute;don megval&oacute;s&iacute;that&oacute;.<ul>
+	  <li>M&oacute;dos&iacute;tsa a pillanatfelv&eacute;tel le&iacute;r&aacute;s&aacute;t a <strong>Le&iacute;r&aacute;s</strong> mezőben.</li>
+	  <li>V&aacute;lassza ki a <strong>Konzisztencia-&aacute;llapot</strong> mező &eacute;rt&eacute;k&eacute;t, ha enged&eacute;lyezettek az <a href="#app-consistent">alkalmaz&aacute;s-konzisztens</a> pillanatfelv&eacute;telek.</li>
+	  <li>A <strong>Z&aacute;rol&aacute;s</strong> leg&ouml;rd&uuml;lő list&aacute;b&oacute;l v&aacute;lasszon az <strong>Igen</strong>/<strong>Nem</strong> &eacute;rt&eacute;k k&ouml;z&uuml;l aszerint, hogy k&iacute;v&aacute;nja-e, hogy a pillanatfelv&eacute;telre ne vonatkozzanak a megőrz&eacute;si be&aacute;ll&iacute;t&aacute;sok automatikus elt&aacute;vol&iacute;t&aacute;s sor&aacute;n.</li>
+	</ul>
+</li>
+<li>A be&aacute;ll&iacute;t&aacute;sok ment&eacute;s&eacute;hez kattintson az <strong>OK</strong> gombra.</li>
+</ol>
+
+<h4>Be&uuml;temezett pillanatfelv&eacute;telek konfigur&aacute;l&aacute;sa:</h4>
+<p>Be&uuml;temezett pillanatfelv&eacute;telek eset&eacute;n az Adatv&eacute;delmi kezelőprogram automatikusan pillanatfelv&eacute;teleket k&eacute;sz&iacute;t a megadott időben &eacute;s frekvenci&aacute;val, &iacute;gy megk&ouml;nny&iacute;ti a manu&aacute;lis pillanatfelv&eacute;tel k&eacute;sz&iacute;t&eacute;s feladat&aacute;t.</p>
+<ol>
+	<li>V&aacute;lasszon egy iSCSI LUN-t.</li>
+	<li>Kattintson az <strong>Időz&iacute;t&eacute;s be&aacute;ll&iacute;t&aacute;sa</strong> gombra.</li>
+	<li>Az <strong>&Uuml;temez&eacute;s</strong> f&uuml;l&ouml;n pip&aacute;lja ki a <strong>Pillanatfelv&eacute;tel &uuml;temez&eacute;s&eacute;nek enged&eacute;lyez&eacute;se</strong> jel&ouml;lőn&eacute;gyzetet, majd hat&aacute;rozza meg a pillanatfelv&eacute;tel k&eacute;sz&iacute;t&eacute;s&eacute;nek idej&eacute;t &eacute;s frekvenci&aacute;j&aacute;t. Amennyiben vissza k&iacute;v&aacute;nja vonni a mapp&aacute;r&oacute;l val&oacute; pillanatfelv&eacute;tel k&eacute;sz&iacute;t&eacute;s &uuml;temez&eacute;s&eacute;t, t&aacute;vol&iacute;tsa el a jel&ouml;lőn&eacute;gyzetből a pip&aacute;t.</li>
+  <li>A be&aacute;ll&iacute;t&aacute;sok ment&eacute;s&eacute;hez kattintson az <strong>OK</strong> gombra.</li>
+</ol>
+
+<h4>A be&uuml;temezett pillanatfelv&eacute;telek megőrz&eacute;si be&aacute;ll&iacute;t&aacute;sainak konfigur&aacute;l&aacute;sa:</h4>
+<ol>
+<li>V&aacute;lasszon egy iSCSI LUN-t.</li>
+<li>Kattintson az <strong>Időz&iacute;t&eacute;s be&aacute;ll&iacute;t&aacute;sa</strong> gombra.</li>
+<li>Kattintson a <strong>Megőrz&eacute;s</strong> f&uuml;lre.</li>
+<li>Konfigur&aacute;lja a megőrz&eacute;si be&aacute;ll&iacute;t&aacute;sokat. V&aacute;lassza a k&ouml;vetkezők egyik&eacute;t:<ul>
+		<li><strong>R&eacute;gi pillanatfelv&eacute;telek elt&aacute;vol&iacute;t&aacute;sa hat&aacute;r&eacute;rt&eacute;k el&eacute;r&eacute;se eset&eacute;n:</strong> Miut&aacute;n a pillanatfelv&eacute;telek sz&aacute;ma el&eacute;rte a maxim&aacute;lis &eacute;rt&eacute;ket, az &uacute;jonnan k&eacute;sz&uuml;lt pillanatfelv&eacute;telek fel&uuml;l&iacute;rj&aacute;k a legr&eacute;gebbi pillanatfelv&eacute;teleket.</li>
+		<li><strong>Mindig őrizze meg a pillanatfelv&eacute;teleket:</strong> A pillanatfelv&eacute;telek maxim&aacute;lis mennyis&eacute;g&eacute;nek el&eacute;r&eacute;s&eacute;t k&ouml;vetően az Adatv&eacute;delmi kezelőprogram nem k&eacute;sz&iacute;t &uacute;j pillanatfelv&eacute;teleket, &iacute;gy nem t&aacute;vol&iacute;tja el a r&eacute;gi pillanatfelv&eacute;teleket.</li>
+		<li><strong>Pillanatfelv&eacute;telek megőrz&eacute;se az al&aacute;bbi ir&aacute;nyelv szerint:</strong> Megőrz&eacute;si szab&aacute;lyokat konfigur&aacute;lhat meghat&aacute;rozott időtartom&aacute;nyokban. Tov&aacute;bbi inform&aacute;ci&oacute;&eacute;rt l&aacute;sd a <a href="#smart_retention">Megőrz&eacute;si szab&aacute;lyok</a> megjegyz&eacute;st.</li>
+	</ul>
+</li>
+<li>A be&aacute;ll&iacute;t&aacute;sok ment&eacute;s&eacute;hez kattintson az <strong>OK</strong> gombra.</li>
+<li>Megjelenik egy megerős&iacute;tő &uuml;zenet. A konfigur&aacute;ci&oacute; megerős&iacute;t&eacute;s&eacute;hez kattintson ism&eacute;t az <strong>OK</strong> gombra.</li>
+</ol>
+
+<h4>Az iSCSI LUN pillanatfelv&eacute;telek konzisztencia &aacute;llapot&aacute;nak meghat&aacute;roz&aacute;sa:</h4>
+<ol>
+<li>V&aacute;lasszon egy iSCSI LUN-t.</li>
+<li>Kattintson az <strong>Időz&iacute;t&eacute;s be&aacute;ll&iacute;t&aacute;sa</strong> gombra.</li>
+<li>Kattintson az <strong>Alkalmaz&aacute;s</strong> f&uuml;lre.</li>
+<li>Pip&aacute;lja ki vagy t&aacute;vol&iacute;tsa el a jel&ouml;l&eacute;st az <strong>Alkalmaz&aacute;s-konzisztens pillanatfelv&eacute;telek enged&eacute;lyez&eacute;se</strong> jel&ouml;lőn&eacute;gyzetből az al&aacute;bbi konzisztencia &aacute;llapotok k&ouml;z&ouml;tti v&aacute;lt&aacute;shoz:<ul>
+<li><a name="app-consistent"></a><strong>Alkalmaz&aacute;s-konzisztens</strong>: Ebbe a konzisztencia-&aacute;llapotba tartoz&oacute; pillanatfelv&eacute;tel csak akkor k&eacute;sz&iacute;thető el, ha a műk&ouml;d&eacute;si k&ouml;rnyezettől f&uuml;ggően a Synology Snapshot Manager telep&iacute;tve van a Windows szerveren vagy a VMware vCenter Server eszk&ouml;z&ouml;n a DSM kommunik&aacute;ci&oacute; lehetőv&eacute; t&eacute;tele c&eacute;lj&aacute;b&oacute;l. Amikor DSM-ben alkalmaz&aacute;s-konzisztens pillanatfelv&eacute;telek k&eacute;sz&uuml;lnek, az alkalmaz&aacute;sok erről &eacute;rtes&iacute;t&eacute;st kapnak, &eacute;s az adatkonzisztencia garant&aacute;l&aacute;sa &eacute;rdek&eacute;ben a mem&oacute;ri&aacute;b&oacute;l valamennyi adatot &aacute;t&iacute;rnak azokra a LUN-okra, amelyekről pillanatfelv&eacute;tel k&eacute;sz&uuml;l.<div class="section"><h4>Megjegyz&eacute;s:</h4>
+		<ul><li>Amennyiben nem t&ouml;rt&eacute;nt meg a Synology Snapshot Manager műk&ouml;d&eacute;si k&ouml;rnyezet&eacute;ben val&oacute; telep&iacute;t&eacute;se, az alkalmaz&aacute;s-konzisztens pillanatfelv&eacute;tel t&iacute;pus nem el&eacute;rhető, m&eacute;g ha ki is van pip&aacute;lva az illető jel&ouml;lőn&eacute;gyzet.</li></ul>
+	</div>
+</li>
+<li><strong>&Ouml;sszeoml&aacute;s-konzisztens</strong>: Ha a Synology Snapshot Manager nincs telep&iacute;tve egyik kliensen sem, akkor csak &ouml;sszeoml&aacute;s-konzisztens pillanatfelv&eacute;teleket k&eacute;sz&iacute;thet a LUN-okr&oacute;l. &Ouml;sszeoml&aacute;s-konzisztens pillanatfelv&eacute;telek k&eacute;sz&iacute;t&eacute;sekor az alkalmaz&aacute;sok erről nem kapnak &eacute;rtes&iacute;t&eacute;st, nem &iacute;rj&aacute;k &aacute;t az adatokat a mem&oacute;ri&aacute;b&oacute;l a LUN-okra, &eacute;s enn&eacute;lfogva nem garant&aacute;lhat&oacute; az adatkonzisztencia.</li>
+</ul>
+</li>
+<li>A be&aacute;ll&iacute;t&aacute;sok ment&eacute;s&eacute;hez kattintson az <strong>OK</strong> gombra.</li>
+</ol>
+
+<p>____<br/><div class="section">
+  <h4><a name="smart_retention"></a>Megőrz&eacute;si szab&aacute;lyok</h4>
+  <p>Ez az opci&oacute; seg&iacute;t ide&aacute;lis megold&aacute;st tal&aacute;lni a pillanatfelv&eacute;telek maxim&aacute;lis sz&aacute;m&aacute;nak meghat&aacute;roz&aacute;s&aacute;ra, mik&ouml;zben seg&iacute;t takar&eacute;koskodni a k&ouml;teten tal&aacute;lhat&oacute; t&aacute;rhellyel, azonban ebben az esetben előfordulhat, hogy hosszabb ideig kell megőriznie pillanatfelv&eacute;teleit.</p>
+  <p>A Synology a GFS vagy nagyapa-apa-fi&uacute; megőrz&eacute;si ir&aacute;nyelvet alkalmazza. A megőrizendő pillanatfelv&eacute;tel verzi&oacute;k maxim&aacute;lis sz&aacute;ma meghat&aacute;rozhat&oacute; az al&aacute;bbi időtartom&aacute;ny bont&aacute;sban: <strong>&oacute;r&aacute;nk&eacute;nt</strong>, <strong>naponta</strong>, <strong>hetente</strong>, <strong>havonta</strong> &eacute;s <strong>&eacute;vente</strong>.</p>
+</div>
+</p>
+
+</body>
+</html>

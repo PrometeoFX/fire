@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>建立共用資料夾 - Synology DSM 說明</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Shared folders are the basic directories where you can store and manage files and folders on your DiskStation. This article shows you how to create a shared folder.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>建立共用資料夾</h2>
+<p>共用資料夾是 DiskStation 基本的目錄結構，可讓您儲存並管理檔案及資料夾。儲存檔案之前，您需先建立至少一個共用資料夾。</p>
+
+<h4>若要新增共用資料夾：</h4>
+<ol>
+		<li><strong>在「網路上的芳鄰」隱藏此共用資料夾：</strong>此選項可讓共用資料夾不在 Windows 檔案總管的「網路」下出現。勾選此選項並不會影響共用資料夾的存取權限。<div class="section"><h4>注意：</h4>
+				<p>讓共用資料夾在「網路上的芳鄰」隱藏並不會影響其存取權限。其存取權限仍是會如同您所指定。有存取權限的使用者仍可透過輸入「\\伺服器名稱\共用資料夾名稱」的方式來存取該共用資料夾。</p>
+			</div>
+		</li>
+		<li><strong>對於不具權限的使用者隱藏子資料夾及檔案</strong>：啟動此選項後，如果不具讀取權限的使用者試圖透過 Windows 檔案分享通訊協定來存取共用資料夾，將無法看到共用資料夾中的資料夾或檔案。此選項可避免使用者連線至 DiskStation 之後，卻無法開啟大量檔案或子資料夾而產生的困惑。<div class="section"><h4>注意：</h4>
+				<ul>
+					<li>僅 Windows 檔案分享通訊協定支援此功能。</li>
+					<li>您可以以滑鼠右鍵點按 File Station 的資料夾及檔案來修改其權限設定。從下拉式選單中選擇<strong>屬性</strong>，並按一下<strong>權限</strong>頁籤。</li>
+					<li>啟動<strong>對於不具權限的使用者隱藏子資料夾及檔案</strong>時，使用者仍可看到共用資料夾。只有共用資料夾中的子資料夾和檔案會被隱藏。</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+
+
+<li><strong>啟動資源回收筒：</strong>共用資料夾中的檔案被刪除後，會移至名為 <strong>#recycle</strong> 的資料夾。您可將資源回收筒設為只有屬於 <strong>administrators</strong> 群組的使用者可存取。</li>
+
+<li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"><strong>開啟快照瀏覽：</strong>您可以透過檔案服務從共用資料夾的 <strong>#snapshot</strong> 資料夾來存取快照中的資料夾和檔案。快照將以其拍攝的格林威治標準時間 (GMT) 命名。<div class="section"><h4>注意：</h4>
+		<ul>
+			<li>使用者不具有寫入任何快照備份的權限。</li>
+			<li>使用者可讀取快照備份的條件為該快照拍攝時，該使用者帳號已存在，並已具有該快照所拍攝之共用資料夾的讀取權限。</li>
+		</ul>
+	</div>
+	</li><a name="sharequota"></a><li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"><strong>啟動共用資料夾空間配額：</strong>若要指定個別共用資料夾的最大空間限制，勾選<strong>啟動共用資料夾空間配額</strong>核取方塊，並在其後的欄位中輸入容量上限數值 (例如：10GB)。<div class="section"><h4>注意：</h4>
+		<ul>
+			<li>只有在 Btrfs 檔案系統下，共用資料夾才能使用<strong>開啟快照瀏覽</strong>和<strong>啟動共用資料夾空間配額</strong>選項。</li>
+			<li>所有使用者的 <strong>home</strong> 目錄使用空間總額不能超過「<strong>homes</strong>」共用資料夾的空間配額。</li>
+		</ul>
+		</div>
+	</li><a name="integrity_protection"></a><li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"><strong>啟動進階資料完整性保護：</strong>若要使用 <strong>CRC32 checksum</strong> 和 <strong>copy-on-write</strong> 方法來保護共用資料夾，您可以在建立共用資料夾時<strong>啟動進階資料完整性保護</strong>。CRC32 checksum 應用於檢查資料是否與原先寫入時完全一致，並於偵測到損毀時通知使用者。Copy-on-write 可於系統發生不正常關機時，協助改善資料的一致性。<div class="section"><h4>注意：</h4>
+	<ul>
+		<li>此選項僅適用於 Btrfs 檔案系統的儲存空間。</li>
+		<li>您可以在建立每個共用資料夾時啟動 / 停用此選項。共用資料夾建立後，即無法再修改此選項。</li>
+		<li>啟動此選項可能會影響系統效能。</li>
+	</ul>
+	</div></li>
+
+	<li><strong>加密此共用資料夾：</strong>若要加密共用資料夾，請執行以下操作：<ol>
+		<li>輸入並確認加密金鑰。加密金鑰不可包含半形逗號 (,) 或等號 (=)。</li>
+		<li>視需求勾選<b>開機時自動裝載</b>來於系統啟動時自動裝載加密資料夾。若停用此選項，加密資料夾會在下次 DiskStation 重新開機時卸載。若要檢視或存取已卸載的共用資料夾，您需要匯入或輸入加密金鑰，藉此手動裝載此資料夾。</li>
+	</ol>
+</ul>
+<li>按一下<b>確定</b>來完成。</li>
+
+</ol>
+
+<div class="section">
+<h4>共用資料夾命名規則：</h4>
+<ul>
+<li>共用資料夾名稱不分大小寫，可包含 1 至 32 個字元。但不可包含下列字元：[ ] ; : &quot;&quot; # $ % &amp; &apos; ( ) * + , / : ;<= >?@ [ ] \ ^ ` { } | ~</strong></li>
+<li>下列名稱已被保留，僅供系統使用︰<strong>.</strong>、<strong>..</strong>、<strong>global</strong>、<strong>home</strong>、<strong>homes</strong>、<strong>printers</strong>、<strong>public</strong>、<strong>satashare</strong>、<strong>surveillance</strong>、<strong>usbbackup</strong>、<strong>usbshare</strong>。</li>
+<li>共用資料夾名稱的第一個字不可為減號及空白，最後一個字不可為空白。</li>
+<li>共用資料夾<strong>描述</strong>有區分大小寫，最多可包含 64 個可顯示的 Unicode 字元。</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>為共用資料夾加密：</h4>
+
+<p>AES 256-bit 加密機制可以封鎖所有未經授權的存取嘗試來保護資料。共用資料夾一旦加密，沒有加密金鑰的使用者將無法存取或修改加密的資料，即使他們將硬碟從 DiskStation 取下並掛載至其它裝置，也一樣無法存取。</p>
+
+<h4>注意：</h4>
+<ul>
+<li>共用資料夾僅能於建立時加密。</li>
+<li>加密共用資料夾中的檔案及資料夾名稱不可超過 143 個英文字元或 43 個亞洲字元。</li>
+<li>加密的共用資料夾無法透過 NFS 進行存取。</li>
+<li>如果您透過 DiskStation 上的重置按鈕來還原系統預設密碼，加密的共用資料夾將被卸載，自動裝載加密共用資料夾的選項也會被停用。</li>
+</ul>
+
+</div>
+
+
+</body>
+</html>

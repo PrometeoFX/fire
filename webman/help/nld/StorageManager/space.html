@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Volume</h2>
+	<p>Volumes zijn basisopslagruimtes waarop de gebruiker gedeelde mappen en iSCSI LUN (gewone bestanden) kan maken, gegevens kan opslaan en pakketten kan installeren. Voordat u volumes kunt maken, moet u eerst een RAID Group maken. Voor meer informatie over RAID Groups zie <a href="raid.html">RAID Group</a>.
+</p>
+
+	<h4>Om een volume te maken:</h4>
+<ol>
+  <li>Zorg dat uw DiskStation een bestaande RAID Group met toewijsbare ruimte heeft.</li>
+  <li>Klik op de knop <strong>Maken</strong>.</li>
+		<li>Kies een RAID Group waarop u een volume wilt maken.</li>
+		<li>Wijzig de gewenste instellingen.</li>
+		<li>Stel de toewijzingsgrootte voor het volume in. (De instelling van de toewijzingsgrootte is niet beschikbaar voor volumes die in RAID Group voor enkele volumes of iSCSI LUN zijn gemaakt)
+		</li>
+</ol>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+	<li>het maximum toe te wijzen volume is 200 TB.</li>
+	<li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp enable-ds1616p">De minimaal toegewezen grootte aan een Btrfs-volume moet minstens 10 GB bedragen.</li>
+</ul>
+</div>
+
+
+<h4>Om een volume te verwijderen:</h4>
+	<ol>
+		<li>Selecteer het volume dat u wilt verwijderen.</li>
+		<li>Klik op <b>Verwijderen</b> en volg de wizard om het proces te voltooien.</li>
+	</ol>
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>het verwijderen van een volume zal alle bestaande gegevens op het desbetreffende volume verwijderen.</li>
+</ul>
+</div>
+
+<h4>Om koppelen van een volume te forceren:</h4>
+<p>als de cache op een ontbreekt, zal het systeem bij het opnieuw opstarten niet het volume koppelen. Is de cache niet herstelbaar en wilt u toegang tot het volume, klik dan op <b>Koppelen forceren</b>. </p>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>deze functie is alleen beschikbaar voor bepaalde modellen.</li>
+</ul>
+</div>
+
+	<h4>Om een volume te herstellen:</h4>
+	<p>Als de status van het volume <b>Beschadigd</b> aangeeft, ga naar het tabblad <b>RAID Group</b> en zoek de desbetreffende RAID Group. Volg vervolgens de aanbevolen instructies om het te herstellen.
+</p>
+
+	<h4>Om de grootte van een volume uit te breiden</h4>
+	<ul>
+		<li>Voor volumes gemaakt op een RAID Group voor meerdere volumes of iSCSI LUN's (blokniveau) 
+<ol>
+				<li>Selecteer het volume dat u wilt uitbreiden.</li>
+				<li>Klik op <b>Bewerken</b>.</li>
+				<li>Voer de nieuwe grootte in en klik op <b>OK</b> om het volume uit te breiden.</li>
+			</ol>
+		<li>Voor volumes die gemaakt zijn op een RAID Group voor enkel volume/iSCSI LUN (blokniveau) raadpleegt u het gedeelte <b>De grootte van een RAID Group uitbreiden</b> van <a href="raid.html">RAID Group</a>. Nadat de onderliggende RAID Group is uitgebreid, zal de volumegrootte groter zijn.
+	  </li>
+	</ul>
+
+
+<h3>SSD TRIM</h3>
+
+<p>Bestaat een volume volledig uit SSD's (Solid State Drives), dan raden wij u aan om SSD TRIM in te schakelen. Deze functie verbetert de lees- en schrijfprestaties van volumes gemaakt op basis van SSD's, verhoogt de efficiëntie en verlengt de levensduur van uw SSD's.</p>
+
+<h4>Om SSD TRIM in te schakelen:</h4>
+
+<ol>
+  <li>Open <b>Opslagbeheer</b> en ga naar <b>Volume</b>.</li>
+  <li>Selecteer een volume dat volledig uit SSD's bestaat en klik vervolgens op knop <b>Configureren</b>.</li>
+  <li>In het scherm dat verschijnt, gaat u naar tabblad <b>SSD TRIM</b> en schakelt u het selectievakje <b>TRIM inschakelen</b> in.</li>
+<li>Klik op de knop <strong>Schema instellen</strong> om te kiezen wanneer het systeem SSD TRIM moet uitvoeren.</li>
+<li>Klik op <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+
+<li>SSD TRIM is alleen beschikbaar op bepaalde DiskStation modellen en RAID-types. </li>
+
+
+<li>Bepaalde SSD-modellen kunnen SSD TRIM niet uitvoeren op RAID 5- en RAID 6-volumes. Raadpleeg de compatibiliteitslijst op <a href="http://www.synology.com/" target=_blank>www.synology.com</a>.</li>
+
+
+<li>SSD TRIM kan niet worden ingeschakeld in de volgende situaties:
+  <ul>
+    <li>het volume is gekoppeld met SSD-cache;</li>
+    <li>het pakket <strong>Time Backup</strong> is geïnstalleerd;</li>
+    <li>er is een high-availabilitycluster gemaakt met <strong>High Availability-beheerder</strong>.</li>
+  </ul>
+</li>
+<li>SSD TRIM kan niet worden ingeschakeld op blokniveau iSCSI LUN's.</li>
+<li>Bij het uitvoeren van SSD TRIM zullen systeemprestaties negatief worden beïnvloed. De vereiste tijdsduur voor het voltooien van de TRIM-procedure is afhankelijk van de volumegrootte en het SSD-model.</li>
+
+<li>Is TRIM op een volume ingeschakeld, dan is het ook ingeschakeld voor andere volumes van dezelfde schijfgroep of RAID Group.</li>
+
+</ul>
+</div>
+
+
+</body>
+</html>

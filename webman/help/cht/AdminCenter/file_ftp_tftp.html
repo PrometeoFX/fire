@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TFTP/PXE</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>TFTP/PXE</h2>
+
+<p><strong>控制台</strong> &gt; <strong>檔案服務</strong> &gt; <strong>TFTP / PXE</strong> 提供選項讓您設定 TFTP 及 PXE。</p>
+
+<h3>TFTP</h3>
+<p>TFTP (Trivial File Transfer Protocol) 是一種簡單的檔案傳輸通訊協定，一般用於傳輸設定或開機檔案且無須驗證的情況。啟動 TFTP 服務可讓 DiskStation 傳送開機載入器設定至用戶端裝置。</p>
+<h4>若要修改 TFTP 設定：</h4>
+<ol>
+<li>勾選<strong>啟動 TFTP 服務</strong>核取方塊。</li>
+<li>在 <strong>TFTP 根目錄</strong>欄位，指定哪些 DiskStation 上的資料夾可以讓 TFTP 用戶端存取。</li>
+<li>您可以按一下<strong>進階設定</strong>按鈕檢視並修改下列設定：</li>
+<ul>
+<li><strong>啟動 TFTP 檔案傳輸日誌：</strong>此選項可讓您追蹤透過 TFTP 傳輸的資料。</li>
+<li><strong>TFTP 用戶端存取權限：</strong>為 TFTP 用戶端選擇唯讀及讀寫的存取權限。選擇<strong>唯讀</strong>的情況下，TFTP 用戶端只能檢視根目錄裡的內容。選擇<strong>可讀寫</strong>的情況下，TFTP 用戶端可以修改根目錄裡的內容。</li>
+<li><strong>允許用戶端：</strong>選擇哪些用戶端可透過 TFTP 進行連線。您可以選擇<strong>所有連線</strong>，讓所有用戶端都能連線；也可以指定 IP 位址範圍來限定可以連線的用戶端。</li>
+</ul>
+<li>設定修改完畢之後，按一下<strong>套用</strong>來儲存變更。</li>
+</ol>
+
+
+<h3>使用 DiskStation 來為 PXE 設定 DHCP 服務</h3>
+<p>DiskStation 除了 TFTP 之外，還可以提供 DHCP 服務讓您套用合而為一的 PXE 設定。PXE (Pre-Boot Execution Environment，「開機前執行環境」) 為一網路環境，可讓用戶端裝置透過網路介面來開機，無須使用資料儲存裝置 (例如：硬碟)。套用 PXE 時，您可以將開機載入器的檔案存放在 DiskStation，用戶端裝置可以使用載入器透過網路來開機。</p>
+
+<p>若要提供 DHCP 服務一台 DiskStation，請確認您已安裝 Synology DHCP Server 套件。</p>
+
+<h4>若要為 PXE 設定 DHCP 服務：</h4>
+<ol>
+<li>勾選<strong>為 PXE 在此伺服器上設定 DHCP 服務</strong>。如果 DiskStation 未安裝 DHCP Server，系統會提示您安裝該套件。</li>
+<li>從 TFTP 根目錄中選擇開機載入器檔案，並指定其他 DHCP 相關設定。</li>
+<li>按一下<strong>套用</strong>來儲存設定。</li>
+</ol>
+</body>
+</html>

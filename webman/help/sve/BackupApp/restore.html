@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Återställ</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Återställ</h2>
+<p>Gå till <strong>Säkerhetskopiering & Replikering</strong> > <strong>Återställ</strong> för att återställa säkerhetskopieringsdata.</p>
+
+<h4><a name="restore"></a>Att återställa en säkerhetskopieringsuppgift:</h4>
+<ol class="disable-eds14">
+<li>Välj en säkerhetskopieringsuppgift och klicka sedan på <b>Återställ</b>. Om uppgiften är för flera versioner av säkerhetskopior, vänligen välj<strong> Återställ</strong> > <strong>Hela uppgiften</strong>.</li>
+<li>Du kan bli uppmanad att välja systemkonfiguration, olika versioner av säkerhetskopierad data, eller annat. Det beror på om det är en säkerhetskopieringsuppgift för data, en säkerhetskopieringsuppgift för LUN*, målet för säkerhetskopieringen är i en version (dvs. delad mapp) eller flera versioner (dvs. volym).</li>
+<li>Följ guiden för att slutföra installationen.</li>
+</ol>
+<ol class="enable-eds14">
+<li>Välj en säkerhetskopieringsuppgift och klicka sedan på <b>Återställ</b>.</li>
+<li>Du kan bli uppmanad att välja systemkonfiguration, olika versioner av säkerhetskopierad data, eller annat. Det beror på vilken typ av säkerhetskopieringsuppgift det är.</li>
+<li>Följ guiden för att slutföra installationen.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Obs:</h4>
+<ul>
+<li>Återställning för vissa applikationer har stöd. För att se huruvida ett specifikt filpaket har stöd för återställning och dess begränsningar, vänligen se hjälpen för vardera applikation.</li>
+<li>Vid återställning av ett filpaket när ett filpaket inte är installerat kommer systemet automatiskt att installera samma eller senaste versionen av applikationen. Om applikationen är installerad men dess version är äldre än den säkerhetskopierade kommer systemet automatiskt att uppgradera den till den ursprungliga säkerhetskopierade versionen.</li>
+<li>Applikationer som säkerhetskopierats i DSM 5.1 eller över kan inte återställas i DSM 5.0 eller lägre. </li>
+</ul>
+</div>
+
+<div class="section disable-eds14">
+<h4>Obs:</h4>
+<ul>
+<li>Efter slutförd återställning kommer en säkerhetskopierad LUN att bli återställd till en filbaserad LUN på den valda målvolymen.*</li>
+
+<li>Återställning för vissa applikationer har stöd. För att se huruvida ett specifikt filpaket har stöd för återställning och dess begränsningar, vänligen se hjälpen för vardera applikation.</li>
+<li>Vid återställning av ett filpaket när ett filpaket inte är installerat kommer systemet automatiskt att installera samma eller senaste versionen av applikationen. Om applikationen är installerad men dess version är äldre än den säkerhetskopierade kommer systemet automatiskt att uppgradera den till den ursprungliga säkerhetskopierade versionen.</li>
+<li>Applikationer som säkerhetskopierats i DSM 5.1 eller över kan inte återställas i DSM 5.0 eller lägre. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>För att återställa en enstaka fil eller mapp för flera versioner av säkerhetskopior:</h4>
+<ol>
+<li>Starta <strong>Filversionsbläddrare</strong>. Du kan göra det med någon av metoderna här nedanför:</li>
+<ul>
+<li>Klicka på <strong>Återställ</strong> och välj <strong>Enstaka filer/mappar</strong> från rullgardinsmenyn. </li>
+<li>Gå till <strong>Säkerhetskopieringsmål</strong> och expandera ditt valda Säkerhetskopieringsmål. Klicka på ikonen <strong>Versionsinformation för säkerhetskopiering</strong>. I fönstret som visas, välj den version av säkerhetskopia som du vill återställa och klicka på ikonen <strong>Filversionsbläddrare</strong>.</li>
+</ul>
+<li>Du kan bläddra bland versionerna för din valda fil eller mapp genom att använda tidslinjen eller ikonen kalender längst ner på skärmen. </li>
+<li>Välj den version som du vill hantera och klicka på ikonen <strong>Återställ</strong>. </li>
+<li>Alternativt kan du kopiera en fil eller mapp till en annan plats eller ladda ner den genom att använda <strong>Kopiera till...</strong> eller knappen <strong>Ladda ner</strong>. </li>
+<li>Du kan också högerklicka på filen eller mappen och välja dessa alternativ från rullgardinsmenyn. </li>
+</ol>
+<h4>Söka efter en specifik version:</h4>
+<ol>
+  <li>Klicka på pilen i filterfältet i det övre högra hörnet.</li>
+  <li>I rullgardinsmenyn kan du filtrera filer efter:</li>
+  <ul>
+    <li><strong>Nyckelord: </strong>Ange namnet på valfri fil eller mapp. Du kan använda jokertecken [*] (vilket representerar ett eller flera tecken) och [?] (som representerar ett tecken, vilket som helst) i dina nyckelord. Till exempel kan [a<span class="note_content">*</span>n] representera [a<span class="note_content">ktio</span>n], [a<span class="note_content">ttentio</span>n] eller [an].</li>
+    <li><strong>Filtyp:</strong> i rullgardinsmenyn kan du välja från <strong>Alla</strong>, <strong>Alla mappar</strong> eller <strong>Alla filer</strong> för att begränsa din sökning.</li>
+    <li><strong>Storlek:</strong> välj <strong>Alla</strong> eller välj <strong>är lika med</strong>, <strong>är större än</strong>, <strong>är mindre än</strong> och sedan ange ett värde.</li>    
+    <li><strong>Datumintervall: </strong>välj från <strong>Idag</strong>, <strong>Igår</strong>, <strong>Förra veckan</strong> eller <strong>Förra månaden</strong> eller <strong>Anpassa</strong> för att ange ett startdatum och ett slutdatum för att hitta versioner inom ett specifikt intervall.</li>
+
+  </ul>
+  <li>För att tillämpa dina filter, klicka på <strong>Filtrera</strong>. </li>
+  <li>För att återställa din filtrerade sökning, klicka på knappen <strong>Återställ</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Endast uppgifter med flera versioner av säkerhetskopior tillhandahåller funktionen Filversionsbläddrare.</li>
+<li>Filversionsbläddrare fungerar endast till viss del i DSM 5.1 eller lägre.</li>
+<li dir="ltr">Systemkonfiguration och applikationer kan endast återställas via <strong>Återställ</strong> > <strong>Hela uppgiften</strong>. </li>
+<li>Metadata kommer inte att inkluderas i åtgärderna <strong>Kopiera till...</strong> och <strong>Ladda ner</strong>. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Att återställa säkerhetskopieringsuppgifter från andra säkerhetskopieringsmål:</h4>
+<ol>
+<li>Klicka på <b>Återställ från...</b>.</li>
+<li>Välj något av följande för att lokalisera säkerhetskopieringsuppgiften och klicka på <b>Nästa</b>:</li>
+<ul>
+<li><b>Lokal återställning</b>: Välj detta alternativ för att återställa data från en lokal delad mapp eller en extern disk.</li>
+<li><b>Nätverksåterställning</b>: Välj detta alternativ för att återställa data från en annan DiskStation eller rsync-kompatibel server.</li>
+
+<li><b>Återställning av gemensam molntjänst</b>: Välj det här alternativet för att återställa data från en server för gemensam molntjänst. </li>
+
+</ul>
+<li>Vid uppmaning, välj källan där säkerhetskopieringsuppgiften finns och välj sedan målet för att återställa data.</li>
+<li>Följ guiden för att slutföra.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Obs:</h4>
+<ul>
+
+  <li>Inbäddad DataStation kan bara återställa delade mappar till externa enheter med ext3/ext4.</li>
+  
+<li>Inbäddad DataStation har inte stöd för återställning av applikationer utan en extern enhet med ext3/ext4.</li>
+
+</ul>
+</div>
+
+<p>____<br /> * Endast tillgängligt för vissa modeller.</p>
+</body></html>

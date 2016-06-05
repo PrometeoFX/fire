@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Info-Center</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h1>Info-Center</h1>
+<p>Info-Center zeigt grundlegende Informationen &uuml;ber verschiedene Aspekte Ihres DiskStation an, wie Hardware-Spezifikationen, Netzwerk, Speicher und Dienste. Info-Center befindet sich unter <strong>Systemsteuerung</strong> &gt; <strong>Info-Center</strong>.</p>
+<h2><a name="general"></a>Allgemein</h2>
+<p>Auf der Registerkarte <b>Allgemein</b> werden allgemeine Informationen &uuml;ber den DiskStation, einschlie&szlig;lich Seriennummer, Modellname, Gr&ouml;&szlig;e des physischen Speichers, DSM-Version, Zeitinformationen, Temperaturzustand oder externe Ger&auml;te angezeigt.</p>
+
+<h3 class="disable-eds14">Thermal-Status*</h3>
+<p class="disable-eds14">Der Thermal-Status von DiskStation wird entweder gr&uuml;n oder orange hervorgehoben:</p>
+
+<ul class="disable-eds14">
+<li><strong>Gr&uuml;n:</strong> Der Thermal-Status ist normal.</li>
+<li><strong>Orange</strong>: Die Temperatur des DiskStation ist zu hoch. Wenn die Temperatur von DiskStation hoch bleibt, k&ouml;nnte das Ger&auml;t wegen &Uuml;berhitzung heruntergefahren werden.</li>
+</ul>
+
+
+<h2><a name="network"></a>Netzwerk</h2>
+<p>Die Registerkarte <b>Netzwerk</b> zeigt die Netzwerkinformationen, z.&nbsp;B. DNS-Server, IP-Adresse, Subnetz-Maske und mehr an.</p>
+
+<h2><a name="storage"></a>Speicher</h2>
+<p class="disable-eds14">Die Registerkarte <b>Speicher</b> zeigt Informationen zur Volumen-Auslastung und zum Festplattenstatus an.</p>
+<p class="enable-eds14">Die Registerkarte <strong>Speicher</strong> zeigt Informationen zur Speichernutzung und den Status der externen Speicherger&auml;te an.</p>
+
+<h3 class="disable-eds14">Festplattenstatus</h3>
+
+<p class="disable-eds14">Es gibt die folgenden m&ouml;glichen Statusmeldungen auf einer internen Festplatte:</p>
+
+<ul class="disable-eds14">
+<li><strong>Keine Festplatte installiert:</strong> Im entsprechenden Festplatteneinschub befindet sich keine Platte.</li>
+<li><strong>Nicht initialisiert:</strong> Systempartition und Volumen sind nicht auf der Festplatte erstellt worden.</li>
+<li><strong>Normal:</strong> Systempartition und Volumen sind auf der Festplatte verf&uuml;gbar.</li>
+<li><strong>Initialisiert:</strong> Systempartition verf&uuml;gbar, aber kein Volumen erstellt.</li>
+<li><strong>Systempartitionierung fehlgeschlagen:</strong> Systempartitionierung auf der Festplatte ist nicht verf&uuml;gbar.</li>
+<li><strong>Abgest&uuml;rzt:</strong> Auf das Volumen der Festplatte konnte nicht zugegriffen werden. Wir empfehlen, die Festplatte auszutauschen.</li>
+</ul>
+
+
+
+
+<div class="section disable-eds14">
+
+<h4>Hinweis:</h4>
+<p>Damit das System normal funktioniert, muss mindestens eine Festplatte den Status <b>Normal</b> oder <b>Initialisiert</b> haben.</p>
+
+</div>
+
+
+<h2><a name="service"></a>Dienst</h2>
+<p>Die Registerkarte <b>Dienst</b> zeigt eine Liste der Dienste und installierten Pakete einschlie&szlig;lich der Optionen an, die einzelnen Dienste und Pakete zu aktivieren oder deaktivieren. Dar&uuml;ber hinaus gibt es f&uuml;r einige Dienste und Pakete bestimmte Optionen, um die Verbindung zu testen oder festzulegen, ob &uuml;ber die Firewall auf einen Dienst oder ein Paket zugegriffen werden kann.</p>
+
+<h4>So &auml;ndern Sie die Einstellungen von Diensten oder Paketen:</h4>
+<ol>
+<li>Die folgenden Optionen sind verf&uuml;gbar:<ul>
+	  <li><strong>Aktivieren:</strong> Aktiviert oder deaktiviert den Dienst oder das Paket.</li>
+	  <li><strong>Durch Firewall zulassen:</strong> F&uuml;gt vom Dienst oder der Anwendung verwendete Ports hinzu oder entfernt sie unter <strong>Systemsteuerung</strong> &gt; <strong>Externer Zugriff</strong> &gt; <strong>Routerkonfiguration</strong>, sodass dem Dienst oder dem Paket der Pass-through durch die Firewall von DiskStation erlaubt wird.</li>
+	  <li><strong>Einstellungen:</strong> W&auml;hlen Sie die Netzwerk-Schnittstelle, deren Firewall-Einstellungen angezeigt und verwaltet werden sollen. Sie k&ouml;nnen <strong>Alle</strong> ausw&auml;hlen, um die Firewall-Einstellungen aller Netzwerk-Schnittstellen anzuzeigen und zu verwalten.</li>
+	  <li><strong>Verbindung testen:</strong> Testet die von Diensten und Paketen verwendeten Ports. So k&ouml;nnen Sie testen, ob Ger&auml;te auf die Dienste und Pakete von einem externen Netzwerk aus zugreifen k&ouml;nnen.</li>
+    </ul>
+</li>
+<li>Klicken Sie auf <strong>Speichern</strong>, um die &Auml;nderungen zu speichern oder auf <strong>Zur&uuml;cksetzen</strong>, um die &Auml;nderungen zu verwerfen. </li>
+</ol>
+
+<p class="disable-eds14">____<br> * Nur bei bestimmten Modellen verf&uuml;gbar. </p>
+
+</body>
+</html>

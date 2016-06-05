@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DSM-Inställningar</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="https"></a>DSM-Inställningar</h2>
+
+<p>I <strong>Kontrollpanel</strong> > <strong>Nätverk</strong> > <strong>DSM-inställningar</strong> kan du ändra portnumret som klienter använder för att få åtkomst till DSM. När HTTPS är aktiverat kommer anslutningarna att krypteras med SSL/TLS.</p>
+
+<h4>Ändra standardportnumret:</h4>
+<ol>
+<li>Ange portnumret i fältet <b>HTTP</b> eller <b>HTTPS</b>.</li>
+<li>Klicka på <b>Tillämpa</b>.</li>
+</ol>
+
+<h4>Aktivera HTTPS-anslutningar:</h4>
+<ol>
+<li>
+Markera <b>Aktivera HTTPS-anslutning</b>.
+</li>
+<li>Om du vill omdirigera klienter till HTTP-porten (5001) vid försök att få åtkomst till DSM via HTTP-porten (5000), markera rutan <b>Omdirigera HTTP-anslutningar direkt till HTTPS</b>.</li>
+<li>
+Klicka på<b> Tillämpa</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Portar som används för HTTPS-anslutning:</h4>
+<ul>
+  <li><b>DSM</b>: Standardportnumret är 5001 så att du kan använda säker åtkomst till DSM genom att ange följande adress: https://server-hostname:5001/</li>
+<li><b>Web Station och Photo Station</b>: Standardportnumret är 443 så du kan använda säker åtkomst till åt Web Station och Photo Station genom att ange följande adress: https://server-hostname/</li>
+</ul>
+
+</div>
+
+<h4>För att göra så att det går att upptäcka DiskStation via Windows nätverksidentfiiering:</h4>
+<ol>
+<li>
+Markera <b>Aktivera Windows nätverksidentifiering</b>.
+</li>
+<li>
+Klicka på<b> Tillämpa</b>.
+</li>
+</ol>
+
+</body>
+</html>
+

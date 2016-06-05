@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Kötet létrehozása - Synology DSM Súgó</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on Synology NAS using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Kötet létrehozása</h2>
+
+<p>Ez a rész elmagyarázza, hogyan kell létrehozni egy kötetet a(z) DiskStation eszközön. Új kötet létrehozásakor a következő módszerek egyikét választhatja:</p>
+
+<ul>
+  <li><b>Gyors:</b> Ez a legjobb lehetőség kezdők számára. Válassza ezt a módszert, ha automatikusan optimalizálni szeretné a tárolókapacitást és a teljesítményt anélkül, hogy aggódnia kellene ennek műszaki vonatkozásai, például a RAID-szintek miatt. </li>
+
+<li><b>Egyedi:</b> Haladó felhasználók számára, akik szabályozni szeretnék a kötet létrehozásának finomabb vonatkozásait, például a RAID típusokat és a kapacitás elosztását. Ez a lehetőség különböző RAID típusokat támogat, lehetővé teszi egyetlen vagy több kötet létrehozását, és lehetőségeket nyújt minden egyes kötet számára meghatározott kapacitás-mennyiségek kiosztására (csak több kötet RAID-en történő létrehozásakor).
+</li>
+</ul>
+
+<div class="section">
+<h4>Egy vagy több kötet RAID-en?</h4>
+<p>Egy kötet egyedi üzemmódban történő létrehozásakor ön a következő lehetőségek egyikét választhatja:</p>
+<ul>
+  <li><b>Egyetlen kötet a RAID-en</b>
+    <ul>
+      <li>Egyetlen kötetet hoz létre, a kiválasztott merevlemezek teljes rendelkezésre álló kapacitásának felhasználásával.</li>
+      <li>Jobb sebességet és teljesítményt biztosít.</li>
+      <li>Különböző RAID-típusokat támogat.</li>
+    </ul>
+  </li>
+  <li><b>Több kötet a RAID-en</b>
+    <ul>
+      <li>Lehetővé teszi több kötetnek egy lemezcsoporton történő létrehozását.</li>
+      <li>Támogatja meghatározott kapacitásmennyiség hozzárendelését az egyes kötetekhez.</li>
+      <li>Rugalmasabb tároláskezelést biztosít.</li>
+      <li>Különböző RAID-típusokat támogat.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Kezdés előtt:</h4>
+<ul>
+<li>Kezdés előtt győződjön meg róla, hogy a merevlemezeken nincsenek fontos adatok. A létrehozás folyamata közben valamennyi létező adat törlődik.</li>
+<li>Menjen a <b>HDD/SSD</b> oldalra, és győződjön meg róla, hogy minden egyes merevlemez állapota <b>Normál</b> vagy <strong>Nincs inicializálva</strong>.</li>
+</ul>
+</div>
+
+
+<h4>Kötet létrehozása:</h4>
+<ol>
+<li>Nyissa meg a <b>Tároláskezelő</b> programot.</li>
+<li>Menjen a <b>Kötet</b> oldalra, és kattintson a <b>Létrehozás</b> menüpontra.</li>
+<li>Megjelenik a kötet létrehozása varázsló. Igényei szerint válassza a <strong>Gyors</strong> vagy az <strong>Egyedi</strong> lehetőséget. Majd a kötet létrehozásának befejezéshez kövesse a varázsló utasításait.</li>
+</ol>
+
+</body>
+</html>

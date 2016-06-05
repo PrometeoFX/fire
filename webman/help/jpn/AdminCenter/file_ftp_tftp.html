@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TFTP/PXE</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>TFTP/PXE</h2>
+
+<p>TFTP と PXE を設定するには、<strong>[コントロール パネル]</strong> &gt; <strong>[ファイル サービス]</strong> &gt; <strong>[TFTP/PXE]</strong> を選択してオプションを設定します。</p>
+
+<h3>TFTP</h3>
+<p>TFTP (Trivial File Transfer Protocol) は、簡単なファイル転送プロトコルです。通常、認証を必要としない状況で、設定やルート ファイルの転送に使用されます。TFTP サービスを有効にすると、DiskStation はクライアント デバイスにブート ローダーを転送することができるようになります。</p>
+<h4>TFTP 設定を編集するには：</h4>
+<ol>
+<li><strong>[TFTP サービスを有効にする]</strong> チェックボックスにチェックマークを付けます。</li>
+<li><strong>[TFTP ルート フォルダ]</strong> 欄で、TFTP クライアントがアクセスできる DiskStation のフォルダを指定します。</li>
+<li>次の設定を表示したり、変更したりするには、<strong>[詳細設定]</strong> ボタンをクリックしてください。</li>
+<ul>
+<li><strong>TFTP ファイル転送ログを有効にする：</strong>TFTP を介して転送したデータを追跡します。</li>
+<li><strong>TFTP クライアント権限：</strong>TFTP クライアントの読み取り、書き込み権限を選択します。<strong>[読み取り専用]</strong> に設定されていると、TFTP クライアントはルート フォルダのコンテンツを見ることしかできません。<strong>[書込み可能]</strong> を選択すると、TFTP クライアントはルート フォルダのコンテンツを編集することができます。</li>
+<li><strong>許可されたクライアント：</strong>TFTP を介して接続できるクライアントを選択します。<strong>[すべての接続]</strong> を選択すると、全クライアントが接続できます。また、ある範囲の IP アドレスを指定すると、接続できるクライアントを制限できます。</li>
+</ul>
+<li>設定を変更したら、<strong>[適用]</strong> をクリックして設定を保存します。</li>
+</ol>
+
+
+<h3>DiskStation で PXE 向けの DHCP サービスを設定する</h3>
+<p>オール イン ワン PXE 設定を実行できるように、DiskStation は TFTP のほかに DHCP サービスにも対応しています。Pre-boot Execution Environment (PXE) は、クライアント デバイスがデータ ストレージ デバイス（ハードディスクなど）ではなくネットワーク インターフェイスを使ってブートアップするネットワーク環境です。PXE を設定すると、ブート ローダーを DiskStation に保管できるため、クライアント デバイスはブート ローラーを使い、ネットワークを介してブートアップすることができます。</p>
+
+<p>DiskStation で DHCP サービスを使用するためには、Synology DHCP Server パッケージをインストールしてください。</p>
+
+<h4>PXE 用 DHCP サービスを設定する：</h4>
+<ol>
+<li><strong>[PXE 向けにこのサーバーの DHCP サービスを設定する]</strong> にチェックマークを付けます。DiskStation にまだ DHCP Server パッケージがインストールされていない場合は、これをインストールするよう促されます。</li>
+<li>TFTP ルート フォルダからブート ローダー ファイルを選択し、他の DHCP 関連の設定を行ってください。</li>
+<li><strong>[適用]</strong> をクリックして設定を保存します。</li>
+</ol>
+</body>
+</html>

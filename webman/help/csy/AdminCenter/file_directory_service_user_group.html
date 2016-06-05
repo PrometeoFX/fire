@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Directory Service</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Uživatelé nebo skupiny domény/LDAP</h2>
+<p>Pokud jednotku DiskStation připojíte k adresářové službě jako klientské zařízení LDAP nebo systému Windows, můžete v rámci jednotky DiskStation nastavit a změnit přístupová oprávnění ke sdíleným složkám a aplikacím systému DSM a povolit uživatelům domény a LDAP službu složky uživatele.</p>
+<h3>Uživatelé domény/LDAP</h3>
+<p>V závislosti na typu adresářové služby, ke které se připojujete, můžete pro každého uživatele kliknutím na možnost <b>Uživatelé domény</b> nebo <b>Uživatel LDAP</b> nastavit oprávnění ke sdíleným složkám a aplikacím a také kvóta pro místo na disku.</p>
+<h4>Pravidla nastaven&iacute; opr&aacute;vněn&iacute;:</h4>
+<ul>
+<li>V&nbsp;př&iacute;padě konfliktů opr&aacute;vněn&iacute; budou priority určeny n&aacute;sledovně: NA &gt; RW &gt; RO.</li>
+<li>Přehled opr&aacute;vněn&iacute;: zde jsou uvedena opr&aacute;vněn&iacute; uživatele. Ta z&aacute;vis&iacute; na nastaven&iacute; opr&aacute;vněn&iacute; uživatele a&nbsp;na tom, do kter&yacute;ch skupin je uživatel zařazen.</li>
+<li>Opr&aacute;vněn&iacute; skupiny: přiřaďte skupin&aacute;m opr&aacute;vněn&iacute; pro př&iacute;stup ke sd&iacute;len&yacute;m složk&aacute;m.</li>
+</ul>
+<h3>Složka uživatele</h3>
+<p>Stejně jako místní uživatelé mají všichni uživatelé domény/LDAP přístup ke složce <b>home</b>, a to prostřednictvím protokolů CIFS, AFP, FTP nebo aplikace File Station. </p>
+<p>
+Uživatelé s oprávněními správce mají přístup ke všem osobním složkám ve sdílené složce <b>homes</b>. Všechny složky uživatele jsou uloženy v některé z podsložek s názvem „<b>@DH-název domény</b>“ (pro uživatele domény) nebo „<b>@LH-FQDN název</b>“ (pro uživatele LDAP). Název složky uživatele odpovídá uživatelskému účtu plus jedinečnému číslu.</p>
+<ol>
+<span class="note_head">Poznámka: </span>
+<li>Sdílenou složku <span class="bold_general">homes</span> lze odstranit až po zakázání služby Složka uživatele.</li>
+<li>Povolení možnosti složky uživatele pro uživatele domény/LDAP aktivuje také službu složky uživatele pro místní uživatele, pokud ještě není povolena.
+</li>
+</ol> 
+<h3>Skupina domény/LDAP</h3> 
+<p>V závislosti na typu adresářové služby, ke které se připojujete, můžete kliknutím na možnost <b>Skupina domény</b> nebo <b>Skupina LDAP</b> nastavit oprávnění skupiny domény/LDAP ke sdíleným složkám. Důležitost oprávnění: NA > RW > RO.</p> 
+</body> </html> 

@@ -1,0 +1,122 @@
+
+[SYNOSYSLOG_DB_CORRUPT]
+Subject: A Napló központ %DBPATH% adatbázisa megsérült
+
+Kedves felhasználó!
+
+A rendszer a következő sérült adatbázist találta a Napló központban: „%DBPATH%.corrupt”. Kérjük, forduljon segítségért a Synology támogatószolgálatához.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_EPS_EXCEED]
+Subject: Rendszernapló értesítés %HOSTNAME% számára
+
+Kedves felhasználó!
+
+A másodpercenkénti naplók száma a következőn: %HOSTNAME% nagyobb, mint %EPS%. Az adatokat ellenőrizze a rendszerben.
+
+Üdvözlettel,
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_KEYWORD_MATCH]
+Subject: Rendszernapló értesítés %HOSTNAME% számára
+
+Kedves felhasználó!
+
+A(z) %KEYWORD% kulcsszót tartalmazó rendszernapló található a következőn: %HOSTNAME%. Az adatokat ellenőrizze a rendszerben.
+
+A naplófájl tartalma a következő:
+
+%SYSLOG_CONTENT%
+
+Üdvözlettel,
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_LogSend]
+Subject: Rendszernapló értesítés %HOSTNAME% számára
+
+Kedves felhasználó!
+
+%HOSTNAME% számára készült néhány rendszernapló fájl. Az adatokat ellenőrizze a rendszerben.
+
+A naplófájlok tartalma a következő:
+
+%SYSLOG_CONTENT%
+
+Üdvözlettel,
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_SEV_EXCEED]
+Subject: Rendszernapló értesítés %HOSTNAME% számára
+
+Kedves felhasználó!
+
+%SEV% fokozatú rendszernapló található a következőn: %HOSTNAME%. Az adatokat ellenőrizze a rendszerben.
+
+A naplófájl tartalma a következő:
+
+%SYSLOG_CONTENT%
+
+Üdvözlettel,
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_ShareEncMount]
+Subject: A(z) %HOSTNAME% gazdagépen található Napló központ napló archiválása folytatódik.
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% gazdagépen található Napló központ napló archiválása folytatódik, mert csatolásra került a napló adatbázis mentésére használatos "%SHARED_FOLDER%" titkosított megosztott mappa.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_ShareEncUnmount]
+Subject: A(z) %HOSTNAME% gazdagépen található Napló központ napló archiválása szünetel.
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% gazdagépen található Napló központ napló archiválása szünetel, mert leválasztásra került a napló adatbázis mentésére használatos "%SHARED_FOLDER%" titkosított megosztott mappa. A napló archiválás folytatásához csatolja a megosztott mappát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_ShareRemove]
+Subject: A(z) %HOSTNAME% gazdagépen található Napló központ napló archiválása letiltásra került.
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% gazdagépen található Napló központ napló archiválása letiltásra került, mert eltávolításra került a napló adatbázis mentésére használatos "%SHARED_FOLDER%" megosztott mappa. Jelentkezzen be a %OSNAME%–be, menjen a Főmenü > Napló központ > Tárolási beállítások menüpontra, és válasszon másik megosztott mappát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_ShareRename]
+Subject: A(z) %HOSTNAME% gazdagépen található Napló központ adatbázisának helye frissítésre került.
+
+Kedves felhasználó!
+
+A Napló központ %HOSTNAME% gazdagépen található naplóadatbázisának elérési útja frissítésre került, mert a naplóadatbázis mentésére használt "%SHARED_FOLDER%" megosztott mappa módosult.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_VOL_FULL]
+Subject: A(z) %HOSTNAME% gazdagépen található Napló központ tárolótere kifogyóban.
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% gazdagépen található Napló központ tárolótere kifogyóban. Módosítsa a Napló központ megosztott mappáját.
+
+Üdvözlettel:
+%COMPANY_NAME%
+

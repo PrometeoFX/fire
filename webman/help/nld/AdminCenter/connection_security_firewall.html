@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Firewall</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_firewall"></a>Firewall</h2>
+<p>
+Het definiëren van firewallregels in <strong>Configuratiescherm</strong> > <strong>Beveiliging</strong> > <strong>Firewall</strong> helpt om ongeoorloofd aanmelden te voorkomen en toegang tot services te controleren. U kunt beslissen om de toegang tot bepaalde netwerkpoorten voor specifieke IP-adressen toe te staan of te weigeren.</p><h3>Om een firewallregel te maken:</h3>
+<ol>
+<li>Selecteer een netwerkinterface in de vervolgkeuzelijst in de rechterbovenhoek.</li>
+<li>Klik op <b>Maken</b>.</li>
+<li>Selecteer in het gedeelte <b>Poorten</b> een van de volgende opties:</li>
+<ul>
+<li>Kies <b>Alle</b> om de regel toe te passen op alle poorten.</li>
+<li>Kies <b>Selecteren uit een lijst met geïntegreerde toepassingen</b> en klik op <strong>Selecteren</strong>. Selecteer de geïntegreerde toepassing waarop u deze firewallregel wilt toepassen.</li>
+<li>Selecteer <b>Aangepast</b> en klik op <b>Aangepast</b>. U kunt voor deze regel tot 15 poorten invoeren, gescheiden door een komma of door een poortbereik op te geven.</li>
+</ul>
+<li>Selecteer in het gedeelte <b>Bron-IP</b> een van de volgende opties:</li>
+<ul>
+<li>Kies <b>Alle</b> om de regel toe te passen op alle IP-adressen.</li>
+<li>Selecteer <b>Specifiek IP</b> en klik op <strong>Selecteren</strong>. U kunt een IP-adres of IP-bereik opgeven om er deze firewallregel op toe te passen.</li>
+<li>Kies <b>Regio</b> en geef tot 15 landen op waarop u deze firewallregel wilt toe te passen.</li>
+</ul>
+<li>Selecteer een van de volgende opties in het gedeelte <b>Actie</b>:</li>
+<ul>
+	<li>Kies <b>Toestaan</b> om toegang te verlenen tot de opgegeven poorten en het opgegeven bron-IP.</li>
+	<li>Kies <b>Weigeren</b> om de toegang te weigeren aan de eerder opgegeven poorten en bron-IP-adressen.</li>
+</ul>
+</ol>
+
+<p>
+U kunt LAN- en PPPoE-firewallregels weergeven door deze interfaces te selecteren in het vak in de rechterbovenhoek. Onderaan de lijst met regels kunt u <b>Toegang toestaan</b> of <b>Toegang weigeren</b> selecteren om toegangsverzoeken die niet overeenstemmen met een bestaande firewallregel voor de respectievelijke interface te weigeren of toe te staan.</p>
+
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>u kunt tot 100 regels maken voor een netwerkinterface. </li>
+<li>Met slepen en neerzetten kunt u de regels in de lijst opnieuw rangschikken.</li>
+<li>de prioriteit van de regels wordt bepaald door hun positie in de lijst.</li>
+<li>Als uw meerdere netwerkpoorten heeft die verbonden zijn met hetzelfde subnet, werken de firewallregels mogelijk niet correct.*</li>
+<li>Als u meerdere LAN-poorten combineert met link aggregation, zal de firewall de regels van de eerste netwerkinterface toepassen en de regels van de tweede netwerkinterface handhaven.</li>
+<li>Maakt uw DiskStation-apparaat via PPPoE verbinding met internet, dan moeten de gerelateerde firewallregels op de desbetreffende PPPoE-interface worden geconfigureerd.</li>
+</ul>
+</div>
+<h3>Gedrag van firewellregels:</h3>
+<p>DSM Firewall stemt overeen met regels volgens prioriteit. <strong>Zodra een regel overeenstemt, wordt hij geïmplementeerd en zal DSM Firewall hem niet meer afstemmen op resterende regels</strong>. Als er geen regels overeenstemmen, zal DSM Firewall de standaardactie uitvoeren die in elke interface is opgegeven.</p>
+<h4>Prioriteit van firewellregels:</h4>
+<ol> 
+<li>Regels gedefinieerd in "All interface"</li>
+<li>Regels gedefinieerd in respectievelijke interfaces waartoe de verbinding behoort</li>
+<li>Regels gedefinieerd in respectievelijke interfaces waartoe de verbinding behoort</li>
+</ol>
+<p>____<br>  * Uitsluitend van toepassing op specifieke modellen.<br> # Deze functie omvat door MaxMind gegenereerde GeoLite-gegevens die beschikbaar zijn op <a href="http://www.maxmind.com" target="_blank">http://www.maxmind.com</a>.</p>
+<br>
+</body>
+</html>

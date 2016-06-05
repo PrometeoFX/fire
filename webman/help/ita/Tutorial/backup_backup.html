@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Backup del dati sul Synology NAS per garantire la sicurezza dei dati</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Backup del dati sul Synology NAS per garantire la sicurezza dei dati</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/Backup/back_up_your_data_on_synology_nas_to_ensure_data_security.jpg" />
+<h2>Panoramica</h2>
+<p>Malfunzionamenti imprevisti del server o crash del volume costituiscono un rischio per i dati importanti. Il Synology NAS offre agli utenti diverse alternative per eseguire sia localmente che da remoto copie di backup sicure dei dati più importanti, in modo da essere sempre preparati in caso di problemi. È possibile scegliere di eseguire il backup in o più modi per ridurre il rischio di perdita dei dati, in relazione ai requisiti e alle situazioni lavorative.</p>
+
+<h3 class="list_head">1. Backup su un dispositivo di archiviazione esterno</h3>
+<p> Eseguendo un backup locale, è possibile scegliere di impostare la destinazione del backup su un'altra cartella nello stesso volume, gruppo RAID o anche sullo stesso disco fisico. In questo caso, se i dati vengono inavvertitamente eliminati, sarà possibile recuperarli dalle copie di backup in un'altra cartella. Tuttavia, in caso di malfunzionamenti del server o crash del volume, i dati, così come le copie di backup, potrebbero andare perse. Pertanto, si consiglia di eseguire sempre il backup dei dati importanti su un dispositivo di archiviazione esterno, invece che sullo stesso server. Synology NAS consente agli utenti di impostare una destinazione backup non solo sui dischi locali, ma anche su dispositivi USB esterni. La funzione è disponibile nel <b>Menu principale > Backup e replica</b>. Per le istruzioni dettagliate, consultare <a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=ita#local_backup">qui</a>.</p>
+
+<h3 class="list_head">2. Backup su un altro Synology NAS presente in rete</h3>
+<p>Il backup dei dati su un dispositivo di archiviazione esterno consente di migliorare la disponibilità dei dati, tenendo anche in considerazione il rischio di disastri come incendi o terremoti che si possono verificare nel luogo dove si trova il server o il dispositivo di archiviazione. Synology NAS consente agli utenti di impostare un backup esterno per il trasferimento delle copie dei dati su un server in un altro luogo tramite la rete, riducendo in questo modo il rischio di perdita dei dati causato da disastri nel luogo in cui si trova il server. È possibile crittografare il trasferimento dati del backup in modo da proteggere i dati importanti con un livello di protezione molto alto. Grazie all'opzione di backup a livello blocco, il NAS esegue il backup dei soli blocchi modificati, è utile in particolare quando il backup viene eseguito tramite Internet. La funzione è disponibile nel <b>Menu principale > Backup e replica</b>. Per le istruzioni dettagliate, consultare <a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=ita#network_backup">qui</a>.</p>
+
+<h3 class="list_head">3. Backup su spazi di archiviazione cloud pubblici</h3>
+<p>Il backup remoto tra diversi dispositivi NAS richiede due o più server, un certo numero di dischi in essi contenuti e i luoghi per l'individuazione dei server. La configurazione aziendale potrebbe non consentire l'impostazione di backup esterni con diversi dispositivi NAS. Per offrire una soluzione al problema di una distribuzione impraticabile dei NAS per il backup di rete, la funzione Backup di Synology offre il supporto per diversi servizi cloud pubblici che consentono di eseguire il backup dei dati direttamente su un account cloud pubblico. La funzione è disponibile in <b>Backup e replica</b> o <b>Centro pacchetti</b> in relazione allo spazio di archiviazione cloud preferito. Per le istruzioni dettagliate, consultare <a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=ita#cloudservice_backup">qui</a>.</p>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DHCP Server</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>DHCP Server</h2>
+<p>Din DiskStation kan påtage sig rollen som DHCP-server og tildeler dynamiske IP-adresser til DHCP-klienter på dit lokale netværk.</p>
+
+<h4>Sådan aktiverer du DHCP-r Sver:</h4>
+<ol>
+<li>Gå til <strong>Kontrolpanel</strong> > <strong>Netværk</strong> > siden <strong>Netværksinterface</strong>.</li>
+<li>Vælg et netværksinterface (f.eks. LAN), og klik på <strong>Rediger</strong>.</li>
+<li>Gå til fanen <strong>DHCP Server</strong>, og marker <b>Aktiver DHCP Server</b>.</li>
+<li>Indtast en værdi i feltet <b>Lejetid for adresse</b> for at angive DHCP-lejetiden (i minutter) for IP-adresser, der er tildelt DHCP-klienter.</li>
+<li>
+Indtast DNS-adressen på dine DHCP-klienter i felterne <b>Primær DNS</b> (påkrævet) og <b>Sekundær DNS</b> (valgfrit).
+</li>
+<li>
+Angiv domænenavnet for DHCP Serveren i feltet <b>Domænenavn</b> (valgfrit).
+</li>
+<li>
+Klik på <b>OK</b>.
+</li>
+</ol>
+<h4>Sådan tilføjer du et undernet:</h4>
+<ol>
+<li>
+Klik på <b>Tilføj</b>, og angiv oplysningerne under følgende kolonner:
+</li>
+<ul>
+<li>
+<b>Aktiver:</b> Aktiver eller deaktiver undernettet.
+</li>
+<li>
+<b>Start</b>: Den første IP-adresse i undernettet.
+</li>
+<li>
+<b>Slut</b>: Den sidste IP-adresse i undernettet.
+</li>
+<li>
+<b>Netmaske</b>: Undernetmasken.
+</li>
+<li>
+<b>Gateway</b>: Gateway'en for undernettet.
+</li>
+</ul>
+<li>
+Klik på <b>OK</b>.
+</li>
+</ol>
+
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+<li>Du kan kun tilføje op til 32 undernet.</li>
+</ul>
+</div>
+
+
+
+<h3>DHCP-klienter</h3>
+
+<p>Hvis du vil se en liste over DHCP-klienter og deres netværkskonfigurationer (f.eks. MAC-adresse, IP-adresse, værtsnavn og resterende tid, før DHCP-lejen udløber), kan du gå til fanen <strong>DHCP-klienter</strong>.</p>
+
+
+<h3>DHCP-reservation</h3>
+
+<p>Hvis du også vil have en klient, der altid modtager den samme IP-adresse under DHCP-lejefornyelse, kan du tilføje klienten til adressereservationslisten.</p>
+
+<h4>Sådan tilføjer du en klient til adressereservationslisten:</h4>
+
+<ul>
+<li>Klik på <b>Tilføj</b>.</li>
+<li>Angiv klientens MAC-adresse, den IP-adresse, du vil tildele klienten og klientens værtsnavn. </li>
+<li>Klik på <b>OK</b> for af gemme indstillingerne.</li>
+</ul>
+
+
+</body>
+</html>

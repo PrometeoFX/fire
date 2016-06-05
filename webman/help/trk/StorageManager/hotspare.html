@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Hot Spare</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Hot Spare*</h2>
+<p>Hot spare diskler, arızalı bir diski otomatik olarak değiştirerek kapasitesi d&uuml;şm&uuml;ş bir birimi/Disk Grubunu/iSCSI LUN'u onarabilen yedek sabit disklerdir. Hot spare diskler, birim/Disk Grubu/iSCSI LUN aşağıdaki kriterle uyuştuğu s&uuml;rece DiskStation &uuml;r&uuml;n&uuml;n&uuml;zdeki herhangi bir birimi/Disk Grubunu/iSCSI LUN'ı korumak i&ccedil;in genel olarak atanabilir:</p>
+<ul>
+<li>Birimin/Disk Grubunun/iSCSI LUN'ın RAID t&uuml;r&uuml; veri korumasına (RAID 1, RAID 5, RAID 6, RAID 10 gibi) sahip olan t&uuml;rde olmalıdır.</li>
+<li>Hot spare disk boyutu, birim/Disk Grubu/iSCSI LUN'daki en k&uuml;&ccedil;&uuml;k diskin boyutuna eşit veya ondan daha y&uuml;ksek olmalıdır.</li>
+</ul>
+
+<h4>Hot spare diskleri kurmak i&ccedil;in:</h4>
+<ol>
+<li><b>Y&ouml;net</b>'e tıklayın.</li>
+<li>Kullanılabilir disklerin yanı sıra, her bir birimin/Disk Grubunun/iSCSI LUN'ın hot spare durumunu g&ouml;r&uuml;nt&uuml;leyen bir iletişim kutusu a&ccedil;ılır. Birim/Disk Grubu/iSCSI LUN durumu aşağıdakileri i&ccedil;erir:</li>
+<ul>
+<li><strong>Atanmış:</strong> Birim/Disk Grubu/iSCSI LUN, en az bir tane atanmış hot spare disk tarafından korunur.</li>
+<li><strong>Kullanılabilir:</strong> Birimi/Disk Grubunu/iSCSI LUN'ı koruyabilecek diskler var ama hen&uuml;z hi&ccedil; hot spare atanmamış.</li>
+<li><strong>Mevcut değil:</strong> Birimi/Disk Grubunu/iSCSI LUN'ı koruyabilecek hi&ccedil; hot spare disk yok.</li>
+</ul>
+<li><strong>Mevcut Diskler</strong> kısmı, hot spare diskler olarak atanabilecek sabit diskleri g&ouml;r&uuml;nt&uuml;ler. Bir hot spare disk atamak i&ccedil;in, hot spare olarak atamak istediğiniz diskin yanındaki kutuyu işaretleyin.</li>
+<li>Ayarları kaydetmek i&ccedil;in <b>Uygula</b>'ya tıklayın.</li>
+</ol>
+<p><span class="note_head">Not:</span> Bir sabit disk hot spare disk olarak atandığında, diskteki t&uuml;m veriler silinir. Bir hot spare diski atamadan evvel, diskin &uuml;zerinde &ouml;nemli veri bulunmadığından emin olun.</p>
+
+<p>____<br />*Yalnızca bazı modellerde mevcuttur.</p>
+
+</body>
+</html>

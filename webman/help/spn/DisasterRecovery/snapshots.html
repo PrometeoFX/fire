@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta charset="UTF-8">
+</head>
+<body>
+<h2>Instant&aacute;neas</h2>
+	<p>Esta p&aacute;gina le permite tomar, eliminar y editar instant&aacute;neas, adem&aacute;s de configurar el programa de instant&aacute;neas y la configuraci&oacute;n de retenci&oacute;n.</p>
+    <p>Puede almacenar hasta un m&aacute;ximo de 256 copias de instant&aacute;neas simult&aacute;neamente para cada carpeta compartida o iSCSI LUN. Las instant&aacute;neas minimizan el riesgo de consumo de disco porque conservan bloques individuales en lugar de archivos completos. Es posible que se consuma espacio adicional cuando se actualizan o eliminan archivos en carpetas compartidas o bloques en iSCSI LUNs.</p>
+
+<h3>Carpeta compartida</h3>
+<h4>Para tomar una instant&aacute;nea para una carpeta compartida:</h4>
+<ol>
+  <li>Seleccione la carpeta compartida de la que desea tomar una instant&aacute;nea.</li>
+	<li>Haga clic en <strong>Tomar una instant&aacute;nea</strong>.</li>
+	<li>Introduzca una descripci&oacute;n en <strong>Descripci&oacute;n</strong> para la instant&aacute;nea que se va a tomar.</li>
+	<li>Marque/desmarque la casilla de verificaci&oacute;n <strong>Bloquear</strong> para determinar si la instant&aacute;nea ignorar&aacute; la configuraci&oacute;n de retenci&oacute;n cuando se tiene que activar la eliminaci&oacute;n autom&aacute;tica.</li>
+  <li>Haga clic en <strong>OK</strong> para comenzar a tomar una instant&aacute;nea.</li>
+</ol>
+
+<div class="section"><h4>Nota:</h4>
+<ul><li>De las configuraciones en la p&aacute;gina <strong>Panel de control</strong> &gt; <strong>Carpeta compartida</strong> &gt; <strong>Editar</strong>, s&oacute;lo el permiso de Windows ACL se registrar&aacute; en una instant&aacute;nea.</li></ul>
+</div>
+
+<h4>Para examinar las instant&aacute;neas de carpetas compartidas:</h4>
+<ol>
+  <li>Seleccione la carpeta compartida de la que desea examinar las instant&aacute;neas.</li>
+	<li>Haga clic en <strong>Lista de instant&aacute;neas</strong>.</li>
+  <li>Seleccione la instant&aacute;nea que desea examinar y haga clic en <strong>Examinar</strong>.</li>
+</ol>
+
+<div class="section"><h4>Nota:</h4>
+	<ul>
+		<li><strong>Examinar</strong> instant&aacute;neas no est&aacute; disponible para carpetas compartidas cifradas.</li>
+		<li>Si no puede examinar las instant&aacute;neas, vaya a <strong>Panel de control</strong> &gt; <strong>Carpeta compartida</strong> &gt; <strong>Editar</strong> para habilitar <strong>Hacer visibles las instant&aacute;neas</strong>.</li>
+	</ul>
+</div>
+
+<h4>Para eliminar las instant&aacute;neas de carpetas compartidas:</h4>
+<ol>
+	<li>Seleccione la carpeta compartida de la que desea eliminar las instant&aacute;neas.</li>
+	<li>Haga clic en <strong>Lista de instant&aacute;neas</strong>.</li>
+	<li>Seleccione una o m&aacute;s instant&aacute;neas que desee eliminar y haga clic en <strong>Quitar</strong>. (Mantenga pulsada la tecla May&uacute;s o Ctrl para la selecci&oacute;n de varios elementos.)</li>
+	<li>Ver&aacute; un mensaje de confirmaci&oacute;n. Haga clic en <strong>Eliminar</strong> para confirmar la eliminaci&oacute;n.</li>
+</ol>
+
+<h4>Para editar las instant&aacute;neas de carpetas compartidas:</h4>
+<ol>
+	<li>Seleccione la carpeta compartida de la que desea editar las instant&aacute;neas.</li>
+	<li>Haga clic en <strong>Lista de instant&aacute;neas</strong>.</li>
+	<li>Seleccione la instant&aacute;nea que desea editar y haga clic en <strong>Editar</strong>.</li>
+	<li>Puede modificar la descripci&oacute;n de la instant&aacute;nea en <strong>Descripci&oacute;n</strong> y marcar/desmarcar la casilla de verificaci&oacute;n <strong>Bloquear</strong> para determinar si la instant&aacute;nea ignorar&aacute; la configuraci&oacute;n de retenci&oacute;n cuando se tiene que activar la eliminaci&oacute;n autom&aacute;tica.</li>
+	<li>Haga clic en <b>OK</b> para guardar su configuraci&oacute;n.</li>
+</ol>
+
+<h4>Para configurar las instant&aacute;neas programadas:</h4>
+<p>En el caso de las instant&aacute;neas programadas, el administrador de protecci&oacute;n de datos tomar&aacute; instant&aacute;neas autom&aacute;ticamente en el momento y con la frecuencia predeterminados, as&iacute; aligerar&aacute; la tarea de tomar instant&aacute;neas manualmente.</p>
+<ol>
+	<li>Seleccione una carpeta compartida.</li>
+	<li>Haga clic en <strong>Establecer el programa</strong>.</li>
+	<li>En la pesta&ntilde;a <strong>Programa</strong>, marque la casilla de verificaci&oacute;n <strong>Habilitar el programa de instant&aacute;neas</strong> y configure el tiempo y frecuencia para la toma de instant&aacute;neas. Para cancelar las instant&aacute;neas programadas en esta carpeta compartida, desmarque la casilla de selecci&oacute;n.</li>
+  <li>Haga clic en <b>OK</b> para guardar su configuraci&oacute;n.</li>
+  <li>Ver&aacute; un mensaje de confirmaci&oacute;n. Haga clic en <strong>OK</strong> para confirmar la configuraci&oacute;n.</li>
+</ol>
+
+<div class="section"><h4>Nota:</h4>
+	<ul>
+	  <li>La configuraci&oacute;n de las instant&aacute;neas programadas no se incluir&aacute; en la caracter&iacute;stica <strong>Panel de control</strong> &gt; <strong>Actualizar y restaurar</strong> &gt; <strong>Copia de seguridad de configuraci&oacute;n</strong>.</li>
+	</ul>
+</div>
+
+<h4>Para configurar los par&aacute;metros de retenci&oacute;n de las instant&aacute;neas programadas:</h4>
+<ol>
+<li>Seleccione una carpeta compartida.</li>
+<li>Haga clic en <strong>Establecer el programa</strong>.</li>
+<li>Seleccione la pesta&ntilde;a <strong>Retenci&oacute;n</strong>.</li>
+<li>Configure los par&aacute;metros de retenci&oacute;n. Seleccione cualquiera de las siguientes opciones:<ul>
+		<li><strong>Quitar instant&aacute;neas antiguas al llegar al l&iacute;mite:</strong> cuando se alcanza el n&uacute;mero m&aacute;ximo de instant&aacute;neas, las m&aacute;s antiguas se sobrescribir&aacute;n con las que se han tomado m&aacute;s recientemente.</li>
+		<li><strong>Retener siempre las instant&aacute;neas:</strong> cuando se alcanza el n&uacute;mero m&aacute;ximo de instant&aacute;neas, el administrador de protecci&oacute;n de datos dejar&aacute; de tomar nuevas instant&aacute;neas y no eliminar&aacute; las que ya se hayan tomado.</li>
+		<li><strong>Retener las instant&aacute;neas con la siguiente pol&iacute;tica:</strong> puede configurar las reglas de retenci&oacute;n para los rangos de tiempo especificados. Para obtener m&aacute;s informaci&oacute;n, consulte la nota de <a href="#smart_retention">Pol&iacute;tica de retenci&oacute;n</a>.</li>
+	</ul>
+</li>
+<li>Haga clic en <b>OK</b> para guardar su configuraci&oacute;n.</li>
+</ol>
+
+
+<h3>iSCSI LUN</h3>
+
+<h4>Para tomar una instant&aacute;nea para un iSCSI LUN:</h4>
+<ol>
+<li>Seleccione el iSCSI LUN del que desea tomar una instant&aacute;nea.</li>
+<li>Haga clic en <strong>Tomar una instant&aacute;nea</strong>.</li>
+<li>Introduzca una descripci&oacute;n en <strong>Descripci&oacute;n</strong> para la instant&aacute;nea que se va a tomar.</li>
+<li>En la lista desplegable <strong>Bloquear</strong>, seleccione <strong>S&iacute;</strong>/<strong>No</strong> para determinar si la instant&aacute;nea ignorar&aacute; la configuraci&oacute;n de retenci&oacute;n cuando se tiene que activar la eliminaci&oacute;n autom&aacute;tica.</li>
+<li>Haga clic en <strong>OK</strong> para comenzar a tomar una instant&aacute;nea.</li>
+</ol>
+
+<h4>Para eliminar una instant&aacute;nea de un iSCSI LUN:</h4>
+<ol>
+<li>Seleccione un iSCSI LUN del que desea eliminar las instant&aacute;neas.</li>
+<li>Haga clic en <strong>Lista de instant&aacute;neas</strong>.</li>
+<li>Seleccione una o m&aacute;s instant&aacute;neas que desee eliminar y haga clic en <strong>Quitar</strong>. (Mantenga pulsada la tecla May&uacute;s o Ctrl para la selecci&oacute;n de varios elementos.)</li>
+<li>Ver&aacute; un mensaje de confirmaci&oacute;n. Haga clic en <strong>S&iacute;</strong> para confirmar la eliminaci&oacute;n.</li>
+</ol>
+
+<h4>Para editar una instant&aacute;nea de un iSCSI LUN:</h4>
+<ol>
+<li>Seleccione un iSCSI LUN del que desea editar las instant&aacute;neas.</li>
+<li>Haga clic en <strong>Lista de instant&aacute;neas</strong>.</li>
+<li>Seleccione la instant&aacute;nea que desea editar y haga clic en <strong>Editar</strong>.</li>
+<li>Puede realizar una de las siguientes operaciones para editar la instant&aacute;nea:<ul>
+	  <li>Cambie la descripci&oacute;n de la instant&aacute;nea en <strong>Descripci&oacute;n</strong>.</li>
+	  <li>Seleccione el <strong>Estado consistente</strong> si se han habilitado las instant&aacute;neas <a href="#app-consistent">consistentes con aplicaciones</a>.</li>
+	  <li>Cambie entre <strong>S&iacute;</strong>/<strong>No</strong> en la lista desplegable <strong>Bloquear</strong> para determinar si la instant&aacute;nea ignorar&aacute; la configuraci&oacute;n de retenci&oacute;n cuando se tiene que activar la eliminaci&oacute;n autom&aacute;tica.</li>
+	</ul>
+</li>
+<li>Haga clic en <b>OK</b> para guardar su configuraci&oacute;n.</li>
+</ol>
+
+<h4>Para configurar las instant&aacute;neas programadas:</h4>
+<p>En el caso de las instant&aacute;neas programadas, el administrador de protecci&oacute;n de datos tomar&aacute; instant&aacute;neas autom&aacute;ticamente en el momento y con la frecuencia predeterminados, as&iacute; aligerar&aacute; la tarea de tomar instant&aacute;neas manualmente.</p>
+<ol>
+	<li>Seleccione un iSCSI LUN.</li>
+	<li>Haga clic en <strong>Establecer el programa</strong>.</li>
+	<li>En la pesta&ntilde;a <strong>Programa</strong>, marque la casilla de verificaci&oacute;n <strong>Habilitar el programa de instant&aacute;neas</strong> y configure el tiempo y frecuencia para la toma de instant&aacute;neas. Para cancelar las instant&aacute;neas programadas en esta carpeta compartida, desmarque la casilla de selecci&oacute;n.</li>
+  <li>Haga clic en <b>OK</b> para guardar su configuraci&oacute;n.</li>
+</ol>
+
+<h4>Para configurar los par&aacute;metros de retenci&oacute;n de las instant&aacute;neas programadas:</h4>
+<ol>
+<li>Seleccione un iSCSI LUN.</li>
+<li>Haga clic en <strong>Establecer el programa</strong>.</li>
+<li>Seleccione la pesta&ntilde;a <strong>Retenci&oacute;n</strong>.</li>
+<li>Configure los par&aacute;metros de retenci&oacute;n. Seleccione cualquiera de las siguientes opciones:<ul>
+		<li><strong>Quitar instant&aacute;neas antiguas al llegar al l&iacute;mite:</strong> cuando se alcanza el n&uacute;mero m&aacute;ximo de instant&aacute;neas, las m&aacute;s antiguas se sobrescribir&aacute;n con las que se han tomado m&aacute;s recientemente.</li>
+		<li><strong>Retener siempre las instant&aacute;neas:</strong> cuando se alcanza el n&uacute;mero m&aacute;ximo de instant&aacute;neas, el administrador de protecci&oacute;n de datos dejar&aacute; de tomar nuevas instant&aacute;neas y no eliminar&aacute; las que ya se hayan tomado.</li>
+		<li><strong>Retener las instant&aacute;neas con la siguiente pol&iacute;tica:</strong> puede configurar las reglas de retenci&oacute;n para los rangos de tiempo especificados. Para obtener m&aacute;s informaci&oacute;n, consulte la nota de <a href="#smart_retention">Pol&iacute;tica de retenci&oacute;n</a>.</li>
+	</ul>
+</li>
+<li>Haga clic en <b>OK</b> para guardar su configuraci&oacute;n.</li>
+<li>Ver&aacute; un mensaje de confirmaci&oacute;n. Haga clic en <strong>OK</strong> de nuevo para confirmar la configuraci&oacute;n.</li>
+</ol>
+
+<h4>Para configurar el estado consistente de las instant&aacute;neas del iSCSI LUN:</h4>
+<ol>
+<li>Seleccione un iSCSI LUN.</li>
+<li>Haga clic en <strong>Establecer el programa</strong>.</li>
+<li>Seleccione la pesta&ntilde;a <strong>Aplicaci&oacute;n</strong>.</li>
+<li>Marque/desmarque la casilla de verificaci&oacute;n <strong>Habilitar instant&aacute;neas consistentes con aplicaciones</strong> para cambiar entre los siguientes estados consistentes:<ul>
+<li><a name="app-consistent"></a><strong>Consistente con aplicaciones</strong>: Instant&aacute;neas con estado consistente s&oacute;lo se puede tomar cuando se ha instalado Synology Snapshot Manager en su servidor Windows o VMware vCenter Server, seg&uacute;n el entorno operativo para comunicarse con DSM. Cuando se activan instant&aacute;neas consistentes con aplicaciones en DSM, las aplicaciones recibir&aacute;n una notificaci&oacute;n y pasar&aacute;n todos los datos de la memoria a los LUNs de los que se toma la instant&aacute;nea para garantizar la consistencia de los datos.<div class="section"><h4>Nota:</h4>
+		<ul><li>Si no se ha instalado Synology Snapshot Manager en su entorno operativo, la instant&aacute;nea consistente con aplicaciones permanecer&aacute; deshabilitada incluso si se marca la casilla de verificaci&oacute;n.</li></ul>
+	</div>
+</li>
+<li><strong>Consistente con aver&iacute;as</strong>: Si no se ha instalado Synology Snapshot Manager en ninguno de sus clientes, s&oacute;lo podr&aacute; capturar instant&aacute;neas consistentes con aver&iacute;as de los LUNs. Cuando se activan instant&aacute;neas consistentes con aver&iacute;as, las aplicaciones no recibir&aacute;n notificaciones para pasar los datos de la memoria a los LUNs y por tanto no se garantizar&aacute; la consistencia de los datos.</li>
+</ul>
+</li>
+<li>Haga clic en <b>OK</b> para guardar su configuraci&oacute;n.</li>
+</ol>
+
+<p>____<br/><div class="section">
+  <h4><a name="smart_retention"></a>Pol&iacute;tica de retenci&oacute;n</h4>
+  <p>Esta opci&oacute;n proporciona una soluci&oacute;n ideal para ayudarle a especificar las cantidades m&aacute;ximas de versiones de instant&aacute;neas y ahorrar espacio en el volumen, pero es posible que necesite retener las instant&aacute;neas durante periodos de tiempo m&aacute;s largos.</p>
+  <p>Synology utiliza la pol&iacute;tica de retenci&oacute;n GFS (abuelo-padre-hijo). Puede configurar las cantidades m&aacute;ximas de versiones de instant&aacute;neas que se pueden retener para los siguientes rangos de tiempo respectivamente: <strong>por hora</strong>, <strong>por d&iacute;a</strong>, <strong>por semana</strong>, <strong>por mes</strong> y <strong>por a&ntilde;o</strong>.</p>
+</div>
+</p>
+
+</body>
+</html>

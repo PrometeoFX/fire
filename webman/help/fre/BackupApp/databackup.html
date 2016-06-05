@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Sauvegarde des données</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Sauvegarde des données</h2>
+
+<p>Dans l'onglet <b>Sauvegarde</b> de <b>Sauvegarde et réplication</b>, vous pouvez sauvegarder des données spécifiques sur le DiskStation manuellement ou selon un planning personnalisé. Avec cette fonction, la configuration du système, le contenu des dossiers partagés et les données du paquet peuvent être sauvegardées sur une destination de sauvegarde locale, un réseau ou le cloud.</p>
+
+<h4>Pour créer une tâche de sauvegarde :</h4>
+<ol>
+<li>Choisissez <b>Créer</b> > <b>Tâche de sauvegarde des données</b>.</li>
+<li>Suivez l’assistant pour terminer la configuration. Visitez <a href="repository.html">Destination de la sauvegarde</a> pour plus d'informations.</li>
+</ol>
+
+<h4>Pour gérer les tâches de sauvegarde :</h4>
+<p>Sélectionnez une tâche existante et cliquez sur l'un des boutons ci-dessous :</p>
+<ul>
+<li><strong>Modifier :</strong> Modifie la destination, la source, le planning et d'autres paramètres de la tâche sélectionnée.</li>
+<li><strong>Supprimer :</strong> Supprime la tâche sélectionnée.</li>
+<li><strong>Annuler :</strong> Annule la tâche sélectionnée en cours.</li>
+<li><strong>Sauvegarder maintenant :</strong> Accomplit immédiatement la sauvegarde de la tâche sélectionnée.</li>
+</ul>
+
+
+<h3>Rotation des sauvegardes</h3>
+<p>La rotation des sauvegardes est un mécanisme de gestion des versions. Elle contribue à gérer les versions de sauvegarde en supprimant automatiquement les anciennes versions inutiles et en libérant potentiellement de l'espace de stockage. Vous pouvez activer cette fonction dans <b>Paramètres de tâche</b> ou la configurer lorsque vous créez une tâche de sauvegarde.</p>
+<h4>Pour la rotation des versions :</h4>
+<ol>
+<li>Sélectionnez la tâche de sauvegarde à laquelle vous souhaitez appliquer la rotation des versions et cliquez sur <strong>Modifier</strong>.</li>
+<li>Accédez à l'onglet <strong>Paramètres de tâche</strong> et cochez<strong> Activer la rotation des sauvegardes</strong>. </li>
+<li>Vous pouvez ici choisir l'une des deux méthodes de rotation :</li>
+<ul>
+<li><b>À partir des versions les plus anciennes :</b> Il s'agit d'une méthode de base de rotation des versions. Lorsque la condition de rotation est déclenchée, la version la plus ancienne est supprimée en premier. </li>
+<li><b>Smart Recycle :</b> Il s'agit d'une méthode intelligente de rotation des versions. Lorsque la condition de rotation est déclenchée, le système supprime les versions sélectionnées par le mécanisme de conservation. Le mécanisme de conservation se présente comme suit :</li>
+<ul>
+	<li><b>Les versions horaires depuis les dernières 24 heures :</b> Le système conserve la version la plus récente créée à chaque heure.</li>
+	<li><b>Versions quotidiennes de la veille à un mois :</b> Le système conserve la version la plus récente créée chaque jour.</li>
+	<li><b>Les versions hebdomadaires de plus de 1 mois :</b> Le système conserve la version la plus récente créée chaque semaine.</li>
+</ul>
+</ul>
+<li>Indiquez le <b>nombre de versions</b> maximal. La rotation des versions commence lorsque le nombre de versions dépasse ce nombre. Le nombre ne comprend pas les versions verrouillées.</li>
+<li>Si vous avez configuré un calendrier de sauvegarde à répétition, un aperçu de l'estimation de la manière dont les versions de sauvegarde seront conservées s'affiche ainsi que le moment le plus ancien de récupération de vos paramètres de rotation. &nbsp;&nbsp;</li>
+<li>Cliquez sur <strong>OK</strong> pour enregistrer vos paramètres. </li>
+</ol>
+
+<div class="section">
+  <h4>Remarques :</h4>
+  <ul>
+  <li>Les versions verrouillées ne sont jamais supprimées. Visitez <a href="repository.html#lock_version">Destination de la sauvegarde</a> pour plus d'informations.</li>
+  
+  <li>Seules les tâches de sauvegarde multi-version offrent des fonctions de rotation des versions.</li>
+  <li>La rotation des versions n'est pas prise en charge dans DSM 5.1 et les versions antérieures.</li>
+  <li>La rotation est déclenchée aussitôt après la modification du réglage ou une fois la tâche de sauvegarde terminée.</li>
+  <li>Les versions verrouillées sont exclues lors du calcul du nombre maximum de versions.</li>
+  </ul>
+</div>
+
+
+<div class="section">
+<h4>Notes générales :</h4>
+<ul>
+<li>Le nom des tâches de sauvegarde peut inclure de 1 à 32 caractères Unicode mais ne peut pas contenir les caractères suivants :<br> <span class="letterSpace5">! " # $ % &amp; ' ( ) * + , / : ; &lt; = &gt; ? @ [ ] \ ^ ` { } | ~</span></li>
+<li>La longueur maximale du chemin d'accès complet au dossier pour la sauvegarde est de 2048 caractères.</li>
+<li>Si plus de 32000 fichiers ou dossiers sont chargés vers un dossier partagé EXT3 via AFP, toutes les tâches de sauvegarde y compris le dossier partagé échoueront.</li>
+<li>Il est possible de sauvegarder un dossier chiffré monté ou démonté. Toutefois, il est toujours restauré démonté et n'est pas automatiquement monté au démarrage. Vous serez invité à entrer ou à importer la clé de chiffrage du dossier partagé chiffré pour le monter.</li>
+<li>La sauvegarde d'un dossier chiffré vers un autre dossier chiffré n'est pas prise en charge.</li>
+<li>Utilisez les dossiers à distance comme source de sauvegarde, sinon la destination de sauvegarde ne sera pas prise en charge.</li><li>Si la destination de la sauvegarde est un volume, seul le propriétaire de la tâche pourra effectuer la tâche de sauvegarde. Visitez <a href="repository.html">Destination de la sauvegarde</a> pour plus d'informations.</li>
+<li>La sauvegarde pour certaines applications est prise en charge. Pour voir si un paquet spécifique prend en charge la sauvegarde, ainsi que le contenu et les limitations de la sauvegarde, veuillez consulter l'aide de chaque application.</li>
+<li class="enable-eds14">DiskStation ne prend pas en charge la sauvegarde des applications sans appareil externe EXT3/EXT4 inscriptible.</li>
+<li class="enable-eds14">DiskStation ne prend pas en charge la sauvegarde vers un volume sans périphérique externe EXT3/EXT4 inscriptible.</li>
+<li class="enable-eds14">DiskStation peut uniquement sauvegarder des dossiers partagés créés sur des appareils externes EXT3/EXT4.</li>
+<li class="disable-eds14">Le système ne peut pas sauvegarder des applications sans un volume inscriptible.</li
+></ul>
+</div>
+<div class="section disable-eds14">
+<h4>Sauvegarde des paramètres Windows ACL :</h4>
+<p>Les paramètres Windows ACL des fichiers enregistrés sur le DiskStation peuvent également être sauvegardés selon les systèmes de fichiers de la destination :</p>
+<ul>
+
+<li><strong>La Destination de Sauvegarde Locale</strong>, <strong>la Destination de Sauvegarde Réseau</strong> et la <strong>Destination de Sauvegarde du cloud public</strong> peuvent sauvegarder les paramètres de Windows ACL quel que soit le système de fichiers de la destination</li>
+
+<li><strong>Synchro du dossier partagé</strong> peut synchroniser les paramètres de Windows ACL lorsque le système de fichiers de la destination est EXT4<span style="display: inline;" class="enable-rc18015xsp">/BTRFS</span>.</li>
+
+</ul>
+</div>
+
+</body></html>

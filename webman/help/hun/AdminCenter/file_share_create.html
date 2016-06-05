@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Megosztott mappa létrehozása – Synology DSM Súgó</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Shared folders are the basic directories where you can store and manage files and folders on your DiskStation. This article shows you how to create a shared folder."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Megosztott mappa létrehozása</h2>
+<p>Megosztott mappák azok az alapkönyvtárak, ahol fájlokat és mappákat tárolhat és kezelhet a(z) DiskStation eszközön. Fájlok tárolása előtt legalább egy megosztott mappát létre kell hoznia a DSM operációs rendszerben. </p>
+
+<h4>Megosztott mappa létrehozása:</h4>
+<ol>
+		<li><strong>A „Hálózati helyek” alatt található megosztott mappa elrejtése:</strong> Megakadályozza, hogy a megosztott mappa megjelenjen a Windows Intéző Hálózat menüpontjában. Ez a beállítás nem érinti a megosztott mappa hozzáférési jogosultságait.<div class="section"><h4>Megjegyzés:</h4>
+				<p>A megosztott mappa elrejtése a Hálózati helyek mappában nem befolyásolja a hozzáférési jogosultságokat. A megosztott mappához való hozzáférési jogosultságok változatlanok maradnak. A megosztott mappához megfelelő hozzáférési jogosultsággal rendelkező felhasználók a „\\szerver neve\megosztott mappa neve” elérési úton továbbra is hozzáférhetnek a mappához.</p>
+			</div>
+		</li>
+		<li><strong>Almappák és fájlok elrejtése a jogosultsággal nem rendelkező felhasználók elől:</strong> Az <strong>Almappák és fájlok elrejtése a jogosultsággal nem rendelkező felhasználók elől</strong> lehetőség bekapcsolása esetén amennyiben egy olvasási jogosultsággal nem rendelkező felhasználó a Windows fájlmegosztási protokoll segítségével megkísérli a hozzáférést egy megosztott mappához, a rendszer nem engedélyezi a megosztott mappán belül található almappák vagy fájlok megtekintését. Így elkerülhető a jelenség, amikor a Synology termékhez csatlakozó felhasználókat összezavarja, hogy nagyszámú, számukra nem megnyitható fájllal és almappával találják szembe magukat.<div class="section"><h4>Megjegyzés:</h4>
+				<ul>
+					<li>Ezt a funkciót csak a Windows fájlmegosztási protokoll támogatja.</li>
+					<li>A File Station alkalmazásban a mappák és fájlok jogosultsági beállításait jobb kattintással módosíthatja. Válassza a <strong>Tulajdonságok</strong> lehetőséget a legördülő menüből, majd kattintson az <strong>Engedély</strong> lapra.</li>
+					<li>A rendszer magát a megosztott mappát még az <strong>Almappák és fájlok elrejtése a jogosultsággal nem rendelkező felhasználók elől</strong> lehetőség engedélyezése esetén sem rejti el a jogosultsággal nem rendelkező felhasználók elől. Csak a megosztott mappán belüli almappák és fájlok kerülnek elrejtésre.</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+
+
+<li><strong>Lomtár engedélyezése:</strong> A megosztott mappákból törölt fájlok áthelyezésre kerülnek a <strong>#recycle</strong> nevű mappába. A lomtárhoz való hozzáférés az <strong>administrators</strong> csoporthoz tartozó felhasználókra is korlátozható.</li>
+
+<li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"><strong>Pillanatfelvételek megjelenítése:</strong> A pillanatfelvételekben található mappák és fájlok a megosztott mappa <strong>#snapshot</strong> mappáiban érhetők el valamilyen fájlszolgáltatás segítségével. A rendszer a pillanatfelvételeket a készítésük időpontja alapján, a greenwichi középidő (GMT) szerint nevezi el.<div class="section"><h4>Megjegyzés:</h4>
+		<ul>
+			<li>A felhasználók egyetlen pillanatfelvételi példányhoz sem rendelkeznek írási engedéllyel.</li>
+			<li>A felhasználók csak akkor rendelkeznek olvasási engedéllyel a pillanatfelvétel másolatához, ha a pillanatfelvétel létrehozásakor már létrehozták a felhasználói fiókjukat, illetve megkapták a megosztott mappa olvasási engedélyét.</li>
+		</ul>
+	</div>
+	</li><a name="sharequota"></a><li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"><strong>Megosztottmappa-kvóta engedélyezése:</strong> Ha szeretne tárhelykvótát beállítani az egyes megosztott mappákhoz, jelölje be a <strong>Megosztottmappa-kvóta engedélyezése</strong> jelölőnégyzetet, majd adja meg a maximális tárhelykapacitás kívánt értékét a következő mezőben (pl. 10 GB).<div class="section"><h4>Megjegyzés:</h4>
+		<ul>
+			<li>A <strong>Pillanatfelvételek megjelenítése</strong> és a <strong>Megosztottmappa-kvóta engedélyezése</strong> opciók csak Btrfs fájlrendszer használata esetén érhetők el a megosztott mappákhoz.</li>
+			<li>A felhasználók <strong>home</strong> könyvtárának összesített tárhelyfelhasználása nem haladhatja meg a „<strong>homes</strong>” mappához beállított kvótát.</li>
+		</ul>
+		</div>
+	</li><a name="integrity_protection"></a><li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"><strong>Speciális adatintegritás-védelem engedélyezése:</strong> Ha a megosztott mappát <strong>CRC32 ellenőrzőösszeg</strong> és <strong>másolás végzése írási feladaton</strong> funkciókkal szeretne védeni, <strong>engedélyezze a speciális adatintegritás-védelmet</strong> a megosztott mappa létrehozása során. A CRC32 ellenőrzőösszeg segítségével ellenőrizhető, hogy az adatok azonosak maradnak-e az eredeti írás pillanatában megadott verziókkal, illetve a funkció értesíti a felhasználót az adatok esetleges sérüléséről. A másolás végzése írási feladaton funkció segít megőrizni az adatok konzisztenciáját rendkívüli rendszerleállás esetén.<div class="section"><h4>Megjegyzés:</h4>
+	<ul>
+		<li>Ez az opció csak a Btrfs fájlrendszert használó kötetekhez érhető el.</li>
+		<li>Ezt az opciót a megosztott mappák létrehozásakor engedélyezheti vagy tilthatja le. A már létező megosztott mappák esetében az opció nem módosítható.</li>
+		<li>Az opció engedélyezése hatással lehet a rendszer teljesítményére.</li>
+	</ul>
+	</div></li>
+
+	<li><strong>Jelen megosztott mappa titkosítása:</strong> A megosztott mappa titkosításához tegye a következőket:<ol>
+		<li>Határozzon meg és erősítsen meg új titkosítási kulcsot. A titkosítási kulcs nem tartalmazhat vesszőt (,) vagy egyenlőségjelet (=). </li>
+		<li>Szükség esetén jelölje be az <b>Automatikus csatlakoztatás indításkor</b> jelölőnégyzetet, így a rendszer indításkor automatikusan csatlakoztatja a titkosított mappát. A lehetőség letiltása esetén a titkosított megosztott mappa a(z) DiskStation legközelebbi újraindításakor kerül leválasztásra. Leválasztott megosztott mappa megtekintéséhez vagy eléréséhez manuálisan, importálással vagy a titkosítási kulcs megadásával kell csatlakoztatnia a mappát.</li>
+	</ol>
+</ul>
+<li>A befejezéshez kattintson az <b>OK</b> gombra.</li>
+
+</ol>
+
+<div class="section">
+<h4>Megosztott mappa elnevezési szabályai:</h4>
+<ul>
+<li>A megosztott mappák neve figyelmen kívül hagyja a kis- és nagybetűk közötti különbséget, valamint 1-32 karaktert tartalmazhat. A név nem tartalmazhatja a következő karaktereket: <strong>! " # $ % & ' ( ) * + , / : ; <= > ? @ [ ] \ ^ ` { } | ~</strong></li>
+<li>Az alábbi neveket a rendszer használja, így nem választhatja őket: <strong>.</strong>, <strong>..</strong>, <strong>global</strong>, <strong>home</strong>, <strong>homes</strong>, <strong>printers</strong>, <strong>public</strong>, <strong>satashare</strong>, <strong>surveillance</strong>, <strong>usbbackup</strong>, <strong>usbshare</strong>. </li>
+<li>A megosztott mappa neve nem kezdődhet mínuszjellel vagy szóközzel, valamint az utolsó karakter sem lehet szóköz.</li>
+<li>A megosztott mappa <strong>leírása</strong> megkülönbözteti a kis- és nagybetűket, valamint legfeljebb 64 Unicode karaktert képes megjeleníteni.</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Megosztott mappa titkosítása:</h4>
+
+<p>Az AES 256-bites titkosítás minden jogosulatlan hozzáférési kísérletet blokkolni tud, így védi adatait. A titkosított megosztott mappák esetében a titkosítási kulccsal nem rendelkező személyek még akkor sem lesznek képesek elérni vagy felhasználni a titkosított adatokat, ha eltávolítják a merevlemezeket a(z) DiskStation eszközből, majd egy másik eszközhöz csatlakoztatják őket. </p>
+
+<h4>Megjegyzés:</h4>
+<ul>
+<li>A megosztott mappák csak létrehozásukkor titkosíthatók. </li>
+<li>A titkosított megosztott mappákban található fájlok és mappák neve legfeljebb 143 angol, illetve legfeljebb 43 ázsiai karakter hosszúságú lehet.</li>
+<li>A titkosított megosztott mappákhoz NFS segítségével nem férhet hozzá.</li>
+<li>Ha a(z) DiskStation eszközön található reset gomb használatával visszaállítja az alapértelmezett jelszavakat, a rendszer leválasztja a titkosított megosztott mappákat, valamint letiltja a titkosított megosztott mappák automatikus csatlakoztatásának lehetőségét.</li>
+</ul>
+
+</div>
+
+
+</body>
+</html>

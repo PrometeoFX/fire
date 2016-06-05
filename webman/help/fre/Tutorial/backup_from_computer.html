@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Comment sauvegarder les données sur mon PC/Mac en utilisant Cloud Station</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Comment sauvegarder les données sur mon PC/Mac en utilisant Cloud Station</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/backup_from_PC/07_1_back_up_your_data_from_pc.png" />
+<h2>Aperçu</h2>
+<p>Cloud Station n'est pas seulement un logiciel de synchronisation sophistiqué multi-plateforme. Les utilisateurs peuvent s'en servir comme moyen de sauvegarde plus intelligent de leurs ordinateurs personnels. Voici certains bénéfices de l'utilisation de Cloud Station en tant que compagnon de sauvegarde. Tout d'abord, la duplication en temps réel fournit un RPO meilleur, une période plus courte dans laquelle les données pourraient être perdues (non récupérables) de votre PC à cause d'un incident majeur. Elle n'est pas seulement instantanée, elle vous aidera également à sauvegarder radicalement la bande passante, en comparaison de la sauvegarde traditionnelle qui utilise de plus grandes quantités de bande passante à un moment donné. Vous pouvez facilement filtrer les fichiers dans le même dossier que vous ne voulez pas sauvegarder, en configurant la taille ou le type de fichier sur votre PC client. Cloud Station peut également conserver jusqu'à 32 versions d'historique d'un fichier seul que Cloud Station vous autorise à restaurer vers un PC client depuis le serveur (NAS).</p>
+
+<h3 class="list_head">1. Paramétrer Cloud Station sur votre Synology NAS.</h3>
+<ol>
+
+<li>Connectez-vous à DSM en utilisant un compte appartenant au groupe <strong>administrator</strong>.</li>
+<li>Lancez <b>Cloud Station</b>.</li>
+<li>Si vous n'avez pas activé le paramètre utilisateur à domicile, vous serez invité à le faire. Cliquez sur <strong>OK</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/01.png" border="1" />
+<li>Vous serez redirigé vers la page des paramètres utilisateur. Activez les utilisateurs homes et cliquez sur <b>Appliquer</b>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" />
+<li>Maintenant revenez à <b>Cloud Station</b> et vous serez invité à l'activer. Cliquez sur <b>Oui</b>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" />
+<div class="code_div"><b>Remarque :</b> QuickConnect est un service relais qui vous permet de vous connecter facilement à votre Synology NAS à l'extérieur de votre réseau local. Si vous voulez synchroniser vos fichiers lorsque vous êtes absent de votre domicile ou du bureau, nous vous recommandons de paramétrer QuickConnect en allant à <b>Panneau de configuration</b> > <b>QuickConnect</b>.</div>
+
+<li>Accédez à <b>Privilèges</b> et spécifiez quels utilisateurs pourront utiliser Cloud Station. Cliquez sur <b>Enregistrer</b>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" />
+<li>Configurez un dossier partagé sur votre Synology NAS à des fins de sauvegarde. Pour ce faire, accédez au <strong>Panneau de configuration</strong> &gt; <strong>Dossier partagé</strong> et cliquez sur <strong>Créer</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" />
+<li>Nommez votre dossier et remplissez les détails selon. Cliquez sur <strong>OK</strong>. Par exemple, nous nommerons le dossier <strong>Sauvegarder</strong></li>
+<img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" />
+<li>Dans l'onglet <strong>Permissions</strong>, spécifiez quels utilisateurs pourront accéder au dossier. Par exemple, nous donnerons les autorisations <strong>lecture/écriture</strong> <strong>admin</strong> au dossier. Cliquez sur <strong>OK</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/07.png" border="1" />
+<li>Accédez à <strong>Cloud Station</strong> &gt; <strong>Paramètres </strong> > <strong>Partage</strong> et sélectionnez le dossier <b>Sauvegarder</b>, puis cliquez sur <strong>Activer</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/08.png" border="1" />
+</ol>
+
+<h3 class="list_head">2. Configurer Cloud Station sur votre Windows PC.</h3>
+<p>Suivez les étapes pour configurer Cloud Station sur votre Mac ou PC.</p>
+
+<h4>2,1 Pour PC</h4>
+
+<ol>
+
+<li>Accédez à <strong>Cloud Station</strong> &gt; <strong>Aperçu</strong> et cliquez sur le bouton <strong>Télécharger</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/09.png" border="1" />
+<li>Cliquez sur le bouton pour télécharger Cloud Station pour le PC Windows. (Vous pouvez également télécharger Cloud Station depuis le <a href="https://www.synology.com/en-us/support/download" target="_blank">Centre de téléchargement Synology</a>.)</li>
+<li>Lancez l'installateur sur votre ordinateur et suivez les instructions pour installer Cloud Station. </li>
+<li>Après l'installation, lancez <strong>Cloud Station</strong> sur votre ordinateur. Cliquez sur <strong>Démarrer maintenant</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" />
+<li>Entrez l'adresse du Synology NAS qui exécute Cloud Station (ou QuickConnect ID), le nom d'utilisateur et le mot de passe. (Vous pouvez également cliquer sur l'icône de recherche située à droite et Cloud Station recherchera automatiquement d'autres Synology NAS sur votre LAN.) Cliquez sur <strong>Suivant</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" />
+<div class="code_div"><b>Remarque :</b> Assurez-vous que le compte entré dispose des autorisations d'accès à <strong>Cloud Station</strong> > <strong>Privilèges</strong> sur le Synology NAS.</div>
+<li>Sélectionnez la manière dont vous souhaitez configurer votre tâche (ici, nous sélectionnons <strong>Configuration avancée</strong> car nous configurons un dossier spécialement pour la sauvegarde). Cliquez sur <strong>Suivant</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
+<li>Sélectionnez un dossier sur votre ordinateur à garder synchronisé avec le dossier Sauvegarder que vous avez précédemment créé sur votre Synology NAS. Cliquez sur <strong>Suivant</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" />
+<li>Cliquez sur <strong>Effectué</strong> pour achever l'installation.</li>
+<img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" />
+</ol>
+
+<p><strong>Pour créer une autre tâche </strong>:
+<ol>
+<li>Accédez à <strong>Cloud Station </strong>> <strong>Paramètres</strong> et activez un dossier partagé pour cette nouvelle tâche. Dans mon exemple, il s'agit de <strong>photo</strong>.​ Assurez-vous de disposer de privilèges en lecture/écriture pour <strong>photo</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
+<li>De retour sur Cloud Station sur votre PC, cliquez sur <strong>Créer</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" />
+<li>​Sélectionnez un Synology NAS pour votre nouvelle tâche. Ici nous sélectionnons <strong>Synology NAS connecté</strong> car nous créons une autre tâche pour le même Synology NAS. Cliquez sur <strong>Suivant</strong>.​</li>
+<img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" />
+<li>Sélectionnez <strong>Configuration avancée</strong> et suivez le reste des instructions de l'assistant pour continuer la configuration. </li>
+<img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
+</ol>
+
+<h4>2.2 Pour Mac</h4>
+  <ol>
+    <li>Accédez à <strong>Cloud Station</strong> &gt; <strong>Aperçu</strong> et cliquez sur le bouton <strong>Télécharger</strong>.</li>
+
+    <li>Cliquez sur le bouton pour télécharger Cloud Station pour le Mac. (Vous pouvez également télécharger Cloud Station depuis le <a href="https://www.synology.com/en-us/support/download" target="_blank">Centre de téléchargement Synology</a>.)</li>
+<img src="../../images/Backup/1x/backup_from_PC/18.png" border="1" />
+    <li>Lancez l'installateur sur votre ordinateur et suivez les instructions pour installer Cloud Station. </li>
+    <li>Après l'installation, lancez <strong>Cloud Station</strong> sur votre ordinateur. Cliquez sur <strong>Démarrer maintenant</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" />      
+<li>Entrez l'adresse du Synology NAS qui exécute Cloud Station (ou QuickConnect ID), le nom d'utilisateur et le mot de passe. (Vous pouvez également cliquer sur l'icône de recherche située à droite et Cloud Station recherchera automatiquement d'autres Synology NAS sur votre LAN.) Cliquez sur <strong>Suivant</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" />   
+    <div class="code_div"><b>Remarque :</b> Assurez-vous que le compte entré dispose des autorisations d'accès à <strong>Cloud Station</strong> > <strong>Privilèges</strong> sur le Synology NAS.</div>
+<li>Sélectionnez la manière dont vous souhaitez configurer votre tâche (ici, nous sélectionnons <strong>Configuration avancée</strong> car nous configurons un dossier spécialement pour la sauvegarde. Cliquez sur <strong>Suivant</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
+<li>Sélectionnez un dossier sur votre ordinateur à garder synchronisé avec le dossier Sauvegarder que vous avez précédemment créé sur votre Synology NAS. Cliquez sur <strong>Suivant</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" />
+<li>Cliquez sur <strong>Effectué</strong> pour achever l'installation.</li>
+  </ol>
+  
+<p><strong>Pour créer une nouvelle tâche</strong>:
+<ol>
+<li>Accédez à <strong>Cloud Station </strong>> <strong>Paramètres</strong> et activez un dossier partagé pour cette nouvelle tâche. Dans mon exemple, il s'agit de <strong>photo</strong>.​ Assurez-vous de disposer de privilèges en lecture/écriture pour <strong>photo</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
+<li>De retour sur Cloud Station sur votre ordinateur, cliquez sur <strong>Créer</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" />
+<li>​Sélectionnez un Synology NAS pour votre nouvelle tâche. Ici nous sélectionnons <strong>Synology NAS connecté</strong> car nous créons une autre tâche pour le même Synology NAS. Cliquez sur <strong>Suivant</strong>.​</li>
+<img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" />
+<li>Sélectionnez <strong>Configuration avancée</strong> et suivez le reste des instructions de l'assistant pour continuer la configuration. </li>
+<img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
+</ol> 
+
+<h3 class="list_head">3. Retrouver les données de Cloud Station</h3>
+<p>Si vous avez supprimer ou écraser accidentellement un fichier, Cloud Station vous permet de le retrouver facilement. </p>  
+<h3>4.1 Pour télécharger une version précédente d'un fichier synchronisé sur PC</h3>  
+  <ol>
+      <li>Cliquez sur l'icône Cloud Station dans la barre d'état de votre système et cliquez sur l'icône du dossier.</li>
+<img src="../../images/Backup/1x/backup_from_PC/25.png" border="1" />       
+      <li>Effectuez un clic droit sur votre fichier sélectionné puis choisissez <strong>Synology Cloud Station</strong> &gt; <strong>Parcourir les versions précédentes</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/26.png" border="1" />    
+   <li>Trouvez la version que vous souhaitez télécharger et cliquez sur l'icône de téléchargement. </li>
+<img src="../../images/Backup/1x/backup_from_PC/27.png" border="1" />    
+  </ul>
+    <li>Entrez le nom du fichier et choisissez la destination pour le sauvegarder. 
+</ol>
+<h3>4.1 Pour télécharger une version précédente d'un fichier synchronisé sur Mac</h3>  
+  <ol>
+      <li>Cliquez sur l'icône Cloud Station dans la barre d'état de votre système et cliquez sur l'icône du dossier.</li>
+<img src="../../images/Backup/1x/backup_from_PC/28.png" border="1" />         
+      <li>Effectuez un clic droit sur votre fichier sélectionné puis choisissez <strong>Synology Cloud Station</strong> &gt; <strong>Parcourir les versions précédentes</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/29.png" border="1" />        
+   <li>Trouvez la version que vous souhaitez télécharger et cliquez sur l'icône de téléchargement. </li>
+<img src="../../images/Backup/1x/backup_from_PC/30.png" border="1" />       
+    <li>Entrez le nom du fichier et choisissez la destination pour le sauvegarder. 
+</ol>
+<h3>4.3 Pour télécharger une version précédente d'un fichier synchronisé depuis Cloud Station</h3>   
+<ol>
+    <li>Accédez à <strong>Cloud Station </strong> &gt; <strong>Historique des versions</strong> et sélectionnez le dossier <strong>Sauvegarder</strong> que vous avez précédemment créé. </li>
+<img src="../../images/Backup/1x/backup_from_PC/31.png" border="1" />    
+    <li>Sélectionnez le fichier que vous voulez retrouver et cliquez sur <strong>Action</strong> > <strong>Parcourir les versions précédentes</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/34.png" border="1" />      
+    <li>Sélectionnez les versions du fichier que vous voulez télécharger et cliquez sur <strong>Télécharger</strong>. Ou si vous êtes sûr que vous voulez que la version sélectionnée soit restaurée, cliquez sur <strong>Restaurer</strong> et elle écrasera votre version actuelle.</li>
+<img src="../../images/Backup/1x/backup_from_PC/35.png" border="1" />    
+  </ol>
+
+<h3 class="list_head">4. Remarques importantes</h3>  
+  <ol>
+<li>Gardez toujours des historiques de versions au cas où un fichier est supprimé ou écrasé par accident.</li>
+<li>Dans les Paramètres généraux, vous pouvez configurer si un fichier sera pré-extrait de votre NAS ou supprimé sur votre NAS lorsque vous supprimez un fichier sur votre PC.</li>
+</ol>
+  <h3 class="list_head">5. Davantage de protection de vos données</h3>
+  
+<p>Pour façons supplémentaires de protection et de sauvegarde de vos données, cliquez <a href="https://www.synology.com/en-global/knowledgebase/tutorials#BackupRestore" target="_blank">ici</a> pour voir les didacticiels détaillant les autres services de sauvegarde offerts sur DSM.</p>
+
+</div>
+<div class="page-info">
+  <ul>
+    <li>Suivant dans cette rubrique : <a href="backup_backup.html">Sauvegarder les données de votre Synology NAS</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

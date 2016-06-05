@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TFTP/PXE</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>TFTP/PXE</h2>
+
+<p><strong>Denetim Masası</strong> > <strong>Dosya Hizmetleri</strong> > <strong>TFTP/PXE</strong> öğesindeki seçenekler TFTP ve PXE ayarlarını yapılandırmanızı sağlar.</p>
+
+<h3>TFTP</h3>
+<p>Önemsiz Dosya Aktarım Protokolü (TFTP), kimlik doğrulamanın gerekli olmadığı durumlarda genellikle yapılandırma ya da ön yükleme dosyalarını aktarmak için kullanılan basit dosya aktarım protokolüdür. TFTP hizmetinin etkinleştirilmesi DiskStation'in ön yükleyicileri istemci aygıtlarına aktarmasını sağlar.</p>
+<h4>TFTP ayarlarını değiştirmek için:</h4>
+<ol>
+<li><strong>TFTP hizmetini etkinleştir</strong> onay kutusunu işaretleyin.</li>
+<li><strong>TFTP kök klasörü</strong> alanında, DiskStation üzerindeki hangi klasöre TFTP istemcileri tarafından erişilebileceğini belirleyin.</li>
+<li>Aşağıdaki ayarları görüntülemek ve değiştirmek için <strong>Gelişmiş Ayarlar</strong> düğmesine tıklayabilirsiniz:</li>
+<ul>
+<li><strong>TFTP dosya aktarım günlüğünü etkinleştir:</strong> Bu seçenek TFTP yoluyla aktarılan verilerin kaydını tutmanızı sağlar.</li>
+<li><strong>TFTP istemci izni:</strong> TFTP istemcileri için okuma ve yazma izinlerini seçin. <strong>Salt okunur</strong> seçildiğinde, TFTP istemcileri kök klasörün içeriklerini yalnızca görebilir. <strong>Yazılabilir</strong> seçildiğinde, TFTP istemcileri kök klasörün içeriklerini değiştirebilir.</li>
+<li><strong>İzin verilen istemciler:</strong> TFTP aracılığıyla bağlanmak için hangi istemcilere izin verildiğini seçin. <strong>Tüm bağlantılar</strong>'ı seçerek tüm istemcilerin bağlanmasına izin verebilir veya bir IP adresi aralığı belirleyerek bağlanabilecek istemcileri sınırlayabilirsiniz.</li>
+</ul>
+<li>Ayarları değiştirdikten sonra kaydetmek için <strong>Uygula</strong>'ya tıklayın.</li>
+</ol>
+
+
+<h3>DiskStation ile PXE için DHCP Hizmetini Kurma</h3>
+<p>TFTP'ye ek olarak, DiskStation tümü bir arada PXE kurulumunu tatbik etmek için DHCP hizmetini de sunabilir. Ön Yükleme Yürütme Ortamı (PXE) bir veri depolama aygıtı (ör. sabit diskler) yerine bir ağ arayüzünü kullanarak istemci aygıtlarının ön yüklenmesini sağlayan bir ağ ortamıdır. PXE uygularken, DiskStation üzerinde bir ön yükleyici saklanabilir ve istemci aygıtları ön yükleyiciyi kullanarak ağ üzerinden ön yükleme yapabilir.</p>
+
+<p>DiskStation ile DHCP hizmetlerini sunmak için, lütfen Synology'nin DHCP Server paketini yüklediğinizden emin olun.</p>
+
+<h4>PXE için DHCP hizmetini kurmak amacıyla:</h4>
+<ol>
+<li><strong>Bu sunucu üzerinde PXE için DHCP hizmetini kur</strong> onay kutusunu işaretleyin. DiskStation üzerine daha önce kurulmamışsa DHCP Server paketini kurmanız istenecektir.</li>
+<li>TFTP kök klasöründen bir ön yükleyici dosya seçin ve diğer DHCP ile ilgili ayarları belirtin.</li>
+<li>Ayarları kaydetmek için <strong>Uygula</strong>'ya tıklayın.</li>
+</ol>
+</body>
+</html>

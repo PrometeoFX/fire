@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Verilerinizi Synology NAS'da yedekleyerek veri g&uuml;venliğini garanti edin</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Verilerinizi Synology NAS'da yedekleyerek veri g&uuml;venliğini garanti edin</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/Backup/back_up_your_data_on_synology_nas_to_ensure_data_security.jpg" />
+<h2>Genel Bakış</h2>
+<p>Tahmin edilemeyen sunucu arızası veya ses &ccedil;arpması en &ouml;nemli verileriniz i&ccedil;in ciddi bir risk oluşturur. Synology NAS yerel ya da uzaktan alternatifler sağlayarak en &ouml;nemli verilerinizin kopyalarını g&uuml;venilir bir şekilde yedeklemenize olanak sağlar, b&ouml;ylece en k&ouml;t&uuml; durum i&ccedil;in daima hazır olursunuz. İşinizin durumuna ve gereksinimlerinize bağlı olarak veri kaybı riskini d&uuml;ş&uuml;rmek i&ccedil;in bir veya daha fazla yolla yedeklemeyi se&ccedil;ebilirsiniz.</p>
+
+<h3 class="list_head">1. Harici bir depolama cihazı yedekleyin</h3>
+<p> Yerel olarak yedeklediğinizde, yedekleme hedefini aynı birimdeki, RAID grubundaki ve hatta aynı fiziksel diskteki diğer klas&ouml;re ayarlamayı se&ccedil;ebilirsiniz. Bu durumda, verileriniz istemeden silinirse, bunları diğer klas&ouml;rdeki yedeklenen kopyalardan kopyalayabilirsiniz. Ancak, istenmeyen sunucu arızaları ya da birimin &ccedil;&ouml;kmesi ile karşılaşırsanız, verileriniz ve yedeklediğiniz kopyalar kaybedilebilir. Dolayısıyla, &ouml;nemli verilerinizi aynı sunucu yerine harici bir depolama cihazına yedeklemeniz daima &ouml;nerilir. Synology NAS kullanıcıların yedekleme hedefini yerel s&uuml;r&uuml;c&uuml;ler yerine harici USB cihazlarına da ayarlamanıza olanak sağlar. &Ouml;zellik <b>Ana Men&uuml; &gt; Yedekleme ve &Ccedil;oğaltma</b> kısmında vardır. Adım adı talimatlar i&ccedil;in, l&uuml;tfen <a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=trk#local_backup">buraya</a> bakın.</p>
+
+<h3 class="list_head">2. Ağ &uuml;zerinden diğer Synology NAS'a yedekleme</h3>
+<p>Verilerinizin harici depolama cihazına yedeklenmesi veri uyumluluğunu iyileştirir, fakat sunucunuzun ve depolama cihazlarının bulunduğu yerdeki yangın veya deprem gibi riskleri g&ouml;z &ouml;n&uuml;ne alındığında veri bulunurluğunu iyileştirir. Synology NAS, verilerinizin kopyalarını ağ &uuml;zerinden başka bir yerdeki sunucuya aktararak kullanıcıların &ccedil;evrimdışı yedek oluşturmasına olanak sağlayarak sunucunun konumundan kaynaklanan felaketler sebebiyle veri kaybı riskini en aza indirger. Y&uuml;ksek g&uuml;venlik seviyesi ile &ouml;nemli verilerinizi korumak i&ccedil;in yedeklenenlerin veri aktarımı şifrelenebilirsiniz. Bloklama seviyedeki yedekleme se&ccedil;eneği ile, NAS'ınız sadece değiştirilen blokları yedekleyecek ve bu &ouml;zellikle yedekleme işlemi internet &uuml;zerinden yapıldığında pratiktir. &Ouml;zellik <b>Ana Men&uuml; &gt; Yedekleme ve &Ccedil;oğaltma</b> kısmında vardır. Adım adı talimatlar i&ccedil;in, l&uuml;tfen <a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=trk#network_backup">buraya</a> bakın.</p>
+
+<h3 class="list_head">3. Genel bulut depolamaya yedekleme</h3>
+<p>Farklı NAS cihazları arasında uzaktan yedekleme yapılması iki veya daha fazla sunucu gerektirmekte olup buna bunlar arasına yerleştirilen bir sayı dahildir ve sunucularınızı bulmak i&ccedil;in yerleştirir. İşinizin durumu &ccedil;oklu NAS cihazları ile &ccedil;evrimdışı yedekleme oluşturmanıza olanak sağlamayabilir. Ağ yedeklemesi i&ccedil;in m&uuml;mk&uuml;n olmayan NAS yerleşimi sorununa bir &ccedil;&ouml;z&uuml;m sağlamak amacıyla, Synology'nin Yedekleme &ouml;zelliği birka&ccedil; genel bulut hizmetine destek sunarak verilerinizi doğrudan genel bulut hesabına yedeklemenize olanak sağlar. &Ouml;zellik, tercih ettiğiniz genel bulut depolamasına bağlı olarak <b>Yedekleme ve &Ccedil;oğaltma</b> veya <b>Paket Merkezi</b> kısmında vardır. Adım adı talimatlar i&ccedil;in, l&uuml;tfen <a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=trk#cloudservice_backup">buraya</a> bakın.</p>
+</div>
+
+</body>
+
+</html>

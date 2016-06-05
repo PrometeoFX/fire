@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Restore</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Restore</h2>
+<p>Go to <strong>Backup & Replication</strong> > <strong>Restore</strong> to restore backup data.</p>
+
+<h4><a name="restore"></a>To restore a backup task:</h4>
+<ol class="disable-eds14">
+<li>Select a backup task and then click <b>Restore</b>. If the task is multi-version backup, please select<strong> Restore</strong> &gt; <strong>Entire task</strong>.</li>
+<li>You may be prompted to select system configuration, different versions of backup data, or more. It depends on whether this is a data backup task, LUN backup task*, single-version backup destination (i.e. shared folder), or multi-version backup destination (i.e. volume).</li>
+<li>Follow the wizard to complete the setup.</li>
+</ol>
+<ol class="enable-eds14">
+<li>Select a backup task and then click <b>Restore</b>.</li>
+<li>You may be prompted to select system configuration, different versions of backup data, or more. It depends on what kind of backup task this.</li>
+<li>Follow the wizard to complete the setup.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Note:</h4>
+<ul>
+<li>Restoration for certain applications is supported. To see whether a specific package supports restoration, and its limitations, please refer to the help of each application.</li>
+<li>When restoring a package, if the package is not installed, the system will automatically install the same or  latest version of the application. If the application is installed, but it is a version that is older than the backed up one, the system will automatically upgrade it to the original backed up version.</li>
+<li>Applications backed up in DSM 5.1 or above can not be restored in DSM 5.0 or below. </li>
+</ul>
+</div>
+
+<div class="section disable-eds14">
+<h4>Note:</h4>
+<ul>
+<li>After the restore is complete, a backup LUN will be restored to a file-based LUN at the selected destination volume.*</li>
+
+<li>Restoration for certain applications is supported. To see whether a specific package supports restoration, and its limitations, please refer to the help of each application.</li>
+<li>When restoring a package, if the package is not installed, the system will automatically install the same or  latest version of the application. If the application is installed, but it is a version that is older than the backed up one, the system will automatically upgrade it to the original backed up version.</li>
+<li>Applications backed up in DSM 5.1 or above can not be restored in DSM 5.0 or below. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>To restore a single file or folder for multi-version backup task:</h4>
+<ol>
+<li>Launch <strong>File Version Browser</strong>. You can do this with either of the methods below:</li>
+<ul>
+<li>Click <strong>Restore</strong> and select <strong>Individual files/folders</strong> from the drop down menu. </li>
+<li>Go to <strong>Backup Destination</strong> and expand your selected backup destination. Click on the <strong>Backup Version Information</strong> icon. In the window that appears, select the backup version you want to restore and click the <strong>File Version Browser </strong>icon.</li>
+</ul>
+<li>You can browse the versions of a file or folder you want by using the timeline or the calendar icon on the bottom of the screen. </li>
+<li>Select the version you want to manage and click the <strong>Restore</strong>. </li>
+<li>Alternatively, you can copy a file or folder to another location, or download it using the <strong> Copy to...</strong> or<strong> Download </strong>button. </li>
+<li>You can also right click on the file or folder and select these options from the drop down menu. </li>
+</ol>
+<h4>To search for a specific version:</h4>
+<ol>
+  <li>Click the arrow in the filter bar on the top right hand corner.</li>
+  <li>In the drop down menu, you can filter files by:</li>
+  <ul>
+    <li><strong>Keyword: </strong>Enter the name of any file or folder. You can use wildcards [*] (representing one or more characters) and [?] (representing one random character) in your keywords. For example, [a<span class="note_content">*</span>n] can represent [a<span class="note_content">ctio</span>n], [a<span class="note_content">ttentio</span>n], or [an].</li>
+    <li><strong>File Type:</strong> in the drop down menu you can choose from <strong>Any</strong>, <strong>Any Folder</strong>,or <strong>Any File</strong> to narrow down your search.</li>
+    <li><strong>Size:</strong> choose <strong>Any, </strong>or select <strong>equals</strong>, <strong>is greater than</strong>, <strong>is less than </strong>and then enter a value.</li>    
+    <li><strong>Date Range: </strong>choose from <strong>Today</strong>, <strong>Yesterday</strong>, <strong>Last week</strong>, or <strong>Last month</strong> or <strong>Customize</strong> to enter a start and end date to find versions within a specific range.</li>
+
+  </ul>
+  <li>To apply your filters, click <strong>Filter</strong>. </li>
+  <li>To reset your filtered search, click the <strong>Reset</strong> button.</li>
+</ol>
+
+<div class="section">
+<h4>Note:</h4>
+<ul>
+<li>Only multi-version backup tasks provide the File Version Browser function.</li>
+<li>File Version Browser has only partial functions in DSM 5.1 or below.</li>
+<li dir="ltr">System configuration and applications can only restored via <strong>Restore</strong> &gt; <strong>Entire task</strong>. </li>
+<li>Metadata will not be included in <strong>Copy to...</strong> and <strong>Download</strong> actions. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>To restore backup tasks from other backup destination:</h4>
+<ol>
+<li>Click <b>Restore from...</b>.</li>
+<li>Choose any of the following to locate the backup task, and click <b>Next</b>:</li>
+<ul>
+<li><b>Local restoration</b>: Choose this option to restore data from a local shared folder or an external disk.</li>
+<li><b>Network restoration</b>: Choose this option to restore data from another DiskStation or rsync-compatible server.</li>
+
+<li><b>Public cloud service restoration</b>: Choose this option to restore data from a public cloud server. </li>
+
+</ul>
+<li>When prompted, select the source where the backup task is kept, and then select the destination to restore the data.</li>
+<li>Follow the wizard to complete.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Note:</h4>
+<ul>
+
+  <li>Embedded DataStation can only restore shared folders to ext3/ext4 external devices.</li>
+  
+<li>Embedded DataStation does not support application restoration without an ext3/ext4 external device.</li>
+
+</ul>
+</div>
+
+<p>____<br /> * Available on specific models only.</p>
+</body></html>

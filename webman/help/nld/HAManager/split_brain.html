@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Split-brain</h2>
+
+<p>Wanneer een high-availability cluster normaal functioneert, moet slechts een van de deel uitmakende servers de rol van actieve server op zich nemen. In dit geval detecteert de passieve server de aanwezigheid van de actieve server via de Heartbeat- en gegevensverbinding.</p>
+
+<p>Worden alle Heartbeat- en dataverbindingen onderbroken dan kan het gebeuren dat beide servers proberen om de rol van actieve server over te nemen. Deze situatie wordt omschreven als een &quot;split-brain&quot;-fout. In dit geval worden verbindingen met het aan de high-availability cluster toegewezen IP-adres omgeleid naar een van de twee servers, wat resulteert in servicefouten.</p>
+        
+<h4>In geval van een split-brain-fout:</h4>
+	<ol>
+		<li>worden verbindingen naar het IP-adres van het cluster omgeleid naar een van de servers, wat resulteert in servicefouten. U zult problemen ondervinden bij het verbinden met een van de servers.</li>
+		<li>Het systeem zal de split-brain-fout detecteren en de high-availability cluster verwijderen, waardoor beide servers worden ontkoppeld.</li>
+		<li>Zodra beide servers terugkeren naar <b>Standalone</b> status, zult u zich kunnen aanmelden op DiskStation Manager (DSM). Op dit moment blijven alle gegevens die voor de verwijdering van de high-availability cluster werden verzameld op beide servers behouden. Na identificatie van de server met de gegevens die het meest up-to-date zijn, kunt u de servers opnieuw koppelen om opnieuw een high-availability cluster te cre&euml;ren.</li>
+	</ol>
+ </body>
+</html>

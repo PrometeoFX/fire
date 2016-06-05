@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Terminal</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Terminal</h2>
+
+<p>Habilitar opciones en <strong>Panel de control</strong> &gt; <strong>Terminal y SNMP</strong> &gt; <strong>Terminal</strong> permite a su DiskStation ser compatible con servicios de interfaz de la l&iacute;nea de comandos Telnet y SSH. Tambi&eacute;n puede cambiar el nivel de seguridad del algoritmo de cifrado SSH.</p>
+
+<h4>Para habilitar el servicio Telnet/SSH:</h4>
+<ol>
+<li>Marque la casilla junto a los protocolos deseados (SSH o Telnet).</li>
+<li>Haga clic en <b>Aplicar</b>.</li>
+</ol>
+<h4>Para cambiar el puerto de servicio SSH:</h4>
+<ol>
+<li>En <strong>Puerto</strong> escriba un nuevo n&uacute;mero de puerto.</li>
+<li>Haga clic en <b>Aplicar</b>.</li>
+</ol>
+
+<p>Para asegurar las conexiones con SSH se utilizan varios algoritmos de cifrado con diferentes niveles de seguridad. Puede decidir utilizar los algoritmos que mejor se adapten a sus necesidades.</p>
+<h4>Para cambiar el nivel de seguridad del algoritmo de cifrado:</h4>
+<ol>
+<li>Haga clic en <b>Configuraci&oacute;n avanzada</b>.</li>
+<li>Seleccione un nivel de seguridad para los algoritmos de cifrado. Si desea indicar exactamente los algoritmos que se van a utilizar, seleccione <b>Personalizar</b> para elegir de entre tres grupos: Cipher, KEX (intercambio de claves) y MAC (c&oacute;digo de autenticaci&oacute;n de mensajes).</li>
+<li>Haga clic en <b>Aplicar</b>.</li>
+</ol>
+<p>Algunos modelos son compatibles con la aceleraci&oacute;n de hardware para ciertos algoritmos de cifrado. Puede marcar la opci&oacute;n <b>Utilizar solo codificadores con aceleraci&oacute;n de hardware</b> para mejorar las velocidades de transferencia de servicios relacionados con SSH, incluidos los servicios cifrados de SFTP y de copia de seguridad de red. En la p&aacute;gina avanzada, los algoritmos capaces de utilizar la aceleraci&oacute;n de hardware se muestran en rojo.</p>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+
+<li>Algunos servicios (por ejemplo, copia de seguridad de red, SFTP) habilitan SSH autom&aacute;ticamente y abren el puerto 22. En este caso, deber&aacute; habilitar el servicio SSH en <strong>Panel de control</strong> &gt; <strong>Terminal y SNMP</strong> &gt; <strong>Terminal</strong> Para iniciar sesi&oacute;n en DSM con SSH.</li>
+<li>SSH/Telnet solo son compatibles si se inicia sesi&oacute;n en el sistema con cuentas <strong>root</strong> o <strong>admin</strong>.</li>
+<li>La contrase&ntilde;a no se puede dejar en blanco cuando se inicia sesi&oacute;n en el sistema con SSH/Telnet.</li>
+<li>Cuando se desactiva el servicio SSH, se interrumpen todas las conexiones SSH, incluida cualquier tarea de copia de seguridad cifrada de red que se est&eacute; ejecutando en esos momentos. Sugerimos realizar las tareas de copia de seguridad de red de nuevo m&aacute;s tarde, cuando el servicio SSH se haya deshabilitado.</li>
+<li>La manipulaci&oacute;n o modificaci&oacute;n incorrecta de DiskStation puede provocar aver&iacute;as o p&eacute;rdidas de datos.</li>
+<li>Si selecciona un nivel de seguridad m&aacute;s alto o solo utiliza codificadores con aceleraci&oacute;n de hardware puede provocar que algunos clientes SSH no puedan conectar debido a problemas de compatibilidad.</li>
+<li>Seg&uacute;n el nivel de seguridad seleccionado, es posible que algunos algoritmos compatibles con la aceleraci&oacute;n de hardware no est&eacute;n disponibles.</li>
+</ul>
+</div>
+
+</body>
+</html>

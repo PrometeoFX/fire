@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TFTP/PXE</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>TFTP/PXE</h2>
+
+<p>Konfigurację ustawień TFTP i PXE umożliwiają opcje dostępne na stronie <strong>Panel sterowania</strong> > <strong>Usługi plików</strong> > <strong>TFTP/PXE</strong>.</p>
+
+<h3>TFTP</h3>
+<p>Trivial File Transfer Protocol (dosłownie: trywialny protokół transferu plików, TFTP) to prosty protokół transferu plików służący głównie do transferu plików konfiguracyjnych i rozruchowych, gdy uwierzytelnianie nie jest wymagane. Włączenie usługi TFTP umożliwia serwerowi DiskStation przesyłanie do urządzeń klienckich plików modułów rozruchowych.</p>
+<h4>Aby zmodyfikować ustawienia usługi TFTP:</h4>
+<ol>
+<li>Zaznacz pole wyboru <strong>Włącz usługę TFTP</strong>.</li>
+<li>W polu <strong>Folder główny TFTP</strong> określ, do którego folderu na serwerze DiskStation mogą uzyskiwać dostęp klienci TFTP.</li>
+<li>Możesz kliknąć przycisk <strong>Ustawienia zaawansowane</strong>, aby wyświetlić i zmodyfikować następujące ustawienia:</li>
+<ul>
+<li><strong>Włącz log transferu pliku TFTP:</strong> Ta opcja umożliwia śledzenie danych przesyłanych za pośrednictwem usługi TFTP.</li>
+<li><strong>Uprawnienie klienta TFTP:</strong> Wybierz uprawnienia do odczytu i zapisu dla klientów TFTP. Po wybraniu uprawnienia <strong>Tylko do odczytu</strong> klienci TFTP mogą tylko wyświetlać zawartość folderu głównego. Po wybraniu uprawnienia <strong>Zapisywalny</strong> klienci TFTP mogą modyfikować zawartość folderu głównego.</li>
+<li><strong>Dozwoleni klienci:</strong> Określ, którzy klienci mogą łączyć się za pośrednictwem protokołu TFTP. Aby zezwolić na połączenie wszystkim klientom, możesz wybrać <strong>Wszystkie połączenia</strong>. Możesz też ograniczyć liczbę klientów, którzy mogą się łączyć, określając zakres adresów IP.</li>
+</ul>
+<li>Po zmodyfikowaniu ustawień kliknij przycisk <strong>Zastosuj</strong>, aby je zapisać.</li>
+</ol>
+
+
+<h3>Konfiguracja usługi DHCP na potrzeby PXE przy użyciu serwera DiskStation</h3>
+<p>W celu wdrożenia pełnej konfiguracji PXE serwer DiskStation udostępnia oprócz usługi TFTP także usługę DHCP. Pre-Boot Execution Environment (środowisko wykonywania przed rozruchem, PXE) to środowisko sieciowe, które umożliwia urządzeniom klienckim rozruch przy użyciu interfejsu sieciowego zamiast urządzenia pamięci masowej (np. dysku twardego). W ramach wdrożenia PXE moduł ładujący rozruchu może być przechowywany na serwerze DiskStation, a urządzenia klienckie mogą być uruchamiane za pośrednictwem sieci przy użyciu modułu ładującego rozruchu.</p>
+
+<p>W celu udostępniania usług DHCP przy użyciu serwera DiskStation należy zainstalować pakiet DHCP Server firmy Synology.</p>
+
+<h4>Aby skonfigurować usługę DHCP na potrzeby PXE:</h4>
+<ol>
+<li>Zaznacz pole wyboru <strong>Skonfiguruj usługę DHCP na tym serwerze na potrzeby PXE</strong>. Jeżeli na serwerze DiskStation nie zainstalowano jeszcze pakietu DHCP Server, zostanie wyświetlony monit o jego zainstalowanie.</li>
+<li>Wybierz plik modułu ładującego rozruchu z folderu głównego usługi TFTP i określ inne ustawienia związane z DHCP.</li>
+<li>Kliknij <strong>Zastosuj</strong>, aby zapisać ustawienia.</li>
+</ol>
+</body>
+</html>

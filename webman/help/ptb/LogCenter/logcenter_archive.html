@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Log Center</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Configura&ccedil;&otilde;es de armazenamento</h2>
+
+<p>A p&aacute;gina <strong>Configura&ccedil;&otilde;es de armazenamento</strong> fornece op&ccedil;&otilde;es para configurar como e onde os registros recebidos pelo Log Center s&atilde;o arquivados. Use as op&ccedil;&otilde;es abaixo para especificar o local de armazenamento e regras para criar automaticamente arquivos de registro.</p>
+
+
+<h3>Destino de armazenamento para arquivos</h3>
+
+<p>O destino refere-se &agrave; pasta em que os registros recebidos pelo Log Center s&atilde;o armazenados e arquivados. Clique em <strong>Selecionar local</strong> e escolha uma pasta.</p>
+<p>Se desejar que os registros locais do DiskStation sejam arquivados no mesmo destino, clique na caixa marcada <strong>Arquive os registros locais para o local de armazenamento especificado acima</strong>. Em muitos casos, isso proporciona mais espa&ccedil;o de armazenamento para registros locais, permitindo que voc&ecirc; mantenha registros do sistema mais completos.</p>
+<!--DSM#61793: Describe how logs are archived in data volume--><div class="section">
+<h4>Observa&ccedil;&atilde;o:</h4>
+<p>Registros locais (registros do sistema, de conex&atilde;o e transfer&ecirc;ncia de arquivo) s&atilde;o salvos em uma parti&ccedil;&atilde;o de sistema que tem capacidade de armazenamento limitada. Ao habilitar <strong>Arquivar registros locais no local de armazenamento especificado acima</strong>, todos os registros ser&atilde;o arquivados no destino especificado, de acordo com as <strong>Regras de arquivamento</strong>. Para procurar os registros locais arquivados, clique em <strong>Abrir arquivo de registro</strong> e selecione <strong>SYNOSYSLOGDB__LOCALARCH.DB</strong>.</p>
+</div><h3>Regras de arquivamento</h3>
+
+<p>Os registros s&atilde;o automaticamente arquivados de acordo com os crit&eacute;rios definidos na se&ccedil;&atilde;o <strong>Regras de arquivamento</strong>. Os registros podem ser arquivados automaticamente quando o tamanho do banco de dados de registros atinge o tamanho especificado, o n&uacute;mero de registros individuais atinge um n&uacute;mero especificado ou os registros atingem o tempo especificado.</p>
+
+<h3>Formato de arquivo</h3>
+<p>Esta se&ccedil;&atilde;o inclui as seguintes op&ccedil;&otilde;es:</p>
+<ul>
+<li><strong>Arquivar os registros como formato de texto, al&eacute;m de formato padr&atilde;o:</strong> Salva os arquivos como texto simples, al&eacute;m dos arquivos SQLite padr&atilde;o.</li>
+<li><strong>Compactar arquivos de registro:</strong> Salva os arquivos de registro como arquivos no formato ZIP compactado.</li>
+<li><strong>Arquivar os registros separadamente de acordo com o dispositivo:</strong> Salva arquivos separados para cada dispositivo cliente individual que envie registros para o DiskStation.</li>
+</ul>
+
+</body>

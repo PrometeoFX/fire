@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Terminal</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Terminal</h2>
+
+<p>Aktivering av alternativ i <strong>Kontrollpanel</strong> &gt; <strong>Terminal &amp; SNMP</strong> &gt; <strong>Terminal</strong> ger din DiskStation-enhet st&ouml;d f&ouml;r tj&auml;nsterna Telnet och SSH med kommandoradsgr&auml;nssnitt. Du kan &auml;ven &auml;ndra s&auml;kerhetsniv&aring;n f&ouml;r SSH-krypteringsalgoritmen.</p>
+
+<h4>Aktivera Telnet-/SSH-tj&auml;nsten:</h4>
+<ol>
+<li>Markera rutan bredvid det &ouml;nskade protokollet (SSH eller Telnet).</li>
+<li>Klicka p&aring; <b>Till&auml;mpa</b>.</li>
+</ol>
+<h4>F&ouml;r att &auml;ndra port f&ouml;r SSH-tj&auml;nsten:</h4>
+<ol>
+<li>I <strong>Port</strong>, ange ett nytt portnummer.</li>
+<li>Klicka p&aring; <b>Till&auml;mpa</b>.</li>
+</ol>
+
+<p>Ett urval av krypteringsalgoritmer med olika s&auml;kerhetsniv&aring;er anv&auml;nds i s&auml;kra SSH-anslutningar. Du kan avg&ouml;ra vilka algoritmer som b&auml;st motsvarar dina behov.</p>
+<h4>F&ouml;r att &auml;ndra s&auml;kerhetsniv&aring;n p&aring; SSH-krypteringsalgoritm:</h4>
+<ol>
+<li>Klicka p&aring; <b>Avancerade inst&auml;llningar</b>.</li>
+<li>V&auml;lj en s&auml;kerhetsniv&aring; f&ouml;r krypteringsalgoritmer. Om du vill specificera exakt vilka algoritmer som kan anv&auml;ndas, v&auml;lj <b>Anpassad</b> f&ouml;r att v&auml;lja fr&aring;n tre grupper: Cipher, KEX (Key Exchange) och MAC (Message Authentication Code).</li>
+<li>Klicka p&aring; <b>Till&auml;mpa</b>.</li>
+</ol>
+<p>En del modeller har st&ouml;d f&ouml;r h&aring;rdvaruacceleration f&ouml;r vissa krypteringsalgoritmer. Du kan markera alternativet <b>Anv&auml;nd bara h&aring;rdvaruaccelererat skiffer</b> f&ouml;r att f&ouml;rb&auml;ttra &ouml;verf&ouml;ringshastigheten f&ouml;r SSH-relaterade tj&auml;nster, inklusive krypterad n&auml;tverkss&auml;kerhetskopiering och SFTP-tj&auml;nster. P&aring; den avancerade sidan visas algoritmer som kan anv&auml;nda h&aring;rdvaruacceleration i r&ouml;tt.</p>
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+
+<li>En del tj&auml;nster (t.ex n&auml;tverkss&auml;kerhetskopiering, SFTP) aktiverar automatiskt SSH och &ouml;ppnar port 22. I detta fall m&aring;ste du aktivera tj&auml;nsten SSH i <strong>Kontrollpanel</strong> &gt; <strong>Terminal &amp; SNMP</strong> &gt; <strong>Terminal</strong> f&ouml;r att logga in p&aring; DSM med SSH.</li>
+<li>Det finns endast st&ouml;d f&ouml;r SSH/Telnet vid inloggning i systemet med kontona <strong>root</strong> eller <strong>admin</strong>.</li>
+<li>L&ouml;senordet kan inte vara tomt vid inloggning i systemet med SSH/Telnet.</li>
+<li>N&auml;r tj&auml;nsten SSH &auml;r avaktiverad, avslutas alla SSH-anslutningar, inklusive alla krypterad s&auml;kerhetskopieringsuppgifter som f&ouml;r n&auml;rvarande k&ouml;rs. Vi f&ouml;resl&aring;r att n&auml;tverkss&auml;kerhetskopieringsuppgift utf&ouml;rs igen efter att SSH avaktiverats.</li>
+<li>Felaktig anv&auml;ndning eller &auml;ndring av DiskStation kan leda till funktionsst&ouml;rning eller dataf&ouml;rlust.</li>
+<li>Val av en h&ouml;gre s&auml;kerhetsniv&aring; eller att bara anv&auml;nda h&aring;rdvaruaccelererade skiffer kan orsaka att en del SSH-klienter inte kan ansluta beroende p&aring; kompatibilitetsproblem.</li>
+<li>Beroende p&aring; den valda s&auml;kerhetsniv&aring;n &auml;r vissa algoritmer som st&ouml;der h&aring;rdvaruacceleration eventuellt inte tillg&auml;ngliga.</li>
+</ul>
+</div>
+
+</body>
+</html>

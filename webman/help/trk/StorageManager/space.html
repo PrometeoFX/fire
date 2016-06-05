@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Birim</h2>
+	<p>Birimler kullanıcının paylaşımlı klasör, iSCSI LUN (normal dosya) oluşturabileceği, verileri kaydedebileceği veya paketleri kurabileceği temel depolama alanlarıdır. Herhangi bir birimi oluşturmadan önce, lütfen bir RAID Group oluşturmuş olduğunuzdan emin olun. RAID Group'lar hakkında daha fazla bilgi için, lütfen <a href="raid.html">RAID Group</a> kısmına bakın.
+</p>
+
+	<h4>Bir birim oluşturmak için:</h4>
+<ol>
+  <li>DiskStation sunucunuzun tahsis edilebilir alana sahip mevcut bir RAID Group'u olduğundan emin olun.</li>
+  <li><strong>Oluştur</strong> düğmesine tıklayın.</li>
+		<li>Üzerinde birimi oluşturacağınız bir RAID Group seçin.</li>
+		<li>İstenilen ayarları değiştirin.</li>
+		<li>Birim için boyut yerleşimini ayarlayın. (Boyut yerleşimini ayarlama Tek Birimler veya iSCSI LUN için RAID Group üzerinde oluşturulan birimler için mevcut değildir)
+		</li>
+</ol>
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+	<li>Azami birim boyutu 200 TB olarak tahsis edilebilir.</li>
+	<li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp enable-ds1616p">Bir Btrfs birimine tahsis edilen minimum boyut en az 10 GB olmalıdır.</li>
+</ul>
+</div>
+
+
+<h4>Bir bölümü kaldırmak için:</h4>
+	<ol>
+		<li>Kaldırmak istediğiniz bölümü seçin.</li>
+		<li><b>Kaldır</b> düğmesine tıklayın ve sihirbazı izleyerek süreci tamamlayın.</li>
+	</ol>
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>Bir bölümün kaldırılması ilgili bölümdeki tüm veriyi siler.</li>
+</ul>
+</div>
+
+<h4>Bir bölümü zorla tanıtmak için:</h4>
+<p>Bir birim üzerindeki önbellek kayıp ise, sistem önyükleme sırasında birimi bağlamaz. Önbellek kurtarılabilir değilse ve birime erişmek istiyorsanız, <b>Zorla tanıt</b> üzerine tıklayabilirsiniz. </p>
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>Bu işlev yalnızca belirli modellerde kullanılabilir.</li>
+</ul>
+</div>
+
+	<h4>Bölümü onarmak için:</h4>
+	<p>Bölüm durumunda <b>Kapasitesi Düşmüş</b> yazıyorsa, lütfen <b>RAID Group</b> sekmesine gidin ve uygun RAID Group'u bulun. Ardından onarmak için önerilen talimatları izleyin.
+</p>
+
+	<h4>Bir bölümün boyutunu genişletmek için</h4>
+	<ul>
+		<li>Çok Sayıda Birim veya iSCSI LUN’lar (Blok-Seviyesi) için RAID Group üzerinde oluşturulan birimler için. 
+<ol>
+				<li>Genişletmek istediğiniz birimi seçin.</li>
+				<li><b>Düzenle</b>'ye tıklayın.</li>
+				<li>Yeni boyutu girin ve genişletmek için <b>TAMAM</b>'a tıklayın.</li>
+			</ol>
+		<li>Tek bir birim veya iSCSI LUN (Blok-Seviyesi) için bir RAID Group üzerinde oluşturulan birimler için, lütfen <b>Bir RAID Group'un boyutunu genişletmek için</b>, <a href="raid.html">RAID Group</a> kısmına bakın, birim boyutu RAID GROUP'un genişletildiği vurgulandıktan sonra genişletilecektir.
+	  </li>
+	</ul>
+
+
+<h3>SSD TRIM</h3>
+
+<p>Eğer bir birim tamamen SSD'lerden (Solid State Sürücüler) oluşuyorsa, SSD TRIM'in etkinleştirilmesini öneririz. Bu özellik SSD'lerde oluşturulan birimlerin okuma veya yazma performansını iyileştirerek verimliliği arttırmanın yanında SSD'lerinizin ömrünü de uzatır.</p>
+
+<h4>SSD TRIM'i etkinleştirmek için:</h4>
+
+<ol>
+  <li><b>Depolama Yöneticisi</b> öğesini açın ve <b>Birim</b> öğesine gidin.</li>
+  <li>Tamamen SSD'lerden oluşan bir birim seçin ve ardından <b>Yapılandır</b> düğmesine tıklayın.</li>
+  <li>Beliren pencerede, <b>SSD TRIM</b> sekmesine gidin ve <b>TRIM'i etkinleştir</b> adlı kutuyu işaretleyin.</li>
+<li>Sistemin ne zaman SSD TRIM yapacağını belirlemek için <strong>Program ayarlama</strong> düğmesine tıklayın.</li>
+<li><strong>Tamam</strong>'a tıklayın.</li>
+</ol>
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+
+<li>SSD TRIM sadece belirli DiskStation modellerinde ve RAID türlerinde mevcuttur. </li>
+
+
+<li>Bazı SSD modelleri RAID 5 ve RAID 6 birimlerinde SSD TRIM yapamaz. Lütfen <a href="http://www.synology.com/" target=_blank>www.synology.com</a> adresindeki uyumluluk listesine bakın.</li>
+
+
+<li>SSD TRIM aşağıdaki durumlarda etkinleştirilemez:
+  <ul>
+    <li>Birim SSD önbellek ile tanıtılmış.</li>
+    <li><strong>Time Backup</strong> paketi kurulmuş.</li>
+    <li><strong>High Availability Yöneticisi</strong> ile bir high-availability kümesi oluşturulmuş.</li>
+  </ul>
+</li>
+<li>SSD TRIM, Blok Seviyesi iSCSI LUN'larda etkinleştirilemez.</li>
+<li>Sistem performansı SSD TRIM yapılırken etkilenir. TRIM tamamlama için gerekli süre birim boyutuna ve SSD modeline bağlı olarak değişir.</li>
+
+<li>Bir birim üzerinde TRIM etkinleştirildiğinde, aynı Disk Group veya RAID Group üzerinde oluşturulan diğer birimlerde de etkinleştirilecektir.</li>
+
+</ul>
+</div>
+
+
+</body>
+</html>

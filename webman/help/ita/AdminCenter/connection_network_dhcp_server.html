@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DHCP Server</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>DHCP Server</h2>
+<p>DiskStation pu&ograve; assumere il ruolo di un server DHCP e assegna indirizzi IP dinamici ai clienti DHCP entro la LAN.</p>
+
+<h4>Per abilitare il server DHCP:</h4>
+<ol>
+<li>Andare su <strong>Pannello di controllo</strong> &gt; <strong>Rete</strong> &gt; <strong>Interfaccia di rete</strong>.</li>
+<li>Selezionare un&apos;interfaccia di rete (ad es. LAN) e fare clic su <strong>Modifica</strong>.</li>
+<li>Andare sulla scheda <strong>Server DHCP</strong> e fare clic su <b>Abilita DHCP Server</b>.</li>
+<li>Inserire un valore nel campo <b>Durata lease indirizzo</b> per impostare la durata lease DHCP (in minuti) per gli indirizzi IP assegnati ai client DHCP.</li>
+<li>Inserire l&apos;indirizzo DNS per i client DHCP nei campi <b>DNS principale</b> (obbligatorio) e <b>DNS secondario</b> (opzionale).</li>
+<li>Impostare il nome dominio per il server DHCP nel campo <b>Nome dominio</b> (opzionale).</li>
+<li>Fare clic su <b>OK</b>.</li>
+</ol>
+<h4>Per aggiungere una subnet:</h4>
+<ol>
+<li>Fare clic su <b>Aggiungi</b> e specificare le informazioni nelle seguenti colonne:</li>
+<ul>
+<li><b>Abilita</b>: per abilitare o disabilitare la subnet.</li>
+<li><b>Avvia</b>: il primo indirizzo IP della subnet.</li>
+<li><b>Ferma</b>: l&apos;ultimo indirizzo IP della subnet.</li>
+<li><b>Subnetmask</b>: la subnetmask.</li>
+<li><b>Gateway</b>: il gateway della subnet.</li>
+</ul>
+<li>Fare clic su <b>OK</b>.</li>
+</ol>
+
+
+<div class="section">
+<h4>Nota.</h4>
+<ul>
+<li>Si possono aggiungere solo fino a 32 subnet.</li>
+</ul>
+</div>
+
+
+
+<h3>Client DHCP</h3>
+
+<p>Per visualizzare un elenco di client DHCP e loro configurazioni di rete (ad es. indirizzo MAC, indirizzo IP, nome host e il tempo rimasto prima della scadenza della lease DHCP), &egrave; possibile andare sulla scheda <strong>Client DHCP</strong>.</p>
+
+
+<h3>Prenotazione DHCP</h3>
+
+<p>Per consentire al client di ricevere sempre lo stesso indirizzo IP durante il rinnovo del lease DHCP, &egrave; possibile aggiungere il client all&apos;elenco prenotazioni indirizzi.</p>
+
+<h4>Per aggiungere un client all&apos;elenco prenotazione indirizzo:</h4>
+
+<ul>
+<li>Fare clic su <b>Aggiungi</b>.</li>
+<li>Specificare l&apos;indirizzo MAC del client, l&apos;indirizzo IP da assegnare al client e il nome host del client. </li>
+<li>Fare clic su <b>OK</b> per salvare le impostazioni.</li>
+</ul>
+
+
+</body>
+</html>

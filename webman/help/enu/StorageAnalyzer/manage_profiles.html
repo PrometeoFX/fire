@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Storage Analyzer</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Manage Report Profiles</h2>
+
+<p>You can create and modify scheduled tasks to generate reports on volume usage at <b>Storage Analyzer</b> > <b>Report Profile</b>.</p>
+
+
+<h4>To create a report task:</h4>
+<ol>
+<li>Click <b>Create</b> to open the wizard.</li>
+<li>Specify a name for the new report task, and enter the email address to which you want to send the report.</li>
+<li>Select one or multiple report types you want to generate.</li>
+<li>Do any of the following to specify a time for generating reports:</li>
+<ul>
+<li>Tick <b>Generate reports according to a schedule</b> and specify the time if you want the system to analyze volume usage periodically.</li>
+<li>Tick <b>Generate reports now</b> if you want to manually start a report task now.</li>
+</ul>
+<li>If necessary, specify certain users or shared folders to be included to narrow down the reports. (Note that if you want to specify and to generate reports on shared folders that are encrypted, please make sure the encrypted shares have been mounted before the report task is performed.)</li>
+<li>Click <b>Apply</b> to save settings.</li>
+</ol>
+
+<div class="section">
+<h4>Note:</h4>
+<ul>
+<li>Hit <b>Enter</b>/<b>Return</b> after each email address to separate multiple email addresses.</li>
+<li>Hit <b>Enter</b>/<b>Return</b> after each user when specifying users whose files will be listed individually by file groups.</li>
+<li>The <b>Files by File Group</b> report will list the following file types:<br>
+Audio, disk image files, documents, executable files, pictures, videos, web pages, zipped files, other</li>
+<li>The <b>Large Files</b> section of the report lists the largest 500 files on the usage report page, or the largest 200 files on the complete report page.</li>
+
+</ul>
+</div>
+
+
+<h4>To edit a report task:</h4>
+<ol>
+<li>Select a report task from the list, and click <b>Edit</b>.</li>
+<li>Click on individual tabs to modify settings for this task.</li>
+</ol>
+
+<h4>To delete a report task:</h4>
+<p>Select a report task from the list, and click <b>Delete</b>.</p>
+
+<h4>To view historical reports:</h4>
+<ol>
+<li>Select a report task from the list, and click <b>Report</b> > <b>View historical reports</b>.</li>
+<li>In the window that appears, click on an entry to view the report generated at the specified time.</li>
+</ol>
+
+<h4>To generate reports immediately:</h4>
+<p>Select a report task from the list, and click <b>Report</b> > <b>Generate reports now</b> to generate reports on demand.</p>
+
+<h4>To change where the reports are saved:</h4>
+<ol>
+<li>Click <b>Settings</b>.</li>
+<li>Select a new destination folder to change the location where reports are saved.</li>
+</ol>
+<h4>To collect volume usage history on a regular schedule:</h4>
+<p>By default, the data of volume usage is gathered every time a Volume Usage report is generated and at system startup. In addition to the above cases, you can also opt for a new schedule to gather usage history. To do so, click <b>Settings</b>, and tick <b>Collect volume usage history according to a schedule</b> and schedule a time.</p>
+<div class="section">
+<h4>Note:</h4>
+<p>
+The history collected at the time scheduled here will mainly be used for the purpose and as the source of usage trends in the <b>Volume Usage</b> section. When this option is enabled, you will see a line graph displaying the volume usage trends and changes over time; if not, a bar chart indicating the current usage percentage will be shown instead.
+</p>
+</div>
+
+<h4>To analyze a report task:</h4>
+<p>Double-click the desired report task, or simply click <b>Analyze this report task</b> (the <b>></b> icon) next to the desire report task to open its analysis page. Please refer to <a href="view_reports.html">View Usage and Reports</a> for more information.</p>
+
+</body>
+</html>

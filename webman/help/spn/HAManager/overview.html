@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Visi&oacute;n general</h2>
+	<p>Esta p&aacute;gina muestra informaci&oacute;n b&aacute;sica sobre el cl&uacute;ster high-availability y sus servidores. Adem&aacute;s, esta p&aacute;gina ofrece herramientas para crear, eliminar o realizar tareas de mantenimiento en cl&uacute;sters high-availability y en sus servidores.</p>
+
+<h3>Estado de cl&uacute;ster high-availability</h3>
+  <p>Este campo muestra el estado general de su cl&uacute;ster high-availability y le avisa de cualquier error. A continuaci&oacute;n se muestra una tabla de los estados que pueden aparecer en este campo:</p>
+    <table>
+     <tr>
+      <th>Estado</th>
+      <th>Descripci&oacute;n</th>
+     </tr>
+     <tr>
+      <td align="center"><strong>Independiente</strong></td>
+      <td>Los servidores no est&aacute;n combinados en un cl&uacute;ster high-availability.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>En buen estado</strong></td>
+      <td>El estado general de su cl&uacute;ster high-availability es bueno. La replicaci&oacute;n de datos del servidor activo al servidor pasivo funciona normalmente.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Preparando</strong></td>
+	  <td>Los servidores se han combinado correctamente en un cl&uacute;ster high-availability, pero a&uacute;n no ha finalizado la replicaci&oacute;n de datos inicial. El cambio no se puede realizar en este momento. Para m&aacute;s informaci&oacute;n, consulte <a href="switchover_fail.html">Cambio</a>.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Cargando</strong></td>
+	  <td>El sistema est&aacute; cargando el estado del cl&uacute;ster. No se puede realizar un <b>Cambio</b> hasta que no se haya completado la carga del estado.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Advertencia</strong></td>
+      <td>El estado del cl&uacute;ster HA es anormal, pero los servicios siguen funcionando.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Peligro</strong></td>
+	  <td>Tanto el servidor activo como el pasivo funcionan mal. El cl&uacute;ster high-availability no puede funcionar normalmente. Compruebe el estado de todos los espacios de almacenamiento (p. ej., RAID Groups, Grupos de discos, vol&uacute;menes e iSCSI LUNs).</td>
+     </tr>
+    </table>
+<h3>Mensajes de advertencia</h3>
+   <p>La siguiente tabla muestra los mensajes de advertencia que pueden aparecer cuando se produce un error en el sistema. Cuando aparezca m&aacute;s de un mensaje de advertencia, puede desplazarse entre ellos con los botones de avance/retroceso. </p>
+    <table>
+     <tr>
+      <th>Advertencia/Error</th>
+      <th>Descripci&oacute;n</th>
+     </tr>
+     <tr>
+      <td align="center"><strong>Error de servicio controlado</strong></td>
+      <td>Se ha producido un error en uno o m&aacute;s servicios controlados.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Espacio de almacenamiento degradado</strong></td>
+      <td>Un espacio de almacenamiento (p. ej., RAID Group, Grupo de discos, volumen, iSCSI LUN y cach&eacute; de SSD) del servidor activo o pasivo est&aacute; degradado. Consulte la p&aacute;gina <b>Estado de almacenamiento</b>.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Espacio de almacenamiento averiado</strong></td>
+      <td>Un espacio de almacenamiento (p. ej., RAID Group, Grupo de discos, volumen, iSCSI LUN y cach&eacute; de SSD) del servidor activo o pasivo est&aacute; averiado. Consulte la p&aacute;gina <b>Estado de almacenamiento</b>.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>No se ha podido detectar el servidor pasivo</strong></td>
+      <td>Este error podr&iacute;a producirse porque el servidor pasivo est&aacute; desconectado o los servidores activo y pasivo no se pueden conectar a trav&eacute;s de la conexi&oacute;n Heartbeat. En este caso, el cambio no estar&aacute; disponible.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Los datos no se pueden replicar en el servidor pasivo</strong></td>
+      <td>Este error podr&iacute;a deberse a un fallo en el volumen de almacenamiento o en el disco. En este caso, el cambio no estar&aacute; disponible. Consulte la p&aacute;gina <b>Estado de almacenamiento</b>.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>El servidor pasivo no se ha seleccionado</strong></td>
+	  <td>Si el servidor pasivo no est&aacute; vinculado al cl&uacute;ster high-availability, se mostrar&aacute; este estado. En este caso, el cambio no estar&aacute; disponible. Si desea volver a vincular el servidor pasivo, haga clic en el men&uacute; desplegable <b>Mantener</b> y luego haga clic en <b>Vincular</b>. Cuando vuelva a vincular el servidor pasivo, ser&aacute; necesaria una replicaci&oacute;n completa de los datos.</td>
+     </tr>
+    </table>
+
+
+<h3>Informaci&oacute;n del cl&uacute;ster high-availability</h3>
+	<p>Este campo se encuentra debajo del estado del cl&uacute;ster high-availability y muestra informaci&oacute;n b&aacute;sica sobre el cl&uacute;ster. Si no existe un cl&uacute;ster high-availability, este campo solo mostrar&aacute; una explicaci&oacute;n de la funci&oacute;n de los cl&uacute;sters high-availability.</p>
+    <p>En esta campo se muestra la siguiente informaci&oacute;n:</p>
+ <ul>
+    	<li><b>Nombre de servidor de cl&uacute;ster:</b> el nombre de servidor que usa el cl&uacute;ster high-availability. </li>
+   <li><b>Direcci&oacute;n IP de cl&uacute;ster:</b> la direcci&oacute;n IP que usa el cl&uacute;ster high-availability. Independientemente del servidor que est&eacute; ejecutando los servicios, los usuarios pueden conectarse al cl&uacute;ster high-availability utilizando esta direcci&oacute;n IP.</li>
+        <li><b>Tiempo acumulado:</b> la fecha cuando se cre&oacute; el cl&uacute;ster high-availability.</li>
+ </ul>
+
+
+<h3>Botones de funcionamiento del cl&uacute;ster high-availability</h3>
+
+<p>Los dos botones siguientes se encuentran debajo de la informaci&oacute;n del cl&uacute;ster high-availability:</p>
+
+<ol>
+<li><b>Crear cl&uacute;ster HA:</b> cuando no existe ning&uacute;n cl&uacute;ster high-availability, puede hacer clic en este bot&oacute;n para combinar dos servidores y crear un cl&uacute;ster high-availability. Para m&aacute;s informaci&oacute;n sobre c&oacute;mo crear un cl&uacute;ster high-availability, consulte el <a href="wizard.html">Asistente de Synology High Availability</a>.</li>
+<li><b>Gesti&oacute;n:</b> este bot&oacute;n solo est&aacute; disponible cuando ya existe un cl&uacute;ster high-availability. Incluye las siguientes opciones:<ul>
+<li><b>Asistente de gesti&oacute;n:</b> Abre un asistente que incluye instrucciones para distintos procedimientos de gesti&oacute;n.</li>
+<li><b>Cambio:</b> inicia un cambio de servicios del servidor activo al servidor pasivo. Durante este proceso, el servidor activo deja de suministrar servicios y se convierte en el nuevo servidor pasivo. Entonces, el servidor pasivo anterior pasa a ser el nuevo servidor activo y empieza a suministrar todos los servicios del cl&uacute;ster high-availability. Esta opci&oacute;n no est&aacute; disponible cuando el servidor pasivo est&aacute; en estado de <b>error</b> o no est&aacute; seleccionado.</li>
+<li><b>Actualizar DSM:</b> abre la p&aacute;gina <strong>Actualizar DSM</strong> del <strong>Panel de control</strong>. Desde aqu&iacute; se pueden actualizar ambos servidores.</li>
+<li><b>Eliminar cl&uacute;ster HA:</b> elimina el cl&uacute;ster high-availability.</li>
+<li><b>Desvincular el servidor pasivo:</b> desvincula el servidor pasivo del cl&uacute;ster. Cuando se vuelva a a&ntilde;adir el servidor al cl&uacute;ster high-availability despu&eacute;s de desvincularlo, ser&aacute; necesario llevar a cabo una replicaci&oacute;n de todos los datos. Por tanto, le recomendamos que &uacute;nicamente utilice esta opci&oacute;n cuando quiera sustituir el servidor pasivo existente por uno nuevo.</li>
+<li><b>Vincular servidor pasivo:</b> agrega un servidor pasivo al cl&uacute;ster. Esta opci&oacute;n solo est&aacute; disponible cuando no hay un servidor pasivo en el cl&uacute;ster de high-availability.</li>
+<li><b>Apagar el cl&uacute;ster HA:</b> apaga los servidores activos y pasivos.</li>
+<li><b>Apagar el servidor activo:</b> apaga el servidor activo.</li>
+<li><b>Apagar el servidor pasivo:</b> apaga el servidor pasivo.</li>
+<li><b>Reiniciar el servidor pasivo:</b> reinicia el servidor pasivo.</li>
+<li><b>Desactivar el pitido en el servidor pasivo:</b> detiene el sonido del pitido del servidor pasivo cuando se produce un error. El servidor pasivo volver&aacute; a pitar si se produce otro error m&aacute;s tarde.</li>
+</ul>
+</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Una vez que se elimina un cl&uacute;ster high-availability, ser&aacute; necesario realizar una replicaci&oacute;n de los todos datos cuando desee crear uno nuevo.</li>
+<li>Si apaga o desvincula el servidor pasivo, los servicios no se pueden cambiar si se produce un error en el servidor activo.</li>
+</ul>
+</div>
+
+<h3>Estado de los servidores y de la replicaci&oacute;n de los datos</h3>
+<p>Esta secci&oacute;n contiene im&aacute;genes que indican el estado de los servidores activo y pasivo, as&iacute; como el flujo de la replicaci&oacute;n de los datos entre los servidores.</p>
+<p>La imagen de la replicaci&oacute;n de los datos indica los posibles estados:</p>
+	<ul>
+    	<li><b>La replicaci&oacute;n de los datos funciona normalmente:</b> lo indica el paso de los datos del servidor activo al servidor pasivo.</li>
+    	<li><b>Sin replicaci&oacute;n de datos:</b> lo indica la ausencia de la imagen del flujo de datos.</li>
+    </ul>
+
+
+<h3> Informaci&oacute;n del servidor</h3>
+ <p>Esta secci&oacute;n se encuentra debajo de las im&aacute;genes de los servidores. En esta secci&oacute;n se muestra informaci&oacute;n sobre los servidores activo y pasivo. Si no se ha seleccionado ning&uacute;n servidor pasivo, en esta secci&oacute;n aparecer&aacute; <b>N/A</b>.</p>
+  <ul>
+   <li><b>Nombre del servidor:</b> nombre del servidor de Synology.</li>
+   <li><b>Nombre de modelo:</b> modelo del servidor de Synology.</li>
+   <li><b>N&uacute;mero de serie:</b> n&uacute;mero de serie del servidor de Synology.</li>
+   <li><b>Estado del ventilador:</b> estado de los ventiladores de refrigeraci&oacute;n de un servidor. Si un ventilador falla, aparecer&aacute; una advertencia. En este caso, p&oacute;ngase en contacto con su distribuidor local para obtener ayuda.</li>
+   <li><b>Temperatura:</b> temperatura del servidor de Synology. </li>
+   <li><b>Estado de energ&iacute;a:</b> indica si todas las fuentes de alimentaci&oacute;n de un servidor funcionan normalmente o no. Si el modelo del servidor cuenta con fuentes de alimentaci&oacute;n redundantes, aparecer&aacute; una advertencia si una de ellas no funciona correctamente.</li>
+  </ul>
+
+ </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="certificate"></a>Certificaat</h2>
+
+<p>U kunt een certificaat gebruiken als beveiliging van de SSL-services van de DiskStation, bijvoorbeeld voor internet (alle HTTPS-services), e-mail of FTP. Met een certificaat kunnen gebruikers de identiteit van een server en de administrator valideren alvorens vertrouwelijke informatie te verzenden. </p>
+
+<p>In het tabblad <strong>Certificaat</strong> (in <strong>Configuratiescherm</strong> > <strong>Beveiliging</strong> > <strong>Certificaat</strong>) vindt u opties om de status van DiskStation-certificaten te bekijken en te beheren, en om certificaten te maken, te importeren/exporteren of te verlengen. De certificaatset-upwizard helpt u bij het maken van zelfondertekende certificaten of het downloaden van CSR's (Certificate Signing Request) voor registratie bij certificerende autoriteiten.</p>
+
+
+<div class="section">
+<h4>Opmerking:</h4>
+<p>is VPN Server geïnstalleerd, dan wordt het hier ingestelde certificaat automatisch gebruikt door OpenVPN Server.</p>
+</div>
+
+
+<h3>Zelfondertekende certificaten</h3>
+
+<p>Een zelfondertekend certificaat is een certificaat gemaakt en ondertekend door dezelfde entiteit wiens identiteit wordt gecertificeerd (in dit geval DiskStation). Zelfondertekende certificaten worden ondertekend met een persoonlijke sleutel die door DiskStation is gegenereerd.  Omdat zelfondertekende certificaten niet door andere certificerende autoriteiten zijn uitgegeven, leveren zij minder bewijs van de identiteit van de server en worden ze meestal gebruikt ter beveiliging van kanalen tussen de server en een groep van bekende gebruikers.</p>
+
+
+<h4>Om een zelfondertekend certificaat aan te maken:</h4>
+<ol>
+	<li>Klik op <b>Certificaat aanmaken.</b></li>
+	<li>Volg de instructies van de installatiewizard.</li>
+</ol>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<p>het maken van een zelfondertekend certificaat zal het bestaande certificaat van DiskStation vervangen.</p>
+</div>
+
+
+<h3>CSR's (Certificate Signing Requests)</h3>
+
+<p>Om een certificaat bij een andere certificerende autoriteit aan te vragen, moet u eerst een CSR (Certificate Signing Request) maken. Een certificaataanvraag is een gecodeerde tekst gegenereerd door DiskStation met informatie die in uw certificaat zal worden opgenomen, zoals uw domeinnaam, naam van de organisatie, algemene locatie en e-mailadres. De installatiewizard helpt u bij het genereren van een certificaataanvraag (CSR) voor een ondertekend certificaat voor DiskStation.</p>
+
+<p>Om een certificaat van een commerciële of andere certificerende autoriteit te krijgen, moet u uw eigen identiteit of die van de organisatie verstrekken en bewijzen dat u de eigenaar bent van de opgegeven domeinnaam in het veld algemene naam van de certificaataanvraag.</p>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<p>samen met de certificaataanvraag wordt ook een persoonlijke sleutel gegenereerd. Certificerende autoriteiten hebben deze persoonlijke sleutel niet nodig. Bewaar de persoonlijke sleutel van uw DiskStation op een veilige plaats en houd deze geheim.</p>
+</div>
+
+<h4>Om een CSR (Certificate Signing Request) te maken:</h4>
+<ol>
+	<li>Klik op <b>Certificaat aanmaken.</b></li>
+	<li>Volg de instructies van de installatiewizard om de certificaataanvraag te maken en te downloaden.</li>
+</ol>
+
+<p>Na uitgifte van uw certificaat door de certificerende autoriteit kunt u deze samen met uw persoonlijke sleutel importeren (zie onderstaande instructies).
+
+
+
+<h3>Certificaten exporteren</h3>
+
+<p>Bestaande certificaten kunnen voor beheer en archivering worden gedownload. Het geëxporteerde bestand bevat het certificaat, de persoonlijke sleutel en het zelfondertekende basiscertificaat van DiskStation.</p>
+
+<h4>Om een certificaat te exporteren:</h4>
+<ul>
+<li>Klik op de knop <b>Certificaat exporteren</b>.</li>
+</ul>
+
+
+
+<h3>Certificaten importeren</h3>
+
+<p>Met deze optie kunt u certificaten van certificerende autoriteiten of eerder geëxporteerde certificaten samen met de persoonlijke sleutel importeren.</p>
+
+<h4>Om een certificaat te importeren:</h4>
+<ul>
+	<li>Klik op de knop <b>Certificaat importeren</b>.</li>
+</ul>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>tussencertificaten zijn optioneel voor bepaalde certificaten uitgegeven door certificerende certificaten.</li>
+<li>Certificaten moeten een X.509 PEM-bestandsindeling hebben.</li>
+<li>Persoonlijke sleutels moeten de RSA-indeling hebben en mogen niet door een wachtwoordzin worden beschermd.</li>
+</ul>
+</div>
+
+
+
+<h3>Certificaten verlengen</h3>
+
+<p>Wanneer de geldigheid van het certificaat bijna vervalt, kunt u het certificaat met deze optie verlengen.</p>
+
+<h4>Om een certificaat te vernieuwen:</h4>
+<ol>
+	<li>Klik op <b>Certificaat aanmaken.</b></li>
+	<li>Selecteer <b>Certificaat vernieuwen</b> en klik op <b>Volgende</b></li>
+	<li>Een nieuwe persoonlijke sleutel en CSR (Certificate Signing Request) worden aangemaakt.</li>
+</ol>
+
+
+
+<h3>Aanvraag voor certificaatondertekening (CSR - Certificate Signing Request)</h3>
+
+<p>Met deze optie kunt u een aanvraag voor certificaatondertekening ondertekenen met behulp van het basiscetificaat van DiskStation.</p>
+
+<h4>Een aanvraag voor certificaatondertekening ondertekenen:</h4>
+<ol>
+	<li>Klik op <b>Certificaat aanmaken.</b></li>
+	<li>Klik op <b>Een aanvraag voor certificaatondertekening (CSR) ondertekenen</b>.</li>
+	<li>Upload de aanvraag voor certificaatondertekening en voer de relevante gegevens in. </li>
+	<li>Klik op <b>Volgende</b> en het systeem zal de certificaataanvraag ondertekenen en het desbetreffende certificaat maken.</li>
+</ol>
+
+
+</body>
+</html>
+

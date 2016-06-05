@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Obnovení</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Obnovení</h2>
+<p>Zálohovaná data obnovíte v části <strong>Zálohování a replikace</strong> > <strong>Obnovení</strong>.</p>
+
+<h4><a name="restore"></a>Postup obnovení úlohy zálohování:</h4>
+<ol class="disable-eds14">
+<li>Vyberte sdílenou složku a poté klikněte na příkaz <b>Obnovit</b>. Pokud se jedná o zálohu s několika verzemi, vyberte možnost<strong> Obnovit</strong> > <strong>Celá úloha</strong>.</li>
+<li>Můžete být vyzváni k zadání konfigurace systému, různých verzí dat zálohy nebo dalších údajů. To závisí na tom, zda se jedná o úlohu zálohování dat, úlohu zálohování jednotky LUN*, cíl zálohy s jedinou verzí (např. sdílenou složku) nebo cíl zálohy s několika verzemi (např. svazek).</li>
+<li>Nastavení dokončete pomocí průvodce.</li>
+</ol>
+<ol class="enable-eds14">
+<li>Vyberte sdílenou složku a poté klikněte na příkaz <b>Obnovit</b>.</li>
+<li>Můžete být vyzváni k zadání konfigurace systému, různých verzí dat zálohy nebo dalších údajů. Závisí na typu této úlohy zálohování.</li>
+<li>Nastavení dokončete pomocí průvodce.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Poznámka:</h4>
+<ul>
+<li>Je podporována možnost obnovení konkrétních aplikací. Chcete-li zjistit, zda konkrétní balíček podporuje možnost obnovení, včetně veškerých omezení, přečtěte si nápovědu jednotlivých aplikací.</li>
+<li>Pokud při obnovení balíčku tento balíček není nainstalován, systém automaticky nainstaluje stejnou nebo nejnovější verzi aplikace. Pokud aplikace je nainstalována, ale příslušná verze je starší než zálohovaná verze, systém se automaticky provede upgrade na původní zálohovanou verzi.</li>
+<li>Aplikace zálohované v systému DSM 5.1 nebo novějším nelze obnovit v systému DSM 5.0 nebo starším. </li>
+</ul>
+</div>
+
+<div class="section disable-eds14">
+<h4>Poznámka:</h4>
+<ul>
+<li>Po dokončení obnovení bude záloha LUN obnovena do souborové jednotky LUN na vybraném cílovém svazku.*</li>
+
+<li>Je podporována možnost obnovení konkrétních aplikací. Chcete-li zjistit, zda konkrétní balíček podporuje možnost obnovení, včetně veškerých omezení, přečtěte si nápovědu jednotlivých aplikací.</li>
+<li>Pokud při obnovení balíčku tento balíček není nainstalován, systém automaticky nainstaluje stejnou nebo nejnovější verzi aplikace. Pokud aplikace je nainstalována, ale příslušná verze je starší než zálohovaná verze, systém se automaticky provede upgrade na původní zálohovanou verzi.</li>
+<li>Aplikace zálohované v systému DSM 5.1 nebo novějším nelze obnovit v systému DSM 5.0 nebo starším. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Postup obnovení jednoho souboru nebo složky v úloze zálohování s několika verzemi:</h4>
+<ol>
+<li>Spusťte <strong>Prohlížeč verzí souboru</strong>. To můžete provést jedním z níže uvedených způsobů:</li>
+<ul>
+<li>Klikněte na <strong>Obnovení</strong> a v rozbalovací nabídce vyberte možnost <strong>Jednotlivé soubory/složky</strong>. </li>
+<li>Přejděte na <strong>Cíl zálohování</strong> a rozšiřte vybraný cíl zálohování. Klikněte na ikonu <strong>Informace o verzi zálohy</strong>. V okně, které se objeví, vyberte verzi zálohy, kterou chcete obnovit, a klikněte na ikonu <strong>Prohlížeč verzí souboru</strong>.</li>
+</ul>
+<li>Požadované verze souboru nebo složky můžete procházet pomocí časové osy nebo ikony kalendáře v dolní části obrazovky. </li>
+<li>Vyberte verzi, kterou chcete spravovat, a klikněte na možnost <strong>Obnovení</strong>. </li>
+<li>Případně můžete též zkopírovat soubor nebo složku do jiného umístění nebo stáhnout pomocí tlačítka <strong> Zkopírovat do...</strong> nebo<strong> Stáhnout </strong>. </li>
+<li>Na soubor nebo složku můžete také kliknout pravým tlačítkem a tyto možnosti vybrat z rozbalovací nabídky. </li>
+</ol>
+<h4>Postup vyhledání konkrétní verze:</h4>
+<ol>
+  <li>Klikněte na šipku v poli filtru v pravém horním rohu.</li>
+  <li>V rozevírací nabídce můžete soubory filtrovat podle kategorií:</li>
+  <ul>
+    <li><strong>Klíčové slovo: </strong>Zadejte název libovolného souboru nebo složky. V klíčových slovech můžete použít zástupné znaky [*] (představující jeden nebo několik znaků) a [?] (představující jeden náhodný znak). Například formule [p<span class="note_content">*</span>a] může zastupovat slova [p<span class="note_content">ráv</span>a], [p<span class="note_content">oruch</span>a] nebo [pa].</li>
+    <li><strong>Typ souboru:</strong> v rozbalovací nabídce můžete vybrat z možností <strong>Libovolný</strong>, <strong>Libovolná složka</strong> nebo <strong>Libovolný soubor</strong> a zpřesnit tak vaše vyhledávání.</li>
+    <li><strong>Velikost:</strong> vyberte <strong>Libovolná </strong>nebo <strong>rovná se</strong>, <strong>je větší než</strong>, <strong>je menší než </strong>a poté zadejte hodnotu.</li>    
+    <li><strong>Rozsah dat: </strong>pomocí možností <strong>Dnes</strong>, <strong>Včera</strong>, <strong>Minulý týden</strong>, <strong>Minulý měsíc</strong> nebo <strong>Přizpůsobit</strong> zadejte počáteční a koncové datum, chcete-li vyhledat verze z konkrétního období.</li>
+
+  </ul>
+  <li>Filtry použijete kliknutím na možnost <strong>Filtrovat</strong>. </li>
+  <li>Svoje filtrované vyhledávání můžete vynulovat kliknutím na tlačítko <strong>Resetovat</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Funkce Prohlížeč verzí souborů je dostupná pouze u úloh zálohování s několika verzemi.</li>
+<li>V systému DSM verze 5.1 nebo starší lze Prohlížeč verzí souborů používat jen omezeně.</li>
+<li dir="ltr">Konfiguraci systému a aplikace lze obnovit pouze volbou <strong>Obnovení</strong> > <strong>Celá úloha</strong>. </li>
+<li>Příkazy <strong>Kopírovat do...</strong> a <strong>Stáhnout</strong> se netýkají metadat. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Postup obnovení úloh zálohování z jiného cíle zálohy:</h4>
+<ol>
+<li>Klikněte na možnost <b>Obnovit z...</b>.</li>
+<li>Vyberte některé z následujících umístění úlohy zálohování a klikněte na možnost <b>Další</b>:</li>
+<ul>
+<li><b>Místní obnovení</b>: Pomocí této možnosti provedete obnovení z místní sdílené složky nebo externího disku.</li>
+<li><b>Síťové obnovení</b>: Pomocí této možnosti provedete obnovení z jiného zařízení DiskStation nebo ze serveru kompatibilního s nástrojem rsync.</li>
+
+<li><b>Obnovení služby veřejného cloudu</b>: Pomocí této možnosti obnovíte data ze serveru veřejného cloudu. </li>
+
+</ul>
+<li>Vyberte podle pokynů zdrojovou sdílenou složku obsahující úlohu zálohování a poté vyberte cíl pro obnovení dat.</li>
+<li>Operaci dokončete podle pokynů průvodce.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Poznámka:</h4>
+<ul>
+
+  <li>Embedded DataStation může obnovovat sdílené složky pouze na externí zařízení ext3/ext4.</li>
+  
+<li>Embedded DataStation nepodporuje obnovení aplikací bez externího zařízení ext3/ext4.</li>
+
+</ul>
+</div>
+
+<p>____<br /> * K dispozici pouze u některých modelů.</p>
+</body></html>

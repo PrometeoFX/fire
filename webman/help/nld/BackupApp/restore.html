@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Terugzetten</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Terugzetten</h2>
+<p>Ga naar <strong>Back-up en replicatie</strong> > <strong>Terugzetten</strong> om back-upgegevens terug te zetten.</p>
+
+<h4><a name="restore"></a>Om een back-uptaak terug te zetten:</h4>
+<ol class="disable-eds14">
+<li>Selecteer een back-uptaak en klik vervolgens op <b>Terugzetten</b>. Is de taak een back-up van meerdere versies selecteer<strong> Terugzetten</strong> > <strong>Volledige taak</strong>.</li>
+<li>Er kan u worden gevraagd om een systeemconfiguratie, verschillende versies van back-upgegevens of andere instellingen te selecteren. Dit is afhankelijk of het om een gegevensback-uptaak, LUN-back-uptaak*, back-updoel van enkele versie (bijv. gedeelde map) of back-updoel van meerdere versies (bijv. volume) gaat.</li>
+<li>Volg de wizard om de installatie te voltooien.</li>
+</ol>
+<ol class="enable-eds14">
+<li>Selecteer een back-uptaak en klik vervolgens op <b>Terugzetten</b>.</li>
+<li>Er kan u worden gevraagd om een systeemconfiguratie, verschillende versies van back-upgegevens of andere instellingen te selecteren. Dit is afhankelijk van het soort back-uptaak.</li>
+<li>Volg de wizard om de installatie te voltooien.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Opmerking:</h4>
+<ul>
+<li>Terugzetten wordt ondersteund voor bepaalde toepassingen. Om te weten of een specifiek pakket terugzetten en de beperkingen ervan ondersteund, raadpleegt u de helppagina van de debetreffende toepassing.</li>
+<li>Bij het terugzetten van een pakket dat niet is geïnstalleerd, zal het systeem automatisch dezelfde versie of de meest recente versie van de toepassing installeren. Is de toepassing geïnstalleerd, maar is de versie in kwestie ouder dan de geback-upte versie, dan zal het systeem de versie automatisch upgraden naar de oorspronkelijk geback-upte versie.</li>
+<li>In DSM 5.1 of hoger geback-upte toepassingen kunnen niet worden teruggezet naar DSM 5.0 of lagere versies. </li>
+</ul>
+</div>
+
+<div class="section disable-eds14">
+<h4>Opmerking:</h4>
+<ul>
+<li>na het terugzetten wordt de back-up-LUN teruggezet in een bestandsgebaseerde LUN op het geselecteerde doelvolume.*</li>
+
+<li>Terugzetten wordt ondersteund voor bepaalde toepassingen. Om te weten of een specifiek pakket terugzetten en de beperkingen ervan ondersteund, raadpleegt u de helppagina van de debetreffende toepassing.</li>
+<li>Bij het terugzetten van een pakket dat niet is geïnstalleerd, zal het systeem automatisch dezelfde versie of de meest recente versie van de toepassing installeren. Is de toepassing geïnstalleerd, maar is de versie in kwestie ouder dan de geback-upte versie, dan zal het systeem de versie automatisch upgraden naar de oorspronkelijk geback-upte versie.</li>
+<li>In DSM 5.1 of hoger geback-upte toepassingen kunnen niet worden teruggezet naar DSM 5.0 of lagere versies. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Een enkel bestand of back-upmap met meerdere versies terugzetten:</h4>
+<ol>
+<li><strong>Bestandsbrowserversie</strong> starten. Dit doet u met een van de volgende methoden:</li>
+<ul>
+<li>klik op <strong>Herstellen</strong> en selecteer in het vervolgkeuzemenu <strong>Individuele bestanden/mappen</strong>. </li>
+<li>Ga naar <strong>Back-updoel</strong> en vergroot het geselecteerde back-updoel. Klik op het pictogram <strong>Back-upversie-informatie</strong>. Selecteer in het scherm dat verschijnt de back-upversie die u wilt terugzetten en klik op het pictogram <strong>Bestandsbrowserversie</strong>.</li>
+</ul>
+<li>Met het pictogram tijdlijn of kalender onderaan het scherm kunt u de bestands- of mapversies doorbladeren. </li>
+<li>Selecteer de versie die u wilt beheren en klik vervolgens op <strong>Terugzetten</strong>. </li>
+<li>Als alternatief kunt u ook een bestand of map naar een andere locatie kopiëren of downloaden met de knoppen <strong> Kopiëren naar...</strong> of<strong> Downloaden </strong>. </li>
+<li>U kunt ook met een rechtklik op het bestand of map deze opties selecteren in het vervolgkeuzemenu. </li>
+</ol>
+<h4>Om te zoeken naar een specifieke versie:</h4>
+<ol>
+  <li>klik op de pijl in de filterbalk in de rechterbovenhoek.</li>
+  <li>In het vervolgkeuzemenu kunt u bestanden filteren op:</li>
+  <ul>
+    <li><strong>Trefwoord: </strong>voer de naam van een bestand of map in. u kunt jokertekens [*] (een of meer tekens) en [?] (een willekeurig teken) in het trefwoord gebruiken. Bijvoorbeeld, [a<span class="note_content">*</span>n] kan [a<span class="note_content">ctio</span>n], [a<span class="note_content">ttentio</span>n] of [an] betekenen.</li>
+    <li><strong>Bestandstype:</strong> selecteer in het vervolgkeuzemenu de optie <strong>Elke</strong>, <strong>Elke map</strong> of <strong>Elk bestand</strong> om uw zoekopdracht te beperken.</li>
+    <li><strong>Grootte:</strong> selecteer <strong>Elk </strong>, <strong>is gelijk aan</strong>, <strong>is groter dan</strong> of <strong>is kleiner dan </strong>en voer een waarde in.</li>    
+    <li><strong>Datumbereik: </strong>selecteer <strong>Vandaag</strong>, <strong>Gisteren</strong>, <strong>Vorige week</strong>, <strong>Vorige maand</strong> of <strong>Aanpassen</strong> om een start- en einddatum voor het zoekbereik van versies te bepalen.</li>
+
+  </ul>
+  <li>Klik op <strong>Filter</strong> om uw filters toe te passen. </li>
+  <li>Klik op de knop <strong>Reset</strong> om uw gefilterde zoekopdracht te resetten.</li>
+</ol>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>alleen de back-uptaken van meerdere versies bieden de bestandsversiebrowser-functie.</li>
+<li>In versie DSM 5.1 of eerdere versies heeft de bestandsversiebrowser slechts beperkte functies.</li>
+<li dir="ltr">Systeemconfiguratie en toepassingen kunnen alleen worden teruggezet via <strong>Terugzetten</strong> > <strong>Volledige taak</strong>. </li>
+<li>Metagegevens worden niet inbegrepen bij de acties <strong>Kopiëren naar...</strong> en <strong>Downloaden</strong>. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Om back-uptaken van ander back-updoel terug te zetten:</h4>
+<ol>
+<li>Klik op <b>Terugzetten vanaf...</b>.</li>
+<li>Selecteer een van de volgende items om de back-uptaak te vinden en klik op <b>Volgende</b>:</li>
+<ul>
+<li><b>Lokaal terugzetten</b>: kies deze optie om gegevens vanaf een lokaal gedeelde map of externe schijf terug te zetten.</li>
+<li><b>Netwerk terugzetten</b>: kies deze optie om gegevens van een andere DiskStation of rsync-compatibele server terug te zetten.</li>
+
+<li><b>Publieke cloud-service terugzetten</b>: kies deze optie om gegevens van een publieke cloud-server terug te zetten. </li>
+
+</ul>
+<li>Selecteer wanneer daarom wordt gevraagd de bron waar de back-uptaak wordt bewaard en selecteer vervolgens het doel om de gegevens terug te zetten.</li>
+<li>Volg de wizard om te voltooien.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Opmerking:</h4>
+<ul>
+
+  <li>ingebouwd DataStation kan alleen gedeelde mappen terugzetten die op ext3/ext4-externe apparaten zijn gemaakt.</li>
+  
+<li>Ingebouwd DataStation ondersteunt terugzetten van toepassingen zonder gebruik van een ext3/ext4-extern apparaat niet.</li>
+
+</ul>
+</div>
+
+<p>____<br /> * Uitsluitend beschikbaar op specifieke modellen.</p>
+</body></html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Protokollempfang - Hilfe zu Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Turn your DiskStation into a syslog server to receive logs from other network devices.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Protokollempfang</h2>
+<p>Ihr DiskStation kann als Syslog-Server fungieren, um Protokolle vom Client-Gerät über das Netzwerk zu empfangen. Es werden drei Formate für den Empfang von Protokollen unterstützt:  <strong>BSD</strong>(RFC 3164), <strong>IETF </strong>(RFC 5424) und <strong>Benutzerdefiniert</strong>. Alle empfangenen Protokolle werden in der Protokolldatenbank gespeichert.</p>
+
+<div class="section">
+<h4>Bevor Sie beginnen:</h4>
+<p>Gehen Sie zu <strong>Protokoll-Center</strong> > <strong>Speichereinstellungen</strong> und wählen Sie einen Speicherort für das Speichern und Archivieren der Protokolle aus.</p>
+</div>
+<h3>Standard-Protokollempfang einrichten:</h3>
+<ol>
+<li>Gehen Sie zu <strong>Protokoll-Center</strong> > <strong>Protokollempfang</strong> > <strong>Standard</strong>.</li>
+<li>Aktivieren Sie den BSD- und IETF-Protokollempfang, indem Sie unter dem (den) benötigten Format(en) die Option <b>Protokolle von anderen Geräten empfangen</b> aktivieren.</li>
+<li>Wählen Sie aus <strong>Transferprotokoll</strong> <strong>UDP</strong> oder <strong>TCP</strong> aus.</li>
+<li>Geben Sie für den Empfang von Syslog-Nachrichten in <strong>Port</strong> eine Portnummer an. Die voreingestellte Portnummer ist <strong>514</strong>.</li>
+<li>Wenn Sie Protokolle sicher übertragen möchten, müssen Sie die Option <strong>Sichere Verbindung (SSL) aktivieren</strong> aktivieren. Diese Option ist nur verfügbar, wenn <b>TCP</b> ausgewählt wurde.
+  </p>
+	</div>
+</li>
+<li>Klicken Sie auf <b>Übernehmen</b>, um die Einstellungen zu speichern.</li>
+</ol>
+<!--DSM#62962: Customized rule receiving-->
+
+<h3>Benutzerdefinierten Protokollempfang einrichten:</h3>
+
+	<ol>
+	<li>Gehen Sie zu <strong>Protokoll-Center</strong> > <strong>Protokollempfang</strong> > <strong>Benutzerdefiniert</strong>.</li>
+	<li>Klicken Sie auf <strong>Erstellen</strong>.</li>
+	<li>Geben Sie in <strong>Name</strong> einen eindeutigen Regelnamen ein.</li>
+	<li>Geben Sie in <strong>Regelparameter</strong> eine Parsing-Regel ein. Weitere Informationen zum Erstellen von Muster-Parsern finden Sie im nachstehenden Hinweis.</li>
+	<li>Wählen Sie aus <strong>Transferprotokoll</strong> <strong>UDP</strong> oder <strong>TCP</strong> aus.</li>
+	<li>Geben Sie für den Empfang von Syslog-Nachrichten in <strong>Port</strong> eine Portnummer an. Die voreingestellte Portnummer ist <strong>514</strong>.</li>
+	<li>Wenn Sie Protokolle sicher übertragen möchten, müssen Sie die Option <strong>Sichere Verbindung (SSL) aktivieren</strong> aktivieren. Diese Option ist nur verfügbar, wenn <b>TCP</b> ausgewählt wurde.</li>
+	<li>Klicken Sie auf <b>OK</b>, um die Einstellungen zu speichern.</li>
+	</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Detaillierte Informationen zu Muster-Parsern finden Sie <a href="http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/syslog-ng-patterndb-using-parsers.html">hier</a>. Sie können auch ein <a href="http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/patterndb-download.html">Beispielmuster</a> herunterladen, um sich weiter zu informieren.</p>
+</div>
+
+<h3>Benutzerdefinierte Regeln verwalten:</h3>
+
+	<ol>
+	<li>Wählen Sie eine vorhandene benutzerdefinierte Regel aus.</li>
+	<li>Folgendes steht zur Auswahl:</li>
+    <ul>
+    <li><strong>Bearbeiten:</strong> Bearbeitet die ausgewählte benutzerdefinierte Regel.</li>
+<li><strong>Löschen:</strong> Löscht die ausgewählte benutzerdefinierte Regel.</li>
+<li><strong>Aktivieren:</strong> Aktiviert die ausgewählte benutzerdefinierte Regel.</li>
+<li><strong>Deaktivieren:</strong> Deaktiviert die ausgewählte benutzerdefinierte Regel.</li>
+    </ul>
+	</ol>
+
+
+<h3>Exportieren von Zertifikaten</h3>
+<p>Wenn Sie die Option <strong>Sichere Verbindung aktivieren (SSL)</strong> aktiviert haben, können Sie auf die Schaltfläche <strong>Zertifikat exportieren</strong> klicken, um das Zertifikat zu exportieren, das Sie für die Authentifizierung anderer Geräte benötigen, wenn Sie Protokollen zu Ihrem DiskStation senden.</p>
+
+</body>

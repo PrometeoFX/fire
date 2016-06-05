@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TFTP/PXE</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>TFTP/PXE</h2>
+
+<p>The options at <strong>Control Panel</strong> > <strong>File Services</strong> > <strong>TFTP/PXE</strong> allow you to configure TFTP and PXE settings.</p>
+
+<h3>TFTP</h3>
+<p>Trivial File Transfer Protocol (TFTP) is a simple file transfer protocol, which is generally used for transferring configurations or boot files in situations where authentication is not required. Enabling TFTP service allows the DiskStation to transfer boot loaders to client devices.</p>
+<h4>To modify TFTP settings:</h4>
+<ol>
+<li>Check the box marked <strong>Enable TFTP service</strong>.</li>
+<li>In the <strong>TFTP root folder</strong> field, specify which folder on the DiskStation can be accessed by TFTP clients.</li>
+<li>You can click the <strong>Advanced Settings</strong> button to view and modify the following settings:</li>
+<ul>
+<li><strong>Enable TFTP file transfer log:</strong> This option allows you to keep track of data transferred via TFTP.</li>
+<li><strong>TFTP client permission:</strong> Select the read and write permissions for TFTP clients. When <strong>Read only</strong> is selected, TFTP clients can only view contents of the root folder. When <strong>Writeable</strong> is selected, TFTP clients can modify the contents of the root folder.</li>
+<li><strong>Allowed clients:</strong> Choose which clients are allowed to connect via TFTP. You can allow all clients to connect by selecting <strong>All connections</strong>; or you can limit which clients can connect by specifying a range of IP addresses.</li>
+</ul>
+<li>After modifying settings, click <strong>Apply</strong> to save.</li>
+</ol>
+
+
+<h3>Setting up DHCP Service for PXE with Your DiskStation</h3>
+<p>In addition to TFTP, the DiskStation can also provide DHCP service in order to implement an all-in-one PXE setup. Pre-boot Execution Environment (PXE) is a network environment that allows client devices to boot up using a network interface instead of a data storage device (e.g. hard disks). When implementing PXE, a boot loader can be stored on the DiskStation, and client devices can boot up over the network using the boot loader.</p>
+
+<p>In order to provide DHCP services with the DiskStation, please make sure you have installed Synology's DHCP Server package.</p>
+
+<h4>To set up DHCP service for PXE:</h4>
+<ol>
+<li>Check the box marked <strong>Set up DHCP service on this server for PXE</strong>. You will be prompted to install the DHCP Server package if it's not already installed on your DiskStation.</li>
+<li>Select a boot loader file from the TFTP root folder and specify other DHCP-related settings.</li>
+<li>Click <strong>Apply</strong> to save settings.</li>
+</ol>
+</body>
+</html>

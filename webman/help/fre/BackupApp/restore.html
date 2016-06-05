@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Restaurer</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Restaurer</h2>
+<p>Allez dans <strong>Sauvegarde et réplication</strong> > <strong>restaurer</strong> pour restaurer les données.</p>
+<h4><a name="restore"></a>Pour restaurer une tâche de sauvegarde :</h4>
+<ol class="disable-eds14">
+<li>Sélectionnez une tâche de sauvegarde puis cliquez sur <b>Restaurer</b>. Si la tâche est une sauvegarde multi-versions, sélectionnez <strong> Restaurer</strong> > <strong>Tâche entière</strong>.</li>
+<li>Vous serez peut-être invité à sélectionner une configuration système, différentes versions des données de sauvegarde, ou davantage. Cela dépend s'il s'agit d'une tâche de sauvegarde de données, d'une tâche de sauvegarde de LUN*, d'une destination de sauvegarde à version unique (c.-à-d. un dossier partagé), ou d'une destination de sauvegarde à version multiple (c.-à-d. le volume).</li>
+<li>Suivez l'assistant pour terminer la configuration.</li>
+</ol>
+<ol class="enable-eds14">
+<li>Sélectionnez une tâche de sauvegarde puis cliquez sur <b>Restaurer</b>.</li>
+<li>Vous serez peut-être invité à sélectionner une configuration système, différentes versions des données de sauvegarde, ou davantage. Cela dépend du type de la tâche de sauvegarde.</li>
+<li>Suivez l'assistant pour terminer la configuration.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Remarque :</h4>
+<ul>
+<li>La restauration pour certaines applications est prise en charge. Pour voir si un paquet spécifique prend en charge la restauration, ainsi que ses limitations, veuillez consulter l'aide de chaque application.</li>
+<li>Lors de la restauration d'un paquet, si le paquet n'est pas installé, le système installe automatiquement la même version, ou la version la plus récente de l'application. Si l'application est installée, mais qu'il s'agit d'une version plus ancienne que celle sauvegardée, le système l'améliore automatiquement avec la version originale sauvegardée.</li>
+<li>Les applications sauvegardées dans DSM 5.1 ou une version ultérieure ne peuvent pas être restaurées dans DSM 5.0 ou inférieur. </li>
+</ul>
+</div>
+<div class="section disable-eds14">
+<h4>Remarque :</h4>
+<ul>
+<li>Une fois la tâche de restauration terminée, le LUN sauvegardé est restauré sur un LUN à base de fichiers dans le volume de destination sélectionné.*</li>
+<li>La restauration pour certaines applications est prise en charge. Pour voir si un paquet spécifique prend en charge la restauration, ainsi que ses limitations, veuillez consulter l'aide de chaque application.</li>
+<li>Lors de la restauration d'un paquet, si le paquet n'est pas installé, le système installe automatiquement la même version, ou la version la plus récente de l'application. Si l'application est installée, mais qu'il s'agit d'une version plus ancienne que celle sauvegardée, le système l'améliore automatiquement avec la version originale sauvegardée.</li>
+<li>Les applications sauvegardées dans DSM 5.1 ou une version ultérieure ne peuvent pas être restaurées dans DSM 5.0 ou inférieur. </li>
+</ul>
+</div>
+<h4><a name="restore"></a>Pour restaurer un fichier ou un dossier unique pour une tâche de sauvegarde multi-versions :</h4>
+<ol>
+<li>Lancez <strong>Navigateur de versions de fichiers</strong>. Pour ce faire, utilisez l'une des méthodes suivantes :</li>
+<ul>
+<li>Cliquez sur <strong>Restaurer</strong> et sélectionnez <strong>Fichiers/dossiers individuels</strong> dans le menu déroulant. </li>
+<li>Accédez à <strong>Destination de la sauvegarde</strong> et développez la destination de sauvegarde que vous avez sélectionnée. Cliquez sur l'icône <strong>Information version de la sauvegarde</strong>. Dans la fenêtre qui s'affiche, sélectionnez la version de sauvegarde que vous souhaitez restaurer et cliquez sur l'icône <strong>Navigateur de versions de fichiers</strong>.</li>
+</ul>
+<li>Vous pouvez parcourir les versions d'un fichier ou d'un dossier de votre choix en utilisant le tableau chronologique ou l'icône du calendrier en bas de l'écran. </li>
+<li>Sélectionnez la version que vous souhaitez gérer et cliquez sur <strong>Restaurer</strong>. </li>
+<li>Vous pouvez également copier un fichier ou un dossier à un autre emplacement ou le télécharger à l'aide du bouton <strong> Copie vers...</strong> ou<strong> Télécharger </strong>. </li>
+<li>Vous pouvez également cliquer avec le bouton droit de la souris sur le fichier ou le dossier et sélectionner ces options à partir du menu déroulant. </li>
+</ol>
+<h4>Pour rechercher une version spécifique :</h4>
+<ol>
+  <li>Cliquez sur la flèche dans la barre de filtre en haut à droite.</li>
+  <li>Dans le menu déroulant, vous pouvez filtrer les fichiers par :</li>
+  <ul>
+    <li><strong>Mot-clé : </strong>saisissez le nom d'un fichier ou d'un dossier Vous pouvez utiliser des caractères de remplacement [*] (représente un ou plusieurs caractères) et [?] (représente un caractère quelconque) dans vos mots-clés. Par exemple, [a<span class="note_content">*</span>n] peut représenter [a<span class="note_content">ctio</span>n], [a<span class="note_content">ttentio</span>n], ou [an].</li>
+    <li><strong>Type de fichier :</strong> dans le menu déroulant, vous pouvez choisir <strong>Tout</strong>, <strong>Tous les dossiers</strong> ou <strong>Tous les fichiers</strong> pour affiner votre recherche.</li>
+    <li><strong>Taille :</strong> choisissez <strong>Tout </strong>ou sélectionnez <strong>équivaut à</strong>, <strong>est plus grand que</strong>, <strong>est inférieur à </strong>, puis saisissez une valeur.</li>    
+    <li><strong>Plage de date : </strong>choisissez <strong>Aujourd'hui</strong>, <strong>Hier</strong>, <strong>La semaine dernière</strong>, <strong>Le mois dernier</strong> ou <strong>Personnaliser</strong> pour saisir une date de début et une date de fin afin de rechercher des versions dans une plage spécifique.</li>
+  </ul>
+  <li>Pour appliquer vos filtres, cliquez sur <strong>Filtre</strong>. </li>
+  <li>Pour réinitialiser la recherche filtrée, cliquez sur le bouton <strong>Réinitialiser</strong>.</li>
+</ol>
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Seules les tâches de sauvegarde multi-version proposent la fonction Navigateur de versions de fichiers.</li>
+<li>Navigateur de versions de fichiers possède seulement des fonctions partielles dans DSM 5.1 et les versions antérieures.</li>
+<li dir="ltr">La configuration système et les applications ne peuvent être restaurées que via <strong>Restaurer</strong> > <strong>Tâche entière</strong>. </li>
+<li>Les métadonnées ne sont pas incluses dans les actions <strong>Copie vers...</strong> et <strong>Télécharger</strong>. </li>
+</ul>
+</div>
+<h4><a name="restore"></a>Pour restaurer les tâches de sauvegarde depuis une autre destination de sauvegarde :</h4>
+<ol>
+<li>Cliquez sur <b>Restaurer depuis...</b>.</li>
+<li>Choisissez l'une des méthodes suivantes pour localiser la tâche de sauvegarde, puis cliquez sur <b>Suivant</b> :</li>
+<ul>
+<li><b>Restauration locale</b> : Choisissez cette option pour restaurer les données depuis un dossier partagé local ou un disque externe.</li>
+<li><b>Restauration réseau</b> : Choisissez cette option pour restaurer les données depuis un autre DiskStation ou depuis un serveur compatible rsync.</li>
+<li><b>Restauration du service cloud public</b> Choisissez cette option pour restaurer les données depuis un serveur de cloud public. </li>
+</ul>
+<li>Lorsque vous y êtes invité, sélectionnez la source où la tâche de sauvegarde est conservée, puis sélectionnez la destination pour restaurer les données.</li>
+<li>Suivez l'assistant pour terminer la configuration.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Remarque :</h4>
+<ul>
+  <li>Embedded DataStation peut uniquement restaurer les dossiers partagés vers des périphériques externes ext3/ext4.</li>
+  
+<li>Embedded DataStation ne prend pas en charge la restauration des applications sans appareil externe ext3/ext4.</li>
+</ul>
+</div>
+<p>____<br /> * Uniquement disponible sur certains modèles.</p>
+</body></html>

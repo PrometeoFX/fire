@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Wiederherstellen</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Wiederherstellen</h2>
+<p>Gehen Sie zu <strong>Datensicherung & Replikation</strong> > <strong>Wiederherstellen</strong>, um die gesicherten Daten wiederherzustellen.</p>
+
+<h4><a name="restore"></a>Datensicherungsaufgabe wiederherstellen:</h4>
+<ol class="disable-eds14">
+<li>Wählen Sie eine Datensicherungsaufgabe, und klicken Sie dann auf <b>Wiederherstellen</b>. Wählen Sie <strong>Wiederherstellen</strong> > <strong>Gesamte Aufgabe</strong> aus, wenn die Aufgabe die Sicherung mehrerer Versionen umfasst.</li>
+<li>Sie können aufgefordert werden, die Systemkonfiguration, verschiedene Versionen von gesicherten Daten oder andere Optionen auszuwählen. Dies ist davon abhängig, ob es sich um eine Datensicherungsaufgabe, eine LUN-Sicherungsaufgabe*, ein Datensicherungsziel für einzelne Versionen (d. h. freigegebener Ordner) oder ein Datensicherungsziel für mehrere Versionen (d. h. Volume) handelt.</li>
+<li>Folgen Sie dem Assistenten, um das Setup abzuschließen.</li>
+</ol>
+<ol class="enable-eds14">
+<li>Wählen Sie eine Datensicherungsaufgabe, und klicken Sie dann auf <b>Wiederherstellen</b>.</li>
+<li>Sie können aufgefordert werden, die Systemkonfiguration, verschiedene Versionen von gesicherten Daten oder andere Optionen auszuwählen. Dies hängt davon ab, um welche Art von Datensicherungsaufgabe es sich handelt.</li>
+<li>Folgen Sie dem Assistenten, um das Setup abzuschließen.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Hinweis:</h4>
+<ul>
+<li>Die Wiederherstellung für bestimmte Anwendungen wird unterstützt. Ob ein bestimmtes Paket die Wiederherstellung unterstützt und welche Einschränkungen dabei gelten, können Sie in der Hilfe zu den einzelnen Anwendungen nachlesen.</li>
+<li>Wenn Sie ein Paket wiederherstellen, das jedoch nicht installiert ist, installiert das System automatisch dieselbe oder eine aktuelle Version der Anwendung. Wenn die Anwendung installiert, deren Version aber älter als die gesicherte ist, wird sie vom System automatisch auf die ursprünglich gesicherte Version aktualisiert.</li>
+<li>Anwendungen, die in DSM 5.1 oder höher gesichert wurden, können in DSM 5.0 oder niedriger nicht wiederhergestellt werden. </li>
+</ul>
+</div>
+
+<div class="section disable-eds14">
+<h4>Hinweis:</h4>
+<ul>
+<li>Nach der Wiederherstellung wird eine Datensicherungs-LUN in einer dateibasierten LUN im ausgewählten Ziel-Volume wiederhergestellt.*</li>
+
+<li>Die Wiederherstellung für bestimmte Anwendungen wird unterstützt. Ob ein bestimmtes Paket die Wiederherstellung unterstützt und welche Einschränkungen dabei gelten, können Sie in der Hilfe zu den einzelnen Anwendungen nachlesen.</li>
+<li>Wenn Sie ein Paket wiederherstellen, das jedoch nicht installiert ist, installiert das System automatisch dieselbe oder eine aktuelle Version der Anwendung. Wenn die Anwendung installiert, deren Version aber älter als die gesicherte ist, wird sie vom System automatisch auf die ursprünglich gesicherte Version aktualisiert.</li>
+<li>Anwendungen, die in DSM 5.1 oder höher gesichert wurden, können in DSM 5.0 oder niedriger nicht wiederhergestellt werden. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Einzelne Datei oder einzelnen Ordner für Aufgabe zur Sicherung mehrerer Versionen wiederherstellen:</h4>
+<ol>
+<li>Starten Sie den <strong>Dateiversions-Browser</strong>. Hierzu können Sie nach einer der nachstehenden Methoden vorgehen:</li>
+<ul>
+<li>Klicken Sie auf <strong>Wiederherstellen</strong> und wählen Sie <strong>Einzelne Dateien/Ordner</strong> aus dem Dropdown-Menü aus. </li>
+<li>Gehen Sie zu <strong>Datensicherungsziel</strong> und erweitern Sie Ihr ausgewähltes Datensicherungsziel. Klicken Sie auf das Symbol <strong>Informationen zur Datensicherungsversion</strong>. Wählen Sie im Fenster, das eingeblendet wird, die Sicherungsversion aus, die Sie wiederherstellen möchten, und klicken Sie auf das Symbol <strong>Dateiversions-Browser</strong>.</li>
+</ul>
+<li>Die Versionen der gewünschten Datei oder des gewünschten Ordners können Sie über das Zeitachsen- oder das Kalendersymbol am unteren Bildschirmrand durchsuchen. </li>
+<li>Wählen Sie die Version aus, die Sie verwalten möchten, und klicken Sie auf <strong>Wiederherstellen</strong>. </li>
+<li>Alternativ k��nnen Sie eine Datei oder einen Ordner zu einem anderen Speicherort kopieren oder über die Schaltfläche <strong>Kopieren nach...</strong> oder <strong>Herunterladen</strong> herunterladen. </li>
+<li>Sie können auch auf die Datei oder den Ordner rechtsklicken und diese Optionen aus dem Dropdown-Menü auswählen. </li>
+</ol>
+<h4>Nach einer bestimmten Version suchen:</h4>
+<ol>
+  <li>Klicken Sie auf den Pfeil in der Filterleiste oben rechts.</li>
+  <li>Im Dropdown-Menü können Sie Dateien nach den folgenden Kriterien filtern:</li>
+  <ul>
+    <li><strong>Schlüsselwort:</strong> Geben Sie den Namen einer Datei oder eines Ordners ein. Sie können Platzhalter [*] (d. h. ein oder mehrere Zeichen) und [?] (d. h. ein beliebiges Zeichen) in den Schlüsselwörtern verwenden. Beispielsweise kann [a<span class="note_content">*</span>n] für [a<span class="note_content">ktio</span>n], [a<span class="note_content">lbe</span>n] oder [an] stehen.</li>
+    <li><strong>Dateityp:</strong> Aus dem Dropdown-Menü können Sie aus <strong>Beliebig</strong>, <strong>Beliebiger Ordner</strong> und <strong>Beliebige Datei</strong> auswählen, um Ihre Suche einzugrenzen.</li>
+    <li><strong>Größe:</strong> Wählen Sie <strong>Beliebig</strong> aus oder wählen Sie <strong>Entspricht</strong>, <strong>Ist mehr als</strong>, <strong>Ist weniger als</strong> aus und geben Sie einen Wert ein.</li>    
+    <li><strong>Datumsbereich: </strong>Wählen Sie <strong>Heute</strong>, <strong>Gestern</strong>, <strong>Letzte Woche</strong>, <strong>Letzter Monat</strong> oder <strong>Anpassen</strong> aus, um ein Start- und Enddatum einzugeben, um nach Versionen innerhalb eines bestimmten Bereichs zu suchen.</li>
+
+  </ul>
+  <li>Klicken Sie auf <strong>Filtern</strong>, um Ihre Filter anzuwenden. </li>
+  <li>Klicken Sie auf die Schaltfläche <strong>Reset</strong>, um Ihre gefilterte Suche zurückzusetzen.</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Die Funktion "Dateiversions-Browser" ist nur bei Aufgaben zum Sichern mehrerer Versionen verfügbar.</li>
+<li>In DSM 5.1 oder niedriger hat der Dateiversions-Browser einen begrenzten Funktionsumfang.</li>
+<li dir="ltr">Die Systemkonfiguration und Anwendungen können nur über <strong>Wiederherstellen</strong> > <strong>Gesamte Aufgabe</strong> wiederhergestellt werden. </li>
+<li>Metadaten werden von den Funktionen <strong>Kopieren nach...</strong> und <strong>Download</strong> ignoriert. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Datensicherungsaufgaben von anderen Datensicherungszielen wiederherstellen:</h4>
+<ol>
+<li>Klicken Sie auf <b>Wiederherstellen aus...</b>.</li>
+<li>Wählen Sie eine der folgenden Methoden aus, um die Datensicherungsaufgabe zu suchen, und klicken Sie auf <b>Weiter</b>:</li>
+<ul>
+<li><b>Lokale Wiederherstellung</b>: Wählen Sie diese Option aus, um Daten von einem lokalen freigegebenen Ordner oder einer externen Festplatte aus wiederherzustellen.</li>
+<li><b>Netzwerkwiederherstellung</b>: Wählen Sie diese Option aus, um Daten von einer anderen DiskStation oder einem rsync-kompatiblen Server aus wiederherzustellen.</li>
+
+<li><b>Wiederherstellung von öffentlichem Cloud Service</b>: Wählen Sie diese Option aus, um Daten von einem öffentlichen Cloud Server wiederherzustellen. </li>
+
+</ul>
+<li>Wählen Sie bei Aufforderung die Quelle aus, wo sich die Datensicherungsaufgabe befindet. Wählen Sie anschließend das Ziel aus, an dem die Daten wiederhergestellt werden sollen.</li>
+<li>Folgen Sie dem Assistenten, um den Vorgang abzuschließen.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Hinweis:</h4>
+<ul>
+
+  <li>Embedded DataStation kann freigegebene Ordner nur auf externen ext3/ext4-Geräten wiederherstellen.</li>
+  
+<li>Embedded DataStation unterstützt nicht die Anwendungswiederherstellung ohne ein externes ext3/ext4-Gerät.</li>
+
+</ul>
+</div>
+
+<p>____<br /> * Nur bei bestimmten Modellen verfügbar.</p>
+</body></html>

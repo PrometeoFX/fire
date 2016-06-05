@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="certificate"></a>Certificat</h2>
+
+<p>Un certificat peut être utilisé pour sécuriser les services SSL du DiskStation, tels que web (tous les services HTTPS), messagerie ou FTP. Avoir un certificat permet aux utilisateurs de valider l'identité d'un serveur et de l'administrateur avant d'envoyer des informations confidentielles. </p>
+
+<p>L'onglet <strong>Certificat</strong> (qui se trouve dans <strong>Panneau de configuration</strong> > <strong>Sécurité</strong> > <strong>Certificat</strong>) fournit des options permettant de gérer et d'afficher l'état des certificats du DiskStation, vous permettant de créer, importer/exporter, ou renouveler les certificats. L’assistant d’installation des certificats permet de créer des certificats auto-signés ou de télécharger des demandes de signature de certificat (CSR) pour s'enregistrer auprès des autorités de certification (CA).</p>
+
+
+<div class="section">
+<h4>Remarque :</h4>
+<p>Le certificat configurait ici est automatiquement utilisé par le serveur OpenVPN si VPN Server est installé.</p>
+</div>
+
+
+<h3>Certificats auto-signés</h3>
+
+<p>Un certificat auto-signé est un certificat qui a été créé et signé par la même entité dont il certifie l'identité (dans ce cas, le DiskStation). Les certificats auto-signés sont signés avec la clé privée générée par le DiskStation.  Parce que les certificats auto-signés ne sont pas émis par des autorités de certification tierces, ils offrent moins d'assurance sur l'identité du serveur et ne sont généralement utilisés que pour sécuriser les canaux entre le serveur et un groupe d'utilisateurs connus.</p>
+
+
+<h4>Pour créer un certificat auto-signé :</h4>
+<ol>
+	<li>Cliquez sur <b>Créer un certificat</b>.</li>
+	<li>Suivez les instructions de l'assistant d'installation.</li>
+</ol>
+
+<div class="section">
+<h4>Remarque :</h4>
+<p>Créer un certificat auto-signé remplacera le certificat existant du DiskStation.</p>
+</div>
+
+
+<h3>Demandes de signature de certificat</h3>
+
+<p>Pour faire une demande de certificat d'une autorité de certification tierce, vous devez d'abord créer une demande de signature de certificat (CSR). Une demande de signature de certificat est un corps de texte crypté généré par le DiskStation contenant des informations qui seront incluses dans votre certificat comme votre nom de domaine, nom de l'organisation, emplacement général et adresse email. L'assistant de configuration peut vous aider à générer la demande de signature de certificat afin de demander un certificat signé pour le DiskStation.</p>
+
+<p>Pour obtenir un certificat auprès d'une autorité de certification commerciale ou tierce, vous devrez fournir vos identifiants personnels ou ceux de l'organisation, et prouver que vous êtes le propriétaire du nom de domaine qui a été saisi dans le champ nom commun de la demande de signature de certificat.</p>
+
+<div class="section">
+<h4>Remarque :</h4>
+<p>Une clé privée doit également être générée en même temps que la demande de signature de certificat. Les autorités de certification n'ont pas besoin de cette clé privée. Veuillez conserver la clé privée de votre DiskStation en sécurité et hors d'atteinte.</p>
+</div>
+
+<h4>Pour créer une demande de signature de certificat :</h4>
+<ol>
+	<li>Cliquez sur <b>Créer un certificat</b>.</li>
+	<li>Suivez les instructions de l'assistant d'installation pour créer et télécharger la demande de signature de certificat.</li>
+</ol>
+
+<p>Une fois que votre certificat a été émis par l'autorité de certification, il peut être importé en même temps que votre clé privée (voir ci-dessous pour les instructions).
+
+
+
+<h3>Exportation des certificats</h3>
+
+<p>Les certificats existants peuvent être téléchargés à des fins de gestion ou d'archivage. Le fichier exporté contient le certificat, la clé privée et le certificat racine auto-signé du DiskStation.</p>
+
+<h4>Pour exporter un certificat :</h4>
+<ul>
+<li>Cliquez sur le bouton <b>Exporter le certificat</b>.</li>
+</ul>
+
+
+
+<h3>Importation des certificats</h3>
+
+<p>Cette option vous permet d'importer les certificats émis par les autorités ou les certificats précédemment exportés, ensemble avec la clé privée.</p>
+
+<h4>Pour importer un certificat :</h4>
+<ul>
+	<li>Cliquez sur le bouton <b>Importer le certificat</b>.</li>
+</ul>
+
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Les certificats intermédiaires sont optionnels pour les certificats émis par certaines autorités de certification.</li>
+<li>Les certificats doivent être de format X.509 PEM.</li>
+<li>Les clés privées doivent être au format RSA et ne peuvent pas être protégées par des phrases d'authentification.</li>
+</ul>
+</div>
+
+
+
+<h3>Renouvellement des certificats</h3>
+
+<p>Lorsque votre certificat est sur le point d'expirer, il peut être renouvelé à l'aide de cette option.</p>
+
+<h4>Pour renouveler un certificat :</h4>
+<ol>
+	<li>Cliquez sur <b>Créer un certificat</b>.</li>
+	<li>Sélectionnez <b>Renouveler le certificat</b> et cliquez sur <b>Suivant</b></li>
+	<li>Une nouvelle clé privée et une demande de signature de certificat seront créées.</li>
+</ol>
+
+
+
+<h3>Créer une demande de signature de certificat (CSR)</h3>
+
+<p>Cette option vous permet de signer une demande de certificat signé en utilisant la racine du DiskStation.</p>
+
+<h4>Pour ouvrir une demande de signature de certificat :</h4>
+<ol>
+	<li>Cliquez sur <b>Créer un certificat</b>.</li>
+	<li>Cliquez sur <b>Ouvrir une demande de signature de certificat (CSR)</b>.</li>
+	<li>Transférez la demande de signature de certificat et entrez l'information appropriée. </li>
+	<li>Cliquez sur <b>Suivant</b> et le système signera la demande de certificat et créera un certificat correspondant.</li>
+</ol>
+
+
+</body>
+</html>
+

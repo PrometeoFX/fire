@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Vytvoření svazku – Nápověda Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on Synology NAS using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Vytvoření svazku</h2>
+
+<p>Tento článek objasňuje postup vytvoření svazku na serveru DiskStation. Při vytváření nového svazku si můžete vybrat jednu z následujících metod:</p>
+
+<ul>
+  <li><b>Rychlý režim:</b> Toto je nejlepší možnost pro začátečníky. Zvolte tuto metodu, pokud chcete automaticky optimalizovat kapacitu a výkon úložiště, aniž byste se museli obávat o technické aspekty, jako jsou úrovně pole RAID. </li>
+
+<li><b>Vlastní:</b> Pro pokročilé uživatele, kteří chtějí ovládat konkrétnější aspekty vytváření svazků, jako jsou typy pole RAID a alokace kapacity. Tato možnost podporuje různé typy pole RAID, umožňuje vytváření jednoduchých a násobných svazků a poskytuje možnosti alokace konkrétního obsahu kapacity pro jednotlivé svazky (pouze při vytváření násobných svazků v poli RAID).
+</li>
+</ul>
+
+<div class="section">
+<h4>Jednoduché nebo násobné svazky v rámci pole RAID?</h4>
+<p>Při vytváření svazku pomocí vlastního režimu si můžete vybrat jednu z následujících možností:</p>
+<ul>
+  <li><b>Jediný svazek v systému RAID</b>
+    <ul>
+      <li>Vytvoří jediný svazek pomocí veškeré dostupné kapacity vybraných pevných disků.</li>
+      <li>Nabízí vyšší rychlost a lepší výkon.</li>
+      <li>Podporuje různé typy pole RAID.</li>
+    </ul>
+  </li>
+  <li><b>Více svazků v systému RAID</b>
+    <ul>
+      <li>Umožňuje vytváření většího počtu svazků v rámci skupiny disků.</li>
+      <li>Podporuje alokaci konkrétní kapacity jednotlivých svazků.</li>
+      <li>Nabízí flexibilnější správu úložiště.</li>
+      <li>Podporuje různé typy pole RAID.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Než začnete:</h4>
+<ul>
+<li>Dříve než začnete, ověřte, zda na pevných discích nejsou žádná důležitá data. Všechna stávající data budou během procesu vytvoření smazána.</li>
+<li>Přejděte na stránku <b>HDD/SSD</b> a ověřte, zda je stav jednotlivých pevných disků <b>Normální</b> nebo <strong>Není inicializováno</strong>.</li>
+</ul>
+</div>
+
+
+<h4>Postup vytvoření svazku:</h4>
+<ol>
+<li>Otevřete <b>Správce úložiště</b>.</li>
+<li>Přejděte do části <b>Svazek</b> a klikněte na možnost <b>Vytvořit</b>.</li>
+<li>Zobrazí se průvodce vytvářením svazků. Vyberte podle potřeb možnost <strong>Rychlý režim</strong> nebo <strong>Vlastní</strong>. Poté při vytváření svazku postupujte podle pokynů průvodce.</li>
+</ol>
+
+</body>
+</html>

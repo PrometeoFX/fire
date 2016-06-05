@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Gegevensback-up</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Gegevensback-up</h2>
+
+<p>In het tabblad <b>Back-up</b> van <b>Back-up en replicatie</b> kunt u specifieke gegevens op DiskStation handmatig of volgens een aangepast schema back-uppen. Met deze functie kunnen systeemconfiguraties, de inhoud van gedeelde mappen en pakketgegevens naar een lokale, netwerk- of cloudback-upbestemming worden geback-upt.</p>
+
+<h4>Om een back-uptaak te maken:</h4>
+<ol>
+<li>Selecteer <b>Maken</b> > <b>Gegevensback-uptaak</b>.</li>
+<li>Volg de wizard om de installatie te voltooien. Ga naar <a href="repository.html">Back-updoel</a> voor meer informatie.</li>
+</ol>
+
+<h4>Om back-uptaken te beheren:</h4>
+<p>Selecteer een bestaande taak en klik op een van de onderstaande knoppen:</p>
+<ul>
+<li><strong>Bewerken:</strong> wijzigt bestemming, bron, schema en andere instellingen van de geselecteerde taak.</li>
+<li><strong>Verwijderen:</strong> verwijdert de geselecteerde taak.</li>
+<li><strong>Annuleren:</strong> annuleert de geselecteerde en actieve taak.</li>
+<li><strong>Nu een back-up maken:</strong> voert onmiddellijk een back-up uit van de geselecteerde taak.</li>
+</ul>
+
+
+<h3>Back-uprotatie</h3>
+<p>Back-uprotatie is een versiebeheermechanisme. Met back-uprotatie kunt back-upversies beheren door oudere onnodige versies automatisch te verwijderen en opslagruimte vrij te maken. U kunt deze functie bij <b>Taakinstellingen</b> inschakelen of configureren bij het maken van een back-uptaak.</p>
+<h4>Om versies te roteren:</h4>
+<ol>
+<li>selecteer de back-uptaak waarop u versierotatie wilt toepassen en klik op <strong>Bewerken</strong>.</li>
+<li>Ga naar het tabblad <strong>Taakinstellingen</strong> en schakel het selectievakje<strong> Back-uprotatie inschakelen</strong> in. </li>
+<li>Hier hebt u de keuze uit twee rotatiemethoden:</li>
+<ul>
+<li><b>Vanaf de jongste versie:</b> dit is de basismethode van versierotatie. Wordt de rotatievoorwaarde geactiveerd, dan wordt de vroegste versie eerst verwijderd. </li>
+<li><b>Smart Recycle:</b> dit de intelligente methode van versierotatie. Wordt de rotatievoorwaarde geactiveerd, dan zal het systeem de door het bewaarmechanisme geselecteerde versies verwijderen. Het bewaarmechanisme werkt als volgt:</li>
+<ul>
+	<li><b>Uurversies van de afgelopen 24 uur:</b> het systeem behoudt de vroegste versie die om het uur wordt gemaakt.</li>
+	<li><b>Dagelijkse versies van afgelopen 1 dag tot 1 maand:</b> het systeem behoudt de jongste versie die dagelijks wordt gemaakt.</li>
+	<li><b>Wekelijkse versie ouder dan 1 maand:</b> het systeem behoudt de jongste versie die wekelijks wordt gemaakt.</li>
+</ul>
+</ul>
+<li>Geef het maximum <b>aantal versies</b> op. Wordt het maximum aantal versies overschreden, dan wordt versierotatie gestart. Vergrendelde versies worden niet meegerekend.</li>
+<li>Hebt u een regelmatig back-upplanning geconfigureerd, dan wordt een voorbeeld getoond van hoe uw back-upversies worden behouden en wordt het vroegste herstelpunt gebaseerd op uw rotatie-instellingen getoond. &nbsp;&nbsp;</li>
+<li>Klik op <strong>OK</strong> om uw instellingen op te slaan. </li>
+</ol>
+
+<div class="section">
+  <h4>Opmerkingen:</h4>
+  <ul>
+  <li>Vergrendelde versies worden nooit verwijderd. Ga naar <a href="repository.html#lock_version">Back-updoel</a> voor meer informatie.</li>
+  
+  <li>Alleen back-uptaken van meerdere versies bieden versierotatiefuncties.</li>
+  <li>Versierotatie wordt niet ondesteund in DSM 5.1 of eerdere versies.</li>
+  <li>Rotatie wordt onmiddellijk geactiveerd na wijziging van de instelling of voltooiing van de back-uptaak.</li>
+  <li>Vergrendelde versies worden uitgesloten van de berekening van het maximum aantal versies.</li>
+  </ul>
+</div>
+
+
+<div class="section">
+<h4>Algemene opmerkingen:</h4>
+<ul>
+<li>de namen van back-uptaken kunnen 1 tot 32 unicode-tekens bevatten, maar mogen niet de volgende tekens bevatten:<br> <span class="letterSpace5">! " # $ % &amp; ' ( ) * + , / : ; &lt; = &gt; ? @ [ ] \ ^ ` { } | ~</span></li>
+<li>De maximumlengte van het volledige pad voor de back-up is 2048 tekens.</li>
+<li>Als u meer dan 32.000 bestanden of mappen via AFP naar een EXT3-gedeelde map uploadt, zullen alle back-uptaken van de gedeelde map mislukken.</li>
+<li>Een gecodeerde map kan gekoppeld of ontkoppeld geback-upt worden. De map wordt echter altijd als ontkoppelde map teruggezet en wordt bij het opstarten niet automatisch gekoppeld. U moet de coderingssleutel van de gecodeerde gedeelde map invoeren of importeren om hem te koppelen.</li>
+<li>Back-uppen van een gecodeerd bestand naar een ander gecodeerd bestand wordt niet ondersteund.</li>
+<li>Gebruik van externe mappen als back-upbron of back-updoel wordt niet ondersteund.</li><li>Als het back-updoel een volume is, kan alleen de eigenaar van de taak de back-uptaak uitvoeren. Ga naar <a href="repository.html">Back-updoel</a> voor meer informatie.</li>
+<li>Back-uppen wordt ondersteund door bepaalde toepassingen. Om te weten of een specifiek pakket back-uppen ondersteunt, inclusief back-upinhoud en beperkingen, raadpleegt u de helppagina van de debetreffende toepassing.</li>
+<li class="enable-eds14">DiskStation ondersteunt geen toepassingsback-up zonder een extern schrijfbaar EXT3/EXT4-apparaat.</li>
+<li class="enable-eds14">DiskStation biedt geen ondersteuning voor het back-uppen naar een volume zonder een extern schrijfbaar EXT3/EXT4-apparaat.</li>
+<li class="enable-eds14">DiskStation kan alleen gedeelde mappen back-uppen die op EXT3/EXT4-externe apparaten zijn gemaakt.</li>
+<li class="disable-eds14">Het systeem kan geen toepassingen back-uppen zonder een schrijfbaar volume.</li
+></ul>
+</div>
+<div class="section disable-eds14">
+<h4>Windows ACL-instellingen back-uppen:</h4>
+<p>Afhankelijk van de bestandssystemen van het back-updoel kunnen ook Windows ACL-instellingen van de bestanden op DiskStation worden geback-upt:</p>
+<ul>
+
+<li><strong>Lokaal back-updoel</strong>, <strong>Netwerkback-updoel</strong> en <strong>Publieke cloud-back-updoel</strong> kunnen Windows ACL-instellingen back-uppen, ongeacht het bestandssysteem van het doel.</li>
+
+<li><strong>Gedeelde map synchroniseren</strong> kan Windows ACL-instellingen back-uppen als het bestandssysteem van het doel EXT4<span style="display: inline;" class="enable-rc18015xsp">/BTRFS</span> is.</li>
+
+</ul>
+</div>
+
+</body></html>

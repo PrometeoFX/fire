@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Monitor de recursos</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1><a name="leaf_update"></a>Monitor de recursos</h1>
+<p>El Monitor de recursos le permite supervisar el uso de la CPU, el uso de la memoria, la utilizaci&oacute;n del disco y el flujo de red. Puede elegir entre supervisar en tiempo real o visualizar los datos anteriores.</p>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Los datos anteriores solo se muestran si se marca <strong>Habilitar historial de uso</strong> en la pesta&ntilde;a <strong>Configuraci&oacute;n</strong>.</li>
+</ul>
+</div>
+<h2>Rendimiento</h2>
+<p>Haga clic en la pesta&ntilde;a <strong>Rendimiento</strong> para ver los datos de utilizaci&oacute;n de recursos. La fecha, la hora y la informaci&oacute;n del gr&aacute;fico se mostrar&aacute;n al pasar el rat&oacute;n por encima.</p>
+<h3>CPU</h3>
+<p>Puede ver el uso general de la CPU del <strong>Usuario</strong>, del <strong>Sistema</strong> y de <strong>Espera de E/S</strong>. La carga de CPU puede ser alta la primera vez que se inicie el Monitor de recursos, pues el sistema debe recopilar sus datos de recursos y cargar la p&aacute;gina de IU al mismo tiempo.</p>
+<p><strong>Usuario</strong> muestra el porcentaje de CPU que se utiliza para ejecutar aplicaciones del usuario. <strong>Sistema</strong> muestra el porcentaje de CPU que se usa para el sistema y los IRQ de hardware/software. <strong>Espera de E/S</strong> muestra el porcentaje de CPU invertido en la Espera de E/S.</p>
+<p><strong>Utilizaci&oacute;n</strong> es la suma del uso de la CPU del <strong>Usuario</strong> y del <strong>Sistema</strong>.</p>
+<p>Se muestra la Media de carga en 1, 5 y 15 minutos, indicando la longitud de la cola de ejecuci&oacute;n (es decir, la suma del n&uacute;mero de procesos que se est&aacute;n ejecutando actualmente m&aacute;s el n&uacute;mero que est&aacute;n esperando para ejecutarse). </p>
+<div class="section">
+<h4>Explicaci&oacute;n de los t&eacute;rminos</h4>
+<ul>
+<li><b>Espera de E/S</b>: la Espera de E/S indica que la CPU est&aacute; en reposo y no est&aacute; siendo utilizada por ning&uacute;n programa. </li>
+<p>La Espera de E/S es un comportamiento normal. Dado que la velocidad de la CPU es mucho m&aacute;s r&aacute;pida que la de la E/S, es normal que la CPU tenga que esperar a la transmisi&oacute;n de discos o red. Sin embargo, si el porcentaje de Espera de E/S es extremadamente grande, significa que la CPU invertir&aacute; la mayor parte del tiempo en la Espera de E/S y es posible que no se utilice bien. Puede usar configuraciones de grupo de discos (por ejemplo, SHR o RAID 5) o configuraciones de red (por ejemplo, Bonding) m&aacute;s eficientes para conseguir un mejor rendimiento del sistema.</p> 
+</ul>
+</div>
+<h3>Memoria</h3>
+<p>Se mostrar&aacute; el uso de la memoria f&iacute;sica y el espacio de intercambio. El uso de memoria sigue siendo elevado porque el sistema almacena en cach&eacute; los datos de m&aacute;s frecuente acceso, por lo que los datos se pueden obtener r&aacute;pidamente sin acceder al disco duro. La memoria en cach&eacute; se liberar&aacute; si la memoria total es insuficiente.</p>
+<p>Un uso alto del espacio de intercambio indica una memoria del sistema insuficiente y tambi&eacute;n afectar&aacute; al rendimiento del sistema. Puede ver la velocidad de intercambio hacia dentro y hacia fuera seleccionando <strong>Intercambio</strong> en el men&uacute; desplegable de la parte superior. </p>
+
+
+<h3>Disco</h3>
+<p>Puede elegir ver el uso del disco general, la tasa de transferencia o el IOPS haciendo clic en el men&uacute; desplegable de la parte superior del gr&aacute;fico. Puede hacer clic en <strong>Ver todo</strong> en la parte inferior para seleccionar m&aacute;s discos marcando las casillas de verificaci&oacute;n para a&ntilde;adir sus datos al gr&aacute;fico.</p>
+<h3 class="disable-eds14">Volumen/iSCSI</h3>
+<p class="disable-eds14">Esta p&aacute;gina muestra el estado de transferencia general de los vol&uacute;menes e iSCSI LUN (nivel de bloques). Haga clic en el men&uacute; desplegable de encima del gr&aacute;fico para ver el uso, la tasa de transferencia o el IOPS. Haga clic en el bot&oacute;n <strong>Ver todo</strong> para seleccionar vol&uacute;menes o iSCSI LUN (nivel de bloques) individuales y a&ntilde;adirlos al gr&aacute;fico.</p>
+
+<h3>Red</h3>
+<p>El gr&aacute;fico de flujo de red muestra la velocidad de datos enviados y recibidos en KB por segundo. Si PPPoE est&aacute; habilitado, su velocidad de transferencia tambi&eacute;n se mostrar&aacute; en el gr&aacute;fico.</p>
+
+<h2>Proceso</h2>
+<p>Haga clic en la pesta&ntilde;a <strong>Proceso</strong>Proceso&nbsp;para ver el uso de la CPU y de la memoria de cada proceso con el fin de reducir la carga de la CPU.</p>
+<p>El <strong>Estado</strong> del proceso puede ser <strong>En ejecuci&oacute;n</strong>, <strong>En suspensi&oacute;n</strong> y <strong>Detenido</strong>. Los equivalentes de Linux del estado del proceso son <strong>en ejecuci&oacute;n</strong>, <strong>detenido/rastreando</strong>, <strong>en suspensi&oacute;n</strong></strong>. </p>
+<p>El estado <strong>En suspensi&oacute;n</strong> puede ir seguido de una letra con m&aacute;s informaci&oacute;n: por ejemplo, &apos;D&apos; para suspensi&oacute;n del disco, &apos;Z&apos; para zombi, &apos;X&apos; para muerto.</p>
+
+<h2>Usuarios conectados</h2>
+<p> En esta pesta&ntilde;a puede visualizar y administrar los clientes que est&aacute;n conectados al sistema y est&aacute;n accediendo a los recursos en estos momentos. Esta secci&oacute;n muestra los clientes conectados a trav&eacute;s de HTTP, TELNET, SSH, SMB/CIFS, AFP, FTP y NFS.</p>
+<h4>Para administrar las conexiones actuales, deber&aacute; realizar una de las siguientes opciones:</h4>
+<ul>
+<li>Haga clic en <b>Guardar</b> para exportar la lista actual a un archivo HTML.</li>
+<li>Haga clic en <b>Actualizar</b> para actualizar la lista.</li>
+<li>Haga clic en <b>Desconectar conexi&oacute;n</b> para no permitir que el usuario acceda al recurso. El usuario desconectado no vuelve a ser autorizado para tener acceso al recurso.</li>
+<li>Haga clic en <b>Deshabilitar usuario</b> para deshabilitar el usuario. Para volver a habilitarlo, vaya a <b>Men&uacute; principal</b> &gt; <b>Panel de control</b> &gt; <b>Usuario</b>.</li>
+</ul>
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>La opci&oacute;n <strong>Desconectar conexi&oacute;n</strong> no funciona con clientes NFS.</li>
+<li>Si los clientes NFS no desmontan carpetas compartidas correctamente, es posible que todav&iacute;a aparezcan en la lista de usuarios conectados.</li>
+<li>Si DiskStation se reinicia, los clientes NFS que estaban conectados previamente no aparecer&aacute;n en la lista de usuarios conectados.</li>
+</ul>
+</div>
+
+
+<h2>L&iacute;mite de velocidad</h2>
+<p>En la ficha <strong>L&iacute;mite de velocidad</strong>, puede ver y gestionar la lista de procesos de transferencia de archivos que aplicaban el l&iacute;mite de velocidad en DiskStation.</p>
+<h4>Para actualizar la lista:</h4>
+<p>Haga clic en <strong>Actualizar</strong> para volver a cargar la p&aacute;gina y obtener los registros m&aacute;s actualizados.</p>
+<h4>Para detener el proceso de transferencia de archivos:</h4>
+<p>Haga clic en <b>Desconectar conexi&oacute;n</b> para detener la transferencia de archivos. Tendr&aacute; que volver a iniciar la transferencia de archivos para completar el proceso correctamente.</p>
+
+
+<h2>Configuraci&oacute;n</h2>
+<p>Haga clic en <strong>Configuraci&oacute;n</strong> para configurar las siguientes opciones:</p>
+<ul>
+<li>Elija la <strong>Duraci&oacute;n en tiempo real</strong> en minutos desde el men&uacute; desplegable.<li>Marque <strong>Habilitar historial de usuario</strong> si desea ver los datos anteriores. Cuando esta opci&oacute;n est&eacute; habilitada, puede alternar entre <strong>Tiempo real</strong>, <strong>1 d&iacute;a</strong>, <strong>1 semana</strong>, <strong>1 mes</strong> y <strong>1 a&ntilde;o</strong> en el men&uacute; desplegable de la esquina superior derecha cuando visualice gr&aacute;ficos de rendimiento.</ul>
+<p>Haga clic en <strong>Aplicar</strong> para guardar la configuraci&oacute;n.</p>
+</body>
+</html>

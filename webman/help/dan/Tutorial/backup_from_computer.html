@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Sådan udfører du backup af data på min PC/Mac med Cloud Station</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Sådan udfører du backup af data på min PC/Mac med Cloud Station</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/backup_from_PC/07_1_back_up_your_data_from_pc.png" />
+<h2>Oversigt</h2>
+<p>Cloud Station er ikke kun en sofistikeret synkroniseringssoftware på tværs af platforme. Brugere kan bruge den som en smartere måde at udføre backup af deres personlige computere. Der er nogle fordele ved at bruge Cloud Station som backuppartner. For det første giver realtidskopiering en bedre RPO, kortere periode, hvor data kan være mistet (kan ikke gendannes) fra din computer i tilfælde af en større hændelse. Det reagerer ikke blot øjeblikkeligt, men det hjælper dig også med at spare båndbredde dramatisk sammenlignet med traditionel backup, der bruger store mængder båndbredde inden for et givet tidsrum. Du kan nemt filtrere filer i den samme mappe, som du ikke vil have udført backup på ved at indstille filstørrelse eller filtype på computerklienten. Cloud Station kan også opbevare op til 32 historikversioner af en fil, som Cloud Station sætter dig i stand til at gendanne på en PC-klient fra server (NAS)-siden.</p>
+
+<h3 class="list_head">1. Konfigurer Cloud Station på Synology NAS</h3>
+<ol>
+
+<li>Log ind på DSM med en konto fra <strong>administrator</strong>.</li>
+<li>Start <b>Cloud Station</b>.</li>
+<li>Hvis du ikke har aktiveret brugerstartfunktionen, bliver du bedt om at gøre det. Klik på <strong>OK</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/01.png" border="1" />
+<li>Du bliver omdirigeret til brugerindstillingssiden. Aktiver brugerstart, og klik på <b>Anvend</b>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" />
+<li>Gå så tilbage til <b>Cloud Station</b>, hvor du bedes om at aktivere den. Klik på <b>Ja</b>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" />
+<div class="code_div"><b>Bemærk:</b> QuickConnect er en afsendelsestjeneste, der sætter dig i stand til nemt at oprette forbindelse til din Synology NAS uden for det lokale netværk. Hvis du vil synkronisere dine filer, når du ikke er hjemme eller på kontoret, anbefaler vi, at du konfigurerer QuickConnect ved at gå til <b>Kontrolpanel</b> > <b>QuickConnect</b>.</div>
+
+<li>Gå til <b>Privilegier</b>, og angiv de brugere, der kan bruge Cloud Station. Klik på <b>Gem</b>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" />
+<li>Konfigurer en delt mappe på din Synology NAS til backupformål. De gør du ved at gå til <strong>Kontrolpanel</strong> &gt; <strong>Delt mappe</strong> og klikke på <strong>Opret</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" />
+<li>Navngiv mappen, og udfyld detaljerne. Klik på <strong>OK</strong>. Vi vil f.eks. navngive mappen <strong>Backup</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" />
+<li>På fanen <strong>Tilladelser</strong> angives de brugere, der kan få adgang til mappen. Vi vil f.eks. give <strong>admin</strong> <strong>Læse/skrive</strong>-tilladelser til mappen. Klik på <strong>OK</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/07.png" border="1" />
+<li>Gå til <strong>Cloud Station</strong> &gt; <strong>Indstillinger</strong> > <strong>Deling</strong>, og vælg mappen <b>Backup</b>, og klik på <strong>Aktiver</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/08.png" border="1" />
+</ol>
+
+<h3 class="list_head">2. Konfigurer Cloud Station på din Windows-computer</h3>
+<p>Følg trinnene til konfiguration af Cloud Station på din Mac eller PC</p>
+
+<h4>2.1 Til PC</h4>
+
+<ol>
+
+<li>Gå til <strong>Cloud Station</strong> &gt; <strong>Oversigt</strong>, og klik på knappen <strong>Download</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/09.png" border="1" />
+<li>Klik på knappen for at downloade Cloud Station til Windows PC. (Du kan også downloade Cloud Station fra <a href="https://www.synology.com/en-us/support/download" target="_blank">Synologys Downloadcenter</a>.)</li>
+<li>Start installationsprogrammet på computeren, og følg instruktionerne til installation af Cloud Station. </li>
+<li>Efter installationen kører du <strong>Cloud Station</strong> på computeren. Klik på <strong>Start nu</strong></li>
+<img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" />
+<li>Indtast adressen på den Synology NAS, der kører Cloud Station (eller QuickConnect ID), brugernavn og adgangskode. (Du kan også klikke på søgeikonet til højre, hvorefter Cloud Station automatisk vil søge efter andre Synology NAS på dit LAN). Klik på <strong>Næste</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" />
+<div class="code_div"><b>Bemærk:</b> Sørg for, at den indtastede konto har tilladelser under <strong>Cloud Station</strong> > <strong>Privilegier</strong> på Synology NAS.</div>
+<li>Vælg, hvordan vil du konfigurere din opgave (her vælger vi <strong>Avanceret konfiguration</strong>, da vi konfigurerer en mappe specielt til backup). Klik på <strong>Næste</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
+<li>Vælg en mappe på computeren for at holde den synkroniseret med mappen Backup, som du tidligere oprettede på din Synology NAS. Klik på <strong>Næste</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" />
+<li>Klik på <strong>Udført</strong> for af fuldføre konfiguration.</li>
+<img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" />
+</ol>
+
+<p><strong>Sådan opretter du en opgave til</strong>:
+<ol>
+<li>Gå til <strong>Cloud Station</strong> > <strong>Indstillinger</strong>, og aktiver en delt mappe til denne nye opgave. Mit eksempel er <strong>photo</strong>. Sørg for, at du har læse/skrive-privilegier til <strong>photo</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
+<li>Konfigurer Cloud Station på din PC ved at klikke på <strong>Opret</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" />
+<li>Vælg en Synology NAS til din nye opgave. Her skal vi vælge <strong>Tilsluttet Synology NAS</strong>, da vi opretter endnu en opgave til den samme Synology NAS. Klik på <strong>Næste</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" />
+<li>Vælg <strong>Avanceret konfiguration</strong>, og følg resten af guiden for at fortsætte konfigurationen. </li>
+<img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
+</ol>
+
+<h4>2.2 Til Mac</h4>
+  <ol>
+    <li>Gå til <strong>Cloud Station</strong> &gt; <strong>Oversigt</strong>, og klik på knappen <strong>Download</strong>.</li>
+
+    <li>Klik på knappen for at downloade Cloud Station til Mac. (Du kan også downloade Cloud Station fra <a href="https://www.synology.com/en-us/support/download" target="_blank">Synologys Downloadcenter</a>.)</li>
+<img src="../../images/Backup/1x/backup_from_PC/18.png" border="1" />
+    <li>Start installationsprogrammet på computeren, og følg instruktionerne til installation af Cloud Station. </li>
+    <li>Efter installationen kører du <strong>Cloud Station</strong> på computeren. Klik på <strong>Start nu</strong></li>
+<img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" />      
+<li>Indtast adressen på den Synology NAS, der kører Cloud Station (eller QuickConnect ID), brugernavn og adgangskode. (Du kan også klikke på søgeikonet til højre, hvorefter Cloud Station automatisk vil søge efter andre Synology NAS på dit LAN). Klik på <strong>Næste</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" />   
+    <div class="code_div"><b>Bemærk:</b> Sørg for, at den indtastede konto har tilladelser under <strong>Cloud Station</strong> > <strong>Privilegier</strong> på Synology NAS.</div>
+<li>Vælg, hvordan vil du konfigurere din opgave (her vælger vi <strong>Avanceret konfiguration</strong>, da vi konfigurerer en mappe specielt til backup). Klik på <strong>Næste</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
+<li>Vælg en mappe på computeren for at holde den synkroniseret med mappen Backup, som du tidligere oprettede på din Synology NAS. Klik på <strong>Næste</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" />
+<li>Klik på <strong>Udført</strong> for af fuldføre konfiguration.</li>
+  </ol>
+  
+<p><strong>Sådan opretter du en ny opgave</strong>:
+<ol>
+<li>Gå til <strong>Cloud Station</strong> > <strong>Indstillinger</strong>, og aktiver en delt mappe til denne nye opgave. Mit eksempel er <strong>photo</strong>. Sørg for, at du har læse/skrive-privilegier til <strong>photo</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
+<li>Konfigurer Cloud Station på computeren ved at klikke på <strong>Opret</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" />
+<li>Vælg en Synology NAS til din nye opgave. Her skal vi vælge <strong>Tilsluttet Synology NAS</strong>, da vi opretter endnu en opgave til den samme Synology NAS. Klik på <strong>Næste</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" />
+<li>Vælg <strong>Avanceret konfiguration</strong>, og følg resten af guiden for at fortsætte konfigurationen. </li>
+<img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
+</ol> 
+
+<h3 class="list_head">3. Hent data fra Cloud Station</h3>
+<p>Hvis du hændeligt fjerner eller overskriver en fil, gør Cloud Station det nemt at hente den. </p>  
+<h3>4.1 Sådan downloader du en tidligere version af en synkroniseret fil på PC</h3>  
+  <ol>
+      <li>Højreklik på ikonet Cloud Station i systembakken, og klike på mappeikonet.</li>
+<img src="../../images/Backup/1x/backup_from_PC/25.png" border="1" />       
+      <li>Højreklik på den valgte fil, og vælg <strong>Synology Cloud Station</strong> &gt; <strong>Gennemse tidligere versioner</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/26.png" border="1" />    
+   <li>Find den version, som du vil downloade, og klik på downloadikonet. </li>
+<img src="../../images/Backup/1x/backup_from_PC/27.png" border="1" />    
+  </ul>
+    <li>Indtast filenavnet, og vælg lagerdestinationen. 
+</ol>
+<h3>4.1 Sådan downloader du en tidligere version af en synkroniseret fil på Mac</h3>  
+  <ol>
+      <li>Højreklik på ikonet Cloud Station i systembakken, og klike på mappeikonet.</li>
+<img src="../../images/Backup/1x/backup_from_PC/28.png" border="1" />         
+      <li>Højreklik på den valgte fil, og vælg <strong>Synology Cloud Station</strong>&gt;<strong>Gennemse tidligere versioner</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/29.png" border="1" />        
+   <li>Find den version, som du vil downloade, og klik på downloadikonet. </li>
+<img src="../../images/Backup/1x/backup_from_PC/30.png" border="1" />       
+    <li>Indtast filenavnet, og vælg lagerdestinationen. 
+</ol>
+<h3>4.3 Sådan downloader eller gendanner du en tidligere version af en synkroniseret fra Cloud Station</h3>   
+<ol>
+    <li>Gå til <strong>Cloud Station</strong>&gt;<strong>Versionshistorik</strong>, og vælg mappen <strong>Backup</strong>, som du tidligere oprettede. </li>
+<img src="../../images/Backup/1x/backup_from_PC/31.png" border="1" />    
+    <li>Vælg den fil, du vil hente, og klik på <strong>Handling</strong> > <strong>Gennemse tidligere versioner</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/34.png" border="1" />      
+    <li>Vælg den version af den fil, du vil downloade, og klik på <strong>Download</strong>. Eller, hvis du ikke er sikker på, du vil have den valgte version gendannet, skal du klikke på <strong>Gendan</strong>, hvorefter den bliver overskrevet med din aktuelle version.</li>
+<img src="../../images/Backup/1x/backup_from_PC/35.png" border="1" />    
+  </ol>
+
+<h3 class="list_head">4. Vigtige noter</h3>  
+  <ol>
+<li>Behold altid historiske versioner, i tilfælde af at en fil fjernes eller overskrives ved et tilfælde.</li>
+<li>Under Globale indstillinger kan du konfigurere, om en fil bliver hentet igen fra NAS eller slettes på din NAS, når du sletter en fil på din PC.</li>
+</ol>
+  <h3 class="list_head">5. Yderligere beskyttelse af dine data</h3>
+  
+<p>Hvis du vil se flere måde at beskytte og udføre backup af dine data, skal du klikke <a href="https://www.synology.com/en-global/knowledgebase/tutorials#BackupRestore" target="_blank">her</a> for at se selvstudier med detaljer om andre backuptjenester fra DSM.</p>
+
+</div>
+<div class="page-info">
+  <ul>
+    <li>Næste i dette emne: <a href="backup_backup.html">Backup data fra din Synology NAS</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

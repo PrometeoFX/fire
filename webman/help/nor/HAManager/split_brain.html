@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Delt hjerne</h2>
+
+<p>N&aring;r en high-availability-sky fungerer som normalt, skal kun &eacute;n av medlemsserverne p&aring;ta seg rollen som aktiv server. I dette tilfellet oppdager den passive serveren tilstedev&aelig;relsen av den aktive serveren gjennom b&aring;de Heartbeat-tilkoblingen og datatilkoblingen.</p>
+
+<p>Hvis alle Heartbeat- og datatilkoblinger blir brutt, kan begge serverne pr&oslash;ve &aring; ta rollen som aktiv server. Denne situasjonen kalles en &quot;delt hjerne&quot;-feil. I dette tilfellet, vil tilkoblinger til IP-adressen som er tildelt high-availability-skyen bli omadressert til &eacute;n av de to serverne, noe som resulterer i tjenestefeil.</p>
+        
+<h4>Hvis en delt hjerne-feil oppst&aring;r:</h4>
+	<ol>
+		<li>Tilkoblinger til IP-adressen til skyen vil omadresseres til &eacute;n av serverne, noe som resulterer i tjenestefeil. Du vil oppleve vanskeligheter med &aring; koble til begge serverne.</li>
+		<li>Systemet vil oppdage delt hjerne-feilen og fjerne high-availability-skyen, og frigj&oslash;re begge serverne.</li>
+		<li>N&aring;r begge serverne er i <b>Frittst&aring;ende</b> status, vil du kunne logge deg inn p&aring; DiskStation Manager (DSM). Data oppsamlet f&oslash;r fjerningen av high-availability-skyen vil forbli p&aring; begge serverne. N&aring;r du har identifisert serveren som inneholder de mest oppdaterte dataene, kan du tilknytte serverne igjen for &aring; gjenopprette high-availability-skyen.</li>
+	</ol>
+ </body>
+</html>

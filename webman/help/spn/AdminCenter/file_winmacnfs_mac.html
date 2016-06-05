@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Servicio de archivos Mac</h2>
+
+<p>En <strong>Panel de control</strong> > <strong>Servicios de archivos</strong> > <strong>Win/Mac/NFS</strong>, puede habilitar el servicio de archivos Mac para que DiskStation actúe como un servidor de archivos Mac (servidor AFP).</p>
+
+<h4>Para habilitar el servicio de archivos de Mac:</h4>
+<ol>
+<li>Marque <b>Habilitar el servicio de archivos de Mac</b> para que DiskStation actúe como un servidor de archivos Mac (servidor AFP).</li>
+<li>Configure una carpeta de copia de seguridad de <b>Time Machine</b> si fuera necesario. (Consulte el siguiente apartado para obtener más información.)</li>
+
+<li>Haga clic en <b>Aplicar</b>.</li>
+
+</ol>
+<div class="section">
+<h4>Acerca de la carpeta de copia de seguridad de Time Machine:</h4>
+<p>Para realizar una copia de seguridad desde Time Machine en DiskStation, seleccione una carpeta compartida desde el menú desplegable. </p>
+<p><span class="note_head">Nota:</span> Las carpetas compartidas que están siendo utilizadas por otros servicios no estarán disponibles para Time Machine.</p>
+</div>
+<h3>Configuración avanzada</h3>
+<h4>Aplicar permisos UNIX predeterminados:</h4>
+<p>Al habilitar esta opción se aplican los permisos UNIX predeterminados cuando se cargan o crean archivos y carpetas. Los permisos aplicados son los mismos que los aplicados por el comando UNIX <strong>umask</strong>. Cuando se habilita esta opción, los permisos UNIX son 644 para archivos y 755 para carpetas. Cuando se deshabilita esta opción, los permisos UNIX son 666 para archivos y 777 para carpetas. El valor predeterminado de umask es 022.</p>
+<p><span class="note_head">Nota: </span>Si se habilita esta opción se pueden provocar problemas de permisos que no mantienen la consistencia entre protocolos diferentes. Para evitar inconsistencias, sugerimos no habilitar esta opción.</p>
+<h4>Liberar recursos inmediatamente después de la desconexión:</h4>
+<p>La activación de esta opción libera inmediatamente recursos cuando la conexión del servidor AFP se interrumpe de manera inesperada. Si recibe mensajes de error que indican que el volumen está en uso mientras utiliza Time Machine, active esta opción.</p>
+<h4>Para habilitar la transmisión de impresora Bonjour:</h4>
+<p>Marque <b>Habilitar transmisión de impresora Bonjour</b> para permitir que los clientes de Mac examinen y localicen la impresora conectada a DiskStation.</p>
+</body>
+</html>

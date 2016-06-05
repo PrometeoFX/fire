@@ -1,0 +1,4 @@
+*.pyc
+ssdp/*.*
+webman/3rdparty/*/*.*
+webman/3rdparty/*

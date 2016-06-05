@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Backup dei dati</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Backup dei dati</h2>
+
+<p>Nella scheda <b>Backup</b> di <b>Backup e Replica</b>, è possibile eseguire il backup di dati specifici su DiskStation manualmente o secondo una pianificazione personalizzata. Con questa funzionalità, la configurazione di sistema, il contenuto delle cartelle condivise e dati pacchetto possono essere sottoposti a backup su destinazione di backup locale, di rete o cloud.</p>
+
+<h4>Per creare un'attività di backup:</h4>
+<ol>
+<li>Scegliere <b>Crea</b> > <b>Attività di backup dati</b>.</li>
+<li>Seguire la procedura guidata per completare la configurazione. Visitare <a href="repository.html">Destinazione Backup</a> per maggiori informazioni.</li>
+</ol>
+
+<h4>Gestire attività di backup:</h4>
+<p>Selezionare un'attività esistente e fare clic su uno dei pulsanti seguenti:</p>
+<ul>
+<li><strong>Modifica:</strong> per modificare destinazione, origine, programmazione e altre impostazioni dell'attività selezionata.</li>
+<li><strong>Elimina:</strong> per eliminare l'attività selezionata.</li>
+<li><strong>Annulla:</strong> per annullare l'attività selezionata attualmente in esecuzione.</li>
+<li><strong>Backup ora:</strong> esegue immediatamente il backup dell'attività selezionata.</li>
+</ul>
+
+
+<h3>Rotazione backup</h3>
+<p>La rotazione backup è un sistema di gestione delle versioni. Contribuisce a gestire le versioni backup eliminando automaticamente le versioni più vecchie e non necessarie e liberando, potenzialmente, lo spazio di archiviazione. È possibile abilitare questa funzione su <b>Impostazioni attività</b> oppure configurarla quando si crea un'attività di backup.</p>
+<h4>Per ruotare le versioni:</h4>
+<ol>
+<li>selezionare l'attività di backup a cui applicare la rotazione di versione e fare clic su <strong>Modifica</strong>.</li>
+<li>Andare alla scheda <strong>Impostazioni attività</strong> e selezionare<strong> Attiva rotazione backup</strong>. </li>
+<li>Qui sarà possibile scegliere uno dei due metodi di rotazione:</li>
+<ul>
+<li><b>Dalla versione più recente:</b>metodo di rotazione delle versioni di base. Quando viene attivata la rotazione, la versione più recente sarà rimossa per prima. </li>
+<li><b>Smart Recycle:</b>metodo di rotazione delle versioni intuitivo. Quando viene attivata la rotazione, il sistema rimuoverà le versioni selezionate dal meccanismo di mantenimento. Il meccanismo di mantenimento è il seguente:</li>
+<ul>
+	<li><b>Versioni orarie dalle 24 ore passate:</b>il sistema mantiene la versione più recente creata ogni ora.</li>
+	<li><b>Versioni giornaliere da 1 giorno trascorso a 1 mese:</b>il sistema mantiene la versione più recente creata ogni giorno.</li>
+	<li><b>Versione settimanale dopo 1 mese:</b>il sistema mantiene la versione più recente creata ogni settimana.</li>
+</ul>
+</ul>
+<li>Specificare il <b>numero di versioni</b> massimo. Quando il numero di versioni supera questo numero, ha inizio la rotazione delle versioni. Il numero non include le versioni bloccate.</li>
+<li>Se è stato configurato un programma di backup ripetuto, sarà visualizzata un'anteprima della stima del metodo di mantenimento delle versioni di backup e il punto nel tempo del recupero più recente in base alle impostazioni di rotazione. &nbsp;&nbsp;</li>
+<li>Fare clic su <strong>OK</strong> per salvare le impostazioni. </li>
+</ol>
+
+<div class="section">
+  <h4>Note.</h4>
+  <ul>
+  <li>le versioni bloccate non saranno mai rimosse. Visitare <a href="repository.html#lock_version">Destinazione Backup</a> per maggiori informazioni.</li>
+  
+  <li>Solo le attività di backup archiviate forniscono le funzioni di rotazione delle versioni.</li>
+  <li>La rotazione versioni non è supportata in DSM 5.1 o inferiori.</li>
+  <li>La rotazione sarà attivata subito dopo la modifica dell'impostazione o al termine dell'attività di backup.</li>
+  <li>Le versioni bloccate sono escluse quando si calcola il numero massimo di versioni.</li>
+  </ul>
+</div>
+
+
+<div class="section">
+<h4>Note generali:</h4>
+<ul>
+<li>I nomi delle attività possono includere da 1 a 32 caratteri Unicode, ma non possono contenere i seguenti caratteri:<br> <span class="letterSpace5">! " # $ % &amp; ' ( ) * + , / : ; &lt; = &gt; ? @ [ ] \ ^ ` { } | ~</span></li>
+<li>La lunghezza massima del percorso completo della cartella per il backup è 2048 caratteri.</li>
+<li>Se si caricano più di 32.000 file o cartelle via AFP in una cartella condivisa EXT3, tutte le attività di backup della cartella condivisa non verranno eseguite in modo corretto.</li>
+<li>Una cartella crittografata può essere sottoposta a backup oppure montata o smontata. Tuttavia, verrà sempre ripristinata come smontata e non sarà montata automaticamente all'avvio. Verrà richiesto di inserire o importare la chiave di crittografia della cartella condivisa crittografata per montarla.</li>
+<li>Il backup di una cartella crittografata a un'altra cartella crittografata non è supportato.</li>
+<li>L'utilizzo di cartelle remote come sorgente di backup o destinazione di backup non è supportato.</li><li>Se la destinazione di backup è un volume, solo il proprietario dell'attività sarà in grado di eseguire l'attività di backup. Visitare <a href="repository.html">Destinazione Backup</a> per maggiori informazioni.</li>
+<li>Il backup di determinate applicazioni è supportato. Per verificare se un pacchetto specifico supporta il backup, e il contenuto del backup e le limitazioni, fare riferimento alla guida di ciascuna applicazione.</li>
+<li class="enable-eds14">DiskStation non supporta il backup di applicazioni senza un dispositivo esterno EXT3/EXT4 scrivibile.</li>
+<li class="enable-eds14">DiskStation non supporta il backup in un volume senza un dispositivo esterno EXT3/EXT4 scrivibile.</li>
+<li class="enable-eds14">In DiskStation è solo possibile eseguire il backup delle cartelle condivise create nei dispositivi esterni EXT3/EXT4.</li>
+<li class="disable-eds14">Il sistema non è in grado di eseguire il backup delle applicazioni senza un volume scrivibile.</li
+></ul>
+</div>
+<div class="section disable-eds14">
+<h4>Backup delle impostazioni di Windows ACL:</h4>
+<p>può essere anche effettuato il backup dei file delle impostazioni di Windows ACL su DiskStation a seconda dei file system di destinazione:</p>
+<ul>
+
+<li><strong>Destinazione di backup locale</strong>, <strong>Destinazione di backup di rete</strong> e <strong>Destinazione di backup cloud pubblico</strong> possono essere sottoposte a backup delle impostazioni di Windows ACL senza tener conto del file system di destinazione</li>
+
+<li>La <strong>Sincronizzazione cartelle condivise</strong> può eseguire il backup delle impostazioni Windows ACL quando il file system di destinazione è EXT4<span style="display: inline;" class="enable-rc18015xsp">/BTRFS</span>.</li>
+
+</ul>
+</div>
+
+</body></html>

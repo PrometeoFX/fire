@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Service de fichiers Mac</h2>
+
+<p>
+Dans <strong>Panneau de configuration</strong> > <strong>Services de fichier</strong> > <strong>Win/Mac/NFS</strong>, vous pouvez activer le service fichier Mac pour que votre DiskStation devienne un serveur fichier Mac (serveur AFP).</p>
+
+<h4>Pour activer le service de fichier Mac :</h4>
+<ol>
+<li>
+Cochez la case <b>Activer le service de fichiers Mac</b> pour que DiskStation soit un serveur de fichier Mac (serveur AFP).
+</li>
+<li>
+Paramétrez un dossier retour <b>Time Machine</b> si nécessaire. (Reportez-vous à la section ci-dessous pour plus d’informations.)
+</li>
+
+<li>
+Cliquez sur <b>Appliquer</b>.
+</li>
+
+</ol>
+<div class="section">
+<h4>À propos du dossier de sauvegarde de Time Machine :</h4>
+<p>Pour sauvegarder des données depuis Time Machine vers DiskStation, sélectionnez une dossier partagé depuis le menu déroulant. </p>
+<p><span class="note_head">Remarque :</span> Les dossiers partagés qui sont utilisés par d'autres services ne seront pas disponibles pour Time Machine.</p>
+</div>
+<h3>Paramètres avancés</h3>
+<h4>Application des permissions UNIX par défaut :</h4>
+<p>L'activation de cette option applique les permissions UNIX par défaut lors du chargement ou de la création de fichiers et dossiers. Les autorisations appliquées sont les mêmes que les autorisations appliquées par la commande UNIX <strong>umask</strong>. Lorsque cette option est activée, les permissions UNIX sont de 644 pour les fichiers et de 755 pour les dossiers. Lorsque cette option est désactivée, les permissions UNIX sont de 666 pour les fichiers et de 777 pour les dossiers. La valeur umask par défaut est 022.</p>
+<p><span class="note_head">Remarque : </span>L'activation de cette option pourrait provoquer des problèmes d'incohérence de permission entre différents protocoles. Afin d'éviter les incohérences, nous suggérons de laisser cette option désactivée.</p>
+<h4>Libérer les ressources aussitôt après la déconnexion :</h4>
+<p>L'activation de cette option permet de libérer immédiatement les ressources lorsque la connexion au serveur AFP est brusquement interrompue. Si vous recevez un message d'erreur « Volume utilisé » lors de l'utilisation de Time Machine, désactivez cette option.</p>
+<h4>Pour activer la diffusion imprimante Bonjour :</h4>
+<p>Cochez <b>Activer la diffusion imprimante Bonjour</b> pour permettre aux clients Mac de rechercher et localiser l’imprimante connectée au DiskStation.</p>
+</body>
+</html>

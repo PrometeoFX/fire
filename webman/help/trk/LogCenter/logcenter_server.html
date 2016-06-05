@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Günlük Alma - Synology DSM Yardım</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Turn your DiskStation into a syslog server to receive logs from other network devices.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Günlük Alma</h2>
+<p>DiskStation ürününüz ağ üzerinden istemci aygıtından günlükleri almak üzere bir syslog sunucusu olarak faaliyet gösterebilir. Günlüklerin alınması için üç biçim desteklenir:  <strong>BSD </strong>(RFC 3164), <strong>IETF </strong>(RFC 5424) ve <strong>Özel</strong>. Tüm alınan günlükler günlük veritabanında depolanır.</p>
+
+<div class="section">
+<h4>Başlamadan önce:</h4>
+<p><strong>Günlük Merkezi</strong> > <strong>Depolama Ayarları</strong>'na gidin ve günlüklerin depolanacağı ve arşivleneceği konumu seçin.</p>
+</div>
+<h3>Standart günlüklerin alımını kurmak için:</h3>
+<ol>
+<li><strong>Günlük Merkezi</strong> > <strong>Günlük Alınıyor</strong> > <strong>Standart</strong> öğesine gidin.</li>
+<li>BSD ve IETF günlük alımını ihtiyaç duyduğunuz biçimler altında <b>Diğer aygıtlardan günlükleri al</b> seçeneğini işaretleyerek etkinleştirebilirsiniz.</li>
+<li><strong>UDP</strong> veya <strong>TCP</strong> öğesini <strong>Aktarma protokolü</strong> öğesinden seçin.</li>
+<li>Syslog mesajlarını almak için bağlantı noktası numarasını <strong>Bağlantı noktası</strong> alanına girin. Varsayılan bağlantı noktası numarası <strong>514</strong>'tür.</li>
+<li>Günlükleri güvenli bir şekilde aktarmak istiyorsanız, <strong>Güvenli bağlantıyı etkinleştir (SSL)</strong> seçeneğini işaretleyin. Bu seçenek yalnızca <b>TCP</b> seçildiğinde mevcuttur.
+  </p>
+	</div>
+</li>
+<li>Ayarları kaydetmek için <b>Uygula</b>'ya tıklayın.</li>
+</ol>
+<!--DSM#62962: Customized rule receiving-->
+
+<h3>Özel günlük alımlarını kurmak için:</h3>
+
+	<ol>
+	<li><strong>Günlük Merkezi</strong> > <strong>Günlük Alınıyor</strong> > <strong>Özel</strong> öğesine gidin.</li>
+	<li><strong>Oluştur</strong>'a tıklayın.</li>
+	<li><strong>İsim</strong> alanına eşsiz bir kural adı girin.</li>
+	<li><strong>Kural parametreleri</strong> öğesine bir ayrıştırma kuralı girin. Desen ayrıştırıcıların oluşturulması hakkında ayrıntılı bilgiler için aşağıdaki nota bakın.</li>
+	<li><strong>UDP</strong> veya <strong>TCP</strong> öğesini <strong>Aktarma protokolü</strong> öğesinden seçin.</li>
+	<li>Syslog mesajlarını almak için bağlantı noktası numarasını <strong>Bağlantı noktası</strong> alanına girin. Varsayılan bağlantı noktası numarası <strong>514</strong>'tür.</li>
+	<li>Günlükleri güvenli bir şekilde aktarmak istiyorsanız, <strong>Güvenli bağlantıyı etkinleştir (SSL)</strong> seçeneğini işaretleyin. Bu seçenek yalnızca <b>TCP</b> seçildiğinde mevcuttur.</li>
+	<li>Ayarları kaydetmek için <b>Tamam</b>'a tıklayın.</li>
+	</ol>
+
+<div class="section">
+<h4>Not:</h4>
+<p>Desen ayrıştırıcılar hakkında ayrıntılı bilgileri <a href="http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/syslog-ng-patterndb-using-parsers.html">burada</a> bulabilirsiniz. Ayrıca referans için bir <a href="http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/patterndb-download.html">örnek deseni</a> de indirebilirsiniz.</p>
+</div>
+
+<h3>Özel kuralları yönetmek için:</h3>
+
+	<ol>
+	<li>Mevcut bir özel kuralı seçin.</li>
+	<li>Aşağıdakilerden birini seçin:</li>
+    <ul>
+    <li><strong>Düzenle:</strong> Seçilen özel kuralı düzenle.</li>
+<li><strong>Sil:</strong> Seçilen özel kuralı sil.</li>
+<li><strong>Etkinleştir:</strong> Seçilen özel kuralı etkinleştir.</li>
+<li><strong>Etkisizleştir:</strong> Seçilen özel kuralı etkisizleştir.</li>
+    </ul>
+	</ol>
+
+
+<h3>Sertifikayı Dışa Aktarma</h3>
+<p><strong>Güvenli bağlantıyı etkinleştir (SSL)</strong> seçeneğini etkinleştirdiyseniz, günlükleri DiskStation ürününe gönderirken diğer cihazları doğrulamak için kullanılan sertifikayı dışarı aktarmak için <strong>Sertifika ver</strong> düğmesine tıklayın.</p>
+
+</body>

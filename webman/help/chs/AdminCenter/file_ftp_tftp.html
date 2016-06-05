@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TFTP/PXE</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>TFTP/PXE</h2>
+
+<p><strong>控制面板</strong> > <strong>文件服务</strong> > <strong>TFTP/PXE</strong> 中的选项可让您配置 TFTP 和 PXE 设置。</p>
+
+<h3>TFTP</h3>
+<p>TFTP（Trivial File Transfer Protocol）是一个简易的文件传输协议，它一般用于在无需验证的情况下传输配置或启动文件。启用 TFTP 服务后，DiskStation 就能将启动加载器文件传送到客户端设备。</p>
+<h4>若要修改 TFTP 设置：</h4>
+<ol>
+<li>请勾选<strong>启用 TFTP 服务</strong>的复选框。</li>
+<li>于 <strong>TFTP 根文件夹</strong>栏中，指定 TFTP 客户端在 DiskStation 上可访问的文件夹。</li>
+<li>您可单击<strong>高级设置</strong>按钮来查看并修改以下设置：</li>
+<ul>
+<li><strong>启用 TFTP 文件传输日志：</strong>此选项允许您追踪通过 TFTP 传输的数据。</li>
+<li><strong>TFTP 客户端权限：</strong>此选项允许您为 TFTP 客户端选择读取和写入权限。当您选择<strong>只读</strong>时，TFTP 客户端仅能查看根文件夹的内容。而选择<strong>可写</strong>时，TFTP 客户端就可修改根文件夹的内容。</li>
+<li><strong>允许的客户端：</strong>选择允许通过 TFTP 连接的客户端。您可选择<strong>所有连接</strong>让所有的客户端来进行连接；或者指定 IP 地址的范围来限制可连接的客户端。</li>
+</ul>
+<li>修改设置后，点击<strong>应用</strong>来保存设置。</li>
+</ol>
+
+
+<h3>使用 DiskStation 来为 PXE 设置 DHCP 服务</h3>
+<p>除了 TFTP，DiskStation 还可提供 DHCP 服务，来执行一体化的 PXE 设置。预启动执行环境（PXE）是一个网络环境，客户端可使用网络接口而非数据存储设备（如硬盘）来启动其设备。当执行 PXE 后，启动加载器可存储在 DiskStation，而客户端设备可使用启动加载器来通过网络进行启动。</p>
+
+<p>请确认您已安装 Synology 的 DHCP Server 套件，DiskStation 才能提供 DHCP 服务。</p>
+
+<h4>若要为 PXE 设置 DHCP 服务：</h4>
+<ol>
+<li>请勾选<strong>为 PXE 在该服务器上设置 DHCP 服务</strong>的复选框。如果您尚未在 DiskStation 中安装 DHCP Server 套件，系统将提示您安装此套件。</li>
+<li>从 TFTP 根文件夹选择启动加载器文件，然后指定其它 DHCP 相关设置。</li>
+<li>单击<strong>应用</strong>来保存设置。</li>
+</ol>
+</body>
+</html>

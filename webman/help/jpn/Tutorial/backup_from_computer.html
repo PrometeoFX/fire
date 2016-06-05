@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Cloud Station で PC/Mac のデータをバックアップするには</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Cloud Station で PC/Mac のデータをバックアップするには</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/backup_from_PC/07_1_back_up_your_data_from_pc.png" />
+<h2>概要</h2>
+<p>Cloud Station はプラットフォームをまたぐ同期ソフトウェアだけではなく、パソコンのスマートなバックアップ方法としても機能します。Cloud Station をバックアップ ツールとして使用すると、いくつかの利点があります。まず、リアルタイムの複製が RPO（目標復旧地点）を短くするため、大規模な事故が発生しても PC から複製できない部分の期間が短期間分ですみます。また、帯域を大量に使用してきた従来のバックアップ方式とは異なり、帯域も大幅に節約できます。PC クライアントでファイル サイズやファイル形式を設定すると、同一フォルダ内にある、バックアップしないファイルも簡単に振り分けることができます。Cloud Station では、1 個のファイルにつき最大で 32 個のバージョン履歴を保持することができ、サーバー（NAS）側から PC クライアントに復元することができます。</p>
+
+<h3 class="list_head">1. Synology NAS に Cloud Station を設定する</h3>
+<ol>
+
+<li><strong>administrator</strong> に属するアカウントで DSM にログインします。</li>
+<li><b>Cloud Station</b> を起動します。</li>
+<li>ユーザーホーム機能を有効にしていない場合は、有効にするよう要求されます。<strong>[OK]</strong> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/01.png" border="1" />
+<li>ユーザー設定ページに転送されます。ユーザーホームを有効にして、<b>[適用]</b> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" />
+<li><b>Cloud Station</b> に戻ると、これを有効にするよう要求されます。<b>[はい]</b> をクリックしてください。</li>
+<img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" />
+<div class="code_div"><b>注：</b>QuickConnect は、ローカル ネットワーク外から Synology NAS に簡単に接続できるリレーサービスです。外出先からファイルを同期したい場合は、<b>[コントロール パネル]</b> &gt; <b>[QuickConnect]</b> を選択して、QuickConnect を設定するようお薦めします。</div>
+
+<li><b>[権限]</b> を選択し、Cloud Station を使用できるユーザーを指定します。<b>[保存]</b> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" />
+<li>バックアップの目的で、Synology NAS に共有フォルダを設定します。これを実行するには、<strong>[コントロール パネル]</strong> &gt; <strong>[共有フォルダ]</strong> を選択した後、<strong>[作成]</strong> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" />
+<li>フォルダに名前を付けて、詳細を入力します。<strong>[OK]</strong> をクリックします。例えば、フォルダに「<strong>バックアップ</strong>」という名前を付けます。</li>
+<img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" />
+<li><strong>[許可] </strong>タブで、フォルダにアクセスできるユーザーを指定します。例えば、フォルダに <strong>admin</strong> <strong>読み/書き</strong>権限を与えることができます。<strong>[OK]</strong> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/07.png" border="1" />
+<li><strong>[Cloud Station]</strong> &gt; <strong>[設定]</strong> &gt; <strong>[共有]</strong> を選択し、<b>[バックアップ]</b> フォルダを選択した後で <strong>[有効]</strong> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/08.png" border="1" />
+</ol>
+
+<h3 class="list_head">2. Windows PC に Cloud Station を設定する</h3>
+<p>Mac または PC に Cloud Station を設定するには次の手順にしたがってください</p>
+
+<h4>2.1 PC</h4>
+
+<ol>
+
+<li><strong>[Cloud Station]</strong> &gt; <strong>[概要]</strong> を選択し、<strong>[ダウンロード]</strong> ボタンをクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/09.png" border="1" />
+<li>このボタンをクリックすると、Windows PC 用の Cloud Station がダウンロードされます（Cloud Station は <a href="https://www.synology.com/en-us/support/download" target="_blank">Synology ダウンロードセンター</a>からもダウンロードできます）。</li>
+<li>コンピュータでインストーラを実行し、画面の指示に従って Cloud Station をインストールしてください </li>
+<li>インストール後は、コンピュータで <strong>Cloud Station</strong> を実行します。<strong>[今すぐスタート] </strong>をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" />
+<li>Cloud Station を起動している Synology NAS のアドレス（または QuickConnect ID）、ユーザー名、パスワードを入力します。（右側の検索アイコンをクリックすると、Cloud Station が LAN 内にある別の Synology NAS を検索します）。<strong>[次へ]</strong> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" />
+<div class="code_div"><b>注：</b> Synology NAS で <strong>[Cloud Station]</strong> &gt; <strong>[権限]</strong> を選択し、入力したアカウントに権限があるか確認してください。</div>
+<li>タスクを設定する方法を選択します（バックアップ専用のフォルダを設定しますので、ここでは <strong>[詳細設定]</strong> を選択します）。<strong>[次へ]</strong> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
+<li>Synology NAS で先に作成しておいた「バックアップ」フォルダとの同期を維持するフォルダをコンピュータ上で選択します。<strong>[次へ]</strong> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" />
+<li><strong>[完了]</strong> をクリックすると、セットアップが完了します。</li>
+<img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" />
+</ol>
+
+<p><strong>別のタスクを作成する</strong>：
+<ol>
+<li><strong>[Cloud Station] </strong>&gt; <strong>[設定]</strong> を選択し、この新しいタスクのための共有フォルダを有効にします。例えば、<strong>「写真」</strong>です。​ 「<strong>写真</strong>」に読み書き権があるか確認してください。</li>
+<img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
+<li>PC で Cloud Station に戻り、<strong>[作成]</strong> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" />
+<li>​新しいタスクを実行する Synology NAS を選択します。同じ Synology NAS に別のタスクを作成しますので、ここでは <strong>[接続した Synology NAS]</strong> を選択します。<strong>[次へ]</strong> をクリックします。​</li>
+<img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" />
+<li><strong>[詳細設定]</strong> を選択し、ウィザードに従って設定を続行してください。</li>
+<img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
+</ol>
+
+<h4>2.2 Mac</h4>
+  <ol>
+<li><strong>[Cloud Station]</strong> &gt; <strong>[概要]</strong> を選択し、<strong>[ダウンロード]</strong> ボタンをクリックします。</li>
+
+<li>このボタンをクリックすると、Mac 用の Cloud Station がダウンロードされます（Cloud Station は <a href="https://www.synology.com/en-us/support/download" target="_blank">Synology ダウンロードセンター</a>からもダウンロードできます）。</li>
+<img src="../../images/Backup/1x/backup_from_PC/18.png" border="1" />
+<li>コンピュータでインストーラを実行し、画面の指示に従って Cloud Station をインストールしてください </li>
+<li>インストール後は、コンピュータで <strong>Cloud Station</strong> を実行します。<strong>[今すぐスタート] </strong>をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" />      
+<li>Cloud Station を起動している Synology NAS のアドレス（または QuickConnect ID）、ユーザー名、パスワードを入力します（右側の検索アイコンをクリックすると、Cloud Station が LAN 内にある別の Synology NAS を検索します）。<strong>[次へ]</strong> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" />   
+<div class="code_div"><b>注：</b> Synology NAS で <strong>[Cloud Station]</strong> &gt; <strong>[権限]</strong> を選択し、入力したアカウントに権限があるか確認してください。</div>
+<li>タスクを設定する方法を選択します（バックアップ専用のフォルダを設定しますので、ここでは <strong>[詳細設定]</strong> を選択します）。<strong>[次へ]</strong> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
+<li>Synology NAS で先に作成しておいた「バックアップ」フォルダとの同期を維持するフォルダをコンピュータ上で選択します。<strong>[次へ]</strong> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" />
+<li><strong>[完了]</strong> をクリックすると、セットアップが完了します。</li>
+  </ol>
+  
+<p><strong>新しいタスクを作成する</strong>：
+<ol>
+<li><strong>[Cloud Station] </strong>&gt; <strong>[設定]</strong> を選択し、この新しいタスクのための共有フォルダを有効にします。例えば、<strong>「写真」</strong>です。​ 「<strong>写真</strong>」に読み書き権があるか確認してください。</li>
+<img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
+<li>PC で Cloud Station に戻り、<strong>[作成]</strong> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" />
+<li>​新しいタスクを実行する Synology NAS を選択します。同じ Synology NAS に別のタスクを作成しますので、ここでは <strong>[接続した Synology NAS]</strong> を選択します。<strong>[次へ]</strong> をクリックします。​</li>
+<img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" />
+<li><strong>[詳細設定]</strong> を選択し、ウィザードに従って設定を続行してください。</li>
+<img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
+</ol> 
+
+<h3 class="list_head">3. Cloud Station からデータを取得する</h3>
+<p>誤ってファイルを削除したり、上書きしたりしてしまっても、Cloud Station で簡単に復元することができます。</p>  
+<h3>4.1 同期したファイルの以前のバージョンを PC にダウンロードする</h3>  
+  <ol>
+<li>システムトレイで [Cloud Station] アイコンをクリックし、フォルダ アイコンをクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/25.png" border="1" />       
+<li>選択したファイルを右クリックして、<strong>[Synology Cloud Station]</strong> &gt; <strong>[以前のバージョンを参照]</strong> を選択します。</li>
+<img src="../../images/Backup/1x/backup_from_PC/26.png" border="1" />    
+<li>ダウンロードしたいバージョンを探し、ダウンロード アイコンをクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/27.png" border="1" />    
+  </ul>
+<li>ファイル名を入力し、ファイルの保存先を選択します。
+</ol>
+<h3>4.1 同期したファイルの以前のバージョンを Mac にダウンロードする</h3>  
+  <ol>
+<li>システムトレイで [Cloud Station] アイコンをクリックし、フォルダ アイコンをクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/28.png" border="1" />         
+<li>選択したファイルを右クリックして、<strong>[Synology Cloud Station]</strong> &gt; <strong>[以前のバージョンを参照]</strong> を選択します。</li>
+<img src="../../images/Backup/1x/backup_from_PC/29.png" border="1" />        
+<li>ダウンロードしたいバージョンを探し、ダウンロード アイコンをクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/30.png" border="1" />       
+<li>ファイル名を入力し、ファイルの保存先を選択します。
+</ol>
+<h3>4.3 同期したファイルの前のバージョンを Cloud Station からダウンロードまたは復元する</h3>   
+<ol>
+<li><strong>[Cloud Station] </strong>&gt; <strong>[バージョン履歴]</strong> を選択し、作成した「<strong>バックアップ</strong>」フォルダを選択します。</li>
+<img src="../../images/Backup/1x/backup_from_PC/31.png" border="1" />    
+<li>復元したいファイルを選択し、<strong>[操作]</strong> &gt; <strong>[以前のバージョンを参照]</strong> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/34.png" border="1" />      
+<li>ダウンロードしたいファイルのバージョンを選択し、<strong>[ダウンロード]</strong> をクリックします。または、選択したバージョンを復元したい場合は、<strong>[復元]</strong> をクリックすると、現在のバージョンに上書きされます。</li>
+<img src="../../images/Backup/1x/backup_from_PC/35.png" border="1" />    
+  </ol>
+
+<h3 class="list_head">4. 重要な注意</h3>  
+  <ol>
+<li>誤ってファイルを削除したり、上書きしたりしたときのために、バージョン履歴は常に維持してください。</li>
+<li>[グローバル設定] で、PC でファイルを削除したときに、NAS から取り戻すか、または NAS で削除するかを設定することができます。</li>
+</ol>
+<h3 class="list_head">5. データをより安全に保護するために</h3>
+  
+<p>データを保護し、バックアップするための他の方法については、<a href="https://www.synology.com/en-global/knowledgebase/tutorials#BackupRestore" target="_blank">ここ</a>をクリックして DSM で提供されるその他のバックアップ サービスのチュートリアルをお読みください。</p>
+
+</div>
+<div class="page-info">
+  <ul>
+<li>このトピックで次：<a href="backup_backup.html">Synology NAS からデータをバックアップ</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

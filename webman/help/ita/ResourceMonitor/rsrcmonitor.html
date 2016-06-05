@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Controllo risorse</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1><a name="leaf_update"></a>Controllo risorse</h1>
+<p>Controllo risorse consente di monitorare l&apos;utilizzo della CPU, l&apos;utilizzo della memoria, l&apos;utilizzo del disco e il flusso di rete. &Egrave; possibile scegliere di eseguire il monitoraggio in tempo reale o visualizzare i dati precedenti.</p>
+
+<div class="section">
+<h4>Nota.</h4>
+<ul>
+<li>I dati precedenti vengono mostrati solo se <strong>Abilita cronologia utilizzo</strong> &egrave; selezionato nella scheda <strong>Impostazioni</strong>.</li>
+</ul>
+</div>
+<h2>Prestazioni</h2>
+<p>Fare clic sulla scheda <strong>Prestazioni</strong> per visualizzare i dati sull&apos;utilizzo delle risorse. I dati dettagliati, l&apos;orario e le informazioni del grafico vengono mostrate al passaggio del mouse.</p>
+<h3>CPU</h3>
+<p>&Egrave; possibile visualizzare l&apos;utilizzo globale della CPU di&nbsp;<strong>Utente</strong>,&nbsp;<strong>Sistema</strong>&nbsp;e&nbsp;<strong>Attesa I/O</strong>. Il carico sulla CPU potrebbe risultare alto al primo avvio di Controllo risorse, perch&eacute; il sistema deve raccogliere i dati di risorsa e caricare la pagina dell&apos;interfaccia utente allo stesso tempo.</p>
+<p><strong>Utente</strong> mostra la percentuale della CPU utilizzata per eseguire le applicazioni dell&apos;utente. <strong>Sistema</strong>mostra la percentuale della CPU utilizzata nel core del sistema, IRQ hardware/software. <strong>Attesa I/O</strong> mostra la percentuale di CPU utilizzata sull&apos;attesa I/O.</p>
+<p><strong>Utilizzo</strong> &egrave; la somma dell&apos;utilizzo della CPU da parte di <strong>Utente</strong> e <strong>Sistema</strong>.</p>
+<p>Viene visualizzata la Media caricamento compresa tra 1, 5 e 15 minuti, mostrando la lunghezza della coda di esecuzione (ad esempio la somma del numero di processi che sono correntemente in esecuzione pi&ugrave; il numero di processi in attesa di esecuzione). </p>
+<div class="section">
+<h4>Spiegazione dei termini</h4>
+<ul>
+<li><b>Attesa I/O</b>: L&apos;attesa I/O indica che la CPU &egrave; inattiva e non viene utilizzata da alcun programma. </li>
+<p>L&apos;attesa I/O &egrave; un comportamento normale. Poich&eacute; la velocit&agrave; della CPU &egrave; pi&ugrave; veloce rispetto all&apos;I/O, spesso la CPU deve attendere il completamento della trasmissione dei dischi o della rete. Tuttavia, se la percentuale di attesa I/O &egrave; estremamente ampia, la CPU spende molto tempo sull&apos;attesa I/O e potrebbe non essere utilizzata nel modo corretto. &Egrave; possibile utilizzare le configurazioni gruppo di dischi in modo pi&ugrave; efficiente (ad esempio SHR o RAID 5) o le configurazioni di rete (ad esempio Bonding) per migliorare le prestazioni del sistema.</p> 
+</ul>
+</div>
+<h3>Memoria</h3>
+<p>Viene mostrato l&apos;utilizzo globale della memoria fisica e lo spazio di swapping. L&apos;utilizzo memoria rimane elevato perch&eacute; il sistema memorizza i dati di accesso frequente nella cache, perci&ograve; i dati possono essere reperiti velocemente senza dover accedere al disco rigido. La memoria cache viene liberata quando la memoria complessiva non &egrave; sufficiente.</p>
+<p>L&apos;uso di un livello elevato dello spazio di swapping indica che la memoria di sistema &egrave; insufficiente, ci&ograve; influisce sulle prestazioni del sistema. &Egrave; possibile visualizzare la frequenza di swap in e swap out scegliendo <strong>Swap</strong> dal menu a discesa in alto. </p>
+
+
+<h3>Disco</h3>
+<p>&Egrave; possibile scegliere di visualizzare l&apos;utilizzo totale del disco, la velocit&agrave; di trasferimento o l&apos;IOPS facendo clic sul menu a discesa nella parte superiore del grafico. &Egrave; possibile fare clic su <strong>Visualizza tutto</strong> nella parte inferiore per scegliere pi&ugrave; dischi selezionando le caselle di controllo per aggiungere i dati nel grafico.</p>
+<h3 class="disable-eds14">Volume/iSCSI</h3>
+<p class="disable-eds14">Questa pagina visualizza lo stato di trasferimento globale dei volumi e iSCSI LUN (Livello blocco). Fare clic sul menu a discesa sopra al grafico per visualizzare l&apos;utilizzo del trasferimento, la velocit&agrave; di trasferimento o IOPS. Fare clic pulsante <strong>Visualizza tutto</strong> per selezionare i singoli volumi o iSCSI LUN (Livello blocco) e aggiungerli al grafico.</p>
+
+<h3>Rete</h3>
+<p>Il grafico del flusso di rete visualizza il rapporto dei dati inviati e ricevuti KB al secondo. Se PPPoE &egrave; abilitato, la velocit&agrave; di trasferimento viene anch&apos;essa visualizzata sul grafico.</p>
+
+<h2>Processo</h2>
+<p>Fare clic sulla scheda <strong>Processo</strong> per visualizzare l&apos;utilizzo della CPU e della memoria di ciascun processo in modo da ridurre il carico della CPU.</p>
+<p>Lo <strong>Stato</strong> del processo include <strong>In esecuzione</strong>, <strong>In sospensione</strong> e <strong>Interrotto</strong>. Gli stati del processo equivalenti per Linux sono <strong>running</strong>, <strong>stopped/tracing</strong>, <strong>sleeping</strong></strong>. </p>
+<p><strong>In sospensione</strong> pu&ograve; essere seguito da una lettera per le informazioni dettagliate, ad esempio &apos;D&apos; per la sospensione disco, &apos;Z&apos; per zombie, &apos;X&apos; per inattivo.</p>
+
+<h2>Utenti connessi</h2>
+<p> Su questa scheda, &egrave; possibile visualizzare e gestire i client che sono attualmente collegati al sistema e accedere alle risorse. Questa sezione visualizza i client che sono collegati via HTTP, TELNET, SSH, SMB/CIFS, AFP, FTP e NFS.</p>
+<h4>Per gestire le connessioni correnti, eseguire una delle seguenti azioni:</h4>
+<ul>
+<li>Fare clic su <b>Salva</b> per esportare l&apos;elenco concorrenti in un file HTML.</li>
+<li>Fare clic su <b>Aggiorna</b> per aggiornare l&apos;elenco.</li>
+<li>Fare clic su <b>Ignora connessione</b> per non consentire pi&ugrave; all&apos;utente l&apos;accesso alla risorsa. L&apos;utente disconnesso deve essere nuovamente autorizzato per poter accedere alla risorsa.</li>
+<li>Fare clic su <b>Disabilita utente</b> per disabilitare l&apos;utente. Per abilitare nuovamente l&apos;utente, andare su <b>Menu principale</b> &gt; <b>Pannello di controllo</b> &gt; <b>Utente</b>.</li>
+</ul>
+<div class="section">
+<h4>Nota.</h4>
+<ul>
+<li>L&apos;opzione <strong>Ignora connessione</strong> non funziona con client NFS.</li>
+<li>Se i client NFS non smontano correttamente le cartelle condivise, essi potrebbe ancora apparire nell&apos;elenco degli utenti connessi.</li>
+<li>Se il DiskStation si riavvia, i client NFS che sono stati precedentemente collegati non appaiono nell&apos;elenco degli utenti connessi.</li>
+</ul>
+</div>
+
+
+<h2>Limite velocit&agrave;</h2>
+<p>Nella scheda <strong>Limite velocit&agrave;</strong> &egrave; possibile visualizzare e gestire l&apos;elenco dei processi di trasferimento dei file a cui sono applicati i limiti di velocit&agrave; su DiskStation.</p>
+<h4>Per aggiornare l&apos;elenco:</h4>
+<p>Fare clic su <strong>Aggiorna</strong> per ricaricare la pagina e ottenere i registri pi&ugrave; recenti.</p>
+<h4>Per interrompere il processo di trasferimento dei file:</h4>
+<p>Fare clic su <b>Ignora connessione</b> per interrompere il trasferimento dei file. Per completare il processo sar&agrave; necessario avviare nuovamente il trasferimento dei file.</p>
+
+
+<h2>Impostazioni</h2>
+<p>Fare clic su <strong>Impostazioni</strong> per impostare le seguenti opzioni:</p>
+<ul>
+<li>Scegliere la <strong>Durata tempo reale</strong> in minuti dal menu a discesa.<li>Selezionare <strong>Abilita cronologia utilizzo</strong> per visualizzare i dati precedenti. Una volta abilitato, &egrave; possibile scegliere tra <strong>Tempo reale</strong>, <strong>1 giorno</strong>, <strong>1 settimana</strong>, <strong>1 mese</strong> e <strong>1 anno</strong> nel menu a discesa nell&apos;angolo superiore destro quando vengono visualizzati i grafici delle prestazioni.</ul>
+<p>Fare clic su <strong>Applica</strong> per salvare l&apos;impostazione.</p>
+</body>
+</html>

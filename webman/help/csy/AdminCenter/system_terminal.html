@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Termin&aacute;l</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Termin&aacute;l</h2>
+
+<p>Povolen&iacute;m možnost&iacute; v&nbsp;č&aacute;sti <strong>Ovl&aacute;dac&iacute; panel</strong> &gt; <strong>Termin&aacute;l a&nbsp;SNMP</strong> &gt; <strong>Termin&aacute;l</strong>) umožn&iacute;te na zař&iacute;zen&iacute; DiskStation podporu služeb rozhran&iacute; př&iacute;kazov&yacute;ch ř&aacute;dků Telnet a&nbsp;SSH. Můžete tak&eacute; změnit &uacute;roveň zabezpečen&iacute; &scaron;ifrovac&iacute;ho algoritmu SSH.</p>
+
+<h4>Postup povolen&iacute; služby Telnet/SSH:</h4>
+<ol>
+<li>Za&scaron;krtněte pol&iacute;čko vedle požadovan&eacute;ho protokolu (SSH nebo Telnet).</li>
+<li>Klikněte na možnost <b>Použ&iacute;t</b>.</li>
+</ol>
+<h4>Postup změny portu služby SSH:</h4>
+<ol>
+<li>Do pole <strong>Port</strong> zadejte č&iacute;slo nov&eacute;ho portu.</li>
+<li>Klikněte na možnost <b>Použ&iacute;t</b>.</li>
+</ol>
+
+<p>Při zabezpečen&iacute; SSH připojen&iacute; se použ&iacute;vaj&iacute; různ&eacute; &scaron;ifrovac&iacute; algoritmy s různ&yacute;mi &uacute;rovněmi zabezpečen&iacute;. Můžete si vybrat, kter&eacute; algoritmy nejl&eacute;pe vyhovuj&iacute; va&scaron;im požadavkům.</p>
+<h4>Postup změny &uacute;rovně zabezpečen&iacute; &scaron;ifrovac&iacute;ho algoritmu SSH:</h4>
+<ol>
+<li>Klikněte na možnost <b>Roz&scaron;&iacute;řen&aacute; nastaven&iacute;</b>.</li>
+<li>Vyberte &uacute;roveň zabezpečen&iacute; &scaron;ifrovac&iacute;ch algoritmů. Pokud chcete přesně zadat, kter&eacute; algoritmy lze použ&iacute;t, zvolte možnost <b>Přizpůsobit</b> a vyberte si z tř&iacute; skupin: Cipher, KEX (Key Exchange) a MAC (Message Authentication Code).</li>
+<li>Klikněte na možnost <b>Použ&iacute;t</b>.</li>
+</ol>
+<p>Někter&eacute; modely u vybran&yacute;ch &scaron;ifrovac&iacute;ch algoritmů podporuj&iacute; hardwarovou akceleraci. Za&scaron;krtnut&iacute;m možnosti <b>Použ&iacute;vat pouze &scaron;ifry s hardwarovou akcelerac&iacute;</b> můžete zv&yacute;&scaron;it přenosov&eacute; rychlosti služeb t&yacute;kaj&iacute;c&iacute;ch se SSH včetně &scaron;ifrovan&eacute; S&iacute;ťov&eacute; z&aacute;lohy a SFTP služeb. Na str&aacute;nce pokročil&yacute;ch nastaven&iacute; jsou algoritmy, u nichž lze využ&iacute;t hardwarovou akceleraci, zobrazeny červeně.</p>
+
+<div class="section">
+<h4>Pozn&aacute;mka:</h4>
+<ul>
+
+<li>Někter&eacute; služby (např. s&iacute;ťov&aacute; z&aacute;loha, SFTP) automaticky aktivuj&iacute; SSH a otv&iacute;raj&iacute; port 22. V takov&eacute;m př&iacute;padě mus&iacute;te aktivovat SSH službu v č&aacute;sti <strong>Ovl&aacute;dac&iacute; panel</strong> &gt; <strong>Termin&aacute;l a SNMP</strong> &gt; <strong>Termin&aacute;l</strong>, abyste se mohli přihl&aacute;sit do DSM pomoc&iacute; SSH.</li>
+<li>SSH/Telnet podporuje přihla&scaron;ov&aacute;n&iacute; do syst&eacute;mu pouze pomoc&iacute; &uacute;čtů <strong>root</strong> nebo <strong>admin</strong>.</li>
+<li>Při přihla&scaron;ov&aacute;n&iacute; do syst&eacute;mu pomoc&iacute; SSH/Telnet nemůže b&yacute;t heslo pr&aacute;zdn&eacute;.</li>
+<li>Pokud je služba SSH deaktivov&aacute;na, budou v&scaron;echna připojen&iacute; SSH ukončena, včetně aktu&aacute;lně spu&scaron;těn&yacute;ch &uacute;loh &scaron;ifrovan&eacute;ho s&iacute;ťov&eacute;ho z&aacute;lohov&aacute;n&iacute;. Doporučujeme v&aacute;m, abyste &uacute;lohy s&iacute;ťov&eacute;ho z&aacute;lohov&aacute;n&iacute; provedli po deaktivaci služby SSH znovu.</li>
+<li>Nespr&aacute;vn&aacute; manipulace nebo změna zař&iacute;zen&iacute; DiskStation může m&iacute;t za n&aacute;sledek poruchu zař&iacute;zen&iacute; nebo ztr&aacute;tu dat.</li>
+<li>Volba vy&scaron;&scaron;&iacute; &uacute;rovně zabezpečen&iacute; nebo využit&iacute; pouze &scaron;ifer s hardwarovou akcelerac&iacute; může způsobit, že někteř&iacute; SSH klienti se kvůli probl&eacute;mům s kompatibilitou nebudou moci připojit.</li>
+<li>V z&aacute;vislosti na zvolen&eacute; &uacute;rovni zabezpečen&iacute; nemusej&iacute; b&yacute;t dostupn&eacute; někter&eacute; algoritmy, kter&eacute; podporuj&iacute; hardwarovou akceleraci.</li>
+</ul>
+</div>
+
+</body>
+</html>

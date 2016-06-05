@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Rozdwojenie jaźni</h2>
+
+<p>W trakcie normalnego działania klastra high-availability tylko jeden należący do niego serwer powinien pełnić rolę serwera aktywnego. W takim przypadku serwer pasywny wykrywa obecność serwera aktywnego za pośrednictwem połączenia Heartbeat i połączenia transmisji danych.</p>
+
+<p>W razie utraty połączeń Heartbeat i transmisji danych oba serwery mogą pr&oacute;bować przejąć rolę serwera aktywnego. Sytuację taką nazywa się błędem rozdwojenia jaźni. W takim przypadku połączenia z adresem IP przypisanym do klastra high-availability będą przekierowywane do dowolnego serwera, co spowoduje błędy usług.</p>
+        
+<h4>W przypadku wystąpienia błędu rozdwojenia jaźni:</h4>
+	<ol>
+		<li>Połączenia z adresem IP klastra będą przekierowywane do dowolnego serwera, co spowoduje błędy usług. Będą występować trudności z połączeniem z każdym z serwer&oacute;w.</li>
+		<li>System wykryje błąd rozdwojenia jaźni i usunie klaster high-availability, usuwając powiązanie obu serwer&oacute;w.</li>
+		<li>Kiedy oba serwery powr&oacute;cą do stanu <b>Autonomiczny</b>, będzie można zalogować się w systemie DiskStation Manager (DSM). Dane zgromadzone przed usunięciem klastra high-availability pozostaną na obu serwerach. Po stwierdzeniu, kt&oacute;ry serwer zawiera najbardziej aktualne dane, można przywr&oacute;cić powiązanie serwer&oacute;w w celu ponownego utworzenia klastra high-availability.</li>
+	</ol>
+ </body>
+</html>

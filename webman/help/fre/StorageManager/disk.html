@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+	<h2>HDD/SSD</h2>
+	<p>Cette section vous permet de suivre le statut du HDD/SSD install&eacute; sur votre DiskStation, avec des options pour g&eacute;rer et analyser les performances et l&apos;&eacute;tat de sant&eacute; du HDD/SSD. Allez dans <strong>Gestionnaire de stockage</strong> &gt; <strong>HDD/SSD</strong> pour g&eacute;rer ces options.</p>
+
+	<h4>Pour v&eacute;rifier les infos HDD/SSD :</h4>
+	<ol>
+		<li>Allez &agrave; l&rsquo;onglet <b>HDD/SSD</b>.</li>
+		<li>S&eacute;lectionnez un lecteur dans la liste et d&eacute;veloppez-le. Ici, vous verrez l&apos;&eacute;tat S.M.A.R.T., les infos de volume, le nom du mod&egrave;le, le num&eacute;ro de s&eacute;rie, la version du firmware et la temp&eacute;rature.</li>
+	</ol>	
+	
+	<h4>Pour v&eacute;rifier l&rsquo;&eacute;tat de sant&eacute; du disque&nbsp;:</h4>
+    <ol>
+      <li>Allez &agrave; l&rsquo;onglet <b>HDD/SSD</b>.</li>
+	  <li>S&eacute;lectionnez un lecteur.</li>
+      <li>Cliquez sur <b>Infos de sant&eacute;</b>.</li>
+	  <li>Allez &agrave; l&rsquo;onglet <strong>Vue d&apos;ensemble</strong>. Ici, vous allez d&eacute;couvrir combien d&apos;heures le lecteur a &eacute;t&eacute; aliment&eacute;, la temp&eacute;rature actuelle, le nombre de reconnections/r&eacute;identifications, le nombre de secteurs d&eacute;fectueux, et l&apos;&eacute;tat S.M.A.R.T. g&eacute;n&eacute;ral.</li>
+      <li>Allez &agrave; l&apos;onglet <strong>Info S.M.A.R.T.</strong>. Les chiffres r&eacute;pertori&eacute;s peuvent vous aider &agrave; diagnostiquer l&rsquo;&eacute;tat de votre disque.</li>
+    </ol>
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<p>Les disques SAS ne prennent pas en charge les infos S.M.A.R.T.</p>
+</div>
+
+	<h4>Pour d&eacute;marrer un test S.M.A.R.T.&nbsp;:</h4>
+	<P>S.M.A.R.T. Le test examinera et fera un rapport sur l&apos;&eacute;tat de vos disques durs, vous alertant des &eacute;ventuelles d&eacute;faillances du disque. Il est recommand&eacute; de changer rapidement vos disques si des erreurs sont d&eacute;tect&eacute;es. </P>
+    <ol>
+      <li>Allez &agrave; l&rsquo;onglet <strong>HDD/SSD</strong>.</li>
+      <li>S&eacute;lectionnez un lecteur.</li>
+      <li>Cliquez sur <b>S.M.A.R.T. Tester</b>.</li>
+      <li>Choisissez un type de test et cliquez sur <strong>D&eacute;marrer</strong> pour commencer le test.</li>
+      <li>Les r&eacute;sultats du test sont affich&eacute;s dans la section <b>R&eacute;sultats du test</b>.</li>
+    </ol>
+    <div class="section">
+<h4>Remarque&nbsp;:</h4>
+    <p>La dur&eacute;e du test varie en fonction de votre environnement syst&egrave;me.</p>
+</div>
+    <h4>Pour planifier les tests S.M.A.R.T.&nbsp;:</h4>
+    <p>Les tests S.M.A.R.T. peuvent &ecirc;tre planifi&eacute;s pour ex&eacute;cution automatique en cr&eacute;ant des t&acirc;ches.</p>
+    <ol>
+      <li>Allez &agrave; l&rsquo;onglet <strong>Planificateur de test</strong>.</li>
+      <li>Cliquez sur le bouton <strong>Cr&eacute;er</strong> pour configurer une nouvelle t&acirc;che.</li>
+      <li>Modifiez les param&egrave;tres suivants sur l&apos;onglet <strong>G&eacute;n&eacute;ralit&eacute;s</strong>&nbsp;:</li>
+      <ul>
+        <li><strong>T&acirc;che&nbsp;:</strong> Entrez un nom pour la t&acirc;che.</li>
+        <li><strong>S.M.A.R.T. Type de test&nbsp;:</strong> Choisissez d&apos;effectuer un test rapide ou un test &eacute;tendu.</li>
+        <li><strong>S.M.A.R.T. Plage de test&nbsp;:</strong> Choisissez les HDD/SSD &agrave; tester chaque fois que le test S.M.A.R.T. est effectu&eacute;.</li>
+      </ul>
+      <li>Sur l&apos;onglet <strong>Planification</strong>, modifiez les param&egrave;tres suivants&nbsp;:</li>
+      <ul>
+        <li><strong>Date&nbsp;:</strong> Sp&eacute;cifiez quand effectuer le test S.M.A.R.T. Les tests S.M.A.R.T. peuvent &ecirc;tre planifi&eacute;es pour s&apos;ex&eacute;cuter certains jours de la semaine (par ex. tous les jours, les weekends ou tous les dimanches, etc.) ou &agrave; des dates sp&eacute;cifiques (par exemple le 21/10/2015).</li>
+        <li><strong>Nbre de fois :</strong> Sp&eacute;cifiez combien de fois le test S.M.A.R.T. est effectu&eacute;, ainsi que la premi&egrave;re et la derni&egrave;re heure d&apos;ex&eacute;cution chaque jour.</li>
+      </ul>
+      <li>Cliquez sur <strong>OK</strong> pour terminer.</li>
+    </ol>
+
+<h4>Pour effectuer Secure Erase :</h4>
+<ol>
+<li>Allez &agrave; l&rsquo;onglet <b>HDD/SSD</b>.</li>
+<li>S&eacute;lectionnez un lecteur et cliquez sur <b>Secure Erase</b>.</li>
+</ol>
+
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<ul>
+<li>Secure Erase ne peut pas &ecirc;tre utilis&eacute; sur les lecteurs dans les unit&eacute;s d&apos;expansion.</li>
+<li>Secure Erase va supprimer de mani&egrave;re permanente les donn&eacute;es stock&eacute;es sur votre lecteur. Assurez-vous que le lecteur choisi n&apos;est pas utilis&eacute; ou que les donn&eacute;es ont &eacute;t&eacute; sauvegard&eacute;es avant de ce faire.</li>
+<li>Lorsque le syst&egrave;me effectue Secure Erase, le lecteur choisi sera temporairement verrouill&eacute; et ensuite d&eacute;verrouill&eacute; automatiquement lorsque l&apos;op&eacute;ration est termin&eacute;e. </li>
+<li>Si Secure Erase est arr&ecirc;t&eacute; incorrectement pendant l&apos;op&eacute;ration, vous pouvez r&eacute;ex&eacute;cuter Secure Erase directement sur l&apos;interface utilisateur.  Si les lecteurs sont supprim&eacute;s ou utilis&eacute;s ailleurs lorsqu&apos;ils sont toujours verrouill&eacute;s, veuillez entrer le mot de passe &quot;synology&quot; pour d&eacute;verrouiller les lecteurs. </li>
+</ul>
+</div>
+
+
+	<h3>Activation de la prise en charge du cache en &eacute;criture pour le disque dur</h3>
+	<p>L&apos;activation de la prise en charge du cache en &eacute;criture am&eacute;liore les performances de votre DiskStation. Seuls certains mod&egrave;les de disques durs prennent en charge cette fonctionnalit&eacute;. Pour assurer la protection des donn&eacute;es avec la prise en charge du cache en &eacute;criture, l&apos;utilisation d&apos;un onduleur est fortement recommand&eacute;e. Il est &eacute;galement sugg&eacute;r&eacute; que le syst&egrave;me soit arr&ecirc;t&eacute; correctement &agrave; chaque fois apr&egrave;s usage. La d&eacute;sactivation du cache en &eacute;criture permettra d&apos;&eacute;viter les pertes de donn&eacute;es caus&eacute;es par des pannes de courant anormales, mais les performances du syst&egrave;me diminueront.</p>
+
+	<h4>Pour activer la prise en charge du cache en &eacute;criture&nbsp;: </h4>
+	<ol>
+		<li>Allez &agrave; l&rsquo;onglet <b>Gestion du cache</b>.</li>
+		<li>Cochez <b>Activer le cache en &eacute;criture</b>. Par d&eacute;faut, cette fonction est d&eacute;sactiv&eacute;e.</li>
+		<li>Cliquez sur <b>Appliquer</b>.</li>
+	</ol>
+	
+</body>
+</html>

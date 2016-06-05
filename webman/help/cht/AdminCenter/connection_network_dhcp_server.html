@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DHCP Server</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>DHCP Server</h2> <p>您的 DiskStation 可以成為 DHCP 伺服器，將動態 IP 位址指派給區域網路中的 DHCP 用戶端。</p>
+ <h4>若要啟動 DHCP 伺服器：</h4>
+<ol>
+<li>前往<strong>控制台</strong> &gt; <strong>網路</strong> &gt; <strong>網路介面</strong>。</li>
+<li>選擇網路介面 (例如 LAN) 並按一下<strong>編輯</strong>。</li>
+<li>前往 <strong>DHCP Server</strong> 頁籤並勾選<b>啟動 DHCP Server</b>。</li>
+<li>在<b>位址租約時間</b>欄位中輸入數值來為 DHCP 用戶端的 IP 位址設定 DHCP 租約時間 (以分鐘為單位)。</li>
+<li>
+在<b>主要網域名稱伺服器 (DNS)</b> (必填) 及<b>次要網域名稱伺服器 (DNS)</b> (可留空) 欄位中為 DHCP 用戶端輸入 DNS 位址。
+</li>
+<li>
+在<b>網域名稱</b> (可留空) 欄位中為 DHCP 伺服器指定網域名稱。
+</li>
+<li>
+按一下<b>確定</b>。
+</li>
+</ol>
+<h4>若要新增子網路：</h4>
+<ol>
+<li>
+按一下<b>新增</b>，然後指定下列欄位的相關資訊：
+</li>
+<ul>
+<li>
+<b>啟動</b>：啟動或停用子網路。
+</li>
+<li>
+<b>開始位址</b>：子網路的第一個 IP 位址。
+</li>
+<li>
+<b>開始位址</b>：子網路的最後一個 IP 位址。
+</li>
+<li>
+<b>結束位址</b>：子網路遮罩。
+</li>
+<li>
+<b>預設閘道器 (gateway)</b>：子網路的預設閘道器。
+</li>
+</ul>
+<li>
+按一下<b>確定</b>。
+</li>
+</ol>
+
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>您最多只能新增 32 個子網路。</li>
+</ul>
+</div>
+
+
+
+<h3>DHCP 用戶端</h3>
+
+<p>若要查看 DHCP 用戶端清單及它們的網路設定 (例如：網路實體位址、IP 位址、主機名稱及 DHCP 租約到期剩餘時間)，可以前往 <strong>DHCP 用戶端</strong>頁籤。</p>
+
+
+<h3>DHCP 保留</h3>
+
+<p>如果您要讓用戶端在每次 DHCP 租約更新時都能接收到相同的 IP 位址，則可以將該用戶端加到保留位址清單中。</p>
+
+<h4>若要將用戶端加到保留位址清單：</h4>
+
+<ul>
+<li>按一下<b>新增</b>。</li>
+<li>指定用戶端的網路實體位址、您想指派給用戶端的 IP 位址，以及用戶端主機名稱。 </li>
+<li>按一下<b>確定</b>來儲存設定。</li>
+</ul>
+
+
+</body>
+</html>

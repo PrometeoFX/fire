@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Kopia zapasowa danych</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Kopia zapasowa danych</h2>
+
+<p>Na stronie <b>Kopia zapasowa i replikacja</b> na karcie <b>Kopia zapasowa</b> można tworzyć kopie zapasowe określonych danych przechowywanych na serwerze DiskStation zarówno ręcznie, jak i zgodnie z harmonogramem. Przy użyciu tej funkcji można utworzyć kopię zapasową konfiguracji systemu, zawartości folderów udostępnionych oraz danych pakietów w lokalnym lub sieciowym miejscu docelowym albo w chmurze.</p>
+
+<h4>Aby utworzyć zadanie kopii zapasowej:</h4>
+<ol>
+<li>Wybierz pozycje <b>Utwórz</b> > <b>Zadanie kopii zapasowej danych</b>.</li>
+<li>Postępuj zgodnie z instrukcjami kreatora, aby zakończyć konfigurację. Więcej informacji można znaleźć w temacie <a href="repository.html">Miejsce docelowe kopii zapasowej</a>.</li>
+</ol>
+
+<h4>Aby zarządzać zadaniami kopii zapasowej:</h4>
+<p>Wybierz istniejące zadanie, a następnie kliknij jeden z poniższych przycisków:</p>
+<ul>
+<li><strong>Edytuj:</strong> zmiana miejsca docelowego, źródła, harmonogramu i innych ustawień wybranego zadania.</li>
+<li><strong>Usuń:</strong> usunięcie wybranego zadania.</li>
+<li><strong>Anuluj:</strong> anulowanie wybranego, trwającego obecnie zadania.</li>
+<li><strong>Utwórz kopię zapasową teraz:</strong> natychmiastowe wykonanie wybranego zadania kopii zapasowej.</li>
+</ul>
+
+
+<h3>Rotacja kopii zapasowych</h3>
+<p>Rotacja kopii zapasowych jest mechanizmem zarządzania wersjami. Pozwala ona zarządzać wersjami kopii zapasowych przez automatyczne usuwanie starszych, niepotrzebnych wersji. Dzięki temu zwalniane jest miejsce na nowe kopie zapasowe. Funkcję można włączyć na karcie <b>Ustawienia zadania</b>. Można ją też skonfigurować podczas tworzenia zadania kopii zapasowej.</p>
+<h4>Aby włączyć rotację wersji:</h4>
+<ol>
+<li>Wybierz zadanie kopii zapasowej, dla którego ma być włączona funkcja rotacji wersji, i kliknij przycisk <strong>Edytuj</strong>.</li>
+<li>Przejdź do karty <strong>Ustawienia zadania</strong> i zaznacz pole wyboru <strong>Włącz rotację kopii zapasowych</strong>. </li>
+<li>Można wybrać dwie metody rotacji:</li>
+<ul>
+<li><b>Od najwcześniejszej wersji:</b> jest to podstawowa metoda rotacji wersji. Po wystąpieniu warunku rotacji zostanie najpierw usunięta najwcześniejsza wersja. </li>
+<li><b>Smart Recycle:</b> jest to inteligentna metoda rotacji wersji. Po wystąpieniu warunku rotacji zostaną usunięte wersje wybrane przez mechanizm utrzymywania. Mechanizm utrzymywania wygląda następująco:</li>
+<ul>
+	<li><b>Cogodzinne wersje z ostatnich 24 godzin:</b> utrzymywana jest najwcześniejsza wersja utworzona każdej godziny.</li>
+	<li><b>Codzienne wersje od minionego 1 dnia do 1 miesiąca:</b> utrzymywana jest najwcześniejsza wersja utworzona każdego dnia.</li>
+	<li><b>Cotygodniowe wersje starsze niż 1 miesiąc:</b> utrzymywana jest najwcześniejsza wersja utworzona każdego tygodnia.</li>
+</ul>
+</ul>
+<li>Określ maksymalną <b>liczbę wersji</b>. Kiedy liczba wersji przekroczy ten próg, zostanie uruchomiona rotacja wersji. Licznik ten nie obejmuje wersji zablokowanych.</li>
+<li>Po skonfigurowaniu cyklicznego harmonogramu tworzenia kopii zapasowych wyświetlany jest podgląd sposobu utrzymywania wersji kopii zapasowych i najwcześniejszego punktu odzyskiwania na podstawie ustawień rotacji.   </li>
+<li>Kliknij przycisk <strong>OK</strong>, aby zapisać ustawienia. </li>
+</ol>
+
+<div class="section">
+  <h4>Uwagi:</h4>
+  <ul>
+  <li>Zablokowane wersje nie są usuwane. Więcej informacji można znaleźć w temacie <a href="repository.html#lock_version">Miejsce docelowe kopii zapasowej</a>.</li><li>Funkcja wielu wersji kopii zapasowej jest dostępna tylko w przypadku zarchiwizowanych zadań kopii zapasowej.</li><li>Rotacja wersji nie jest obsługiwana przez system DSM w wersjach starszych niż 5.1.</li>
+  <li>Rotacja zostanie uruchomiona po zmianie ustawienia lub zakończeniu zadania kopii zapasowej.</li>
+  <li>Zablokowane wersje nie są uwzględniane w obliczeniach maksymalnej liczby wersji.</li>
+  </ul>
+</div>
+
+
+<div class="section">
+<h4>Uwagi ogólne:</h4>
+<ul>
+<li>Nazwy zadań kopii zapasowej mogą zawierać od 1 do 32 znaków Unicode z wyłączeniem następujących znaków:<br> <span class="letterSpace5">! " # $ % & ' ( ) * + , / : ; < = > ? @ [ ] \ ^ ` { } | ~</span></li>
+<li>Maksymalna długość pełnej ścieżki pliku kopii zapasowej to 2048 znaków.</li>
+<li>Jeżeli do folderu udostępnionego w systemie plików EXT3 zostanie przesłanych ponad 32 000 plików lub folderów za pośrednictwem usługi AFP, wszystkie zadania kopii zapasowej obejmujące ten folder udostępniony zakończą się niepowodzeniem.</li>
+<li>Kopię zapasową zaszyfrowanego folderu można tworzyć, kiedy folder jest zamontowany lub odmontowany. Jednak po przywróceniu będzie odmontowany i nie będzie automatycznie montowany podczas rozruchu. Aby go zamontować, trzeba będzie wprowadzić klucz szyfrowania danego szyfrowanego folderu udostępnionego lub go zaimportować.</li>
+<li>Tworzenie kopii zapasowej folderu zaszyfrowanego w innym folderze zaszyfrowanym nie jest obsługiwane.</li>
+<li>Używanie folderów zdalnych jako źródła kopii zapasowej lub miejsca docelowego kopii zapasowej nie jest obsługiwane.</li><li>Jeżeli miejscem docelowym kopii zapasowej jest wolumen, zadanie kopii zapasowej będzie mogło być wykonane wyłącznie przez właściciela zadania. Więcej informacji można znaleźć w temacie <a href="repository.html">Miejsce docelowe kopii zapasowej</a>.</li>
+<li>Obsługiwane jest tworzenie kopii zapasowych dla niektórych aplikacji. Aby sprawdzić, czy dany pakiet obsługuje tworzenie kopii zapasowych, a także poznać ich zawartość i ograniczenia, zapoznaj się z pomocą danego pakietu.</li>
+<li class="enable-eds14">Serwer DiskStation nie obsługuje kopii zapasowych aplikacji bez urządzenia zewnętrznego z systemem plików EXT3/EXT4 z możliwością zapisu.</li>
+<li class="enable-eds14">Serwer DiskStation nie obsługuje tworzenia kopii zapasowych na wolumenie bez urządzenia zewnętrznego z systemem plików EXT3/EXT4 z możliwością zapisu.</li>
+<li class="enable-eds14">Serwer DiskStation umożliwia tworzenie kopii zapasowych tylko takich folderów udostępnionych, które zostały utworzone na urządzeniach zewnętrznych z systemem plików EXT3/EXT4.</li>
+<li class="disable-eds14">Nie można tworzyć kopii zapasowych aplikacji bez wolumenu z możliwością zapisu.</li
+></ul>
+</div>
+<div class="section disable-eds14">
+<h4>Tworzenie kopii zapasowej ustawień Windows ACL:</h4>
+<p>W zależności od systemów plików w miejscu docelowym ustawienia Windows ACL na serwerze DiskStation można również uwzględniać w kopii zapasowej:</p>
+<ul>
+
+<li><strong>Lokalne miejsce docelowe kopii zapasowych</strong>, <strong>Sieciowe miejsce docelowe kopii zapasowych</strong> i <strong>Miejsce docelowe kopii zapasowej w chmurze publicznej</strong> mogą przechowywać ustawienia Windows ACL niezależnie od systemu plików miejsca docelowego.</li>
+
+<li><strong>Synchronizacja folderów udostępnionych</strong> może obejmować ustawienia Windows ACL, gdy systemem plików w miejscu docelowym jest EXT4<span style="display: inline;" class="enable-rc18015xsp">/BTRFS</span>.</li>
+
+</ul>
+</div>
+
+</body></html>

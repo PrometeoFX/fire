@@ -1,0 +1,1 @@
+_={"a":"Nie znaleziono strony","b":"Przepraszamy, nie znaleziono strony, której szukasz.","c":"Wstecz"};

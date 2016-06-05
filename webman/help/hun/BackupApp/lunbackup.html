@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Biztonsági mentés és replikáció</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>LUN biztonsági mentés*</h2>
+<p>A <b>Biztonsági mentés és replikáció</b> menü <b>Biztonsági mentés</b> lapján található <b>Helyi LUN biztonsági mentés</b> funkciót a(z) DiskStation eszközön található iSCSI LUN-ok helyi megosztott mappákba történő biztonsági mentéséhez használhatja. A <b>Hálózati LUN biztonsági mentés</b> funkciót pedig más DiskStation eszközre történő biztonsági mentésre használhatja.</p>
+
+<h4>iSCSI LUN biztonsági mentése:</h4>
+<ol>
+<li>Válassza a <b>Létrehozás</b> > <b>LUN biztonsági mentési feladat</b> elemet, ekkor megnyílik a <b>LUN biztonsági mentés varázsló</b> - kattintson a <b>Következő</b> gombra.</li>
+<li>Amikor a rendszer felkéri, hogy válasszon céltípust, válasszon a következők közül:</li>
+<ul>
+<li><b>Helyi LUN biztonsági mentés</b>: Ezt az opciót választva a LUN biztonsági mentése a(z) DiskStation eszközről helyi megosztott mappába vagy a(z) DiskStation készülék USB- vagy eSATA-portjához csatlakoztatott külső meghajtóra végezhető.</li>
+<li><b>Hálózati LUN biztonsági mentés</b>: Ezen opció kiválasztása esetén a LUN biztonsági mentése a(z) DiskStation eszközéről egy másik DiskStation eszközre végezhető el.</li>
+</ul>
+<li>A kérdésre adja meg a biztonsági mentés célhelyét és a forrás LUN-t, majd állítsa be a mentés időzítését.</li>
+<li>A beállítás befejezéséhez kövesse a varázsló utasításait.</li>
+</ol>
+<p>A biztonsági mentési feladat létrehozását követően a(z) DiskStation eszköz az ütemezés szerint végzi el a biztonsági mentési feladatot, illetve eszerint tárolja el a LUN-ok biztonsági másolatát a célhelyen. A LUN biztonsági másolata kizárólag biztonsági mentési célokat szolgál. A LUN biztonsági másolatának elérésével kapcsolatos további információkért tekintse meg a <a href="restore.html">LUN visszaállítása biztonsági másolatból</a> című fejezetet.</p>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<ul>
+<li>A normál fájl LUN-ok és a blokkszintű LUN-ok biztonsági mentése során képfájlok készülnek a célhelyen. Visszaállítás esetén minden blokkszintű LUN-t fájl LUN-ok váltanak fel.</li>
+<li>Az egyes biztonsági mentési feladatok egy LUN-t tartalmazhatnak biztonsági mentési forrásként.</li>
+<li>FAT, FAT32, HFS, HFS Plus vagy NTFS fájlrendszerre nem készíthető biztonsági mentés a LUN-okról.</li>
+<li>Mielőtt hálózati LUN biztonsági mentést végezne, jelentkezzen be a célként szolgáló DiskStation eszközre, és ellenőrizze, hogy a Hálózaton keresztüli biztonsági mentés szolgáltatás engedélyezve van-e a <b>Biztonsági mentés és replikáció</b> > <b>Biztonsági mentési szolgáltatás</b> menüpontban.</li>
+<li>Ha a(z) DiskStation routeren keresztül csatlakozik a hálózathoz, a hálózati LUN biztonsági mentés végrehajtása előtt győződjön meg róla, hogy az iSCSI szolgáltatáshoz a routeren meg van-e adva porttovábbítási szabály (3260-as TCP-port).</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>A teljes biztonsági mentés és a növekményes mentés:</h4>
+<p>A(z) DiskStation az első alkalommal teljes biztonsági mentést készít a kiválasztott LUN-ról, az ezt követő alkalmakkor pedig növekményes (részleges) mentést készít. Ha viszont a biztonsági mentés célhelyeként szolgáló megosztott mappa vagy könyvtárnév megváltozik, a(z) DiskStation eszköz újra teljes biztonsági mentést készít a feladat keretében.</p>
+</div>
+
+<p>____<br /> *Csak bizonyos típusok esetében érhető el.</p>
+</body></html>

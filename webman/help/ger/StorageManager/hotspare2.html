@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Hot Spare</h2>
+	<p>Hot Spare-Festplatten sind Standby-Festplatten, die eine fehlerhafte RAID Group durch den automatischen Austausch einer defekten Festplatte reparieren können. Hot Spare-Festplatten können global zugewiesen werden, um beliebige RAID Groups in Ihrem DiskStation zu reparieren. Eine Hot Spare-Festplatte kann nur eine RAID Group reparieren, die den folgenden Kriterien entspricht:
+</p>
+	<ul>
+  <li>Der RAID-Typ der RAID Group muss Datenschutz bieten (d.h. RAID 1, RAID 5, RAID 6, RAID 10).</li>
+		<li>Der Hot Spare-Festplattentyp muss mit den Festplatten in der RAID Group identisch sein (d. h. SATA, SAS).</li>
+		<li>Die Hot Spare-Festplatte muss größer oder genauso groß sein wie die kleinste Festplatte des RAIDs.</li>
+	</ul>
+
+	<h4>Hot Spare-Festplatten verwalten:</h4>
+	<ol>
+		<li>Klicken Sie auf <b>Verwalten</b>.</li>
+		<li>Aktivieren Sie im Bereich <b>Verfügbare Festplatten</b> rechts das Kontrollkästchen neben der Festplatte, die Sie als Hot Spare zuweisen möchten. Deaktivieren Sie das Kontrollkästchen, wenn Sie eine Hot Spare-Festplatte entfernen möchten. Klicken Sie auf <b>Übernehmen</b>, um die Einstellungen zu speichern.</li>
+	</ol>
+	<p>
+		<span class="note_head">Hinweis:</span> Wenn eine Hot Spare-Festplatte eine fehlerhafte RAID Group repariert, werden sämtliche Daten auf der Hot Spare-Festplatte gelöscht. Stellen Sie vor dem Zuweisen einer Hot Spare-Festplatte sicher, dass keine wichtigen Daten darauf gespeichert sind.
+</p>
+</body>
+</html>

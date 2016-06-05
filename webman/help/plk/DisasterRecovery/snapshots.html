@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta charset="UTF-8">
+</head>
+<body>
+<h2>Zrzuty obrazu</h2>
+	<p>Na tej stronie można robić, usuwać i&nbsp;edytować zrzuty obrazu, a&nbsp;także konfigurować harmonogram zrzut&oacute;w obrazu i&nbsp;ustawienia przechowywania.</p>
+    <p>Można przechowywać maksymalnie 256 kopii zrzut&oacute;w obrazu folderu udostępnionego lub jednostki iSCSI LUN. Zrzuty obrazu pozwalają zminimalizować użycie dysku przez zachowywanie poszczeg&oacute;lnych blok&oacute;w, a&nbsp;nie całych plik&oacute;w. Zużycie miejsca może wzrosnąć, jeżeli pliki z&nbsp;folder&oacute;w udostępnionych lub bloki z&nbsp;jednostek iSCSI LUN zostaną zaktualizowane lub usunięte.</p>
+
+<h3>Folder udostępniony</h3>
+<h4>Aby zrobić zrzut obrazu folderu udostępnionego:</h4>
+<ol>
+  <li>Zaznacz folder udostępniony, dla kt&oacute;rego ma być zrobiony zrzut obrazu.</li>
+	<li>Kliknij przycisk <strong>Zr&oacute;b zrzut obrazu</strong>.</li>
+	<li>W&nbsp;polu <strong>Opis</strong> wprowadź opis dotyczący wykonywanego zrzutu obrazu.</li>
+	<li>Zaznacz pole wyboru <strong>Zablokuj</strong> lub usuń jego zaznaczenie, aby określić, czy do zrzutu obrazu będą stosowane ustawienia przechowywania po uruchomieniu automatycznego usuwania.</li>
+  <li>Kliknij przycisk <strong>OK</strong>, aby zrobić zrzut obrazu.</li>
+</ol>
+
+<div class="section"><h4>Uwaga:</h4>
+<ul><li>Spośr&oacute;d ustawień dostępnych na stronie <strong>Panel sterowania</strong> &gt; <strong>Folder wsp&oacute;łdzielony</strong> &gt; <strong>Edytuj</strong> w&nbsp;zrzucie obrazu uwzględniane będą tylko uprawnienia Windows ACL.</li></ul>
+</div>
+
+<h4>Aby przeglądać zrzuty obrazu folder&oacute;w udostępnionych:</h4>
+<ol>
+  <li>Zaznacz folder udostępniony, kt&oacute;rego zrzuty obrazu mają być przeglądane.</li>
+	<li>Kliknij pozycję <strong>Lista zrzut&oacute;w obrazu</strong>.</li>
+  <li>Zaznacz zrzut obrazu, kt&oacute;rego zawartość ma być przeglądana, i&nbsp;kliknij przycisk <strong>Przeglądaj</strong>.</li>
+</ol>
+
+<div class="section"><h4>Uwaga:</h4>
+	<ul>
+		<li>Funkcja <strong>Przeglądaj</strong> jest niedostępna w&nbsp;przypadku zrzut&oacute;w obrazu zaszyfrowanych folder&oacute;w udostępnionych.</li>
+		<li>Jeżeli nie można znaleźć zrzutu obrazu, wybierz pozycje <strong>Panel sterowania</strong> &gt; <strong>Folder wsp&oacute;łdzielony</strong> &gt; <strong>Edytuj</strong>, aby włączyć opcję <strong>Ustaw widoczność zrzutu obrazu</strong>.</li>
+	</ul>
+</div>
+
+<h4>Aby usunąć zrzuty obrazu folder&oacute;w udostępnionych:</h4>
+<ol>
+	<li>Zaznacz folder udostępniony, kt&oacute;rego zrzuty obrazu mają być usunięte.</li>
+	<li>Kliknij pozycję <strong>Lista zrzut&oacute;w obrazu</strong>.</li>
+	<li>Zaznacz co najmniej jeden zrzut obrazu, kt&oacute;ry ma być usunięty, i&nbsp;kliknij przycisk <strong>Usuń</strong>. (Naciśnij klawisz Shift lub Ctrl i przytrzymaj go, aby wybrać więcej element&oacute;w).</li>
+	<li>Zostanie wyświetlony monit o&nbsp;potwierdzenie. Kliknij przycisk <strong>Usuń</strong>, aby potwierdzić usunięcie.</li>
+</ol>
+
+<h4>Aby edytować zrzuty obrazu folder&oacute;w udostępnionych:</h4>
+<ol>
+	<li>Zaznacz folder udostępniony, kt&oacute;rego zrzuty obrazu mają być edytowane.</li>
+	<li>Kliknij pozycję <strong>Lista zrzut&oacute;w obrazu</strong>.</li>
+	<li>Zaznacz zrzut obrazu, kt&oacute;rego zawartość ma być edytowana, i&nbsp;kliknij przycisk <strong>Edytuj</strong>.</li>
+	<li>Można zmienić opis zrzutu obrazu wprowadzony w&nbsp;polu <strong>Opis</strong> oraz zaznaczyć pole wyboru <strong>Zablokuj</strong> lub usunąć jego zaznaczenie, aby określić, czy do zrzutu obrazu będą stosowane ustawienia przechowywania po uruchomieniu automatycznego usuwania.</li>
+	<li>Kliknij przycisk <strong>OK</strong>, aby zapisać ustawienia.</li>
+</ol>
+
+<h4>Aby skonfigurować zaplanowane zrzuty obrazu:</h4>
+<p>Po skonfigurowaniu zaplanowanych zrzut&oacute;w obrazu narzędzie Menedżer ochrony danych będzie automatycznie robić zrzuty obrazu o&nbsp;wstępnie określonej godzinie i&nbsp;ze zdefiniowaną częstotliwością.</p>
+<ol>
+	<li>Wybierz folder udostępniony.</li>
+	<li>Kliknij przycisk <strong>Ustaw harmonogram</strong>.</li>
+	<li>Na karcie <strong>Harmonogram</strong> zaznacz pole wyboru <strong>Włącz harmonogram zrzut&oacute;w obrazu</strong> oraz skonfiguruj godzinę i&nbsp;częstotliwość robienia zrzut&oacute;w obrazu. Aby anulować zaplanowane zrzuty obrazu tego folderu udostępnionego, usuń zaznaczenie jego pola wyboru.</li>
+  <li>Kliknij przycisk <strong>OK</strong>, aby zapisać ustawienia.</li>
+  <li>Zostanie wyświetlony monit o&nbsp;potwierdzenie. Kliknij przycisk <strong>OK</strong>, aby potwierdzić konfigurację.</li>
+</ol>
+
+<div class="section"><h4>Uwaga:</h4>
+	<ul>
+	  <li>Konfiguracja zaplanowanych zrzut&oacute;w obrazu nie jest uwzględniana przez funkcję <strong>Panel sterowania</strong> &gt; <strong>Aktualizacja i przywracanie</strong> &gt; <strong>Kopia zapasowa konfiguracji</strong>.</li>
+	</ul>
+</div>
+
+<h4>Aby skonfigurować ustawienia przechowywania zaplanowanych zrzut&oacute;w obrazu:</h4>
+<ol>
+<li>Wybierz folder udostępniony.</li>
+<li>Kliknij przycisk <strong>Ustaw harmonogram</strong>.</li>
+<li>Przejdź do karty <strong>Przechowywanie</strong>.</li>
+<li>Skonfiguruj ustawienia przechowywania. Wybierz dowolną z następujących opcji:<ul>
+		<li><strong>Usuń stare zrzuty obrazu po osiągnięciu limitu:</strong> po osiągnięciu maksymalnej liczby zrzut&oacute;w obrazu najstarsze zrzuty obrazu będą zastępowane najnowszymi.</li>
+		<li><strong>Zawsze przechowuj zrzuty obrazu:</strong> po osiągnięciu maksymalnej liczby zrzut&oacute;w obrazu narzędzie Menedżer ochrony danych zatrzyma robienie nowych zrzut&oacute;w obrazu bez usuwania już zrobionych.</li>
+		<li><strong>Przechowuj zrzuty obrazu, używając następujących zasad:</strong> można samodzielnie definiować reguły przechowywania dla konkretnych zakres&oacute;w czasu. Więcej informacji można znaleźć w&nbsp;uwadze <a href="#smart_retention">Zasady przechowywania</a>.</li>
+	</ul>
+</li>
+<li>Kliknij przycisk <strong>OK</strong>, aby zapisać ustawienia.</li>
+</ol>
+
+
+<h3>iSCSI LUN</h3>
+
+<h4>Aby zrobić zrzut obrazu jednostki iSCSI LUN:</h4>
+<ol>
+<li>Zaznacz jednostkę iSCSI LUN, dla kt&oacute;rej ma być zrobiony zrzut obrazu.</li>
+<li>Kliknij przycisk <strong>Zr&oacute;b zrzut obrazu</strong>.</li>
+<li>W&nbsp;polu <strong>Opis</strong> wprowadź opis dotyczący wykonywanego zrzutu obrazu.</li>
+<li>Z&nbsp;listy <strong>Zablokuj</strong> wybierz pozycję <strong>Tak</strong>/<strong>Nie</strong>, aby określić, czy do zrzutu obrazu będą stosowane ustawienia przechowywania po uruchomieniu automatycznego usuwania.</li>
+<li>Kliknij przycisk <strong>OK</strong>, aby zrobić zrzut obrazu.</li>
+</ol>
+
+<h4>Aby usunąć zrzut obrazu jednostki iSCSI LUN:</h4>
+<ol>
+<li>Zaznacz jednostkę iSCSI LUN, kt&oacute;rej zrzuty obrazu mają być usunięte.</li>
+<li>Kliknij pozycję <strong>Lista zrzut&oacute;w obrazu</strong>.</li>
+<li>Zaznacz co najmniej jeden zrzut obrazu, kt&oacute;ry ma być usunięty, i&nbsp;kliknij przycisk <strong>Usuń</strong>. (Naciśnij klawisz Shift lub Ctrl i przytrzymaj go, aby wybrać więcej element&oacute;w).</li>
+<li>Zostanie wyświetlony monit o&nbsp;potwierdzenie. Kliknij przycisk <strong>Tak</strong>, aby potwierdzić usunięcie.</li>
+</ol>
+
+<h4>Aby edytować zrzut obrazu jednostki iSCSI LUN:</h4>
+<ol>
+<li>Zaznacz jednostkę iSCSI LUN, kt&oacute;rej zrzuty obrazu mają być edytowane.</li>
+<li>Kliknij pozycję <strong>Lista zrzut&oacute;w obrazu</strong>.</li>
+<li>Zaznacz zrzut obrazu, kt&oacute;rego zawartość ma być edytowana, i&nbsp;kliknij przycisk <strong>Edytuj</strong>.</li>
+<li>Wykonaj jedną z następujących czynności, aby edytować zrzut obrazu:<ul>
+	  <li>W&nbsp;polu <strong>Opis</strong> zmień opis zrzutu obrazu.</li>
+	  <li>Wybierz <strong>Stan sp&oacute;jności</strong>, jeżeli włączono funkcję zrzut&oacute;w obrazu <a href="#app-consistent">sp&oacute;jnych z&nbsp;aplikacjami</a>.</li>
+	  <li>Z&nbsp;listy <strong>Zablokuj</strong> wybierz pozycję <strong>Tak</strong> lub <strong>Nie</strong>, aby określić, czy do zrzutu obrazu będą stosowane ustawienia przechowywania po uruchomieniu automatycznego usuwania.</li>
+	</ul>
+</li>
+<li>Kliknij przycisk <strong>OK</strong>, aby zapisać ustawienia.</li>
+</ol>
+
+<h4>Aby skonfigurować zaplanowane zrzuty obrazu:</h4>
+<p>Po skonfigurowaniu zaplanowanych zrzut&oacute;w obrazu narzędzie Menedżer ochrony danych będzie automatycznie robić zrzuty obrazu o&nbsp;wstępnie określonej godzinie i&nbsp;ze zdefiniowaną częstotliwością.</p>
+<ol>
+	<li>Wybierz jednostkę iSCSI LUN.</li>
+	<li>Kliknij przycisk <strong>Ustaw harmonogram</strong>.</li>
+	<li>Na karcie <strong>Harmonogram</strong> zaznacz pole wyboru <strong>Włącz harmonogram zrzut&oacute;w obrazu</strong> oraz skonfiguruj godzinę i&nbsp;częstotliwość robienia zrzut&oacute;w obrazu. Aby anulować zaplanowane zrzuty obrazu tego folderu udostępnionego, usuń zaznaczenie jego pola wyboru.</li>
+  <li>Kliknij przycisk <strong>OK</strong>, aby zapisać ustawienia.</li>
+</ol>
+
+<h4>Aby skonfigurować ustawienia przechowywania zaplanowanych zrzut&oacute;w obrazu:</h4>
+<ol>
+<li>Wybierz jednostkę iSCSI LUN.</li>
+<li>Kliknij przycisk <strong>Ustaw harmonogram</strong>.</li>
+<li>Przejdź do karty <strong>Przechowywanie</strong>.</li>
+<li>Skonfiguruj ustawienia przechowywania. Wybierz dowolną z następujących opcji:<ul>
+		<li><strong>Usuń stare zrzuty obrazu po osiągnięciu limitu:</strong> po osiągnięciu maksymalnej liczby zrzut&oacute;w obrazu najstarsze zrzuty obrazu będą zastępowane najnowszymi.</li>
+		<li><strong>Zawsze przechowuj zrzuty obrazu:</strong> po osiągnięciu maksymalnej liczby zrzut&oacute;w obrazu narzędzie Menedżer ochrony danych zatrzyma robienie nowych zrzut&oacute;w obrazu bez usuwania już zrobionych.</li>
+		<li><strong>Przechowuj zrzuty obrazu, używając następujących zasad:</strong> można samodzielnie definiować reguły przechowywania dla konkretnych zakres&oacute;w czasu. Więcej informacji można znaleźć w&nbsp;uwadze <a href="#smart_retention">Zasady przechowywania</a>.</li>
+	</ul>
+</li>
+<li>Kliknij przycisk <strong>OK</strong>, aby zapisać ustawienia.</li>
+<li>Zostanie wyświetlony monit o&nbsp;potwierdzenie. Ponownie kliknij przycisk <strong>OK</strong>, aby potwierdzić konfigurację.</li>
+</ol>
+
+<h4>Aby zdefiniować stan sp&oacute;jności jednostki iSCSI LUN:</h4>
+<ol>
+<li>Wybierz jednostkę iSCSI LUN.</li>
+<li>Kliknij przycisk <strong>Ustaw harmonogram</strong>.</li>
+<li>Przejdź do karty <strong>Aplikacja</strong>.</li>
+<li>Zaznacz pole wyboru <strong>Włącz zrzuty obrazu sp&oacute;jne z aplikacją</strong> lub usuń jego zaznaczenie, aby przełączyć między następującymi stanami sp&oacute;jności:<ul>
+<li><a name="app-consistent"></a><strong>Sp&oacute;jne z aplikacjami</strong>: zrzuty obrazu z&nbsp;tym stanem sp&oacute;jności można tworzyć wyłącznie przy użyciu programu Synology Snapshot Manager zainstalowanego na serwerze Windows lub VMware vCenter Server (w zależności od środowiska operacyjnego komunikującego się z systemem DSM). Po uruchomieniu procesu tworzenia zrzutu obrazu sp&oacute;jnego z aplikacjami w systemie DSM zostanie przesłane odpowiednie powiadomienie do aplikacji o tym, aby wszystkie dane z pamięci zostały zapisane w jednostce LUN, z kt&oacute;rej ma być utworzony zrzut obrazu. Zapewni to sp&oacute;jność danych.<div class="section"><h4>Uwaga:</h4>
+		<ul><li>Jeżeli w&nbsp;systemie operacyjnym nie zainstalowano narzędzia Synology Snapshot Manager, zrzuty obrazu sp&oacute;jne z&nbsp;aplikacjami będą wyłączone, nawet jeżeli pole wyboru jest zaznaczone.</li></ul>
+	</div>
+</li>
+<li><strong>Sp&oacute;jne przy awarii</strong>: jeżeli narzędzie Synology Snapshot Manager nie jest zainstalowane na żadnym z&nbsp;klient&oacute;w, można tworzyć wyłącznie zrzuty obrazu jednostek LUN zachowujące sp&oacute;jność przy awarii. Po przesłaniu sygnału uruchamiającego wykonanie takiego zrzutu obrazu aplikacje nie otrzymają powiadomienia o konieczności zapisania stanu pamięci w jednostce LUN. Może to spowodować niesp&oacute;jność danych.</li>
+</ul>
+</li>
+<li>Kliknij przycisk <strong>OK</strong>, aby zapisać ustawienia.</li>
+</ol>
+
+<p>____<br/><div class="section">
+  <h4><a name="smart_retention"></a>Strategia przechowywania</h4>
+  <p>Ta opcja zapewnia doskonałe rozwiązanie ułatwiające określanie maksymalnej liczby wersji zrzut&oacute;w obrazu, co pozwoli oszczędzać miejsce, ale może to wiązać się z&nbsp;koniecznością przechowywania zrzut&oacute;w obrazu przez dłuższy okres.</p>
+  <p>Firma Synology wykorzystuje zasady przechowywania GFS (Grandfather-Father-Son). Można skonfigurować maksymalną liczbę wersji zrzut&oacute;w obrazu dla następujących zakres&oacute;w czasu: <strong>godzinny</strong>, <strong>dzienny</strong>, <strong>tygodniowy</strong>, <strong>miesięczny</strong> i&nbsp;<strong>roczny</strong>.</p>
+</div>
+</p>
+
+</body>
+</html>

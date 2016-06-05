@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Split brain</h2>
+
+<p>Pokud cluster high-availability funguje spr&aacute;vně, může &uacute;lohu aktivn&iacute;ho serveru plnit pouze jeden ze člensk&yacute;ch serverů. V&nbsp;takov&eacute;m př&iacute;padě detekuje pasivn&iacute; server př&iacute;tomnost aktivn&iacute;ho serveru pomoc&iacute; připojen&iacute; prezenčn&iacute;ho sign&aacute;lu a&nbsp;datov&eacute;ho připojen&iacute;.</p>
+
+<p>Pokud dojde k&nbsp;přeru&scaron;en&iacute; v&scaron;ech připojen&iacute; prezenčn&iacute;ho sign&aacute;lu a&nbsp;dat, pokus&iacute; se funkci aktivn&iacute;ho serveru převz&iacute;t oba servery. Tato situace se označuje jako chyba &bdquo;split brain&ldquo;. V&nbsp;tomto př&iacute;padě budou připojen&iacute; k&nbsp;IP&nbsp;adrese clusteru high-availability přesměrov&aacute;na na někter&yacute; ze dvou serverů, což může způsobovat chyby služeb.</p>
+        
+<h4>V&nbsp;př&iacute;padě v&yacute;skytu chyby split brain:</h4>
+	<ol>
+		<li>Připojen&iacute; k&nbsp;IP&nbsp;adrese clusteru budou přesměrov&aacute;na na jeden ze serverů a&nbsp;dojde k&nbsp;chyb&aacute;m služeb. Během připojen&iacute; k&nbsp;jednomu ze serverů bude doch&aacute;zet k&nbsp;probl&eacute;mům.</li>
+		<li>Syst&eacute;m zaznamen&aacute; chybu split brain, odebere cluster high-availability a&nbsp;odpoj&iacute; oba servery.</li>
+		<li>Pot&eacute; co bude stav obou serverů změněn na hodnotu <b>Samostatn&yacute;</b>, můžete se přihl&aacute;sit do syst&eacute;mu DiskStation Manager (DSM). V&nbsp;tomto momentě nebudou data shrom&aacute;žděn&aacute; před odebr&aacute;n&iacute;m clusteru high-availability na ž&aacute;dn&eacute;m ze serverů odstraněna. Po ukončen&iacute; identifikace serveru obsahuj&iacute;c&iacute;ho nejaktu&aacute;lněj&scaron;&iacute; data, můžete servery znovu připojit a&nbsp;opětovně vytvořit cluster high-availability.</li>
+	</ol>
+ </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TFTP/PXE</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>TFTP/PXE</h2>
+
+<p>Met de opties in <strong>Configuratiescherm</strong> > <strong>Bestandsservices</strong> > <strong>TFTP/PXE</strong> kunt u de TFTP- en PXE-instellingen configureren.</p>
+
+<h3>TFTP</h3>
+<p>TFTP (Trivial File Transfer Protocol) is een eenvoudig protocol voor bestandsoverdracht dat doorgaans wordt gebruikt voor de overdracht van configuratie- of opstartbestanden in situaties waar verificatie niet is vereist. Door de TFTP-service in te schakelen, kan DiskStation opstartladers overdragen aan clientapparaten.</p>
+<h4>Om TFTP-instellingen te wijzigen:</h4>
+<ol>
+<li>Schakel het selectievakje <strong>TFTP-service inschakelen</strong> in.</li>
+<li>Geef in het veld <strong>TFTP-hoofdmap</strong> op welke map van DiskStation toegankelijk is voor TFTP-clients.</li>
+<li>Klik op de knop <strong>Geavanceerde instellingen</strong> om de volgende instellingen te bekijken en te wijzigen:</li>
+<ul>
+<li><strong>Logboek van TFTP-bestandsoverdracht inschakelen:</strong> met deze optie kunt u de via TFTP overgedragen gegevens bijhouden.</li>
+<li><strong>TFTP-clienttoestemming:</strong> selecteer de lees- en schrijfmachtigingen voor TFTP-clients. Wanneer <strong>Alleen lezen</strong> is geselecteerd, kunnen TFTP-clients enkel inhoud op de basismap bekijken. Wanneer <strong>Beschrijfbaar</strong> is geselecteerd, kunnen TFTP-clients de inhoud op de basismap wijzigen.</li>
+<li><strong>Geautoriseerde clients:</strong> kies welke clients een verbinding mogen maken via TFTP. U kunt alle clients toestaan om een verbinding te maken door <strong>Alle verbindingen</strong> te selecteren. U kunt echter ook vastleggen welke clients een verbinding kunnen maken door een bereik van IP-adressen op te geven.</li>
+</ul>
+<li>Klik op <strong>Toepassen</strong> om de instellingen te wijzigen.</li>
+</ol>
+
+
+<h3>DHCP-service voor PXE instellen met uw DiskStation</h3>
+<p>Naast TFTP biedt DiskStation ook de DHCP-service ten behoeve van een all-in-one PXE-installatie. Pre-boot Execution Environment (PXE) is een netwerkomgeving waarmee clientapparaten via een netwerkinterface kunnen worden opgestart in plaats van gegevensopslagapparaten (bv. harde schijven). Door PXE te implementeren, kan een boot loader-bestand op DiskStation worden opgeslagen en kunnen clientapparaten opstarten over het netwerk.</p>
+
+<p>Om DHCP-services met uw DiskStation aan te bieden, moet het DHCP Server-pakket van Synology geïnstalleerd zijn.</p>
+
+<h4>Om DHCP-service voor PXE in te stellen:</h4>
+<ol>
+<li>schakel het selectievakje <strong>DHCP-service op deze server voor PXE instellen</strong> in. Als het DHCP Server-pakket nog niet op uw DiskStation is geïnstalleerd, zal u worden gevraagd om het pakket te installeren.</li>
+<li>Selecteer een opstartladerbestand uit de TFTP-basismap en geef andere DHCP-gerelateerde instellingen op.</li>
+<li>Klik op <strong>Toepassen</strong> om de instellingen op te slaan.</li>
+</ol>
+</body>
+</html>

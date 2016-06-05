@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Ögonblicksbilder</h2>
+	<p>Den här sidan låter dig ta, radera och redigera ögonblicksbilder, såväl som att konfigurera schema för ögonblicksbilder och bevarande.</p>
+    <p>Du kan lagra upp till 256 kopior av ögonblicksbilder på en gång för varje delad mapp eller iSCSI LUN. Ögonblicksbilder minimerar diskförbrukning genom att bibehålla individuella block hellre än hela filer. Extra utrymme kan eventuellt förbrukas när filerna i delade mappar eller bock i iSCSI LUNs är uppdaterade eller raderade.</p>
+
+<h3>Delad mapp</h3>
+<h4>För att ta en ögonblicksbild för en delad mapp:</h4>
+<ol>
+  <li>Välj den delade mappen som du vill ta en ögonblicksbild av.</li>
+	<li>Klicka på <strong>Ta en ögonblicksbild</strong>.</li>
+	<li>Ange en beskrivning i <strong>Beskrivning</strong> för den ögonblicksbild som ska tas.</li>
+	<li>Markera/avmarkera kryssrutan <strong>Lås</strong> för att avgöra om ögonblicksbilden ignorerar inställningarna för bevarande när automatisk borttagning är på väg att bli utlöst.</li>
+  <li>Klicka på <strong>OK</strong> för att börja ta en ögonblicksbild.</li>
+</ol>
+
+<div class="section"><h4>Obs:</h4>
+<ul><li>Bland inställningarna på sidan <strong>Kontrollpanel</strong> > <strong>Delad mapp</strong> > <strong>Redigera</strong> blir endast behörigheterna för Windows ACL inspelade i en ögonblicksbild.</li></ul>
+</div>
+
+<h4>Att bläddra bland ögonblicksbilder i delade mappar:</h4>
+<ol>
+  <li>Välj en delad mapp som du vill bläddra bland ögonblicksbilderna i.</li>
+	<li>Klicka på <strong>Ögonblicksbildlista</strong>.</li>
+  <li>Välj en ögonblicksbild som du vill bläddra och klicka på <strong>Bläddra</strong>.</li>
+</ol>
+
+<div class="section"><h4>Obs:</h4>
+	<ul>
+		<li><strong>Bläddra</strong> bland ögonblicksbilder är inte tillgängligt för krypterade delade mappar-</li>
+		<li>Om du inte kan bläddra ögonblicksbilden, vänligen gå till <strong>Kontrollpanel</strong> > <strong>Delad mapp</strong> > <strong>Redigera</strong> för att aktivera <strong>Göra snapshots synliga</strong>.</li>
+	</ul>
+</div>
+
+<h4>Att ta bort ögonblicksbilder i delade mappar:</h4>
+<ol>
+	<li>Välj den delade mappen som du vill ta bort ögonblicksbilderna i.</li>
+	<li>Klicka på <strong>Ögonblicksbildlista</strong>.</li>
+	<li>Välj en eller flera ögonblicksbilder som du vill ta bort och klicka på <strong>Ta bort</strong>. (Tryck och håll nere skift eller ctrl medan du gör flera val.)</li>
+	<li>Du kommer att se ett bekräftelsemeddelande. Klicka på <strong>Radera</strong> för att bekräfta borttagningen.</li>
+</ol>
+
+<h4>Att redigera ögonblicksbilder i delade mappar:</h4>
+<ol>
+	<li>Välj den delade mappen som du vill redigera ögonblicksbilderna i.</li>
+	<li>Klicka på <strong>Ögonblicksbildlista</strong>.</li>
+	<li>Välj en ögonblicksbild du vill redigera och klicka på <strong>Redigera</strong>.</li>
+	<li>Du kan ändra beskrivningen av ögonblicksbilden i <strong>Beskrivning</strong> och markera/avmarkera kryssrutan <strong>Lås</strong> för att avgöra om ögonblicksbilden ignorerar inställningarna för bevarande när automatisk borttagning är på väg att bli utlöst.</li>
+	<li>Klicka på <strong>OK</strong> för att spara dina inställningar.</li>
+</ol>
+
+<h4>Att konfigurera schemalagda ögonblicksbilder:</h4>
+<p>Med schemalagda ögonblicksbilder tar Dataskydd-hanterare tar automatiskt ögonblicksbilder vid den förutbestämda tiden och frekvensen och kommer därför att lätta på din arbetsbörda med att ta ögonblicksbilder manuellt.</p>
+<ol>
+	<li>Välj en delad mapp.</li>
+	<li>Klicka på <strong>Lägg till schema</strong>.</li>
+	<li>I fliken <strong>Schema</strong>, markera kryssrutan <strong>Aktivera schema för ögonblicksbilder</strong> och ställ in tid och frekvens för att ta ögonblicksbilder. För att avbryta schemalagda ögonblicksbilder för den här delade mappen, vänligen avmarkera kryssrutan.</li>
+  <li>Klicka på <strong>OK</strong> för att spara dina inställningar.</li>
+  <li>Du kommer att se ett bekräftelsemeddelande. Klicka på <strong>OK</strong> för att bekräfta konfigurationen.</li>
+</ol>
+
+<div class="section"><h4>Obs:</h4>
+	<ul>
+	  <li>Konfiguration av schemalagda ögonblicksbilder inkluderas inte funktionen i <strong>Kontrollpanel</strong> > <strong>Uppdatera & Återställa</strong> > <strong>Säkerhetskopiering av konfiguration</strong>.</li>
+	</ul>
+</div>
+
+<h4>För att konfigurera inställningarna för bevarande i de schemalagda ögonblicksbilderna:</h4>
+<ol>
+<li>Välj en delad mapp.</li>
+<li>Klicka på <strong>Lägg till schema</strong>.</li>
+<li>Välj fliken <strong>Bevarande</strong>.</li>
+<li>Konfigurera dina inställningar för bevarande. Välj något av följande alternativ:
+	<ul>
+		<li><strong>Ta bort ögonblicksbilder när gränsen är uppnådd:</strong> När det maximala antalet ögonblicksbilder är uppnått blir de äldsta ögonblicksbilderna överskrivna av de som nyligen tagits.</li>
+		<li><strong>Bevara alltid ögonblicksbilder</strong> När det maximala antalet ögonblicksbilder har uppnåtts slutar Dataskydd-hanterare ta nya ögonblicksbilder utan att ta bort dem som redan tagits.</li>
+		<li><strong>Behåll ögonblicksbilder med den följande policy:</strong> Du kan konfigurera regler för bevarande för specificerade tidsintervaller. För mer information, vänligen se noteringen om <a href="#smart_retention">Bevarandeprincip</a>.</li>
+	</ul>
+</li>
+<li>Klicka på <strong>OK</strong> för att spara dina inställningar.</li>
+</ol>
+
+
+<h3>iSCSI LUN</h3>
+
+<h4>För att ta en ögonblicksbild för en iSCSI LUN:</h4>
+<ol>
+<li>Välj den iSCSI LUN som du vill ta en ögonblicksbild av.</li>
+<li>Klicka på <strong>Ta en ögonblicksbild</strong>.</li>
+<li>Ange en beskrivning i <strong>Beskrivning</strong> för den ögonblicksbild som ska tas.</li>
+<li>Från rullgardinslistan <strong>Lås</strong>, välj <strong>Ja</strong>/<strong>Nej</strong> för att avgöra om ögonblicksbilden ignorerar inställningarna för bevarande när automatisk borttagning är på väg att bli utlöst.</li>
+<li>Klicka på <strong>OK</strong> för att börja ta en ögonblicksbild.</li>
+</ol>
+
+<h4>För att ta bort en ögonblicksbild för en iSCSI LUN:</h4>
+<ol>
+<li>Välj den iSCSI LUN som du vill ta bort ögonblicksbilden för.</li>
+<li>Klicka på <strong>Ögonblicksbildlista</strong>.</li>
+<li>Välj en eller flera ögonblicksbilder som du vill ta bort och klicka på <strong>Ta bort</strong>. (Tryck och håll nere skift eller ctrl medan du gör flera val.)</li>
+<li>Du kommer att se ett bekräftelsemeddelande. Klicka på <strong>Ja</strong> för att bekräfta borttagningen.</li>
+</ol>
+
+<h4>För att redigera en ögonblicksbild för en iSCSI LUN:</h4>
+<ol>
+<li>Välj den iSCSI LUN som du vill redigera ögonblicksbilden för.</li>
+<li>Klicka på <strong>Ögonblicksbildlista</strong>.</li>
+<li>Välj en ögonblicksbild du vill redigera och klicka på <strong>Redigera</strong>.</li>
+<li>Du kan göra något av följande för att redigera ögonblicksbilden:
+	<ul>
+	  <li>Ändra beskrivningen för ögonblicksbilden i <strong>Beskrivning</strong>.</li>
+	  <li>Välj <strong>Konsekvent tillstånd</strong> om <a href="#app-consistent">applikationskonsekventa</a> ögonblicksbilder är aktiverat.</li>
+	  <li>Växla mellan <strong>Ja</strong>/<strong>Nej</strong> i rullgardinslistan <strong>Lås</strong> för att avgöra om ögonblicksbilden ignorerar inställningarna för bevarande när automatisk borttagning är på väg att bli utlöst.</li>
+	</ul>
+</li>
+<li>Klicka på <strong>OK</strong> för att spara dina inställningar.</li>
+</ol>
+
+<h4>Att konfigurera schemalagda ögonblicksbilder:</h4>
+<p>Med schemalagda ögonblicksbilder tar Dataskydd-hanterare tar automatiskt ögonblicksbilder vid den förutbestämda tiden och frekvensen och kommer därför att lätta på din arbetsbörda med att ta ögonblicksbilder manuellt.</p>
+<ol>
+	<li>Välj en iSCSI LUN.</li>
+	<li>Klicka på <strong>Lägg till schema</strong>.</li>
+	<li>I fliken <strong>Schema</strong>, markera kryssrutan <strong>Aktivera schema för ögonblicksbilder</strong> och ställ in tid och frekvens för att ta ögonblicksbilder. För att avbryta schemalagda ögonblicksbilder för den här delade mappen, vänligen avmarkera kryssrutan.</li>
+  <li>Klicka på <strong>OK</strong> för att spara dina inställningar.</li>
+</ol>
+
+<h4>För att konfigurera inställningarna för bevarande i de schemalagda ögonblicksbilderna:</h4>
+<ol>
+<li>Välj en iSCSI LUN.</li>
+<li>Klicka på <strong>Lägg till schema</strong>.</li>
+<li>Välj fliken <strong>Bevarande</strong>.</li>
+<li>Konfigurera dina inställningar för bevarande. Välj något av följande alternativ:
+	<ul>
+		<li><strong>Ta bort ögonblicksbilder när gränsen är uppnådd:</strong> När det maximala antalet ögonblicksbilder är uppnått blir de äldsta ögonblicksbilderna överskrivna av de som nyligen tagits.</li>
+		<li><strong>Bevara alltid ögonblicksbilder</strong> När det maximala antalet ögonblicksbilder har uppnåtts slutar Dataskydd-hanterare ta nya ögonblicksbilder utan att ta bort dem som redan tagits.</li>
+		<li><strong>Behåll ögonblicksbilder med den följande policy:</strong> Du kan konfigurera regler för bevarande för specificerade tidsintervaller. För mer information, vänligen se noteringen om <a href="#smart_retention">Bevarandeprincip</a>.</li>
+	</ul>
+</li>
+<li>Klicka på <strong>OK</strong> för att spara dina inställningar.</li>
+<li>Du kommer att se ett bekräftelsemeddelande. Klicka på <strong>OK</strong> igen för att bekräfta konfigurationen.</li>
+</ol>
+
+<h4>För att konfigurera konsekvent tillstånd för dina iSCSI LUN-ögonblicksbilder:</h4>
+<ol>
+<li>Välj en iSCSI LUN.</li>
+<li>Klicka på <strong>Lägg till schema</strong>.</li>
+<li>Välj fliken <strong>Applikation</strong>.</li>
+<li>Markera/avmarkera kryssrutan <strong>Aktivera applikationskonsekventa ögonblicksbilder</strong> för att växla mellan följande typer av konsekventa tillstånd:
+  <ul>
+<li><a name="app-consistent"></a><strong>Applikationskonsekvent</strong>: Ögonblicksbilder i det här konsekventa tillståndet kan bara tas när Synology Snapshot Manager är installerad på din Windows-server eller VMware vCenter Server, beroende på din driftsmiljö för att kommunicera med DSM. När en applikationskonsekventa ögonblicksbilder utlöses på DSM kommer applikationerna att meddelas och rensa alla data från minnet på de LUNs för vilka en ögonblicksbild ska tas, på så sätt garanteras dataöverensstämmelse.
+	<div class="section"><h4>Obs:</h4>
+		<ul><li>Om Synology Snapshot Manager inte har installerats på din driftsmiljö förblir applikationskonsekventa ögonblicksbilder inaktiverade även om kryssrutan är markerad.</li></ul>
+	</div>
+</li>
+<li><strong>Crash consistent (Kraschkonsekvent)</strong>: Om Synology Snapshot Manager inte är installerad på någon av dina klienter kan du endast fånga kraschkonsekventa ögonblicksbilder av LUNs. När kraschkonsekventa ögonblicksbilder utlöses kommer applikationerna inte att meddelas om att rensa data från minnet till LUNs och följaktligen finns inte någon möjlighet att garantera dataöverensstämmelse.</li>
+</ul>
+</li>
+<li>Klicka på <strong>OK</strong> för att spara dina inställningar.</li>
+</ol>
+
+<p>____<br/>
+<div class="section">
+  <h4><a name="smart_retention"></a>Bevarandeprincip</h4>
+  <p>Det här alternativet tillhandahåller en idealisk lösning för att hjälpa dig att specificera det maximala antalet versioner av ögonblicksbilder att spara till ditt volymutrymme men du kan behöva bibehålla dina ögonblicksbilder för en längre tidsperiod.</p>
+  <p>Synology använder bevarandeprinicipen GFS dvs. Grandfather-Father-Son. Du kan konfigurera det maximala antalet versioner av ögonblicksbilder som ska bevaras för följande tidsintervaller respektive: <strong>varje timme</strong>, <strong>varje dag</strong>, <strong>varje vecka</strong>, <strong>varje månad</strong> och <strong>varje år</strong>.</p>
+  <p>Dataskydd-hanterare bevarar så många som det konfigurerade maximala antalet ögonblicksbilder för varje tidsintervall. Om fler än en version av ögonblicksbild finns inom en tidsintervall behålls endast den tidigaste. Till exempel, om du ställer in en policy för 10 <strong>veckovisa ögonblicksbilder</strong> behåller Dataskydd-hanterare tidigaste ögonblicksbilden (om fler än en ögonblicksbild tas på en vecka) för varje av de senaste 10 veckorna.</p>
+  <p>Dessutom behålls alla versioner av ögonblicksbilder inom en timme efter den senaste ögonblicksbilden som standard, för din bekvämlighet att hitta och återställa från tidigare versioner av ögonblicksbilder. Du kan också låsa en ögonblicksbild för att förhindra att den automatiskt tas bort av regler för bevarande.</p>
+</div>
+</p>
+
+</body>
+</html>

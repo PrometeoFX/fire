@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Ustawienia DSM</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="https"></a>Ustawienia DSM</h2>
+
+<p>Po przejściu do strony <strong>Panel sterowania</strong> > <strong>Sieć</strong> > <strong>Ustawienia DSM</strong> można zmienić numer portu, którego używają klienci w celu uzyskania dostępu do DSM. Kiedy obsługa połączeń HTTPS jest włączona, połączenia są szyfrowane przy użyciu mechanizmu SSL/TLS.</p>
+
+<h4>Aby zmienić domyślny numer portu:</h4>
+<ol>
+<li>Wprowadź numer portu w polu <b>HTTP</b> lub <b>HTTPS</b>.</li>
+<li>Kliknij przycisk <b>Zastosuj</b>.</li>
+</ol>
+
+<h4>Aby włączyć połączenia HTTPS:</h4>
+<ol>
+<li>
+Zaznacz pole wyboru <b>Włącz połączenie HTTPS</b>.
+</li>
+<li>Jeżeli chcesz przekierowywać klientów na port HTTPS (5001), kiedy próbują uzyskać dostęp do DSM za pośrednictwem portu HTTP (5000), zaznacz pole wyboru <b>Automatycznie przekieruj połączenia HTTP na HTTPS</b>.</li>
+<li>
+Kliknij przycisk <b>Zastosuj</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Porty używane do połączenia HTTPS:</h4>
+<ul>
+  <li><b>DSM</b>: Domyślny numer portu to 5001, dlatego można bezpiecznie uzyskać dostęp do systemu DSM, wprowadzając następujący adres: https://nazwa hosta-serwera:5001/</li>
+<li><b>Web Station i Photo Station</b>: Domyślny numer portu to 443, dlatego można bezpiecznie uzyskać dostęp do Web Station i Photo Station, wprowadzając następujący adres: https://nazwa_hosta-serwera/</li>
+</ul>
+
+</div>
+
+<h4>Aby umożliwić wykrywanie serwera DiskStation przy użyciu funkcji odnajdowania sieci systemu Windows:</h4>
+<ol>
+<li>
+<b>Włącz odnajdowanie sieci systemu Windows</b>.
+</li>
+<li>
+Kliknij przycisk <b>Zastosuj</b>.
+</li>
+</ol>
+
+</body>
+</html>
+

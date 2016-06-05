@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Opciók</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_user"></a>Fiók</h2>
+
+<p>A Fiók fül opciókat biztosít az alapvető fiókbeállítások, például a leírás, jelszó, e-mail, és a 2-lépéses ellenőrzés szerkesztéséhez. E fül megtekintéséhez kattintson az emberforma ikonra az asztal jobb felső sarkában, és válassza az <strong>Opciók</strong> lehetőséget.</p>
+
+
+
+<h3>Fiókbeállítások módosítása</h3>
+
+<p>A következő fiókbeállítások szerkeszthetők:</p>
+<ul>
+<li><strong>Leírás:</strong> Adjon meg leírást a fiókjához. A felhasználói leírások legfeljebb 64 megjeleníthető Unicode karaktert tartalmazhatnak.</li>
+<li><strong>Jelszó :</strong> Ha meg szeretné változtatni fiókja jelszavát, adjon meg itt egy újat, majd erősítse meg azt az alábbi, <strong>Jelszó megerősítése</strong> mezőben. A jelszavak különbséget tesznek a kis- és nagybetűk között, és akár 127 megjeleníthető karaktert is tartalmazhatnak, köztük betűket, számokat, szimbólumokat, és szóközöket.</li>
+<li><strong>E-mail:</strong> Adjon meg egy e-mail címet (csak nem admin felhasználóknak).</li>
+<li><strong>Megjelenítés nyelve:</strong> Adja meg a fiókjához használandó megjelenítési nyelvet. A megjelenítési nyelv itt megadott beállításai prioritást élveznek a <b>Vezérlőpult</b> > <b>Területi beállítások</b> > <b>Nyelv</b> menüpontban megadott bármely beállítással szemben.</li>
+</ul>
+<p>A fiókbeállítások módosítása után kattintson az <b>OK</b> gombra a változtatások mentéséhez.</p>
+
+
+<h3>Kétlépéses ellenőrzés</h3>
+
+<p>A kétlépéses ellenőrzés nagyobb biztonságot nyújt a DSM-fiók számára. Ha engedélyezve van a kétlépéses ellenőrzés, akkor a DSM-be történő bejelentkezéskor egy egyszer használatos ellenőrző kódon kívül meg kell adnia a jelszavát is. Az ellenőrző kódok a mobil eszközére telepített hitelesítő alkalmazásoktól származnak. Ha tehát valaki hozzá akar férni az ön fiókjához, akkor nem csak az ön felhasználónevére és jelszavára lesz szüksége, hanem a mobil eszközére is.</p>
+
+<div class="section">
+<h4>Követelmények:</h4>
+<p>A kétlépéses ellenőrzéshez mobil eszközre és olyan hitelesítő alkalmazásra van szükség, ami támogatja az időalapú egyszer használatos jelszó-protokollt (TOTP). A hitelesítő alkalmazások közé tartozik a Google Authenticator (Android/iPhone/BlackBerry) vagy az Authenticator (Windows Phone).</p>
+</div>
+
+<h4>Kétlépéses ellenőrzés engedélyezése:</h4>
+
+<ol>
+<li>A kétlépéses ellenőrzés beállító varázsló elindításához menjen az <strong>Opciók</strong> > <strong>Fiók</strong> fülre, majd jelölje be a <strong>Kétlépéses ellenőrzés engedélyezése</strong> dobozt.</li>
+<li>Az első képernyőn adjon meg egy e-mail címet. Ha elveszíti mobil eszközét, erre az e-mail címre vészhelyzeti ellenőrző kódok küldhetők.</li>
+<li>Töltsön le és telepítsen egy hitelesítő alkalmazást, például a Google Authenticator (Android/iPhone/BlackBerry) vagy az Authenticator (Windows Phone) alkalmazást.</li>
+<li>A következő képernyőn nyissa meg a hitelesítő alkalmazását, és keresse meg a QR-kódot. Egy titkos kulcs manuális megadásához rákattinthat a linkre is.</li>
+<li>Ezek után a hitelesítő alkalmazás egy 6-jegyű ellenőrző kódot generál. A konfigurációk helyességének megerősítéséhez írja be ezt a kódot a varázsló szövegmezőjébe. Ha hiba történik, kérjük, győződjön meg róla, hogy a mobil eszköz rendszerideje szinkronizálva van a DSM rendszeridejével. Az ellenőrző kódok időnként frissítésre is kerülnek, így hát győződjön meg arról is, hogy a megadott kód még nem járt le.</li>
+<li>Ha a beállítás-varázsló végzett, a beállítások elmentéséhez kattintson az <strong>OK</strong> gombra.</li>
+</ol>
+
+
+
+<h4>Bejelentkezés a DSM-be kétlépéses ellenőrzéssel:</h4>
+
+<p>Ha a kétlépéses ellenőrzés engedélyezve van, akkor a DSM-be történő bejelentkezéskor felszólítják önt egy 6-jegyű ellenőrző kód megadására.</p>
+
+<ol>
+<li>A DSM bejelentkező képernyőn a megszokott módon adja meg felhasználónevét és jelszavát.</li>
+<li>Amikor ellenőrző kód megadására szólítják fel, nyissa meg a mobil eszközén található hitelesítő alkalmazást.</li>
+<li>Keresse meg és adja meg a fiókjához tartozó 6-jegyű ellenőrző kódot. Ha elveszíti mobil eszközét, rákattinthat az <b>Elveszett a telefon?</b> linkre, és vészhelyzeti kód kerül elküldésre az ön e-mail címére.</li>
+</ol>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<ul>
+<li><strong>SMTP-beállítások:</strong> Vészhelyzeti kódok e-mailen keresztüli fogadásához a <b>Vezérlőpult</b> > <b>Értesítés</b> menüpontban található SMTP kiszolgáló-beállításoknak megfelelően kell beállítva lenniük.</li>
+<li><strong>Vészhelyzeti kód határ:</strong> Minden egyes felhasználó maximum 5 vészhelyzeti kóddal rendelkezik. Ha túllépi ezt a határt, akkor további vészhelyzeti kódok fogadása előtt előbb le kell tiltania, majd újra engedélyeznie kell a kétlépéses ellenőrzést.</li>
+</ul>
+</div>
+
+
+<h4>A felhasználók kétlépéses ellenőrzési beállításainak alaphelyzetbe állítása:</h4>
+
+<p>Az <strong>administrators</strong> csoporthoz tartozó felhasználók alaphelyzetbe állíthatják más felhasználók kétlépéses ellenőrzési beállításait. 
+<ol>
+<li>Válassza a <strong>Vezérlőpult</strong> > <strong>Felhasználó</strong> opciót.</li>
+<li>Kattintson duplán arra a felhasználóra, akinek kétlépéses ellenőrzését alaphelyzetbe szeretné állítani.</li>
+<li>A <strong>Felhasználói információk</strong> fülön kattintson a <strong>Kétlépéses ellenőrzés visszaállítása</strong> gombra.</li>
+</ol>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<p>Ha nem elérhető egy, az <strong>administrators</strong> csoporthoz tartozó felhasználó, akkor a DSM-beállítások alaphelyzetbe állításához és a kétlépéses ellenőrzés letiltásához megnyomhatja a(z) DiskStation eszközön található fizikai reset gombot is.</p>
+</div>
+
+
+<h3>Fiókaktivitás</h3>
+<p>A fiókaktivitás a DSM fiók bejelentkezési aktivitását jelzi, például a pillanatnyi kapcsolatokat vagy a bejelentkezési előzményeket.</p>
+
+<h4>Fiókaktivitás ellenőrzése:</h4>
+<p>Kattintson a <strong>Fiókaktivitás</strong> gombra. Egy felbukkanó ablak a következő füleket jeleníti meg:
+
+<ul>
+<li><strong>Kapcsolódó felhasználók:</strong> Ez a fül az alábbi információkat mutatja:
+  <ul>
+<li><strong>Dátum és idő:</strong> A fiók hozzáférésének időpontja.</li>
+<li><strong>Ügyfél név és IP:</strong> A fiókhoz hozzáférő eszköz neve és IP-címe. Az ügyfél neve csak akkor jelenik meg, ha a fiókhoz CIFS protokollal fértek hozzá.</li>
+<li><strong>Szolgáltatás:</strong> A fiókhozzáféréshez használt protokoll.</li>
+<li><strong>Erőforrás:</strong> A fiók által felhasznált rendszer-erőforrások.</li>
+</ul></li>
+<li><strong>Bejelentkezési előzmények:</strong> Ez a fül a legutóbbi bejelentkezések adatait mutatja, valamint a következő információkat:
+<ul>
+<li><strong>Dátum és idő:</strong> A fiók hozzáférésének időpontja.</li>
+<li><strong>Esemény:</strong> Megmutatja a felhasználónevet és az IP-címet.</li>
+</ul>
+</li>
+</ul>
+
+
+</body>
+</html>

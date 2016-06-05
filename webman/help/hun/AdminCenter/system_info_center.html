@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Információs központ</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h1>Információs központ</h1>
+<p>Az Információs központ a(z) DiskStation különböző aspektusaira vonatkozó alapvető információkat jelenít meg, például hardver-specifikációkat, hálózatot, tárolást, és szolgáltatásokat. Az Információs központ a <strong>Vezérlőpult</strong> > <strong>Információs központ</strong> menüpontban található.</p>
+<h2><a name="general"></a>Általános</h2>
+<p>
+Az <b>Általános</b> fül megjeleníti a(z) DiskStation eszközre vonatkozó alapvető információkat, pl. sorozatszám, modellnév, fizikai memória mérete, DSM verzió, idő információ, hőmérsékleti állapot, illetve külső eszközök.</p>
+
+<h3 class="disable-eds14">Hőmérsékleti állapot*</h3>
+<p class="disable-eds14">A(z) DiskStation hőmérsékleti állapotát zöld vagy narancssárga fények jelzik:</p>
+
+<ul class="disable-eds14">
+<li><strong>Zöld:</strong> A hőmérsékleti állapot normális.</li>
+<li><strong>Narancssárga</strong>: A(z) DiskStation hőmérséklete túlságosan magas. Ha a(z) DiskStation hőmérséklete magas marad, akkor túlmelegedés miatt esetleg leállhat.</li>
+</ul>
+
+
+<h2><a name="network"></a>Hálózat</h2>
+<p>A <b>Hálózat</b> fül hálózati információkat jelenít meg, például DNS szerver, IP-cím, alhálózati maszk, és egyebek.</p>
+
+<h2><a name="storage"></a>Tároló</h2>
+<p class="disable-eds14">A <b>Tárolás</b> fül a kötetfelhasználásra és a merevlemez állapotára vonatkozó információkat jelenít meg.</p>
+<p class="enable-eds14">A <strong>Tároló</strong> fül a tárolófelhasználással és a külső tárolóeszközök állapotával kapcsolatos információkat jelenít meg.</p>
+
+<h3 class="disable-eds14">Merevlemez állapota</h3>
+
+<p class="disable-eds14">A következők egy belső merevlemez lehetséges állapottípusai:</p>
+
+<ul class="disable-eds14">
+<li><strong>Nincs lemez telepítve:</strong> A megfelelő bővítőhelyen nincs merevlemez telepítve.</li>
+<li><strong>Nincs inicializálva:</strong> A merevlemezen nincs partíció és kötet kialakítva.</li>
+<li><strong>Normál:</strong> A merevlemezen partíció és kötet áll rendelkezésre.</li>
+<li><strong>Inicializálás:</strong> Rendszerpartíciót kialakítottak, de kötetet nem hoztak létre.</li>
+<li><strong>A rendszerpartíció meghibásodott:</strong> Nem áll rendszerpartíció a merevlemezen rendelkezésre.</li>
+<li><strong>Tönkrement:</strong> Nem sikerült a merevlemezen lévő kötethez férés. Célszerű a merevlemez cseréje.</li>
+</ul>
+
+
+
+
+<div class="section disable-eds14">
+
+<h4>Megjegyzés:</h4>
+<p>A rendszer normális működése érdekében, legalább egy <b>Normál</b> vagy <b>Inicializált</b> állapotú lemeznek kell lennie.</p>
+
+</div>
+
+
+<h2><a name="service"></a>Szolgáltatás</h2>
+<p>
+  A <b>Szolgáltatás</b> fül a szolgáltatások és telepített csomagok listáját jeleníti meg, köztük az egyes szolgáltatások és csomagok engedélyezéséhez vagy letiltásához szükséges lehetőségeket. Egyes szolgáltatások és csomagok esetén ráadásul lehetőség van a csatlakoztathatóság tesztelésére, illetve annak megválasztására, hogy az egyes szolgáltatások vagy csomagok elérhetők legyenek-e a tűzfalon keresztül, vagy sem.
+</p>
+
+<h4>A szolgáltatások vagy csomagok beállításainak módosítása:</h4>
+<ol>
+<li>A következő lehetőségek állnak rendelkezésre:
+	<ul>
+	  <li><strong>Engedélyez:</strong> Engedélyezze vagy tiltsa le a szolgáltatásokat vagy csomagokat.</li>
+	  <li><strong>Tűzfalon át engedélyez:</strong> Adjon hozzá vagy távolítson el a szolgáltatás vagy alkalmazás által használt portokat a <strong>Vezérlőpult</strong> > <strong>Külső hozzáférés</strong> > <strong>Adatútválasztó konfigurálása</strong> menüpontban, így lehetővé téve, hogy a szolgáltatás vagy csomag átjuthasson a(z) DiskStation tűzfalán.</li>
+	  <li><strong>Beállítások:</strong> Válassza ki a hálózati interfészt, amelynek tűzfalbeállításait szeretné megjeleníteni és kezelni. Valamennyi hálózati interfész tűzfalbeállításainak megjelenítéséhez és kezeléséhez kiválaszthatja az <strong>Összes</strong> lehetőséget.</li>
+	  <li><strong>Csatlakozás ellenőrzése:</strong> Tesztelje a szolgáltatások és csomagok által használt portokat. Ez lehetővé teszi önnek, hogy tesztelje, az eszközök egy külső hálózatról hozzá tudnak-e férni a szolgáltatásokhoz és csomagokhoz, vagy sem.</li>
+    </ul>
+</li>
+<li>Kattintson a <strong>Mentés</strong> lehetőségre a módosítások mentéséhez, vagy a <strong>Visszaállítás</strong> lehetőségre a módosítások elvetéséhez. </li>
+</ol>
+
+<p class="disable-eds14">____<br> * Csak egyes modelleken elérhető. </p>
+
+</body>
+</html>

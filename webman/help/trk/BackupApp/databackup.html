@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Veri Yedekleme</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Veri Yedekleme</h2>
+
+<p><b>Yedekleme &amp; Çoğaltma</b> sekmesindeki <b>Yedekleme</b> bölümünde, DiskStation üzerinde belirli verileri el ile veya özel bir plana uygun olarak yedekleyebilirsiniz. Bu özellik ile sistem yapılandırması, paylaşımlı klasörlerin içeriği ve veri paketleri yerel, ağ veya bulut yedekleme hedefine yedeklenebilirler.</p>
+
+<h4>Bir yedekleme görevi oluşturmak için:</h4>
+<ol>
+<li><b>Oluştur</b> > <b>Veri yedekleme görevi</b> seçimini yapın.</li>
+<li>Kurulumu tamamlamak için sihirbazı izleyin. Daha fazla bilgi için <a href="repository.html">Yedekleme Hedefi</a> bölümünü ziyaret edin.</li>
+</ol>
+
+<h4>Yedekleme görevlerini yönetmek için:</h4>
+<p>Mevcut bir görevi seçin ve aşağıdaki düğmelerden birisine tıklayın:</p>
+<ul>
+<li><strong>Düzenle:</strong> Seçilen görevin hedefini, kaynağını, programını ve diğer ayarlarını değiştirir.</li>
+<li><strong>Sil:</strong> Seçilen görevi siler.</li>
+<li><strong>İptal:</strong> Seçilen, yapılmakta olan görevi iptal eder.</li>
+<li><strong>Şimdi yedekle:</strong> Derhal seçilen görevin yedeklemesini yapar.</li>
+</ul>
+
+
+<h3>Yedekleme Rotasyonu</h3>
+<p>Yedekleme rotasyonu bir sürüm yönetim mekanizmasıdır. Daha eski, gereksiz sürümleri otomatik olarak silerek ve depolama alanını boşaltarak yedekleme sürümlerini yönetmenize yardımcı olur. Bu fonksiyonu <b>Görev Ayarları</b> öğesinde etkinleştirebilir veya bir yedekleme görevi oluşturdunuzda yapılandırabilirsiniz.</p>
+<h4>Sürümleri çevirmek için:</h4>
+<ol>
+<li>Sürüm rotasyonu uygulamak istediğiniz yedekleme görevini seçin ve <strong>Düzenle</strong>'ye tıklayın.</li>
+<li><strong>Görev Ayarları</strong> sekmesine gidin ve <strong>Yedekleme rotasyonunu etkinleştir</strong> öğesini işaretleyin. </li>
+<li>Burada iki rotasyon yönteminden birini seçebilirsiniz:</li>
+<ul>
+<li><b>En eski sürümden:</b> Bu temel bir rotasyon yöntemidir. Rotasyon durumu tetiklendiğinde, en eski sürüm öncelikle kaldırılır. </li>
+<li><b>Smart Recycle:</b> Bu akıllı bir sürüm rotasyonu yöntemidir. Rotasyon durumu tetiklendiğinde, sistem tutma mekanizması tarafından seçilen sürümleri kaldırır. Tutma mekanizmaları şu şekildedir:</li>
+<ul>
+	<li><b>Son 24 saatten saatlik sürümler:</b> Sistem her bir saat içinde oluşturulan en erken sürümü tutar.</li>
+	<li><b>Geçmiş 1 günden 1 aya kadar günlük sürümler:</b> Sistem her bir gün içinde oluşturulan en erken sürümü tutar.</li>
+	<li><b>1 aydan daha eski haftalık sürüm:</b> Sistem her hafta oluşturulan en erken sürümü tutar.</li>
+</ul>
+</ul>
+<li>Maksimum <b>sürüm sayısını</b> belirtin. Sürüm sayısı bu sayısı aştığında, sürüm rotasyonu başlar. Sayı kilitlenen sürümleri içermez.</li>
+<li>Tekrarlanan bir yedekleme programı yapılandırdıysanız, yedekleme sürümlerinizin nasıl tutulacağına dair bir tahmin ve rotasyon ayarlarınıza dayalı olarak en erken rotasyon noktası süresi gösterilecektir. &nbsp;&nbsp;</li>
+<li>Ayarlarınızı kaydetmek için <strong>Tamam</strong>'a tıklayın. </li>
+</ol>
+
+<div class="section">
+  <h4>Notlar:</h4>
+  <ul>
+  <li>Kilitlenen sürümler asla kaldırılmaz. Daha fazla bilgi için <a href="repository.html#lock_version">Yedekleme Hedefi</a> bölümünü ziyaret edin.</li>
+  
+  <li>Sadece çok sürümlü yedekleme görevleri sürüm rotasyonu fonksiyonlarını sunar.</li>
+  <li>Sürüm rotasyonu DSM 5.1 veya altında desteklenmez.</li>
+  <li>Rotasyon ayar değiştirildikten veya yedekleme görevi tamamlandıktan hemen sonra tetiklenecektir.</li>
+  <li>Kilitlenen sürümler azami sürüm sayısı hesaplanırken hariç tutulur.</li>
+  </ul>
+</div>
+
+
+<div class="section">
+<h4>Genel notlar:</h4>
+<ul>
+<li>Görevlerin adları 1 ila 32 Unicode karakter içerebilir ancak aşağıdaki karakterleri içeremez:<br> <span class="letterSpace5">! " # $ % &amp; ' ( ) * + , / : ; &lt; = &gt; ? @ [ ] \ ^ ` { } | ~</span></li>
+<li>Yedekleme için tam dosya yolunun maksimum uzunluğu 2048 karakterdir.</li>
+<li>Eğer AFP yoluyla 32000'den fazla dosya veya klasörü bir EXT3 paylaşımlı klasörüne yüklerseniz, paylaşımlı klasör dahil tüm yedekleme görevleri başarısız olur.</li>
+<li>Şifrelenmiş klasör tanıtılmış veya tanıtılmamış halde yedeklenebilir. Ancak, her zaman tanıtılmamış halde geri yüklenir ve başlatma sırasında otomatik olarak tanıtılmaz. Tanıtmak için şifrelenen paylaşımlı klasörün şifreleme anahtarını girmeniz gerekecektir.</li>
+<li>Şifrelenmiş bir klasörün başka bir şifrelenmiş klasöre yedeklenmesi desteklenmez.</li>
+<li>Uzak klasörlerin yedekleme kaynağı veya yedekleme hedefi olarak kullanılması desteklenmez.</li><li>Yedekleme hedefi bir birim ise, sadece görev sahibi yedekleme görevini yapabilir. Daha fazla bilgi için <a href="repository.html">Yedekleme Hedefi</a> bölümünü ziyaret edin.</li>
+<li>Belirli uygulamalar için yedekleme desteklenir. Belirli bir paketin yedeklemeyi destekleyip desteklemediğini ve yedekleme içeriğini ve sınırlamalarını görmek için, lütfen her uygulamanın yardım bölümüne bakın.</li>
+<li class="enable-eds14">DiskStation, yazılabilir bir EXT3/EXT4 harici cihazı olmadan uygulama yedeklemesini desteklemez.</li>
+<li class="enable-eds14">DiskStation, yazılabilir bir EXT3/EXT4 harici cihazı olmadan bir birime yedeklemeyi desteklemez.</li>
+<li class="enable-eds14">DiskStation sadece EXT3/EXT4 harici cihazlarında oluşturulan paylaşımlı klasörleri yedekleyebilir.</li>
+<li class="disable-eds14">Sistem yazılabilir bir birim olmadan uygulamaları yedekleyemez.</li
+></ul>
+</div>
+<div class="section disable-eds14">
+<h4>Windows ACL ayarlarını yedeklemek için:</h4>
+<p>DiskStation üzerindeki dosyaların Windows ACL ayarları da hedefin dosya sistemlerine bağlı olarak yedeklenebilir:</p>
+<ul>
+
+<li><strong>Yerel Yedekleme Hedefi</strong>, <strong>Ağ Yedekleme Hedefi</strong> ve <strong>Genel Bulut Yedeklemesi Hedefi</strong> hedefin dosya sisteminden bağımsız olarak Windows ACL ayarlarını yedekleyebilir.</li>
+
+<li><strong>Paylaşımlı Klasör Senkronizasyonu</strong>, hedefin dosya sistemi EXT4<span style="display: inline;" class="enable-rc18015xsp">/BTRFS</span> olduğunda Windows ACL ayarlarını senkronize edebilir.</li>
+
+</ul>
+</div>
+
+</body></html>

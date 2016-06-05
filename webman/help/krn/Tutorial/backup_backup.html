@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>데이터 보안을 보장하기 위해 Synology NAS에 데이터 백업</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>데이터 보안을 보장하기 위해 Synology NAS에 데이터 백업</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/Backup/back_up_your_data_on_synology_nas_to_ensure_data_security.jpg" />
+<h2>개요</h2>
+<p>예상치 못한 서버 오작동 또는 볼륨 충돌로 인해 중요한 데이터가 심각한 위험에 노출될 수 있습니다. 사용자는 Synology NAS에서 로컬 또는 원격으로 제공하는 서버 백업 서비스를 사용하여 아주 중요한 데이터의 안전한 사본을 백업함으로써 최악의 상황에 항상 대비할 수 있습니다. 비즈니스 상황 및 요구 사항에 따라 데이터 손실 위험을 줄이기 위해 한 가지 이상의 방법으로 백업하도록 선택할 수 있습니다.</p>
+
+<h3 class="list_head">1. 외부 저장 장치에 백업</h3>
+<p> 로컬에 백업하는 경우 백업 대상을 동일한 볼륨, RAID 그룹 또는 동일한 실제 디스크에 있는 다른 폴더로 설정하도록 선택할 수 있습니다. 이 경우 데이터가 잘못 삭제되면 다른 폴더에 백업한 복사본에서 해당 데이터를 복구할 수 있습니다. 그러나 서버 오류 또는 볼륨 충돌이 발생할 경우 데이터 및 백업한 복사본이 손실될 수 있습니다. 따라서 항상 중요한 데이터를 동일한 서버가 아닌 외부 저장 장치에 백업하는 것이 좋습니다. Synology NAS를 사용하면 사용자가 백업 대상을 로컬 드라이버뿐만 아니라 외부 USB 장치로 설정할 수 있습니다. 이 기능은 <b>메인 메뉴 &gt; 백업 및 복제</b>에서 사용할 수 있습니다. 단계별 지침은 <a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=krn#local_backup">여기를</a> 참조하십시오.</p>
+
+<h3 class="list_head">2. 네트워크를 통해 다른 Synology NAS에 백업</h3>
+<p>데이터를 외부 저장 장치에 백업하면 데이터 가용성이 향상되지만, 서버 및 저장 장치가 있는 위치에 화재 또는 지진과 같은 재해가 발생할 위험이 있습니다. Synology NAS를 사용하면 서버 위치의 재해로 인한 데이터 손실 위험을 최소화할 수 있도록 사용자가 데이터 사본을 네트워크를 통해 다른 서버 위치로 전송하여 오프사이트 백업을 설정할 수 있습니다. 백업 데이터의 전송은 암호화되어 수준 높은 보안으로 중요한 데이터를 보호할 수 있습니다. 블록 수준 백업 옵션을 사용하면 NAS가 수정된 블록만 백업하며, 이는 인터넷을 통해 백업을 실행할 경우 특히 실용적입니다. 이 기능은 <b>메인 메뉴 &gt; 백업 및 복제</b>에서 사용할 수 있습니다. 단계별 지침은 <a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=krn#network_backup">여기를</a> 참조하십시오.</p>
+
+<h3 class="list_head">3. 공용 클라우드 저장소에 백업</h3>
+<p>서로 다른 NAS 장치 간에 원격 백업을 수행하려면 두 개 이상의 서버(서버 내에 있는 여러 디스크 포함)와 서버를 찾을 위치가 필요합니다. 비즈니스 상황에 따라 여러 NAS 장치에 오프사이트 백업을 설정하지 못할 수도 있습니다. 네트워크 백업에 대해 실행 불가능한 NAS 배포 문제에 대한 솔루션을 제공하기 위해 Synology의 백업 기능이 데이터를 공용 클라우드 계정에 직접 백업할 수 있도록 여러 공용 클라우드 서비스에 대한 지원을 제공합니다. 선호하는 공용 클라우드 저장소에 따라 <b>백업 및 복제</b> 또는 <b>패키지 센터</b>에서 이 기능을 사용할 수 있습니다. 단계별 지침은 <a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=krn#cloudservice_backup">여기를</a> 참조하십시오.</p>
+</div>
+
+</body>
+
+</html>

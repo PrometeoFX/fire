@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DSM 設定</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="https"></a>DSM 設定</h2>
+
+<p>您可於<strong>控制台</strong> &gt; <strong>網路</strong> &gt; <strong>DSM 設定</strong>變更用戶端用來存取 DSM 的連接埠編號。HTTPS 一旦啟動，連線將會透過 SSL/TLS 機制進行加密。</p>
+
+<h4>若要更改默認連接埠編號：</h4>
+<ol>
+<li>在 <b>HTTP</b> 或 <b>HTTPS</b> 欄位中輸入連接埠編號。</li>
+<li>按一下<b>套用</b>。</li>
+</ol>
+
+<h4>若要啟動 HTTPS 安全連線：</h4>
+<ol>
+<li>
+勾選<b>啟動 HTTPS 安全連線</b>。
+</li>
+<li>如果您想將嘗試透過 HTTP 連接埠 (5000 埠) 存取 DSM 的用戶端重新導向至 HTTPS 連接埠 (5001 埠)，請勾選<b>將 HTTP 連線自動導到 HTTPS</b>。</li>
+<li>
+按一下<b>套用</b>。
+</li>
+</ol>
+
+<div class="section">
+<h4>HTTPS 安全連線使用的連接埠：</h4>
+<ul>
+  <li><b>DSM</b>：預設的連接埠編號為 5001，因此您可以輸入以下位址來安全存取 DSM：https://伺服器主機名稱:5001/</li>
+<li><b>Web Station 及 Photo Station</b>：預設的連接埠編號為 443，因此您可以輸入以下位址來安全存取 Web Station 及 Photo Station：https://伺服器主機名稱/</li>
+</ul>
+
+</div>
+
+<h4>若要透過 Windows 網路探索來搜尋 DiskStation：</h4>
+<ol>
+<li>
+勾選<b>啟動 Windows 網路探索</b>。
+</li>
+<li>
+按一下<b>套用</b>。
+</li>
+</ol>
+
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Hot Spare</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Hot Spare*</h2>
+<p>Os discos hot spare s&atilde;o discos r&iacute;gidos de reserva que podem reparar um volume/Grupo de discos/iSCSI LUN danificado substituindo um disco com defeito automaticamente. Os discos hot spare podem ser atribu&iacute;dos globalmente para proteger qualquer volume/Grupo de discos/iSCSI LUN dentro do seu DiskStation, desde que o volume/Grupo de discos/iSCSI LUN coincida com os seguintes crit&eacute;rios:</p>
+<ul>
+<li>O tipo RAID do grupo volume/Grupo de discos/iSCSI LUN deve ser um com prote&ccedil;&atilde;o de dados (isto &eacute;, RAID 1, RAID 5, RAID 6, RAID 10).</li>
+<li>O tamanho do disco hot spare deve ser maior ou igual ao tamanho do menor disco do volume/Grupo de discos/iSCSI LUN.</li>
+</ul>
+<h4>Para configurar discos hot spare:</h4>
+<ol>
+<li>Clique em <b>Gerenciar</b>.</li>
+<li>Aparece uma caixa de di&aacute;logo exibindo o status do hot spare de cada volume/Grupo de discos/iSCSI LUN, bem como os discos dispon&iacute;veis. O status de volume/Grupo de disco/iSCSI LUN inclui o seguinte:</li>
+<ul>
+<li><strong>Atribu&iacute;do:</strong> O volume/Grupo de discos/iSCSI LUN &eacute; protegido por pelo menos um disco hot spare atribu&iacute;do.</li>
+<li><strong>Dispon&iacute;vel:</strong> Existem discos dispon&iacute;veis que podem proteger o volume/Grupo de discos/iSCSI LUN, mas nenhum hot spare foi atribu&iacute;do ainda.</li>
+<li><strong>N&atilde;o dispon&iacute;vel:</strong> N&atilde;o h&aacute; discos hot spare dispon&iacute;veis que possam proteger o volume/Grupo de discos/iSCSI LUN.</li>
+</ul>
+<li>As se&ccedil;&otilde;es <strong>Discos dispon&iacute;veis</strong> exibem discos r&iacute;gidos que podem ser atribu&iacute;dos como discos hot spare. Para atribuir um disco hot spare, marque a caixa ao lado do disco que deseja atribuir como hot spare.</li>
+<li>Clique em <b>Aplicar</b> para salvar as configura&ccedil;&otilde;es.</li>
+</ol>
+<p><span class="note_head">Nota:</span> Quando um disco r&iacute;gido &eacute; atribu&iacute;do como um disco hot spare, todos os dados do disco s&atilde;o apagados. Antes de designar um disco hot spare, certifique-se de que ele n&atilde;o tenha dados importantes.</p>
+<p>____<br />*Dispon&iacute;vel apenas em certos modelos.</p>
+
+</body>
+</html>

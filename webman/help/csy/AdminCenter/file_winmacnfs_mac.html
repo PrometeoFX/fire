@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Souborová služba Mac</h2>
+
+<p>V části <strong>Ovládací panel</strong> > <strong>Souborové služby</strong> > <strong>Win/Mac/NFS</strong> můžete povolit souborovou službu systému Mac a vytvořit tak ze zařízení DiskStation souborový server Mac (server AFP).</p>
+
+<h4>Povolení souborové služby systému Mac:</h4>
+<ol>
+<li>Chcete-li, aby zařízení DiskStation bylo souborovým serverem Mac (AFP server), zaškrtněte políčko <b>Povolit souborovou službu systému Mac</b>.</li>
+<li>V případě potřeby nastavte zálohovací složku <b>Time Machine</b>. (Více informací můžete nalézt v následující sekci.)</li>
+
+<li>Klikněte na možnost <b>Použít</b>.</li>
+
+</ol>
+<div class="section">
+<h4>O zálohovací složce nástroje Time Machine:</h4>
+<p>Chcete-li zálohovat data ze zařízení Time Machine do zařízení DiskStation, vyberte z rozevírací nabídky sdílenou složku. </p>
+<p><span class="note_head">Poznámka:</span> Sdílené složky využívané pro jiné služby nebudou k dispozici pro zařízení Time Machine.</p>
+</div>
+<h3>Rozšířená nastavení</h3>
+<h4>Použít výchozí oprávnění UNIX:</h4>
+<p>Povolením této možnosti použijete výchozí oprávnění UNIX při odesílání nebo vytváření souborů a složek. Použitá oprávnění jsou stejná jako oprávnění použitá příkazem <strong>umask</strong> systému UNIX. Pokud je tato možnost povolená, má oprávnění UNIX pro soubory hodnotu 644 a pro složky hodnotu 755. Pokud je tato možnost zakázána, má oprávnění UNIX pro soubory hodnotu 666 a pro složky hodnotu 777. Výchozí hodnota příkazu unmask je 022.</p>
+<p><span class="note_head">Poznámka: </span>Povolení této možnosti může způsobit problémy s konzistencí oprávnění napříč různými protokoly. Chcete-li zamezit nekonzistenci, doporučujeme, aby tato možnost byla i nadále zakázána.</p>
+<h4>Uvolnit zdroje ihned po odpojení:</h4>
+<p>Povolením této možnosti uvolníte zdroje ihned po neočekávaném odpojení serveru AFP. Tuto možnost povolte, pokud se vám při používání zařízení Time Machine zobrazují chybové zprávy „Svazek je používán“.</p>
+<h4>Povolení přenosu tiskárny Bonjour:</h4>
+<p>Zaškrtněte možnost <b>Povolit přenos tiskárny Bonjour</b> a umožněte tak klientům se systémem Mac procházet a vyhledat tiskárnu připojenou k zařízení DiskStation.</p>
+</body>
+</html>

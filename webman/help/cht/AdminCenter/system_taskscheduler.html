@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>任務排程表</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1>任務排程表</h1>
+<p>[任務排程表] 可讓您安排系統服務及指令碼於設定時段執行的時間。</p>
+<h2>支援任務</h2>
+<p>您可以新增任務來執行以下操作：</p>
+<ul class="disable-eds14">
+<li><strong>使用者定義指令碼：</strong>執行使用者定義指令碼或命令。</li>
+<li><strong>資源回收筒：</strong>清空特定共用資料夾的 [資源回收筒]。此外，<strong>檔案保留規則</strong>設定可讓您在清空 [資源回收筒] 時決定哪些檔案要永久刪除。例如，您可以根據檔案大小、刪除時間或檔案格式來決定是否刪除或保留。</li>
+<li><strong>嗶聲控制：</strong>讓 DiskStation 發出嗶聲。</li> 
+<li><strong>系統服務：</strong>開啟或停止網路服務，列如 Windows 檔案服務、FTP、自動封鎖等等。</li>
+</ul>
+
+
+<ul class="enable-eds14">
+<li><strong>使用者定義指令碼：</strong>執行使用者定義指令碼或命令。</li>
+<li><strong>資源回收筒：</strong>清空特定共用資料夾的 [資源回收筒]。此外，<strong>檔案保留規則</strong>設定可讓您在清空 [資源回收筒] 時決定哪些檔案要永久刪除。例如，您可以根據檔案大小、刪除時間或檔案格式來決定是否刪除或保留。</li>
+<li><strong>系統服務：</strong>開啟或停止網路服務，列如 Windows 檔案服務、FTP、自動封鎖等等。</li>
+</ul>
+
+
+<h2>管理任務</h2>
+<p>[任務排程表] 的主要頁面顯示了現有的全部任務，並且提供新增、編輯、執行任務的選項。</p>
+<h4>若要新增任務：</h4>
+<ol>
+<li>按一下<strong>新增</strong>並選擇您想要規劃排程的任務類型。</li>
+<li><strong>新增任務</strong>視窗出現後，請在<strong>一般</strong>頁籤修改以下設定：</li>
+<ul>
+<li><strong>一般設定：</strong>輸入任務名稱、選擇使用者，並啟動或停用任務。 </li>
+<li><strong>其他設定：</strong>您可以在此頁籤修改其它和任務相關的設定 (限特定任務)。例如，新增清空資源回收筒任務時，您必須選擇某一共用資料夾的資源回收筒。</li>
+</ul>
+<li>在<strong>排程</strong>頁籤，請修改下列設定：</li>
+<ul>
+<li><strong>日期：</strong>指定執行任務的時間。您可以安排任務於一週內執行的天數 (如：每天、週末、或每星期日) 或特定的執行日期 (如：2015/10/21)。</li>
+<li><strong>時間：</strong>指定任務每天執行的次數，以及開始和結束的時間。</li>
+</ul>
+<li>在<strong>任務設定</strong>頁籤修改和任務相關的設定 (限特定任務)。</li>
+</ul>
+<li>按一下<strong>確定</strong>來完成。</li>
+</ol>
+<h4>若要編輯任務設定：</h4>
+<ol>
+<li>選擇現有的任務。</li>
+<li>按一下<strong>編輯</strong>。</li>
+<li>在顯示的視窗中，修改任務設定。</li>
+</ol>
+<h4>若要刪除任務：</h4>
+<ol>
+<li>選擇現有的任務。</li>
+<li>按一下<strong>刪除</strong>。</li>
+</ol>
+
+<h4>若要啟動或停用任務：</h4>
+<ol>
+<li>在<strong>任務排程表</strong>的主要頁面，勾選或取消勾選<strong>已啟動</strong>下方的核取方塊來啟動或停用任務。</li>
+<li>按一下<strong>儲存</strong>。</li>
+</ol>
+
+
+<h4>若要手動執行任務：</h4>
+<ol>
+<li>選擇單一或多個現有任務。</li>
+<li>按一下<strong>執行</strong>。</li>
+</ol>
+
+<div class="section">
+<h4>任務排程表限制：</h4>
+<ul class="disable-eds14">
+<li>任務名稱可包含最多 512 個可顯示字元。</li>
+<li>最大任務數：1024。</li>
+<li>指令碼或命令列的長度上限：4095。</li>
+<li>嗶聲持續時間可介於 1 至 600 秒。</li>
+</ul>
+
+<ul class="enable-eds14">
+<li>任務名稱可包含最多 512 個可顯示字元。</li>
+<li>最大任務數：1024。</li>
+<li>指令碼或命令列的長度上限：4095。</li>
+</ul>
+
+</div>
+
+</body> </html>

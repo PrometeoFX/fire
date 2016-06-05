@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Hot Spare</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Hot Spare*</h2>
+<p>Dyski Hot spare to zapasowe dyski twarde, za pomocą kt&oacute;rych można zreperować zdegradowany wolumen, grupę dysk&oacute;w lub jednostkę iSCSI LUN, automatycznie zamieniając uszkodzony dysk. Dyski Hot spare można przypisywać globalnie, aby chronić dowolny wolumen, grupę dysk&oacute;w lub jednostkę iSCSI LUN w serwerze DiskStation, pod warunkiem że dany wolumen, grupa dysk&oacute;w lub jednostka iSCSI LUN spełnia następujące kryteria:</p>
+<ul>
+<li>Typ macierzy RAID wolumenu, grupy dysk&oacute;w lub jednostki iSCSI LUN musi zapewniać ochronę danych (np. RAID 1, RAID 5, RAID 6, RAID 10).</li>
+<li>Rozmiar dysku twardego hot spare musi być większy lub r&oacute;wny rozmiarowi najmniejszego dysku wolumenu, grupy dysk&oacute;w lub jednostki iSCSI LUN.</li>
+</ul>
+
+<h4>Aby skonfigurować dyski hot spare:</h4>
+<ol>
+<li>Kliknij przycisk <b>Zarządzaj</b>.</li>
+<li>Wyświetli się okno dialogowe przedstawiające stan hot spare poszczeg&oacute;lnych wolumen&oacute;w, grup dysk&oacute;w lub jednostek iSCSI LUN, a także dostępne dyski. Stan wolumenu, grupy dysk&oacute;w lub jednostki iSCSI LUN obejmuje następujące właściwości:</li>
+<ul>
+<li><strong>Przypisano:</strong> Wolumen, grupa dysk&oacute;w lub jednostka iSCSI LUN są chronione przez co najmniej jeden przypisany dysk hot spare.</li>
+<li><strong>Dostępne:</strong> Dyski, kt&oacute;re mogą chronić wolumen, grupę dysk&oacute;w lub jednostkę iSCSI LUN, są dostępne, ale nie przypisano jeszcze żadnego dysku hot spare.</li>
+<li><strong>Niedostępne:</strong> Nie ma dostępnych dysk&oacute;w, kt&oacute;re mogłyby chronić wolumen, grupę dysk&oacute;w lub jednostkę iSCSI LUN.</li>
+</ul>
+<li>Sekcje <strong>Dostępne dyski</strong> przedstawiają dyski twarde, kt&oacute;re można przypisać jako dyski hot spare. Aby przypisać dysk hot spare, zaznacz pole wyboru obok odpowiedniego dysku.</li>
+<li>Kliknij <b>Zastosuj</b>, aby zapisać ustawienia.</li>
+</ol>
+<p><span class="note_head">Uwaga:</span> Po przypisaniu dysku twardego jako dysku hot spare wszystkie zapisane na nim dane są usuwane. Przed przypisaniem dysku hot spare należy sprawdzić, czy nie zawiera on żadnych ważnych danych.</p>
+
+<p>____<br /> *Funkcja dostępna tylko w niekt&oacute;rych modelach.</p>
+
+</body>
+</html>

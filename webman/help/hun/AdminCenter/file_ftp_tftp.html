@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TFTP/PXE</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>TFTP/PXE</h2>
+
+<p>A <strong>Vezérlőpult</strong> > <strong>Fájlszolgáltatások</strong> > <strong>TFTP/PXE</strong> menüpont lehetőségei lehetővé teszik önnek a TFTP és PXE beállítások konfigurálását.</p>
+
+<h3>TFTP</h3>
+<p>A Trivial File Transfer Protocol (egyszerű fájlátviteli protokoll - TFTP) olyan egyszerű fájlátviteli protokoll, amit általában konfigurációk vagy rendszerindító fájlok átvitelére használnak olyan helyzetekben, ahol nem szükséges hitelesítés. A TFTP szolgáltatás engedélyezése lehetővé teszi a(z) DiskStation számára rendszerbetöltők klienseszközökre történő átvitelét.</p>
+<h4>TFTP beállítások módosítása:</h4>
+<ol>
+<li>Jelölje be a <strong>TFTP szolgáltatás engedélyezése</strong> feliratú mezőt.</li>
+<li>A <strong>TFTP gyökérmappa</strong> mezőben határozza meg, hogy a TFTP kliensek a(z) DiskStation eszközön található melyik mappához férhetnek hozzá.</li>
+<li>A <strong>Speciális beállítások</strong> gombra kattintva megtekintheti és módosíthatja az alábbi beállításokat:</li>
+<ul>
+<li><strong>A TFTP fájlátviteli napló engedélyezése:</strong> Ez az opció lehetővé teszi az ön számára a TFTP segítségével továbbított adatok nyomonkövetését.</li>
+<li><strong>TFTP ügyfél engedély:</strong> A TFTP ügyfelek olvasási és írási engedélyeinek kiválasztása. Ha a <strong>Csak olvasható</strong> lehetőség van kiválasztva, akkor a TFTP ügyfelek csak megtekinthetik a gyökérmappa tartalmát. Ha az <strong>Írható</strong> lehetőség van kiválasztva, akkor a TFTP ügyfelek módosíthatják a gyökérmappa tartalmát.</li>
+<li><strong>Engedélyezett ügyfelek:</strong> Válassza ki, hogy mely ügyfelek kapcsolódhatnak TFTP segítségével. Az <strong>Összes csatlakozás</strong> kiválasztásával valamennyi ügyfélnek engedélyezheti a csatlakozást; vagy egy IP-cím tartomány meghatározásával korlátozhatja, hogy mely ügyfelek csatlakozhatnak.</li>
+</ul>
+<li>A beállítások módosítása után kattintson az <strong>Alkalmaz</strong> gombra a beállítások mentéséhez.</li>
+</ol>
+
+
+<h3>DHCP szolgáltatás beállítása PXE számára a(z) DiskStation segítségével</h3>
+<p>A(z) DiskStation a mindent az egyben PXE beállítás telepítése érdekében a TFTP-n kívül DHCP szolgáltatást is képes nyújtani. A Pre-boot Execution Environment (rendszerbetöltést megelőző végrehajtási környezet - PXE) olyan hálózati környezet, ami lehetővé teszi klienseszközök számára, hogy adattároló eszköz (pl. merevlemezek) helyett hálózati interfész használatával töltsék be a rendszerüket. PXE telepítésekor a rendszerbetöltő a(z) DiskStation eszközön tárolható, a klienseszközök pedig a rendszerbetöltő használatával a hálózaton keresztül tölthetik be a rendszerüket.</p>
+
+<p>Ha a(z) DiskStation segítségével szeretne DHCP szolgáltatásokat nyújtani, győződjön meg róla, hogy telepítette a Synology DHCP Server csomagját.</p>
+
+<h4>DHCP szolgáltatás beállítása PXE számára:</h4>
+<ol>
+<li>Jelölje be a <strong>DHCP szolgáltatás beállítása ezen a kiszolgálón PXE számára</strong> feliratú mezőt. Ha a(z) DiskStation eszközön még nincs telepítve a DHCP Server csomag, akkor felszólítják ennek telepítésére.</li>
+<li>Válasszon ki a TFTP gyökérmappából egy rendszerbetöltő fájlt, és határozza meg a többi, DHCP-vel kapcsolatos beállítást.</li>
+<li>Kattintson az <strong>Alkalmaz</strong> gombra a beállítások mentéséhez.</li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DHCP Server</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>DHCP Server</h2>
+<p>Votre DiskStation peut assumer le r&ocirc;le d&apos;un serveur DHCP et attribuer des adresses IP dynamiques aux clients DHCP au sein de votre r&eacute;seau local.</p>
+
+<h4>Pour activer DHCP Server&nbsp;:</h4>
+<ol>
+<li>Acc&eacute;dez dans <strong>Panneau de configuration</strong> &gt; <strong>R&eacute;seau</strong> &gt; <strong>Interface r&eacute;seau</strong>.</li>
+<li>S&eacute;lectionnez une interface r&eacute;seau (p. ex. r&eacute;seau local) et cliquez sur <strong>Modifier</strong>.</li>
+<li>Allez dans l&rsquo;onglet <strong>DHCP Server</strong> et cochez <b>Activer DHCP Server</b>.</li>
+<li>Entrez une valeur dans le champ <b>Dur&eacute;e de bail de l&apos;adresse</b> pour d&eacute;finir la dur&eacute;e du bail DHCP (en minutes) pour les adresses IP affect&eacute;es aux clients DHCP.</li>
+<li>Entrez les adresses DNS pour vos clients DHCP dans les champs <b>DNS principal</b> (requis) et <b>DNS secondaire</b> (optionnel).</li>
+<li>D&eacute;finissez le nom de domaine pour DHCP Server dans le champ <b>Nom de domaine</b> (optionnel).</li>
+<li>Cliquez sur <b>OK</b>.</li>
+</ol>
+<h4>Pour ajouter un sous-r&eacute;seau&nbsp;:</h4>
+<ol>
+<li>Cliquez sur <b>Ajouter</b>, puis sp&eacute;cifiez les informations dans les colonnes suivantes&nbsp;:</li>
+<ul>
+<li><b>Activer</b>: Activez ou d&eacute;sactivez le sous-r&eacute;seau.</li>
+<li><b>D&eacute;marrer</b>: La premi&egrave;re adresse IP du sous-r&eacute;seau.</li>
+<li><b>Fin</b>: La derni&egrave;re adresse IP du sous-r&eacute;seau.</li>
+<li><b>Masque de sous r&eacute;seau</b>: Le masque de sous r&eacute;seau.</li>
+<li><b>Passerelle</b>: La passerelle du sous-r&eacute;seau.</li>
+</ul>
+<li>Cliquez sur <b>OK</b>.</li>
+</ol>
+
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<ul>
+<li>Vous ne pouvez pas ajouter plus de 32 sous-r&eacute;seaux.</li>
+</ul>
+</div>
+
+
+
+<h3>Clients DHCP</h3>
+
+<p>Pour voir une liste des clients DHCP et leurs configuration de r&eacute;seau (p. ex. l&apos;adresse MAC, l&apos;adresse IP, le nom d&apos;h&ocirc;te, et la quantit&eacute; de temps restante avant que le bail DHCP n&apos;expire), vous pouvez aller dans l&apos;onglet <strong>Clients DHCP</strong>.</p>
+
+
+<h3>R&eacute;servation DHCP</h3>
+
+<p>Si vous voulez qu&apos;un client re&ccedil;oive toujours la m&ecirc;me adresse IP lors du renouvellement du bail DHCP, vous pouvez ajouter le client &agrave; la liste de r&eacute;servation d&apos;adresse.</p>
+
+<h4>Pour ajouter un client &agrave; la liste de r&eacute;servation d&apos;adresses&nbsp;:</h4>
+
+<ul>
+<li>Cliquez sur <b>Ajouter</b>.</li>
+<li>Sp&eacute;cifiez l&apos;adresse MAC du client, l&apos;adresse IP que vous d&eacute;sirez attribuer au client et le nom d&apos;h&ocirc;te du client. </li>
+<li>Cliquez sur <b>OK</b> pour enregistrer vos param&egrave;tres.</li>
+</ul>
+
+
+</body>
+</html>

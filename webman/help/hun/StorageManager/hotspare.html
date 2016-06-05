@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Hot Spare</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Hot Spare*</h2>
+<p>A Hot spare lemezek olyan k&eacute;szenl&eacute;ti merevlemezek, amelyek a meghib&aacute;sodott lemez automatikus cser&eacute;j&eacute;vel megjav&iacute;thatnak egy cs&ouml;kkent &uuml;zemm&oacute;d&uacute; k&ouml;tetet/lemezcsoportot/iSCSI LUN-t. A Hot spare lemezek mindaddig glob&aacute;lisan kijel&ouml;lhetők a(z) DiskStation eszk&ouml;z&ouml;n tal&aacute;lhat&oacute; b&aacute;rmelyik k&ouml;tet/lemezcsoport/iSCSI LUN v&eacute;delm&eacute;re, am&iacute;g a k&ouml;tet/lemezcsoport/iSCSI LUN megfelel a k&ouml;vetkező krit&eacute;riumoknak:</p>
+<ul>
+<li>A k&ouml;tet/lemezcsoport/iSCSI LUN RAID t&iacute;pus&aacute;nak adatv&eacute;delemmel rendelkezőnek kell lennie (azaz RAID 1, RAID 5, RAID 6, RAID 10).</li>
+<li>A hot spare lemeznek azonos m&eacute;retűnek vagy nagyobbnak kell lennie, mint a k&ouml;tet/lemezcsoport/iSCSI LUN legkisebb lemeze.</li>
+</ul>
+
+<h4>Hot spare lemezek be&aacute;ll&iacute;t&aacute;sa:</h4>
+<ol>
+<li>Kattintson a <b>Kezel&eacute;s</b> gombra.</li>
+<li>Felbukkan egy, az egyes k&ouml;tetek/lemezcsoportok/iSCSI LUN-ok hot spare-&aacute;llapot&aacute;t, valamint a rendelkez&eacute;sre &aacute;ll&oacute; lemezeket megjelen&iacute;tő ablak. A k&ouml;tet/lemezcsoport/iSCSI LUN &aacute;llapot&aacute;hoz a k&ouml;vetkezők tartoznak:</li>
+<ul>
+<li><strong>Hozz&aacute;rendelve:</strong> A k&ouml;tetet/lemezcsoportot/iSCSI LUN-t legal&aacute;bb egy hozz&aacute;rendelt hot spare lemez v&eacute;di.</li>
+<li><strong>Rendelkez&eacute;sre &aacute;ll:</strong> Vannak rendelkez&eacute;sre &aacute;ll&oacute; lemezek, amelyek megv&eacute;dhetik a k&ouml;tetet/lemezcsoportot/iSCSI LUN-t, &aacute;m m&eacute;g nem lett hozz&aacute;rendelve hot spare lemez.</li>
+<li><strong>Nem &aacute;ll rendelkez&eacute;sre:</strong> Nem &aacute;llnak rendelkez&eacute;sre hot spare lemezek, amelyek megv&eacute;dhetik a k&ouml;tetet/lemezcsoportot/iSCSI LUN-t.</li>
+</ul>
+<li>Az <strong>El&eacute;rhető lemezek</strong> r&eacute;sz a hot spare lemezekk&eacute;nt hozz&aacute;rendelhető merevlemezeket jelen&iacute;ti meg. Egy hot spare lemez hozz&aacute;rendel&eacute;s&eacute;hez jel&ouml;lje be a hot spare lemezk&eacute;nt hozz&aacute;rendelni k&iacute;v&aacute;nt lemez melletti mezőt.</li>
+<li>Kattintson az <b>Alkalmaz</b> gombra a be&aacute;ll&iacute;t&aacute;sok ment&eacute;s&eacute;hez.</li>
+</ol>
+<p><span class="note_head">Megjegyz&eacute;s:</span> Amikor egy merevlemez hot spare lemezk&eacute;nt ker&uuml;l hozz&aacute;rendel&eacute;sre, a lemezen l&eacute;vő &ouml;sszes adat t&ouml;rlődik. Egy hot spare lemez hozz&aacute;rendel&eacute;se előtt győződj&ouml;n meg r&oacute;la, hogy a lemezen nincsenek fontos adatok.</p>
+
+<p>____<br />*Csak bizonyos modelleken &eacute;rhető el.</p>
+
+</body>
+</html>

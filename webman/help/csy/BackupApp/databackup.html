@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Zálohování dat</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Zálohování dat</h2>
+
+<p>Na kartě <b>Zálohování</b> v části <b>Zálohování a replikace</b> můžete zálohovat konkrétní data uložená na zařízení DiskStation ručně nebo podle vlastního plánu. Díky této funkci lze zálohovat konfiguraci systému, obsah sdílených složek a data balíčků do cíle místního, síťového nebo cloudového zálohování.</p>
+
+<h4>Postup vytvoření úlohy zálohování:</h4>
+<ol>
+<li>Vyberte možnost <b>Vytvořit</b> > <b>Úloha zálohování dat</b>.</li>
+<li>Nastavení dokončete pomocí průvodce. Více informací najdete v části <a href="repository.html">Cíl záloh</a>.</li>
+</ol>
+
+<h4>Postup správy úloh zálohování:</h4>
+<p>Vyberte stávající úlohu a klikněte na jedno z níže uvedených tlačítek:</p>
+<ul>
+<li><strong>Upravit:</strong> Změňte cíl, zdroj, plán a další nastavení vybrané úlohy.</li>
+<li><strong>Odstranit:</strong> Odstraňte vybranou úlohu.</li>
+<li><strong>Storno:</strong> Zrušte vybranou aktuálně spuštěnou úlohu.</li>
+<li><strong>Zálohovat teď:</strong> Okamžitě spustí zálohování vybrané úlohy.</li>
+</ul>
+
+
+<h3>Rotace záloh</h3>
+<p>Rotace záloh je systém správy verzí. Umožňuje spravovat verze záloh pomocí automatického mazání starých nepotřebných verzí a případně též uvolněním úložného prostoru. Tuto funkci můžete aktivovat v nabídce <b>Nastavení úloh</b> nebo ji nastavit při vytváření úlohy zálohování.</p>
+<h4>Postup rotace verzí:</h4>
+<ol>
+<li>Vyberte úlohu zálohování, u níž chcete použít rotaci verzí, a klikněte na možnost <strong>Upravit</strong>.</li>
+<li>Přejděte na kartu <strong>Nastavení úloh</strong> a zaškrtněte volbu<strong> Aktivovat rotaci verzí</strong>. </li>
+<li>Máte na výběr jednu z dvou metod rotace:</li>
+<ul>
+<li><b>Od nejstarší verze:</b> Jedná se o základní metodu rotace verzí. Při spuštění systému rotace bude jako první odstraněna nejstarší verze. </li>
+<li><b>Smart Recycle:</b> Jedná se o inteligentní systém rotace verzí. Při spuštění systému rotace budou odstraněny ty verze, které určí mechanismus uchovávání. Způsob uchovávání funguje takto:</li>
+<ul>
+	<li><b>Hodinové verze za posledních 24 hodin:</b> Systém uchovává nejstarší verzi z každé hodiny.</li>
+	<li><b>Denní verze staré 1 den až 1 měsíc:</b> Systém uchovává nejstarší verzi z každého dne.</li>
+	<li><b>Týdenní verze po 1 měsíci:</b> Systém uchovává nejstarší verzi z každého týdne.</li>
+</ul>
+</ul>
+<li>Zadejte maximální <b>počet verzí</b>. Pokud počet verzí překročí toto číslo, spustí se rotace verzí. Do počtu verzí se nezapočítávají uzamčené verze.</li>
+<li>Pokud jste nastavili plán opakovaných záloh, zobrazí se předběžný odhad toho, jak budou vaše verze záloh uchovávány a nejstarší bod obnovy v závislosti na vašem nastavení rotace.   </li>
+<li>Nastavení uložíte kliknutím na tlačítko <strong>OK</strong>. </li>
+</ol>
+
+<div class="section">
+  <h4>Poznámky:</h4>
+  <ul>
+  <li>Uzamčené verze se nikdy neodstraňují. Více informací najdete v části <a href="repository.html#lock_version">Cíl záloh</a>.</li><li>Funkci rotace verzí lze využít pouze u úloh zálohování s několika verzemi.</li><li>Rotace verzí není podporována v DSM verze 5.1 a starší.</li>
+  <li>Rotace se spustí ihned po změně nastavení nebo po dokončení úlohy zálohování.</li>
+  <li>Do výpočtu maximálního počtu verzí se nezapočítávají uzamčené verze.</li>
+  </ul>
+</div>
+
+
+<div class="section">
+<h4>Obecné poznámky:</h4>
+<ul>
+<li>Názvy úloh mohou obsahovat 1 až 32 znaků Unicode a nesmí obsahovat následující znaky:<br> <span class="letterSpace5">! " # $ % & ' ( ) * + , / : ; < = > ? @ [ ] \ ^ ` { } | ~</span></li>
+<li>Maximální délka celé cesty ke složce se zálohou je 2 048 znaků.</li>
+<li>Pokud do sdílené složky v systému souborů EXT3 nahrajete přes rozhraní AFP více než 32 000 souborů, dojde u všech úloh zálohování v rámci sdílené složky k poruše.</li>
+<li>Šifrovanou složku lze zálohovat jako připojenou i jako odpojenou. Při obnovení však bude vždy odpojená a při startu se automaticky nepřipojí. Abyste šifrovanou sdílenou složku mohli připojit, bude vyžadováno zadání nebo import šifrovacího klíče.</li>
+<li>Zálohování šifrované složky do jiné šifrované složky není podporováno.</li>
+<li>Používání vzdálených složek jako zdroje nebo cíle zálohování není podporováno.</li><li>Pokud cílovým umístěním záloh je svazek, může úlohu zálohování provádět pouze vlastník úlohy. Více informací najdete v části <a href="repository.html">Cíl záloh</a>.</li>
+<li>Je podporována možnost zálohování konkrétních aplikací. Chcete-li zjistit, zda konkrétní balíček podporuje možnost zálohování, včetně obsahu zálohování a omezení, přečtěte si nápovědu jednotlivých aplikací.</li>
+<li class="enable-eds14">DiskStation nepodporuje zálohování aplikací bez zapisovatelného externího zařízení EXT3/EXT4.</li>
+<li class="enable-eds14">DiskStation nepodporuje zálohování na svazek bez zapisovatelného externího zařízení EXT3/EXT4.</li>
+<li class="enable-eds14">DiskStation může zálohovat pouze sdílené složky vytvořené na externích zařízeních EXT3/EXT4.</li>
+<li class="disable-eds14">Systém nemůže zálohovat aplikace bez zapisovatelného svazku.</li
+></ul>
+</div>
+<div class="section disable-eds14">
+<h4>Zálohování nastavení seznamu Windows ACL:</h4>
+<p>V závislosti na systémech souborů cílového umístění bude pravděpodobně nutné zálohovat nastavení seznamu Windows ACL souborů uložených na zařízení DiskStation:</p>
+<ul>
+
+<li>Díky možnostem <strong>Cíl místní zálohy</strong>, <strong>Cíl síťové zálohy</strong> a <strong>Cíl záloh veřejného cloudu</strong> můžete zálohovat nastavení seznamu Windows ACL bez ohledu na systém souborů cílového umístění</li>
+
+<li>Funkce <strong>Synchronizace sdílených složek</strong> dokáže zálohovat nastavení seznamu Windows ACL, pokud je systém souborů cílového umístění nastaven na systém EXT4<span style="display: inline;" class="enable-rc18015xsp">/BTRFS</span>.</li>
+
+</ul>
+</div>
+
+</body></html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Informační centrum</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h1>Informační centrum</h1>
+<p>Informační centrum zobrazuje informace týkající se nejrůznějších aspektů zařízení DiskStation, jako jsou parametry hardwarového vybavení, síť, úložiště a služby. Informační centrum najdete v části <strong>Ovládací panel</strong> > <strong>Informační centrum</strong>.</p>
+<h2><a name="general"></a>Obecné</h2>
+<p>
+Na kartě <b>Obecné</b> jsou zobrazeny základní informace o zařízení DiskStation, včetně sériového čísla, názvu modelu, velikosti fyzické paměti, verze systému DSM, času, teplotního stavu nebo externích zařízení.</p>
+
+<h3 class="disable-eds14">Teplotní stav*</h3>
+<p class="disable-eds14">Teplotní stav zařízení DiskStation je znázorněna zelenou nebo oranžovou kontrolkou:</p>
+
+<ul class="disable-eds14">
+<li><strong>Zelená:</strong> Teplotní stav je normální.</li>
+<li><strong>Oranžová</strong>: Teplota zařízení DiskStation je příliš vysoká. Pokud je teplota zařízení DiskStation příliš vysoká, může toto přehřátí způsob vypnutí.</li>
+</ul>
+
+
+<h2><a name="network"></a>Síť</h2>
+<p>Karta <b>Síť</b> zobrazuje informace o síti, jako je server DNS, IP adresa, maska podsítě a další.</p>
+
+<h2><a name="storage"></a>Úložiště</h2>
+<p class="disable-eds14">Karta <b>Úložiště</b> zobrazuje informace o využití svazků a stavu pevných disků.</p>
+<p class="enable-eds14">Karta <strong>Úložiště</strong> zobrazuje informace o využití úložiště a stavu externích úložných zařízeních.</p>
+
+<h3 class="disable-eds14">Stav pevného disku</h3>
+
+<p class="disable-eds14">Níže jsou uvedeny možné stavy interního pevného disku:</p>
+
+<ul class="disable-eds14">
+<li><strong>Není nainstalován žádný disk:</strong> V příslušném slotu pro pevný disk není nainstalován žádný disk.</li>
+<li><strong>Není inicializováno:</strong> Na pevném disku není vytvořen systémový oddíl ani svazek.</li>
+<li><strong>Normální:</strong> Na pevném disku je k dispozici systémový oddíl a svazek.</li>
+<li><strong>Inicializováno:</strong> Je vytvořen systémový oddíl, ale není vytvořen žádný svazek.</li>
+<li><strong>Systémový oddíl selhal:</strong> Systémový oddíl na pevném disku není k dispozici.</li>
+<li><strong>Zhroucení:</strong> Přístup k svazku na pevném disku se nezdařil. Doporučujeme pevný disk vyměnit.</li>
+</ul>
+
+
+
+
+<div class="section disable-eds14">
+
+<h4>Poznámka:</h4>
+<p>Aby systém fungoval normálně, musí být k&nbsp;dispozici alespoň jeden disk, u&nbsp;něhož je uveden stav <strong>Normální</strong> nebo <strong>Inicializováno</strong>.</p>
+</div>
+
+
+<h2><a name="service"></a>Služba</h2>
+<p>
+  Karta <b>Služba</b> zobrazuje seznam služeb a nainstalovaných balíčků, včetně možností povolení nebo zakázání jednotlivých služeb a balíčků. Kromě některých služeb a balíčků jsou k dispozici možnost pro testování připojení nebo nastavení přístupu k jednotlivým službám nebo balíčkům prostřednictvím brány firewall.
+</p>
+
+<h4>Postup změny nastavení služby nebo balíčku:</h4>
+<ol>
+<li>K dispozici jsou následující možnosti:
+	<ul>
+	  <li><strong>Povolit:</strong> Povolte nebo zakažte službu nebo balíček.</li>
+	  <li><strong>Povolit prostřednictvím brány firewall:</strong> Přidejte nebo odeberte porty využívané službou nebo aplikací v části <strong>Ovládací panel</strong> > <strong>Externí přístup</strong> > <strong>Konfigurace směrovače</strong>, čímž umožníte průchod služby nebo balíčku přes bránu firewall zařízení DiskStation.</li>
+	  <li><strong>Nastavení:</strong> Vyberte síťové rozhraní, jehož nastavení brány firewall chcete zobrazit a spravovat. Díky možnosti <strong>Vše</strong> zobrazíte a provedete správu nastavení brány firewall všech síťových rozhraní.</li>
+	  <li><strong>Vyzkoušet připojení:</strong> Vyzkoušejte porty, které používají služby a balíčky. Toto nastavení umožňuje vyzkoušet přístup zařízení ke službám a balíčkům z externí sítě.</li>
+    </ul>
+</li>
+<li>Změny uložíte kliknutím na možnost <strong>Uložit</strong>, nebo je zrušíte kliknutím na <strong>Obnovit</strong>. </li>
+</ol>
+
+<p class="disable-eds14">____<br> * K dispozici jen u některých modelů. </p>
+
+</body>
+</html>

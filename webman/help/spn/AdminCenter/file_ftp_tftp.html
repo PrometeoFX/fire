@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TFTP/PXE</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>TFTP/PXE</h2>
+
+<p>Las opciones en <strong>Panel de control</strong> &gt; <strong>Servicios de archivos</strong> &gt; <strong>TFTP/PXE</strong> le permiten configurar los par&aacute;metros de TFTP y PXE.</p>
+
+<h3>TFTP</h3>
+<p>El Protocolo trivial de transferencia de archivos (TFTP) es un sencillo protocolo de transferencia de archivos que se suele usar para transferir los archivos de configuraci&oacute;n o arranque en situaciones en las que no es necesaria ninguna autenticaci&oacute;n. Al habilitar el servicio TFTP, DiskStation podr&aacute; transferir cargadores de arranque a dispositivos cliente.</p>
+<h4>Para modificar la configuraci&oacute;n de TFTP:</h4>
+<ol>
+<li>Marque la casilla <strong>Habilitar servicio TFTP</strong>.</li>
+<li>En el campo <strong>Carpeta root TFTP</strong>, indique a que carpeta de DiskStation pueden acceder los clientes TFTP.</li>
+<li>Puede hacer clic en el bot&oacute;n <strong>Configuraci&oacute;n avanzada</strong> para ver y modificar las siguientes opciones de configuraci&oacute;n:</li>
+<ul>
+<li><strong>Habilitar registro de transferencia de archivos TFTP:</strong> esta opci&oacute;n le permite realizar un seguimiento de los datos transferidos por TFTP.</li>
+<li><strong>Permiso de cliente TFTP:</strong> seleccione los permisos de lectura y escritura para clientes TFTP. Si se selecciona la opci&oacute;n <strong>Solo lectura</strong>, los clientes TFTP solo podr&aacute;n ver el contenido de la carpeta root. Si se selecciona la opci&oacute;n <strong>Grabable</strong>, los clientes TFTP podr&aacute;n modificar el contenido de la carpeta root.</li>
+<li><strong>Clientes permitidos:</strong> elija qu&eacute; clientes tendr&aacute;n permiso para conectarse a trav&eacute;s de TFTP. Puede permitir que todos los clientes se conecten seleccionando <strong>Todas las conexiones</strong>; o bien puede limitar qu&eacute; clientes pueden conectarse indicando un intervalo de direcciones IP.</li>
+</ul>
+<li>Tras modificar la configuraci&oacute;n, haga clic en <strong>Aplicar</strong> para guardar.</li>
+</ol>
+
+
+<h3>Configurar el servicio DHCP para PXE con su DiskStation</h3>
+<p>Adem&aacute;s de TFTP, DiskStation tambi&eacute;n puede ofrecer un servicio DHCP para implementar una configuraci&oacute;n PXE todo en uno. El Entorno de ejecuci&oacute;n previo al arranque (PXE) es un entorno de red que permite que los dispositivos cliente arranquen utilizando una interfaz de red en lugar de un dispositivo de almacenamiento de datos (p. ej., discos duros). Al implementar PXE, se puede almacenar un cargador de arranque en DiskStation y los dispositivos cliente pueden arrancar a trav&eacute;s de la red utilizando el cargador de arranque.</p>
+
+<p>Para ofrecer servicios DHCP con DiskStation, aseg&uacute;rese de que ha instalado el paquete de DHCP Server de Synology.</p>
+
+<h4>Para configurar el servicio DHCP para PXE:</h4>
+<ol>
+<li>Active la casilla <strong>Configurar servicio DHCP en este servidor para PXE</strong>. Se le pedir&aacute; que instale el paquete de DHCP Server si a&uacute;n no est&aacute; instalado en su DiskStation.</li>
+<li>Seleccione un archivo de cargador de arranque de la carpeta root TFTP y especifique otras opciones de configuraci&oacute;n relacionadas con DHCP.</li>
+<li>Haga clic en <strong>Aplicar</strong> para guardar la configuraci&oacute;n.</li>
+</ol>
+</body>
+</html>

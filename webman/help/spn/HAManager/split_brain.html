@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Split brain</h2>
+
+<p>Cuando un cl&uacute;ster high-availability funciona normalmente, solo uno de los servidores deber&iacute;a asumir el papel de servidor activo. En este caso, el servidor pasivo detecta la presencia del servidor activo a trav&eacute;s de la conexi&oacute;n Heartbeat y de la conexi&oacute;n de datos.</p>
+
+<p>Si se pierden todos los datos de Heartbeat, ambos servidores intentar&aacute;n asumir el papel de servidor activo. Esta situaci&oacute;n se denomina error de &quot;split brain&quot; (cerebro dividido). En este caso, las conexiones a la direcci&oacute;n IP asignada al cl&uacute;ster high-availability se redirigir&aacute;n a uno de los dos servidores, dando lugar a errores de servicio.</p>
+        
+<h4>En caso de que se produzca un error de &quot;split brain&quot;:</h4>
+	<ol>
+		<li>Las conexiones con la direcci&oacute;n IP del cl&uacute;ster se redirigir&aacute;n a cualquiera de los servidores, dando lugar a errores de servicio. Tendr&aacute; problemas para conectar con cualquiera de los servidores.</li>
+		<li>El sistema detectar&aacute; el error de &quot;split brain&quot; y eliminar&aacute; el cl&uacute;ster high-availability, desvinculando ambos servidores.</li>
+		<li>Una vez que ambos servidores vuelvan al estado <b>Independiente</b>, podr&aacute; iniciar sesi&oacute;n en DiskStation Manager (DSM). En este momento, los datos almacenados antes de la eliminaci&oacute;n del cl&uacute;ster high-availability permanecer&aacute;n en ambos servidores. Tras identificar qu&eacute; servidor contiene los datos m&aacute;s actualizados, puede vincular de nuevo los servidores para volver a crear un cl&uacute;ster high-availability.</li>
+	</ol>
+ </body>
+</html>

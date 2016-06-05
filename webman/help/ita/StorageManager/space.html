@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Volume</h2>
+	<p>I volumi sono gli spazi di archiviazione di base nei quali l'utente può creare cartelle condivise, iSCSI LUN (File normali), salvare dati o installare i pacchetti. Prima di creare qualsiasi volume, verificare di aver creato in precedenza un RAID Group. Per ulteriori informazioni relative ai RAID Group, fare riferimento a <a href="raid.html">RAID Group</a>.
+</p>
+
+	<h4>Per creare un volume:</h4>
+<ol>
+  <li>Verificare che DiskStation disponga di un RAID Group esistente con spazio allocabile.</li>
+  <li>Fare clic sul pulsante <strong>Crea</strong>.</li>
+		<li>Scegliere un RAID Group nel quale creare il volume.</li>
+		<li>Modificare le impostazioni desiderate.</li>
+		<li>Impostare le dimensioni di allocazione per il volume. (L'impostazione delle dimensioni di allocazione non è disponibile con i volumi creati su un RAID Group per Volumi singoli o iSCSI LUN)
+		</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+	<li>Le dimensioni massime di volume allocabili sono 200 TB.</li>
+	<li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp enable-ds1616p">Le dimensioni minime allocate a un volume Btrfs devono essere di almeno 10 GB.</li>
+</ul>
+</div>
+
+
+<h4>Per rimuovere un volume:</h4>
+	<ol>
+		<li>Selezionare il volume da rimuovere.</li>
+		<li>Fare clic su <b>Rimuovi</b> e seguire la procedura guidata per completare il processo.</li>
+	</ol>
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>La rimozione del volume comporterà la cancellazione di tutti i dati esistenti nel volume.</li>
+</ul>
+</div>
+
+<h4>Per forzare il montaggio di un volume:</h4>
+<p>Se la cache su un volume è mancante, il sistema non monterà il volume al riavvio. Se la cache non è rilevabile, e si vuole accedere al volume, è possibile fare clic su <b>Forza montaggio</b>. </p>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>questa funzione è disponibile solo su modelli specifici.</li>
+</ul>
+</div>
+
+	<h4>Per riparare un volume:</h4>
+	<p>Se lo stato del volume è <b>Danneggiato</b>, passare alla scheda <b>RAID Group</b> e cercare il RAID Group appropriato. Seguire le istruzioni consigliate per la riparazione.
+</p>
+
+	<h4>Per espandere le dimensioni di un volume</h4>
+	<ul>
+		<li>Per i volumi creati su un RAID Group per volumi o iSCSI LUN (Livello blocco) multipli. 
+<ol>
+				<li>Selezionare il volume da espandere.</li>
+				<li>Fare clic su <b>Modifica</b>.</li>
+				<li>Immettere le nuove dimensioni e fare clic su <b>OK</b> per espandere.</li>
+			</ol>
+		<li>Per i volumi creati su un RAID Group per un volume/iSCSI LUN singolo (Livello blocco), consultare la sezione <b>Per espandere le dimensioni di un RAID Group</b> di <a href="raid.html">RAID Group</a>, le dimensioni del volume saranno applicate una volta espanso il RAID Group.
+	  </li>
+	</ul>
+
+
+<h3>TRIM SSD</h3>
+
+<p>Se un volume consiste interamente di SSD (unità a stato solido), si raccomanda di abilitare TRIM SSD. Questa funzione migliora le prestazioni di lettura e scrittura dei volumi creati sulle SSD, accrescendo l'efficienza nonché estendendo la durata delle SSD.</p>
+
+<h4>Per abilitare TRIM SSD:</h4>
+
+<ol>
+  <li>Aprire <b>Gestione archiviazione</b> e andare su <b>Volume</b>.</li>
+  <li>Selezionare un volume che consiste unicamente di SSD, quindi fare clic sul pulsante <b>Configura</b>.</li>
+  <li>Nella finestra visualizzata, andare sulla scheda <b>TRIM SSD</b> e fare clic sulla casella <b>Abilita TRIM</b>.</li>
+<li>Fare clic sul pulsante <strong>Imposta programmazione</strong> per scegliere quando il sistema eseguirà TRIM SSD.</li>
+<li>Fare clic su <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+
+<li>TRIM SSD è disponibile solo su alcuni modelli di DiskStation e tipi di RAID. </li>
+
+
+<li>alcuni modelli SSD non sono in grado di eseguire TRIM SSD su volumi RAID 5 e RAID 6. Fare riferimento all'elenco di compatibilità su <a href="http://www.synology.com/" target=_blank>www.synology.com</a>.</li>
+
+
+<li>I TRIM SSD non possono essere abilitati nelle seguenti situazioni:
+  <ul>
+    <li>Il volume è montato con cache SSD.</li>
+    <li>Il pacchetto <strong>Time Backup</strong> è installato.</li>
+    <li>Un cluster high-availability è stato creato con il pacchetto <strong>Manager High Availability</strong>.</li>
+  </ul>
+</li>
+<li>TRIM SSD non può essere abilitato su iSCSI LUN (livello blocco).</li>
+<li>Le prestazioni del sistema saranno influenzate quando si esegue TRIM SSD. Il tempo necessario a finire l'esecuzione TRIM varia a seconda delle dimensioni del volume e del modello di SSD.</li>
+
+<li>Quando TRIM è abilitato su un volume, esso sarà anche abilitato su altri volumi creati sullo stesso Gruppo Disco o RAID Group.</li>
+
+</ul>
+</div>
+
+
+</body>
+</html>

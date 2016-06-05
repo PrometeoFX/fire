@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Backup og kopiering</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>LUN-backup*</h2>
+<p>På fanen <b>Backup</b> i <b>Backup og kopiering</b> kan du bruge <b>Lokal LUN-backup</b> til at udføre backup på iSCSI LUN'er på DiskStation til lokale delte mapper. Du kan også bruge <b>Netværks-LUN-backup</b> for at udføre backup til en anden DiskStation.</p>
+
+<h4>Sådan udfører du backup på en iSCSI LUN:</h4>
+<ol>
+<li>
+Vælg <b>Opret</b> > <b>LUN-backupopgave</b> for at åbne <b>Guide til LUN-backup</b> og klikke på <b>Næste</b>.
+</li>
+<li>
+Når du bedes om at vælge en destinationstype, skal du vælge en af følgende:
+</li>
+<ul>
+<li>
+<b>Lokal LUN-backup</b>: Vælg denne mulighed for at udføre backup på LUN'en fra DiskStation til en lokalt delt mappe eller et eksternt lager, som har forbindelse til USB- eller eSATA-porten på din DiskStation.
+</li>
+<li><b>Netværks-LUN-backup</b>: Vælg denne mulighed for at udføre backup på en LUN fra din DiskStation til en anden DiskStation.
+</li>
+</ul>
+<li>
+Når du bedes om det, skal du angive backupdestinations- og kilde-LUN og angive backupplanen.
+</li>
+<li>
+Følg guiden for at fuldføre opsætningen.
+</li>
+</ol>
+<p>Når backupopgaven er oprettet, vil DiskStation udføre backupopgaven efter planen og gemme backup-LUN'en på destinationen. Backup-LUN'en bruges kun til backupformål. Hvis du vil have adgang til backup-LUN'en, kan du se <a href="restore.html">Sådan gendanner du backup-LUN</a> for at se flere oplysninger.</p>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+<li>Der udføres backup på både almindelige filer og LUN'er på blokniveau som filbilleder på destinationen. Ved gendannelse bliver LUN'er på blokniveau ændre til fil-LUN'er.</li>
+<li>Hver backupopgave kan kun indeholde en LUN som backupkilde.</li>
+<li>Der kan ikke udføres backup på LUN'er til en ekstern disk med formatet FAT, FAT32, HFS, HFS Plus eller NTFS.</li>
+<li>Før du udfører Netværks-LUN-backup, skal du logge ind på destinations-DiskStation og sørge for, at netværksbackupstjenesten er aktiveret under <b>Backup & kopiering</b> > <b>Backuptjenester</b>.</li>
+<li>Hvis din DiskStation opretter forbindelse til netværket via en router, skal du sørge for, at du har angivet en portvideresendelsesregel for iSCSI-tjenesten (TCP-port 3260) på routeren, før du udfører netværks-LUN-backup.</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Om fuld backup og stigende backup:</h4>
+<p>
+DiskStation vil udføre en fuld backup af den valgte LUN første gang og se udføre stigende backup senere. Hvis det delte mappenavn eller biblioteksnavn for backupdestinationen dog ændres, vil DiskStation udføre en fuld backup af opgaven igen.
+</p>
+</div>
+
+<p>____<br /> * Findes kun på bestemte modeller.</p>
+</body></html>

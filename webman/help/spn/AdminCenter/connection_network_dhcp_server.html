@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DHCP Server</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>DHCP Server</h2>
+<p>Su DiskStation puede asumir el papel de DHCP server y asigna direcciones IP din&aacute;micas a clientes DHCP dentro de su red de &aacute;rea local.</p>
+
+<h4>Para habilitar DHCP Server:</h4>
+<ol>
+<li>Vaya al <strong>Panel de control</strong> &gt; <strong>Red</strong> &gt; <strong>Interfaz de red</strong>.</li>
+<li>Seleccione un interfaz de red (por ejemplo LAN) y haga clic en <strong>Editar</strong>.</li>
+<li>Vaya a la pesta&ntilde;a <strong>DHCP Server</strong> y marque <b>Habilitar DHCP Server</b>.</li>
+<li>Introduzca un valor en el campo <b>Tiempo de uso de direcci&oacute;n</b> para ajustar el tiempo de uso de DHCP (en minutos) para direcciones IP asignadas a clientes DHCP.</li>
+<li>Introduzca la direcci&oacute;n DNS para clientes DHCP en los campos <b>DNS primario</b> (obligatorio) y <b>DNS secundario</b> (opcional).</li>
+<li>Establezca el nombre del dominio para DHCP Server en el campo <b>Nombre de dominio</b> (opcional).</li>
+<li>Haga clic en <b>OK</b>.</li>
+</ol>
+<h4>Para agregar una subred:</h4>
+<ol>
+<li>Haga clic en <b>Agregar</b> y luego especifique la informaci&oacute;n en las siguientes columnas:</li>
+<ul>
+<li><b>Habilitar</b>: habilite o deshabilite la subred.</li>
+<li><b>Inicio</b>: la primera direcci&oacute;n IP de la subred.</li>
+<li><b>Fin</b>: la &uacute;ltima direcci&oacute;n IP de la subred.</li>
+<li><b>M&aacute;scara de subred</b>: la m&aacute;scara de subred.</li>
+<li><b>Pasarela</b>: la pasarela de la subred.</li>
+</ul>
+<li>Haga clic en <b>OK</b>.</li>
+</ol>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Solo puede agregar hasta 32 subredes.</li>
+</ul>
+</div>
+
+
+
+<h3>Clientes DHCP</h3>
+
+<p>Para ver una lista de clientes DHCP y sus configuraciones de red (por ejemplo, direcci&oacute;n MAC, direcci&oacute;n IP, nombre de host y la cantidad de tiempo restante hasta la caducidad del uso de DHCP), puede ir a la pesta&ntilde;a <strong>Clientes DHCP</strong>.</p>
+
+
+<h3>Reserva de DHCP</h3>
+
+<p>Si desea que un cliente reciba siempre la misma direcci&oacute;n IP al renovar el uso de DHCP, puede agregar el cliente a la lista de direcciones reservadas.</p>
+
+<h4>Para agregar un cliente a la lista de direcciones reservadas:</h4>
+
+<ul>
+<li>Haga clic en <b>Agregar</b>.</li>
+<li>Especifique la direcci&oacute;n MAC del cliente, la direcci&oacute;n IP que quiere asignar al cliente y el nombre de host del cliente. </li>
+<li>Haga clic en <b>OK</b> para guardar su configuraci&oacute;n.</li>
+</ul>
+
+
+</body>
+</html>

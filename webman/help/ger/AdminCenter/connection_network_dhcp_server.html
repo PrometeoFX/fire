@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DHCP Server</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>DHCP Server</h2>
+<p>Ihr DiskStation kann die Funktion eines DHCP Servers &uuml;bernehmen und weist den DHCP-Clients innerhalb Ihres lokalen Netzwerks dynamische IP-Adressen zu.</p>
+
+<h4>So aktivieren Sie den DHCP Server:</h4>
+<ol>
+<li>Gehen Sie zu <strong>Systemsteuerung</strong> &gt; <strong>Netzwerk</strong> &gt; <strong>Netzwerk-Schnittstelle</strong>.</li>
+<li>W&auml;hlen Sie eine Netzwerk-Schnittstelle (z.&nbsp;B. LAN) aus und klicken Sie dann auf <strong>Bearbeiten</strong>.</li>
+<li>Gehen Sie auf die Registerkarte <strong>DHCP Server</strong>, und markieren Sie <b>DHCP Server aktivieren</b>.</li>
+<li>Geben Sie einen Wert in das Feld <b>Lease-Time von Adresse</b> ein, um die DHCP-Lease-Time (in Minuten) f&uuml;r Adressen einzustellen, die DHCP-Clients zugewiesen wurden.</li>
+<li>Geben Sie die DNS-Adresse f&uuml;r DHCP-Clients in die Felder <b>Prim&auml;res DNS</b> (obligatorisch) und <b>Sekund&auml;res DNS</b> (optional) ein.</li>
+<li>Stellen Sie den Domainnamen f&uuml;r DHCP Server im Feld <b>Domainname</b> (optional) ein.</li>
+<li>Klicken Sie auf <b>OK</b>.</li>
+</ol>
+<h4>So f&uuml;gen Sie ein Teilnetz hinzu:</h4>
+<ol>
+<li>Klicken Sie auf <b>Hinzuf&uuml;gen</b>, und geben Sie anschlie&szlig;end die Informationen in die folgenden Spalten ein:</li>
+<ul>
+<li><b>Aktivieren</b>: Aktivieren oder deaktivieren Sie das Teilnetz.</li>
+<li><b>Start</b>: Die erste IP-Adresse des Teilnetzes.</li>
+<li><b>Ende</b>: Die letzte IP-Adresse des Teilnetzes.</li>
+<li><b>Netzmaske</b>: Die Teilnetz-Maske.</li>
+<li><b>Gateway</b>: Der Gateway des Teilnetzes.</li>
+</ul>
+<li>Klicken Sie auf <b>OK</b>.</li>
+</ol>
+
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Sie k&ouml;nnen nur bis zu 32 Subnetze hinzuf&uuml;gen.</li>
+</ul>
+</div>
+
+
+
+<h3>DHCP Clients</h3>
+
+<p>Gehen Sie zur Registerkarte <strong>DHCP Clients</strong>, um eine Liste der DHCP Clients und deren Netzwerkkonfigurationen (z.&nbsp;B. MAC-Adresse, IP-Adresse, Hostnamen und verbleibende Zeit bis zum Ablauf des DHCP-Leasing) anzuzeigen.</p>
+
+
+<h3>DHCP-Reservierung</h3>
+
+<p>Falls ein Client bei jeder Erneuerung des DHCP-Leasings dieselbe IP-Adresse erhalten soll, k&ouml;nnen Sie den Client zur Liste f&uuml;r die Adressenreservierung hinzuf&uuml;gen.</p>
+
+<h4>So f&uuml;gen Sie einen Client der Liste f&uuml;r die Adressenreservierung hinzu:</h4>
+
+<ul>
+<li>Klicken Sie auf <b>Hinzuf&uuml;gen</b>.</li>
+<li>Geben Sie die MAC-Adresse des Clients an, die IP-Adresse, welche Sie diesem zuweisen m&ouml;chten, und den Hostnamen des Clients. </li>
+<li>Klicken Sie auf <b>OK</b>, um Ihre Einstellungen zu speichern.</li>
+</ul>
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Firewall</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_firewall"></a>Firewall</h2>
+<p>Creare regole di firewall su <strong>Pannello di controllo</strong> &gt; <strong>Sicurezza</strong> &gt; <strong>Firewall</strong> aiuta a prevenire l&apos;accesso non autorizzato e controllare l&apos;accesso di servizio. &Egrave; possibile decidere se consentire o negare l&apos;accesso ad alcune porte di rete da indirizzi IP specifici.</p><h3>Per creare una regola del firewall:</h3>
+<ol>
+<li>Selezionare un&apos;interfaccia di rete nel menu a discesa nell&apos;angolo in alto a destra.</li>
+<li>Fare clic su <b>Crea</b>.</li>
+<li>Nella sezione <b>Porte</b>, selezionare uno dei seguenti:</li>
+<ul>
+<li>Scegliere <b>Tutto</b> per applicare questa regola firewall a tutte le porte.</li>
+<li>Scegliere <b>Selezionare da un elenco di applicazioni integrate</b> e fare clic su <strong>Seleziona</strong>. Selezionare le applicazioni integrate a cui si vuole applicare questa regola firewall.</li>
+<li>Scegliere <b>Personalizza</b> e fare clic su <b>Personalizza</b>. Inserire fino a 15 porte separate da virgole o specificare un intervallo di porta a cui applicare questi firewall.</li>
+</ul>
+<li>Nella sezione <b>IP origine</b>, selezionare uno dei seguenti:</li>
+<ul>
+<li>Scegliere <b>Tutto</b> per applicare questa regola firewall a tutti gli indirizzi IP.</li>
+<li>Scegliere <b>IP specifico</b> e fare clic su <strong>Seleziona</strong>. &Egrave; possibile specificare un indirizzo IP o un intervallo IP a cui applicare questa regola firewall.</li>
+<li>Scegliere <b>Regione</b> e quindi specificare fino a 15 paesi a cui applicare questa regola firewall.</li>
+</ul>
+<li>Nella sezione <b>Azione</b>, selezionare uno dei seguenti:</li>
+<ul>
+	<li>Selezionare <b>Consenti</b> per consentire l&apos;accesso secondo le impostazioni delle porte e dell&apos;IP sorgente specificati.</li>
+	<li>Selezionare <b>Nega</b> per negare l&apos;accesso secondo le impostazioni delle porte e dell&apos;IP sorgente specificati.</li>
+</ul>
+</ol>
+
+<p>&Egrave; possibile visualizzare regole firewall LAN e PPPoE selezionando queste interfacce dalla casella nell&apos;angolo in alto a destra. In fondo all&apos;elenco delle regole &egrave; possibile selezionare <b>Consenti accesso</b> o <b>Nega accesso</b> per consentire o negare qualsiasi richiesta di accesso che non corrisponde a una regola firewall esistente per la rispettiva interfaccia.</p>
+
+
+<div class="section">
+<h4>Nota.</h4>
+<ul>
+<li>&Egrave; possibile creare fino a 100 regole per un&apos;interfaccia di rete. </li>
+<li>Trascinare per riordinare le regole nell&apos;elenco.</li>
+<li>La priorit&agrave; delle regole viene stabilita in base alla posizione nell&apos;elenco.</li>
+<li>Se si hanno pi&ugrave; porte di rete collegate alla stessa sottorete, le regole firewall potrebbero non funzionare correttamente.* </li>
+<li>Quando si combinano porte LAN multiple con la funzione Link Aggregation, il firewall applica le regole alla prima interfaccia di rete e mantiene le regole della seconda.</li>
+<li>Se DiskStation si connette a Internet tramite PPPoE, le relative regole del firewall devono essere configurate sull&apos;interfaccia PPPoE corrispondente.</li>
+</ul>
+</div>
+<h3>Comportamento regola firewall:</h3>
+<p>il firewall DSM corrisponder&agrave; alle regole secondo la priorit&agrave;. <strong>Una volta che la regola &egrave; corrisposta, essa sar&agrave; applicata e il firewall DSM non continuer&agrave; a corrispondere alle regole restanti</strong>. Se non vi &egrave; alcuna regola corrispondente, il firewall DSM eseguir&agrave; l&apos;azione predefinita specificata in ogni interfaccia.</p>
+<h4>Priorit&agrave; regola firewall:</h4>
+<ol> 
+<li>Regole definite in &quot;Tutte le interfacce&quot;.</li>
+<li>Regole definite nelle rispettive interfacce a cui appartiene la connessione.</li>
+<li>Regole predefinite nelle rispettive interfacce a cui appartiene la connessione.</li>
+</ol>
+<p>____<br> * Si applica solo a modelli specifici.<br> # Questa funzione include i dati GeoLite creati da MaxMind, disponibili su <a href="http://www.maxmind.com" target="_blank">http://www.maxmind.com</a>.</p><br></body>
+</html>

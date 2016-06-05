@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Ligar a VPN - Ajuda do Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Turn your DiskStation into a VPN client and create profiles to connect your DiskStation to a VPN server.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1>Ligar a VPN</h1>
+<p>Pode facilmente tornar o seu DiskStation num cliente VPN e estabelecer liga&ccedil;&atilde;o a servidores VPN (Rede Privada Virtual) atrav&eacute;s dos protocolos PPTP, OpenVPN ou L2TP/IPSec. Se disp&otilde;e de v&aacute;rios servidores VPN, tamb&eacute;m pode criar perfis VPN espec&iacute;ficos para cada servidor para rapidamente alterar e ligar a diferentes servidores VPN com um simples clique.</p>
+
+
+<div class="section">
+<h4>O que &eacute; o VPN?</h4>
+<p>Um VPN ou rede privada virtual, &eacute; uma solu&ccedil;&atilde;o para responder &agrave; necessidade de aceder em seguran&ccedil;a aos recursos na sua rede privada a partir da Internet. Para neg&oacute;cios ou alguns indiv&iacute;duos, com a necessidade de expandir o crescimento das capacidades de rede, o custo deste sistema de rede f&iacute;sico e o seu suporte t&eacute;cnico ir&aacute; aumentar exponencialmente. Quando considera as rela&ccedil;&otilde;es custo-efic&aacute;cia e as manuten&ccedil;&otilde;es a longo prazo, VPN &eacute; uma solu&ccedil;&atilde;o inteligente e cada vez mais atrativa. Com a encripta&ccedil;&atilde;o e outros mecanismos de seguran&ccedil;a, a tecnologia VPN permite aos membros empresariais acederem facilmente &agrave; rede central da empresa e nivelar os recursos na mesma, como em LAN. Podem tamb&eacute;m aceder aos recursos na sua LAN dom&eacute;stica, quando est&atilde;o longe de casa.</p>
+</div>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li> O DiskStation apenas pode ligar a servidores OpenVPN que suportem t&uacute;neis estilo tun em Layer 3.</li>
+<li>Antes de instalar o pacote VPN, certifique-se de que tem um VPN Server para ligar. Para melhor compatibilidade, sugerimos que ligue a servi&ccedil;os VPN alojados num DiskStation com o pacote <strong>VPN Server.</strong> Para configurar outro DiskStation como VPN server, consulte <b>Ajuda DSM</b> &gt; <b>VPN Server</b> &gt; <b>Configurar o VPN Server</b> para obter instru&ccedil;&otilde;es.</li>
+</ul>
+</div>
+
+
+<h4>Para criar perfis VPN:</h4>
+<ol>
+<li>Aceda a <b>Painel de Controlo</b> &gt; <b>Rede</b>.</li>
+
+  
+<li>No separador <b>Interface de Rede</b>, clique <b>Criar</b> e escolha <b>Criar perfil VPN</b>.</li>
+
+  
+<li>Ao criar um novo perfil VPN, pode escolher um dos seguintes tipos de liga&ccedil;&atilde;o:
+	<ul>
+		<li><b>PPTP</b>: PPTP (Point-to-Point Tunneling Protocol) &eacute; uma solu&ccedil;&atilde;o VPN comummente usada pela maioria dos clientes (incluindo Windows, Mac, Linux e dispositivos m&oacute;veis).</li>
+		<li><b>OpenVPN</b>: OpenVPN &eacute; uma solu&ccedil;&atilde;o open source para implementar o servi&ccedil;o VPN. Protege a liga&ccedil;&atilde;o VPN com o mecanismo de encripta&ccedil;&atilde;o SSL/TLS.</li>
+		<li><b>L2TP/IPSec</b>: L2TP (Layer 2 Tunneling Protocol) em IPSec fornece redes privadas virtuais com maior seguran&ccedil;a e &eacute; suportado pela maior parte dos clientes (tais como, Windows, Mac, Linux e dispositivos m&oacute;veis).</li>
+	</ul>
+</li>
+
+
+<li>Consulte as sec&ccedil;&otilde;es abaixo para obter instru&ccedil;&otilde;es para configurar qualquer um dos tr&ecirc;s tipos de liga&ccedil;&otilde;es VPN.</li>
+</ul>
+</ol>
+
+<h4>Para criar um perfil PPTP:</h4>
+
+  <ol>
+  <li>Quando indicado para escolher um m&eacute;todo de liga&ccedil;&atilde;o VPN, escolha <b>PPTP</b> e clique <b>Seguinte</b>.</li>
+  <li>Escolha um nome para o novo perfil, especifique o endere&ccedil;o do servidor VPN com o qual pretende estabelecer liga&ccedil;&atilde;o e introduza o seu nome de utilizador e a palavra-passe para o servidor. Clique em <b>Seguinte</b> para continuar.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+
+<ul>
+<li>O nome de utilizador, a palavra-passe e o endere&ccedil;o do servidor VPN devem ser fornecidos pelo administrador do servidor VPN.</li>
+</ul>
+</div>
+
+  <li>Escolha um dos seguintes protocolos de autentica&ccedil;&atilde;o do menu <b>Autentica&ccedil;&atilde;o</b> para proteger a palavra-passe do cliente VPN durante a autentica&ccedil;&atilde;o:
+	<ul>
+		<li><b>PAP</b>: A palavra-passe n&atilde;o ser&aacute; encriptada durante a autentica&ccedil;&atilde;o.</li>
+		<li><b>CHAP</b>: A palavra-passe ser&aacute; encriptada utilizando o CHAP (Protocolo de Autentica&ccedil;&atilde;o Challenge-Handshake).</li>
+		<li><b>MS CHAP</b>: A palavra-passe ser&aacute; encriptada utilizando Microsoft CHAP vers&atilde;o 1.</li>
+		<li><b>MS CHAP v2</b>: A palavra-passe ser&aacute; encriptada utilizando Microsoft CHAP vers&atilde;o 2.</li>
+	</ul>
+  </li>
+  <li>Se escolher <b>MS CHAP</b> ou <b>MS CHAP v2</b>, ent&atilde;o seleccione uma das seguintes op&ccedil;&otilde;es no menu <b>Encripta&ccedil;&atilde;o</b> para encriptar a liga&ccedil;&atilde;o VPN:
+	<ul>
+		<li>Sem <b>MPPE</b>: A liga&ccedil;&atilde;o VPN n&atilde;o ser&aacute; protegida com a Encripta&ccedil;&atilde;o Ponto a Ponto da Microsoft.</li>
+		<li><b>Exigir MPPE (40/128 bit):</b> A liga&ccedil;&atilde;o VPN ser&aacute; protegida com a Encripta&ccedil;&atilde;o Ponto a Ponto da Microsoft de 40 bits ou 128 bits.</li>
+		<li><b>MPPE m&aacute;ximo (128 bits)</b>: A liga&ccedil;&atilde;o VPN ser&aacute; protegida com um mecanismo de encripta&ccedil;&atilde;o de 128 bits Point to Point da Microsoft, que fornece o mais alto n&iacute;vel de seguran&ccedil;a.</li>
+	</ul>
+  </li>
+    <div class="section">
+    <h4>Nota:</h4>
+  
+    <ul>
+    <li>Estas defini&ccedil;&otilde;es de autentica&ccedil;&atilde;o e encripta&ccedil;&atilde;o devem ser id&ecirc;nticas &agrave;s defini&ccedil;&otilde;es especificadas no servidor VPN. Para obter detalhes, contacte o administrador do servidor VPN.</li>
+    </ul>
+    </div>
+   
+<li>Assinale qualquer uma das seguintes caixas de verifica&ccedil;&atilde;o, dependendo das suas necessidades:
+	<ul>
+		<li><b>Utilizar gateway predefinido na rede remota</b>: Active esta op&ccedil;&atilde;o para encaminhar o tr&aacute;fego de rede do DiskStation para o servidor VPN especificado.</li>
+		<li><b>Permitir a outros dispositivos de rede a ligar atrav&eacute;s da liga&ccedil;&atilde;o da Internet do servidor Synology</b>: Active esta op&ccedil;&atilde;o para permitir que dispositivos de rede que se encontrem na mesma rede local do seu DiskStation se liguem ao mesmo servidor VPN.</li>
+		<li><b>Ligue de novo quando a liga&ccedil;&atilde;o a VPN for interrompida</b>: Se perder a liga&ccedil;&atilde;o VPN inesperadamente, o sistema ir&aacute; tentar restabelecer a liga&ccedil;&atilde;o cinco vezes, uma tentativa a cada 30 segundos.</li>
+	</ul>
+</li>
+
+<li>Clique em <b>Aplicar</b>.</li>
+</ol>
+<h4>Para criar um perfil OpenVPN:</h4>
+<ol>
+<li>Quando indicado para escolher um m&eacute;todo de liga&ccedil;&atilde;o VPN, escolha <b>OpenVPN</b> e clique <b>Seguinte</b>.</li>
+<li>Escolha um nome para o novo perfil, especifique o endere&ccedil;o do servidor VPN com o qual pretende estabelecer liga&ccedil;&atilde;o e introduza o seu nome de utilizador e a palavra-passe para o servidor.</li>
+<li>
+No campo <b>Certificado</b>, clique no bot&atilde;o <strong>Pesquisar</strong> para encontrar e importar o ficheiro certificado (por exemplo, <b>ca.crt</b>) que foi exportado do servidor VPN. Clique em <b>Seguinte</b> para continuar.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+
+<ul>
+<li>O nome de utilizador, a palavra-passe, o endere&ccedil;o e o certificado do servidor VPN devem ser fornecidos pelo administrador do servidor VPN.</li>
+</ul>
+</div>
+
+<li>Assinale qualquer uma das seguintes caixas de verifica&ccedil;&atilde;o, dependendo das suas necessidades:
+	<ul>
+		<li><b>Activar compress&atilde;o na liga&ccedil;&atilde;o VPN:</b> Active esta op&ccedil;&atilde;o para realizar a compress&atilde;o de dados antes de transferir os dados atrav&eacute;s da VPN. Esta op&ccedil;&atilde;o pode aumentar a velocidade de transfer&ecirc;ncia mas ir&aacute; consumir mais recursos do sistema.</li>
+		<li><b>Utilizar gateway predefinido na rede remota</b>: Active esta op&ccedil;&atilde;o para encaminhar o tr&aacute;fego de rede do DiskStation para o servidor VPN especificado.</li>
+		<li><b>Permitir a outros dispositivos de rede a ligar atrav&eacute;s da liga&ccedil;&atilde;o da Internet do servidor Synology</b>: Active esta op&ccedil;&atilde;o para permitir que dispositivos de rede que se encontrem na mesma rede local do seu DiskStation se liguem ao mesmo servidor VPN.</li>
+		<li><b>Ligue de novo quando a liga&ccedil;&atilde;o a VPN for interrompida</b>: Se perder a liga&ccedil;&atilde;o VPN inesperadamente, o sistema ir&aacute; tentar restabelecer a liga&ccedil;&atilde;o cinco vezes, uma tentativa a cada 30 segundos.</li>
+	</ul>
+</li>
+<li>Clique em <b>Aplicar</b>.</li>
+</ol>
+
+<h4>Para criar um perfil L2TP/IPSec:</h4>
+<ol>
+<li>Quando indicado para escolher um m&eacute;todo de liga&ccedil;&atilde;o VPN, escolha <b>L2TP/IPSec</b> e clique <b>Seguinte</b>.</li>
+<li>Escolha um nome para o novo perfil, especifique o endere&ccedil;o do servidor VPN com o qual pretende estabelecer liga&ccedil;&atilde;o e introduza o seu nome de utilizador e a palavra-passe para o servidor. Tamb&eacute;m ser&aacute; necess&aacute;rio introduzir a chave pr&eacute;-partilhada para o servidor VPN. Depois, clique em <strong>Seguinte</strong>.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+
+<ul>
+<li>O nome de utilizador, a palavra-passe, o endere&ccedil;o e a chave pr&eacute;-partilhada do servidor VPN devem ser fornecidos pelo administrador do servidor VPN.</li>
+</ul>
+</div>
+
+<li>Escolha um dos seguintes protocolos de autentica&ccedil;&atilde;o do menu <b>Autentica&ccedil;&atilde;o</b> para proteger a palavra-passe do cliente VPN durante a autentica&ccedil;&atilde;o:
+	<ul>
+		<li><b>PAP</b>: A palavra-passe n&atilde;o ser&aacute; encriptada.</li>
+		<li><b>CHAP</b>: A palavra-passe ser&aacute; encriptada utilizando o CHAP (Protocolo de Autentica&ccedil;&atilde;o Challenge-Handshake).</li>
+		<li><b>MS CHAP</b>: A palavra-passe ser&aacute; encriptada utilizando Microsoft CHAP vers&atilde;o 1.</li>
+		<li><b>MS CHAP v2</b>: A palavra-passe ser&aacute; encriptada utilizando Microsoft CHAP vers&atilde;o 2.</li>
+	</ul>
+</li>
+
+<div class="section"><h4>Nota:</h4>
+<ul>
+	<li>Estas defini&ccedil;&otilde;es de autentica&ccedil;&atilde;o e encripta&ccedil;&atilde;o devem ser id&ecirc;nticas &agrave;s defini&ccedil;&otilde;es especificadas no servidor VPN. Para obter detalhes, contacte o administrador do seu servidor VPN.</li>
+</ul>
+</div>
+
+<li>Assinale qualquer uma das seguintes caixas de verifica&ccedil;&atilde;o, dependendo das suas necessidades:
+	<ul>
+		<li><b>Utilizar gateway predefinido na rede remota</b>: Active esta op&ccedil;&atilde;o para encaminhar o tr&aacute;fego de rede do DiskStation para o servidor VPN especificado.</li>
+		<li><b>Permitir a outros dispositivos de rede a ligar atrav&eacute;s da liga&ccedil;&atilde;o da Internet do servidor Synology</b>: Active esta op&ccedil;&atilde;o para permitir que dispositivos de rede que se encontrem na mesma rede local do seu DiskStation se liguem ao mesmo servidor VPN.</li>
+		<li><strong>O servidor est&aacute; atr&aacute;s de um dispositivo NAT</strong>: Por predefini&ccedil;&atilde;o, o protocolo L2TP/IPSec n&atilde;o permite a liga&ccedil;&atilde;o a um servidor VPN atr&aacute;s de um dispositivo NAT: Active esta op&ccedil;&atilde;o para contornar esta limita&ccedil;&atilde;o, permitindo que o DiskStation seja ligado a um servidor VPN L2TP/IPSec atr&aacute;s de um dispositivo NAT:</li>
+		<li><b>Ligue de novo quando a liga&ccedil;&atilde;o a VPN for interrompida</b>: Se perder a liga&ccedil;&atilde;o VPN inesperadamente, o sistema ir&aacute; tentar restabelecer a liga&ccedil;&atilde;o cinco vezes, uma tentativa a cada 30 segundos.</li>
+	</ul>
+</li>
+<li>
+  Clique em <b>Aplicar</b>.
+</li>
+</ol>
+
+
+<h4>Para ligar ou desligar de um servidor VPN:</h4>
+
+<ol>
+<li>Seleccione um perfil VPN.</li>
+<li>Clique em <b>Ligar</b> ou <b>Desligar</b>.</li>
+
+  
+</ol>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Apenas pode ser ligado um perfil de cada vez.</li>
+</ul>
+</div>
+
+<h4>Para modificar um perfil VPN:</h4>
+
+<ol>
+<li>Seleccione um perfil VPN.</li>
+<li>Clique em <strong>Editar</strong>.</li>
+
+</ol>
+
+
+</body>
+</html>

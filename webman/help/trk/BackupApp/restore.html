@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Geri yükle</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Geri yükle</h2>
+<p>Yedekleme verilerini geri yüklemek için <strong>Yedekleme ve Çoğaltma</strong> > <strong>Geri Yükle</strong> bölümüne gidin.</p>
+
+<h4><a name="restore"></a>Bir yedekleme görevini geri yüklemek için:</h4>
+<ol class="disable-eds14">
+<li>Bir yedekleme görevi seçip <b>Geri Yükle</b>'ye tıklayın. Görev çok sürümlü bir yedekleme ise, <strong>Geri Yükle</strong> > <strong>Tüm görev</strong> öğesini seçin.</li>
+<li>Sistem yapılandırmasını, yedekleme verisinin farklı sürümlerini veya daha fazlasını seçmeniz istenebilir. Bu, bir veri yedekleme görevi, LUN yedekleme görevi*, tek sürüm yedekleme hedefi (ör. paylaşımlı klasör) veya birden fazla sürüm yedekleme hedefi (ör. birim) olup olmadığına göre değişir.</li>
+<li>Kurulumu tamamlamak için sihirbazı izleyin.</li>
+</ol>
+<ol class="enable-eds14">
+<li>Bir yedekleme görevi seçip <b>Geri Yükle</b>'ye tıklayın.</li>
+<li>Sistem yapılandırmasını, yedekleme verisinin farklı sürümlerini veya daha fazlasını seçmeniz istenebilir. Bunun ne tür bir yedekleme görevi olduğuna bağlıdır.</li>
+<li>Kurulumu tamamlamak için sihirbazı izleyin.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Not:</h4>
+<ul>
+<li>Belirli uygulamalar için geri yükleme desteklenir. Belirli bir paketin geri yüklemeyi destekleyip desteklemediğini ve sınırlamalarını görmek için, lütfen her uygulamanın yardım bölümüne bakın.</li>
+<li>Bir paketi geri yüklerken, paket yüklenmemişse, sistem otomatik olarak uygulamanın aynı veya en son sürümünü yükler. Uygulama yüklenmişse, ancak yedeklenenden daha eski bir sürüm ise, sistem otomatik olarak orijinal yedeklenen sürüme yükseltir.</li>
+<li>DSM 5.1 veya üzerinde yedeklenen uygulamalar DSM 5.0 veya altında geri yüklenemez. </li>
+</ul>
+</div>
+
+<div class="section disable-eds14">
+<h4>Not:</h4>
+<ul>
+<li>Geri yükleme tamamlandıktan sonra, yedek bir LUN seçilen hedef birimdeki dosya tabanlı bir LUN'a geri yüklenecektir.*</li>
+
+<li>Belirli uygulamalar için geri yükleme desteklenir. Belirli bir paketin geri yüklemeyi destekleyip desteklemediğini ve sınırlamalarını görmek için, lütfen her uygulamanın yardım bölümüne bakın.</li>
+<li>Bir paketi geri yüklerken, paket yüklenmemişse, sistem otomatik olarak uygulamanın aynı veya en son sürümünü yükler. Uygulama yüklenmişse, ancak yedeklenenden daha eski bir sürüm ise, sistem otomatik olarak orijinal yedeklenen sürüme yükseltir.</li>
+<li>DSM 5.1 veya üzerinde yedeklenen uygulamalar DSM 5.0 veya altında geri yüklenemez. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Çok sürümlü yedekleme görevi için tek bir dosya veya klasörü geri yüklemek:</h4>
+<ol>
+<li><strong>Dosya Sürümü Tarayıcısı</strong>'nı başlatın. Bunu aşağıdaki yöntemlerden birisi ile yapabilirsiniz:</li>
+<ul>
+<li><strong>Geri Yükle</strong> üzerine tıklayın ve açılır menüden <strong>Münferit dosyalar/klasörler</strong> öğesini seçin. </li>
+<li><strong>Yedekleme Hedefi</strong>'ne gidin ve seçilen yedekleme hedefinizi genişletin. <strong>Yedekleme Sürümü Bilgisi</strong> simgesine tıklayın. Açılan pencerede, geri yüklemek istediğiniz yedekleme sürümünü seçin ve <strong>Dosya Sürümü Tarayıcısı</strong> simgesine tıklayın.</li>
+</ul>
+<li>Ekranın altındaki zaman çizelgesini veya takvim simgesini kullanarak bir dosya veya klasörün sürümlerine göz atabilirsiniz. </li>
+<li>Yönetmek istediğiniz sürümü seçin ve ardından <strong>Geri Yükle</strong>'ye tıklayın. </li>
+<li>Alternatif olarak, bir dosya veya klasörü başka bir konuma kopyalayabilir veya <strong>	Kopyalama yeri...</strong> veya<strong> İndir </strong>düğmesini kullanarak indirebilirsiniz. </li>
+<li>Ayrıca bir dosya veya klasöre sağ tıklayabilir ve açılır menüden bu seçenekleri seçebilirsiniz. </li>
+</ol>
+<h4>Belirli bir sürümü aramak için:</h4>
+<ol>
+  <li>Sağ üst köşedeki filtre çubuğundaki ok üzerine tıklayın.</li>
+  <li>Açılır menüde, dosyaları şöyle filtreleyebilirsiniz:</li>
+  <ul>
+    <li><strong>Anahtar kelime: </strong>Herhangi bir dosya veya klasörün adını girin. Anahtar kelimelerinizde [*] (bir veya daha fazla karakteri temsil eder) ve [?] (bir rastgele karakteri temsil eder) joker karakterleri kullanabilirsiniz. Örneğin, [a<span class="note_content">*</span>n] belirtimi [a<span class="note_content">ctio</span>n], [a<span class="note_content">ttentio</span>n] veya [an] anlamına gelebilir.</li>
+    <li><strong>Dosya Türü:</strong> açılır menüde <strong>Herhangi Bir</strong>, <strong>Herhangi Bir Klasör</strong> veya <strong>Herhangi Bir Dosya</strong> öğesinden seçim yapabilirsiniz.</li>
+    <li><strong>Boyut:</strong> <strong>Herhangi bir seçimi yapın </strong>veya <strong>eşittir</strong>, <strong>büyüktür</strong>, <strong>küçüktür </strong>öğesini seçin ve bir değer girin.</li>    
+    <li><strong>Tarih Aralığı: </strong><strong>Bugün</strong>, <strong>Dün</strong>, <strong>Geçen hafta</strong> veya <strong>Geçen ay</strong> veya <strong>Özelleştir</strong> seçimi yaparak belirli bir aralık dahilindeki sürümleri bulmak için bir başlangıç ve bir bitiş tarihi girin.</li>
+
+  </ul>
+  <li>Filtrelerinizi uygulamak için <strong>Filtre</strong> üzerine tıklayın. </li>
+  <li>Filtrelenmiş aramanızı sıfırlamak için, <strong>Reset</strong> düğmesine tıklayın.</li>
+</ol>
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>Sadece çok sürümlü yedekleme görevleri Dosya Sürümü Tarayıcı fonksiyonunu sunar.</li>
+<li>Dosya Sürümü Tarayıcı DSM 5.1 veya altında sadece kısmi fonksiyonlara sahiptir.</li>
+<li dir="ltr">Sistem yapılandırması ve uygulamaları sadece <strong>Geri yükle</strong> > <strong>Tüm görev</strong> yoluyla geri yüklenebilir. </li>
+<li>Metaveri <strong>Kopyalama yeri...</strong> ve <strong>İndir</strong> eylemlerine dahil edilemeyecektir. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Başka yedekleme hedefindeki yedekleme görevlerini geri yüklemek için:</h4>
+<ol>
+<li><b>Geri yükle...</b>'ye tıklayın.</li>
+<li>Yedekleme görevini bulmak için aşağıdakilerden birini yaparak <b>İleri</b>'ye tıklayın:</li>
+<ul>
+<li><b>Yerel Geri Yükleme</b>: Bir yerel paylaşımlı klasörden veya harici diskten veri geri yüklemek için bu seçeneği seçin.</li>
+<li><b>Ağda geri yükleme</b>: Başka bir DiskStation veya rsync uyumlu sunucudan veri geri yüklemek için bu seçeneği seçin.</li>
+
+<li><b>Genel bulut hizmeti geri yüklemesi</b>: Genel bulut sunucusundan verileri geri yüklemek için bu seçeneği seçin. </li>
+
+</ul>
+<li>Sorulduğunda, yedek görevin saklandığı kaynağı seçin ve ardından verileri geri yüklemek için hedefi seçin.</li>
+<li>Tamamlamak için sihirbazı izleyin.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Not:</h4>
+<ul>
+
+  <li>Bütünleşik DataStation, sadece ext3/ext4 harici cihazlarına paylaşımlı klasörleri geri yükleyebilir.</li>
+  
+<li>Bütünleşik DataStation, bir ext3/ext4 harici cihazı olmadan uygulama geri yüklemesini desteklemez.</li>
+
+</ul>
+</div>
+
+<p>____<br /> * Sadece belirli modellerde vardır.</p>
+</body></html>

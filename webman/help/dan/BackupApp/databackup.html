@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Databackup</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Databackup</h2>
+
+<p>På fanen <b>Backup</b> i <b>Tilbage &amp; kopiering</b> kan du manuelt udføre backup på bestemte data på DiskStation eller i overensstemmelse med en tilpasset plan. Med denne funktion, systemkonfiguration, kan der udføres backup på indholdet af delte mapper og pakkedata til en lokal, netværks- eller skybackupdestination.</p>
+
+<h4>Sådan opretter du en backupopgave:</h4>
+<ol>
+<li>Vælg <b>Opret</b> > <b>Databackupopgave</b>.</li>
+<li>Følg guiden for at fuldføre opsætningen. Gå til <a href="repository.html">Backupdestination</a> for at få yderligere oplysninger.</li>
+</ol>
+
+<h4>Sådan styrer du backupopgaver:</h4>
+<p>Vælg en eksisterende opgave, og klik på en af følgende knapper:</p>
+<ul>
+<li><strong>Rediger:</strong> Ret destination, kilde, plan og andre indstillinger for den valgte opgave.</li>
+<li><strong>Slet</strong>: Slet den valgte opgave.</li>
+<li><strong>Annuller:</strong> Annuller den valgte, aktuelt kørende opgave.</li>
+<li><strong>Backup nu:</strong>  Udfører backup af den valgte opgave med det samme.</li>
+</ul>
+
+
+<h3>Backuprotation</h3>
+<p>Backuprotation er en versionsadministrationsmekanisme. Den hjælper med at styre backupversioner ved automatisk at slette ældre, unødvendige versioner og potentielt frigøre lagerplads. Du kan aktivere denne funktion under <b>Opgaveindstillinger</b> eller konfigurere den, når du opretter en backupopgave.</p>
+<h4>Sådan roterer du versioner:</h4>
+<ol>
+<li>Vælg den backupopgave, du vil anvende versionsrotation på, og klik på <strong>Rediger</strong>.</li>
+<li>Gå til fanen <strong>Opgaveindstillinger</strong>, og marker <strong>Aktiver backuprotation</strong>. </li>
+<li>Her kan du vælge en af følgende rotationsmetoder:</li>
+<ul>
+<li><b>Fra den tidligste version:</b> Dette er en grundlæggende rotationsmetode. Når rotationsbetingelsen udløses bliver den tidligste version fjernet først. </li>
+<li><b>Smart Recycle:</b> Dette er en intelligent versionsrotationsmetode. Når rotationsbetingelsen udløses, vil systemet fjerne de versioner, der er markeret af opbevaringsmekanismen. Opbevaringsmekanismen fungerer som følger:</li>
+<ul>
+	<li><b>Hver time-versioner fra de seneste 24 timer:</b> Systemet bevarer den tidligste version, der oprettes hver time.</li>
+	<li><b>Daglige versioner fra 1 dag til 1 måned:</b> Systemet bevarer den tidligste version, der oprettes hver dag.</li>
+	<li><b>Ugentlig versioner, der er ældre end 1 måned:</b> Systemet bevarer den tidligste version, der oprettes hver uge.</li>
+</ul>
+</ul>
+<li>Angiv det maksimale <b>antal versioner</b>. Når versionsnummeret overstiger dette tal, vil versionsrotation begynde. Antallet inkluderer ikke låste versioner.</li>
+<li>Hvis du har konfigureret en gentagen backupplan, bliver der bevaret et eksempel på overslaget over, hvordan dine backupversioner bevares, og det tidligste tidspunkt gendannelsespunkt baseret på dine rotationsindstillinger vises. &nbsp;&nbsp;</li>
+<li>Klik på <strong>OK</strong> for af gemme indstillingerne. </li>
+</ol>
+
+<div class="section">
+  <h4>Noter:</h4>
+  <ul>
+  <li>Låste versioner bliver aldrig fjernet. Gå til <a href="repository.html#lock_version">Backupdestination</a> for at få yderligere oplysninger.</li>
+  
+  <li>Kun flerversions backupopgaver indeholder versionsrotationsfunktioner.</li>
+  <li>Versionsrotation understøttes ikke i DSM 5.1 eller tidligere.</li>
+  <li>Rotation bliver udløst lige efter indstillingen ændres, eller backupopgaven fuldføres.</li>
+  <li>Låste versioner udelukkes, når der beregnes maksimalt antal versioner.</li>
+  </ul>
+</div>
+
+
+<div class="section">
+<h4>Generelt:</h4>
+<ul>
+<li>Navne på opgaver kan indeholde 1 til 32 Unicode-tegn og kan ikke indeholde følgende tegn:<br> <span class="letterSpace5">! " # $ % &amp; ' ( ) * + , / : ; &lt; = &gt; ? @ [ ] \ ^ ` { } | ~</span></li>
+<li>Maks. længden for den fulde mappesti for backup'en er 2048 tegn.</li>
+<li>Hvis over 32.000 filer eller mapper uploades til en EXT3-delt mappe via AFP, vil alle backupopgaver, herunder den delte mappe, mislykkes.</li>
+<li>Du kan udføre backup på en krypteret mappe enten tilsluttet eller ikke-tilsluttet. Den bliver dog altid gendannet som ikke-tilsluttet og vil ikke tilslutte automatisk ved start. Ja, men du skal indtaste eller importere krypteringsnøglen for den krypterede delte mappe for at tilknytte den.</li>
+<li>Backup af en krypteret mappe til en anden krypteret mappe understøttes ikke.</li>
+<li>Brug af fjernmapper som backupkilde eller backupdestination understøttes ikke.</li><li>Hvis backupdestinationen er en diskenhed, vil kun opgaveejeren kunne udføre backupopgaven. Gå til <a href="repository.html">Backupdestination</a> for at få yderligere oplysninger.</li>
+<li>Backup af visse programmer understøttes. Hvis du vil se, om en bestemt pakke understøtter backup samt backupindhold og begrænsninger, henvises der til hjælpen for hvert program.</li>
+<li class="enable-eds14">DiskStation understøtter ikke programbackup uden en skrivbar EXT3/EXT4 ekstern enhed.</li>
+<li class="enable-eds14">DiskStation understøtter ikke backup til en diskenhed uden en skrivbar EXT3/EXT4 ekstern enhed.</li>
+<li class="enable-eds14">DiskStation kan kun udføre backup på delte mapper, der er oprettet på EXT3/EXT4-eksterne enheder.</li>
+<li class="disable-eds14">Systemet kan ikke udføre backup af programmer uden en skrivbar diskenhed.</li
+></ul>
+</div>
+<div class="section disable-eds14">
+<h4>Backup med Windows ACL-indstillinger:</h4>
+<p>Indstillingerne for Windows ACL for filerne på DiskStation kan også udføres backup på, afhængigt af filsystemerne på destinationen:</p>
+<ul>
+
+<li><strong>Lokal backupdestination</strong>, <strong>Netværksbackupdestination</strong> og <strong>Backupdestination til offentlig sky</strong> kan udføre backup på Windows ACL-indstillingerne, uanset destinationens filsystem</li>
+
+<li><strong>Synkronisering af delt mappe</strong> kan udføre backup på Windows ACL-indstillinger, når destinationens filsystem er EXT4<span style="display: inline;" class="enable-rc18015xsp">/BTRFS</span>.</li>
+
+</ul>
+</div>
+
+</body></html>

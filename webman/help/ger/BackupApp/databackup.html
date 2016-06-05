@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Datensicherung</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Datensicherung</h2>
+
+<p>Auf der Registerkarte <b>Datensicherung</b> von <b>Datensicherung &amp; Replikation</b> können bestimmte Daten auf dem DiskStation manuell oder nach einem benutzerdefinierten Zeitplan gesichert werden. Mit dieser Funktion können Systemkonfigurationen, der Inhalt der freigegebenen Ordner und Paketdaten mit einem lokalen, Netzwerk- oder Cloud-Datensicherungsziel gesichert werden.</p>
+
+<h4>Sicherungsaufgabe erstellen:</h4>
+<ol>
+<li>Wählen Sie <b>Erstellen</b> > <b>Datensicherungsaufgabe</b> aus.</li>
+<li>Folgen Sie dem Assistenten, um das Setup abzuschließen. Weitere Informationen finden Sie unter <a href="repository.html">Datensicherungsziel</a>.</li>
+</ol>
+
+<h4>Datensicherungsaufgaben verwalten:</h4>
+<p>Wählen Sie eine vorhandene Aufgabe aus und klicken Sie auf eine der folgenden Schaltflächen:</p>
+<ul>
+<li><strong>Bearbeiten:</strong> Ändert Ziel, Quelle, Zeitplan und andere Einstellungen der gewählten Aufgabe.</li>
+<li><strong>Löschen:</strong> Löscht die ausgewählte Aufgabe.</li>
+<li><strong>Abbrechen:</strong> Beendet die ausgewählte, derzeit ausgeführte Aufgabe.</li>
+<li><strong>Jetzt Datensicherung durchführen:</strong> Führt sofort eine Sicherung der ausgewählten Aufgabe durch.</li>
+</ul>
+
+
+<h3>Sicherungsrotation</h3>
+<p>Bei der Sicherungsrotation handelt es sich um einen Versionsmanagementmechanismus. Er unterstützt die Verwaltung von Sicherungsversionen durch das automatische Löschen älterer, nicht mehr benötigter Versionen und die potenzielle Freigabe von Speicherplatz. Sie können diese Funktion unter <b>Aufgabeneinstellungen</b> aktivieren oder bei der Erstellung einer Datensicherungsaufgabe konfigurieren.</p>
+<h4>Versionen rotieren:</h4>
+<ol>
+<li>Wählen Sie die Datensicherungsaufgabe aus, auf die Sie die Versionsrotation anwenden möchten, und klicken Sie auf <strong>Bearbeiten</strong>.</li>
+<li>Gehen Sie zur Registerkarte <strong>Aufgabeneinstellungen</strong> und aktivieren Sie <strong>Sicherungsrotation aktivieren</strong>. </li>
+<li>Hier können Sie aus zwei Rotationsmethoden auswählen:</li>
+<ul>
+<li><b>Von den frühesten Versionen:</b> Dies ist eine Standard-Versionsrotationsmethode. Wenn die Rotationsbedingung ausgelöst wird, wird die früheste Version zuerst entfernt. </li>
+<li><b>Smart Recycle:</b> Dies ist eine intelligente Versionsrotationsmethode. Wenn die Rotationsbedingung ausgelöst wird, entfernt das System die vom Aufbewahrungsmechanismus ausgewählten Versionen. Der Aufbewahrungsmechanismus ist wie folgt:</li>
+<ul>
+	<li><b>Stündliche Versionen der letzten 24 Stunden:</b> Das System bewahrt die früheste in jeder Stunde erstellte Version auf.</li>
+	<li><b>Tägliche Versionen vom vergangenen 1 Tag bis zu 1 Monat:</b> Das System bewahrt die früheste an jedem Tag erstellte Version auf.</li>
+	<li><b>Wöchentliche Version älter als 1 Monat:</b> Das System bewahrt die früheste in jeder Woche erstellte Version auf.</li>
+</ul>
+</ul>
+<li>Legen Sie die maximale <b>Anzahl der Versionen</b> fest. Wenn die Anzahl der Versionen diesen Wert überschreitet, beginnt die Versionsrotation. Die Anzahl umfasst keine gesperrten Versionen.</li>
+<li>Wenn Sie einen wiederholten Datensicherungszeitplan konfiguriert haben, werden die Schätzung in Bezug auf die Aufbewahrung Ihrer Sicherungsversionen und der auf Ihren Rotationseinstellungen beruhende früheste Wiederherstellungszeitpunkt in der Vorschau angezeigt. &nbsp;&nbsp;</li>
+<li>Klicken Sie auf <strong>OK</strong>, um Ihre Einstellungen zu speichern. </li>
+</ol>
+
+<div class="section">
+  <h4>Hinweise:</h4>
+  <ul>
+  <li>Gesperrte Versionen werden nicht entfernt. Weitere Informationen finden Sie unter <a href="repository.html#lock_version">Datensicherungsziel</a>.</li>
+  
+  <li>Nur bei Sicherungsaufgaben für mehrere Versionen sind die Versionsrotationsfunktionen verfügbar.</li>
+  <li>In DSM 5.1 oder niedriger wird die Versionsrotation nicht unterstützt.</li>
+  <li>Die Rotation wird direkt nach Änderung der Einstellung oder nach Abschluss der Sicherungsaufgabe ausgelöst.</li>
+  <li>Bei der Berechnung der maximalen Anzahl von Versionen werden gesperrte Versionen ignoriert.</li>
+  </ul>
+</div>
+
+
+<div class="section">
+<h4>Allgemeine Hinweise:</h4>
+<ul>
+<li>Die Namen von Aufgaben können 1 bis 32 Unicode-Zeichen enthalten, aber nicht die folgenden Zeichen:<br> <span class="letterSpace5">! " # $ % &amp; ' ( ) * + , / : ; &lt; = &gt; ? @ [ ] \ ^ ` { } | ~</span></li>
+<li>Die maximale Länge des kompletten Ordnerpfads für die Sicherung beträgt 2048 Zeichen.</li>
+<li>Wenn über AFP mehr als 32.000 Dateien oder Ordner in einen freigegebenen EXT3-Ordner hochgeladen werden, schlagen alle Datensicherungsaufgaben mit dem freigegebenen Ordner fehl.</li>
+<li>Ein verschlüsselter Ordner kann sowohl im angehängten als auch im getrennten Zustand gesichert werden. Jedoch wird er immer als nicht angehängt wiederhergestellt und beim Starten nicht automatisch angehängt. Sie müssen den Verschlüsselungsschlüssel für den verschlüsselten freigegebenen Ordner eingeben oder importieren, um ihn anzuhängen.</li>
+<li>Die Sicherung eines verschlüsselten Ordners in einen anderen verschlüsselten Ordner wird nicht unterstützt.</li>
+<li>Die Verwendung eines Remote-Ordners als Datensicherungsquelle oder -ziel wird nicht unterstützt.</li><li>Wenn das Datensicherungsziel ein Volume ist, kann nur der Aufgabenbesitzer die Datensicherungsaufgabe ausführen. Weitere Informationen finden Sie unter <a href="repository.html">Datensicherungsziel</a>.</li>
+<li>Die Sicherung für bestimmte Anwendungen wird unterstützt. In der Hilfe jeder Anwendung erhalten Sie Informationen, ob ein bestimmtes Paket die Datensicherung unterstützt, sowie zum Datensicherungsinhalt und deren Einschränkungen.</li>
+<li class="enable-eds14">Der DiskStation unterstützt nicht die Anwendungssicherung ohne ein beschreibbares externes EXT3/EXT4-Gerät.</li>
+<li class="enable-eds14">Der DiskStation unterstützt nicht die Sicherung in ein Volume ohne ein beschreibbares externes EXT3/EXT4-Gerät.</li>
+<li class="enable-eds14">DiskStation kann nur freigegebene Ordner sichern, die auf externen EXT3/EXT4-Geräten erstellt wurden.</li>
+<li class="disable-eds14">Ohne beschreibbares Volume kann das System keine Anwendungen sichern.</li
+></ul>
+</div>
+<div class="section disable-eds14">
+<h4>Sichern der Windows ACL-Einstellungen:</h4>
+<p>Die Windows ACL-Einstellungen der Dateien auf DiskStation können je nach Dateisystem des Ziels ebenfalls gesichert werden:</p>
+<ul>
+
+<li>Windows ACL-Einstellungen können, unabhängig vom Dateisystem des Ziels, mit <strong>Lokales Datensicherungsziel</strong>, <strong>Netzwerksicherungsziel</strong> und <strong>Datensicherungsziel öffentliche Cloud</strong> gesichert werden</li>
+
+<li><strong>Synchronisierung freigegebener Ordner</strong> kann die Windows ACL-Einstellungen sichern, wenn das Dateisystem des Ziels EXT4<span style="display: inline;" class="enable-rc18015xsp">/BTRFS</span> ist.</li>
+
+</ul>
+</div>
+
+</body></html>

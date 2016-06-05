@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Criar uma Pasta Partilhada - Ajuda do Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Shared folders are the basic directories where you can store and manage files and folders on your DiskStation. This article shows you how to create a shared folder.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Criar uma Pasta Partilhada</h2>
+<p>As pastas partilhadas s&atilde;o os direct&oacute;rios b&aacute;sicos onde pode armazenar e gerir ficheiros e pastas em DiskStation. Antes de armazenar ficheiros, &eacute; necess&aacute;rio criar, pelo menos, uma pasta partilhada no DSM. </p>
+
+<h4>Para criar uma pasta partilhada:</h4>
+<ol>
+<li>V&aacute; para <strong>Painel de Controlo</strong> &gt; <strong>Pasta Partilhada</strong> e clique em <strong>Criar</strong>.</li>
+<li>Especifique um nome e uma descri&ccedil;&atilde;o da pasta partilhada.</li>
+<img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-2.png" class="help_image disable-rc18015xsp disable-rs18016xsp disable-rs2416p disable-rs2416rpp"/> <img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-5.png" class="help_image enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"/>
+<li>Selecione um armazenamento onde ir&aacute; criar a pasta partilhada (ignore este passo se s&oacute; existir um armazenamento).</li>
+<img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-3.png" class="help_image disable-rc18015xsp disable-rs18016xsp disable-rs2416p disable-rs2416rpp"/> <img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-6.png" class="help_image enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"/>
+<li>Modifique as seguintes op&ccedil;&otilde;es, se necess&aacute;rio:</li>
+<img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-4.png" class="help_image disable-rc18015xsp disable-rs18016xsp disable-rs2416p disable-rs2416rpp"/> <img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-7.png" class="help_image enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"/>
+
+	<ul>
+		<li><strong>Ocultar esta pasta partilhada em &quot;Os Meus Locais na Rede&quot;:</strong> Impede que a pasta partilhada apare&ccedil;a em &ldquo;Rede&rdquo; no Explorador de Ficheiros do Windows. Esta op&ccedil;&atilde;o n&atilde;o afecta os privil&eacute;gios de acesso da pasta partilhada.
+			<div class="section"><h4>Nota:</h4>
+				<p>Ocultar uma pasta partilhada em &quot;Os Meus Locais na Rede&quot; n&atilde;o afecta o direito de acesso &agrave; pasta. O direito de acesso &agrave; pasta partilhada oculta permanecer&aacute; inalterado. Os utilizadores que possuam os direitos de acesso adequados para a pasta partilhada podem aceder, introduzindo &quot;\\nome do servidor\nome da pasta partilhada&quot;.</p>
+			</div>
+		</li>
+		<li><strong>Ocultar subpastas e ficheiros de utilizadores sem permiss&otilde;es:</strong> Quando <strong>Ocultar subpastas e ficheiros de utilizadores sem permiss&otilde;es</strong> estiver ativado, se um utilizador sem privil&eacute;gios de leitura tentar aceder a uma pasta partilhada atrav&eacute;s de um protocolo de Partilha de Ficheiros do Windows, o utilizador n&atilde;o conseguir&aacute; ver pastas nem ficheiros dentro da pasta partilhada. Isto impede os utilizadores de ficarem confusos quando se ligarem aos seus produtos Synology e encontrarem um grande n&uacute;mero de ficheiros e subpastas que n&atilde;o podem abrir.
+			<div class="section"><h4>Nota:</h4>
+				<ul>
+					<li>Esta funcionalidade s&oacute; &eacute; suportada com o protocolo de Partilha de Ficheiros do Windows.</li>
+					<li>Pode modificar as defini&ccedil;&otilde;es de privil&eacute;gios de cada pasta e ficheiro na File Station, clicando nele com o bot&atilde;o direito do rato. Selecione <strong>Propriedades</strong> no menu pendente e clique no separador <strong>Permiss&atilde;o</strong>.</li>
+					<li>A pasta partilhada, em si pr&oacute;pria, n&atilde;o ficar&aacute; oculta para os utilizadores sem permiss&otilde;es ao ativar <strong>Ocultar subpastas e ficheiros de utilizadores sem permiss&otilde;es</strong>. Apenas as subpastas e ficheiros nesta pasta partilhada ficar&atilde;o ocultos.</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+
+
+<li><strong>Ativar Reciclagem:</strong> Quando os ficheiros da pasta partilhada forem eliminados, ser&atilde;o movidos para uma pasta com o nome <strong>#recycle</strong>. O acesso &agrave; reciclagem pode estar limitado aos utilizadores pertencentes ao grupo <strong>administrators</strong>.</li>
+
+<li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"><strong>Tornar vis&iacute;veis as imagens instant&acirc;neas:</strong> As pastas e ficheiros nos instant&acirc;neos pode ser acedidos via servi&ccedil;os de ficheiros nas pastas <strong>#snapshot</strong> da pasta partilhada. Os intant&acirc;neos ter&atilde;o o nome com base na hora GMT em que foram tiradas.
+	<div class="section"><h4>Nota:</h4>
+		<ul>
+			<li>Os utilizadores n&atilde;o t&ecirc;m permiss&atilde;o de escrita de qualquer c&oacute;pia dos instant&acirc;neos.</li>
+			<li>Os utilizadores t&ecirc;m permiss&atilde;o de leitura da c&oacute;pia do instant&acirc;neo apenas se, no momento em que este &eacute; tirado, as suas contas de utilizador tiverem sido criadas e a permiss&atilde;o de leitura concedida da pasta partilhada.</li>
+		</ul>
+	</div>
+	</li>
+	<a name="sharequota"></a><li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"><strong>Activar a quota da pasta partilhada:</strong> Para especificar a capacidade m&aacute;xima para cada pasta partilhada, assinale <strong>Activar quota da pasta partilhada</strong> e introduza a capacidade m&aacute;xima (por ex. 10 GB) no campo seguinte.
+		<div class="section"><h4>Nota:</h4>
+		<ul>
+			<li>Apenas quando o armazenamento est&aacute; a usar o sistema de ficheiros Btrfs &eacute; que as op&ccedil;&otilde;es <strong>Tornar vis&iacute;vel instant&acirc;neo</strong> e <strong>Activar quota da pasta partilhada</strong> ficam dispon&iacute;veis para as pastas partilhadas.</li>
+			<li>A utiliza&ccedil;&atilde;o do armazenamento conjugada entre os direct&oacute;rios <strong>home</strong> de todos os utilizadores n&atilde;o pode exceder a quota de &ldquo;<strong>homes</strong>&rdquo;.</li>
+		</ul>
+		</div>
+	</li>
+
+	<a name="integrity_protection"></a><li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"><strong>Activar protec&ccedil;&atilde;o avan&ccedil;ada da integridade de dados:</strong> Para proteger uma pasta partilhada com as estrat&eacute;gias <strong>CRC32 checksum</strong> e <strong>copy-on-write</strong>, pode <strong>activar protec&ccedil;&atilde;o avan&ccedil;ada da integridade de dados</strong> durante a cria&ccedil;&atilde;o da pasta partilhada. CRC32 checksum &eacute; aplicado para verificar se os dados s&atilde;o id&ecirc;nticos ao momento em que foram originalmente escritos, e ir&aacute; notific&aacute;-lo assim que seja detectada alguma corrup&ccedil;&atilde;o. Copy-on-write ajuda a melhorar a consist&ecirc;ncia dos dados quando haja um encerramento anormal do sistema.
+	<div class="section"><h4>Nota:</h4>
+	<ul>
+		<li>Esta op&ccedil;&atilde;o est&aacute; apenas dispon&iacute;vel para volumes com o sistema de ficheiros Btrfs.</li>
+		<li>Pode activar/desactivar esta op&ccedil;&atilde;o para cada pasta partilhada durante a sua cria&ccedil;&atilde;o. Esta op&ccedil;&atilde;o n&atilde;o pode ser modificada assim que tenha sido criada a pasta partilhada.</li>
+		<li>O desempenho do sistema poder&aacute; ficar afectado se esta op&ccedil;&atilde;o for activada.</li>
+	</ul>
+	</div></li>
+
+	<li><strong>Encriptar esta pasta partilhada:</strong> Se deseja encriptar a pasta partilhada, proceda da seguinte forma:
+	<ol>
+		<li>Especifique e confirme uma nova chave de encripta&ccedil;&atilde;o. A chave de encripta&ccedil;&atilde;o n&atilde;o pode incluir v&iacute;rgulas (,) ou sinais de igual (=). </li>
+		<li>Se necess&aacute;rio, assinale a caixa <b>Montar automaticamente ao iniciar</b> para montar automaticamente a pasta encriptada quando o sistema for iniciado. Se esta op&ccedil;&atilde;o for desativada, a pasta partilhada encriptada ser&aacute; desmontada na pr&oacute;xima vez que DiskStation for reiniciado. Para ver ou aceder a uma pasta partilhada desmontada, ter&aacute; de montar a pasta manualmente importando ou introduzindo a chave de encripta&ccedil;&atilde;o.</li>
+	</ol>
+</ul>
+<li>Clique em <b>OK</b> para terminar.</li>
+
+</ol>
+
+<div class="section">
+<h4>Regras de Nomea&ccedil;&atilde;o da Pasta Partilhada:</h4>
+<ul>
+<li>Os nomes das pastas partilhadas n&atilde;o s&atilde;o sens&iacute;veis a mai&uacute;sculas e min&uacute;sculas e podem incluir 1 a 32 caracteres. Os nomes n&atilde;o podem incluir os seguintes caracteres: <strong>! &quot; # $ % &amp; ' ( ) * + , / : ; &lt;= &gt; ? @ [ ] \ ^ ` { } | ~</strong></li>
+<li>Os seguintes nomes est&atilde;o reservados para utiliza&ccedil;&atilde;o do sistema: <strong>.</strong>, <strong>..</strong>, <strong>global</strong>, <strong>home</strong>, <strong>homes</strong>, <strong>printers</strong>, <strong>public</strong>, <strong>satashare</strong>, <strong>surveillance</strong>, <strong>usbbackup</strong>, <strong>usbshare</strong>. </li>
+<li>O primeiro caractere do nome de uma pasta partilhada n&atilde;o pode ser um sinal de subtra&ccedil;&atilde;o ou um espa&ccedil;o e o &uacute;ltimo caractere n&atilde;o pode ser um espa&ccedil;o.</li>
+<li>A <strong>descri&ccedil;&atilde;o</strong> da pasta partilhada &eacute; sens&iacute;vel a mai&uacute;sculas e min&uacute;sculas e tem o limite at&eacute; 64 caracteres Unicode apresent&aacute;veis.</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Encriptar Pastas Partilhadas:</h4>
+
+<p>A encripta&ccedil;&atilde;o AES de 256 bits protege dados bloqueando todas as tentativas de acesso n&atilde;o autorizadas. Assim que uma pasta partilhada for encriptada, os utilizadores que n&atilde;o tiverem a chave de encripta&ccedil;&atilde;o n&atilde;o poder&atilde;o aceder ou modificar os dados encriptados mesmo que removam os discos r&iacute;gidos de DiskStation e os montem noutro dispositivo. </p>
+
+<h4>Nota:</h4>
+<ul>
+<li>As pastas partilhadas s&oacute; podem ser encriptadas no momento da sua cria&ccedil;&atilde;o. </li>
+<li>Os nomes dos ficheiros e pastas em pastas partilhadas encriptadas n&atilde;o podem exceder 143 caracteres em ingl&ecirc;s ou 43 caracteres asi&aacute;ticos.</li>
+<li>As pastas partilhadas encriptadas n&atilde;o podem ser acedidas atrav&eacute;s de NFS.</li>
+<li>Se forem restauradas as predefini&ccedil;&otilde;es das palavras-passe utilizando o bot&atilde;o de reposi&ccedil;&atilde;o localizado em DiskStation, as pastas partilhadas encriptadas ser&atilde;o desmontadas e a op&ccedil;&atilde;o para montar automaticamente pastas partilhadas encriptadas ser&aacute; desativada.</li>
+</ul>
+
+</div>
+
+
+</body>
+</html>

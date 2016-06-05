@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Recovery</h2>
+	<p>This page allows system administartors to perform recovery. To enable users to access shared folder snapshots, please enable <strong>Make snapshot visible</strong> for each shared folder so that users can access the snapshots via File Station or Windows File Explorer.</p>
+
+<h3>Shared Folder</h3>
+
+<h4>To restore individual files/folders in a shared folder:</h4>
+<ol>
+<li>Select a shared folder you wish to restore.
+<li>Click <strong>Recover</strong>.</li>
+<li>Select a snapshot version you wish to restore from.</li>
+<li>Click <strong>Browse</strong>, and copy the files/folders you would like to restore to the destination.</li>
+</ol>
+
+<h4>To restore a shared folder:</h4>
+<ol>
+<li>Select a shared folder you wish to restore.
+<li>Click <strong>Recover</strong>.</li>
+<li>Select a snapshot version you wish to restore from.</li>
+<li>Click <strong>Action</strong>, and select <strong>Restore in-place</strong> from the drop-down list.</li>
+<li>You will see a confirmation message. Click <strong>Yes</strong> to confirm the action.</li>
+</ol>
+
+<h4>To clone a snapshot to a new shared folder:</h4>
+<ol>
+<li>Select a shared folder you wish to clone.</li>
+<li>Click <strong>Recover</strong>.</li>
+<li>Select a snapshot version you wish to clone to a new shared folder.</li>
+<li>Click <strong>Action</strong>, and select <strong>Clone with a new name</strong> from the drop-down list.</li>
+<li>You will be redirected to the <strong>Clone</strong> page in <strong>Control Panel</strong> &gt; <strong>Shared Folder</strong> &gt; <strong>Create</strong>. Enter the name of the cloned shared folder and click <strong>OK</strong> to finish.</li>
+</ol>
+
+<div class="section"><h4>Note:</h4>
+<ul>
+	<li>The shared folder “homes” cannot be restored.</li>
+	<li>The cloned shared folders cannot be encrypted.</li>
+	<li>If a snapshot is taken when transfer of any files is still in progress, the data consistency will not be guaranteed.</li>
+	<li>Limitations on encrypted shared folders:
+		<ul>
+			<li>Neither type of recovery is available for mounted encrypted shared folders.</li>
+			<li><strong>Clone with a new name</strong> is not available for encrypted shared folders.</li>
+			<li>Unmounted encrypted shared folders can be restored from previously taken snapshots by using <strong>Restore in-place</strong>.</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+
+
+<h3>iSCSI LUN</h3>
+<h4>To restore an iSCSI LUN:</h4>
+<ol>
+  <li>Select an iSCSI LUN you wish to restore.</li>
+	<li>Click <strong>Recover</strong>.</li>
+	<li>Select a snapshot version you wish to restore from.</li>
+	<li>Click <strong>Action</strong>, and select <strong>Restore in-place</strong> from the drop-down list.</li>
+  <li>You will see a confirmation message. Click <strong>Yes</strong> to confirm the action.</li>
+</ol>
+
+<h4>To clone a snapshot to a new iSCSI LUN:</h4>
+<ol>
+	<li>Select the iSCSI LUN you wish to clone.</li>
+	<li>Click <strong>Recover</strong>.</li>
+	<li>Select a snapshot version you wish to clone to a new iSCSI LUN.</li>
+	<li>Click <strong>Action</strong>, and select <strong>Clone with a new name</strong> from the drop-down list.</li>
+	<li>You will be redirected to the <strong>Clone</strong> page in <strong>Storage Manager</strong> &gt; <strong>iSCSI LUN</strong>. Enter the name of the cloned iSCSI LUN and click <strong>OK</strong> to finish.</li>
+</ol>
+
+<div class="section">
+<h4>Note:</h4>
+<ul>
+<li>If a snapshot is taken when transfer of any files is still in progress, the data consistency will not be guaranteed.</li>
+</ul>
+</div>
+
+</body>
+</html>

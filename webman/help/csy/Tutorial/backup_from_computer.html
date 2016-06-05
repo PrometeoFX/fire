@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Jak zálohovat data na počítač PC/Mac pomocí aplikace Cloud Station</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Jak zálohovat data na počítač PC/Mac pomocí aplikace Cloud Station</h1>
+<div class="tutorials_content"><img src="../../images/Backup/1x/backup_from_PC/07_1_back_up_your_data_from_pc.png" /><h2>Přehled</h2>
+<p>Aplikace Cloud Station není jen sofistikovaný meziplatformový synchronizační software, uživatelé ho navíc mohou používat jako chytřejší variantu pro zálohování svých osobních počítačů. Používání aplikace Cloud Station jako zálohovacího společníka přináší několik výhod. Za prvé replikace dat v reálném čase poskytuje lepší hodnotu RPO, tj. kratší dobu, ve které může dojít k (nenahraditelné) ztrátě dat na počítači v případě větší nehody. Nejenže probíhá okamžitě, v porovnání s tradičním zálohováním, které v daném okamžiku používá velkou šířku pásma, pomáhá šířku pásma také výrazně šetřit. Nastavením velikosti nebo typu souboru na klientovi PC je snadno možné filtrovat soubory ze stejné složky, které nechcete zálohovat. Aplikace Cloud Station může také uchovávat až 32 historických verzí jednoho souboru, což jí umožňuje obnovení do počítače ze strany serveru (NAS).</p>
+
+<h3 class="list_head">1. Nastavení aplikace Cloud Station na zařízení Synology NAS</h3>
+<ol>
+
+<li>Přihlaste se do systému DSM pomocí účtu ze skupiny <strong>administrator</strong>.</li>
+<li>Spusťte aplikaci <b>Cloud Station</b>.</li>
+<li>Pokud jste nepovolili funkci složky uživatele, budete k tomuto kroku vyzváni. Klikněte na možnost <strong>OK</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/01.png" border="1" /><li>Budete přesměrováni na stránku nastavení uživatele. Povolte uživatele homes a klikněte na možnost <b>Použít</b>.</li><img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" /><li>Nyní přejděte zpět do aplikace <b>Cloud Station</b>, kde budete vyzváni k tomu, abyste ji povolili. Klikněte na možnost <b>Ano</b>.</li><img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" /><div class="code_div"><b>Poznámka:</b> QuickConnect je přenosová služba, která umožňuje snadné připojení k serveru Synology NAS mimo místní síť. Chcete-li synchronizovat soubory mimo domov nebo kancelář, doporučujeme vám, abyste si v části <b>Ovládací panel</b> > <b>QuickConnect</b> nastavili službu QuickConnect.</div>
+
+<li>Přejděte do části <b>Oprávnění</b> a zadat, kteří uživatelé mohou používat aplikaci Cloud Station. Klepněte na možnost <b>Uložit</b>.</li><img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" /><li>Na zařízení Synology NAS nastavte pro účely zálohování sdílenou složku. Postupujte takto: přejděte do části <strong>Ovládací panel</strong> > <strong>Sdílená složka</strong> a klikněte na možnost <strong>Vytvořit</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" /><li>Složku pojmenujte a vyplňte příslušné údaje. Klikněte na možnost <strong>OK</strong>. Složku například pojmenujeme <strong>Záloha</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" /><li>Na kartě <strong>Oprávnění</strong> určete, kteří uživatelé budou mít do složky přístup. Například dáme <strong>správci</strong> ke složce oprávnění <strong>čtení/zápis</strong>. Klikněte na možnost <strong>OK</strong>. </li><img src="../../images/Backup/1x/backup_from_PC/07.png" border="1" /><li>Přejděte do části <strong>Cloud Station</strong> > <strong>Nastavení</strong> > <strong>Sdílení</strong>, kde vyberete složku <b>Záloha</b>, a klikněte na možnost <strong>Povolit</strong>. </li><img src="../../images/Backup/1x/backup_from_PC/08.png" border="1" /></ol>
+
+<h3 class="list_head">2. Nastavení aplikace Cloud Station na zařízení počítači se systémem Windows</h3>
+<p>Postupujte podle návodu na nastavení aplikace Cloud Station na počítačích PC nebo Mac</p>
+
+<h4>2.1 U počítačů PC</h4>
+
+<ol>
+
+<li>Přejděte do části <strong>Cloud Station</strong> > <strong>Přehled</strong> a klikněte na tlačítko <strong>Stáhnout</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/09.png" border="1" /><li>Kliknutím na tlačítko stáhnete aplikaci Cloud Station do počítače se systémem Windows. (Aplikaci Cloud Station si můžete stáhnout také z webu <a href="https://www.synology.com/en-us/support/download" target="_blank">Centrum pro stahování společnosti Synology</a>.)</li>
+<li>Spusťte na počítači instalační program a postupujte podle pokynů pro instalaci aplikace Cloud Station. </li>
+<li>Po instalaci na počítači aplikaci <strong>Cloud Station</strong> spusťte. Klikněte na možnost <strong>Začít nyní</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" /><li>Zadejte adresu serveru Synology NAS se spuštěnou aplikací Cloud Station (nebo QuickConnect ID), uživatelské jméno a heslo. (Můžete také kliknout na ikonu vyhledávání vpravo a Cloud Station automaticky vyhledá ostatní Synology NAS v rámci vaší sítě LAN.) Klikněte na možnost <strong>Další</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" /><div class="code_div"><b>Poznámka:</b> Přesvědčte se, že má zadaný účet na zařízení Synology NAS v části <strong>Cloud Station</strong> > <strong>Oprávnění</strong> udělená oprávnění.</div>
+<li>Vyberte, jak úlohu nastavit (zde zvolíme možnost <strong>Rozšířené nastavení</strong>, protože nastavujeme složku konkrétně pro zálohování). Klikněte na možnost <strong>Další</strong>. </li><img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" /><li>Vyberte na počítači složku, kterou chcete synchronizovat se složkou Záloha, kterou jste vytvořili předtím na zařízení Synology NAS. Klikněte na možnost <strong>Další</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" /><li>Nastavení dokončíte kliknutím na možnost <strong>Hotovo</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" /></ol>
+
+<p><strong>Vytvoření další úlohy</strong>:<ol>
+<li>Přejděte do části <strong>Cloud Station</strong> > <strong>Nastavení</strong> a povolte pro tuto novou úlohu sdílenou složku Mým příkladem je <strong>fotografie</strong>. Přesvědčte se, že máte pro <strong>fotografii</strong> oprávnění pro čtení/zápis.</li><img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" /><li>Zpátky v aplikaci Cloud Station na počítači klikněte na možnost <strong>Vytvořit</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" /><li>Vyberte zařízení Synology NAS pro nový úkol. Zde vybereme možnost <strong>Připojené zařízení Synology NAS</strong>, protože vytváříme další úlohu pro stejné zařízení Synology NAS. Klikněte na možnost <strong>Další</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" /><li>Vyberte možnost <strong>Rozšířená nastavení</strong> a pomocí zbývajících pokynů průvodce pokračujte v nastavení. </li><img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" /></ol>
+
+<h4>2.2 Pro počítač Mac</h4>
+  <ol>
+    <li>Přejděte do části <strong>Cloud Station</strong> > <strong>Přehled</strong> a klikněte na tlačítko <strong>Stáhnout</strong>.</li>
+
+    <li>Kliknutím na tlačítko stáhnete aplikaci Cloud Station do počítače Mac. (Aplikaci Cloud Station si můžete stáhnout také z webu <a href="https://www.synology.com/en-us/support/download" target="_blank">Centrum pro stahování společnosti Synology</a>.)</li><img src="../../images/Backup/1x/backup_from_PC/18.png" border="1" /><li>Spusťte na počítači instalační program a postupujte podle pokynů pro instalaci aplikace Cloud Station. </li>
+    <li>Po instalaci na počítači aplikaci <strong>Cloud Station</strong> spusťte. Klikněte na možnost <strong>Začít nyní</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" /><li>Zadejte adresu serveru Synology NAS se spuštěnou aplikací Cloud Station (nebo QuickConnect ID), uživatelské jméno a heslo. (Můžete také kliknout na ikonu vyhledávání vpravo a Cloud Station automaticky vyhledá ostatní Synology NAS v rámci vaší sítě LAN.) Klikněte na možnost <strong>Další</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" /><div class="code_div"><b>Poznámka:</b> Přesvědčte se, že má zadaný účet na zařízení Synology NAS v části <strong>Cloud Station</strong> > <strong>Oprávnění</strong> udělená oprávnění.</div>
+<li>Vyberte, jak úlohu nastavit (zde zvolíme možnost <strong>Rozšířené nastavení</strong>, protože nastavujeme složku konkrétně pro zálohování). Klikněte na možnost <strong>Další</strong>. </li><img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" /><li>Vyberte na počítači složku, kterou chcete synchronizovat se složkou Záloha, kterou jste vytvořili předtím na zařízení Synology NAS. Klikněte na možnost <strong>Další</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" /><li>Nastavení dokončíte kliknutím na možnost <strong>Hotovo</strong>.</li>
+  </ol>
+  
+<p><strong>Postup vytvoření nové úlohy</strong>:<ol>
+<li>Přejděte do části <strong>Cloud Station</strong> > <strong>Nastavení</strong> a povolte pro tuto novou úlohu sdílenou složku Mým příkladem je <strong>fotografie</strong>. Přesvědčte se, že máte pro <strong>fotografii</strong> oprávnění pro čtení/zápis.</li><img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" /><li>Zpátky v aplikaci Cloud Station na počítači klikněte na možnost <strong>Vytvořit</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" /><li>Vyberte zařízení Synology NAS pro nový úkol. Zde vybereme možnost <strong>Připojené zařízení Synology NAS</strong>, protože vytváříme další úlohu pro stejné zařízení Synology NAS. Klikněte na možnost <strong>Další</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" /><li>Vyberte možnost <strong>Rozšířená nastavení</strong> a pomocí zbývajících pokynů průvodce pokračujte v nastavení. </li><img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" /></ol> 
+
+<h3 class="list_head">3. Načítání dat z aplikace Cloud Station</h3>
+<p>Pokud omylem soubor odeberete nebo přepíšete, aplikace Cloud Station umožňuje jeho jednoduché obnovení. </p>  
+<h3>4.1 Stažení předchozí verze synchronizovaného souboru na počítači PC</h3>  
+  <ol>
+      <li>Klikněte na ikonu Cloud Station na hlavním panelu a klikněte na ikonu složky.</li><img src="../../images/Backup/1x/backup_from_PC/25.png" border="1" /><li>Klikněte pravým tlačítkem myši na vybraný soubor a vyberte možnost <strong>Synology Cloud Station</strong> > <strong>Procházet předchozí verze</strong>. </li><img src="../../images/Backup/1x/backup_from_PC/26.png" border="1" /><li>Vyhledejte verzi, kterou chcete stáhnout, a klikněte na ikonu stahování. </li><img src="../../images/Backup/1x/backup_from_PC/27.png" border="1" /></ul>
+    <li>Zadejte název souboru a vyberte cílové umístění pro uložení souboru.</ol>
+<h3>4.1 Stažení předchozí verze synchronizovaného souboru na počítači Mac</h3>  
+  <ol>
+      <li>Klikněte na ikonu Cloud Station na hlavním panelu a klikněte na ikonu složky.</li><img src="../../images/Backup/1x/backup_from_PC/28.png" border="1" /><li>Klikněte pravým tlačítkem myši na vybraný soubor a vyberte možnost <strong>Synology Cloud Station</strong> > <strong>Procházet předchozí verze</strong>. </li><img src="../../images/Backup/1x/backup_from_PC/29.png" border="1" /><li>Vyhledejte verzi, kterou chcete stáhnout, a klikněte na ikonu stahování. </li><img src="../../images/Backup/1x/backup_from_PC/30.png" border="1" /><li>Zadejte název souboru a vyberte cílové umístění pro uložení souboru.</ol>
+<h3>4.3 Stažení nebo obnovení předchozí verze synchronizovaného souboru z aplikace Cloud Station</h3>   
+<ol>
+    <li>Přejděte do části <strong>Cloud Station </strong>> <strong>Historie verzí</strong> a vyberte složku <strong>Záloha</strong>, kterou jste vytvořili dříve. </li><img src="../../images/Backup/1x/backup_from_PC/31.png" border="1" /><li>Vyberte soubor, který chcete načíst, a klikněte na možnost <strong>Akce</strong> > <strong>Procházet předchozí verze</strong>. </li><img src="../../images/Backup/1x/backup_from_PC/34.png" border="1" /><li>Vyberte verzi souboru, který chcete stáhnout, a klikněte na možnost <strong>Stáhnout</strong>. Nebo pokud si jste jistí, že chcete vybranou verzi obnovit, klikněte na možnost <strong>Obnovit</strong> – aktuální verze se takto přepíše.</li><img src="../../images/Backup/1x/backup_from_PC/35.png" border="1" /></ol>
+
+<h3 class="list_head">4. Důležité poznámky</h3>  
+  <ol>
+<li>Vždy uchovávejte historické verze pro případ, že se soubor omylem odebere nebo přepíše.</li>
+<li>V globálních nastaveních je možné nakonfigurovat, jestli se soubor ze zařízení NAS načte nebo jestli se při odstranění souboru na vašem počítači odstraní i na zařízení NAS.</li>
+</ol>
+  <h3 class="list_head">5. Další ochrana dat</h3>
+  
+<p>Další způsoby, jak chránit a zálohovat data, najdete po kliknutí na <a href="https://www.synology.com/en-global/knowledgebase/tutorials#BackupRestore" target="_blank">tento odkaz</a>, kde se nacházejí tutoriály s podrobnostmi o dalších službách zálohování nabízených na systému DSM.</p>
+
+</div>
+<div class="page-info">
+  <ul>
+    <li>Další část tohoto tématu: <a href="backup_backup.html">Zálohujte data ze svého zařízení Synology NAS</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

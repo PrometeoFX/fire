@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Récupération</h2>
+	<p>Cette page permet aux administrateurs système de procéder à une récupération. Pour permettre aux utilisateurs d'accéder aux instantanés des dossiers partagés, activez<strong>Rendre l'instantané visible</strong> pour chaque dossier partagé afin que les utilisateurs puissent accéder aux instantanés via File Station ou Windows File Explorer.</p>
+
+<h3>Dossier partagé</h3>
+
+<h4>Pour restaurer des fichiers/dossiers individuels dans un dossier partagé :</h4>
+<ol>
+<li>Sélectionnez un dossier partagé que vous souhaitez restaurer.
+<li>Cliquez sur <strong>Récupérer</strong>.</li>
+<li>Sélectionnez la version d'un instantané que vous souhaitez restaurer.</li>
+<li>Cliquez sur <strong>Parcourir</strong> et copiez les fichiers/dossier que vous souhaitez restaurer dans la destination.</li>
+</ol>
+
+<h4>Pour restaurer un dossier partagé :</h4>
+<ol>
+<li>Sélectionnez un dossier partagé que vous souhaitez restaurer.
+<li>Cliquez sur <strong>Récupérer</strong>.</li>
+<li>Sélectionnez la version d'un instantané que vous souhaitez restaurer.</li>
+<li>Cliquez sur <strong>Action</strong>, et sélectionnez <strong>Restaurer en place</strong> dans la liste déroulante.</li>
+<li>Un message de confirmation s'affiche. Cliquez sur <strong>Oui</strong> pour confirmer l'action.</li>
+</ol>
+
+<h4>Pour cloner un instantané dans un nouveau dossier partagé :</h4>
+<ol>
+<li>Sélectionnez un dossier partagé que vous souhaitez cloner.</li>
+<li>Cliquez sur <strong>Récupérer</strong>.</li>
+<li>Sélectionnez la version d'un instantané que vous souhaitez cloner dans un nouveau dossier partagé.</li>
+<li>Cliquez sur <strong>Action</strong> et sélectionnez <strong>Cloner sous un nouveau nom</strong> dans la liste déroulante.</li>
+<li>Vous êtes redirigé vers la page <strong>Cloner</strong> de <strong>Panneau de configuration</strong>  &gt; <strong>Dossier partagé</strong>  &gt; <strong>Créer</strong>. Saisissez le nom du dossier partagé cloné et cliquez sur <strong>OK</strong> pour terminer.</li>
+</ol>
+
+<div class="section"><h4>Remarque :</h4>
+<ul>
+	<li>Il est impossible de restaurer le dossier partagé « homes ».</li>
+	<li>Les dossiers partagés clonés ne peuvent pas être chiffrés.</li>
+	<li>La cohérence des données n'est pas garantie si un instantané est pris alors qu'un transfert de fichiers est encore en cours.</li>
+	<li>Limitations relatives aux dossiers partagés chiffrés :
+		<ul>
+			<li>Aucun type de récupération n'est disponible pour des dossiers partagés chiffrés montés.</li>
+			<li><strong>Cloner sous un nouveau nom</strong> n'est pas disponible pour des dossiers partagés chiffrés.</li>
+			<li>Il est possible de restaurer des dossiers partagés chiffrés non montés à partir d'un instantané pris précédemment à l'aide de l'option <strong>Restaurer en place</strong>.</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+
+
+<h3>iSCSI LUN</h3>
+<h4>Pour restaurer un iSCSI LUN :</h4>
+<ol>
+  <li>Sélectionnez un iSCSI LUN que vous souhaitez restaurer.</li>
+	<li>Cliquez sur <strong>Récupérer</strong>.</li>
+	<li>Sélectionnez la version d'un instantané que vous souhaitez restaurer.</li>
+	<li>Cliquez sur <strong>Action</strong>, et sélectionnez <strong>Restaurer en place</strong> dans la liste déroulante.</li>
+  <li>Un message de confirmation s'affiche. Cliquez sur <strong>Oui</strong> pour confirmer l'action.</li>
+</ol>
+
+<h4>Pour cloner un instantané dans un nouvel iSCSI LUN :</h4>
+<ol>
+	<li>Sélectionnez l'iSCSI LUN que vous souhaitez cloner.</li>
+	<li>Cliquez sur <strong>Récupérer</strong>.</li>
+	<li>Sélectionnez la version d'un instantané que vous souhaitez cloner dans un nouvel iSCSI LUN.</li>
+	<li>Cliquez sur <strong>Action</strong> et sélectionnez <strong>Cloner sous un nouveau nom</strong> dans la liste déroulante.</li>
+	<li>Vous êtes redirigé vers la page <strong>Cloner</strong> de <strong>Gestionnaire de stockage</strong> &gt; <strong>iSCSI LUN</strong>. Saisissez le nom de l'iSCSI LUN cloné et cliquez sur <strong>OK</strong> pour terminer.</li>
+</ol>
+
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>La cohérence des données n'est pas garantie si un instantané est pris alors qu'un transfert de fichiers est encore en cours.</li>
+</ul>
+</div>
+
+</body>
+</html>

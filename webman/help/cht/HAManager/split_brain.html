@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Split-brain</h2>
+
+<p>當 high-availability 叢集正常運作時，只有一台成員伺服器會扮演主伺服器的角色。在此情況下，副伺服器會透過 Heartbeat 連線及資料連線偵測主伺服器的目前狀態。</p>
+
+<p>若所有 Heartbeat 及資料連線均中斷，這兩台伺服器都可能會試圖擔任主伺服器。此情形稱為「split-brain」錯誤。在此情況下，若連線到 high-availability 叢集的 IP 位址將會被重新導向至兩台伺服器中的其中一台，造成服務錯誤。</p>
+        
+<h4>若發生 split-brain 錯誤：</h4>
+	<ol>
+		<li>連線到叢集 IP 位址將會被重新導向至其中一台伺服器，造成服務錯誤。您將無法順利連線至任何一台伺服器。</li>
+		<li>系統會偵測 split-brain 錯誤，並將 high-availability 叢集移除，解除兩台伺服器的連結。</li>
+		<li>當兩台伺服器都回復到<b>獨立運作</b>的狀態時，您便可以登入 DiskStation Manager (DSM)。此時，兩台伺服器上都會保有 high-availability 叢集移除前的資料。您可在判別哪台伺服器資料較新後，重新連結伺服器來再次建立 high-availability 叢集。</li>
+	</ol>
+ </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DSM 設定</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="https"></a>DSM 設定</h2>
+
+<p><strong>[コントロール パネル]</strong> &gt; <strong>[ネットワーク]</strong> &gt; <strong>[DSM 設定]</strong> を選択すると、クライアントが DSM にアクセスするために使うポート番号を変更できます。HTTPS を有効にすると、接続は SSL/TLS で暗号化されます。</p>
+
+<h4>デフォルトのポート番号を変更する：</h4>
+<ol>
+<li><b>HTTP</b> または <b>HTTPS</b> フィールドにポート番号を入力します。</li>
+<li><b>[適用]</b> をクリックします。</li>
+</ol>
+
+<h4>HTTPS 接続を有効にする：</h4>
+<ol>
+<li>
+<b>[HTTPS 接続を有効にする] </b>を選択します。
+</li>
+<li>HTTP ポート (5000) を介して DSM にアクセスするとき、クライアントを HTTPS ポート (5001) に転送するには、<b>[HTTP 接続を HTTPS に自動リダイレクトする]</b> にチェックマークを付けます。</li>
+<li>
+<b>[適用]</b> をクリックします。
+</li>
+</ol>
+
+<div class="section">
+<h4>HTTPS 接続で使用するポート：</h4>
+<ul>
+<li><b>DSM</b>：デフォルトのポート番号は 5001 ですので、次のアドレスを入力すると DSM に安全にアクセスできます。https://server-hostname:5001/</li>
+<li><b>Web Station と Photo Station</b>：デフォルトのポート番号は 443 ですので、次のアドレスを入力すると Web Station と Photo Station に安全にアクセスできます。https://server-hostname/</li>
+</ul>
+
+</div>
+
+<h4>Windows のネットワーク探索方法で DiskStation を検出するには：</h4>
+<ol>
+<li>
+<b>[Windows ネットワーク探索を有効にする]</b> にチェックマークを付けます。
+</li>
+<li>
+<b>[適用]</b> をクリックします。
+</li>
+</ol>
+
+</body>
+</html>
+

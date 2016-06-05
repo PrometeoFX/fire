@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Terminal</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Terminal</h2>
+
+<p>A ativa&ccedil;&atilde;o de op&ccedil;&otilde;es em <strong>Painel de Controlo</strong> &gt; <strong>Terminal e SNMP</strong> &gt; <strong>Terminal</strong> permite que o DiskStation suporte servi&ccedil;os de interface da linha de comandos de Telnet e SSH. Pode tamb&eacute;m alterar o n&iacute;vel de seguran&ccedil;a do algoritmo de encripta&ccedil;&atilde;o SSH.</p>
+
+<h4>Para ativar o servi&ccedil;o Telnet/SSH:</h4>
+<ol>
+<li>Assinale a caixa de verifica&ccedil;&atilde;o junto do protocolo pretendido (SSH ou Telnet).</li>
+<li>Clique em <b>Aplicar</b>.</li>
+</ol>
+<h4>Para alterar a porta do servi&ccedil;o SSH:</h4>
+<ol>
+<li>Em <strong>Porta</strong>, introduza um novo n&uacute;mero da porta.</li>
+<li>Clique em <b>Aplicar</b>.</li>
+</ol>
+
+<p>S&atilde;o usados v&aacute;rios algoritmos de encripta&ccedil;&atilde;o com diferentes n&iacute;veis de seguran&ccedil;a para proteger liga&ccedil;&otilde;es SSH. Pode decidir que algoritmos usar para melhor ir de encontro &agrave;s suas necessidades.</p>
+<h4>Para alterar o n&iacute;vel e seguran&ccedil;a do algoritmo de encripta&ccedil;&atilde;o SSH:</h4>
+<ol>
+<li>Clique em <b>Defini&ccedil;&otilde;es Avan&ccedil;adas</b>.</li>
+<li>Seleccione um n&iacute;vel de seguran&ccedil;a para os algoritmos de encripta&ccedil;&atilde;o. Se desejar especificar exactamente que algoritmos podem ser usados, seleccione <b>Personalizar</b> para escolher de entre tr&ecirc;s grupos: Cipher, KEX (Key Exchange), e MAC (Message Authentication Code).</li>
+<li>Clique em <b>Aplicar</b>.</li>
+</ol>
+<p>Alguns modelos suportam acelera&ccedil;&atilde;o por hardware para certos algoritmos de encripta&ccedil;&atilde;o. Pode assinalar a op&ccedil;&atilde;o <b>Usar apenas cifras de acelera&ccedil;&atilde;o por hardware</b> para melhorar as velocidades de transfer&ecirc;ncia de servi&ccedil;os relacionados com SSH, incluindo servi&ccedil;os encriptados de C&oacute;pia de Seguran&ccedil;a de Rede e SFTP. Na p&aacute;gina avan&ccedil;ada, os algoritmos capazes de usar acelera&ccedil;&atilde;o por hardware s&atilde;o apresentados a vermelho.</p>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+
+<li>Alguns servi&ccedil;os (por exemplo, c&oacute;pia de seguran&ccedil;a da rede, SFTP) activam automaticamente o SSH e abrem a porta 22. Neste caso, tem de activar o servi&ccedil;o SSH em <strong>Painel de Controlo</strong> &gt; <strong>Terminal e SNMP</strong> &gt; <strong>Terminal</strong> para iniciar sess&atilde;o no DSM utilizando SSH.</li>
+<li>O SSH/Telnet s&oacute; suporta o in&iacute;cio de sess&atilde;o no sistema com as contas <strong>root</strong> ou <strong>admin</strong>.</li>
+<li>N&atilde;o &eacute; poss&iacute;vel deixar em branco a palavra-passe quando iniciar sess&atilde;o no sistema com SSH/Telnet.</li>
+<li>Quando o servi&ccedil;o SSH for desativado, todas as liga&ccedil;&otilde;es SSH s&atilde;o terminadas, incluindo qualquer tarefa de c&oacute;pia de seguran&ccedil;a da rede encriptada atualmente em execu&ccedil;&atilde;o. Sugerimos que efetue novamente as tarefas de c&oacute;pia de seguran&ccedil;a da rede ap&oacute;s a desativa&ccedil;&atilde;o do servi&ccedil;o SSH.</li>
+<li>A manipula&ccedil;&atilde;o ou modifica&ccedil;&atilde;o impr&oacute;pria de DiskStation pode resultar no mau funcionamento ou na perda de dados.</li>
+<li>Seleccionar um n&iacute;vel de seguran&ccedil;a mais elevado ou usar apenas cifras de acelera&ccedil;&atilde;o por hardware poder&aacute; levar a que certos clientes SSH n&atilde;o se consigam ligar devido a conflitos de compatibilidade.</li>
+<li>Dependendo do n&iacute;vel de seguran&ccedil;a seleccionado, certos algoritmos que suportam acelera&ccedil;&atilde;o por hardware podem n&atilde;o estar dispon&iacute;veis.</li>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="certificate"></a>Certificado</h2>
+<p>Um certificado pode ser usado para proteger os servi&ccedil;os SSL do DiskStation, tais como Internet (todos os servi&ccedil;os HTTPS), e-mail ou FTP.Ter um certificado permite que os usu&aacute;rios validem a identidade de um servidor e o administrador antes de enviar qualquer informa&ccedil;&atilde;o confidencial. </p>
+<p>A guia <strong>Certificado</strong> (localizada no <strong>Painel de controle</strong> &gt; <strong>Seguran&ccedil;a</strong> &gt; <strong>Certificado</strong>) fornece op&ccedil;&otilde;es para gerenciar e visualizar o status dos certificados DiskStation, o que permite que voc&ecirc; crie, importe/exporte ou renove certificados.O assistente de configura&ccedil;&atilde;o de certificado o ajuda a criar certificados autoassinados ou baixar solicita&ccedil;&otilde;es de assinatura de certificados (CSR) para registro com autoridades certificadas (CA).</p>
+<div class="section">
+<h4>Observa&ccedil;&atilde;o:</h4>
+<p>O certificado definido aqui ser&aacute; usado automaticamente pelo servidor OpenVPN se o servidor VPN estiver instalado.</p>
+</div>
+<h3>Certificados autoassinados</h3>
+<p>Um certificado autoassinado refere-se a um certificado que foi criado e assinado pela mesma entidade cuja identidade &eacute; certificada (nesse caso, o DiskStation).Os certificados autoassinados s&atilde;o atribu&iacute;dos com uma chave particular gerada pelo DiskStation.Como os certificados autoassinados n&atilde;o s&atilde;o emitidos por autoridades certificadas de terceiros, eles fornecem menos prova de identidade do servidor e s&atilde;o usados geralmente apenas para proteger canais entre o servidor e um grupo de usu&aacute;rios conhecidos.</p>
+<h4>Para criar um certificado autoassinado:</h4>
+<ol>
+	<li>Clique em <b>Criar certificado.</b></li>
+	<li>Siga as instru&ccedil;&otilde;es do assistente de configura&ccedil;&atilde;o.</li>
+</ol>
+<div class="section">
+<h4>Observa&ccedil;&atilde;o:</h4>
+<p>A cria&ccedil;&atilde;o de um certificado autoassinado substituir&aacute; o certificado existente do DiskStation.</p>
+</div>
+<h3>Solicita&ccedil;&otilde;es de assinatura de certificado</h3>
+<p>Para se candidatar a um certificado de outra autoridade certificada de terceiros, &eacute; necess&aacute;rio primeiro criar uma solicita&ccedil;&atilde;o de assinatura de certificado (CSR).Uma solicita&ccedil;&atilde;o de assinatura de certificado &eacute; um corpo de texto criptografado gerado pelo DiskStation contendo informa&ccedil;&otilde;es que ser&atilde;o inclu&iacute;das em seu certificado tais como o nome do dom&iacute;nio, o nome da organiza&ccedil;&atilde;o, a localiza&ccedil;&atilde;o geral e o endere&ccedil;o de e-mail.O assistente de configura&ccedil;&atilde;o pode ajud&aacute;-lo a gerar uma solicita&ccedil;&atilde;o de assinatura de certificado para se candidatar a um certificado assinado do DiskStation.</p>
+<p>Para obter um certificado de uma autoridade de certificado de terceiros ou comercial, &eacute; necess&aacute;rio fornecer sua identifica&ccedil;&atilde;o pessoal ou da empresa e provar que voc&ecirc; &eacute; o propriet&aacute;rio do nome do dom&iacute;nio inserido no campo do nome comum da solicita&ccedil;&atilde;o de assinatura de certificado.</p>
+<div class="section">
+<h4>Observa&ccedil;&atilde;o:</h4>
+<p>uma chave particular tamb&eacute;m deve ser gerada juntamente com a solicita&ccedil;&atilde;o de assinatura do certificado.As autoridades de certificado n&atilde;o precisam dessa chave particular.Mantenha a chave particular de seu DiskStation em seguran&ccedil;a e segredo.</p>
+</div>
+<h4>Para criar uma solicita&ccedil;&atilde;o de assinatura de certificado:</h4>
+<ol>
+	<li>Clique em <b>Criar certificado.</b></li>
+	<li>Siga as instru&ccedil;&otilde;es do assistente de configura&ccedil;&atilde;o para criar e baixar a solicita&ccedil;&atilde;o de assinatura de certificado.</li>
+</ol>
+<p>Quando seu certificado for emitido pela autoridade de certificado, ele pode ser importado juntamente com sua chave particular (consulte abaixo para obter as instru&ccedil;&otilde;es).
+<h3>Exporta&ccedil;&atilde;o de certificados</h3>
+<p>Os certificados existentes podem ser baixados para fins de gerenciamento ou arquivamento.O arquivo exportado cont&eacute;m o certificado, a chave particular e o certificado raiz autoassinado do DiskStation.</p>
+<h4>Para exportar um certificado:</h4>
+<ul>
+<li>Clique no bot&atilde;o <b>Exportar certificado</b>.</li>
+</ul>
+<h3>Importa&ccedil;&atilde;o de certificados</h3>
+<p>Essa op&ccedil;&atilde;o permite a importa&ccedil;&atilde;o de certificados emitidos de autoridades de certificados ou certificados exportados anteriormente, juntamente com a chave particular.</p>
+<h4>Para importar um certificado:</h4>
+<ul>
+	<li>Clique no bot&atilde;o <b>Importar certificado</b>.</li>
+</ul>
+<div class="section">
+<h4>Observa&ccedil;&atilde;o:</h4>
+<ul>
+<li>Os certificados intermedi&aacute;rios s&atilde;o opcionais para alguns certificados emitidos por autoridades certificadas.</li>
+<li>Os certificados devem ser em formato X.509 PEM.</li>
+<li>As chaves privadas devem estar no formato RSA e n&atilde;o podem ser protegidas por frases-senhas.</li>
+</ul>
+</div>
+<h3>Renova&ccedil;&atilde;o de certificados</h3>
+<p>Quando seu certificado estiver prestes a expirar, ele poder&aacute; ser renovado usando-se essa op&ccedil;&atilde;o.</p>
+<h4>Para renovar um certificado:</h4>
+<ol>
+	<li>Clique em <b>Criar certificado.</b></li>
+	<li>Selecione <b>Renovar certificado</b> e clique em <b>Avan&ccedil;ar</b></li>
+	<li>Uma nova chave particular e uma solicita&ccedil;&atilde;o de assinatura de certificado ser&atilde;o criadas.</li>
+</ol>
+<h3>Assinar solicita&ccedil;&atilde;o de assinatura de certificado (CSR)</h3>
+<p>Essa op&ccedil;&atilde;o permite que voc&ecirc; assine uma solicita&ccedil;&atilde;o de assinatura de certificando usando o certificado raiz de DiskStation.</p>
+<h4>Para entrar em uma solicita&ccedil;&atilde;o de assinatura de certificado:</h4>
+<ol>
+	<li>Clique em <b>Criar certificado.</b></li>
+	<li>Clique em <b>Assinar solicita&ccedil;&atilde;o de assinatura de certificado (CSR)</b>.</li>
+	<li>Carregue a solicita&ccedil;&atilde;o de assinatura de certificado e insira as informa&ccedil;&otilde;es relevantes. </li>
+	<li>Clique em <b>Pr&oacute;ximo</b> e o sistema assinar&aacute; a solicita&ccedil;&atilde;o de certificado e criar&aacute; um certificado correspondente.</li>
+</ol>
+</body>
+</html>

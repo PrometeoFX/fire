@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Sele&ccedil;&atilde;o do tipo de RAID - Ajuda do Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="A brief overview describing what RAID types are supported by Synology DiskStation Manager (DSM).">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Escolher um Tipo RAID</h2>
+<p>RAID (Redundant Array of Independent Disks) &eacute; uma tecnologia de armazenamento de dados que permite que v&aacute;rios discos r&iacute;gidos sejam combinados em um &uacute;nico espa&ccedil;o de armazenamento. Existem diferentes tipos de RAID, cada um oferecendo diferentes n&iacute;veis de desempenho, capacidade de armazenamento e confiabilidade.</p>
+<p>Este artigo fornece uma vis&atilde;o geral dos tipos de RAID suportados pelo DiskStation, incluindo os requisitos de implementa&ccedil;&atilde;o, bem como suas vantagens e desvantagens.</p>
+<!--1-->
+<h3>Tipos de RAID suportados</h3>
+<p>Essa tabela fornece uma vis&atilde;o geral dos diferentes tipos de RAID suportados pelo DiskStation, incluindo capacidade de armazenamento, n&uacute;mero m&iacute;nimo de unidades de disco r&iacute;gido necess&aacute;rios para o tipo de RAID e o n&uacute;mero de falhas no disco r&iacute;gido que podem ser toleradas antes que ocorra perda de dados. </p>
+<table>
+  <tr>
+    <th>Tipo de volume</th>
+    <th>N&uacute;mero de HDD</th>
+    <th>Falhas Toler&aacute;veis no Disco R&iacute;gido</th>
+    <th>Descri&ccedil;&atilde;o</th>
+    <th>Capacidade do Volume</th>
+  </tr>
+  <tr>
+    <td rowspan="3">SHR</td>
+    <td>1</td>
+    <td>0</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Otimiza o tamanho do volume ao combinar discos r&iacute;gidos de diferentes tamanhos.</li>
+    <li>Fornece redund&acirc;ncia de dados, se o volume for composto por dois ou mais discos r&iacute;gidos.</li>
+    <li>Recomendado para usu&aacute;rios iniciantes.</li>
+    </ul>
+    </div>
+    </td>
+    <td>1 x (tamanho do HDD)</td>
+  </tr>
+  <tr>
+    <td>2-3</td>
+    <td>1</td>
+    <td rowspan="2">Otimizado pelo sistema.</td>
+  </tr>
+  <tr>
+    <td>≧4</td>
+    <td>1-2</td>
+  </tr>
+  
+  <tr>
+    <td>Basic</td>
+    <td>1</td>
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Composto de um disco r&iacute;gido como uma unidade independente.</li>
+    <li>N&atilde;o fornece redund&acirc;ncia de dados.</li>
+    </ul>
+    </div>
+    </td>
+    <td>1 x (tamanho do HDD)</td>
+  </tr>
+  <tr>
+    <td>JBOD</td>
+    <td>≧2</td>
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Combina uma cole&ccedil;&atilde;o de discos r&iacute;gidos em um &uacute;nico espa&ccedil;o de armazenamento, com capacidade igual &agrave; soma da capacidade de todos os discos r&iacute;gidos.</li>
+    <li>N&atilde;o fornece redund&acirc;ncia de dados.</li>
+    </ul>
+    </div>
+    </td>
+    <td>Soma de todos os tamanhos de HDD</td>
+  </tr>
+  <tr>
+    <td>RAID 0</td>
+    <td>≧2</td>
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Oferece &quot;distribui&ccedil;&atilde;o&quot;, um processo de divis&otilde;es dos dados em blocos e distribui&ccedil;&atilde;o dos blocos de dados em v&aacute;rios discos r&iacute;gidos para aumentar o desempenho.</li>
+    <li>N&atilde;o fornece redund&acirc;ncia de dados.</li>
+    </ul>
+    </div>
+    </td>
+    <td>Soma de todos os tamanhos de HDD</td>
+  </tr>
+  <tr>
+    <td rowspan="3">RAID 1</td>
+    <td>2</td>
+    <td>1</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Grava dados id&ecirc;nticos nos dois discos r&iacute;gidos simultaneamente.</li>
+    <li>Fornece redund&acirc;ncia de dados.</li>
+    </ul>
+    </div>
+    </td>
+    <td rowspan="3">Menor tamanho de HDD</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>≧3</td>
+    <td>1</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Implementa a distribui&ccedil;&atilde;o em n&iacute;vel de blocos com dados de paridade distribu&iacute;dos em todos os discos r&iacute;gidos membros, proporcionando, dessa forma, uma redund&acirc;ncia de dados mais eficiente do que o RAID 1.</li>
+    </ul>
+    </div>
+    </td>
+    <td>(N &ndash; 1) x (Menor tamanho de HDD)</td>
+  </tr>
+  <tr>
+    <td>RAID 6</td>
+    <td>≧4</td>
+    <td>2</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Implementa duas camadas de paridade de dados para armazenar dados redundantes iguais ao tamanho de dois discos r&iacute;gidos, proporcionando um maior grau de redund&acirc;ncia de dados do que o RAID 5.</li>
+    </ul>
+    </div>
+    </td>
+    <td>(N &ndash; 2) x (Menor tamanho de HDD)</td>
+  </tr>
+  <tr>
+    <td>RAID 10</td>
+    <td>≧4<br /> (n&uacute;mero par)</td>
+    <td>Metade do total do HDD</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Fornece o desempenho de RAID 0 e o n&iacute;vel de prote&ccedil;&atilde;o de dados de RAID 1, combinando os discos r&iacute;gidos em grupos de dois, com os dados espelhados.</li>
+    </ul>
+    </div>
+    </td>
+    <td>(N / 2) x (menor tamanho de HDD)</td>
+  </tr>
+</table>
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Tipos de RAID, exceto para &quot;Basic&quot;, s&oacute; est&atilde;o dispon&iacute;veis em alguns modelos, dependendo do n&uacute;mero de compartimentos de disco r&iacute;gido e o n&uacute;mero de discos r&iacute;gidos instalados.</li>
+<li>&quot;N&quot; representa o n&uacute;mero total de discos r&iacute;gidos dentro do volume.</li>
+</ul>
+</div>
+<!--2-->
+<h3>Synology Hybrid RAID (SHR)</h3>
+<p>O Synology Hybrid RAID (SHR) &eacute; um sistema de gerenciamento de RAID automatizado, projetado para simplificar o gerenciamento de armazenamento e atender &agrave;s necessidades dos novos usu&aacute;rios que n&atilde;o est&atilde;o familiarizados com os tipos de RAID. </p>
+<p>O SHR pode combinar discos r&iacute;gidos de diferentes tamanhos para criar um volume de armazenamento com capacidade e desempenho otimizados, desperdi&ccedil;ando menos espa&ccedil;o no disco r&iacute;gido e fornecendo uma solu&ccedil;&atilde;o de armazenamento mais flex&iacute;vel.  Quando discos r&iacute;gidos suficientes s&atilde;o inclu&iacute;dos, o SHR permite a redund&acirc;ncia de 1 ou 2 discos, ou seja, o volume de SHR pode sofrer falhas em uma ou duas unidades de disco r&iacute;gido sem apresentar perda de dados.</p>
+<!--3-->
+<h3>RAID 0</h3>
+<p>O RAID 0 combina dois ou mais discos r&iacute;gidos para aumentar o desempenho e a capacidade, mas n&atilde;o fornece nenhuma toler&acirc;ncia a falhas. Uma &uacute;nica falha de disco r&iacute;gido ir&aacute; resultar na perda de todos os dados na matriz. O RAID 0 &eacute; &uacute;til para sistemas n&atilde;o cr&iacute;ticos, onde &eacute; necess&aacute;rio um equil&iacute;brio de alto pre&ccedil;o/desempenho.</p>
+<!--4-->
+<h3>RAID 1</h3>
+<p>O RAID 1 &eacute; o tipo mais frequentemente implementado com dois discos r&iacute;gidos. Os dados nas unidades de disco r&iacute;gido s&atilde;o espelhados, fornecendo toler&acirc;ncia a falhas em caso de falha no disco r&iacute;gido. O desempenho de leitura &eacute; aumentado enquanto o desempenho de grava&ccedil;&atilde;o ser&aacute; semelhante a um &uacute;nico disco r&iacute;gido. A falha de um disco r&iacute;gido poder&aacute; ser suportada sem perda de dados. O RAID 1 &eacute; muitas vezes usado quando a toler&acirc;ncia a falhas &eacute; fundamental, mas o espa&ccedil;o e o desempenho n&atilde;o s&atilde;o requisitos essenciais.</p>
+<!--5-->
+<h3>RAID 5</h3>
+<p>O RAID 5 oferece toler&acirc;ncia a falhas e maior desempenho de leitura. &Eacute; necess&aacute;rio um m&iacute;nimo de tr&ecirc;s discos r&iacute;gidos. O RAID 5 pode suportar a perda de um &uacute;nico disco r&iacute;gido. No caso de uma falha no disco r&iacute;gido, os dados do disco r&iacute;gido defeituoso ser&atilde;o reconstru&iacute;dos a partir da paridade distribu&iacute;da entre os discos r&iacute;gidos restantes. Como resultado, o desempenho de leitura e grava&ccedil;&atilde;o ser&atilde;o severamente afetados enquanto uma matriz RAID 5 estiver em estado degradado. O RAID 5 &eacute; ideal quando o espa&ccedil;o e o custo s&atilde;o mais importantes do que o desempenho.</p>
+<!--6-->
+<h3>RAID 6</h3>
+<p>O RAID 6 &eacute; semelhante ao RAID 5, exceto que ele fornece outra camada de segmenta&ccedil;&atilde;o e pode suportar duas falhas em disco. &Eacute; necess&aacute;rio um m&iacute;nimo de quatro discos r&iacute;gidos. O desempenho do RAID 6 &eacute; menor do que o do RAID 5 por causa dessa toler&acirc;ncia a falhas adicionais. O RAID 6 torna-se atraente quando o espa&ccedil;o e o custo s&atilde;o importantes e o suporte a v&aacute;rias falhas no disco r&iacute;gido &eacute; necess&aacute;rio.</p>
+<!--7-->
+<h3>RAID 10</h3>
+<p>O RAID 10 combina os benef&iacute;cios do RAID 1 e RAID 0. O desempenho de leitura e grava&ccedil;&atilde;o &eacute; maior, mas tem apenas metade do espa&ccedil;o total dispon&iacute;vel para o armazenamento de dados. S&atilde;o necess&aacute;rias quatro ou mais unidades de disco, tornando o custo relativamente elevado, mas o desempenho &eacute; alto, proporcionando, ao mesmo tempo, toler&acirc;ncia a falhas. Na verdade, o RAID 10 pode suportar v&aacute;rias falhas de disco r&iacute;gido, desde que as falhas n&atilde;o estejam dentro do mesmo subgrupo. O RAID 10 &eacute; ideal para aplica&ccedil;&otilde;es com alta demanda de entrada/sa&iacute;da, tais como servidores de banco de dados.</p>
+</body>
+</html>

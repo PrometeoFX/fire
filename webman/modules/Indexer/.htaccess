@@ -1,0 +1,9 @@
+<filesmatch "\.php">
+order allow,deny
+deny from all
+</filesmatch>
+
+<filesmatch "\.script">
+order allow,deny
+deny from all
+</filesmatch>

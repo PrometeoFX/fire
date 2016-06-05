@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Mac ファイルサービス</h2>
+
+<p>
+Mac ファイル サービスを有効にして、DiskStation を Mac ファイル サーバー（AFP サーバー）にすることができます。<strong>[コントロール パネル]</strong> &gt; <strong>[ファイル サービス]</strong> &gt; <strong>[Win/Mac/NFS]</strong> を選択してください。</p>
+
+<h4>Mac のファイルサービスを有効にする：</h4>
+<ol>
+<li>
+<b>[Macのファイルサービスを有効にする]</b> にチェックマークを付けて、Macファイルサーバー（AFPサーバー) DiskStationを作成してください。
+</li>
+<li>
+必要であれば、<b>Time Machine</b> バックアップ フォルダを設定してください（詳細は下のセクションを参照してください）。
+</li>
+
+<li>
+<b>[適用] </b>をクリックします。
+</li>
+
+</ol>
+<div class="section">
+<h4>Time Machine バックアップフォルダについて：</h4>
+<p>Time Machine から DiskStation にデータをバックアップするときは、ドロップダウンメニューから共有フォルダを選択します。</p>
+<p><span class="note_head">注：</span>別のサービスで使われている共有フォルダは Time Machine に利用できません。</p>
+</div>
+<h3>詳細設定</h3>
+<h4>デフォルトの UNIX 権限を適用する：</h4>
+<p>ファイルやフォルダをアップロード、または作成する場合、デフォルトの UNIX 権限が適用されます。適用された権限は、UNIX の <strong>umask</strong> コマンドで適用された権限と同じです。このオプションを有効にすると、ファイルの場合の UNIX 権限は 644、フォルダの場合は 755 になります。このオプションを無効にすると、ファイルの場合の UNIX 権限は 666、フォルダの場合は 777 になります。デフォルトの umask 値は 022 です。</p>
+<p><span class="note_head">注：</span>このオプションを有効にすると、プロトコルによって許可が異なるという状況が発生するかもしれません。このような状況を回避するには、このオプションを無効にしておいてください。</p>
+<h4>接続解除後、直ちにリソースを解放する：</h4>
+<p>このオプションを有効にすると、AFP サーバー接続が突然停止した場合にはリソースを直ちに解放します。Time Machine を使用しているときに「ボリュームが使用中です」というエラー メッセージが表示されたら、このオプションを有効にしてください。</p>
+<h4>Bonjour プリンタ ブロードキャストを有効にする：</h4>
+<p><b>[Bonjour プリンタのブロードキャストを有効にする]</b> を選択すると、Mac クライアントが DiskStation に接続されてるプリンタを検索できるようになります。</p>
+</body>
+</html>

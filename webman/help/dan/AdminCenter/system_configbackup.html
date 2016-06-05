@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Konfigurationsbackup</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+
+<body>
+<h2>Konfigurationsbackup</h2>
+<p>Gå til <strong>Kontrolpanel</strong> > <strong>Opdater og gendan</strong> for øjeblikkeligt at udføre backup på systemkonfigurationer til en lokal computer. Det sætter dig i stand til at gemme forskellige indstillinger (f.eks. brugere, grupper, filtjenesteindstillinger osv.) og gendanne indstillingerne på et senere tidspunkt. Systemkonfigurationer gemmes som en fil i .dss-formatet.</p>
+
+<h4>Sådan udfører du backup på systemkonfigurationer:</h4>
+<ol>
+<li>Klik på <b>Backup konfiguration</b>. </li>
+<li>En konfigurationsfil bliver downloadet til computeren (med navnet <b>[Synology-produktnavn]_[oprettelsesdato].dss</b>).</li>
+</ol>
+
+<h4>Sådan gendanner du systemkonfigurationer:</h4>
+<ol>
+<li>Klik på <b>Gendan konfiguration</b>.</li>
+<li>Klik på <b>Gennemse</b> for at vælge konfigurationsfilen på computeren.</li>
+<li>Marker de tilsvarende afkrydsningsfelter for de konfigurationer, du vil gendanne og så klikke på <strong>OK</strong>. Du kan også markere muligheden <strong>Overskriv indstillinger, der konflikter</strong> for at overskrive de aktuelle indstillinger for et valg af eksisterende brugere, grupper, delte mapper og tjenester.</li>
+<li>Der vises en advarselsprompt. Klik på <strong>Ja</strong> for af fortsætte.</li>
+<li>Når gendannelsen er færdig, vises en prompt. Klik på <strong>OK</strong> for at afslutte.</li>
+</ol>
+
+<div class="section">
+<h4>Følgende indstillinger udføres der backup på:</h4>
+<ul class="disable-eds14">
+<li>Brugere, grupper og delte mapper</li>
+<li>Arbejdsgruppe, domæne og LDAP</li>
+<li>Fildeling (dvs. Windows-filservice, Mac-filservice, NFS-tjeneste, FTP og WebDAV) og sikkerhedskopieringstjenester (dvs. Netværksbackup, Synkronisering af delt mappe og Time Backup-tjenesten)</li>
+<li>Andre (dvs. brugerstart, adgangskodeindstillinger, opgaveplanlægger, Indstillinger for diskbrugsrapport)</li>
+</ul>
+
+<ul class="enable-eds14">
+<li>Brugere, grupper og delte mapper</li>
+<li>Fildeling (dvs. Windows-filservice, Mac-filservice, NFS-tjeneste, FTP og WebDAV) og sikkerhedskopieringstjenester (dvs. Netværksbackup, Synkronisering af delt mappe og Time Backup-tjenesten)</li>
+<li>Andre (dvs. brugerstart, adgangskodeindstillinger, opgaveplanlægger, Indstillinger for diskbrugsrapport)</li>
+</ul>
+
+<h4>Bemærk:</h4>
+<ul>
+<li><strong>Backuptjenester</strong> inkluderer grundlæggende tjenesteindstillinger og udelukker detaljerede oplysninger om backupopgaver og destination osv.</li>
+<li><strong>Brugerstart</strong> omfatter grundlæggende tjenesteindstillinger og udelukker den delte mappe <b>homes</b>. Gå til <b>Backup og kopiering</b> for at udføre backup på og gendanne den delte mappe <b>homes</b> og dens data.</li>
+<li><b>Opgaveplanlægger</b> omfatter opgaver, som kan oprettes i <b>Opgaveplanlægger</b> og udelukker opgaver, der er genereret af andre programmer (f.eks. <b>Backup og kopiering</b> og <b>Diskbrugsrapport</b> osv.)</li>
+<li><b>Indstillinger for diskbrugsrapport</b> inkluderer rapportopgaver og deres planer og udelukker den faktiske tidligere genererede rapport.</li>
+
+<li>Hvis navnene på de gendannede brugere og grupper nu reserveres alene til systembrug, bliver de gendannet som andre navne.</li></ul>
+</div>
+
+</body>
+</html>

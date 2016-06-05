@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Mac fájlszolgáltatás</h2>
+
+<p>A <strong>Vezérlőpult</strong> > <strong>Fájlszolgáltatások</strong> > <strong>Win/Mac/NFS</strong> menüpontban bekapcsolhatja a Mac fájlszolgáltatást, melynek révén Mac fájlkiszolgálóvá (AFTP-kiszolgálóvá) alakíthatja át DiskStation eszközét.</p>
+
+<h4>Mac fájlszolgáltatás engedélyezése:</h4>
+<ol>
+<li>Jelölje be a <b>Mac fájlszolgáltatás engedélyezése</b> jelölőnégyzetet, ha a(z) DiskStation készüléket Mac fájlkiszolgálóvá (AFP-kiszolgálóvá) szeretné tenni.</li>
+<li>Ha szükséges, állítson be biztonsági mentési mappát a <b>Time Machine</b> funkcióhoz. (Ha további információra van szüksége, olvassa el az alábbi szakaszt.)</li>
+
+<li>Kattintson az <b>Alkalmaz</b> gombra.</li>
+
+</ol>
+<div class="section">
+<h4>A Time Machine biztonsági mentés mappáról:</h4>
+<p>Ha adatok biztonsági mentését szeretné végrehajtani a Time Machine programból a(z) DiskStation eszközre, válasszon egy megosztott mappát a legördülő menüből. </p>
+<p><span class="note_head">Megjegyzés:</span> Az egyéb szolgáltatások által használt megosztott mappákat a Time Machine alkalmazás nem tudja használni.</p>
+</div>
+<h3>Speciális beállítások</h3>
+<h4>Alapértelmezett UNIX engedélyek alkalmazása:</h4>
+<p>Az opció engedélyezése esetén a rendszer fájlok és mappák feltöltésekor vagy létrehozásakor az alapértelmezett UNIX engedélyeket alkalmazza. A rendszer ugyanazokat az engedélyeket alkalmazza, mintha az <strong>umask</strong> UNIX-parancsot használná. Az opció engedélyezése esetén az UNIX engedély fájlok esetén 644, mappák esetén 755. Az opció letiltása esetén az UNIX engedély fájlok esetén 666, mappák esetén 777. Az alapértelmezett umax érték 022.</p>
+<p><span class="note_head">Megjegyzés: </span>Az opció engedélyezése inkonzisztens engedélyekkel kapcsolatos problémákat okozhat a különböző protokollok között. Az inkonzisztenciák elkerülése érdekében azt javasoljuk, hogy ne kapcsolja be ezt az opciót.</p>
+<h4>Erőforrások feloldása szétkapcsolás után azonnal:</h4>
+<p>Az opció engedélyezése esetén a rendszer azonnal feloldja az erőforrásokat, amennyiben váratlanul megszakad a kapcsolat az AFP-kiszolgálóval. Amennyiben a Time Machine használata közben „Kötet használatban” hibaüzenetet kap, kapcsolja be ezt az opciót.</p>
+<h4>A Bonjour printer broadcast engedélyezése:</h4>
+<p>Jelölje be a <b>Bonjour Printer Broadcast engedélyezése</b> lehetőséget, mellyel lehetővé teszi a Mac kliensek számára, hogy megkeressék és azonosítsák a(z) DiskStation eszközhöz csatlakoztatott nyomtatót.</p>
+</body>
+</html>

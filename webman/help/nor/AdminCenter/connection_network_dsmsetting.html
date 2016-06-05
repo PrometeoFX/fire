@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DSM-innstillinger</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="https"></a>DSM-innstillinger</h2>
+
+<p>I <strong>Kontrollpanel</strong> > <strong>Nettverk</strong> > <strong>DSM-innstillinger</strong> kan du endre portnummeret som klienter bruker til å få tilgang til DSM. Når HTTPS er aktivert, vil tilkoblinger være kryptert med SSL/TLS.</p>
+
+<h4>For å forandre standard portnummer:</h4>
+<ol>
+<li>Skriv inn portnummeret i <b>HTTP</b> eller <b>HTTPS</b>-feltet.</li>
+<li>Klikk på <b>Bruk</b>.</li>
+</ol>
+
+<h4>Slik aktiverer du HTTPS-tilkoblinger:</h4>
+<ol>
+<li>
+Merk av <b>Aktiver HTTPS-tilkobling</b>.
+</li>
+<li>Hvis du vil viderekoble klienter til HTTPS-porten (5001) når de prøver å få tilgang til DSM gjennom HTTP-porten (5000), merker du av for <b>Automatisk viderekobling av HTTP-tilkoblinger til HTTPS </b></li>
+<li>
+Klikk på <b>Bruk</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Porter som brukes for HTTPS-tilkobling:</h4>
+<ul>
+  <li><b>DSM</b>: Standard portnummer er 5001, så du kan få sikker tilgang til DSM ved å angi følgende adresse: https://server-hostname:5001/</li>
+<li><b>Web Station og Photo Station</b>: Standard portnummer er 443, så du kan få sikker tilgang til Web Station og Photo Station ved å angi følgende adresse: https://server-hostname/</li>
+</ul>
+
+</div>
+
+<h4>Slik lar du DiskStation bli oppdaget via Windows-nettverksoppdager:</h4>
+<ol>
+<li>
+Merk av for <b>Aktiver Windows-nettverksoppdager</b>.
+</li>
+<li>
+Klikk på <b>Bruk</b>.
+</li>
+</ol>
+
+</body>
+</html>
+

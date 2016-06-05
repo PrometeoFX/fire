@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Split-brain</h2>
+
+<p>Quando un cluster high-availability funziona normalmente, solamente uno dei server membri pu&ograve; assumere il ruolo di server attivo. In questo caso, il server passivo rileva la presenza del server attivo mediante connessione Heartbeat e connessione dati.</p>
+
+<p>Se tutte le connessioni Heartbeat e dati sono perse, entrambi i server potrebbero tentare di assumere il ruolo di server attivo. Questa situazione prende il nome di errore &quot;split-brain&quot;. In questo caso, le connessioni verso l'indirizzo IP assegnato al cluster high-availability saranno reindirizzate a uno dei due server, generando errori nel servizio.</p>
+        
+<h4>Nel caso di errori split-brain:</h4>
+	<ol>
+		<li>Le connessioni verso l'indirizzo IP del cluster saranno indirizzate a entrambi i server, generando errori nel servizio. Si verificheranno difficolt&agrave; nella connessione su entrambi i server.</li>
+		<li>Il sistema rileva l'errore split-brain e rimuove il cluster high-availability, eseguendo l'unbinding di entrambi i server.</li>
+		<li>Una volta che entrambi i server hanno lo stato <b>Standalone</b>, sar&agrave; possibile accedere a DiskStation Manager (DSM). Allo stesso tempo, tutti i dati accumulati prima della rimozione del cluster high-availability rimarranno su entrambi i server. Una volta identificato quale server contiene i dati pi&ugrave; aggiornati, &egrave; possibile eseguire nuovamente i binding dei server per creare un cluster high-availability.</li>
+	</ol>
+ </body>
+</html>

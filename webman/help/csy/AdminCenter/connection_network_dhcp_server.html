@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DHCP Server</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>DHCP Server</h2>
+<p>Funkce server DHCP vytvoří z vašeho zařízení DiskStation server DHCP který může v rámci vaší místní sítě přiřazovat klientským zařízením DHCP dynamické IP adresy.</p>
+
+<h4>Postup povolení serveru DHCP:</h4>
+<ol>
+<li>Přejděte do části <strong>Ovládací panel</strong> > <strong>Síť</strong> > <strong>Síťové rozhraní</strong>.</li>
+<li>Vyberte síťové rozhraní (např. LAN) a klikněte na možnost <strong>Upravit</strong>.</li>
+<li>Přejděte na kartu <strong>DHCP Server</strong> a zaškrtněte možnost <b>Povolit DHCP Server</b>.</li>
+<li>Zadáním hodnoty v poli <b>Doba propůjčení adresy</b> nastavíte dobu propůjčení DHCP (v jednotkách minut) pro IP adresy přidělené klientským zařízením DHCP.</li>
+<li>
+Zadejte adresu DNS klientských zařízení v kolonce <b>Primární DNS</b> (povinný údaj) a <b>Sekundární DNS</b> (volitelný údaj).
+</li>
+<li>
+Nastavte název domény serveru DHCP v kolonce <b>Název domény</b> (volitelný údaj).
+</li>
+<li>
+Klikněte na možnost <b>OK</b>.
+</li>
+</ol>
+<h4>Postup přidání podsítě:</h4>
+<ol>
+<li>
+Klikněte na možnost <b>Přidat</b> a zadejte do následujících sloupců údaje:
+</li>
+<ul>
+<li>
+<b>Povolit</b>: Povolení a zakázání podsítě.
+</li>
+<li>
+<b>Začátek</b>: První IP adresa podsítě.
+</li>
+<li>
+<b>Konec</b>: Poslední IP adresa podsítě.
+</li>
+<li>
+<b>Maska sítě</b>: Maska podsítě.
+</li>
+<li>
+<b>Brána</b>: Brána podsítě.
+</li>
+</ul>
+<li>
+Klikněte na možnost <b>OK</b>.
+</li>
+</ol>
+
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Můžete přidat maximálně 32 podsítí.</li>
+</ul>
+</div>
+
+
+
+<h3>Klienti DHCP</h3>
+
+<p>Chcete-li zobrazit seznam klientů DHCP a příslušných síťových konfigurací (např. MAC adresu, IP adresu, název hostitele a dobu expirace propůjčení DHCP), můžete přejít na kartu <strong>Klienti DHCP</strong>.</p>
+
+
+<h3>Rezervace DHCP</h3>
+
+<p>Pokud si chcete, aby během obnovení propůjčení DHCP byla klientskému zařízení přidělována stále stejná IP adresa, můžete klientské zařízení přidat na seznam rezervovaných adres.</p>
+
+<h4>Postup přidání klienta do seznamu rezervovaných adres:</h4>
+
+<ul>
+<li>Klikněte na možnost <b>Přidat</b>.</li>
+<li>Zadejte MAC adresu, IP adresu, kterou chcete klientu přiřadit, a název hostitele klienta. </li>
+<li>Nastavení uložíte kliknutím na tlačítko <b>OK</b>.</li>
+</ul>
+
+
+</body>
+</html>

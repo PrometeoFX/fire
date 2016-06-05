@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Adatok biztonsági mentése PC/Mac számítógépen a Cloud Station alkalmazás használatával</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Adatok biztonsági mentése PC/Mac számítógépen a Cloud Station alkalmazás használatával</h1>
+<div class="tutorials_content"><img src="../../images/Backup/1x/backup_from_PC/07_1_back_up_your_data_from_pc.png" /><h2>Áttekintés</h2>
+<p>A Cloud Station nem csupán egy összetett, több platformon is használható szinkronizáló szoftver, a felhasználók akár személyi számítógépükön tárolt adataikról is biztonsági mentést készíthetnek vele. A Cloud Station alkalmazással készített biztonsági mentésnek számos előnye van. Először is a valós idejű replikáció jobb RPO-t biztosít, azaz rövidebb az az időtartam, amikor az adatok elveszhetnek (nem állíthatók vissza), ha a számítógépen komolyabb probléma lép fel. A program nemcsak azonnali biztonsági mentést kínál, hanem a sávszélességet is jelentős mértékben kevésbé foglalja le, mint a hagyományos alkalmazások, melyek adott időben nagy sávszélességet használnak fel. Azokat a fájlokat, melyekről nem kíván biztonsági mentést készíteni, egyszerűen kiszűrheti, hiszen a PC-kliensen fájlméret- vagy fájltípus-korlátozások beállítására van lehetőség. A Cloud Station ezenfelül képes akár 32 előzményverzióját megtartani egy adott fájlnak, melyeket szükség esetén bármikor visszaállíthat a PC-kliensre a kiszolgálóról (NAS eszközről).</p>
+
+<h3 class="list_head">1. A Cloud Station beállítása a Synology NAS eszközén</h3>
+<ol>
+
+<li>Jelentkezzen be a DSM-be egy, az <strong>administrator</strong> csoporthoz tartozó fiók használatával.</li>
+<li>Indítsa el a <b>Cloud Station</b> alkalmazást.</li>
+<li>Ha nem engedélyezte a felhasználói kezdőlap funkciót, felszólítják ennek megtételére. Kattintson az <strong>OK</strong> gombra.</li><img src="../../images/Backup/1x/backup_from_PC/01.png" border="1" /><li>Átirányításra kerül a felhasználói beállítások oldalra. Engedélyezze a felhasználói homes mappákat, és kattintson az <b>Alkalmaz</b> gombra.</li><img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" /><li>Most nyissa meg ismét a <b>Cloud Station</b> oldalt, a rendszer pedig felszólítja annak engedélyezésére. Kattintson az <b>Igen</b> lehetőségre.</li><img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" /><div class="code_div"><b>Megjegyzés:</b> A QuickConnect olyan közvetítő szolgáltatás, amely lehetővé teszi, hogy könnyedén csatlakozzon a Synology NAS eszközhöz a helyi hálózaton kívülről. Ha akkor szeretné a fájljait szinkronizálni, amikor távol van otthonától vagy az irodától, javasoljuk a QuickConnect beállítását a <b>Vezérlőpult</b> > <b>QuickConnect</b> menüpontban.</div>
+
+<li>Lépjen a <b>Jogosultságok</b> menüpontra, és határozza meg, mely felhasználók vehetik igénybe a Cloud Station alkalmazást. Kattintson a<b> Mentés</b> gombra.</li><img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" /><li>Állítson be egy megosztott mappát a Synology NAS eszközön, melyet biztonsági mentési célhelyként fog használni. Ehhez lépjen a <strong>Vezérlőpult</strong> > <strong>Megosztott mappa</strong> menüpontra, majd kattintson a <strong>Létrehozás</strong> lehetőségre.</li><img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" /><li>Nevezze el a mappát és töltse ki a szükséges adatokat. Kattintson az <strong>OK</strong> gombra. Mi például a <strong>Backup</strong> nevet adjuk a mappának.</li><img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" /><li>Az <strong>Engedélyek</strong> lapon adja meg, hogy mely felhasználók érhessék el a mappát. Például az <strong>admin</strong> felhasználónak <strong>olvasási/írási</strong> engedélyt adunk. Kattintson az <strong>OK</strong> gombra. </li><img src="../../images/Backup/1x/backup_from_PC/07.png" border="1" /><li>Lépjen a <strong>Cloud Station</strong> > <strong>Beállítások</strong> > <strong>Megosztás</strong> menüpontra, válassza ki a <b>Backup</b> mappát, majd kattintson az <strong>Engedélyez</strong> lehetőségre. </li><img src="../../images/Backup/1x/backup_from_PC/08.png" border="1" /></ol>
+
+<h3 class="list_head">2. A Cloud Station beállítása a Windows PC-n</h3>
+<p>Az alábbi lépéseket követve beállíthatja a Cloud Station alkalmazást Mac vagy PC számítógépén</p>
+
+<h4>2.1 PC</h4>
+
+<ol>
+
+<li>Lépjen a <strong>Cloud Station</strong> > <strong>Áttekintés</strong> menüpontra, majd kattintson a <strong>Letöltés</strong> gombra.</li><img src="../../images/Backup/1x/backup_from_PC/09.png" border="1" /><li>Kattintson a gombra a Windows PC esetén használható Cloud Station letöltéséhez. (A Cloud Station a <a href="https://www.synology.com/en-us/support/download" target="_blank">Synology Letöltőközpontjából</a> is letölthető.)</li>
+<li>Indítsa el a telepítőt a számítógépén, majd kövesse az utasításokat a Cloud Station telepítéséhez. </li>
+<li>Telepítés után futtassa a <strong>Cloud Station</strong> alkalmazást a számítógépén. Kattintson az <strong>Indítás most</strong> gombra.</li><img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" /><li>Adja meg a Cloud Station alkalmazást futtató Synology NAS címét (vagy QuickConnect ID azonosítóját), felhasználónevét, és jelszavát. (A jobb oldalon található keresés ikonra is rákattinthat, mely esetben a Cloud Station automatikusan megkeresi a helyi hálózaton található egyéb Synology NAS kiszolgálókat). Kattintson a <strong>Tovább</strong> gombra.</li><img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" /><div class="code_div"><b>Megjegyzés:</b> A megadott fióknak engedéllyel kell rendelkeznie, melyeket a Synology NAS <strong>Cloud Station</strong> > <strong>Engedélyek</strong> menüpontjában állíthat be.</div>
+<li>Adja meg, hogy hogyan szeretné beállítani a feladatot (mi most a <strong>Speciális beállítás</strong> lehetőséget választjuk, mivel kifejezetten a biztonsági mentés számára állítunk be mappát). Kattintson a <strong>Tovább</strong> gombra. </li><img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" /><li>Válasszon ki a számítógépén egy mappát, amelyet egy, a Synology NAS eszközön korábban létrehozott Backup mappával szeretne szinkronizálva tartani. Kattintson a <strong>Tovább</strong> gombra.</li><img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" /><li>A beállítás befejezéséhez kattintson a <strong>Kész</strong> gombra.</li><img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" /></ol>
+
+<p><strong>Új feladat létrehozása</strong>:<ol>
+<li>Lépjen a <strong>Cloud Station</strong> > <strong>Beállítások</strong> menüpontra és engedélyezzen egy megosztott mappát az új feladat számára. A példában ez a <strong>photo</strong> mappa. Ellenőrizze, hogy rendelkezik-e olvasási/írási engedélyekkel a <strong>photo</strong> mappához.</li><img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" /><li>A számítógépen futó Cloud Station alkalmazásban kattintson a <strong>Létrehozás</strong> lehetőségre.</li><img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" /><li>Válasszon Synology NAS eszközt az új feladathoz. Mi most a <strong>Csatlakoztatott Synology NAS</strong> eszközt választjuk, mivel ugyanazon a Synology NAS eszközön szeretnénk egy új feladatot létrehozni. Kattintson a <strong>Tovább</strong> gombra.</li><img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" /><li>Válassza a <strong>Speciális beállítás</strong> lehetőséget, majd a varázsló további lépéseit követve végezze el a beállításokat. </li><img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" /></ol>
+
+<h4>2.2 Mac esetében</h4>
+  <ol>
+    <li>Lépjen a <strong>Cloud Station</strong> > <strong>Áttekintés</strong> menüpontra, majd kattintson a <strong>Letöltés</strong> gombra.</li>
+
+    <li>Kattintson a gombra a Mac esetén használható Cloud Station letöltéséhez. (A Cloud Station a <a href="https://www.synology.com/en-us/support/download" target="_blank">Synology Letöltőközpontjából</a> is letölthető.)</li><img src="../../images/Backup/1x/backup_from_PC/18.png" border="1" /><li>Indítsa el a telepítőt a számítógépén, majd kövesse az utasításokat a Cloud Station telepítéséhez. </li>
+    <li>Telepítés után futtassa a <strong>Cloud Station</strong> alkalmazást a számítógépén. Kattintson az <strong>Indítás most</strong> gombra.</li><img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" /><li>Adja meg a Cloud Station alkalmazást futtató Synology NAS címét (vagy QuickConnect ID azonosítóját), felhasználónevét, és jelszavát. (A jobb oldalon található keresés ikonra is rákattinthat, mely esetben a Cloud Station automatikusan megkeresi a helyi hálózaton található egyéb Synology NAS kiszolgálókat). Kattintson a <strong>Tovább</strong> gombra.</li><img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" /><div class="code_div"><b>Megjegyzés:</b> A megadott fióknak engedéllyel kell rendelkeznie, melyeket a Synology NAS <strong>Cloud Station</strong> > <strong>Engedélyek</strong> menüpontjában állíthat be.</div>
+<li>Adja meg, hogy hogyan szeretné beállítani a feladatot (mi most a <strong>Speciális beállítás</strong> lehetőséget választjuk, mivel kifejezetten a biztonsági mentés számára állítunk be mappát). Kattintson a <strong>Tovább</strong> gombra. </li><img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" /><li>Válasszon ki a számítógépén egy mappát, amelyet egy, a Synology NAS eszközön korábban létrehozott Backup mappával szeretne szinkronizálva tartani. Kattintson a <strong>Tovább</strong> gombra.</li><img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" /><li>A beállítás befejezéséhez kattintson a <strong>Kész</strong> gombra.</li>
+  </ol>
+  
+<p><strong>Új feladat létrehozása</strong>:<ol>
+<li>Lépjen a <strong>Cloud Station</strong> > <strong>Beállítások</strong> menüpontra és engedélyezzen egy megosztott mappát az új feladat számára. A példában ez a <strong>photo</strong> mappa. Ellenőrizze, hogy rendelkezik-e olvasási/írási engedélyekkel a <strong>photo</strong> mappához.</li><img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" /><li>A számítógépen futó Cloud Station alkalmazásban kattintson a <strong>Létrehozás</strong> lehetőségre.</li><img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" /><li>Válasszon Synology NAS eszközt az új feladathoz. Mi most a <strong>Csatlakoztatott Synology NAS</strong> eszközt választjuk, mivel ugyanazon a Synology NAS eszközön szeretnénk egy új feladatot létrehozni. Kattintson a <strong>Tovább</strong> gombra.</li><img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" /><li>Válassza a <strong>Speciális beállítás</strong> lehetőséget, majd a varázsló további lépéseit követve végezze el a beállításokat. </li><img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" /></ol> 
+
+<h3 class="list_head">3. Adatok visszaállítása a Cloud Station alkalmazásból</h3>
+<p>A Cloud Station segítségével egyszerűen visszaállíthatja a véletlenül eltávolított vagy felülírt fájlokat. </p>  
+<h3>4.1 Szinkronizált fájl korábbi verziójának letöltése PC-re</h3>  
+  <ol>
+      <li>Kattintson a rendszer tálcájában található Cloud Station ikonra, majd a mappa ikonra.</li><img src="../../images/Backup/1x/backup_from_PC/25.png" border="1" /><li>Kattintson jobb gombbal a kiválasztott fájlra, majd válassza a <strong>Synology Cloud Station</strong> > <strong>Korábbi verziók tallózása</strong> lehetőséget. </li><img src="../../images/Backup/1x/backup_from_PC/26.png" border="1" /><li>Keresse meg a letölteni kívánt verziót, majd kattintson a letöltés ikonra. </li><img src="../../images/Backup/1x/backup_from_PC/27.png" border="1" /></ul>
+    <li>Adja meg a fájl nevét, és válassza ki a fájl mentésének célhelyét.</ol>
+<h3>4.1 Szinkronizált fájl korábbi verziójának letöltése Mac-re</h3>  
+  <ol>
+      <li>Kattintson a rendszer tálcájában található Cloud Station ikonra, majd a mappa ikonra.</li><img src="../../images/Backup/1x/backup_from_PC/28.png" border="1" /><li>Kattintson jobb gombbal a kiválasztott fájlra, majd válassza a <strong>Synology Cloud Station</strong> > <strong>Korábbi verziók tallózása</strong> lehetőséget. </li><img src="../../images/Backup/1x/backup_from_PC/29.png" border="1" /><li>Keresse meg a letölteni kívánt verziót, majd kattintson a letöltés ikonra. </li><img src="../../images/Backup/1x/backup_from_PC/30.png" border="1" /><li>Adja meg a fájl nevét, és válassza ki a fájl mentésének célhelyét.</ol>
+<h3>4.3 Szinkronizált fájl korábbi verziójának letöltése vagy visszaállítása a Cloud Station alkalmazásból</h3>   
+<ol>
+    <li>Lépjen a <strong>Cloud Station </strong>> <strong>Verzió előzmények</strong> menüpontra, majd válassza ki a korábban létrehozott <strong>Backup</strong> mappát. </li><img src="../../images/Backup/1x/backup_from_PC/31.png" border="1" /><li>Válassza ki a visszaállítani kívánt fájl, majd kattintson a <strong>Tevékenység</strong> > <strong>Korábbi verziók tallózása</strong> lehetőségre. </li><img src="../../images/Backup/1x/backup_from_PC/34.png" border="1" /><li>Válassza ki a fájl letölteni kívánt verzióját, majd kattintson a <strong>Letöltés</strong> gombra. Amennyiben biztos benne, hogy a kiválasztott verziót kívánja használni, kattintson a <strong>Visszaállítás</strong> gombra, mellyel felülírja az aktuális verziót.</li><img src="../../images/Backup/1x/backup_from_PC/35.png" border="1" /></ol>
+
+<h3 class="list_head">4. Fontos megjegyzések</h3>  
+  <ol>
+<li>Érdemes megtartani a fájlok előző verziót, arra az esetre, ha véletlenül törli vagy felülírja a fájlt.</li>
+<li>A Globális beállítások menüpontban megadhatja, hogy fájl törlése esetén a rendszer visszakeresse-e azt a NAS kiszolgálóról, illetve törölje a fájlt a NAS eszközről.</li>
+</ol>
+  <h3 class="list_head">5. Adatok további védelme</h3>
+  
+<p>Ha kíváncsi az adatok védelmére és biztonsági mentésére használható tovább módszerekre, kattintson <a href="https://www.synology.com/en-global/knowledgebase/tutorials#BackupRestore" target="_blank">ide</a> és tekintse meg a DSM rendszerben elérhető többi biztonsági mentési szolgáltatás ismertetését.</p>
+
+</div>
+<div class="page-info">
+  <ul>
+    <li>Következik a témában: <a href="backup_backup.html">Adatok biztonsági mentése Synology NAS kiszolgálóról</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

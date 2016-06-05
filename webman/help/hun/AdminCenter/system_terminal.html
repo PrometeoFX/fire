@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Termin&aacute;l</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Termin&aacute;l</h2>
+
+<p>A <strong>Vez&eacute;rlőpult</strong> &gt; <strong>Termin&aacute;l &eacute;s SNMP</strong> &gt; <strong>Termin&aacute;l</strong> men&uuml;pont lehetős&eacute;geinek enged&eacute;lyez&eacute;se lehetőv&eacute; teszi, hogy a(z) DiskStation eszk&ouml;z t&aacute;mogassa a Telnet &eacute;s SSH parancssor interf&eacute;sz szolg&aacute;ltat&aacute;sokat. Az SSH titkos&iacute;t&aacute;si algoritmus szab&aacute;ly&aacute;nak biztons&aacute;gi szintje m&oacute;dos&iacute;that&oacute;.</p>
+
+<h4>A Telnet/SSH szolg&aacute;ltat&aacute;s enged&eacute;lyez&eacute;s&eacute;hez tegye a k&ouml;vetkezőket:</h4>
+<ol>
+<li>Jel&ouml;lje be a k&iacute;v&aacute;nt protokoll (SSH vagy Telnet) melletti jel&ouml;lőn&eacute;gyzetet.</li>
+<li>Kattintson az <b>Alkalmaz</b> gombra.</li>
+</ol>
+<h4>SSH szolg&aacute;ltat&aacute;s portj&aacute;nak m&oacute;dos&iacute;t&aacute;sa:</h4>
+<ol>
+<li>&Iacute;rjon be egy &uacute;j portsz&aacute;mot a <strong>Port</strong> mezőbe.</li>
+<li>Kattintson az <b>Alkalmaz</b> gombra.</li>
+</ol>
+
+<p>Az SSH kapcsolatok biztos&iacute;t&aacute;s&aacute;ra sz&aacute;mos k&uuml;l&ouml;nf&eacute;le titkos&iacute;t&aacute;si algoritmus &aacute;ll rendelkez&eacute;sre, k&uuml;l&ouml;nb&ouml;ző biztons&aacute;gi szinteken. Tetsz&eacute;s szerint eld&ouml;ntheti, hogy mely algoritmusok felelnek meg legink&aacute;bb az ig&eacute;nyeinek.</p>
+<h4>Az SSH titkos&iacute;t&aacute;si algoritmusok biztons&aacute;gi szintj&eacute;nek m&oacute;dos&iacute;t&aacute;s&aacute;hoz tegye a k&ouml;vetkezőket:</h4>
+<ol>
+<li>Kattintson a <b>Speci&aacute;lis be&aacute;ll&iacute;t&aacute;sok</b> lehetős&eacute;gre.</li>
+<li>Adja meg a titkos&iacute;t&aacute;si algoritmusok k&iacute;v&aacute;nt biztons&aacute;gi szintj&eacute;t. Ha pontosan meg szeretn&eacute; adni a haszn&aacute;lhat&oacute; algoritmusokat, a <b>Testreszab&aacute;s</b> lehetős&eacute;ggel v&aacute;laszthat a k&ouml;vetkező h&aacute;rom csoport k&ouml;z&uuml;l: Cipher (K&oacute;d), KEX (Kulcscsere) &eacute;s MAC (&Uuml;zenethiteles&iacute;tő k&oacute;d).</li>
+<li>Kattintson az <b>Alkalmaz</b> gombra.</li>
+</ol>
+<p>Egyes modellek t&aacute;mogatj&aacute;k a hardveres gyors&iacute;t&aacute;st bizonyos algoritmusokhoz. A <b>Csak hardveres gyors&iacute;t&aacute;s&uacute; k&oacute;dok haszn&aacute;lata</b> lehetős&eacute;g enged&eacute;lyez&eacute;se jav&iacute;that az SSH titkos&iacute;t&aacute;shoz kapcsol&oacute;d&oacute; szolg&aacute;ltat&aacute;sok, k&ouml;zt&uuml;k a titkos&iacute;tott H&aacute;l&oacute;zaton kereszt&uuml;li biztons&aacute;gi ment&eacute;s &eacute;s az SFTP teljes&iacute;tm&eacute;ny&eacute;n. A hardveres gyors&iacute;t&aacute;sra k&eacute;pes algoritmusok pirossal vannak felsorolva a Speci&aacute;lis oldalon.</p>
+
+<div class="section">
+<h4>Megjegyz&eacute;s:</h4>
+<ul>
+
+<li>Egyes szolg&aacute;ltat&aacute;sok, p&eacute;ld&aacute;ul a h&aacute;l&oacute;zaton kereszt&uuml;li biztons&aacute;gi ment&eacute;s &eacute;s az SFTP automatikusan enged&eacute;lyezik az SSH haszn&aacute;lat&aacute;t, &eacute;s alap&eacute;rtelmez&eacute;s szerint a 22-es portot nyitj&aacute;k. Ebben az esetben enged&eacute;lyeznie kell az SSH szolg&aacute;ltat&aacute;st a <strong>Vez&eacute;rlőpult</strong> &gt; <strong>Termin&aacute;l &eacute;s SNMP</strong> &gt; <strong>Termin&aacute;l</strong> oldalon, ha SSH haszn&aacute;lat&aacute;val szeretne bejelentkezni a DSM szolg&aacute;ltat&aacute;sba.</li>
+<li>Az SSH/Telnet csak a <strong>root</strong> vagy <strong>admin</strong> fi&oacute;kokkal t&ouml;rt&eacute;nő bejelentkez&eacute;st t&aacute;mogatja.</li>
+<li>A jelsz&oacute; nem hagyhat&oacute; &uuml;resen, amikor SSH/Telnet seg&iacute;ts&eacute;g&eacute;vel jelentkezik be a rendszerbe.</li>
+<li>Ha az SSH szolg&aacute;ltat&aacute;s le van tiltva, valamennyi SSH kapcsolat megszakad, bele&eacute;rtve minden pillanatnyilag fut&oacute;, titkos&iacute;tott, h&aacute;l&oacute;zaton kereszt&uuml;l v&eacute;grehajtott biztons&aacute;gi ment&eacute;si feladatot. Az SSH-szolg&aacute;ltat&aacute;s letilt&aacute;sa ut&aacute;n javasoljuk a h&aacute;l&oacute;zaton kereszt&uuml;l v&eacute;grehajtott biztons&aacute;gi ment&eacute;si feladatok ism&eacute;telt v&eacute;grehajt&aacute;s&aacute;t.</li>
+<li>A(z) DiskStation nem megfelelő kezel&eacute;se vagy m&oacute;dos&iacute;t&aacute;sa hib&aacute;s műk&ouml;d&eacute;shez vagy adatveszt&eacute;shez vezethet.</li>
+<li>Ha magasabb biztons&aacute;gi szintet v&aacute;laszt, vagy csak hardveresen gyors&iacute;tott k&oacute;dokat haszn&aacute;l, előfordulhat, hogy egyes SSH kliensek nem lesznek kompatibilisek, &eacute;s &iacute;gy nem tudnak csatlakozni.</li>
+<li>A v&aacute;lasztott biztons&aacute;gi szinttől f&uuml;ggően előfordulhat, hogy a hardveres gyors&iacute;t&aacute;st t&aacute;mogat&oacute; egyes algoritmusok nem lesznek el&eacute;rhetők.</li>
+</ul>
+</div>
+
+</body>
+</html>

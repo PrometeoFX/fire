@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Hot Spare</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Hot Spare*</h2>
+<p>Hot spare-disker er reservedisker som kan reparere et degradert volum/Disk Group/iSCSI LUN ved automatisk &aring; erstatte en sviktet disk. Hot spare-disker kan v&aelig;re globalt dedisert til &aring; beskytte et volum/Disk Group/iSCSI LUN p&aring; din DiskStation, s&aring; lenge gjeldende volum/Disk Group/iSCSI LUN samsvarer med f&oslash;lgende kriterier:</p>
+<ul>
+<li>RAID-typen p&aring; gjeldende volum/Disk Group/iSCSI LUN m&aring; v&aelig;re en med databeskyttelse (det vil si RAID 1, RAID 5, RAID 6, RAID 10).</li>
+<li>St&oslash;rrelsen p&aring; hot spare-disken m&aring; v&aelig;re st&oslash;rre eller lik den minste disken i gjeldende volum/Disk Group/iSCSI LUN.</li>
+</ul>
+
+<h4>Slik setter du opp hot spare-disker:</h4>
+<ol>
+<li>Klikk p&aring; <b>Administrer</b>.</li>
+<li>En dialogboks &aring;pnes med hot spare-statusen til hvert volum/Disk Group/iSCSI LUN, i tillegg til tilgjengelige disker. Status for volum/Disk Group/iSCSI LUN inkluderer f&oslash;lgende:</li>
+<ul>
+<li><strong>Tildelt:</strong> Gjeldende volum/Disk Group/iSCSI LUN er beskyttet av minst &eacute;n tildelt hot spare-disk.</li>
+<li><strong>Tilgjengelig:</strong> Det finnes tilgjengelige disker som kan beskytte gjeldende volum/Disk Group/iSCSI LUN, men ingen hot spare-disker er tildelt enn&aring;.</li>
+<li><strong>Ikke tilgjengelig:</strong> Det finnes ingen tilgjengelige hot spare-disker som kan beskytte gjeldende volum/Disk Group/iSCSI LUN.</li>
+</ul>
+<li>Seksjonen <strong>Tilgjengelige disker</strong> viser harddisker som kan tildeles som hot spare-disker. For &aring; tildele en hot spare-disk, merker du av i boksen ved siden av disken du vil tildele som hot spare.</li>
+<li>Klikk p&aring; <b>Bruk</b> for &aring; lagre innstillingene.</li>
+</ol>
+<p><span class="note_head">Merk:</span> N&aring;r en harddisk blir tildelt som hot spare-disk, vil all data p&aring; disken slettes. F&oslash;r du tildeler en hot spare-disk, m&aring; du forsikre deg om at disken ikke inneholder viktig data.</p>
+
+<p>____<br />*Kun tilgjengelig p&aring; enkelte modeller.</p>
+
+</body>
+</html>

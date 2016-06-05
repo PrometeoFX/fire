@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<h2><a name="certificate"></a>Certyfikat</h2>
+
+<p>Przy użyciu certyfikatu można zabezpieczyć usługi SSL serwera DiskStation, takie jak WWW (wszystkie usługi HTTPS), e-mail czy FTP. Certyfikat umożliwia użytkownikom sprawdzanie tożsamości serwera i administratora przed wysłaniem jakichkolwiek poufnych informacji. </p>
+
+<p>Na karcie <strong>Certyfikat</strong> (<strong>Panel sterowania</strong> &gt; <strong>Bezpieczeństwo</strong> &gt; <strong>Certyfikat</strong>) dostępne są opcje służące do zarządzania certyfikatami serwera DiskStation i wyświetlania ich stanu. Za ich pomocą można tworzyć, importować i eksportować oraz przedłużać ważność certyfikat&oacute;w. Kreator konfiguracji certyfikat&oacute;w ułatwia tworzenie certyfikat&oacute;w z podpisem własnym oraz pobieranie żądań podpisania certyfikat&oacute;w (CSR) w celu rejestracji w urzędach certyfikacji (CA).</p>
+
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Certyfikat wybrany na tej karcie będzie automatycznie używany przez serwer OpenVPN, jeżeli zainstalowano pakiet VPN Server.</p>
+</div>
+
+
+<h3>Certyfikaty z podpisem własnym</h3>
+
+<p>Certyfikat z podpisem własnym to certyfikat utworzony i podpisany przez ten sam podmiot, kt&oacute;rego tożsamość poświadcza (w tym przypadku jest to serwer DiskStation). Certyfikaty z podpisem własnym są podpisywane przy użyciu klucza prywatnego wygenerowanego przez serwer DiskStation. Certyfikaty z podpisem własnym nie są wydawane przez zewnętrzne urzędy certyfikacji, dlatego w mniejszym stopniu dowodzą tożsamości serwera i służą zazwyczaj do zabezpieczenia kanał&oacute;w między serwerem a grupą znanych użytkownik&oacute;w.</p>
+
+
+<h4>Aby utworzyć certyfikat z podpisem własnym:</h4>
+<ol>
+	<li>Kliknij przycisk <b>Utw&oacute;rz certyfikat</b>.</li>
+	<li>Postępuj zgodnie z instrukcjami wyświetlanymi przez kreatora konfiguracji.</li>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Utworzenie certyfikatu z podpisem własnym spowoduje zastąpienie istniejącego certyfikatu serwera DiskStation.</p>
+</div>
+
+
+<h3>Żądania podpisania certyfikat&oacute;w</h3>
+
+<p>Aby wystąpić o certyfikat do zewnętrznego urzędu certyfikacji, należy najpierw utworzyć żądanie podpisania certyfikatu (ang. certificate signing request, CSR). Żądanie podpisania certyfikatu to zaszyfrowany tekst wygenerowany przez serwer DiskStation, zawierający informacje, kt&oacute;re zostaną dodane do certyfikatu, takie jak nazwa domeny, nazwa organizacji, og&oacute;lna lokalizacja i adres e-mail. Kreator konfiguracji umożliwia wygenerowanie żądania podpisania certyfikatu w celu wystąpienia o podpisany certyfikat na potrzeby serwera DiskStation.</p>
+
+<p>Aby uzyskać certyfikat od komercyjnego lub zewnętrznego urzędu certyfikacji, należy przedstawić dane identyfikacyjne własne lub swojej organizacji oraz udowodnić, że jest się właścicielem nazwy domeny wprowadzonej w polu Nazwa pospolita żądania podpisania certyfikatu.</p>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Wraz z żądaniem podpisania certyfikatu zostanie także wygenerowany klucz prywatny. Urzędy certyfikacji nie potrzebują tego klucza prywatnego. Zachowaj klucz prywatny serwera DiskStation w miejscu bezpiecznym i poufnym.</p>
+</div>
+
+<h4>Aby utworzyć żądanie podpisania certyfikatu:</h4>
+<ol>
+	<li>Kliknij przycisk <b>Utw&oacute;rz certyfikat</b>.</li>
+	<li>Postępuj zgodnie z instrukcjami wyświetlanymi przez kreator konfiguracji, aby utworzyć i pobrać żądanie podpisania certyfikatu.</li>
+</ol>
+
+<p>Po wystawieniu certyfikatu przez urząd certyfikacji można ten certyfikat zaimportować wraz z kluczem prywatnym (patrz instrukcja poniżej).<h3>Eksportowanie certyfikat&oacute;w</h3>
+
+<p>Istniejące już certyfikaty można pobrać do cel&oacute;w zarządzania i archiwizacji. Wyeksportowany plik zawiera certyfikat, klucz prywatny i certyfikat gł&oacute;wny z podpisem własnym serwera DiskStation.</p>
+
+<h4>Aby wyeksportować certyfikat:</h4>
+<ul>
+<li>Kliknij przycisk <b>Eksportuj certyfikat</b>.</li>
+</ul>
+
+
+
+<h3>Importowanie certyfikat&oacute;w</h3>
+
+<p>Opcja umożliwia import certyfikat&oacute;w wystawionych przez urzędy certyfikacji lub uprzednio wyeksportowanych certyfikat&oacute;w wraz z kluczem prywatnym.</p>
+
+<h4>Aby zaimportować certyfikat:</h4>
+<ul>
+	<li>Kliknij przycisk <b>Importuj certyfikat</b>.</li>
+</ul>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Certyfikaty pośrednie są opcjonalne w przypadku niekt&oacute;rych certyfikat&oacute;w wystawianych przez urzędy certyfikacji.</li>
+<li>Certyfikaty muszą być w formacie X.509 PEM.</li>
+<li>Klucze prywatne muszą być w formacie RSA i nie mogą być chronione hasłem.</li>
+</ul>
+</div>
+
+
+
+<h3>Przedłużanie ważności certyfikat&oacute;w</h3>
+
+<p>Przed wygaśnięciem certyfikatu można przedłużyć jego ważność, używając tej opcji.</p>
+
+<h4>Aby przedłużyć ważność certyfikatu:</h4>
+<ol>
+	<li>Kliknij przycisk <b>Utw&oacute;rz certyfikat</b>.</li>
+	<li>Zaznacz opcję <b>Przedłuż certyfikat</b> i kliknij przycisk <b>Dalej</b>.</li>
+	<li>Zostanie utworzony nowy klucz prywatny i żądanie podpisania certyfikatu.</li>
+</ol>
+
+
+
+<h3>Podpisywanie żądania podpisania certyfikatu (CSR)</h3>
+
+<p>Opcja umożliwia podpisanie żądania podpisania certyfikatu przy użyciu certyfikatu gł&oacute;wnego serwera DiskStation.</p>
+
+<h4>Aby podpisać żądanie podpisania certyfikatu:</h4>
+<ol>
+	<li>Kliknij przycisk <b>Utw&oacute;rz certyfikat</b>.</li>
+	<li>Kliknij przycisk <b>Podpisz żądanie podpisania certyfikatu (CSR)</b>.</li>
+	<li>Prześlij żądanie podpisania certyfikatu i wprowadź odpowiednie informacje. </li>
+	<li>Kliknij przycisk <b>Dalej</b>, aby podpisać żądanie podpisania certyfikatu i utworzyć odpowiedni certyfikat.</li>
+</ol>
+
+
+</body>
+</html>
+

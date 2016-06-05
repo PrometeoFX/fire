@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>DSM Súgó – egyszeri bejelentkezési kliens</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="If your DiskStation azonos tartományhoz vagy LDAP szolgáltatáshoz csatlakozott, mint az egyszeri bejelentkezési kiszolgáló, beállíthatja a(z) DiskStation alkalmazását egyszeri bejelentkezési kliensként. A felhasználók hozzáférhetnek az ön DiskStation alkalmazása által biztosított szolgáltatásokhoz, amint bejelentkeznek az egyszeri bejelentkezési kiszolgálóra a hitelesítő adataikkal.”><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Egyszeri bejelentkezési kliens</h2>
+
+<p>Ha az ön DiskStation alkalmazása azonos tartományhoz vagy LDAP szolgáltatáshoz csatlakozott, mint az egyszeri bejelentkezési kiszolgáló, beállíthatja a(z) DiskStation alkalmazását egyszeri bejelentkezési kliensként. A felhasználók hozzáférhetnek az ön DiskStation eszköze által biztosított szolgáltatásokhoz, amint bejelentkeznek az egyszeri bejelentkezési kiszolgálóra a hitelesítő adataikkal.</p>
+
+<p>Mielőtt elkezdené, győződjön meg róla, hogy az ön DiskStation eszköze azonos tartományhoz vagy LDAP szolgáltatáshoz csatlakozott, mint az egyszeri bejelentkezési kiszolgáló.</p>
+
+<h4>A(z) DiskStation beállítása egyszeri bejelentkezési kliensként:</h4>
+<ol>
+	<li>Lépjen be a <strong>Vezérlőpult</strong> > <strong>Tartomány/LDAP</strong> > <strong>SSO kliens</strong> oldalra.</li>
+	<li>Jelölje be az <strong>SSO szolgáltatás engedélyezése</strong> jelölőnégyzetet.</li>
+	<li>Adja meg az <strong>SSO kiszolgáló URL-címe</strong> és az <strong>Alkalmazásazonosító</strong> értékeket a jelölőnégyzet alatti mezőkben.<div class="section"><h4>Megjegyzés:</h4>
+	<p>Az Alkalmazásazonosítót az alábbi módszerek valamelyikével tudhatja meg:</p>
+	<ul>
+		<li><strong>1. módszer:</strong><ol>
+				<li>Jelentkezzen be az egyszeri bejelentkezési kiszolgálóként működő DSM-re.</li>
+				<li>Adja hozzá az ön kliens alkalmazásként szolgáló DiskStation alkalmazását az Alkalmazás listához az egyszeri bejelentkezési kiszolgálón. A részletes lépéseket lásd az <strong>SSO kiszolgáló</strong> > <strong>Alkalmazás lista</strong> Súgó témában.</li>
+				<li>Miután az ön DiskStation alkalmazása hozzá lett adva az egyszeri bejelentkezési kiszolgálóhoz, másolja ki és illessze be az egyszeri bejelentkezési kiszolgáló által kiosztott Alkalmazásazonosítót.</li>
+			</ol>
+		</li>
+		<li><strong>2. módszer:</strong><ol>
+				<li>Az <strong>egyszeri bejelentkezési kiszolgáló URL-címe</strong>* mező megadását követően kattintson a <strong>Gyors regisztráció</strong> lehetőségre az Alkalmazásazonosító mező mellett.</li>
+				<li>A regisztrációs panelen írja be az egyszeri bejelentkezési kiszolgáló valamely rendszergazda fiókjának hitelesítő adatait a <strong>Kiszolgáló rendszergazdája</strong> és a <strong>Jelszó</strong> mezőkbe.</li>
+				<li>Adja meg az kliensalkalmazás nevét az <strong>Alkalmazás neve</strong> mezőben.</li>
+				<li>Győződjön meg róla, hogy az <strong>Átirányítási URI</strong> pontosan az ön DiskStation alkalmazása bejelentkező oldalára utal.</li>
+				<li>Kattintson az <strong>OK</strong> gombra, és az ön DiskStation alkalmazása hozzáadódik az egyszeri bejelentkezési kiszolgálóhoz, és az Alkalmazásazonosítót a program automatikusan kitölti.</li>
+			</ol>
+		</li>
+	</ul>
+<p>______</p><p style="margin-left: 20px; text-indent: -10px;">* Minden egyszeri bejelentkezési kiszolgáló beállításánal ugyanazt az URL-címet kell megadnia (állomásnév vagy IP-cím).</p>
+</div>
+	</li>
+	<li>Kattintson az <strong>Alkalmaz</strong> gombra a beállítások mentéséhez.</li>
+</ol>
+
+<div class="section"><h4>Megjegyzés:</h4>
+	<ul>
+		<li>Ha az egyszeri bejelentkezési kiszolgáló HTTPS-protokollt használ, az egyszeri bejelentkezést megbízható tanúsítvány hiányában a böngészők blokkolhatják.</li>
+		<li>Ha az egyszeri bejelentkezési kiszolgálót HTTP-protokollon keresztül éri el, és az ön DiskStation alkalmazása (amely egyszeri bejelentkezési kliensként lett beállítva) HTTPS-kapcsolatot használ, a felhasználóknak be kell állítaniuk a böngészőjükben a nem biztonságos kapcsolat használatának engedélyezését.</li>
+	</ul>
+</div>
+
+</body>
+</html>

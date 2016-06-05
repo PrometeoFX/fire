@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Loggmottakelse - Synology DSM Hjelp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Turn your DiskStation into a syslog server to receive logs from other network devices.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Loggmottakelse</h2>
+<p>Din DiskStation kan fungere som en syslog-server for å motta logger fra klientenheter over nettverket. Tre formater er støttet for mottakelse av logger:  <strong>BSD </strong>(RFC 3164), <strong>IETF </strong>(RFC 5424) og <strong>Egendefinert</strong>. Alle mottatte logger lagres i loggdatabasen.</p>
+
+<div class="section">
+<h4>Før du starter:</h4>
+<p>Gå til <strong>Loggsenter</strong> > <strong>Lagringsinnstillinger</strong> og velg en plassering for å lagre og arkivere logger.</p>
+</div>
+<h3>Slik setter du opp standard loggmottakelse:</h3>
+<ol>
+<li>Gå til <strong>Loggsenter</strong> > <strong>Loggmottakelse</strong> > <strong>Standard</strong>.</li>
+<li>Du kan aktivere BSD og IETF-loggmottakelse ved å merke av for alternativet <b>Motta logger fra andre enheter</b> under formatet du ønsker.</li>
+<li>Velg <strong>UDP</strong> eller <strong>TCP</strong> fra <strong>Overføringsprotokoll</strong>.</li>
+<li>Angi et portnummer for å motta syslog-meldinger i <strong>Port</strong>. Standard portnummer er <strong>514</strong>.</li>
+<li>Hvis du ønsker sikker overføring av logger, merker du av for alternativet <strong>Aktiver sikker tilkobling (SSL)</strong>. Dette alternativet er tilgjengelig kun når <b>TCP</b> er valgt.
+  </p>
+	</div>
+</li>
+<li>Klikk på <b>Bruk</b> for å lagre innstillingene.</li>
+</ol>
+<!--DSM#62962: Customized rule receiving-->
+
+<h3>Slik setter du opp egendefinert loggmottakelse:</h3>
+
+	<ol>
+	<li>Gå til <strong>Loggsenter</strong> > <strong>Loggmottakelse</strong> > <strong>Egendefinert</strong>.</li>
+	<li>Klikk på <strong>Opprett</strong>.</li>
+	<li>Angi et unikt regelnavn i <strong>Navn</strong>.</li>
+	<li>Angi en analyseregel i <strong>Regelparametere</strong>. Se merknaden nedenfor for detaljert informasjon om oppretting av mønsteranalyser.</li>
+	<li>Velg <strong>UDP</strong> eller <strong>TCP</strong> fra <strong>Overføringsprotokoll</strong>.</li>
+	<li>Angi et portnummer for å motta syslog-meldinger i <strong>Port</strong>. Standard portnummer er <strong>514</strong>.</li>
+	<li>Hvis du ønsker sikker overføring av logger, merker du av for alternativet <strong>Aktiver sikker tilkobling (SSL)</strong>. Dette alternativet er tilgjengelig kun når <b>TCP</b> er valgt.</li>
+	<li>Klikk på <b>OK</b> for å lagre innstillinger.</li>
+	</ol>
+
+<div class="section">
+<h4>Merk:</h4>
+<p>Finn detaljert informasjon om mønsterparsere <a href="http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/syslog-ng-patterndb-using-parsers.html">her</a>. Du kan også laste ned et <a href="http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/patterndb-download.html">prøvemønster</a> som referanse.</p>
+</div>
+
+<h3>Slik administrerer du egendefinerte regler:</h3>
+
+	<ol>
+	<li>Velg en eksisterende egendefinert regel.</li>
+	<li>Velg blant følgende:</li>
+    <ul>
+    <li><strong>Rediger:</strong> Rediger valgt tilpasset regel.</li>
+<li><strong>Slett:</strong> Slett valgt tilpasset regel.</li>
+<li><strong>Aktiver:</strong> Aktiver valgt tilpasset regel.</li>
+<li><strong>Deaktiver:</strong> Deaktiver valgt tilpasset regel.</li>
+    </ul>
+	</ol>
+
+
+<h3>Eksportere sertifikat</h3>
+<p>Hvis du har merket av for alternativet <strong>Aktiver sikker tilkobling (SSL)</strong>, kan du klikke på knappen <strong>Eksporter sertifikat</strong> for å eksportere sertifikatet for å autentisere andre enheter ved sending av logger til DiskStation.</p>
+
+</body>

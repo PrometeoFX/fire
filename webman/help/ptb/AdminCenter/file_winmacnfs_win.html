@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Servi&ccedil;o de arquivos do Windows</h2>
+
+<p>O servi&ccedil;o de arquivos do Windows permite que clientes Windows, Mac e Linux com suporte a SMB/CIFS acessem dados armazenados no DiskStation. Se voc&ecirc; desejar procurar arquivos no DiskStation atrav&eacute;s do Windows Explorer ou montar pastas compartilhadas como unidades de rede, ative essa op&ccedil;&atilde;o em <strong>Painel de controle</strong> &gt; <strong>Servi&ccedil;os de arquivos</strong> &gt; <strong>Win/Mac/NFS</strong>.</p>
+
+
+<h4>Para ativar o servi&ccedil;o de arquivos Windows:</h4>
+<ol>
+<li>
+Marque <b>Ativar servi&ccedil;o de arquivos Windows</b>.
+</li>
+<li>
+Clique em <b>Aplicar</b>.
+</li>
+</ol>
+
+
+<h3>Grupo de trabalho</h3>
+<p>Esta op&ccedil;&atilde;o permite que voc&ecirc; designe um sistema como membro de um grupo de trabalho espec&iacute;fico para fins de gerenciamento de rede.</p>
+
+<div class="section">
+
+<h4>Nota:</h4>
+<ul>
+<li>O nome de um grupo de trabalho pode conter de 1 a 15 caracteres. O nome n&atilde;o pode ter os seguintes caracteres: [ ] ; : &quot; &lt; &gt; * + = \ / | ? ,</li>
+<li>Se voc&ecirc; estiver usando um Mac que executa o OS X 10.9 e seu DiskStation estiver ingressado em um dom&iacute;nio do Windows, poder&aacute; entrar adicionando <strong>localhost\</strong> antes do seu nome de usu&aacute;rio local do DiskStation para acessar arquivos armazenados no DiskStation atrav&eacute;s do servi&ccedil;o de arquivos do Windows.</li>
+</ul>
+</div>
+
+<h3 class="enable-rc18015xsp enable-rs18015xsp enable-rs2416p enable-rs2416rpp">Desabilitar acesso a vers&otilde;es anteriores</h3>
+<p class="enable-rc18015xsp enable-rs18015xsp enable-rs2416p enable-rs2416rpp">No Windows Explorer, os usu&aacute;rios podem acessar instant&acirc;neos de pastas ou arquivos clicando na guia <strong>Vers&otilde;es anteriores</strong> dentro de uma pasta compartilhada, o que permite a restaura&ccedil;&atilde;o ou c&oacute;pia de dados sem a ajuda do administrador. Se voc&ecirc; escolher <strong>Desabilitar acesso a vers&otilde;es anteriores</strong>, a p&aacute;gina &ldquo;Vers&otilde;es anteriores&rdquo; n&atilde;o exibir&aacute; nenhuma informa&ccedil;&atilde;o.</p>
+
+<div class="section enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"><h4>Observa&ccedil;&atilde;o:</h4>
+<ul>
+	<li>Os usu&aacute;rios t&ecirc;m permiss&atilde;o de acessar apenas uma vers&atilde;o anterior se, no momento em que o instant&acirc;neo correspondente &agrave; vers&atilde;o anterior foi tirado, suas contas de usu&aacute;rios foram criadas ou receberam permiss&atilde;o de leitura da pasta compartilhada &agrave; qual corresponde o instant&acirc;neo tirado.</li>
+</ul>
+</div>
+
+<h3>Ativa&ccedil;&atilde;o do registro de transfer&ecirc;ncia</h3>
+<p>Marcar essa op&ccedil;&atilde;o ativar&aacute; o registro das opera&ccedil;&otilde;es de acesso a arquivos, incluindo cria&ccedil;&atilde;o, exclus&atilde;o, leitura, grava&ccedil;&atilde;o, transfer&ecirc;ncia e renomea&ccedil;&atilde;o de arquivos ou pastas atrav&eacute;s do protocolo CIFS/SMB, tamb&eacute;m conhecido como protocolo de transfer&ecirc;ncia de arquivos do Windows.</p>
+
+<h3>Configura&ccedil;&otilde;es avan&ccedil;adas</h3>
+<p>Clique no bot&atilde;o <strong>Configura&ccedil;&otilde;es avan&ccedil;adas</strong>&nbsp;para ver as op&ccedil;&otilde;es abaixo.</p>
+<ul>
+<li><strong>Servidor WINS</strong>: O Servi&ccedil;o de cadastramento na Internet do Microsoft Windows (WINS) &eacute; um servi&ccedil;o de mapeamento de nome NetBIOS para endere&ccedil;o de IP. Os usu&aacute;rios do Windows localizar&atilde;o o sistema em redes TCP/IP com mais facilidade se o sistema tiver sido configurado para ser registrado em um servidor WINS.</li>
+<li><strong>Protocolo m&aacute;ximo para servi&ccedil;o de arquivos do Windows</strong>: Dependendo da sua configura&ccedil;&atilde;o de rede, voc&ecirc; pode definir o mais alto n&iacute;vel de protocolo que ser&aacute; suportado pelo seu DiskStation.
+  <ul>
+    <li><strong>Habilitar SMB 2</strong>: O SMB (Server Message Block) 2 tem suporte desde o Windows Vista e &eacute; uma vers&atilde;o aprimorada do SMB. O SMB 2 adiciona a capacidade de incorporar v&aacute;rias a&ccedil;&otilde;es SMB em uma &uacute;nica solicita&ccedil;&atilde;o a fim de reduzir o n&uacute;mero de pacotes de rede e melhorar o desempenho.</li>
+    <li><strong>Habilitar SMB 2 com MTU grande</strong>: A unidade m&aacute;xima de transmiss&atilde;o (MTU) refere-se &agrave; maior unidade de dados que pode ser transmitida atrav&eacute;s de um protocolo de comunica&ccedil;&atilde;o. Para aproveitar interfaces de rede mais r&aacute;pidas, como Ethernet de 1 ou 10 gigabits, a Large MTU aumenta a unidade de transmiss&atilde;o m&aacute;xima para 1 MB. A ativa&ccedil;&atilde;o da Large MTU aumenta a velocidade e a efici&ecirc;ncia da transfer&ecirc;ncia de arquivos grandes e, ao mesmo tempo, reduz o n&uacute;mero de pacotes que precisam ser processados.</li>
+    <li><strong>Habilitar SMB 3</strong>: O SMB 3 &eacute; suportado desde o Windows 8 e Windows Server 2012. Ele &eacute; uma vers&atilde;o aprimorada do SMB 2. O SMB 3 suporta a transmiss&atilde;o por criptografia de arquivo baseada em AES, aumentando assim a seguran&ccedil;a da transfer&ecirc;ncia de arquivos ponto a ponto.</li>
+</ul>
+<div class="section">
+  <h4>Nota:</h4>
+  <ul>
+    <li>O SMB 2 tem suporte no Windows Vista, no Windows Server 2008 R2, no Windows 7 e em vers&otilde;es mais recentes.</li>
+    <li>A Large MTU tem suporte no Windows Server 2008 R2, no Windows 7 e em vers&otilde;es mais recentes.</li>
+    <li>Para tornar eficiente o Large MTU em seu computador com Windows, ser&aacute; necess&aacute;rio modificar as configura&ccedil;&otilde;es de registro do computador. Para obter mais detalhes, consulte o suporte t&eacute;cnico da Microsoft (por exemplo, este <a href="http://technet.microsoft.com/en-us/library/ff625695(v=ws.10).aspx" target="_blank">artigo</a>).</li>
+    </ul>
+</div>
+<li><strong>Modo de criptografia de transporte</strong>: Quando o SMB 3 &eacute; habilitado, o Servi&ccedil;o de arquivos do Windows adicionar&aacute; criptografia de transporte para fortalecer a seguran&ccedil;a da transmiss&atilde;o de arquivos.
+  <ul>
+    <li><b>Desabilitar</b>: Nenhuma criptografia de transporte ser&aacute; aplicada.</li>
+    <li><b>Auto</b>: A criptografia de transporte ser&aacute; aplicada apenas a clientes que suportam esse recurso.</li>
+    <li><b>For&ccedil;ar</b>: A criptografia de transporte ser&aacute; aplicada sempre. Isso far&aacute; com que os clientes que n&atilde;o suportam a criptografia de transporte n&atilde;o consigam usar o servi&ccedil;o de arquivos do Windows.</li>
+  </ul>
+</li>
+<div class="section">
+  <h4>Nota:</h4>
+  <ul>
+    <li>A criptografia de transporte &eacute; suportada no Windows 8, Windows Server 2012 e em vers&otilde;es mais recentes.</li>
+    <li>O login an&ocirc;nimo no servi&ccedil;o de arquivos do Windows n&atilde;o &eacute; suportado quando a criptografia de transporte est&aacute; habilitada.</li>
+    <li>Quando a criptografia de transporte for habilitada, deixe a op&ccedil;&atilde;o <b>Desabilitar Opportunistic Locking</b> desmarcada para evitar atingir os tempos limite do aplicativo.</li>
+    </ul>
+</div>
+<li><strong>Desabilitar Opportunistic Locking</strong>: Marcar esta op&ccedil;&atilde;o desabilita o &quot;Bloqueio oportunista&quot; do CIFS, resultando em melhor desempenho quando aplicativos de bancos de dados acessarem arquivos de bancos de dados na pasta compartilhada do dispositivo DiskStation pela rede.</li>
+<li>
+  <strong>Ativar Local Master Browser</strong>: Quando existem v&aacute;rios computadores com Windows na mesma subrede, eles negociar&atilde;o e eleger&atilde;o um computador como o &quot;local master browser&quot;. O local master browser mant&eacute;m listas de outros computadores dentro da subrede e seus recursos compartilhados e compartilha essas listas com outros computadores. Essa op&ccedil;&atilde;o permite que o DiskStation assuma o papel de local master browser.
+</li>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>A habilita&ccedil;&atilde;o desta fun&ccedil;&atilde;o desabilita a hiberna&ccedil;&atilde;o do disco r&iacute;gido e ativa a conta do convidado sem uma senha.</p>
+</div>
+
+
+<li><strong>Habilitar o m&oacute;dulo VFS DirSort</strong>: Classifica os nomes de pasta e lista-os em ordem alfab&eacute;tica. Ativar esta op&ccedil;&atilde;o afeta o desempenho do sistema.</li>
+
+<li><strong>Arquivos de veto</strong>: Oculta os arquivos de acordo com os crit&eacute;rios especificados. Os crit&eacute;rios podem incluir curingas (*) e entradas m&uacute;ltiplas devem ser separadas por barras (/). Por exemplo: <i>/abc*/*.txt/*.conf/</i>. Ativar esta op&ccedil;&atilde;o afeta o desempenho do sistema.</li>
+
+<li><strong>Permitir links simb&oacute;licos nas pastas compartilhadas</strong>: Ativar essa op&ccedil;&atilde;o permite que links simb&oacute;licos apontem para arquivos ou pastas na mesma pasta compartilhada. Eles podem ser criados usando o terminal de DSM.</li>
+
+<li><strong>Permitir links simb&oacute;licos entre pastas compartilhadas</strong>: Ativar essa op&ccedil;&atilde;o permite que os links simb&oacute;licos apontem para arquivos ou pastas em diferentes pastas compartilhadas. Eles podem ser criados usando o terminal de DSM. Observe que ativar esta op&ccedil;&atilde;o pode permitir que usu&aacute;rios sem privil&eacute;gios de acesso visualizem e acessem pastas compartilhadas que s&atilde;o alvo dos links simb&oacute;licos.</li>
+
+<li><strong>Habilitar o m&oacute;dulo VFS MSDFS</strong>: Permite que links simb&oacute;licos apontem para arquivos ou pastas localizadas em outros servidores SMB. Com vers&otilde;es mais antigas do Windows, como o Windows XP, o cliente e o DiskStation precisam participar de um dom&iacute;nio do Windows antes de ativar essa op&ccedil;&atilde;o. Para saber mais sobre como criar os links MSDFS, consulte <a href="http://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/msdfs.html" target=_blank>aqui</a>. Observe que o cache do dispositivo cliente deve ser limpo ap&oacute;s desabilitar esta op&ccedil;&atilde;o, ou o desempenho normal poder&aacute; ser afetado.</li>
+
+<li><strong>Desabilitar m&uacute;ltiplas conex&otilde;es do mesmo endere&ccedil;o IP</strong>: Quando essa op&ccedil;&atilde;o estiver ativada, o DiskStation s&oacute; permite uma conex&atilde;o por endere&ccedil;o IP de clientes usando o Servi&ccedil;o de arquivos do Windows. Quando v&aacute;rios clientes com o mesmo endere&ccedil;o IP usarem o Windows File Service, o DiskStation ir&aacute; manter o mais recente e derrubar as conex&otilde;es mais antigas. Em ambientes NAT, o cliente poder&aacute; usar um &uacute;nico endere&ccedil;o de IP, caso em que se ativar essa op&ccedil;&atilde;o isso poder&aacute; afetar o desempenho normal.</li>
+
+<li><strong>Coletar registros de depura&ccedil;&atilde;o</strong>: Quando essa op&ccedil;&atilde;o for ativada, registros detalhados ser&atilde;o armazenados para fins de depura&ccedil;&atilde;o. Ativar esta op&ccedil;&atilde;o afeta o desempenho do sistema.</li>
+<li><strong>Aplique as permiss&otilde;es UNIX padr&atilde;o</strong>: Habilite essa op&ccedil;&atilde;o para aplicar as permiss&otilde;es UNIX padr&atilde;o ao fazer upload ou criar arquivos e pastas. A permiss&atilde;o UNIX ser&aacute; 744 para arquivos e 755 para pastas. Quando essa op&ccedil;&atilde;o &eacute; desativada, a permiss&atilde;o UNIX &eacute; 777 para arquivos e pastas.</li>
+<div class="section enable-eds14">
+<h4>Nota:</h4>
+<ul>
+<li>Habilitar essa op&ccedil;&atilde;o pode causar problemas de permiss&atilde;o inconsistente entre os diferentes protocolos. Para evitar inconsist&ecirc;ncias, sugerimos deixar essa op&ccedil;&atilde;o desabilitada.</li>
+</ul>
+</div>
+<div class="section disable-eds14">
+<h4>Nota:</h4>
+<ul>
+  <li>Para pastas compartilhadas com a ACL do Windows habilitada (todos os compartilhamentos, exceto &quot;photo&quot; e compartilhamentos em unidades externas), execute o comando <strong>chmod</strong> no cliente Linux ou FTP para alterar os tipos de permiss&atilde;o de arquivos e pastas da ACL do Windows para UNIX.</li>
+  <li>Habilitar essa op&ccedil;&atilde;o pode causar problemas de permiss&atilde;o inconsistente entre os diferentes protocolos. Para evitar inconsist&ecirc;ncias, sugerimos deixar essa op&ccedil;&atilde;o desabilitada.</li>
+</ul>
+</div>
+<li><b>N&atilde;o reservar espa&ccedil;o em disco ao criar arquivos</b>: Habilite essa op&ccedil;&atilde;o para n&atilde;o permitir que espa&ccedil;o em disco seja reservado ao se criar arquivos no seu DiskStation .</li>
+<li><strong>Apagar cache SMB</strong>: Clique neste bot&atilde;o para excluir os seguintes arquivos do cache SMB, para fins de solu&ccedil;&atilde;o de problemas:
+  <ul>
+
+<li>/var/cache/samba/netsamlogon_cache.tdb</li>
+<li>/var/lib/samba/winbindd_cache.tdb</li>
+<li>/var/lib/samba/share_info.tdb</li>
+<li>/var/lib/samba/registry.tdb</li>
+<li>/run/samba/connections.tdb</li>
+<li>/run/samba/gencacche.tdb</li>
+<li>/run/samba/gencache_notran.tdb</li>
+</ul>
+</li>
+
+</ul>
+
+</body>
+</html>

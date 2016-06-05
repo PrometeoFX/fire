@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Mac 檔案服務</h2>
+
+<p>
+你可於<strong>控制台</strong> &gt; <strong>檔案服務</strong> &gt; <strong>Win/Mac/NFS</strong> 啟動 Mac 檔案服務來讓 DiskStation 成為 Mac 檔案伺服器 (AFP 伺服器)。</p>
+
+<h4>若要啟動 Mac 檔案服務：</h4>
+<ol>
+<li>
+勾選<b>啟動 Mac 檔案服務</b>來讓 DiskStation 成為 Mac 檔案伺服器 (AFP 伺服器)。
+</li>
+<li>
+如有需要，可為 <b>Time Machine</b> 設定一個備份資料夾。(請參閱以下區塊來瞭解更多資訊。)
+</li>
+
+<li>
+按一下<b>套用</b>。
+</li>
+
+</ol>
+<div class="section">
+<h4>關於 Time Machine 備份檔案夾：</h4>
+<p>若要將資料從 Time Machine 備份至 DiskStation，請從下拉式選單中選擇一個共用資料夾。 </p>
+<p><span class="note_head">注意：</span>系統服務所使用的共用資料夾無法用在 Time Machine 上。</p>
+</div>
+<h3>進階設定</h3>
+<h4>套用 UNIX 預設權限：</h4>
+<p>啟動此選項後，上傳或建立檔案及資料夾時將套用 UNIX 預設權限。所套用的權限和透過 UNIX 指令 <b>umask</b> 設定的權限完全相同。此選項啟動時，檔案的 UNIX 權限為 644，資料夾為 755。此選項停用時，檔案的 UNIX 權限為 666，資料夾為 777。預設的 umask 值為 022。</p>
+<p><span class="note_head">注意：</span>啟動此選項可能會導致不同通訊協定間出現權限不一致的情況。若要避免不一致的情況，建議您停用此選項。</p>
+<h4>斷線後立即釋放資源：</h4>
+<p>啟動此選項後，在 AFP 伺服器連線意外中斷時，將立即釋放資源。若您在使用 Time Machine 時收到「儲存使用中」的錯誤訊息，請啟動此選項。</p>
+<h4>若要啟動 Bonjour 印表機共用：</h4>
+<p>勾選<b>啟動 Bonjour 印表機共享</b>來允許 Mac 用戶端瀏覽並找到 DiskStation 上連接的印表機。</p>
+</body>
+</html>

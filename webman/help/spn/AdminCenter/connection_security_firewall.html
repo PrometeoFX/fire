@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Cortafuegos</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_firewall"></a>Cortafuegos</h2>
+<p>La creaci&oacute;n de reglas de cortafuegos en <strong>Panel de control</strong> &gt; <strong>Seguridad</strong> &gt; <strong>Cortafuegos</strong> le ayuda a evitar inicios de sesi&oacute;n no autorizados y a controlar el acceso a los servicios. Puede elegir entre permitir o denegar el acceso a determinados puertos de red desde direcciones IP espec&iacute;ficas.</p><h3>Para crear una regla de cortafuegos:</h3>
+<ol>
+<li>Seleccione una interfaz de red en el men&uacute; desplegable en la esquina superior derecha.</li>
+<li>Haga clic en <b>Crear</b>.</li>
+<li>En la secci&oacute;n <b>Puertos</b>, seleccione una de las siguientes opciones:</li>
+<ul>
+<li>Elija <b>Todos</b> para aplicar esta regla de cortafuegos a todos los puertos.</li>
+<li>Elija <b>Seleccionar de una lista de aplicaciones incorporadas</b> y haga clic en <strong>Seleccionar</strong>. Seleccione las aplicaciones incorporadas a las que desea aplicar esta regla de cortafuegos.</li>
+<li>Elija <b>Personalizar</b> y haga clic en <b>Personalizar</b>. Introduzca hasta 15 puertos separados por comas o indique un rango de puertos al que se aplicar&aacute; esta regla de cortafuegos.</li>
+</ul>
+<li>En la secci&oacute;n <b>IP origen</b>, seleccione una de las siguientes opciones:</li>
+<ul>
+<li>Elija <b>Todas</b> para aplicar esta regla de cortafuegos a todas las direcciones IP.</li>
+<li>Elija <b>IP espec&iacute;fica</b> y haga clic en <strong>Seleccionar</strong>. Puede especificar una direcci&oacute;n IP o un rango IP al que aplicar esta regla de cortafuegos.</li>
+<li>Elija <b>Regi&oacute;n</b> y a continuaci&oacute;n indique hasta 15 pa&iacute;ses a los que aplicar este regla de cortafuegos a</li>
+</ul>
+<li>En la secci&oacute;n <b>Acci&oacute;n</b>, seleccione una de las siguientes opciones:</li>
+<ul>
+	<li>Elija <b>Permitir</b> para permitir el acceso de puertos y direcciones IP de origen que haya especificado.</li>
+	<li>Elija <b>Denegar</b> para denegar el acceso a puertos y direcciones IP de origen que haya especificado</li>
+</ul>
+</ol>
+
+<p>Para ver las reglas de cortafuegos de LAN y PPPoE, seleccione estas interfaces en la casilla de la esquina superior derecha. En la parte inferior de la lista de reglas puede seleccionar <b>Permitir acceso</b> o <b>Denegar acceso</b> para permitir o denegar las solicitudes de acceso que no coincidan con una regla de cortafuegos existente para la interfaz correspondiente.</p>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Puede crear hasta 100 reglas para una interfaz de red. </li>
+<li>Arrastre y suelte para volver a ordenar las reglas de la lista.</li>
+<li>El orden de prioridad de las reglas se establece en funci&oacute;n de sus posiciones en la lista.</li>
+<li>Si tiene m&uacute;ltiples puertos de red conectados a la misma subred, es posible que las reglas de cortafuegos no funcionen correctamente.* </li>
+<li>Cuando combine m&uacute;ltiples puertos LAN con link aggregation, el cortafuegos aplicar&aacute; las reglas de la primera interfaz de red y conservar&aacute; las reglas de la segunda interfaz de red.</li>
+<li>Si su dispositivo DiskStation conecta a Internet a trav&eacute;s de PPPoE, la reglas del cortafuegos relacionadas se deben configurar en la interfaz de PPPoE correspondiente.</li>
+</ul>
+</div>
+<h3>Comportamiento de las reglas de cortafuegos:</h3>
+<p>DSM Firewall buscar&aacute; coincidencias con las reglas de acuerdo con su prioridad. <strong>Cuando se encuentra una coincidencia con una regla, esta se aplicar&aacute; y DSM Firewall no continuar&aacute; buscando coincidencias</strong>. Si no existe ninguna coincidencia con las reglas, DSM Firewall realizar&aacute; la acci&oacute;n predeterminada indicada en cada interfaz.</p>
+<h4>Prioridad de reglas de cortafuegos:</h4>
+<ol> 
+<li>Reglas definidas en &quot;Todas las interfaces&quot;.</li>
+<li>Reglas definidas en interfaces correspondientes a las que pertenece la conexi&oacute;n.</li>
+<li>Reglas predeterminadas en interfaces correspondientes a las que pertenece la conexi&oacute;n.</li>
+</ol>
+<p>____<br> * S&oacute;lo se aplica a determinados modelos.<br> # Esta funci&oacute;n incluye datos de GeoLite creados por MaxMind, disponibles en <a href="http://www.maxmind.com" target="_blank">http://www.maxmind.com</a>.</p><br></body>
+</html>

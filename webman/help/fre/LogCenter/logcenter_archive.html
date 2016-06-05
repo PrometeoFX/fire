@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Centre des journaux</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Param&egrave;tres de stockage</h2>
+
+<p>La page <strong>Param&egrave;tres de stockage</strong> fournit des options pour configurer comment et o&ugrave; les journaux sont archiv&eacute;s par le centre de journaux. Utilisez les options ci-dessous pour sp&eacute;cifier l&apos;emplacement et les r&egrave;gles de stockage pour cr&eacute;er automatiquement des archives de journaux.</p>
+
+
+<h3>Destination de stockage pour les archives</h3>
+
+<p>La destination se r&eacute;f&egrave;re au dossier o&ugrave; les journeaux re&ccedil;us par le centre de journaux sont stock&eacute;s et archiv&eacute;s. Cliquez sur <strong>S&eacute;lectionner un emplacement</strong> pour choisir votre dossier.</p>
+<p>Si vous voulez que les journaux locaux du DiskStation soient archiv&eacute;s au m&ecirc;me emplacement, cochez la case marqu&eacute;e <strong>Archiver les journaux locaux vers l&apos;emplacement de stockage sp&eacute;cifi&eacute; ci-dessus</strong>. Dans la plupart des cas, ceci fournit plus d&apos;espace de stockage pour les journaux locaux, vous permettant de maintenir plus de journaux syst&egrave;mes complets.</p>
+<!--DSM#61793: Describe how logs are archived in data volume--><div class="section">
+<h4>Remarque&nbsp;:</h4>
+<p>Les journaux locaux (Syst&egrave;me, Connexion et les journaux de transfert de fichier) sont sauvegard&eacute;s dans une partition syst&egrave;me qui a un stockage limit&eacute;. En activant <strong>Archiver les journaux locaux vers l&apos;emplacement de stockage sp&eacute;cifi&eacute; ci-dessus</strong>, tous les journaux seront archiv&eacute;s &agrave; la destination sp&eacute;cifi&eacute;e selon les <strong>R&egrave;gles d&apos;archive</strong>. Pour parcourir les journaux locaux archiv&eacute;s, cliquez sur <strong>Ouvrir une archive de journal</strong> et s&eacute;lectionnez <strong>SYNOSYSLOGDB__LOCALARCH.DB</strong>.</p>
+</div><h3>R&egrave;gles d&apos;archive</h3>
+
+<p>Les journaux sont automatiquement archiv&eacute;s selon le crit&egrave;re d&eacute;fini dans la section <strong>R&egrave;gles d&apos;archivage</strong>. Les journaux peuvent &ecirc;tre automatiquement archiv&eacute;s quand la taille de la base de donn&eacute;es du journal atteint une taille sp&eacute;cifi&eacute;e, le nombre de journaux individuels atteint une nombre sp&eacute;cifi&eacute; ou les journaux atteignent un &acirc;ge sp&eacute;cifi&eacute;.</p>
+
+<h3>Format d&apos;archive</h3>
+<p>Cette section inclut les options suivantes&nbsp;:</p>
+<ul>
+<li><strong>Archivez les journaux en format texte en plus du format par d&eacute;faut :</strong> Sauvegarder les archives en fichiers texte simple en plus des fichiers SQLite par d&eacute;faut.</li>
+<li><strong>Compresser les journaux archiv&eacute;s :</strong> Sauvegarde les archives de journaux en fichiers de format ZIP compress&eacute;.</li>
+<li><strong>Archiver les journaux s&eacute;par&eacute;ment selon l&apos;appareil :</strong> Sauvegarde les archives s&eacute;par&eacute;es pour les appareils client individuels qui envoient les journaux vers le DiskStation.</li>
+</ul>
+
+</body>

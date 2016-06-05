@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Zálohování a replikace</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Záloha LUN*</h2>
+<p>Na kartě <b>Zálohovat</b> v části <b>Zálohování a replikace</b> můžete pomocí možnosti <b>Místní záloha LUN</b> zálohovat jednotky iSCSI LUN v zařízení DiskStation do místních sdílených složek. Pomocí možnosti <b>Síťová záloha LUN</b> můžete provádět zálohování do jiného zařízení DiskStation.</p>
+
+<h4>Zálohování jednotky iSCSI LUN:</h4>
+<ol>
+<li>Vyberte možnost <b>Vytvořit</b> > <b>Úloha zálohování LUN</b>, otevřete <b>Průvodce zálohováním LUN</b> a klikněte na možnost <b>Další</b>.</li>
+<li>Pokud budete vyzvání k zadání typu cílové jednotky, vyberte jednu z následujících akcí:</li>
+<ul>
+<li><b>Místní záloha LUN</b>: Pomocí této možnosti provedete zálohování jednotky LUN ze svého zařízení DiskStation do místních sdílených složek nebo externího disku, který je připojen k portu USB nebo eSATA zařízení DiskStation.</li>
+<li><b>Síťová záloha LUN</b>: Pomocí této možnosti provedete zálohování jednotky LUN ze zařízení DiskStation do jiného zařízení DiskStation.</li>
+</ul>
+<li>Nastavte podle pokynů cíl zálohování, zdroj LUN a plán zálohování.</li>
+<li>Nastavení dokončete pomocí průvodce.</li>
+</ol>
+<p>Po vytvoření zálohy provede zařízení DiskStation úlohu zálohování podle plánu a uloží zálohu jednotky LUN do cíle záloh. Záloha jednotky LUN se používá pouze pro zálohování. V části <a href="restore.html">Obnovení zálohy LUN</a> naleznete více informací o přístupu k záloze LUN.</p>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Do cíle budou jako obrazy souborů zálohovány jak běžné souborové jednotky LUN, tak jednotky LUN na úrovni bloku. V případě obnovení se všechny jednotky LUN na úrovni bloku změní na souborové jednotky LUN.</li>
+<li>Každá úloha zálohování může obsahovat pouze jednu jednotku LUN jako zdroj zálohování.</li>
+<li>Jednotky LUN nelze zálohovat do externího disku s formátem FAT, FAT32, HFS, HFS Plus nebo NTFS.</li>
+<li>Před zahájením síťové zálohy LUN se prosím přihlaste do cílového zařízení DiskStation a ujistěte se, že služba síťové zálohy je v části <b>Zálohování a replikace</b> > <b>Služby zálohování</b> povolena.</li>
+<li>Pokud se zařízení DiskStation připojuje k síti pomocí směrovače, ujistěte se, že před zahájením síťové zálohy LUN provedete nastavení pravidel pro předávání portů pro službu iSCSI (port TCP 3260).</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>O plnohodnotném a přírůstkovém zálohování:</h4>
+<p>DiskStation provede nejdříve plnohodnotné zálohování vybraných jednotek LUN a poté provede přírůstkové zálohování. Pokud však dojde ke změně názvu sdílené složky nebo adresáře, provede zařízení DiskStation úplnou zálohu stejné úlohy.</p>
+</div>
+
+<p>____<br /> * K dispozici pouze u některých modelů.</p>
+</body></html>

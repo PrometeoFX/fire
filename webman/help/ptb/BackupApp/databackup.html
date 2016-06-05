@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Backup de dados</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Backup de dados</h2>
+<p>Na guia <b>Backup</b> em <b>Backup e replica&ccedil;&atilde;o</b>, &eacute; poss&iacute;vel fazer backup de dados espec&iacute;ficos no DiskStation manualmente ou de acordo com uma programa&ccedil;&atilde;o personalizada. Com esse recurso, as configura&ccedil;&otilde;es do sistema, o conte&uacute;do das pastas compartilhadas e os dados do pacote podem ser copiados para um destino de backup local, em rede ou na nuvem.</p>
+<h4>Para criar uma tarefa de backup:</h4>
+<ol>
+<li>Selecione <b>Criar</b> &gt; <b>Tarefa de backup de dados</b>.</li>
+<li>Siga o assistente para concluir a configura&ccedil;&atilde;o. Visite <a href="repository.html">Destino do backup</a> para obter mais informa&ccedil;&otilde;es.</li>
+</ol>
+<h4>Para gerenciar as tarefas de backup:</h4>
+<p>Selecione uma tarefa existente e clique em um dos bot&otilde;es abaixo:</p>
+<ul>
+<li><strong>Editar:</strong> Modificar destino, origem, agendamento e outras configura&ccedil;&otilde;es da tarefa selecionada.</li>
+<li><strong>Excluir:</strong> Excluir a tarefa selecionada.</li>
+<li><strong>Cancelar:</strong> Cancelar a tarefa selecionada que est&aacute; sendo executada no momento.</li>
+<li><strong>Fazer backup agora:</strong> Executa imediatamente o backup da tarefa selecionada.</li>
+</ul>
+<h3>Rota&ccedil;&atilde;o do backup</h3>
+<p>A rota&ccedil;&atilde;o de backup &eacute; um mecanismo de gerenciamento de vers&atilde;o. Ele ajuda a gerenciar as vers&otilde;es de backup excluindo automaticamente as vers&otilde;es mais antigas e desnecess&aacute;rias e liberando espa&ccedil;o de armazenamento. Voc&ecirc; pode habilitar essa fun&ccedil;&atilde;o em <b>Configura&ccedil;&otilde;es de tarefa</b> ou configur&aacute;-la quando voc&ecirc; criar uma tarefa de backup.</p>
+<h4>Para rotacionar as vers&otilde;es:</h4>
+<ol>
+<li>Selecione a tarefa de backup para a qual deseja aplicar a rota&ccedil;&atilde;o de vers&atilde;o e clique em <strong>Editar</strong>.</li>
+<li>V&aacute; para a guia <strong>Configura&ccedil;&otilde;es de tarefa</strong> e marque <strong>Habilitar rota&ccedil;&atilde;o de backup</strong>. </li>
+<li>Aqui voc&ecirc; pode escolher um ou dois m&eacute;todos de rota&ccedil;&atilde;o:</li>
+<ul>
+<li><b>Da vers&atilde;o mais antigas:</b> Esse &eacute; um m&eacute;todo b&aacute;sico de rota&ccedil;&atilde;o de vers&atilde;o. Quando a condi&ccedil;&atilde;o de rota&ccedil;&atilde;o &eacute; disparada, a vers&atilde;o mais antiga ser&aacute; removida primeiro. </li>
+<li><b>Smart Recycle:</b> Esse &eacute; um m&eacute;todo inteligente de rota&ccedil;&atilde;o de vers&atilde;o. Quando a condi&ccedil;&atilde;o de rota&ccedil;&atilde;o &eacute; disparada, o sistema remove as vers&otilde;es selecionadas pelo mecanismo de reten&ccedil;&atilde;o. O mecanismo de reten&ccedil;&atilde;o &eacute; o seguinte:</li>
+<ul>
+	<li><b>Vers&otilde;es hor&aacute;rias das &uacute;ltimas 24 horas:</b> O sistema mant&eacute;m a vers&atilde;o mais recente que foi criada em cada hora.</li>
+	<li><b>Vers&otilde;es di&aacute;rias de 1 dia passado a 1 m&ecirc;s:</b> O sistema mant&eacute;m a vers&atilde;o mais recente que foi criada em cada dia.</li>
+	<li><b>Vers&atilde;o semanal com mais de 1 m&ecirc;s:</b> O sistema mant&eacute;m a vers&atilde;o mais recente que foi criada em cada semana.</li>
+</ul>
+</ul>
+<li>Especifique o <b>n&uacute;mero m&aacute;ximo de vers&otilde;es</b>. Quando o n&uacute;mero de vers&otilde;es ultrapassar esse n&uacute;mero, a rota&ccedil;&atilde;o de vers&otilde;es come&ccedil;ar&aacute;. O n&uacute;mero n&atilde;o inclui as vers&otilde;es bloqueadas.</li>
+<li>Se voc&ecirc; configurou uma programa&ccedil;&atilde;o de backup repetida, uma visualiza&ccedil;&atilde;o da estimativa de como suas vers&otilde;es de backup ser&atilde;o mantidas e o tempo do ponto de recupera&ccedil;&atilde;o mais recente baseado nas configura&ccedil;&otilde;es de rota&ccedil;&atilde;o ser&atilde;o exibidos. &nbsp;&nbsp;</li>
+<li>Clique em <strong>OK </strong>para salvar suas configura&ccedil;&otilde;es. </li>
+</ol>
+<div class="section">
+  <h4>Notas:</h4>
+  <ul>
+  <li>As vers&otilde;es bloqueadas nunca ser&atilde;o removidas. Visite <a href="repository.html#lock_version">Destino do backup</a> para obter mais informa&ccedil;&otilde;es.</li>
+  
+  <li>Apenas as tarefas de backup multivers&atilde;o fornecem fun&ccedil;&otilde;es de rota&ccedil;&atilde;o de vers&atilde;o.</li>
+  <li>A rota&ccedil;&atilde;o de vers&atilde;o n&atilde;o &eacute; suportada no DSM 5.1 ou inferior.</li>
+  <li>A rota&ccedil;&atilde;o ser&aacute; disparada logo ap&oacute;s a configura&ccedil;&atilde;o ser alterada ou a tarefa de backup conclu&iacute;da.</li>
+  <li>As vers&otilde;es bloqueadas s&atilde;o exclu&iacute;das ao se calcular o n&uacute;mero m&aacute;ximo de vers&otilde;es.</li>
+  </ul>
+</div>
+<div class="section">
+<h4>Observa&ccedil;&otilde;es gerais:</h4>
+<ul>
+<li>Os nomes das tarefas podem incluir de 1 a 32 caracteres Unicode, mas n&atilde;o podem conter os seguintes caracteres:<br> <span class="letterSpace5">! &quot; # $ % &amp; ' ( ) * + , / : ; &lt; = &gt; ? @ [ ] \ ^ ` { } | ~</span></li>
+<li>O comprimento m&aacute;ximo do caminho completo da pasta para backup &eacute; de 2048 caracteres.</li>
+<li>Se mais de 32.000 arquivos ou pastas forem carregados para uma pasta compartilhada EXT3 via AFP, todas as tarefas de backup que incluem a pasta compartilhada falhar&atilde;o.</li>
+<li>Pode-se fazer backup de uma pasta criptografada montada ou desmontada. Entretanto, ela ser&aacute; sempre restaurada como desmontada e n&atilde;o ser&aacute; montada automaticamente na inicializa&ccedil;&atilde;o. O sistema solicitar&aacute; que voc&ecirc; digite ou importe a chave de criptografia da pasta compartilhada criptografada para mont&aacute;-la.</li>
+<li>N&atilde;o &eacute; suportado fazer backup de uma pasta criptografada para outra pasta criptografada.</li>
+<li>N&atilde;o &eacute; suportado usar pastas remotas como fonte ou destino de backup.</li><li>Se o destino do backup for um volume, somente o propriet&aacute;rio da tarefa poder&aacute; executar a tarefa de backup. Visite <a href="repository.html">Destino do backup</a> para obter mais informa&ccedil;&otilde;es.</li>
+<li>O backup de determinados aplicativos &eacute; suportado. Para saber se um pacote espec&iacute;fico suporta o backup e conhecer o conte&uacute;do do backup e suas limita&ccedil;&otilde;es, consulte a ajuda de cada aplicativo.</li>
+<li class="enable-eds14">O DiskStation n&atilde;o suporta o backup de aplicativos sem um dispositivo externo EXT3/EXT4 grav&aacute;vel.</li>
+<li class="enable-eds14">O DiskStation n&atilde;o suporta o backup para um volume sem um dispositivo externo EXT3/EXT4 grav&aacute;vel.</li>
+<li class="enable-eds14">O DiskStation s&oacute; pode fazer backup de pastas compartilhadas criadas em dispositivos externos EXT3/EXT4.</li>
+<li class="disable-eds14">O sistema n&atilde;o pode fazer backup de aplicativos sem um volume grav&aacute;vel.</li
+></ul>
+</div>
+<div class="section disable-eds14">
+<h4>Para fazer backup de configura&ccedil;&otilde;es de ACL do Windows:</h4>
+<p>Tamb&eacute;m &eacute; poss&iacute;vel fazer o backup das configura&ccedil;&otilde;es de ACL do Windows dos arquivos no DiskStation, dependendo dos sistemas de arquivos do destino:</p>
+<ul>
+<li>O <strong>Destino de backup local</strong>, o <strong>Destino de backup de rede</strong> e o <strong>Destino de backup de nuvem p&uacute;blica</strong> podem fazer backup das configura&ccedil;&otilde;es de ACL do Windows, independentemente do sistema de arquivos do destino.</li>
+<li>A <strong>Sincroniza&ccedil;&atilde;o de pasta compartilhada</strong> pode fazer backup das configura&ccedil;&otilde;es de ACL do Windows quando o sistema de arquivos do destino for EXT4<span style="display: inline;" class="enable-rc18015xsp">/BTRFS</span>.</li>
+</ul>
+</div>
+</body></html>

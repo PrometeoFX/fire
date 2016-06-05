@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>{title}</title>
+		<link rel="shortcut icon" href="../favicon.ico" />
+		<link rel="apple-touch-icon" href="mapp/resources/images/apple-touch-icon_60.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="mapp/resources/images/apple-touch-icon_76.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="mapp/resources/images/apple-touch-icon_120.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="mapp/resources/images/apple-touch-icon_152.png" />
+		<link href="mapp/resources/css/mobile_login.css?v={version}" rel="stylesheet" type="text/css" />
+		<script src="mapp/uistrings.cgi?lang={lang}&amp;v={version}" type="text/javascript"></script>
+		<script src="/scripts/sencha-touch-1.1.0/sencha-touch.js?v={version}" type="text/javascript"></script>
+		<script src="/scripts/ext-3/ux/ux-encrypt.js?v={version}" type="text/javascript"></script>
+		<script type="text/javascript">
+			Ext.namespace('SYNO.MobileDSM');
+			SYNO.MobileDSM.Session = {session};
+		</script>
+		<script src="mapp/mobile_login.js?v={version}" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="header">
+			<div id="hostname"></div>
+			<div id="icon"></div>
+		</div>
+		<div id="content"></div>
+		<div id="footer">
+			<div id="logo"></div>
+		</div>
+	</body>
+</html>

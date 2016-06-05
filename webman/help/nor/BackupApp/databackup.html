@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Sikkerhetskopiering av data</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Sikkerhetskopiering av data</h2>
+
+<p>Under fanen <b>Sikkerhetskopiering</b> i <b>Sikkerhetskopiering &amp; kopiering</b> kan du sikkerhetskopiere spesifikke data på DiskStation manuelt eller i henhold til en tilpasset tidsplan. Med denne funksjonen kan systemkonfigurasjon, innholdet i delte mapper og pakkedata sikkerhetskopieres til et lokalt, nettverksbasert eller skybasert sikkerhetskopimål.</p>
+
+<h4>Slik oppretter du en sikkerhetskopioppgave:</h4>
+<ol>
+<li>Velg <b>Opprett</b> > <b>Datasikkerhetskopioppgave</b>.</li>
+<li>Følg veiviseren for å fullføre installasjonen. Gå til <a href="repository.html">Sikkerhetskopimål</a> for mer informasjon.</li>
+</ol>
+
+<h4>Slik administrerer du sikkerhetskopioppgaver:</h4>
+<p>Velg en eksisterende oppgave og klikk på en av knappene under:</p>
+<ul>
+<li><strong>Rediger:</strong> Rediger mål, kilde, tidsplan og andre innstillinger for den valgte oppgaven.</li>
+<li><strong>Slett:</strong> Slett den valgte oppgaven.</li>
+<li><strong>Avbryt:</strong> Avbryt den valgte kjørende oppgaven.</li>
+<li><strong>Sikkerhetskopier nå:</strong> Utfører sikkerhetskopiering av den valgte oppgaven umiddelbart.</li>
+</ul>
+
+
+<h3>Sikkerhetskopirotasjon</h3>
+<p>Sikkerhetskopirotasjon er en mekanisme for versjonsadministrasjon. Den bidrar til å administrere sikkerhetskopiversjoner ved automatisk å slette eldre, unødvendige versjoner og potensielt frigjøre lagringsplass. Du kan aktivere denne funksjonen i <b>Oppgaveinnstillinger</b> eller konfigurere den når du oppretter en sikkerhetskopioppgave.</p>
+<h4>Slik roterer du versjoner:</h4>
+<ol>
+<li>Velg sikkerhetskopioppgaven du vil ta i bruk versjonsrotasjon for og klikk på <strong>Rediger</strong>.</li>
+<li>Gå til fanen <strong>Oppgaveinnstillinger</strong> og merk av for <strong>Aktiver sikkerhetskopirotasjon</strong>. </li>
+<li>Her kan du velge en av to rotasjonsmetoder:</li>
+<ul>
+<li><b>Fra den tidligste versjonen:</b> Dette er en grunnleggende versjonsrotasjonsmetode. Når rotasjonskriteriet er utløst, vil den tidligste versjonen bli fjernet først. </li>
+<li><b>Smart Recycle:</b> Dette er en intelligent versjonsrotasjonsmetode. Når rotasjonskriteriet er utløst, vil systemet fjerne de versjonene som velges av bevaringsmekanismen. Bevaringsmekanismen fungerer som følger:</li>
+<ul>
+	<li><b>Timeversjoner fra de siste 24 timer:</b> Systemet beholder den tidligste versjonen som blir opprettet hver time.</li>
+	<li><b>Daglige versjoner fra siste 1 dag til 1 måned:</b> Systemet beholder den tidligste versjonen som blir opprettet hver dag.</li>
+	<li><b>Ukentlige versjoner eldre enn 1 måned:</b> Systemet beholder den tidligste versjonen som blir opprettet hver uke.</li>
+</ul>
+</ul>
+<li>Spesifiser maksimalt <b>antall versjoner</b>. Når versjonsantallet overskrider dette antallet, vil versjonsrotasjon starte. Antallet inkluderer ikke låste versjoner.</li>
+<li>Hvis du har konfigurert en gjentatt sikkerhetskopiplan, vil en forhåndsvisning av estimatet for hvordan sikkerhetskopiversjonene dine blir beholdt og det tidligste gjenopprettingspunktet basert på rotasjonsinnstillingene dine bli vist. &nbsp;&nbsp;</li>
+<li>Klikk på <strong>OK</strong> for å lagre innstillingene. </li>
+</ol>
+
+<div class="section">
+  <h4>Merknader:</h4>
+  <ul>
+  <li>Låste versjoner vil aldri bli fjernet. Gå til <a href="repository.html#lock_version">Sikkerhetskopimål</a> for mer informasjon.</li>
+  
+  <li>Kun sikkerhetskopioppgaver med flere versjoner tilbyr funksjoner for versjonsrotasjon.</li>
+  <li>Versjonsrotasjon er ikke støttet på DSM 5.1 og eldre.</li>
+  <li>Rotasjon vil bli utløst like etter at innstillingen endres eller sikkerhetskopioppgaven er fullført. </li>
+  <li>Låste versjoner blir ekskludert ved beregning a maksimumsantall for versjoner.</li>
+  </ul>
+</div>
+
+
+<div class="section">
+<h4>Generelle merknader:</h4>
+<ul>
+<li>Navn på oppgaver kan bestå av 1 til 32 Unicode-tegn, men kan ikke inneholde følgende tegn:<br> <span class="letterSpace5">! " # $ % &amp; ' ( ) * + , / : ; &lt; = &gt; ? @ [ ] \ ^ ` { } | ~</span></li>
+<li>Den maksimale lengden på hele filbanen for sikkerhetskopi er 2048 tegn.</li>
+<li>Hvis flere enn 32 000 filer eller mapper lastes opp til en EXT3-delt mappe via AFP, vil alle sikkerhetskopioppgaver i den delte mappen mislykkes.</li>
+<li>En kryptert mappe kan sikkerhetskopieres enten montert eller demontert. Men den vil alltid bli gjenopprettet som demontert og vil ikke bli montert automatisk ved oppstart. Du må angi eller importere krypteringsnøkkelen til den krypterte delte mappen for å montere den.</li>
+<li>Sikkerhetskopiering av en kryptert mappe til en annen kryptert mappe støttes ikke.</li>
+<li>Bruk av eksterne mapper som sikkerhetskopikilde eller -mål støttes ikke.</li><li>Hvis sikkerhetskopimålet er et volum, vil kun eieren av oppgaven kunne utføre sikkerhetskopioppgaven. Gå til <a href="repository.html">Sikkerhetskopimål</a> for mer informasjon.</li>
+<li>Sikkerhetskopiering for enkelte programmer er støttet. For å se om en bestemt pakke støtter sikkerhetskopiering, samt sikkerhetskopiens innhold og eventuelle begrensninger, kan du se hjelpsiden for hvert program.</li>
+<li class="enable-eds14">DiskStation støtter ikke programsikkerhetskopiering uten en skrivbar ekstern enhet med EXT3/EXT4.</li>
+<li class="enable-eds14">DiskStation støtter ikke sikkerhetskopiering til et volum uten en skrivbar ekstern enhet med EXT3/EXT4.</li>
+<li class="enable-eds14">DiskStation kan kun sikkerhetskopiere delte mapper som opprettes på eksterne enheter med EXT3/EXT4.</li>
+<li class="disable-eds14">Systemet kan ikke sikkerhetskopiere programmer uten et skrivbart volum.</li
+></ul>
+</div>
+<div class="section disable-eds14">
+<h4>Sikkerhetskopiere innstillinger for Windows ACL:</h4>
+<p>Windows ACL-innstillinger for filene på DiskStation kan også sikkerhetskopieres avhengig av filsystemene i målet:</p>
+<ul>
+
+<li><strong>Lokalt sikkerhetskopimål</strong>, <strong>Sikkerhetskopimål for nettverk</strong> og <strong>Sikkerhetskopimål for offentlig sky</strong> kan sikkerhetskopiere Windows ACL-innstillinger uavhengig av filsystemet i målet</li>
+
+<li><strong>Synkronisering av delt mappe</strong> kan sikkerhetskopiere Windows ACL-innstillinger når filsystemet i målet er EXT4<span style="display: inline;" class="enable-rc18015xsp">/BTRFS</span>.</li>
+
+</ul>
+</div>
+
+</body></html>

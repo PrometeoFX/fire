@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Centre d&apos;infos</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h1>Centre d&apos;infos</h1>
+<p>Le Centre d&apos;infos affiche des informations de base concernant divers aspects de votre DiskStation, telles que des sp&eacute;cifications de mat&eacute;riel, le r&eacute;seau, le stockage et les services. Le Centre d&apos;infos est situ&eacute; dans <strong>Panneau de configuration</strong> &gt; <strong>Centre d&apos;infos</strong>.</p>
+<h2><a name="general"></a>Onglet G&eacute;n&eacute;ral</h2>
+<p>Sous l&apos;onglet <b>G&eacute;n&eacute;ral</b>, vous verrez les informations de base de votre DiskStation, notamment le num&eacute;ro de s&eacute;rie, le nom du mod&egrave;le, la quantit&eacute; de m&eacute;moire physique, la version DSM, les informations de l&apos;heure syst&egrave;me, la temp&eacute;rature ou les p&eacute;riph&eacute;riques externes.</p>
+
+<h3 class="disable-eds14">&Eacute;tat de la temp&eacute;rature*</h3>
+<p class="disable-eds14">L&apos;&eacute;tat de la temp&eacute;rature du DiskStation est indiqu&eacute; par les t&eacute;moins vert ou orange :</p>
+
+<ul class="disable-eds14">
+<li><strong>Vert :</strong> La temp&eacute;rature est normale.</li>
+<li><strong>Orange </strong>: La temp&eacute;rature du DiskStation est trop &eacute;lev&eacute;e. Si la temp&eacute;rature du DiskStation reste &eacute;lev&eacute;e, celui-ci peut s&apos;arr&ecirc;ter du fait de la surchauffe.</li>
+</ul>
+
+
+<h2><a name="network"></a>R&eacute;seau</h2>
+<p>L&apos;onglet <b>R&eacute;seau</b> affiche les informations r&eacute;seau, telles que le serveur DNS, l&apos;adresse IP, le masque de sous-r&eacute;seau et bien davantage.</p>
+
+<h2><a name="storage"></a>Stockage</h2>
+<p class="disable-eds14">L&apos;onglet <b>Stockage</b> affiche les informations li&eacute;es &agrave; l&apos;utilisation du volume et &agrave; l&apos;&eacute;tat du disque dur.</p>
+<p class="enable-eds14">L&apos;onglet <strong>Stockage</strong> affiche l&apos;information relative &agrave; l&apos;utilisation du stockage et le statut des appareils de stockage externes.</p>
+
+<h3 class="disable-eds14">&Eacute;tat du disque dur</h3>
+
+<p class="disable-eds14">Les &eacute;l&eacute;ments suivants sont les diff&eacute;rents statuts qu&apos;un disque dur interne peut avoir&nbsp;:</p>
+
+<ul class="disable-eds14">
+<li><strong>Pas de disque install&eacute;&nbsp;:</strong> pas de disque install&eacute; dans la fente de disque dur correspondante.</li>
+<li><strong>Non initialis&eacute;&nbsp;:</strong> le disque dur ne comporte ni partition syst&egrave;me ni volume.</li>
+<li><strong>Normal&nbsp;:</strong> le disque dur contient une partition syst&egrave;me et un volume utilisables.</li>
+<li><strong>Initialis&eacute;&nbsp;:</strong> La partition syst&egrave;me est disponible mais il n&rsquo;y a aucun volume.</li>
+<li><strong>&Eacute;chec de la partition du syst&egrave;me&nbsp;:</strong> la partition du syst&egrave;me sur le disque dur n&apos;est pas disponible.</li>
+<li><strong>En panne&nbsp;:</strong> &eacute;chec lors de l&apos;acc&egrave;s au volume du disque dur. Il est recommand&eacute; de remplacer le disque dur.</li>
+</ul>
+
+
+
+
+<div class="section disable-eds14">
+
+<h4>Remarque&nbsp;:</h4>
+<p>Pour que le syst&egrave;me fonctionne normalement, vous devez disposer d&rsquo;au moins un disque dans l&rsquo;&eacute;tat <b>Normal</b> ou <b>Initialis&eacute;</b>.</p>
+
+</div>
+
+
+<h2><a name="service"></a>Service</h2>
+<p>L&apos;onglet <b>Service</b> affiche une liste des services et des paquets install&eacute;s, y compris les options pour activer ou d&eacute;sactiver chaque service et paquet. De plus, pour certains services et paquets, il existe des options pour tester la connectivit&eacute; ou d&eacute;terminer si chaque service ou paquet peut &ecirc;tre acc&eacute;d&eacute; via le pare-feu.</p>
+
+<h4>Pour modifier les param&egrave;tres du service ou du paquet&nbsp;:</h4>
+<ol>
+<li>Les options suivantes sont disponibles&nbsp;:<ul>
+	  <li><strong>Activer :</strong> Activer ou d&eacute;sactiver les services du paquet.</li>
+	  <li><strong>Autoriser &agrave; travers le pare-feu&nbsp;:</strong> Ajouter ou supprimer les ports utilis&eacute;s par le service ou l&apos;application dans <strong>Panneau de configuration</strong> &gt; <strong>Acc&egrave;s externe</strong> &gt; <strong>configuration du routeur</strong>, pour permettre au service ou au paquet de passer &agrave; travers le pare-feu du DiskStation.</li>
+	  <li><strong>Param&egrave;tres&nbsp;:</strong> S&eacute;lectionnez l&apos;interface r&eacute;seau dont vous d&eacute;sirez afficher et g&eacute;rer les param&egrave;tres. Vous pouvez s&eacute;lectionner <strong>Tout</strong> pour afficher et g&eacute;rer les param&egrave;tres du pare-feu de toutes les interfaces r&eacute;seau.</li>
+	  <li><strong>Test de connexion&nbsp;:</strong> Teste les ports utilis&eacute;s par les services et les paquets. Ceci vous permet de tester si les p&eacute;riph&eacute;riques peuvent ou non acc&eacute;der aux services et paquets d&apos;un r&eacute;seau externe.</li>
+    </ul>
+</li>
+<li>Cliquez sur <strong>Sauvegarder</strong> pour sauvegarder les modifications ou sur <strong>R&eacute;initialiser</strong> pour ignorer les modifications. </li>
+</ol>
+
+<p class="disable-eds14">_____<br> * Uniquement disponible sur certains mod&egrave;les. </p>
+
+</body>
+</html>

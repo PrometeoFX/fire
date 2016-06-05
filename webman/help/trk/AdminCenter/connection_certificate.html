@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="certificate"></a>Sertifika</h2>
+
+<p>DiskStation ürününün, web (tüm HTTPS hizmetleri), posta ya da FTP gibi SSL hizmetlerini güvenli kılmak için bir sertifika kullanılabilir. Bir sertifikaya sahip olmak, kullanıcının, herhangi bir gizli bilgi göndermeden önce bir sunucunun ve yöneticinin kimliğini doğrulamasına olanak tanır. </p>
+
+<p><strong>Sertifika</strong> sekmesi (<strong>Denetim Masası</strong> > <strong>Güvenlik</strong> > <strong>Sertifika</strong> altında bulunur), DiskStation sertifikalarının durumunu yönetme ve görüntüleme seçenekleri sağlayarak, sertifikaları oluşturmaya, içe/dışa aktarmaya veya yenilemeye olanak tanır. Sertifika kurulum sihirbazı, kendinden imzalı sertifikalar oluşturmaya veya sertifika yetkililerine (CA) kaydolmak için sertifika imzalama istekleri (CSR) indirmeye yardımcı olur.</p>
+
+
+<div class="section">
+<h4>Not:</h4>
+<p>Burada belirlenen sertifika VPN Server kurulursa otomatik olarak OpenVPN Server tarafından kullanılacaktır.</p>
+</div>
+
+
+<h3>Kendinden İmzalı Sertifikalar</h3>
+
+<p>Kendinden imzalı sertifikalar, kimliğini onayladığı aynı kişi/kuruluş tarafından oluşturulup imzalanmış bir sertifikaya karşılık gelir (bu durumda DiskStation). Kendinden imzalı sertifikalar, DiskStation tarafından üretilen özel anahtarla imzalanır.  Kendinden imzalı sertifikalar üçüncü taraf sertifika yetkilileri tarafından yayınlanmadığından, sunucunun kimliği konusunda daha düşük kanıt sağlar ve genellikle yalnızca sunucu ve bir bilinen kullanıcılar grubu arasındaki kanalları güvenli kılmak için kullanılırlar.</p>
+
+
+<h4>Kendinden imzalı bir sertifika oluşturmak için:</h4>
+<ol>
+	<li><b>Sertifika oluştur</b>'a tıklayın.</li>
+	<li>Kurulumu sihirbazının adımlarını izleyin.</li>
+</ol>
+
+<div class="section">
+<h4>Not:</h4>
+<p>Kendinden imzalı bir sertifika oluşturmak, var olan DiskStation sertifikasının yerine geçecektir.</p>
+</div>
+
+
+<h3>Sertifika İmzalama İstekleri</h3>
+
+<p>Bir üçüncü taraf sertifika yetkilisinden bir sertifikaya başvurmak için, önce bir sertifika imzalama isteği (CSR) oluşturmalısınız. Bir sertifika imzalama isteği, sertifikanıza dahil edilecek, etki alanı adınız, kuruluş adınız, genel konumunuz ve e-posta adresiniz gibi bilgileri içeren, DiskStation tarafından oluşturulmuş şifreli bir metin gövdesidir. Kurulum sihirbazı, DiskStation için bir imzalı sertifikaya başvurmak amacıyla sertifika imzalama isteği oluşturmanıza yardımcı olabilir.</p>
+
+<p>Ticari ya da üçüncü taraf bir sertifika yetkilisinden sertifika edinmek için, kişisel ya da kuruluş kimliğinizi sağlamanız ve sertifika imzalama isteğinin genel ad alanına girilen etki alanı adının sahibi olduğunuzu kanıtlamanız gerekecektir.</p>
+
+<div class="section">
+<h4>Not:</h4>
+<p>Sertifika imzalama isteğiyle birlikte bir özel anahtar da oluşturulacaktır. Sertifika yetkililerinin bu özel anahtara gereksinimi yoktur. Lütfen DiskStation ürününüze yönelik özel anahtarınızı güvende ve gizli tutun.</p>
+</div>
+
+<h4>Bir sertifika imzalama isteği oluşturmak için:</h4>
+<ol>
+	<li><b>Sertifika oluştur</b>'a tıklayın.</li>
+	<li>Sertifika imzalama isteği oluşturmak ve indirmek için kurulum sihirbazının talimatlarını izleyin.</li>
+</ol>
+
+<p>Sertifikanız, sertifika yetkilisi tarafından yayınlandığında, özel anahtarınızla birlikte içe aktarılabilir (aşağıdaki talimatlara bakın).
+
+
+
+<h3>Sertifikaları Dışa Aktarma</h3>
+
+<p>Var olan sertifikalar, yönetim ya da arşivleme amaçları için indirilebilir. Dışa aktarılan dosya, sertifikayı, özel anahtarı ve DiskStation ürününün kendinden imzalı kök sertifikasını içerir.</p>
+
+<h4>Bir sertifikayı dışa aktarmak için:</h4>
+<ul>
+<li><b>Sertifika ver</b> düğmesine tıklayın.</li>
+</ul>
+
+
+
+<h3>Sertifikaları İçe Aktarma</h3>
+
+<p>Bu seçenek, sertifika yetkilileri tarafından yayınlanan veya daha önce dışa aktarılan sertifikaları, özel anahtarla birlikte içe aktarmanıza olanak tanır.</p>
+
+<h4>Bir sertifikayı içe aktarmak için:</h4>
+<ul>
+	<li><b>Sertifika Al</b> düğmesine tıklayın.</li>
+</ul>
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>Ara sertifikalar, bazı sertifika yetkilisince yayınlanmış sertifikalar için isteğe bağlıdır.</li>
+<li>Sertifikaların X.509 PEM formatında olması gerekir.</li>
+<li>Özel anahtarlar RSA formatında olmalıdır ve parola korumalı olamazlar.</li>
+</ul>
+</div>
+
+
+
+<h3>Sertifikaları Yenileme</h3>
+
+<p>Süresi bitmek üzere olan sertifikanız bu seçenek kullanılarak yenilenebilir.</p>
+
+<h4>Bir sertifikayı yenilemek için:</h4>
+<ol>
+	<li><b>Sertifika oluştur</b>'a tıklayın.</li>
+	<li><b>Sertifikayı yenile</b>'yi seçip <b>İleri</b>'ye tıklayın.</li>
+	<li>Yeni bir özel anahtar ve sertifika imzalama isteği oluşturulur.</li>
+</ol>
+
+
+
+<h3>Sertifika İmzalama İsteğini (CSR) İmzalama</h3>
+
+<p>Bu seçenek DiskStation ürününüzün root sertifikasını kullanarak bir sertifika imzalama isteğini imzalamanıza olanak tanır.</p>
+
+<h4>Bir sertifika imzalama isteğini imzalamak için:</h4>
+<ol>
+	<li><b>Sertifika oluştur</b>'a tıklayın.</li>
+	<li><b>Bir sertifika imzalama isteğini (CSR) imzala</b>'ya tıklayın.</li>
+	<li>Sertifika imzalama isteğini yükleyip gerekli bilgileri girin. </li>
+	<li><b>İleri</b>'ye tıklayın, sistem sertifika isteğini imzalayacak ve uygun bir sertifika oluşturacaktır.</li>
+</ol>
+
+
+</body>
+</html>
+

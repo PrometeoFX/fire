@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Sikkerhetskopi av konfigurasjonen</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+
+<body>
+<h2>Sikkerhetskopi av konfigurasjonen</h2>
+<p>Gå til <strong>Kontrollpanel</strong> > <strong>Oppdater & gjenopprett</strong> for umiddelbart å sikkerhetskopiere systemkonfigurasjoner til en lokal datamaskin. Dette lar deg lagre ulike innstillinger (f.eks. brukere, grupper, innstillinger for filtjeneste, osv.) og gjenopprette innstillingene ved en senere anledning. Systemkonfigurasjoner lagres som en .dss-formatfil.</p>
+
+<h4>Slik sikkerhetskopierer du systemkonfigurasjoner:</h4>
+<ol>
+<li>Klikk på <b>Sikkerhetskopier konfigurasjon</b>. </li>
+<li>En konfigurasjonsfil vil bli lastet ned til datamaskinen din (med navnet <b>[Navn på Synology-produkt]_[Dato opprettet].dss</b>).</li>
+</ol>
+
+<h4>Slik gjenoppretter du systemkonfigurasjoner:</h4>
+<ol>
+<li>Klikk på <b>Gjenopprett konfigurasjon</b>.</li>
+<li>Klikk på <b>Bla gjennom</b> og velg konfigurasjonsfilen som er lagret på datamaskinen din.</li>
+<li>Merk av for å velge konfigurasjonene du ønsker å gjenopprette, og klikk deretter på <strong>OK</strong>. Du kan også merke av for <strong>Overskriv konflikterende innstillinger</strong>-alternativer for å overskrive gjeldende innstillinger for et utvalg av eksisterende brukere, grupper, delte mapper og tjenester.</li>
+<li>En advarselsmelding vises. Klikk på <strong>Ja</strong> for å fortsette.</li>
+<li>Når gjenopprettingen er fullført, vil du få opp en melding. Klikk på <strong>OK</strong> for å fullføre.</li>
+</ol>
+
+<div class="section">
+<h4>Følgende innstillinger vil bli sikkerhetskopiert:</h4>
+<ul class="disable-eds14">
+<li>Brukere, grupper og delte mapper</li>
+<li>Arbeidsgruppe, domene og LDAP</li>
+<li>Fildeling (f.eks. Windows-filtjeneste, Mac-filtjeneste, NFS-tjeneste, FTP og WebDAV) og sikkerhetskopitjenester (f.eks. Nettverkssikkerhetskopi, Synkronisering av delt mappe og Time Backup-tjeneste)</li>
+<li>Andre (f.eks. Brukerhjem, Passordinnstillinger, Oppgaveplanlegger, Innstillinger for diskbrukrapport)</li>
+</ul>
+
+<ul class="enable-eds14">
+<li>Brukere, grupper og delte mapper</li>
+<li>Fildeling (f.eks. Windows-filtjeneste, Mac-filtjeneste, NFS-tjeneste, FTP og WebDAV) og sikkerhetskopitjenester (f.eks. Nettverkssikkerhetskopi, Synkronisering av delt mappe og Time Backup-tjeneste)</li>
+<li>Andre (f.eks. Brukerhjem, Passordinnstillinger, Oppgaveplanlegger, Innstillinger for diskbrukrapport)</li>
+</ul>
+
+<h4>Merk:</h4>
+<ul>
+<li><strong>Sikkerhetskopitjenester</strong> inkluderer grunnleggende tjenesteinnstillinger, men ikke detaljert informasjon om sikkerhetskopioppgaver og -mål, osv.</li>
+<li><strong>Brukerhjem</strong> inkluderer grunnleggende tjenesteinnstillinger, men ikke den delte mappen <b>homes</b>. Gå til <b>Sikkerhetskopiering & kopiering</b> for å sikkerhetskopiere og gjenopprette den delte mappen <b>homes</b> og dataene i den.</li>
+<li><b>Oppgaveplanlegger</b> inkluderer oppgaver som kan opprettes i <b>Oppgaveplanlegger</b>, men ikke oppgaver som genereres av andre programmer (f.eks. <b>Sikkerhetskopiering & kopiering</b> og <b>Diskbrukrapport</b>, osv.)</li>
+<li><b>Innstillinger for diskbrukrapport</b> inkluderer rapportoppgaver og deres tidsplaner, men ikke de faktiske rapportene som ble generert tidligere.</li>
+
+<li>Hvis navnene på gjenopprettede brukere eller grupper nå er reservert for systembruk, vil de bli gjenopprettet med andre navn.</li></ul>
+</div>
+
+</body>
+</html>

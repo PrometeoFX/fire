@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+	<h2>Dysk HDD/SSD</h2>
+	<p>Ta sekcja umożliwia monitorowanie stanu dysków HDD/SSD zainstalowanych w serwerze DiskStation. Udostępnia ona opcje do zarządzania dyskiem HDD/SSD oraz analizowania jego wydajności i kondycji. Przejdź do pozycji <strong>Zarządzanie przechowywaniem</strong> > <strong>HDD/SSD</strong>, aby zarządzać tymi opcjami.</p>
+
+	<h4>Aby sprawdzić informacje o dysku HDD/SSD:</h4>
+	<ol>
+		<li>Przejdź do karty <b>HDD/SSD</b>.</li>
+		<li>Wybierz na liście dysk i rozwiń daną pozycję. Zostanie wyświetlony stan S.M.A.R.T., informacje o wolumenie, nazwa modelu, numer seryjny, wersja firmware i temperatura.</li>
+	</ol>	
+	
+	<h4>Aby sprawdzić informacje o kondycji:</h4>
+    <ol>
+      <li>Przejdź do karty <b>HDD/SSD</b>.</li>
+	  <li>Wybierz dysk.</li>
+      <li>Kliknij <b>Informacje o kondycji</b>.</li>
+	  <li>Przejdź do karty <strong>Przegląd</strong>. Zostanie wyświetlona liczba godzin działania dysku, aktualna temperatura, liczba ponownych połączeń i identyfikacji, liczba uszkodzonych sektorów oraz ogólny stan S.M.A.R.T.</li>
+      <li>Przejdź do karty <strong>Info S.M.A.R.T.</strong>. Przedstawione tu liczby pomogą zdiagnozować stan dysku.</li>
+    </ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>
+   Dyski SAS nie obsługują informacji S.M.A.R.T.
+</p>
+</div>
+
+	<h4>Aby uruchomić test S.M.A.R.T.:</h4>
+	<P>Test S.M.A.R.T. umożliwia sprawdzanie i raportowanie stanu dysków, aby alarmować o możliwych awariach. W razie wykrycia błędów zaleca się szybką wymianę dysku. </P>
+    <ol>
+      <li>Przejdź do karty <strong>HDD/SSD</strong>.</li>
+      <li>Wybierz dysk.</li>
+      <li>Kliknij <b>Test S.M.A.R.T.</b>.</li>
+      <li>Wybierz typ testu, a następnie kliknij <strong>Uruchom</strong>, aby rozpocząć test.</li>
+      <li>Najnowsze wyniki testu są wyświetlane w sekcji <b>Wynik testu</b>.</li>
+    </ol>
+    <div class="section">
+<h4>Uwaga:</h4>
+    <p>Czas testu zależy od danego środowiska.</p>
+</div>
+    <h4>Aby zaplanować testy S.M.A.R.T.:</h4>
+    <p>Tworząc zadania, można zaplanować automatyczne uruchamianie testów S.M.A.R.T.</p>
+    <ol>
+      <li>Przejdź do karty <strong>Harmonogram testów</strong>.</li>
+      <li>Kliknij przycisk <strong>Utwórz</strong>, aby utworzyć nowe zadanie.</li>
+      <li>Na karcie <strong>Ogólne</strong> zmodyfikuj następujące ustawienia:</li>
+      <ul>
+        <li><strong>Zadanie:</strong> Wprowadź nazwę dla zadania.</li>
+        <li><strong>Typ testu S.M.A.R.T:</strong> Wybierz szybki test lub test rozszerzony.</li>
+        <li><strong>Zakres testu S.M.A.R.T:</strong> Wybierz, które dyski HDD/SSD mają być badane podczas każdego testu S.M.A.R.T.</li>
+      </ul>
+      <li>Na karcie <strong>Harmonogram</strong> zmodyfikuj następujące ustawienia:</li>
+      <ul>
+        <li><strong>Data:</strong> określ, kiedy mają być wykonywane testy S.M.A.R.T. Testy S.M.A.R.T. można zaplanować na określone dni tygodnia (np. codziennie, w weekendy lub co niedzielę) lub określone daty (np. 2015/10/21).</li>
+        <li><strong>Czas:</strong> określ, ile razy ma być wykonywany test S.M.A.R.T., a także pierwszy i ostatni raz każdego dnia.</li>
+      </ul>
+      <li>Aby zakończyć, kliknij przycisk <strong>OK</strong>.</li>
+    </ol>
+
+<h4>Aby wykonać operację Secure Erase:</h4>
+<ol>
+<li>Przejdź do karty <b>HDD/SSD</b>.</li>
+<li>Wybierz napęd i kliknij polecenie <b>Secure Erase</b>.</li>
+</ol>
+
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Nie można wykonać operacji Secure Erase na dyskach w jednostkach rozszerzających.</li>
+<li>Operacja Secure Erase pozwala na trwałe usunięcie wszystkich danych z dysku twardego. Upewnij się, że wybrany dysk nie jest używany lub dane, które się na nim znajdują, zostały skopiowane.</li>
+<li>Na czas wykonywania operacji Secure Erase wybrany dysk zostanie tymczasowo zablokowany. Po jej zakończeniu dysk zostanie odblokowany.</li>
+<li>Jeśli operacja Secure Erase zostanie zatrzymana w niewłaściwy sposób, można ją wykonać ponownie bezpośrednio z interfejsu użytkownika. Jeśli przed odblokowaniem dyski zostaną wyjęte lub użyte w innym miejscu, można je odblokować za pomocą hasła synology.</li>
+</ul>
+</div>
+
+
+	<h3>Włączanie obsługi pamięci podręcznej zapisu dysków twardych</h3>
+	<p>Włączenie obsługi pamięci podręcznej zapisu zwiększa wydajność serwera DiskStation. Funkcję tę obsługują tylko niektóre modele dysków twardych. W celu zapewnienia bezpieczeństwa danych podczas korzystania z obsługi pamięci podręcznej zapisu stanowczo zalecane jest zastosowanie zasilacza UPS. Zaleca się także, aby po każdym użyciu poprawnie zamykać system. Wyłączenie pamięci podręcznej zapisu zmniejszy prawdopodobieństwo utraty danych wskutek przerw w zasilaniu, ale pogorszy wydajność systemu.</p>
+
+	<h4>Aby włączyć obsługę pamięci podręcznej zapisu: </h4>
+	<ol>
+		<li>Przejdź do karty <b>Zarządzanie pamięcią podręczną</b>.</li>
+		<li>Zaznacz pole wyboru <b>Włącz zapisywanie pamięci podręcznej</b>. Funkcja ta jest domyślnie włączona.</li>
+		<li>Kliknij przycisk <b>Zastosuj</b>.</li>
+	</ol>
+	
+</body>
+</html>

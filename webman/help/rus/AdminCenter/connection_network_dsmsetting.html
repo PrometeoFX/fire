@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Настройки DSM</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="https"></a>Настройки DSM</h2>
+
+<p>В пункте <strong>Панель управления</strong> > <strong>Сеть</strong> > <strong>Настройки DSM</strong> можно изменить номер порта, используемый клиентами для доступа к DSM. При включении HTTPS подключение будет защищено с помощью SSL/TLS.</p>
+
+<h4>Изменение номера порта по умолчанию:</h4>
+<ol>
+<li>Введите номер порта в поле <b>HTTP</b> или <b>HTTPS</b>.</li>
+<li>Нажмите <b>Применить</b>.</li>
+</ol>
+
+<h4>Установка подключения HTTPS:</h4>
+<ol>
+<li>
+Установите флажок <b>Включить соединения HTTPS</b>.
+</li>
+<li>Чтобы перенаправить клиентов на порт HTTPS (5001) при попытке доступа к DSM через порт HTTP (5000), установите флажок <b>Автоматически перенаправлять подключения HTTP на HTTPS</b>.</li>
+<li>
+Нажмите <b>Применить</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Порты, используемые при подключении HTTPS:</h4>
+<ul>
+  <li><b>DSM</b>: Номер порта по умолчанию — 5001, поэтому вы можете безопасно осуществлять доступ к DSM путем ввода следующего адреса: https://server-hostname:5001/</li>
+<li><b>Web Station и Photo Station</b>: Номер порта по умолчанию — 443, поэтому вы можете безопасно осуществлять доступ к Web Station и Photo Station путем ввода следующего адреса: https://server-hostname/</li>
+</ul>
+
+</div>
+
+<h4>Чтобы DiskStation обнаруживалось с помощью службы обнаружения сети Windows, выполните следующие действия:</h4>
+<ol>
+<li>
+Установите флажок <b>Включить обнаружение сети Windows</b>.
+</li>
+<li>
+Нажмите <b>Применить</b>.
+</li>
+</ol>
+
+</body>
+</html>
+

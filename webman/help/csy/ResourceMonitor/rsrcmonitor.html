@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Sledování zdrojů</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1><a name="leaf_update"></a>Sledování zdrojů</h1>
+<p>Funkce Sledování zdrojů umožňuje sledovat využití procesoru, paměti, disku a síťový provoz. Můžete volit mezi sledováním v reálném čase nebo prohlížení dat z minulosti.</p>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Data z minulosti zobrazíte pouze tehdy, pokud na kartě <strong>Nastavení</strong> zaškrtnete možnost <strong>Povolit historii využití</strong>.</li>
+</ul>
+</div>
+<h2>Výkon</h2>
+<p>Kliknutím na kartu <strong>Výkon</strong> můžete zobrazit data o využití zdrojů. Přesunutím myši zobrazíte na grafu podrobné datum, čas a údaje.</p>
+<h3>Procesor</h3>
+<p>Můžete sledovat celkové využití procesoru položek <strong>Uživatel</strong>, <strong>Systém</strong> a <strong>Čekací doba vstupu/výstupu</strong>. Při prvním spuštění Sledování zdrojů může být využití procesoru vysoké, protože systém musí shromáždit data o prostředcích a současně načíst stránku rozhraní.</p>
+<p>Kategorie <strong>Uživatel</strong> zobrazuje procentuální hodnoty využití procesoru pro spouštění uživatelských aplikací. Kategorie <strong>Systém</strong> zobrazuje procentuální hodnoty využití procesoru v jádru systému a požadavky IRQ hardwaru/softwaru. Kategorie <strong>Čekací doba vstupu/výstupu</strong> zobrazuje procentuální hodnoty procesoru v rámci čekací doby vstupu/výstupu.</p>
+<p>Kategorie <strong>Využití</strong> představuje celkové využití procesoru položkami <strong>Uživatel</strong> a <strong>Systém</strong>.</p>
+<p>V intervalu 1, 5 a 15 minut bude zobrazena průměrná hodnota zatížení, která označuje délku fronty (tj. součet aktuálně spuštěných procesů plus počet čekajících procesů). </p>
+<div class="section">
+<h4>Vysvětlení pojmů</h4>
+<ul>
+<li><b>Čekací doba vstupu/výstupu</b>: Hodnota čekací doby vstupu/výstupu označuje, zda je procesor nečinný a zda jej nevyužívá jiný program. </li>
+<p>Čekací doba vstupu/výstupu představuje standardní chování. Vzhledem k tomu, že procesor má vyšší rychlost než vstup/výstup, musí procesor většinou čekat na přenos dat v rámci disků nebo sítě. Pokud je však procentuální hodnota čekací doby vstupu/výstupu příliš vysoká, soustředí se procesor v takovém případě na čekací dobu vstupu/výstupu a jeho využití není efektivní. Chcete-li tedy dosáhnout lepšího výkonu systému, můžete využít možnosti konfigurací skupin disků (např. SHR nebo RAID 5) nebo konfigurací sítě (např. Bonding).</p> 
+</ul>
+</div>
+<h3>Paměť</h3>
+<p>Zobrazuje celkové využití fyzické paměti a odloženého místa. Využití paměti zůstává vysoké, protože systém do paměti ukládá data, ke kterým se často přistupuje. Data jsou tak rychle k dispozici bez toho, aby byl nutný přístup k pevnému disku. V případě nedostatku paměti budou data z paměti uvolněna.</p>
+<p>Vysoká míra využití odloženého místa značí nedostatek systémové paměti a bude mít vliv na výkon systému. Frekvenci sepnutí a vypnutí zobrazíte v rozevírací nabídce <strong>Přepnout</strong> v horní části. </p>
+
+
+<h3>Disk</h3>
+<p>Kliknutím na rozevírací nabídku v horní části grafu můžete zobrazit celkové využití disku, přenosovou rychlost nebo hodnoty IOPS. Kliknutím na možnost <strong>Zobrazit vše</strong> v dolní části vyberete více disků a zaškrtnutím políček můžete přidat jejich data do grafu.</p>
+<h3 class="disable-eds14">Svazek/Jednotka iSCSI</h3>
+<p class="disable-eds14">Na této stránce jsou zobrazeny informace o celkovém stavu přenosu svazků a jednotek iSCSI LUN (na úrovni bloků). Kliknutím na rozevírací nabídku nad grafem zobrazíte informace o využití přenosu, přenosové rychlosti nebo IOPS. Kliknutím na tlačítko <strong>Zobrazit vše</strong> vyberte jednotlivé svazky nebo jednotky iSCSI LUN (na úrovni bloků) a přidejte je do grafu.</p>
+
+<h3>Síť</h3>
+<p>Graf síťového provozu zobrazuje rychlost odesílání a příjmu dat v kB za sekundu. Pokud je aktivní připojení PPPoE, je v grafu uvedena také přenosová rychlost připojení.</p>
+
+<h2>Proces</h2>
+<p>Kliknutím na kartu <strong>Proces</strong> zobrazíte využití procesoru a paměti každého procesu. Tím můžete snížit zatížení procesoru.</p>
+<p>Proces <strong>Stav</strong> zahrnuje hodnoty <strong>Spuštěno</strong>, <strong>Pozastaveno</strong> a <strong>Zastaveno</strong>. Ekvivalentními hodnotami stavu procesu jsou v systému Linux hodnoty <strong>spuštěno</strong>, <strong>zastaveno/trasování</strong> a <strong>pozastaveno</strong></strong>. </p>
+<p>Hodnota <strong>Pozastaveno</strong> může dále zahrnovat podrobné informace označené písmenem, např. „D“ jako spánek disků, „Z“ jako zombie, „X“ jako nečinný.</p>
+
+<h2>Připojení uživatelé</h2>
+<p> Na této kartě můžete zobrazit a provádět správu klientů, kteří jsou v současnosti připojeni k systému a využívají různé prostředky. V této části jsou zobrazeni klienti, kteří jsou připojeni prostřednictvím protokolů HTTP, TELNET, SSH, SMB/CIFS, AFP, FTP a NFS.</p>
+<h4>Chcete-li spravovat seznam aktuálních připojení, postupujte některým z těchto způsobů:</h4>
+<ul>
+<li>Kliknutím na možnost <b>Uložit</b> provedete export aktuálního seznamu do souboru HTML.</li>
+<li>Kliknutím na možnost <b>Aktualizovat</b> provedete aktualizaci seznamu.</li>
+<li>Kliknutím na možnost <b>Deaktivovat připojení</b> zamítnete uživateli přístup ke zdrojům. Před přístupem ke zdrojům musí uživatel provést opětovnou autorizaci.</li>
+<li>Kliknutím na tlačítko <b>Deaktivovat uživatele</b> tohoto uživatele deaktivujete. Pokud chcete uživatele opět aktivovat, přejděte do části <b>Hlavní nabídka</b> > <b>Ovládací panel</b> > <b>Uživatel</b>.</li>
+</ul>
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Možnost <strong>Deaktivovat připojení</strong> nefunguje v případě klientů NFS.</li>
+<li>Pokud klienti NFS neprovedou řádné odpojení sdílených složek, budou zobrazeny v seznamu připojených uživatelů.</li>
+<li>Pokud je zařízení DiskStation restartováno, nebudou dříve připojení klienti NFS zobrazeni v seznamu připojených uživatelů.</li>
+</ul>
+</div>
+
+
+<h2>Omezení rychlosti</h2>
+<p>Na kartě <strong>Omezení rychlosti</strong> můžete zobrazit nebo provést správu seznamu procesů přenosu souborů, pro které bylo na zařízení DiskStation stanoveno omezení rychlosti.</p>
+<h4>Postup aktualizace seznamu:</h4>
+<p>Kliknutím na možnost <strong>Aktualizovat</strong> stránku znovu načtete a získáte aktuální záznamy.</p>
+<h4>Postup zastavení procesu přenosu souborů:</h4>
+<p>Kliknutím na možnost <b>Deaktivovat připojení</b> zastavíte přenos souborů. Chcete-li proces úspěšně dokončit, je potřeba přenos souborů znovu spustit.</p>
+
+
+<h2>Nastavení</h2>
+<p>Kliknutím na možnost <strong>Nastavení</strong> můžete nastavit následující možnosti:</p>
+<ul>
+<li>Vyberte z rozevírací nabídky hodnotu <strong>Trvání reálného času</strong> (v minutách).
+<li>Chcete-li obrazit data z minulosti, zaškrtněte možnost <strong>Povolit historii využití</strong>. Je-li tato možnost povolena, můžete při prohlížení grafů výkonu přepínat v rozevírací nabídce v pravém horním rohu mezi možnostmi <strong>Reálný čas</strong>, <strong>1 den</strong>, <strong>1 týden</strong>, <strong>1 měsíc</strong> a <strong>1 rok</strong>. 
+</ul>
+<p>Nastavení uložte kliknutím na možnost <strong>Použít</strong>.</p>
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Audio Station の準備をする</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Cloud Station を使って Synology NAS とコンピュータでファイルを同期する</h1>
+<div class="tutorials_content">
+
+<img src="../../images/BuildCloud/1x/cloud_sync_files/02_1_build_your_private_cloud_CloudStation.png"/>
+
+<h2>概要</h2>
+<p>Synology NAS 用の Cloud Station は、Synology NAS 上のファイルをコンピュータやモバイルデバイス（DS cloud がインストールされていること）などの別のデバイスと同期するためのファイル同期アプリケーションです。Synology NAS とコンピュータの両方に Cloud Station をインストールしたら、コンピュータ上の特定のフォルダに保管されたファイルが Synology NAS と自動的に同期されます。</p>
+
+<iframe width="640" height="360" src="//www.youtube.com/embed/kZX8XK9Wy2Y" frameborder="0" allowfullscreen></iframe>
+
+<h3 class="list_head">1. Cloud Station をインストールする</h3>
+<ol>
+<li><b>[パッケージ センター]</b> を開き、<b>Cloud Station</b> を探したら <strong>[インストール]</strong> をクリックします。</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/1.png" />
+</ol>
+
+<h3 class="list_head">2. Cloud Station を有効にする</h3>
+<ol>
+<li><b>Cloud Station</b> を起動します。
+
+<li>ユーザーホーム機能を有効にしていない場合は、有効にするよう要求されます。<b>[OK]</b> をクリックします。</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/01.png" />
+<li>ユーザー設定ページに転送されます。ユーザーホームを有効にして、<b>[適用]</b> をクリックします。</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/02.png" />
+<li><b>Cloud Station</b> に戻ると、これを有効にするよう要求されます。<b>[はい]</b> をクリックしてください。</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/03.png" />
+<li><b>[権限]</b> を選択し、Cloud Station を使用できるユーザーを指定します。<b>[保存]</b> をクリックします。</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/04.png" />
+</ol>
+
+<h3 class="list_head">3. クライアントをインストールして有効にする</h3>
+<ol>
+<li><b>[Cloud Station]</b> &gt; <b>[概要]</b> を選択し、<b>[コンピュータ]</b> ボタンをクリックします。</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/05.png" />
+<li>このボタンをクリックすると、お使いのオペレーティング システム用の Cloud Station がダウンロードされます（Cloud Station は <a href="https://www.synology.com/en-us/support/download" target="_blank">Synology ダウンロードセンター</a>からもダウンロードできます）。</li>
+<li>コンピュータでインストーラを起動し、画面の指示に従ってください。</li>
+<li>インストール後は、コンピュータで <strong>Cloud Station</strong> を実行します。<strong>[今すぐスタート] </strong>をクリックします。</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/06.png" />
+<li>Cloud Station を起動している Synology NAS のアドレス（または QuickConnect ID）、ユーザー名、パスワードを入力します。右側にある検索アイコンをクリックして、LAN 内の IP を検索します。<strong>[次へ]</strong> をクリックします。</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/07.png" />
+<li>タスクを設定する方法を選択し（ここでは <strong>クイックセット アップを選択します</strong>）、<strong>[次へ]</strong> をクリックします。</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/08.png" />
+<li><strong>[完了]</strong> をクリックして、「Cloud Station」フォルダの設定を完了します。</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/09.png" />
+<li><strong>[今すぐ開く]</strong> をクリックすると、「Cloud Station」フォルダが開きます。</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/10.png" />
+<li>システム トレイに Cloud Station アイコンがあります。</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/14.png" />
+<li>Cloud Station アイコンをクリックすると、トレイメニューが開きます。ここでは、ファイルの処理状況と状態が表示されます。<strong>[メイン アプリ]</strong> をクリックすると、Cloud Station が起動します。</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/15.png" />
+<li>Cloud Station が起動すると、その使い方のヒントが表示されます。右矢印をクリックするとその他のヒントが表示されます。または、<strong>[オンライン チュートリアルを読む]</strong> をクリックすると、その他の情報が表示されます。ヒントが必要ない場合は、<strong>[今後このメッセージを表示しない]</strong> をクリックしてください。</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/16.png" />
+<li>以上で、Cloud Station で同期タスクを管理できるようになります。</li>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/17.png" />
+</ol>
+
+<h3 class="list_head">4. データをモバイル デバイスと同期する</h3>
+<p>DS cloud は、<a href="https://itunes.apple.com/us/app/ds-cloud/id590216612?mt=8" target="_blank">Apple App Store</a> や <a href="https://play.google.com/store/apps/details?id=com.synology.dscloud" target="_blank">Google Play Store</a> から無償でダウンロードできます。以下の QR コードをスキャンすると、簡単にダウンロードできます。</p>
+<img src="../../images/BuildCloud/1x/cloud_sync_files/13.png" width="475" height="219" />
+</div>
+<div class="page-info">
+  <ul>
+    <li>このトピックで次：<a href="cloud_set_up_quickconnect.html">インターネットを介した Synology NAS へのアクセスとファイル共有</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

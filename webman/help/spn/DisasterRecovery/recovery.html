@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Recuperación</h2>
+	<p>Esta página permite a los administradores del sistema realizar la recuperación. Para permitir que los usuarios accedan a las instantáneas de carpetas compartidas, habilite <strong>Hacer visibles las instantáneas</strong> para cada carpeta compartida de manera que los usuarios puedan acceder a las instantáneas mediante File Station o el navegador de archivos de Windows.</p>
+
+<h3>Carpeta compartida</h3>
+
+<h4>Para restaurar archivos individuales/carpetas de una carpeta compartida:</h4>
+<ol>
+<li>Seleccione la carpeta compartida que desea restaurar.<li>Haga clic en <strong>Recuperar</strong>.</li>
+<li>Seleccione la versión de la instantánea desde la que desea restaurar.</li>
+<li>Haga clic en <strong>Examinar</strong> y copie los archivos/carpetas que desea restaurar al destino.</li>
+</ol>
+
+<h4>Para restaurar una carpeta compartida:</h4>
+<ol>
+<li>Seleccione la carpeta compartida que desea restaurar.<li>Haga clic en <strong>Recuperar</strong>.</li>
+<li>Seleccione la versión de la instantánea desde la que desea restaurar.</li>
+<li>Haga clic en <strong>Acción</strong> y seleccione <strong>Restaurar in situ</strong> en la lista desplegable.</li>
+<li>Verá un mensaje de confirmación. Haga clic en <strong>Sí</strong> para confirmar la acción.</li>
+</ol>
+
+<h4>Para clonar una instantánea a una carpeta compartida nueva:</h4>
+<ol>
+<li>Seleccione la carpeta compartida que desea clonar.</li>
+<li>Haga clic en <strong>Recuperar</strong>.</li>
+<li>Seleccione la versión de instantánea que desea clonar a una carpeta compartida nueva.</li>
+<li>Haga clic en <strong>Acción</strong> y seleccione <strong>Clonar con un nombre nuevo</strong> en la lista desplegable.</li>
+<li>Se le redirigirá a la página <strong>Clonar</strong> en <strong>Panel de control</strong> > <strong>Carpeta compartida</strong> > <strong>Crear</strong>. Introduzca el nombre de la carpeta compartida clonada y haga clic en <strong>OK</strong> para finalizar.</li>
+</ol>
+
+<div class="section"><h4>Nota:</h4>
+<ul>
+	<li>La carpeta compartida "homes" no se puede restaurar.</li>
+	<li>Las carpetas compartidas no se pueden cifrar.</li>
+	<li>Si se toma una instantánea cuando todavía se están transfiriendo algunos archivos, no se podrá garantizar la consistencia de los datos.</li>
+	<li>Limitaciones de carpetas compartidas cifradas:<ul>
+			<li>Ninguno de los tipos de recuperación está disponible para carpetas compartidas cifradas montadas.</li>
+			<li><strong>Clonar con un nombre nuevo</strong> no está disponible para carpetas compartidas cifradas.</li>
+			<li>Las carpetas compartidas cifradas desmontadas se pueden restaurar a partir de instantáneas tomadas previamente con <strong>Restaurar in situ</strong>.</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+
+
+<h3>iSCSI LUN</h3>
+<h4>Para restaurar un iSCSI LUN:</h4>
+<ol>
+  <li>Seleccione el iSCSI LUN que desea restaurar.</li>
+	<li>Haga clic en <strong>Recuperar</strong>.</li>
+	<li>Seleccione la versión de la instantánea desde la que desea restaurar.</li>
+	<li>Haga clic en <strong>Acción</strong> y seleccione <strong>Restaurar in situ</strong> en la lista desplegable.</li>
+  <li>Verá un mensaje de confirmación. Haga clic en <strong>Sí</strong> para confirmar la acción.</li>
+</ol>
+
+<h4>Para clonar una instantánea a un iSCSI LUN nuevo:</h4>
+<ol>
+	<li>Seleccione el iSCSI LUN que desee clonar.</li>
+	<li>Haga clic en <strong>Recuperar</strong>.</li>
+	<li>Seleccione una versión de instantánea que desea clonar a un iSCSI LUN nuevo.</li>
+	<li>Haga clic en <strong>Acción</strong> y seleccione <strong>Clonar con un nombre nuevo</strong> en la lista desplegable.</li>
+	<li>Se le redirigirá a la página <strong>Clonar</strong> en <strong>Administrador de almacenamiento</strong> > <strong>iSCSI LUN</strong>. Introduzca el nombre del iSCSI LUN clonado y haga clic en <strong>OK</strong> para finalizar.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Si se toma una instantánea cuando todavía se están transfiriendo algunos archivos, no se podrá garantizar la consistencia de los datos.</li>
+</ul>
+</div>
+
+</body>
+</html>

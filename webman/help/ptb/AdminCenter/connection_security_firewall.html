@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Firewall</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_firewall"></a>Firewall</h2>
+<p>Criar regras de firewall em <strong>Painel de controle</strong> &gt; <strong>Seguran&ccedil;a</strong> &gt; <strong>Firewall</strong> ajuda a impedir o logon e acesso n&atilde;o autorizados ao servi&ccedil;o de controle. Voc&ecirc; pode escolher entre permitir ou negar acesso a certas portas de rede de endere&ccedil;os IP espec&iacute;ficos.</p><h3>Para criar uma regra de firewall:</h3>
+<ol>
+<li>Selecione uma interface de rede no menu suspenso no canto superior direito.</li>
+<li>Clique em <b>Criar</b>.</li>
+<li>Na se&ccedil;&atilde;o <b>Portas</b>, selecione uma das op&ccedil;&otilde;es a seguir:</li>
+<ul>
+<li>Escolha <b>Todas</b> para aplicar essa regra de firewall a todas as portas.</li>
+<li>Selecione <b>Selecionar em uma lista de aplicativos integrados</b> e clique em <strong>Selecionar</strong>. Selecione os aplicativos integrados aos quais deseja aplicar essa regra de firewall.</li>
+<li>Selecione <b>Personalizada</b> e clique em <b>Personalizada</b>. Insira at&eacute; 15 portas separadas por v&iacute;rgula ou especifique uma extens&atilde;o de porta para aplicar essa regra de firewall.</li>
+</ul>
+<li>Na se&ccedil;&atilde;o <b>IP de origem</b>, selecione uma das op&ccedil;&otilde;es a seguir:</li>
+<ul>
+<li>Selecione <b>Todas</b> para aplicar essa regra de firewall a todos os endere&ccedil;os IP.</li>
+<li>Selecione <b>IP Espec&iacute;fico</b> e clique em <strong>Selecionar</strong>. Voc&ecirc; pode especificar um endere&ccedil;o IP ou faixa de IP para aplicar essa regra de firewall.</li>
+<li>Selecione <b>Regi&atilde;o</b> e especifique at&eacute; 15 pa&iacute;ses para aplicar essa regra de firewall.</li>
+</ul>
+<li>Na se&ccedil;&atilde;o <b>A&ccedil;&atilde;o</b>, selecione uma das op&ccedil;&otilde;es a seguir:</li>
+<ul>
+	<li>Escolha <b>Permitir</b> para permitir acesso atrav&eacute;s dos endere&ccedil;os IP de origem e das portas especificadas.</li>
+	<li>Selecione <b>Negar</b> para negar o acesso de portas e endere&ccedil;os IP de origem especificados.</li>
+</ul>
+</ol>
+
+<p>Voc&ecirc; pode visualizar as regras de firewall de LAN e PPPoE selecionando essas interfaces na caixa no canto superior direito. Na parte inferior da lista de regras voc&ecirc; pode selecionar <b>Permitir acesso</b> ou <b>Negar acesso</b> para permitir ou negar todas as solicita&ccedil;&otilde;es de acesso que n&atilde;o correspondem a uma regra de firewall existente para a respectiva interface.</p>
+
+
+<div class="section">
+<h4>Observa&ccedil;&atilde;o:</h4>
+<ul>
+<li>Voc&ecirc; pode criar at&eacute; 100 regras para uma interface de rede. </li>
+<li>Arraste e solte para reorganizar as regras na lista.</li>
+<li>As regras s&atilde;o priorizadas de acordo com as suas posi&ccedil;&otilde;es na lista.</li>
+<li>Se o sistema tiver v&aacute;rias portas de rede conectadas &agrave; mesma sub-rede, as regras de firewall podem n&atilde;o funcionar corretamente.* </li>
+<li>Quando se combinam m&uacute;ltiplas portas LAN com link aggregation, o firewall ir&aacute; aplicar as regras da primeira interface de rede e reter as regras da segunda interface de rede.</li>
+<li>Se o seu dispositivo DiskStation se conectar &agrave; Internet via PPPoE, as regras de firewall relacionadas dever&atilde;o ser configuradas na interface PPPoE correspondente.</li>
+</ul>
+</div>
+<h3>Comportamento das regras de firewall:</h3>
+<p>O Firewall do DSM ir&aacute; aplicar as regras de acordo com a prioridade. <strong>Assim que houver correspond&ecirc;ncia de uma regra, ela ser&aacute; aplicada e o Firewall do DSM n&atilde;o continuar&aacute; aplicando as regras restantes</strong>. Se n&atilde;o houver regras correspondentes, o Firewall do DSM ir&aacute; executar a a&ccedil;&atilde;o padr&atilde;o especificada em cada interface.</p>
+<h4>Prioridade das regras do Firewall:</h4>
+<ol> 
+<li>Regras definidas como &quot;Toda a interface&quot;.</li>
+<li>Regras definidas nas respectivas interfaces &agrave;s quais a conex&atilde;o pertence.</li>
+<li>Regras padr&atilde;o nas respectivas interfaces &agrave;s quais a conex&atilde;o pertence.</li>
+</ol>
+<p>____<br> *&nbsp;Aplic&aacute;vel apenas a modelos espec&iacute;ficos.<br> # Essa fun&ccedil;&atilde;o inclui dados GeoLite criados pelo MaxMind, dispon&iacute;veis em <a href="http://www.maxmind.com" target="_blank">http://www.maxmind.com</a>.</p><br></body>
+</html>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Ajuda DSM Help - Cliente SSO</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="If your DiskStation has joined the same domain or LDAP service as the SSO server, you can set your DiskStation as an SSO client. Users can access the services provided by your DiskStation once they login to the SSO server with their credentials.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Cliente SSO</h2>
+
+<p>Se o seu DiskStation tiver se unido ao mesmo dom&iacute;nio ou servi&ccedil;o LDAP do servidor SSO, voc&ecirc; pode configurar seu DiskStation como um cliente SSO. Os usu&aacute;rios podem acessar os servi&ccedil;os fornecidos pelo seu DiskStation depois de fazerem login no servidor SSO com suas credenciais.</p>
+
+<p>Antes de iniciar, certifique-se de que seu DiskStation tenha entrada no mesmo dom&iacute;nio ou servi&ccedil;o LDAP do servidor SSO.</p>
+
+<h4>Para configurar seu DiskStation como um cliente SSO:</h4>
+<ol>
+	<li>V&aacute; para <strong>Painel de controle</strong> &gt; <strong>Dom&iacute;nio/LDAP</strong> &gt; <strong>Cliente SSO</strong>.</li>
+	<li>Marque a caixa de verifica&ccedil;&atilde;o <strong>Ativar o servi&ccedil;o SSO</strong>.</li>
+	<li>Especifique o <strong>URL do servidor SSO</strong> e o <strong>ID do aplicativo</strong> nos campos abaixo da caixa de sele&ccedil;&atilde;o.
+<div class="section"><h4>Observa&ccedil;&atilde;o:</h4>
+	<p>Para obter o ID do aplicativo, selecione um dos m&eacute;todos a seguir:</p>
+	<ul>
+		<li><strong>M&eacute;todo 1:</strong>
+			<ol>
+				<li>Entre no DSM que est&aacute; executando o servidor SSO.</li>
+				<li>Adicione seu DiskStation que funcionar&aacute; como o aplicativo do cliente na Lista de aplicativos do servidor SSO. Para as etapas detalhadas, consulte o artigo Ajuda do <strong>SSO Server</strong> &gt; <strong>Lista de aplicativos</strong>.</li>
+				<li>Copie e cole o ID do aplicativo alocado pelo SSO Server depois que o seu DiskStation for adicionado ao servidor SSO.</li>
+			</ol>
+		</li>
+		<li><strong>M&eacute;todo 2:</strong>
+			<ol>
+				<li>Ap&oacute;s inserir o <strong>URL do servidor SSO</strong>*, clique em <strong>Registro r&aacute;pido</strong> ao lado do campo do ID do aplicativo.</li>
+				<li>Na caixa de registro, digite as credenciais de uma conta de administrador do servidor SSO nos campos <strong>Administrador do servidor</strong> e <strong>Senha</strong>.</li>
+				<li>Especifique o nome do aplicativo do seu cliente no campo <strong>Nome do aplicativo</strong>.</li>
+				<li>Certifique-se de que <strong>Redirecionar URI</strong> refere-se exatamente &agrave; p&aacute;gina de login de seu DiskStation.</li>
+				<li>Clique em <strong>OK</strong> e o seu DiskStation ser&aacute; adicionado ao servidor SSO com o ID do aplicativo sendo preenchido automaticamente.</li>
+			</ol>
+		</li>
+	</ul>
+<p>______</p><p style="margin-left: 20px; text-indent: -10px;">* &Eacute; necess&aacute;rio digitar o URL do SSO server id&ecirc;ntico (nome de host ou IP) ao configurar cada cliente SSO.</p>
+</div>
+	</li>
+	<li>Clique em <strong>Aplicar</strong> para salvar suas configura&ccedil;&otilde;es.</li>
+</ol>
+
+<div class="section"><h4>Observa&ccedil;&atilde;o:</h4>
+	<ul>
+		<li>Se o servidor SSO usar protocolo HTTPS, o login do SSO pode ser bloqueado pelos navegadores por falta de um certificado confi&aacute;vel.</li>
+		<li>Quando o servidor SSO &eacute; acessado atrav&eacute;s do protocolo HTTP, se o seu DiskStation (definido como cliente SSO) usar a conex&atilde;o HTTPS, os usu&aacute;rios precisar&atilde;o ajustar as configura&ccedil;&otilde;es de seus navegadores para permitir o uso de uma conex&atilde;o n&atilde;o segura.</li>
+	</ul>
+</div>
+
+</body>
+</html>

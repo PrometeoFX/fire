@@ -1,0 +1,3 @@
+<FilesMatch "\.(lib|api)$|^lib.def$|^\.(htaccess|htpasswd)$">
+deny from all
+</FilesMatch>

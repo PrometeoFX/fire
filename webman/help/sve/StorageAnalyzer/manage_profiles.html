@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Lagringsanalyserare</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Hantera rapportprofiler</h2>
+
+<p>Du kan skapa och ändra schemalagda uppgifter för att generera rapporter för volymanvändning i <b>Lagringsanalyserare.</b> > <b>Rapportprofil</b>.</p>
+
+
+<h4>Skapa en rapportuppgift:</h4>
+<ol>
+<li>Klicka på <b>Skapa</b> för att öppna guiden.</li>
+<li>Specificera ett namn för den nya rapportuppgiften och ange e-postadressen till vilken du vill skicka rapporten.</li>
+<li>Välj en eller flera typer av rapporter som du vill generera.</li>
+<li>Gör något av följande för att specificera en tid för att generera rapporter:</li>
+<ul>
+<li>Markera <b>Generera rapporter enligt schema</b> och specificera tiden om du vill att systemet ska analysera volymanvändning periodiskt.</li>
+<li>Markera <b>Generera rapporter nu</b> om du vill starta en rapportuppgift manuellt nu.</li>
+</ul>
+<li>Om nödvändigt specificera vissa användare eller delade mappar som ska inkluderas för att avgränsa rapporterna. (Observera att om du vill specificera och generera rapporter för delade mappar som är krypterade, vänligen säkerställ att de krypterade utdelningarna har monterats innan rapportuppgiften utförs.)</li>
+<li>Klicka på <b>Tillämpa</b> för att spara inställningarna.</li>
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Använd <b>Enter</b>/<b>Return</b> efter varje e-postadress för att separera flera e-postadresser.</li>
+<li>Använd <b>Enter</b>/<b>Return</b> efter varje användare, när användare vars filer ska listas en och en av filgrupper specificeras.</li>
+<li>Rapporten <b>Filer per filgrupp</b> listar följande filtyper:<br> Ljudfiler, diskavbilder, dokument, körbara filer, bilder, videor, webbsidor, zip-filer, övriga</li>
+<li>Avsnittet <b>Stora filer</b> i rapportlistan listar det största 500 filerna på rapportsidan över användning eller de största 200 filerna på den kompletta rapportsidan.</li>
+
+</ul>
+</div>
+
+
+<h4>Redigera en rapportuppgift:</h4>
+<ol>
+<li>Välj en rapportuppgift från listan och klicka på <b>Redigera</b>.</li>
+<li>Klicka på de enskilda flikarna för att redigera inställningarna för den här uppgiften.</li>
+</ol>
+
+<h4>Radera en rapportuppgift:</h4>
+<p>Välj en rapportuppgift från listan och klicka på <b>Radera</b>.</p>
+
+<h4>För att se historiska rapporter:</h4>
+<ol>
+<li>Välj en rapportuppgift från listan och klicka på <b>Rapport</b> > <b>Visa rapporthistorik</b>.</li>
+<li>I fönstret som visas, klicka på en post för att visa rapporten som genererades vid den specificerade tiden.</li>
+</ol>
+
+<h4>För att generera rapporter genast:</h4>
+<p>Välj en rapportuppgift, klicka på <b>Rapport</b> och välj <b>Generera rapporter nu</b> för att generera rapporter vid behov.</p>
+
+<h4>För att ändra var rapporter sparas:</h4>
+<ol>
+<li>Klicka på <b>Inställningar</b>.</li>
+<li>Välj den nya målmappen för att ändra platsen där rapporter sparas.</li>
+</ol>
+<h4>För att regelbundet samla in användningshistorik för volym:</h4>
+<p>Som standard samlas data för volymanvändning in varje gång en rapport för volymanvändning genereras och när systemet startar. Som tillägg till ovan exempel kan du även välja att skapa ett nytt schema för att samla in användningshistorik. För att göra det, klicka på <b>Inställningar</b> och markera <b>Samla in volymanvändningshistorik enligt schema</b> och schemalägg en tidpunkt.</p>
+<div class="section">
+<h4>Obs:</h4>
+<p>
+Historiken som samlats in vid den tidpunkt som schemalagts kommer huvudsakligen att användas för det syftet och som källa för användningstendenser i avsnittet <b>Volymanvändning</b>. När det här alternativet är aktiverat ser du ett linjediagram som visar tendensen för volymanvändningen och ändringar över tid; om inte visas ett stapeldiagram som procentuellt visar nuvarande användning.
+</p>
+</div>
+
+<h4>För att analysera en rapportuppgift:</h4>
+<p>Dubbelklicka den önskade rapportuppgiften eller klicka helt enkelt på <b>Analysera den här rapporten</b> (ikonen <b>></b>) bredvid den önskade rapportuppgiften för att öppna dessa analyssida. Vänligen se <a href="view_reports.html">Visa användning och rapporter</a> för mer information.</p>
+
+</body>
+</html>

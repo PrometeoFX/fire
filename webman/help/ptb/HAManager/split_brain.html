@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Redes divididas</h2>
+
+<p>Quando um conjunto de high-availability estiver funcionando normalmente, apenas um dos servidores membros assume o papel de servidor ativo. Nesse caso, o servidor passivo detecta a presen&ccedil;a do servidor ativo por meio da conex&atilde;o Heartbeat e da conex&atilde;o de dados.</p>
+
+<p>Se todas as conex&otilde;es Heartbeat e de dados forem perdidas, os dois servidores poder&atilde;o tentar assumir o papel de servidor ativo. Essa situa&ccedil;&atilde;o &eacute; chamada de erro de &quot;redes separadas&quot;. Nesse caso, as conex&otilde;es para o endere&ccedil;o IP atribu&iacute;do ao conjunto de high-availability ser&atilde;o redirecionadas para um dos dois servidores, o que resultar&aacute; em erros de servi&ccedil;o.</p>
+        
+<h4>Caso ocorra um erro de redes separadas:</h4>
+	<ol>
+		<li>As conex&otilde;es para o endere&ccedil;o IP do conjunto ser&atilde;o redirecionadas para qualquer um dos servidores, o que resultar&aacute; em erros de servi&ccedil;o. Voc&ecirc; enfrentar&aacute; dificuldade ao se conectar a qualquer servidor.</li>
+		<li>O sistema detectar&aacute; o erro de redes divididas e remover&aacute; o conjunto de high-availability, desvinculando os dois servidores.</li>
+		<li>Quando os dois servidores voltares para o status <b>Independente</b> voc&ecirc; conseguir&aacute; entrar no DiskStation Manager (DSM). Nesse momento, os dados acumulados antes da remo&ccedil;&atilde;o do conjunto de high-availability permanecer&atilde;o nos dois servidores. Ap&oacute;s identificar qual servidor cont&eacute;m os dados mais atualizados, voc&ecirc; pode vincular os servidores novamente para criar um conjunto de high-availability novamente.</li>
+	</ol>
+ </body>
+</html>

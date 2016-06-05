@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Gendan</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Gendan</h2>
+<p>Gå til <strong>Backup og kopiering</strong> > <strong>Gendan</strong> for at gendanne data, der er udført backup på.</p>
+
+<h4><a name="restore"></a>Sådan gendanner du en backupopgave:</h4>
+<ol class="disable-eds14">
+<li>Vælg en backupopgave, og klik på <b>Gendan</b>. Hvis opgaven er multiversionsbackup, skal du vælge <strong>Gendan</strong> > <strong>Hele opgaven</strong>.</li>
+<li>Du bedes måske om at vælge systemkonfiguration, forskellige versioner af backupdata eller andet. Det afhænger af, om dette er en databackupopgave, LUN-backupopgave*, destination for enkeltversionsbackup (dvs. delt mappe), eller destination for flerversionsopgaver (dvs. diskenhed).</li>
+<li>Følg guiden for at fuldføre opsætningen.</li>
+</ol>
+<ol class="enable-eds14">
+<li>Vælg en backupopgave, og klik på <b>Gendan</b>.</li>
+<li>Du bedes måske om at vælge systemkonfiguration, forskellige versioner af backupdata eller andet. Det afhænger af, hvad slags backupopgave det er.</li>
+<li>Følg guiden for at fuldføre opsætningen.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Bemærk:</h4>
+<ul>
+<li>Gendanneles af visse programmer understøttes. Hvis du vil se, om en bestemt pakke understøtter gendannelse og begrænsninger, henvises der til hjælpen for hvert program.</li>
+<li>Ved gendannelse af en pakke vil systemet automatisk installere den samme eller seneste version af programmet, hvis pakken ikke er installeret. Hvis programmet er installeret, men det er en version, som er ældre end den, der er udført backup på, vil systemet automatisk opgradere til den oprindelige version.</li>
+<li>Programmer, der udføres backup på i DSM 5.1 eller senere kan ikke gendannes i DSM 5.0 eller tidligere. </li>
+</ul>
+</div>
+
+<div class="section disable-eds14">
+<h4>Bemærk:</h4>
+<ul>
+<li>Når gendannelsen er færdig, vil backup-LUN'en blive gendannet til en filbaseret LUN på den valgte destinationsdiskenhed*.</li>
+
+<li>Gendanneles af visse programmer understøttes. Hvis du vil se, om en bestemt pakke understøtter gendannelse og begrænsninger, henvises der til hjælpen for hvert program.</li>
+<li>Ved gendannelse af en pakke vil systemet automatisk installere den samme eller seneste version af programmet, hvis pakken ikke er installeret. Hvis programmet er installeret, men det er en version, som er ældre end den, der er udført backup på, vil systemet automatisk opgradere til den oprindelige version.</li>
+<li>Programmer, der udføres backup på i DSM 5.1 eller senere kan ikke gendannes i DSM 5.0 eller tidligere. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Sådan gendanner du én fil eller mappe til multiversionsbackupopgave:</h4>
+<ol>
+<li>Start <strong>Filversionsbrowser</strong>. Det kan du gøre med en af nedenstående metoder:</li>
+<ul>
+<li>Klik på <strong>Gendan</strong>, og vælg <strong>Individuelle filer/mapper</strong> i rullemenuen. </li>
+<li>Gå til <strong>Backupdestination</strong>, og udvid din valgte backupdestination. Klik på ikonet <strong>Oplysninger om backupversion</strong>. I det vindue, der vises, skal du vælge de backupversion, som du vil gendanne, og klikke på ikonet <strong>Filversionsbrowser</strong>.</li>
+</ul>
+<li>Du kan gennemgå de ønskede versioner af en fil eller mappe ved at bruge tidslinjen eller kalenderikonet nederst på skærmen. </li>
+<li>Vælg den version, du vil administrere, og klik på <strong>Gendan</strong>. </li>
+<li>Alternativt kan du kopiere en fil eller mappe til en anden placering eller downloade den ved hjælp af knappen <strong> Kopier til...</strong> eller <strong>Download</strong>. </li>
+<li>Du kan også højreklikke på filen eller mappen og vælge disse valgmuligheder i rullemenuen. </li>
+</ol>
+<h4>Sådan søger du efter en bestemt version:</h4>
+<ol>
+  <li>Klik på pilen i filterlinjer øverst til højre.</li>
+  <li>I rullemenuen kan du filtrere filer efter:</li>
+  <ul>
+    <li><strong>Søgeord: </strong>Indtast navnet på en fil eller mappe. Du kan bruge jokertegn [*] (hvilket betyder nul eller flere tegn) og [?] (hvilket betyder ét vilkårligt tegn) i dine søgeord. F.eks. [h<span class="note_content"> *</span> n] kan stå for [h<span class="note_content"> a</span> n] eller [h<span class="note_content"> u</span> n]</li>
+    <li><strong>Filtype:</strong> I rullemenuen kan du vælge mellem <strong>Enhver</strong>, <strong>Enhver mappe</strong> eller <strong>Enhver fil</strong> for at indsnævre søgningen.</li>
+    <li><strong>Størrelse:</strong> Vælg <strong>Enhver</strong>, eller vælg <strong>Er lig med</strong>, <strong>Er større end</strong>, <strong>Er mindre end</strong>, og indtast så en værdi.</li>    
+    <li><strong>Datointerval: </strong>Vælg mellem <strong>I dag</strong>, <strong>I går</strong>, <strong>Sidste uge</strong> eller <strong>Sidste måned</strong> eller <strong>Tilpas</strong> for at angive en start- og slutdato for at finde versioner inden for et bestemt interval.</li>
+
+  </ul>
+  <li>Klik på <strong>Filtrer</strong> for at anvende dine filtre. </li>
+  <li>Du nulstiller din filtrerede søgning ved at klikke på knappen <strong>Nulstil</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+<li>Kun multiversionsbackupopgaver indeholder funktionen Filversionsbrowser.</li>
+<li>Filversionsbrowser har kun delvise funktioner i DSM 5.1 eller tidligere.</li>
+<li dir="ltr">Systemkonfiguration og programmer kan kun gendannes via <strong>Gendan</strong> > <strong>Hele opgaven</strong>. </li>
+<li>Metadata bliver ikke inkluderet i handlingerne <strong>Kopier til...</strong> og <strong>Download</strong>. </li>
+</ul>
+</div>
+
+
+<h4><a name="restore"></a>Sådan gendanner du backupopgaver fra en anden backupdestination:</h4>
+<ol>
+<li>Klik på <b>Gendan fra...</b>.</li>
+<li>Vælg et af følgende for at finde backupopgaven, og klik på <b>Næste</b>:</li>
+<ul>
+<li><b>Lokal gendannelse</b>: Vælg denne mulighed for at gendanne fra en lokal delt mappe eller ekstern disk.</li>
+<li><b>Netværksgendannelse</b>: Vælg denne mulighed for at gendanne data fra en anden DiskStation eller rsync-kompatibel server.</li>
+
+<li><b>Gendannelse af offentlig skytjeneste</b>: Vælg denne valgmulighed for at gendanne data fra offentlig skyserver. </li>
+
+</ul>
+<li>Når du bedes om det, skal du vælge den kilde, hvor backupopgaven er og vælge den destination, hvor dataene skal gendannes.</li>
+<li>Følg guiden for at fuldføre.</li>
+</ol>
+<div class="section enable-eds14">
+<h4>Bemærk:</h4>
+<ul>
+
+  <li>Embedded DataStation kan kun gendanne delte mapper til ext3/ext4-eksterne enheder.</li>
+  
+<li>Embedded DataStation understøtter ikke programgendannelse uden en ext3/ext4 ekstern enhed.</li>
+
+</ul>
+</div>
+
+<p>____<br /> * Findes kun på bestemte modeller.</p>
+</body></html>

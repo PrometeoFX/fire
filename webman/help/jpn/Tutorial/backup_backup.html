@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Synology NAS にデータをバックアップしてデータを確実に保護する</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Synology NAS にデータをバックアップしてデータを確実に保護する</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/Backup/back_up_your_data_on_synology_nas_to_ensure_data_security.jpg" />
+<h2>概要</h2>
+<p>予期せずしてサーバーが故障したり、ボリュームがクラッシュしたりすると、重要なデータが失われる危険にさらされます。Synology NAS は万一に備え、重要なデータのコピーを安全にローカルに、またはリモートにバックアップするための代替方法を用意しています。状況は重要度に応じて、バックアップの方法を選択し、データ消失のリスクを軽減してください。</p>
+
+<h3 class="list_head">1. 外部ストレージにバックアップする</h3>
+<p> ローカルでバックップする場合は、バックアップ先を同じボリューム、RAID グループ、同じ物理的なディスクに別のフォルダを設定します。この場合、誤ってデータを削除したときには、別のフォルダにあるバックアップ コピーからそのデータを復元することができます。ただし、不幸にしてサーバーが故障したり、ボリュームがクラッシュしたりすると、データはもとよりバックアップしたコピーまでも失われてしまいます。そのため、重要なデータは同じサーバーではなく、外部ストレージにバックアップするようお薦めします。Synology NAS では、ローカルドライブだけでなく、外部 USB デバイスにもバックアップ先を設定することができます。この機能は、<b>[メイン メニュー] &gt; [バックアップと複製]</b> から選択できます。ステップ毎の手順については、<a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=jpn#local_backup">ここ</a>をご参照ください。</p>
+
+<h3 class="list_head">2. ネットワークを介して別の Synology NAS にバックアップする</h3>
+<p>データを外部ストレージにバックアップするとデータの可用性は高まりますが、サーバーやストレージ デバイスが設置されている場所で火災や地震などの災害が発生したときのことも考慮に入れてください。Synology NAS では、データのコピーをネットワーク上の別のサーバーに転送することでデータ消失のリスクを最小化し、オフサイト バックアップを設定できます。バックアップのためのデータ転送は暗号化して、重要なデータをより安全に保護することができます。ブロックレベルのバックアップ オプションを使用した場合、NAS は変更したブロックだけをバックアップしますので、インターネット上でバックアップを行う際特に便利です。この機能は、<b>[メイン メニュー] &gt; [バックアップと複製]</b> から選択できます。ステップ毎の手順については、<a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=jpn#network_backup" >ここ</a>をご参照ください。</p>
+
+<h3 class="list_head">3. パブリック クラウドにバックアップする</h3>
+<p>異なる NAS デバイス間でリモート バックアップを行うには、その中に装着するディスクの数、サーバーを設置する場所を含め、2台以上のサーバーが必要です。状況によっては、複数の NAS デバイスにオフサイト バックアップを設定できない場合もあるでしょう。ネットワーク バックアップ用の NAS を設置できない状況を想定し、パブリック クラウド アカウントに直接データをバックアップできるように、Synology のバックアップ機能にはいくつかのパブリック クラウド サービスに対するサポートが用意されています。使用したいパブリック クラウド ストレージに応じて、<b>バックアップと複製</b>か<b>パッケージ センター</b>から機能を選択できます。ステップ毎の手順については、<a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=jpn#cloudservice_backup">ここ</a>をご参照ください。</p>
+</div>
+
+</body>
+
+</html>

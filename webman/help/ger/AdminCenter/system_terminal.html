@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Terminal</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Terminal</h2>
+
+<p>Durch das Aktivieren der Optionen unter <strong>Systemsteuerung</strong> &gt; <strong>Terminal und SNMP</strong> &gt; <strong>Terminal</strong> kann Ihr DiskStation Telnet- und SSH-Befehlszeilen-Schnittstellendienste unterst&uuml;tzen. Sie k&ouml;nnen auch die Sicherheitsstufe des SSH-Verschl&uuml;sselungsalgorithmus &auml;ndern.</p>
+
+<h4>So wird der Telnet/SSH-Dienst aktiviert:</h4>
+<ol>
+<li>Markieren Sie das Kontrollk&auml;stchen neben dem gew&uuml;nschten Protokoll (SSH oder Telnet).</li>
+<li>Klicken Sie auf <b>&Uuml;bernehmen</b>.</li>
+</ol>
+<h4>So &auml;ndern Sie den SSH-Dienst-Port:</h4>
+<ol>
+<li>Geben Sie unter <strong>Port</strong> eine neue Portnummer ein.</li>
+<li>Klicken Sie auf <b>&Uuml;bernehmen</b>.</li>
+</ol>
+
+<p>F&uuml;r die Sicherung von SSH-Verbindungen werden verschiedene Verschl&uuml;sselungsalgorithmen mit unterschiedlichen Sicherheitsstufen verwendet. Sie k&ouml;nnen die am besten auf Ihre Anforderungen abgestimmten Algorithmen ausw&auml;hlen.</p>
+<h4>SSH-Verschl&uuml;sselungsalgorithmus-Sicherheitsstufe &auml;ndern:</h4>
+<ol>
+<li>Klicken Sie auf <b>Erweiterte Einstellungen</b>.</li>
+<li>W&auml;hlen Sie eine Sicherheitsstufe f&uuml;r den Verschl&uuml;sselungsalgorithmus aus. Wenn Sie genau angeben m&ouml;chten, welche Algorithmen verwendet werden k&ouml;nnen, w&auml;hlen Sie <b>Anpassen</b> aus, um aus den drei Gruppen Cipher, KEX (Key Exchange) und MAC (Message Authentication Code) auszuw&auml;hlen.</li>
+<li>Klicken Sie auf <b>&Uuml;bernehmen</b>.</li>
+</ol>
+<p>Einige Modelle unterst&uuml;tzen die Hardware-Beschleunigung f&uuml;r bestimmte Verschl&uuml;sselungsalgorithmen. Sie k&ouml;nnen die Option <b>Nur hardware-beschleunigte Verschl&uuml;sselungsverfahren verwenden</b> aktivieren, um die &Uuml;bertragungsgeschwindigkeit von SSH-Diensten zu erh&ouml;hen, einschlie&szlig;lich verschl&uuml;sselter Netzwerksicherungs- und SFTP-Dienste. Auf der Seite &bdquo;Erweitert&ldquo; sind die Algorithmen, die die Hardware-Beschleunigung verwenden k&ouml;nnen, rot markiert.</p>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+
+<li>Von einigen Diensten (z.&nbsp;B. Netzwerksicherung, SFTP) wird SSH automatisch aktiviert und Port 22 automatisch ge&ouml;ffnet. In diesem Fall m&uuml;ssen Sie den SSH-Dienst unter <strong>Systemsteuerung</strong> &gt; <strong>Terminal und SNMP</strong> &gt; <strong>Terminal</strong> aktivieren, um sich &uuml;ber SSH im DSM anzumelden.</li>
+<li>SSH/Telnet unterst&uuml;tzt nur die Anmeldung im System mit <strong>root</strong>- oder <strong>admin</strong>-Konten.</li>
+<li>Das Passwort darf bei der Anmeldung im System &uuml;ber SSH/Telnet nicht leer gelassen werden.</li>
+<li>Wenn der SSH-Dienst deaktiviert ist, werden alle SSH-Verbindungen beendet, einschlie&szlig;lich aller verschl&uuml;sselten Netzwerksicherungsaufgaben, die gerade ausgef&uuml;hrt werden. Wir empfehlen, die Netzwerksicherungsaufgaben nach der Deaktivierung des SSH-Dienstes erneut auszuf&uuml;hren.</li>
+<li>Unsachgem&auml;&szlig;e Handhabung oder Ver&auml;nderung von DiskStation kann zum Ausfall oder zu Datenverlust f&uuml;hren.</li>
+<li>Wird eine h&ouml;here Sicherheitsstufe ausgew&auml;hlt oder werden nur hardware-beschleunigte Verschl&uuml;sselungsverfahren verwendet, k&ouml;nnen einige SSH-Clients aufgrund von Kompatibilit&auml;tsproblemen m&ouml;glicherweise keine Verbindung herstellen.</li>
+<li>Je nach der ausgew&auml;hlten Sicherheitsstufe sind bestimmte Algorithmen, die die Hardware-Beschleunigung unterst&uuml;tzen, m&ouml;glicherweise nicht verf&uuml;gbar.</li>
+</ul>
+</div>
+
+</body>
+</html>

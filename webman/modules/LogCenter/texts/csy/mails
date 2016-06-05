@@ -1,0 +1,122 @@
+
+[SYNOSYSLOG_DB_CORRUPT]
+Subject: Databáze %DBPATH% v Centru protokolů je poškozená
+
+Vážený uživateli,
+
+v Centru protokolů byla nalezena poškozená databáze „%DBPATH%.corrupt“. Obraťte se na podporu společnosti Synology.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_EPS_EXCEED]
+Subject: Upozornění systémového protokolu na %HOSTNAME%
+
+Vážený uživateli,
+
+Počet protokolů za sekundu na %HOSTNAME% je větší než %EPS%. Ověřte podrobnosti systému.
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_KEYWORD_MATCH]
+Subject: Upozornění systémového protokolu na %HOSTNAME%
+
+Vážený uživateli,
+
+Na %HOSTNAME% je k dispozici systémový protokol obsahující klíčové slovo %KEYWORD% Ověřte podrobnosti systému.
+
+Obsah protokolu:
+
+%SYSLOG_CONTENT%
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_LogSend]
+Subject: Upozornění o systémovém protokolu v %HOSTNAME%
+
+Vážený uživateli,
+
+V %HOSTNAME% byly zaznamenány nějaké systémové protokoly. Zjistěte podrobnosti o systému.
+
+Obsah protokolů je následovný:
+
+%SYSLOG_CONTENT%
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_SEV_EXCEED]
+Subject: Upozornění systémového protokolu na %HOSTNAME%
+
+Vážený uživateli,
+
+Na %HOSTNAME% je k dispozici systémový protokol se závažností %SEV%. Ověřte podrobnosti systému.
+
+Obsah protokolu:
+
+%SYSLOG_CONTENT%
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_ShareEncMount]
+Subject: Archivace protokolů části Centrum protokolů na serveru %HOSTNAME% byla obnovena.
+
+Vážený uživateli,
+
+archivace protokolů části Centrum protokolů na serveru %HOSTNAME% byla obnovena, protože šifrovaná sdílená složka „%SHARED_FOLDER%“ pro ukládání databáze protokolů byla připojena.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_ShareEncUnmount]
+Subject: Archivace protokolů části Centrum protokolů na serveru %HOSTNAME% byla pozastavena.
+
+Vážený uživateli,
+
+archivace protokolů části Centrum protokolů na serveru %HOSTNAME% byla pozastavena, protože šifrovaná sdílená složka „%SHARED_FOLDER%“ pro ukládání databáze protokolů byla odpojena. Archivaci protokolů obnovíte připojením sdílené složky.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_ShareRemove]
+Subject: Archivace protokolů části Centrum protokolů na serveru %HOSTNAME% byla zakázána.
+
+Vážený uživateli,
+
+archivace protokolů části Centrum protokolů na serveru %HOSTNAME% byla zakázána, protože sdílená složka „%SHARED_FOLDER%“ pro ukládání databáze protokolů byla odebrána. Přihlaste se do systému %OSNAME%, přejděte do části Hlavní nabídka > Centrum protokolů > Nastavení úložiště a vyberte jinou sdílenou složku.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_ShareRename]
+Subject: Umístění databáze pro Centrum protokolů na serveru %HOSTNAME% bylo aktualizováno.
+
+Vážený uživateli,
+
+umístění databáze protokolů pro Centrum protokolů na serveru %HOSTNAME% bylo aktualizováno, protože sdílená složka „%SHARED_FOLDER%“ pro ukládání databáze byla změněna.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_VOL_FULL]
+Subject: Kapacita pro Centrum protokolů na serveru %HOSTNAME% je nedostatečná.
+
+Vážený uživateli,
+
+kapacita pro Centrum protokolů na serveru %HOSTNAME% je nedostatečná. Změňte sdílenou složku pro Centrum protokolů.
+
+S pozdravem
+%COMPANY_NAME%
+

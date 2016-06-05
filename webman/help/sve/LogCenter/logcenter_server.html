@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Mottagning av logg - Synology DSM hjälp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Turn your DiskStation into a syslog server to receive logs from other network devices.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Mottagning av logg</h2>
+<p>Din DiskStation kan agera som syslog-server för att kunna ta emot loggfiler från klientenheter över nätverket. Tre format har stöd för mottagning av loggfiler:  <strong>BSD </strong>(RFC 3164), <strong>IETF </strong>(RFC 5424) och <strong>Anpassad</strong>. Alla mottagna loggfiler lagras i loggdatabasen.</p>
+
+<div class="section">
+<h4>Innan du börjar:</h4>
+<p>Gå till <strong>Loggcentral</strong> > <strong>Lagringsinställningar</strong> och välj en plats för att lagra och arkivera loggfiler.</p>
+</div>
+<h3>Inställning för mottagning av standardloggfiler:</h3>
+<ol>
+<li>Gå till <strong>Loggcentral</strong> > <strong>Mottagning av logg</strong> > <strong>Standard</strong>.</li>
+<li>Du kan aktivera mottagning av loggfiler med BSD och IEFT genom att markera alternativet <b>Ta emot loggfiler från andra enheter</b> i de(t) format du behöver.</li>
+<li>Välj <strong>UDP</strong> eller <strong>TCP</strong> från <strong>Överföringsprotokoll</strong>.</li>
+<li>Specificera ett portnummer för att ta emot syslogmeddelanden i <strong>Port</strong>. Standardportnumret är <strong>514</strong>.</li>
+<li>Om du vill säkra överföringen av loggfiler, markera alternativet <strong>Aktivera säker anslutning (SSL)</strong>. Det här alternativet är endast tillgängligt när <b>TCP</b> är valt.
+  </p>
+	</div>
+</li>
+<li>Klicka på <b>Tillämpa</b> för att spara inställningarna.</li>
+</ol>
+<!--DSM#62962: Customized rule receiving-->
+
+<h3>Inställning för mottagning av anpassade loggfiler:</h3>
+
+	<ol>
+	<li>Gå till <strong>Loggcentral</strong> > <strong>Mottagning av logg</strong> > <strong>Anpassad</strong>.</li>
+	<li>Klicka på <strong>Skapa</strong>.</li>
+	<li>Ange ett unikt namn för regeln i <strong>Namn</strong>.</li>
+	<li>Ange en regel för parsning i <strong>Parameter för regel</strong>. Se anteckningen här nedanför för detaljerad information om att skapa parser för mönster.</li>
+	<li>Välj <strong>UDP</strong> eller <strong>TCP</strong> från <strong>Överföringsprotokoll</strong>.</li>
+	<li>Specificera ett portnummer för att ta emot syslogmeddelanden i <strong>Port</strong>. Standardportnumret är <strong>514</strong>.</li>
+	<li>Om du vill säkra överföringen av loggfiler, markera alternativet <strong>Aktivera säker anslutning (SSL)</strong>. Det här alternativet är endast tillgängligt när <b>TCP</b> är valt.</li>
+	<li>Klicka på <b>OK</b> för att spara inställningarna.</li>
+	</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>Hitta detaljerad information om att skapa parser för mönster <a href="http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/syslog-ng-patterndb-using-parsers.html">här</a>. Du kan också ladda ned ett <a href="http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/patterndb-download.html">exempel på mönster</a> för referens.</p>
+</div>
+
+<h3>Att hantera anpassade regler:</h3>
+
+	<ol>
+	<li>Välj en befintlig anpassad regel.</li>
+	<li>Välj från följande:</li>
+    <ul>
+    <li><strong>Redigera:</strong> Redigera vald anpassad regel.</li>
+<li><strong>Radera:</strong> Radera vald anpassad regel.</li>
+<li><strong>Aktivera:</strong> Aktivera vald anpassad regel.</li>
+<li><strong>Avaktivera:</strong> Avaktivera vald anpassad regel.</li>
+    </ul>
+	</ol>
+
+
+<h3>Exportera certifikat</h3>
+<p>Om du har markerat alternativet <strong>Aktivera säker anslutning (SSL)</strong> kan du klicka på knappen <strong>Exportera certifikat</strong> för att exportera certifikatet som användas för att autentisera andra enheter vid sändning av loggfiler till din DiskStation.</p>
+
+</body>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Zapora sieciowa</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_firewall"></a>Zapora sieciowa</h2>
+<p>
+Reguły zapory sieciowej tworzone na stronie <strong>Panel sterowania</strong> > <strong>Bezpieczeństwo</strong> > <strong>Zapora sieciowa</strong> pomagają w zapobieganiu nieautoryzowanemu logowaniu i kontrolowaniu dostępu usług. Można zezwolić na dostęp do niektórych portów sieciowych z określonych adresów IP lub go odmówić.</p><h3>Aby utworzyć regułę zapory sieciowej:</h3>
+<ol>
+<li>Wybierz interfejs sieciowy z menu rozwijanego w prawym górnym rogu.</li>
+<li>Kliknij przycisk <b>Utwórz</b>.</li>
+<li>W sekcji <b>Porty</b> wybierz jedną z następujących opcji:</li>
+<ul>
+<li>Wybierz <b>Wszystkie</b>, aby zastosować regułę zapory do wszystkich portów.</li>
+<li>Wybierz pozycję <b>Wybierz z listy wbudowanych aplikacji</b>, a następnie kliknij <strong>Wybierz</strong>. Wybierz wbudowane aplikacje, do których chcesz zastosować regułę zapory.</li>
+<li>Wybierz <b>Niestandardowe</b>, a następnie kliknij <b>Niestandardowe</b>. Wprowadź maksymalnie 15 portów rozdzielonych przecinkami lub określ zakres portów, do których chcesz zastosować tę regułę zapory.</li>
+</ul>
+<li>W sekcji <b>Źródłowe IP</b> wybierz jedną z następujących opcji:</li>
+<ul>
+<li>Wybierz <b>Wszystkie</b>, aby zastosować regułę zapory do wszystkich adresów IP.</li>
+<li>Wybierz <b>Określony adres IP</b>, a następnie kliknij <strong>Wybierz</strong>. Można określić adres IP lub zakres adresów IP, do których ma być stosowana ta reguła.</li>
+<li>Wybierz <b>Region</b>, a następnie określ do 15 krajów, do których ma być stosowana ta reguła zapory.</li>
+</ul>
+<li>W sekcji <b>Akcja</b> wybierz jedną z następujących opcji:</li>
+<ul>
+	<li>Wybierz <b>Zezwól</b>, aby zezwolić na dostęp na podstawie określonych portów i źródłowych adresów IP.</li>
+	<li>Wybierz <b>Odmów</b>, aby odmówić dostępu na podstawie określonych portów i źródłowych adresów IP.</li>
+</ul>
+</ol>
+
+<p>
+Reguły zapory dotyczące interfejsów LAN i PPPoE można wyświetlić, wybierając te interfejsy z pola w prawym górnym rogu. Na dole listy reguł możesz wybrać <b>Zezwól na dostęp</b> lub <b>Odmów dostępu</b>, aby akceptować lub odrzucać żądania dostępu, które nie pasują do istniejącej reguły zapory dla danego interfejsu.</p>
+
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Dla interfejsu sieciowego można utworzyć maksymalnie 100 reguł. </li>
+<li>Aby zmienić kolejność reguł na liście, przeciągnij je i upuść.</li>
+<li>Priorytety reguł ustalane są zgodnie z ich pozycją na liście.</li>
+<li>Jeśli w systemie jest kilka portów sieciowych łączących z tą samą podsiecią, reguły zapory sieciowej mogą nie działać poprawnie.* </li>
+<li>W przypadku połączenia kilku portów LAN przy użyciu funkcji Link Aggregation zapora sieciowa zastosuje reguły z pierwszego interfejsu sieciowego i zachowa reguły z drugiego.</li>
+<li>Jeżeli urządzenie DiskStation łączy się z Internetem przy użyciu protokołu PPPoE, na odpowiednim interfejsie PPPoE należy skonfigurować reguły zapory.</li>
+</ul>
+</div>
+<h3>Działanie reguły zapory:</h3>
+<p>Zapora sieciowa DSM dopasowuje reguły zgodnie z priorytetem. <strong>Dopasowana reguła zostanie wyegzekwowana, a Zapora sieciowa DSM nie będzie dopasowywać pozostałych reguł</strong>. Jeżeli nie zostaną dopasowane żadne reguły, Zapora sieciowa DSM wykona domyślne działanie określone dla każdego interfejsu.</p>
+<h4>Priorytet reguł zapory:</h4>
+<ol> 
+<li>Reguły zdefiniowane dla „Wszystkich interfejsów”.</li>
+<li>Reguły zdefiniowane dla interfejsów, do których należy połączenie.</li>
+<li>Domyślne reguły dla interfejsów, do których należy połączenie.</li>
+</ol>
+<p>____<br> * Dostępne tylko w wybranych modelach.<br> # W funkcji tej zastosowano dane GeoLite opracowane przez MaxMind i dostępne pod adresem <a href="http://www.maxmind.com" target="_blank">http://www.maxmind.com</a>.</p>
+<br>
+</body>
+</html>

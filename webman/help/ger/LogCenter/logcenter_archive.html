@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Protokoll-Center</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Speichereinstellungen</h2>
+
+<p>Die Seite <strong>Speichereinstellungen</strong> bietet Optionen f&uuml;r die Konfiguration, wie und wo die vom Protokoll-Center erhaltenen Protokolle archiviert werden. Verwenden Sie die Optionen f&uuml;r den Speicherort und das Festlegen von Regeln, um automatisch Archive von Protokollen zu erstellen.</p>
+
+
+<h3>Speicherziel f&uuml;r Archive</h3>
+
+<p>Das Ziel bezieht sich auf den Ordner, in dem vom Protokoll-Center empfangene Protokolle gespeichert und archiviert werden. Klicken Sie auf <strong>Speicherort w&auml;hlen</strong>, um den Ordner zu w&auml;hlen.</p>
+<p>Falls die lokalen Protokolle von DiskStation am selben Ziel archiviert werden sollen, markieren Sie das K&auml;stchen <strong>Lokale Protokolle am oben angegebenen Speicherort archivieren</strong>. In den meisten F&auml;llen bietet dies mehr Speicherplatz f&uuml;r lokale Protokolle, sodass mehr vollst&auml;ndige Systemprotokolle erhalten bleiben.</p>
+<!--DSM#61793: Describe how logs are archived in data volume--><div class="section">
+<h4>Hinweis:</h4>
+<p>Lokale Protokolle (System, Verbindung und Datei&uuml;bertragungs-Protokolle) werden in einer Systempartition gespeichert, deren Speicherplatz begrenzt ist. Wenn <strong>Lokale Protokolle am oben angegebenen Speicherort archivieren</strong> markiert wird, werden alle Protokolle gem&auml;&szlig; den <strong>Archivregeln</strong> am angegebene Ziel archiviert. Klicken Sie auf <strong>Protokollarchiv &ouml;ffnen</strong> und w&auml;hlen Sie <strong>SYNOSYSLOGDB__LOCALARCH.DB</strong>, um die archivierten lokalen Protokolle zu durchsuchen.</p>
+</div><h3>Archivregeln</h3>
+
+<p>Protokolle werden automatisch nach den im Abschnitt <strong>Archivregeln</strong> festgelegten Kriterien archiviert. Protokolle k&ouml;nnen automatisch archiviert werden, wenn die Gr&ouml;&szlig;e der Protokoll-Datenbank eine bestimmte Gr&ouml;&szlig;e erreicht, wenn die Anzahl der einzelnen Protokolle eine bestimmte Zahl erreicht oder wenn die Protokolle ein bestimmtes Alter erreichen.</p>
+
+<h3>Archivformat</h3>
+<p>Dieser Abschnitt enth&auml;lt die folgenden Optionen.</p>
+<ul>
+<li><strong>Protokolle zus&auml;tzlich zum Standardformat im Textformat archivieren:</strong> Speichert Archive als Nur-Text-Dateien zus&auml;tzlich zu den Standard-SQLite-Dateien.</li>
+<li><strong>Protokollarchive komprimieren:</strong> Speichert Protokollarchive als komprimierte ZIP-Format-Dateien.</li>
+<li><strong>Protokolle nach Ger&auml;t getrennt archivieren:</strong> Speichert getrennte Archive f&uuml;r einzelne Client-Ger&auml;te, die Protokolle an DiskStation senden.</li>
+</ul>
+
+</body>

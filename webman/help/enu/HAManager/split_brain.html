@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Split-brain</h2>
+
+<p>When a high-availability cluster is functioning normally, only one of the member servers should assume the role of active server. In this case, the passive server detects the presence of the active server via both the Heartbeat connection and data connection.</p>
+
+<p>If all Heartbeat and data connections are lost, both servers might attempt to assume the role of active server. This situation is referred to as a "split-brain" error. In this case, connections to the IP address assigned to the high-availability cluster will be redirected to either of the two servers, resulting in service errors.</p>
+        
+<h4>In the event a split-brain error occurs:</h4>
+	<ol>
+		<li>Connections to the cluster IP address will be redirected to either server, resulting in service errors. You will experience difficulty connecting to either server.</li>
+		<li>The system will detect the split-brain error and remove the high-availability cluster, unbinding both servers.</li>
+		<li>Once both servers return to <b>Standalone</b> status, you will be able to log into DiskStation Manager (DSM). At this time, data accumulated prior to the removal of the high-availability cluster will remain on both servers. After identifying which server contains the most up-to-date data, you can rebind the servers in order to create a high-availability cluster again.</li>
+	</ol>
+ </body>
+</html>

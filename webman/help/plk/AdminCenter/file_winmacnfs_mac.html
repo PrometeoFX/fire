@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Usługa plików Mac</h2>
+
+<p>W menu <strong>Panel sterowania</strong> > <strong>Usługi plików</strong> > <strong>Win/Mac/NFS</strong> możesz włączyć obsługę plików Mac, aby zmienić urządzenie DiskStation w serwer plików Mac (Serwer AFP).</p>
+
+<h4>Aby włączyć usługę plików Mac:</h4>
+<ol>
+<li>Zaznacz pole wyboru <b>Włącz obsługę plików Mac</b>, aby przekształcić DiskStation w serwer plików dla systemu Mac OS (serwer AFP).</li>
+<li>W razie potrzeby ustaw folder kopii zapasowej <b>Time Machine</b>. (Aby uzyskać więcej informacji, patrz rozdział poniżej).</li>
+
+<li>Kliknij przycisk <b>Zastosuj</b>.</li>
+
+</ol>
+<div class="section">
+<h4>Informacje o folderze kopii zapasowych Time Machine:</h4>
+<p>Aby skopiować dane z Time Machine na urządzenie DiskStation, wybierz folder współdzielony z rozwijanego menu. </p>
+<p><span class="note_head">Uwaga:</span> Foldery współdzielone używane przez inne usługi nie będą dostępne dla Time Machine.</p>
+</div>
+<h3>Ustawienia zaawansowane</h3>
+<h4>Zastosuj domyślne uprawnienia UNIX:</h4>
+<p>Włączenie tej opcji powoduje zastosowanie domyślnych uprawnień systemu UNIX podczas przesyłania lub tworzenia plików i folderów. Nadane uprawnienia są identyczne z uprawnieniami nadanymi przez parametr <strong>umask</strong> polecenia UNIX. Po włączeniu tej opcji uprawnienia systemu UNIX są ustawione na 644 dla plików i 755 dla folderów. Po wyłączeniu tej opcji uprawnienia systemu UNIX są ustawione na 666 dla plików i 777 dla folderów. Domyślna wartość umask to 022.</p>
+<p><span class="note_head">Uwaga:</span> Włączenie tej opcji może spowodować problemy z niespójnością uprawnień między różnymi protokołami. Aby uniknąć niespójności, nie zaleca się włączania tej opcji.</p>
+<h4>Niezwłocznie zwolnij zasoby po odłączeniu:</h4>
+<p>Włączenie tej opcji powoduje natychmiastowe zwolnienie zasobów po nieoczekiwanym odłączeniu od serwera AFP. Jeżeli podczas korzystania z aplikacji Time Machine wyświetlone zostaną powiadomienia o błędzie „Wolumin w użyciu”, należy włączyć tą opcję.</p>
+<h4>Aby włączyć rozgłaszanie drukarki w usłudze Bonjour:</h4>
+<p>Zaznacz pole wyboru <b>Włącz rozgłaszanie drukarki w usłudze Bonjour</b>, aby zezwolić klientom z systemem Mac na znajdowanie i lokalizowanie drukarki podłączonej do urządzenia DiskStation.</p>
+</body>
+</html>

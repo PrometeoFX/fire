@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Säkerhetskopiering & Replikering</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>LUN-säkerhetskopiering*</h2>
+<p>Under fliken <b>Säkerhetskopiering</b> i <b>Säkerhetskopiering & Replikering</b> kan du använda <b>Lokal LUN-säkerhetskopiering</b> för att säkerhetskopiera iSCSI LUNs på din DiskStation till lokala delade mappar. Du kan även använda <b>Nätverks-LUN-säkerhetskopiering</b> för att säkerhetskopiera ytterligare en DiskStation.</p>
+
+<h4>Säkerhetskopiera en iSCSI LUN:</h4>
+<ol>
+<li>
+Välj <b>Skapa</b> > <b>LUN-säkerhetskopieringsuppgift</b> för att öppna <b>Guiden LUN säkerhetskopiering</b> och klicka på <b>Nästa</b>.
+</li>
+<li>
+När du uppmanas att välja destinationstyp väljer du någon av följande:
+</li>
+<ul>
+<li>
+<b>Lokal LUN-säkerhetskopiering</b>: Välj detta alternativ för att säkerhetskopiera LUN från din DiskStation till en lokal delad mapp eller en extern lagring som är ansluten till USB eller eSATA-porten på din DiskStation.
+</li>
+<li><b>Nätverks-LUN-säkerhetskopiering</b>: Välj detta alternativ för att säkerhetskopiera LUN från din DiskStation till en annan DiskStation.
+</li>
+</ul>
+<li>
+När du uppmanas till det specificerar du säkerhetskopieringsdestinationen och käll-LUN och ställer in säkerhetskopieringsschemat.
+</li>
+<li>
+Följ guiden för att slutföra installationen.
+</li>
+</ol>
+<p>Efter att säkerhetskopieringsuppgiften har skapats kommer DiskStation att utföra säkerhetskopieringsuppgiften enligt schema och lagra den säkerhetskopierade LUN på destinationen. Säkerhetskopierad LUN används endast för syftet säkerhetskopiering. För åtkomst till säkerhetskopierad LUN, se <a href="restore.html">Återställa säkerhetskopierad LUN</a> för mer information.</p>
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Både vanliga fil- och blocknivå-LUN kommer att säkerhetskopieras som filavbilder på målet. Om återställda, kommer alla blocknivå-LUN att återställas till fil-LUN.</li>
+<li>Varje säkerhetskopieringsuppgift kan endast inkludera en LUN som säkerhetskopieringskällan.</li>
+<li>LUNS kan inte säkerhetskopieras till en extern disk med formatet FAT, FAT32, HFS, HFS Plus eller NTFS.</li>
+<li>Innan Nätverks-LUN-säkerhetskopiering utförs, vänligen logga in på målet DiskStation för att säkerställa att tjänsten nätverkssäkerhetskopiering är aktiverad i <b>Säkerhetskopiering & Replikering</b> > <b>Säkerhetskopieringstjänster</b>.</li>
+<li>Om din DiskStation ansluts till nätverket via en router måste du se till att du har specificerat en regel för vidarebefordring av portar för iSCSI-tjänsten (TCP-port 3260) på routern, innan du utför Nätverks-LUN-säkerhetskopiering.</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Om Fullständig säkerhetskopiering och inkrementell säkerhetskopiering:</h4>
+<p>
+DiskStation kommer att utföra en fullständig säkerhetskopiering för vald LUN första gången och därefter inkrementell säkerhetskopiering. Men om namnet på den delade mappen eller säkerhetskopieringsdestinationen ändras kommer DiskStation att utföra en fullständig säkerhetskopiering för uppgiften igen.
+</p>
+</div>
+
+<p>____<br /> * Endast tillgängligt för vissa modeller.</p>
+</body></html>

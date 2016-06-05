@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Text Editor</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h1>Text Editor</h1>
+<p>Text Editor is a highly versatile text and code editor, allowing you to access and quickly edit text files or codes on your DiskStation right from a web browser.</p>
+
+<h3>File Management</h3>
+<h4>To create new files:</h4> 
+<p>Click <b>File</b> and choose <b>New</b>. A new empty tab will appear with the title <b>New Document.txt</b>.</p>
+
+<h4>To open files from Text Editor:</h4> 
+<p>Simply click <b>File</b> and choose <b>Open</b>. A dialog will appear and you can select a file with specific character encoding that has to be opened in a tab. If the file was already opened, Text Editor will show you that file in its current state.</p> 
+
+<h4>To open files from File Station:</h4> 
+<p>In File Station, simply right-click on the selected file and then click <b>Open with Text Editor</b> from the context menu. If the file was already opened, Text Editor will show you that file in its current state. Another way to open a file is to drag one or multiple files from File Station into Text Editor using the cursor.</p>  
+<br>
+
+<div class="section">
+<p><b>Note:</b></p>
+<p>Text Editor cannot open a file that exceeds 10 MB.</p>
+</div>
+
+<h4>To save files:</h4> 
+<p>Simply click <b>File</b> and choose <b>Save</b>. If it is an existing file, it will be overwritten with the current contents. If you want to save all the files you have opened at once, you can go to <b>File</b> > <b>Save All</b>. If the file has yet no name (a new file), or you selected <b>File</b> > <b>Save As</b>, a dialog will pop up, asking you for the name of the file. You can then choose the location, the file name, and the encoding to save for the file.</p>
+
+<h4>To close files:</h4> 
+<p>Simply click <b>File</b> and choose <b>Close</b>. Another way to close a file is clicking on the close button on each tab. If you have any unsaved data in a file, Text Editor will always prompt you if you would like to close it without saving those changes.</p>
+
+</ul>
+
+<div class="section">
+<h4>Note:</h4>
+<p>You can save files with specific character encoding to support bi-directional languages. You can also specify an encoding when opening a file, so that Text Editor displays the file correctly.	
+</p>
+</div>
+
+<h3>Editing</h3>
+<ul>
+<li><strong>Standard operations</strong><br> 
+The edit control supports simple Undo, Redo, and Select All. These operations can be found in most editors and perform in very similar ways. You can perform these operations by selecting the corresponding menu item in the <b>Edit</b> menu. Additionally, by default the Cut, Copy, and Paste options are available through the browser's context menu.</li>
+
+<li><strong>Indentation</strong><br> 
+Indenting text is a common operation when dealing with source code editing. Indentation is the addition of extra whitespace at the start of a line to separate blocks of text, adding a hierarchy. Normally when editing, pressing the Tab key will insert a tab character at the current location. However, if some text is selected, pressing Tab key will add additional whitespace at the beginning of each line that has any selected text, allowing you to indent entire blocks of text at once. Pressing Shift and Tab at once will remove the indentation.</li>
+
+<li><strong>Overtype</strong><br> 
+You can enable and disable overtyping by pressing the Insert key. That is, instead of inserting characters at the cursor, you replace them. The displayed cursor will change shape with overtype status accordingly.</li>
+
+<li><strong>Column mode editing</strong><br> 
+A special way of editing files is column mode editing. This means that text can be selected in columns, rather than rows. To initiate a column mode selection, depress the Alt key when selecting text, moving the cursor downwards or upwards as needed. When text is selected in this so-called column mode, typing will change each selected column of characters into the typed character.</li>
+</ul>
+
+
+<h3>Searching</h3>
+<ul>
+<li><strong>Normal search</strong><br> 
+You can search text as in most programs using the Find dialog. You can open this dialog by selecting <b>Search</b> > <b>Find</b>. This dialog will always stay on top of the text, and you cannot keep on editing the text if it is opened. In the search field, type the text you want to find.</li>
+
+<li><strong>Replacing</strong><br> 
+You can find and replace text as in most programs using the Replace dialog. You can open this dialog by selecting <b>Search</b> > <b>Replace</b>. <b>Replace All</b> will replace all occurrences of the query with the replacement text. </li>
+
+<li><strong>Case sensitive</strong><br> 
+It enforces that hits have exactly the same case as the query. If this is not ticked, the search is case insensitive.</li>
+
+<li><strong>Whole word only</strong><br> 
+It will result in a hit only if the match consists of an entire word, not part of it. For example, if you look for "exam" with <strong>Whole word only</strong>, then you will find "exam" only, instead of "example".</li>
+
+<li><strong>Regular expression</strong><br> 
+The query will be handled like a regular expression.</li>
+</ul>
+
+
+<div class="section">
+<h4>What is regular expression?</h4>
+<p>A regular expression is a sequence of characters that forms a search pattern for powerful time-saving technique. A very simple use of a regular expression would be to locate the same word spelled two different ways in a text editor, for example M[ea]rry.
+</p>
+</div>
+
+<h3>Style Configurator</h3>
+<p>The style configurator is primarily used to control the appearance of the text in Text Editor.<br>
+The bottom-right drop-down list contains all the supported programming language that can be styled to help you build a suitable coding environment.</p>
+
+<h3>Preferences</h3>
+<ul>
+<li><strong>Show invisible characters</strong><br>
+If ticked, space, tab, newline, or return characters will be shown.</li>
+
+<li><strong>Show indent guides</strong><br> 
+If ticked, indent guides will be shown. It is useful for aligning codes in coding language.</li>
+
+<li><strong>Highlight current line</strong><br> 
+If ticked, the line at which the caret is present will be drawn with a special background color.</li>
+
+<li><strong>Highlight selected word</strong><br> 
+If ticked, all words (not partial) within the same text file matching the selected word will be automatically outlined.</li>
+
+<li><strong>Show line numbers</strong><br> 
+If ticked, the line numbers will be displayed.</li>
+
+<li><strong>Enable code folding</strong><br> 
+If ticked, certain lines of your codes can be hidden based on certain traits. This feature works well for structured languages such as C++ or XML. When <b>Hide disclosure widgets automatically</b> is ticked, certain lines of codes will be folded automatically. You can also choose to mark only the starting bracket or both starting and closing brackets with the disclosure widgets.</li>  
+
+<li><strong>Word Wrap</strong><br> 
+Specify whether your text is wrapped at the window's edge or at a specific column number without inserting a hard return.</li>
+
+<li><strong>Append closing characters automatically</strong><br> 
+If ticked, closing brackets (characters) will be appended automatically in your codes.</li>
+
+<li><strong>Insert spaces instead of tabs</strong><br> 
+If ticked, pressing the Tab key will insert space characters instead of a tab character. <b>Tab width</b> can be defined by the number of characters at <b>Preferences</b> > <b>Font and color</b>.</li>
+
+<li><strong>Default encoding</strong><br> 
+The default encoding is used to save files with specific character encoding to support bi-directional languages. You can also specify an encoding when opening a file, so that Text Editor displays the file correctly.</li>
+
+<li><strong>Font and Color</strong><br> 
+<b>Tab width</b>, <b>Font size</b>, and <b>Theme</b> can be customized according to your personal preference. <b>Tab width</b> is defined by the number of space characters.</li>
+</ul>
+
+<div class="section">
+<h4>Supported File Formats</h4>
+<p>Text Editor only supports plain text files. Text files with rich formatting like *.doc and *.pdf will not be supported.
+</p>
+</div>
+
+</body>
+</html>

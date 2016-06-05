@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Servizio file Mac</h2>
+
+<p>
+In <strong>Pannello di controllo</strong> > <strong>Servizi file</strong> > <strong>Win/Mac/NFS</strong>, è possibile impostare il servizio file Mac per rendere DiskStation un server file Mac (server AFP).</p>
+
+<h4>Per abilitare il servizio file Mac:</h4>
+<ol>
+<li>
+Mettere il segno di spunta sulla casella <b>Abilita il servizio file Mac</b> per rendere DiskStation un server Mac file (server AFP).
+</li>
+<li>
+Impostare una cartella di backup <b>Time Machine</b>, se necessario (consultare la sezione che segue per maggiori informazioni).
+</li>
+
+<li>
+Fare clic su <b>Applica</b>.
+</li>
+
+</ol>
+<div class="section">
+<h4>Sulla cartella di backup Time Machine:</h4>
+<p>Per eseguire il backup dei dati da Time Machine a DiskStation, selezionare una cartella condivisa nel menu a discesa. </p>
+<p><span class="note_head">Nota:</span> Le cartelle condivise in uso per altri servizi non saranno disponibili per Time Machine.</p>
+</div>
+<h3>Impostazioni avanzate</h3>
+<h4>Applica autorizzazioni UNIX predefinite:</h4>
+<p>abilitando questa opzione si applicano le autorizzazioni UNIX predefinite quando si caricano o creano file e cartelle. Le autorizzazioni applicate sono le stesse applicate dal comando UNIX <strong>umask</strong>. Quando questa opzione è abilitata, le autorizzazioni UNIX sono 644 per i file e 755 per le cartelle. Quando questa opzione è disabilitata, le autorizzazioni UNIX sono 666 per i file e 777 per le cartelle. Il valore unmask predefinito è 022.</p>
+<p><span class="note_head">Nota: </span>L'abilitazione di questa funzione può causare problemi di autorizzazioni non coerenti tra diversi protocolli. Per evitare incoerenze, consigliamo di lasciare questa opzione disabilitata.</p>
+<h4>Rilasciare subito le risorse dopo la disconnessione:</h4>
+<p>L'attivazione di quest'opzione comporta il rilascio immediato delle risorse in caso di disconnessione imprevista del server AFP. Se, durante l'utilizzo di Time Machine, viene visualizzato il messaggio di errore "Volume in uso", abilitare l'opzione.</p>
+<h4>Per abilitare Bonjour printer broadcast:</h4>
+<p>Mettere un segno di spunta su <b>Abilita Bonjour Printer Broadcast</b> per permettere ai clienti Mac di cercare e localizzare la stampante connessa a DiskStation.</p>
+</body>
+</html>

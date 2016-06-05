@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Opdelt hjerne</h2>
+
+<p>N&aring;r en high-availability-klynge fungerer normalt, b&oslash;r kun en af medlemsserverne p&aring;tage sig rollen som aktiv server. I det tilf&aelig;lde registrerer den passive server tilstedev&aelig;relsen af den aktive server via b&aring;de heartbeat-forbindelsen og dataforbindelsen.</p>
+
+<p>Hvis alle heartbeat- og dataforbindelser mistes, vil begge servere m&aring;ske fors&oslash;ge at p&aring;tage sig rollen som aktiv server. Denne situation kaldes &quot;split-brain&quot;-fejl. I det tilf&aelig;lde vil forbindelser til den IP-adresse, der tildeles til high-availability-klyngen, bliver omdirigeret til en af de to servere, hvilket giver tjenestefejl.</p>
+        
+<h4>Hvis der opst&aring;r en opdelt hjerne-fejl:</h4>
+	<ol>
+		<li>Forbindelser til klynge-IP-adressen omdirigeres til enten server, der resulterer i tjenestefejl. Du vil opleve besv&aelig;r med at oprette forbindelse til en af serverne.</li>
+		<li>Systemet vil registrere opdelt hjerne-fejl og fjerne high-availability-klyngen og binde begge servere op.</li>
+		<li>N&aring;r begge servere returnerer til <b>Standalone</b>-status, kan du logge ind p&aring; DiskStation Manager (DSM). P&aring; dette tidspunkt vil data, der er akkumuleret f&oslash;r fjernelsen af high-availability-klyngen forblive p&aring; begge servere. N&aring;r du har identificeret den server, der indeholder de mest opdaterede data, kan du genbinde serverne for at oprette en high-availability-klynge igen.</li>
+	</ol>
+ </body>
+</html>

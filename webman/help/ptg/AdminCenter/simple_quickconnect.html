@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>QuickConnect</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>QuickConnect</h2>
+
+<p>QuickConnect permite que as aplica&ccedil;&otilde;es cliente estabele&ccedil;am liga&ccedil;&atilde;o a DiskStation atrav&eacute;s da Internet sem as complicadas configura&ccedil;&otilde;es de regras de reencaminhamento de portas. </p>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>QuickConnect pode funcionar com DSM e alguns pacotes desenvolvidos pela Synology, como a Audio Station, Video Station, Download Station, Surveillance Station, Photo Station, File Station, Cloud Station e aplica&ccedil;&otilde;es m&oacute;veis.</p>
+</div>
+
+<h4>Para ativar o QuickConnect:</h4>
+
+<ol>
+<li>Aceda a <strong>Painel de Controlo (Modo Simples)</strong> &gt; <strong>QuickConnect</strong>. </li>
+<li>Assinale a caixa <strong>Ativar QuickConnect</strong>.</li>
+<li>Introduza as informa&ccedil;&otilde;es da sua Conta Synology existente ou registe uma nova conta.</li>
+<li>Especifique um novo QuickConnect ID. Certifique-se de que &eacute; f&aacute;cil de memorizar, para que possa aceder ao seu  DiskStation em qualquer altura.</li>
+<li>Clique em <strong>Aplicar</strong>.</li>
+</ol>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Antes de ativar o QuickConnect para aplica&ccedil;&otilde;es cliente, certifique-se de que os servi&ccedil;os DSM necess&aacute;rios j&aacute; est&atilde;o ativos. Por exemplo, WebDAV tem de estar ativado na DiskStation antes de poder ativar o QuickConnect para DS file.</li>
+<li>Um QuickConnect ID personalizado pode incluir letras, n&uacute;meros e h&iacute;fenes (&quot;-&quot;) e deve come&ccedil;ar com uma letra.</li>
+<li>Para um melhor desempenho do QuickConnect, recomendamos que aceda a <b>Painel de Controlo (Modo Avan&ccedil;ado)</b> &gt; <strong>Acesso Externo</strong> &gt; <b>Configura&ccedil;&atilde;o do Router</b> para configurar o reencaminhamento de portas para cada servi&ccedil;o:
+<ul>
+  <li>DSM: 5000 (HTTP); 5001 (HTTPS)</li>
+  <li>Photo Station: 80 (HTTP); 443 (HTTPS)</li>
+  <li>Cloud Station：6690</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Resolu&ccedil;&atilde;o de problemas</h4>
+<p>Se vir a mensagem <strong>Ocorreu um erro de rede</strong>, significa que o servi&ccedil;o QuickConnect parou devido a erros de rede. Verifique o seguinte:</p>
+<ul>
+<li>Se o seu DiskStation est&aacute; ligado a uma rede ativa (em <b>Painel de Controlo (Modo Avan&ccedil;ado)</b> &gt; <b>Rede</b> &gt; <b>Interface de Rede</b>).</li>
+<li>Se o servidor DNS e predefini&ccedil;&otilde;es de gateway est&atilde;o devidamente configurados (em <b>Painel de Controlo (Modo Avan&ccedil;ado)</b> &gt; <b>Rede</b> &gt; <b>Geral</b>).</li>
+<li>Certifique-se de que DiskStation pode aceder &agrave; Internet utilizando as seguintes portas de destino: 22, 80, 443, 8888.&nbsp;</li>
+</ul>
+<p>Quando os erros de rede forem corrigidos, o servi&ccedil;o QuickConnect dever&aacute; retomar automaticamente ap&oacute;s alguns minutos.</p>
+</div>
+
+</body>
+</html>

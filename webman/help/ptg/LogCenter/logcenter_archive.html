@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Centro de Registos</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Defini&ccedil;&otilde;es de Armazenamento</h2>
+
+<p>A p&aacute;gina <strong>Defini&ccedil;&otilde;es de Armazenamento</strong> fornece op&ccedil;&otilde;es de configura&ccedil;&atilde;o do modo e do local onde s&atilde;o arquivados os registos recebidos no Centro de Registos. Utilize as op&ccedil;&otilde;es abaixo para especificar a localiza&ccedil;&atilde;o e as regras de armazenamento para criar automaticamente arquivos de registos.</p>
+
+
+<h3>Destino de armazenamento para arquivos</h3>
+
+<p>O destino refere-se &agrave; pasta onde os registos recebidos no Centro de Registos s&atilde;o armazenados e arquivados. Clique em <strong>Selecionar localiza&ccedil;&atilde;o</strong> para escolher a pasta.</p>
+<p>Se pretender que os registos locais do DiskStation sejam arquivados no mesmo destino, assinale a caixa marcada <strong>Arquivar registos locais na localiza&ccedil;&atilde;o de armazenamento especificada acima</strong>. Na maioria dos casos, deste modo, &eacute; poss&iacute;vel obter mais espa&ccedil;o de armazenamento para os registos locais, permitindo-lhe manter registos do sistema mais completos.</p>
+<!--DSM#61793: Describe how logs are archived in data volume--><div class="section">
+<h4>Nota:</h4>
+<p>Os registos locais (registos de Sistema, Liga&ccedil;&atilde;o e Transfer&ecirc;ncia de ficheiros) s&atilde;o guardados numa parti&ccedil;&atilde;o de sistema com capacidade de armazenamento limitada. Ao ativar <strong>Arquivar registos locais na localiza&ccedil;&atilde;o de armazenamento especificada acima</strong>, todos os registos ser&atilde;o arquivados no destino especificado, em conformidade com as <strong>Regras do arquivo</strong>. Para pesquisar registos arquivados, clique em <strong>Abrir arquivo de registo</strong> e selecione <strong>SYNOSYSLOGDB__LOCALARCH.DB</strong>.</p>
+</div><h3>Regras do arquivo</h3>
+
+<p>Os registos s&atilde;o arquivados automaticamente de acordo com os crit&eacute;rios definidos na sec&ccedil;&atilde;o <strong>Regras do arquivo</strong>. &Eacute; poss&iacute;vel arquivar os registos automaticamente quando a base de dados de registos atinge um tamanho especificado, os registos individuais atingem um n&uacute;mero especificado ou os registos atingem uma dura&ccedil;&atilde;o especificada.</p>
+
+<h3>Formato de arquivo</h3>
+<p>Esta sec&ccedil;&atilde;o inclui as seguintes op&ccedil;&otilde;es.</p>
+<ul>
+<li><strong>Arquivar registos como formato de texto para al&eacute;m do formato predefinido:</strong> Guarda os arquivos como ficheiros de texto simples para al&eacute;m dos ficheiros SQLite predefinidos.</li>
+<li><strong>Comprimir arquivos de registos:</strong> Guarda os arquivos de registos como ficheiros de formato ZIP comprimidos.</li>
+<li><strong>Arquivar registos separadamente de acordo com o dispositivo:</strong> Guarda arquivos separados para dispositivos cliente individuais que enviam registos para o DiskStation.</li>
+</ul>
+
+</body>

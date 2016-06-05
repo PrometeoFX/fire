@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>K&ouml;nyvt&aacute;rszolg&aacute;ltat&aacute;s</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Tartomány/LDAP-felhasználók vagy csoportok</h2>
+<p>Ha a DiskStation könyvtárszolgáltatáshoz csatlakozik mint Windows tartomány- vagy LDAP-kliens, akkor a tartomány-/LDAP-felhasználók, illetve csoportok a DiskStation megosztott mappáira és DSM-alkalmazásaira vonatkozó jogosultságait módosíthatja és szerkesztheti, illetve az összes tartomány-/LDAP-felhasználó számára engedélyezheti a felhasználói kezdőlap szolgáltatást.</p>
+<h3>Tartomány-/LDAP-felhasználó</h3>
+<p>A könyvtárszolgáltatás típusától függően, amelyhez csatlakozik, a megosztott mappa és az alkalmazásjogosultságok, valamint az egyes felhasználók lemezkvótájának beállításához kattintson a <b>Tartományfelhasználók</b> vagy <b>LDAP felhasználó</b> fülre.</p>
+<h4>Az jogosults&aacute;gi be&aacute;ll&iacute;t&aacute;sok szab&aacute;lyai:</h4>
+<ul>
+<li>Ha jogosults&aacute;gok &uuml;tk&ouml;znek, a jogosults&aacute;gok priorit&aacute;sa a k&ouml;vetkező: NA &gt; RW &gt; RO.</li>
+<li>Jogosults&aacute;g előn&eacute;zete: Itt megmutat&aacute;sra ker&uuml;l a felhaszn&aacute;l&oacute; előjoga, &eacute;s ennek eld&ouml;nt&eacute;se a felhaszn&aacute;l&oacute; &eacute;s a felhaszn&aacute;l&oacute;t tagjai k&ouml;zt tud&oacute; csoportok előjog-be&aacute;ll&iacute;t&aacute;sai alapj&aacute;n t&ouml;rt&eacute;nik.</li>
+<li>Csoport előjogok: Rendeljen előjogokat a csoportokhoz a megosztott mapp&aacute;k el&eacute;r&eacute;s&eacute;hez.</li>
+</ul>
+<h3>Felhasználói kezdőlap</h3>
+<p>A helyi felhasználókhoz hasonlóan minden tartomány-/LDAP-felhasználó hozzáférhet saját <b>home</b> mappájához CIFS, AFP, FTP, vagy File Station segítségével. </p>
+<p>
+Az adminisztrátori jogosultságokkal rendelkező felhasználók a <b>homes</b> megosztott mappában található összes személyes mappához hozzáférhetnek. Az összes felhasználó home mappája egy almappában található a „<b>@DH-tartománynév</b>” (tartományfelhasználóknál), illetve „<b>@LH-FQDN név</b>” (LDAP-felhasználóknál) mappán belül. A felhasználó home mappájának neve a felhasználói fiók plusz egy egyedi szám.</p>
+<ol>
+<span class="note_head">Megjegyzés: </span>
+<li>A <span class="bold_general">homes</span> megosztott mappa törléséhez először le kell tiltani a felhasználói kezdőlap szolgáltatást.</li>
+<li>Ha engedélyezi a kezdőlap-szolgáltatást tartomány-/LDAP-felhasználók részére, akkor a rendszer a helyi felhasználók számára is engedélyezi a kezdőlap-szolgáltatást, amennyiben még nincs engedélyezve.
+</li>
+</ol> 
+<h3>Tartomány-/LDAP-csoport</h3> 
+<p>A könyvtárszolgáltatás típusától függően, amelyhez csatlakozik, a tartomány-/LDAP-felhasználók megosztott mappákra vonatkozó jogosultságainak beállításához kattintson a <b>Tartománycsoport</b> vagy <b>LDAP csoport</b> fülre. A jogosultságok prioritása a következő: NA > RW > RO.</p> 
+</body> </html> 

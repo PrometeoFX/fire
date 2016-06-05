@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Wolumin</h2>
+	<p>Wolumin to podstawowe miejsce w pamięci masowej, na którym można tworzyć foldery udostępnione i jednostki iSCSI LUN (zwykłe pliki), zapisywać dane bądź instalować pakiety. Przed utworzeniem jakiegokolwiek woluminu trzeba utworzyć grupę RAID Group. Więcej informacji na temat grup RAID Group można znaleźć w temacie <a href="raid.html">Grupa RAID Group</a>.</p>
+
+	<h4>Aby utworzyć wolumin:</h4>
+<ol>
+  <li>Sprawdź, czy na serwerze DiskStation utworzono już grupę RAID Group z miejscem do przydzielenia.</li>
+  <li>Kliknij przycisk <strong>Utwórz</strong> .</li>
+		<li>Wybierz grupę RAID Group, na której ma być utworzony wolumin.</li>
+		<li>Zmień ustawienia stosownie do potrzeb.</li>
+		<li>Ustaw przydział miejsca woluminu (ustawianie przydziału miejsca jest niedostępne w przypadku woluminów utworzonych w grupie RAID Group dla pojedynczych woluminów lub jednostek iSCSI LUN).</li>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+	<li>Maksymalna wielkość woluminu, jaką można przydzielić, wynosi 200 TB.</li>
+	<li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp enable-ds1616p">Minimalna wielkość przydzielona do woluminu Btrfs wynosi 10 GB.</li>
+</ul>
+</div>
+
+
+<h4>Aby usunąć wolumin:</h4>
+	<ol>
+		<li>Wybierz wolumin do usunięcia.</li>
+		<li>Kliknij przycisk <b>Usuń</b> i postępuj zgodnie z instrukcjami kreatora, aby ukończyć proces.</li>
+	</ol>
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Usunięcie woluminu spowoduje usunięcie wszystkich przechowywanych na nim danych.</li>
+</ul>
+</div>
+
+<h4>Aby wymusić montowanie woluminu:</h4>
+<p>Jeżeli na woluminie nie ma pamięci podręcznej, wolumin nie zostanie zamontowany przez system podczas uruchamiania. Jeżeli pamięci podręcznej nie można odzyskać, dostęp do woluminu można uzyskać, klikając przycisk <b>Wymuś montowanie</b>. </p>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Ta funkcja jest dostępna tylko w niektórych modelach.</li>
+</ul>
+</div>
+
+	<h4>Aby naprawić wolumin:</h4>
+	<p>Jeżeli wolumin ma stan <b>Zdegradowany</b>, przejdź do karty <b>Grupa RAID Group</b> i znajdź odpowiednią grupę RAID Group. Następnie postępuj zgodnie z instrukcjami wyświetlanymi na ekranie, aby ją naprawić.</p>
+
+	<h4>Aby rozszerzyć wielkość woluminu</h4>
+	<ul>
+		<li>W przypadku woluminów utworzonych w grupie RAID Group dla wielu woluminów lub jednostek iSCSI LUN (na poziomie bloku):<ol>
+				<li>Wybierz wolumin do rozszerzenia.</li>
+				<li>Kliknij przycisk <b>Edytuj</b>.</li>
+				<li>Wprowadź nową wielkość i kliknij przycisk <b>OK</b>, aby rozszerzyć.</li>
+			</ol>
+		<li>W przypadku woluminów utworzonych w grupie RAID Group dla pojedynczego woluminu lub jednostki iSCSI LUN (na poziomie bloku) zapoznaj się z treścią części <b>Aby rozszerzyć rozmiar grupy RAID Group</b> w temacie <a href="raid.html">Grupa RAID Group</a>. Wielkość woluminu zostanie zwiększona po rozszerzeniu powiązanej grupy RAID Group.</li>
+	</ul>
+
+
+<h3>SSD TRIM</h3>
+
+<p>Jeżeli wolumin składa się wyłącznie z dysków SSD, zaleca się włączenie funkcji SSD TRIM. Funkcja ta zwiększa szybkość odczytu i zapisu woluminów utworzonych na dyskach SSD, poprawiając wydajność i wydłużając okres eksploatacji dysków SSD.</p>
+
+<h4>Aby włączyć funkcję SSD TRIM:</h4>
+
+<ol>
+  <li>Otwórz <b>Zarządzanie przechowywaniem</b> i przejdź do karty <b>Wolumen</b>.</li>
+  <li>Wybierz wolumen, w którego skład wchodzą dyski SSD, następnie kliknij przycisk <b>Konfiguruj</b>.</li>
+  <li>W wyświetlonym oknie dialogowym przejdź do karty <b>SSD TRIM</b>, następnie zaznacz pole <b>Włącz TRIM</b>.</li>
+<li>Kliknij przycisk <strong>Ustaw harmonogram</strong>, aby określić moment wykonania operacji SSD TRIM przez system.</li>
+<li>Kliknij przycisk <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+
+<li>Funkcja SSD TRIM jest dostępna tylko w niektórych modelach serwera DiskStation i typach macierzy RAID. </li>
+
+
+<li>Niektóre modele dysków SSD nie umożliwiają wykonywania operacji SSD TRIM na woluminach RAID 5 i RAID 6. Listę zgodności można znaleźć w witrynie <a href="http://www.synology.com/" target=_blank>www.synology.com</a>.</li>
+
+
+<li>Funkcji SSD TRIM nie można włączyć w następujących sytuacjach:<ul>
+    <li>Wolumin jest zamontowany z pamięcią podręczną SSD.</li>
+    <li>W systemie zainstalowano pakiet <strong>Time Backup</strong>.</li>
+    <li>Utworzono klaster high-availability przy użyciu pakietu <strong>Menedżer High Availability</strong>.</li>
+  </ul>
+</li>
+<li>Funkcji SSD TRIM nie można włączyć w przypadku jednostek iSCSI LUN na poziomie bloku.</li>
+<li>Podczas wykonywania funkcji SSD TRIM pogarsza się wydajność systemu. Czas wykonywania funkcji TRIM zależy od rozmiaru woluminu i modelu dysku SSD.</li>
+
+<li>Funkcja TRIM włączona na jednym woluminie zostanie także włączona na innych woluminach utworzonych w tej samej grupie dysków lub grupie RAID Group.</li>
+
+</ul>
+</div>
+
+
+</body>
+</html>

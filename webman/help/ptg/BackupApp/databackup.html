@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>C&oacute;pia de Seguran&ccedil;a de Dados</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>C&oacute;pia de Seguran&ccedil;a de Dados</h2>
+
+<p>No separador <b>C&oacute;pia de Seguran&ccedil;a</b> de <b>C&oacute;pia de Seguran&ccedil;a e Duplica&ccedil;&atilde;o</b>, pode executar c&oacute;pia de seguran&ccedil;a de dados espec&iacute;ficos no DiskStation, manualmente ou em conformidade com o agendamento personalizado. Com esta funcionalidade, &eacute; poss&iacute;vel efetuar a c&oacute;pia de seguran&ccedil;a da configura&ccedil;&atilde;o do sistema, do conte&uacute;do de pastas partilhadas e dos dados de pacotes para um destino local, de rede ou c&oacute;pia de seguran&ccedil;a na nuvem.</p>
+
+<h4>Para criar uma tarefa de c&oacute;pia de seguran&ccedil;a:</h4>
+<ol>
+<li>Escolha <b>Criar</b> &gt; <b>Tarefa de c&oacute;pia de seguran&ccedil;a de dados</b>.</li>
+<li>Siga o assistente para concluir a configura&ccedil;&atilde;o. Visite <a href="repository.html">Destino da C&oacute;pia de Seguran&ccedil;a</a> para obter mais informa&ccedil;&otilde;es.</li>
+</ol>
+
+<h4>Para gerir tarefas de c&oacute;pia de seguran&ccedil;a:</h4>
+<p>Selecione uma tarefa existente e clique num dos bot&otilde;es abaixo:</p>
+<ul>
+<li><strong>Editar:</strong> Modifica o destino, a origem, o agendamento e outras defini&ccedil;&otilde;es da tarefa seleccionada.</li>
+<li><strong>Eliminar:</strong> Elimina a tarefa seleccionada.</li>
+<li><strong>Cancelar:</strong> Cancela a tarefa seleccionada e actualmente em execu&ccedil;&atilde;o.</li>
+<li><strong>Efetuar c&oacute;pia de seguran&ccedil;a agora:</strong> Efectua de imediato a c&oacute;pia de seguran&ccedil;a da tarefa seleccionada.</li>
+</ul>
+
+
+<h3>Rota&ccedil;&atilde;o de c&oacute;pia de seguran&ccedil;a</h3>
+<p>A rota&ccedil;&atilde;o de c&oacute;pia de seguran&ccedil;a &eacute; um mecanismo de gest&atilde;o de vers&otilde;es. Ajuda a gerir vers&otilde;es de c&oacute;pia de seguran&ccedil;a eliminando automaticamente as vers&otilde;es mais antigas e desnecess&aacute;rias, e possivelmente libertando espa&ccedil;o de armazenamento. Pode activa esta fun&ccedil;&atilde;o nas <b>Defini&ccedil;&otilde;es de Tarefa</b> ou configurar quando cria uma tarefa de c&oacute;pia de seguran&ccedil;a.</p>
+<h4>Para rodar vers&otilde;es:</h4>
+<ol>
+<li>Seleccione a tarefa de c&oacute;pia de seguran&ccedil;a &agrave; qual deseja aplicar rota&ccedil;&atilde;o de vers&atilde;o, e clique em <strong>Editar</strong>.</li>
+<li>Aceda ao separador <strong>Defini&ccedil;&otilde;es de tarefa</strong> e assinale<strong> Activar rota&ccedil;&atilde;o de c&oacute;pia de seguran&ccedil;a</strong>. </li>
+<li>Aqui poder&aacute; escolhe um de dois m&eacute;todos de rota&ccedil;&atilde;o:</li>
+<ul>
+<li><b>Da vers&atilde;o mais antiga:</b> Este &eacute; um m&eacute;todo b&aacute;sico de rota&ccedil;&atilde;o de vers&atilde;o. Quando activada a condi&ccedil;&atilde;o para a rota&ccedil;&atilde;o, ser&aacute; removido em primeiro lugar a vers&atilde;o mais antiga. </li>
+<li><b>Smart Recycle:</b> Este &eacute; um m&eacute;todo inteligente de rota&ccedil;&atilde;o de vers&atilde;o. Quando &eacute; activada a condi&ccedil;&atilde;o para a rota&ccedil;&atilde;o, o sistema remove as vers&otilde;es seleccionadas pelo mecanismo de reten&ccedil;&atilde;o. O mecanismo de reten&ccedil;&atilde;o funciona da seguinte forma:</li>
+<ul>
+	<li><b>Vers&otilde;es de hora a hora das &uacute;ltimas 24 horas:</b> O sistema mant&eacute;m a vers&atilde;o mais antiga criada numa hora.</li>
+	<li><b>Vers&otilde;es di&aacute;rias do &uacute;ltimo 1 dia a 1 m&ecirc;s:</b> O sistema mant&eacute;m a vers&atilde;o mais antiga criada num dia.</li>
+	<li><b>Vers&atilde;o semanal ap&oacute;s 1 m&ecirc;s:</b> O sistema mant&eacute;m a vers&atilde;o mais antiga criada cada semana.</li>
+</ul>
+</ul>
+<li>Especifique o m&aacute;ximo de <b>n&uacute;mero de vers&otilde;es</b>. Quando o n&uacute;mero de vers&atilde;o exceder este n&uacute;mero, ter&aacute; in&iacute;cio a rota&ccedil;&atilde;o de vers&atilde;o. O n&uacute;mero n&atilde;o inclui vers&otilde;es bloqueadas.</li>
+<li>Se tiver configurado um hor&aacute;rio de c&oacute;pia de seguran&ccedil;a repetido, ser&aacute; retida uma pr&eacute;-visualiza&ccedil;&atilde;o da estimativa da forma como as vers&otilde;es de c&oacute;pia de seguran&ccedil;a ser&atilde;o retidas, e mostrado o ponto no tempo mais antigo de recupera&ccedil;&atilde;o com base nas defini&ccedil;&otilde;es de rota&ccedil;&atilde;o. &nbsp;&nbsp;</li>
+<li>Clique em <strong>OK</strong> para guardar as suas defini&ccedil;&otilde;es. </li>
+</ol>
+
+<div class="section">
+  <h4>Notas:</h4>
+  <ul>
+  <li>As vers&otilde;es bloqueadas nunca ser&atilde;o removidas. Visite <a href="repository.html#lock_version">Destino da C&oacute;pia de Seguran&ccedil;a</a> para obter mais informa&ccedil;&otilde;es.</li>
+  
+  <li>Apenas as tarefas de c&oacute;pia de seguran&ccedil;a multi-vers&atilde;o fornecem fun&ccedil;&otilde;es de rota&ccedil;&atilde;o de vers&atilde;o.</li>
+  <li>A rota&ccedil;&atilde;o de vers&atilde;o n&atilde;o suportada em DSM 5.1 ou inferior.</li>
+  <li>A rota&ccedil;&atilde;o ser&aacute; activada logo ap&oacute;s a altera&ccedil;&atilde;o da defini&ccedil;&atilde;o, ou da conclus&atilde;o da tarefa de c&oacute;pia de seguran&ccedil;a.</li>
+  <li>As vers&otilde;es bloqueadas s&atilde;o exclu&iacute;das quando se calcula o n&uacute;mero m&aacute;ximo de vers&otilde;es.</li>
+  </ul>
+</div>
+
+
+<div class="section">
+<h4>Notas gerais:</h4>
+<ul>
+<li>Os nomes das tarefas podem incluir 1 a 32 caracteres Unicode mas n&atilde;o podem conter os seguintes caracteres:<br> <span class="letterSpace5">! &quot; # $ % &amp; ' ( ) * + , / : ; &lt; = &gt; ? @ [ ] \ ^ ` { } | ~</span></li>
+<li>O comprimento m&aacute;ximo do caminho completo da pasta para c&oacute;pia de seguran&ccedil;a &eacute; 2048 caracteres.</li>
+<li>Se forem carregados mais de 32000 ficheiros ou pastas para uma pasta partilhada EXT3 atrav&eacute;s de AFP, todas as tarefas de c&oacute;pia de seguran&ccedil;a que incluem a pasta partilhada ir&atilde;o falhar.</li>
+<li>Pode salvaguardar uma pasta encriptada esteja ela montada ou n&atilde;o. No entanto, ser&aacute; sempre restaurada como por montar, e n&atilde;o ser&aacute; automaticamente montada no arranque. &Eacute;-lhe pedido que insira ou importe a chave de encripta&ccedil;&atilde;o da pasta partilhada encriptada para a montar.</li>
+<li>N&atilde;o &eacute; suportada a op&ccedil;&atilde;o de efetuar a c&oacute;pia de seguran&ccedil;a de uma pasta encriptada para outra pasta encriptada.</li>
+<li>A utiliza&ccedil;&atilde;o de pastas remotas como origem da c&oacute;pia de seguran&ccedil;a ou destino da c&oacute;pia de seguran&ccedil;a n&atilde;o &eacute; suportada.</li><li>Se o destino da c&oacute;pia de seguran&ccedil;a for um volume, apenas o propriet&aacute;rio da tarefa poder&aacute; executar a tarefa de c&oacute;pia de seguran&ccedil;a. Visite <a href="repository.html">Destino da C&oacute;pia de Seguran&ccedil;a</a> para obter mais informa&ccedil;&otilde;es.</li>
+<li>&Eacute; suportada a c&oacute;pia de seguran&ccedil;a para algumas aplica&ccedil;&otilde;es. Para verificar se um pacote espec&iacute;fico suporta a c&oacute;pia de seguran&ccedil;a e o respetivo conte&uacute;do e limita&ccedil;&otilde;es, consulte a p&aacute;gina de ajuda de cada aplica&ccedil;&atilde;o.</li>
+<li class="enable-eds14">O DiskStation n&atilde;o suporta a c&oacute;pia de seguran&ccedil;a da aplica&ccedil;&atilde;o sem um dispositivo de escrita externo EXT3/EXT4.</li>
+<li class="enable-eds14">O DiskStation n&atilde;o suporta a execu&ccedil;&atilde;o de c&oacute;pia de seguran&ccedil;a para um volume sem um dispositivo de escrita externo EXT3/EXT4.</li>
+<li class="enable-eds14">O DiskStation s&oacute; pode realizar c&oacute;pia de seguran&ccedil;a de pastas partilhadas criadas em dispositivos externos EXT3/EXT4.</li>
+<li class="disable-eds14">O sistema n&atilde;o pode criar c&oacute;pias de seguran&ccedil;a de aplica&ccedil;&otilde;es sem um volume de escrita.</li
+></ul>
+</div>
+<div class="section disable-eds14">
+<h4>Efetuar c&oacute;pia de seguran&ccedil;a das defini&ccedil;&otilde;es ACL do Windows:</h4>
+<p>Tamb&eacute;m &eacute; poss&iacute;vel efetuar a c&oacute;pia de seguran&ccedil;a das defini&ccedil;&otilde;es ACL do Windows dos ficheiros de DiskStation, dependendo dos sistemas de ficheiros do destino:</p>
+<ul>
+
+<li>O <strong>Destino da C&oacute;pia de seguran&ccedil;a local</strong>, <strong>Destino da C&oacute;pia de seguran&ccedil;a da rede</strong> e <strong>Destino da C&oacute;pia de Seguran&ccedil;a da Nuvem P&uacute;blica </strong> podem efetuar a c&oacute;pia de seguran&ccedil;a das defini&ccedil;&otilde;es ACL do Windows independentemente do sistema de ficheiros do destino</li>
+
+<li>A <strong>Sincroniza&ccedil;&atilde;o de Pasta Partilhada</strong> pode efetuar a c&oacute;pia de seguran&ccedil;a das defini&ccedil;&otilde;es ACL do Windows quando o sistema de ficheiros do destino for EXT4<span style="display: inline;" class="enable-rc18015xsp">/BTRFS</span>.</li>
+
+</ul>
+</div>
+
+</body></html>

@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Cria&ccedil;&atilde;o de Pastas Compartilhadas - Ajuda do Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Shared folders are the basic directories where you can store and manage files and folders on your DiskStation. This article shows you how to create a shared folder.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Criar uma pasta compartilhada</h2>
+<p>As pastas compartilhadas s&atilde;o os diret&oacute;rios b&aacute;sicos onde voc&ecirc; pode armazenar e gerenciar arquivos e pastas em seu DiskStation. Antes de armazenar arquivos, &eacute; preciso criar pelo menos uma pasta compartilhada no DSM. </p>
+
+<h4>Para criar uma pasta compartilhada:</h4>
+<ol>
+<li>V&aacute; at&eacute; <strong>Painel de Controle</strong> &gt; <strong>Pasta Compartilhada</strong> e clique em <strong>Criar</strong>.</li>
+<li>Especifique um nome e uma descri&ccedil;&atilde;o para a pasta compartilhada.</li>
+<img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-2.png" class="help_image disable-rc18015xsp disable-rs18016xsp disable-rs2416p disable-rs2416rpp"/> <img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-5.png" class="help_image enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"/>
+<li>Selecione o armazenamento no qual deseja criar a pasta compartilhada (pule essa etapa se houver apenas um armazenamento).</li>
+<img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-3.png" class="help_image disable-rc18015xsp disable-rs18016xsp disable-rs2416p disable-rs2416rpp"/> <img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-6.png" class="help_image enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"/>
+<li>Se necess&aacute;rio, modifique as op&ccedil;&otilde;es a seguir:</li>
+<img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-4.png" class="help_image disable-rc18015xsp disable-rs18016xsp disable-rs2416p disable-rs2416rpp"/> <img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-7.png" class="help_image enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"/>
+
+	<ul>
+		<li><strong>Oculte essa pasta compartilhada em &quot;Meus Locais de Rede&quot;:</strong> Evita que a pasta compartilhada apare&ccedil;a em &quot;Rede&quot; no Explorador de Arquivos do Windows. Essa op&ccedil;&atilde;o n&atilde;o afeta os privil&eacute;gios de acesso da pasta compartilhada.
+			<div class="section"><h4>Nota:</h4>
+				<p>Ocultar uma pasta compartilhada em &quot;Meus Locais de Rede&quot; n&atilde;o afeta os direitos de acesso a ela. O direito de acesso da pasta compartilhada oculta permanecer&aacute; inalterado. Os usu&aacute;rios que tiverem os direitos de acesso corretos &agrave; pasta compartilhada ainda poder&atilde;o acess&aacute;-la digitando &quot;\\nomedoservidor\nome da pasta compartilhada&quot;.</p>
+			</div>
+		</li>
+		<li><strong>Ocultar subpastas e arquivos de usu&aacute;rios sem permiss&otilde;es:</strong> Quando a op&ccedil;&atilde;o <strong>Ocultar subpastas e arquivos de usu&aacute;rios sem permiss&otilde;es</strong> estiver habilitada, se um usu&aacute;rio sem privil&eacute;gios de leitura tentar acessar uma pasta compartilhada atrav&eacute;s do protocolo de compartilhamento de arquivos do Windows, ele n&atilde;o poder&aacute; visualizar as subpastas ou arquivos dentro da pasta compartilhada. Isso impede que os usu&aacute;rios fiquem confusos quando se conectam aos produtos Synology, mas encontram um grande n&uacute;mero de arquivos e subpastas que n&atilde;o podem abrir.
+			<div class="section"><h4>Nota:</h4>
+				<ul>
+					<li>Esse recurso &eacute; suportado apenas no protocolo de compartilhamento de arquivos do Windows.</li>
+					<li>Voc&ecirc; pode modificar as configura&ccedil;&otilde;es de privil&eacute;gio de cada pasta e arquivo no File Station clicando com o bot&atilde;o direito nele. Selecione <strong>Propriedades</strong> no menu suspenso e clique na guia <strong>Permiss&atilde;o</strong>.</li>
+					<li>A pasta compartilhada n&atilde;o ser&aacute; ocultada dos usu&aacute;rios sem permiss&otilde;es, permitindo <strong>Ocultar sub-pastas e arquivos de usu&aacute;rios sem permiss&atilde;o</strong>. Apenas as sub-pastas e arquivos dentro dessa pasta compartilhada ser&atilde;o ocultados.</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+
+
+<li><strong>Habilitar Lixeira:</strong> Quando os arquivos na pasta compartilhada forem exclu&iacute;dos, eles ser&atilde;o movidos para uma pasta chamada <strong>#recycle</strong>. O acesso &agrave; lixeira pode ser limitado a usu&aacute;rios que pertencem ao grupo <strong>administrators</strong>.</li>
+
+<li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"><strong>Tornar o instant&acirc;neo vis&iacute;vel:</strong> As pastas e arquivos em instant&acirc;neos podem ser acessados atrav&eacute;s de servi&ccedil;os de arquivo nas pastas <strong>#snapshot</strong> da pasta compartilhada. Os instant&acirc;neos ser&atilde;o nomeados com o hor&aacute;rio m&eacute;dio de Greenwich (GMT) quando forem tirados.
+	<div class="section"><h4>Nota:</h4>
+		<ul>
+			<li>usu&aacute;rios n&atilde;o t&ecirc;m permiss&atilde;o de grava&ccedil;&atilde;o de nenhuma c&oacute;pia de instant&acirc;neo.</li>
+			<li>Os usu&aacute;rios que t&ecirc;m permiss&atilde;o de leitura da c&oacute;pia do instant&acirc;neo apenas se, no momento em que o instant&acirc;neo for tirado, suas contas de usu&aacute;rio tiverem sido criadas e tiverem recebido permiss&atilde;o de leitura da pasta compartilhada.</li>
+		</ul>
+	</div>
+	</li>
+	<a name="sharequota"></a><li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"><strong>Habilitar cota da pasta compartilhada:</strong> Para especificar a capacidade m&aacute;xima de cada pasta compartilhada, marque a caixa de sele&ccedil;&atilde;o <strong>Habilitar cota da pasta compartilhada</strong> e digite a capacidade m&aacute;xima (ex.: 10 GB) no seguinte campo.
+		<div class="section"><h4>Nota:</h4>
+		<ul>
+			<li>Apenas quando o armazenamento estiver usando o sistema de arquivos Btrfs as op&ccedil;&otilde;es <strong>Tornar o instant&acirc;neo vis&iacute;vel</strong> e <strong>Habilitar cota da pasta compartilhada</strong> estar&atilde;o dispon&iacute;veis para as pastas compartilhadas.</li>
+			<li>O uso do armazenamento combinado dos diret&oacute;rios <strong>home</strong> de todos os usu&aacute;rios n&atilde;o pode ultrapassar a cota de &ldquo;<strong>homes</strong>&rdquo;.</li>
+		</ul>
+		</div>
+	</li>
+
+	<a name="integrity_protection"></a><li class="enable-rc18015xsp enable-rs18016xsp enable-rs2416p enable-rs2416rpp"><strong>Habilitar prote&ccedil;&atilde;o avan&ccedil;ada de integridade de dados:</strong> Para proteger uma pasta compartilhada com estrat&eacute;gias de <strong>soma de verifica&ccedil;&atilde;o CRC32</strong> e <strong>c&oacute;pia na grava&ccedil;&atilde;o</strong> voc&ecirc; pode <strong>habilitar a prote&ccedil;&atilde;o avan&ccedil;ada de integridade de dados</strong> durante a cria&ccedil;&atilde;o da pasta compartilhada. A soma de verifica&ccedil;&atilde;o CRC32 &eacute; aplicada na verifica&ccedil;&atilde;o se os dados permanecerem id&ecirc;nticos a quando eles foram gravados originalmente e notificar&aacute; o usu&aacute;rio quando for detectado qualquer corrompimento. A c&oacute;pia na grava&ccedil;&atilde;o ajuda a melhorar a consist&ecirc;ncia dos dados no desligamento anormal do sistema.
+	<div class="section"><h4>Nota:</h4>
+	<ul>
+		<li>Essa op&ccedil;&atilde;o est&aacute; dispon&iacute;vel apenas para os volumes que usam o sistema de arquivo Btrfs.</li>
+		<li>Voc&ecirc; pode habilitar/desabilitar essa op&ccedil;&atilde;o para cada pasta compartilhada durante sua cria&ccedil;&atilde;o. Essa op&ccedil;&atilde;o n&atilde;o pode ser modificada quando a pasta compartilhada for criada.</li>
+		<li>O desempenho do sistema pode ser afetado se essa op&ccedil;&atilde;o for habilitada.</li>
+	</ul>
+	</div></li>
+
+	<li><strong>Criptografar essa pasta compartilhada:</strong> Se desejar criptografar a pasta compartilhada, fa&ccedil;a o seguinte:
+	<ol>
+		<li>Especifique e confirme uma nova chave de criptografia. A chave de criptografia n&atilde;o pode incluir v&iacute;rgulas (,) ou sinais de igual (=). </li>
+		<li>Se necess&aacute;rio, marque a caixa <b>Montar automaticamente ao iniciar</b> para montar a pasta criptografada automaticamente quando o sistema for iniciado. Se essa op&ccedil;&atilde;o estiver desativada, a pasta compartilhada criptografada ser&aacute; desmontada na pr&oacute;xima vez que o DiskStation reiniciar. Para exibir ou acessar uma pasta desmontada, ser&aacute; preciso mont&aacute;-la manualmente importando ou digitando a chave de criptografia.</li>
+	</ol>
+</ul>
+<li>Clique em <b>OK</b> para concluir.</li>
+
+</ol>
+
+<div class="section">
+<h4>Regras de Nomea&ccedil;&atilde;o de Arquivos Compartilhados:</h4>
+<ul>
+<li>Os nomes das pastas compartilhadas n&atilde;o diferenciam mai&uacute;sculas de min&uacute;sculas e podem ter de 1 a 32 caracteres. Os nomes n&atilde;o podem ter os seguintes caracteres: <strong>! &quot; # $ % &amp; ' ( ) * + , / : ; &lt;= &gt; ? @ [ ] \ ^ ` { } | ~</strong></li>
+<li>Os seguintes nomes s&atilde;o reservados para uso do sistema: <strong>.</strong>, <strong>..</strong>, <strong>global</strong>, <strong>home</strong>, <strong>homes</strong>, <strong>printers</strong>, <strong>public</strong>, <strong>satashare</strong>, <strong>surveillance</strong>, <strong>usbbackup</strong>, <strong>usbshare</strong>. </li>
+<li>O primeiro caractere do nome de uma pasta compartilhada n&atilde;o pode ser um sinal de menos ou um espa&ccedil;o, e o &uacute;ltimo caractere n&atilde;o pode ser um espa&ccedil;o.</li>
+<li>A <strong>descri&ccedil;&atilde;o</strong> da pasta compartilhada diferencia mai&uacute;sculas e min&uacute;sculas e pode ter at&eacute; 64 caracteres Unicode vis&iacute;veis.</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Criptografia de Pastas Compartilhadas:</h4>
+
+<p>A criptografia AES de 256 bits protege dados bloqueando todas as tentativas de acesso n&atilde;o autorizadas. Quando a pasta compartilhada for criptografada, as pessoas sem chave de criptografia n&atilde;o poder&atilde;o acessar ou modificar os dados criptografados, mesmo se removerem os discos r&iacute;gidos do&nbsp;DiskStation e mont&aacute;-los em seu dispositivo. </p>
+
+<h4>Nota:</h4>
+<ul>
+<li>As pastas compartilhadas podem ser criptografadas apenas no momento da cria&ccedil;&atilde;o. </li>
+<li>Os nomes dos arquivos e pastas dentro de pastas compartilhadas criptografadas n&atilde;o podem ultrapassar 143 caracteres ingleses ou 43 caracteres asi&aacute;ticos.</li>
+<li>As pastas compartilhadas criptografadas n&atilde;o podem ser acessadas atrav&eacute;s de NFS.</li>
+<li>Se as senhas forem restauradas para o padr&atilde;o usando o bot&atilde;o de restaura&ccedil;&atilde;o localizado no DiskStation, as pastas compartilhadas criptografadas ser&atilde;o desmontadas e a op&ccedil;&atilde;o de montar automaticamente pastas compartilhadas criptografadas ser&aacute; desativada.</li>
+</ul>
+
+</div>
+
+
+</body>
+</html>

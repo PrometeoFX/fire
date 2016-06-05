@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DHCP Server</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>DHCP Server</h2>
+<p>Serwer DiskStation może pełnić funkcję serwera DHCP i dynamicznie przypisywać adresy IP do klientów DHCP w sieci lokalnej.</p>
+
+<h4>Aby włączyć pakiet DHCP Server:</h4>
+<ol>
+<li>Przejdź do pozycji <strong>Panel sterowania</strong> > <strong>Sieć</strong> > <strong>Interfejs sieciowy</strong>.</li>
+<li>Wybierz interfejs sieciowy (np. LAN), a następnie kliknij <strong>Edytuj</strong>.</li>
+<li>Przejdź do karty <strong>DHCP Server</strong> i zaznacz pole wyboru <b>Włącz DHCP Server</b>.</li>
+<li>Wprowadź wartość w polu <b>Czas dzierżawy adresu</b>, aby ustawić czas dzierżawy (w minutach) adresu IP na serwerze DHCP przypisanego klientom DHCP.</li>
+<li>
+Wprowadź adres DNS klientów DHCP w polach <b>Podstawowy serwer DNS</b> (wymagane) i <b>Dodatkowy serwer DNS</b> (opcjonalne).
+</li>
+<li>
+Ustaw nazwę domeny dla Serwera DHCP w polu <b>Nazwa domeny</b> (opcjonalne).
+</li>
+<li>
+Kliknij przycisk <b>OK</b>.
+</li>
+</ol>
+<h4>Aby dodać podsieć:</h4>
+
+<ol>
+<li>
+Kliknij <b>Dodaj</b>, a następnie podaj informacje w następujących kolumnach:
+</li>
+<ul>
+<li>
+<b>Włącz</b>: włącza lub wyłącza podsieć.
+</li>
+<li>
+<b>Początek</b>: pierwszy adres IP podsieci.
+</li>
+<li>
+<b>Koniec</b>: ostatni adres IP podsieci.
+</li>
+<li>
+<b>Maska sieci</b>: maska podsieci.
+</li>
+<li>
+<b>Brama</b>: brama podsieci.
+</li>
+</ul>
+<li>
+Kliknij przycisk <b>OK</b>.
+</li>
+</ol>
+
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Dodać można maksymalnie 32 podsieci.</li>
+</ul>
+</div>
+
+
+
+<h3>Klienci DHCP</h3>
+
+<p>Aby wyświetlić listę klientów DHCP i ich konfiguracje sieciowe (np. adresy MAC, adresy IP, nazwy hosta oraz ilość czasu pozostałą do zakończenia dzierżawy DHCP), można przejść do karty <strong>Klienci DHCP</strong>.</p>
+
+
+<h3>Rezerwacja DHCP</h3>
+
+<p>Jeżeli chcesz, aby klient zawsze otrzymywał ten sam adres IP podczas odnawiania dzierżawy DHCP, możesz dodać tego klienta do listy rezerwacji adresów.</p>
+
+<h4>Aby dodać klienta do listy rezerwacji adresów:</h4>
+
+<ul>
+<li>Kliknij przycisk <b>Dodaj</b>.</li>
+<li>Określ adres MAC klienta, adres IP do przypisania, a następnie nazwę hosta klienta. </li>
+<li>Kliknij przycisk <b>OK</b>, aby zapisać ustawienia.</li>
+</ul>
+
+
+</body>
+</html>

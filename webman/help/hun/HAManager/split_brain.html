@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Tudathasad&aacute;s</h2>
+
+<p>Ha egy high-availability klaszter rendesen műk&ouml;dik, csak az egyik tag-kiszolg&aacute;l&oacute; l&aacute;thatja el az akt&iacute;v kiszolg&aacute;l&oacute; szerep&eacute;t. Ebben az esetben a passz&iacute;v szerver mind a Heartbeat kapcsolat, mind pedig az adatkapcsolat seg&iacute;ts&eacute;g&eacute;vel &eacute;rz&eacute;keli az akt&iacute;v szerver jelenl&eacute;t&eacute;t.</p>
+
+<p>Valamennyi Heartbeat &eacute;s adatkapcsolat elveszt&eacute;se eset&eacute;n esetleg mindk&eacute;t szerver megk&iacute;s&eacute;relheti &aacute;tvenni az akt&iacute;v szerver szerep&eacute;t. Ez a helyzet &quot;tudathasad&aacute;sos&quot; hibak&eacute;nt ismeretes. Ebben az esetben a high-availability klaszterhez rendelt IP-c&iacute;mhez t&ouml;rt&eacute;nő csatlakoz&aacute;sok &aacute;tir&aacute;ny&iacute;t&aacute;sra ker&uuml;lnek a k&eacute;t kiszolg&aacute;l&oacute; b&aacute;rmelyik&eacute;re, ami kiszolg&aacute;l&oacute;hib&aacute;t okoz.</p>
+        
+<h4>Tudathasad&aacute;sos hiba előfordul&aacute;sa eset&eacute;n:</h4>
+	<ol>
+		<li>A klaszter IP-c&iacute;mhez t&ouml;rt&eacute;nő csatlakoz&aacute;sok &aacute;tir&aacute;ny&iacute;t&aacute;sra ker&uuml;lnek a k&eacute;t kiszolg&aacute;l&oacute; b&aacute;rmelyik&eacute;re, ami kiszolg&aacute;l&oacute;hib&aacute;t okoz. B&aacute;rmelyik kiszolg&aacute;l&oacute;hoz t&ouml;rt&eacute;nő csatlakoz&aacute;s neh&eacute;zs&eacute;gbe &uuml;tk&ouml;zik.</li>
+		<li>A rendszer &eacute;rz&eacute;keli a tudathasad&aacute;sos hib&aacute;t, &eacute;s mindk&eacute;t kiszolg&aacute;l&oacute; lecsatlakoztat&aacute;s&aacute;val elt&aacute;vol&iacute;tja a high-availability klasztert.</li>
+		<li>Amint mindk&eacute;t kiszolg&aacute;l&oacute; visszat&eacute;rt <b>&Ouml;n&aacute;ll&oacute;</b> &aacute;llapotba, be lehet jelentkezni a DiskStation Manager (DSM) programba. Ekkor a high-availability klaszter elt&aacute;vol&iacute;t&aacute;s&aacute;t megelőzően felhalmoz&oacute;dott adatok mindk&eacute;t kiszolg&aacute;l&oacute;n megmaradnak. Annak meg&aacute;llap&iacute;t&aacute;sa ut&aacute;n, hogy melyik kiszolg&aacute;l&oacute; tartalmazza a legfrissebb adatokat, a kiszolg&aacute;l&oacute;k a high-availability klaszter &uacute;jb&oacute;li l&eacute;trehoz&aacute;sa &eacute;rdek&eacute;ben &uacute;jracsatlakoztathat&oacute;k.</li>
+	</ol>
+ </body>
+</html>

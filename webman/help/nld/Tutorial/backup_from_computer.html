@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Hoe met Cloud Station een back-up maken van de gegevens op mijn pc</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Hoe met Cloud Station een back-up maken van de gegevens op mijn pc</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/backup_from_PC/07_1_back_up_your_data_from_pc.png" />
+<h2>Overzicht</h2>
+<p>Cloud Station is meer dan alleen gesofisticeerde platformonafhankelijke synchronisatiesoftware. Gebruikers kunnen hem ook gebruiken als ze op een meer doeltreffende wijze een back-up van hun persoonlijke computer willen maken. Er zijn een aantal voordelen verbonden aan het gebruik van Cloud Station als back-upinstrument. Real-timereplicatie zorgt in de eerste plaats voor een betere RPO, een kortere periode waarin gegevens van uw pc definitief verloren kunnen gaan ten gevolge van een ernstig defect. Dat gaat niet alleen onmiddellijk, het helpt u ook bandbreedte besparen in vergelijking met een traditionele back-up die telkens grote hoeveelheden bandbreedte opslokt. U kunt bestanden in eenzelfde map die u niet wilt back-uppen gemakkelijk uitfilteren door bestandsgrootte en -type in te stellen op uw pc-client. Cloud Station kan bovendien tot 32 geschiedenisversies van een enkel bestand bijhouden. Zo kunt u met Cloud Station vanaf de server (NAS) een back-up terugzetten naar een pc-client.</p>
+
+<h3 class="list_head">1. Cloud Station instellen op Synology NAS</h3>
+<ol>
+
+<li>Meld u bij DSM aan met een account van de groep <strong>administrator</strong>.</li>
+<li>Start <b>Cloud Station</b> op.</li>
+<li>Als u de functie gebruiker basismap nog niet hebt ingeschakeld, wordt u gevraagd om dit te doen. Klik op <strong>OK</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/01.png" border="1" />
+<li>U wordt omgeleid naar de pagina met de gebruikersinstellingen. Schakel de gebruiker basismapinstelling in en klik op <b>Toepassen</b>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" />
+<li>Ga terug naar <b>Cloud Station</b> en u wordt gevraagd om het in te schakelen. Klik op <b>Ja</b>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" />
+<div class="code_div"><b>Opmerking:</b> QuickConnect is een relayservice waarmee u van buiten uw lokaal netwerk gemakkelijk een verbinding kunt maken met uw Synology NAS. Als u uw bestanden wilt synchroniseren wanneer u onderweg bent, raden we u aan om QuickConnect te installeren. Ga hiervoor naar <b>Configuratiescherm</b> > <b>QuickConnect</b>.</div>
+
+<li>Ga naar <b>Rechten</b> en geef op welk gebruikers Cloud Station kunnen gebruiken. Klik op <b>Opslaan</b>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" />
+<li>Installeer een gedeelde map op uw Synology NAS voor back-updoeleinden. Ga hiervoor naar <strong>Configuratiescherm</strong> &gt; <strong>Gedeelde map</strong> en klik op <strong>Maken</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" />
+<li>Geef uw map een naam en voer de overeenkomstige details in. Klik op <strong>OK</strong>. We zullen de map bijvoorbeeld <strong>Backup</strong> noemen.</li>
+<img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" />
+<li>Geef op het tabblad <strong>Machtigingen</strong> op welke gebruikers toegang zullen krijgen tot de map. We zullen bij wijze van voorbeeld <strong>admin</strong> <strong>lezen/schrijven</strong>-machtigingen voor de map toekennen. Klik op <strong>OK</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/07.png" border="1" />
+<li>Ga naar <strong>Cloud Station</strong> &gt; <strong>Instellingen</strong> > <strong>Delen</strong> en selecteer de map <b>Back-up</b> en klik op <strong>Inschakelen</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/08.png" border="1" />
+</ol>
+
+<h3 class="list_head">2. Cloud Station op uw Windows-pc installeren</h3>
+<p>Volg deze stappen om Cloud Station op uw pc of Mac te installeren</p>
+
+<h4>2,1 Voor pc</h4>
+
+<ol>
+
+<li>Ga naar <strong>Cloud Station</strong> &gt; <strong>Overzicht</strong> en klik op de knop <strong>Download</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/09.png" border="1" />
+<li>Klik op de knop om Cloud Station voor Windows-pc te downloaden. (U kunt Cloud Station ook downloaden vanaf <a href="https://www.synology.com/en-us/support/download" target="_blank">Synology Downloadcenter</a>.)</li>
+<li>Start het installatieprogramma op uw computer en volg de instructies om Cloud Station te installeren. </li>
+<li>Voer na de installatie <strong>Cloud Station</strong> uit op uw computer. Klik op <strong>Nu starten</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" />
+<li>Voer het adres in voor het Synology NAS waarop Cloud Station (of QuickConnect ID) wordt uitgevoerd, samen met uw gebruikersnaam en wachtwoord. (U kunt ook rechtsklikken op het zoekpictogram en Cloud Station zoekt automatisch naar andere Synology NAS in uw LAN). Klik op <strong>Volgende</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" />
+<div class="code_div"><b>Opmerking:</b> zorg ervoor dat de ingevoerde account gemachtigd is in <strong>Cloud Station</strong> > <strong>Rechten</strong> op het Synology NAS.</div>
+<li>Selecteer hoeu de taak wilt instellen (in dit voorbeeld selecteren we <strong>Geavanceerde instelling</strong> aangezien we een map speciaal voor back-up willen instellen). Klik op <strong>Volgende</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
+<li>Selecteer een map op uw computer om deze te synchroniseren met de back-upmap die u eerder op uw Synology NAS hebt aangemaakt. Klik op <strong>Volgende</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" />
+<li>Klik op <strong>Voltooid</strong> om de installatie te voltooien.</li>
+<img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" />
+</ol>
+
+<p><strong>Een andere taak maken</strong>:
+<ol>
+<li>Ga naar <strong>Cloud Station </strong>> <strong>Instellingen</strong> en schakel een gedeelde map in voor deze nieuwe taak. Mijn voorbeeld is<strong> photo</strong>.​ Zorg ervoor dat u lees/schrijfrechten hebt voor <strong>photo</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
+<li>Klik in Cloud Station op uw pc op <strong>Maken</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" />
+<li>​Selecteer een Synology NAS voor de nieuwe taak. In dit voorbeeld selecteren we <strong>Aangesloten Synology NAS</strong> aangezien we een andere taak voor dezelfde Synology NAS willen maken. Klik op <strong>Volgende</strong>.​</li>
+<img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" />
+<li>Klik op <strong>Geavanceerde instelling</strong> en volg de overige instructies van de wizard om de instelling te voltooien. </li>
+<img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
+</ol>
+
+<h4>2,2 Voor Mac</h4>
+  <ol>
+    <li>Ga naar <strong>Cloud Station</strong> &gt; <strong>Overzicht</strong> en klik op de knop <strong>Download</strong>.</li>
+
+    <li>Klik op de knop om Cloud Station voor Mac te downloaden (U kunt Cloud Station ook downloaden vanaf <a href="https://www.synology.com/en-us/support/download" target="_blank">Synology Downloadcenter</a>.)</li>
+<img src="../../images/Backup/1x/backup_from_PC/18.png" border="1" />
+    <li>Start het installatieprogramma op uw computer en volg de instructies om Cloud Station te installeren. </li>
+    <li>Voer na de installatie <strong>Cloud Station</strong> uit op uw computer. Klik op <strong>Nu starten</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" />      
+<li>Voer het adres in voor het Synology NAS waarop Cloud Station (of QuickConnect ID) wordt uitgevoerd, samen met uw gebruikersnaam en wachtwoord. (U kunt ook rechtsklikken op het zoekpictogram en Cloud Station zoekt automatisch naar andere Synology NAS in uw LAN). Klik op <strong>Volgende</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" />   
+    <div class="code_div"><b>Opmerking:</b> zorg ervoor dat de ingevoerde account gemachtigd is in <strong>Cloud Station</strong> > <strong>Rechten</strong> op het Synology NAS.</div>
+<li>Selecteer hoeu de taak wilt instellen (in dit voorbeeld selecteren we <strong>Geavanceerde instelling</strong> aangezien we een map speciaal voor back-up willen instellen). Klik op <strong>Volgende</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
+<li>Selecteer een map op uw computer om deze te synchroniseren met de back-upmap die u eerder op uw Synology NAS hebt aangemaakt. Klik op <strong>Volgende</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" />
+<li>Klik op <strong>Voltooid</strong> om de installatie te voltooien.</li>
+  </ol>
+  
+<p><strong>Om een nieuwe taak aan te maken</strong>:
+<ol>
+<li>Ga naar <strong>Cloud Station </strong>> <strong>Instellingen</strong> en schakel een gedeelde map in voor deze nieuwe taak. Mijn voorbeeld is<strong> photo</strong>.​ Zorg ervoor dat u lees/schrijfrechten hebt voor <strong>photo</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
+<li>Klik in Cloud Station op uw computer op <strong>Maken</strong>.</li>
+<img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" />
+<li>​Selecteer een Synology NAS voor de nieuwe taak. In dit voorbeeld selecteren we <strong>Aangesloten Synology NAS</strong> aangezien we een andere taak voor dezelfde Synology NAS willen maken. Klik op <strong>Volgende</strong>.​</li>
+<img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" />
+<li>Klik op <strong>Geavanceerde instelling</strong> en volg de overige instructies van de wizard om de instelling te voltooien. </li>
+<img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
+</ol> 
+
+<h3 class="list_head">3. Gegevens ophalen van Cloud Station</h3>
+<p>Als u per ongeluk een bestand verwijdert of overschrijft, kunt u dat terughalen met Cloud Station. </p>  
+<h3>4.1 Om een vorige versie van een op uw pc gesynchroniseerd bestand te downloaden</h3>  
+  <ol>
+      <li>Klik op het Cloud Station-pictogram op uw systeembalk en klik op het mappictogram.</li>
+<img src="../../images/Backup/1x/backup_from_PC/25.png" border="1" />       
+      <li>Rechtsklik op het geselecteerde bestand en selecteer <strong>Synology Cloud Station</strong> &gt; <strong>Vorige versie doorbladeren</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/26.png" border="1" />    
+   <li>Zoek de versie die u wilt downloaden en klik op het pictogram Downloaden. </li>
+<img src="../../images/Backup/1x/backup_from_PC/27.png" border="1" />    
+  </ul>
+    <li>Voer de bestandsnaam in en selecteer het doel om het bestand op te slaan. 
+</ol>
+<h3>4.1 Om een vorige versie van een op een Mac gesynchroniseerd bestand te downloaden</h3>  
+  <ol>
+      <li>Klik op het Cloud Station-pictogram op uw systeembalk en klik op het mappictogram.</li>
+<img src="../../images/Backup/1x/backup_from_PC/28.png" border="1" />         
+      <li>Rechtsklik op het geselecteerde bestand en selecteer <strong>Synology Cloud Station</strong> &gt; <strong>Vorige versie doorbladeren</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/29.png" border="1" />        
+   <li>Zoek de versie die u wilt downloaden en klik op het pictogram Downloaden. </li>
+<img src="../../images/Backup/1x/backup_from_PC/30.png" border="1" />       
+    <li>Voer de bestandsnaam in en selecteer het doel om het bestand op te slaan. 
+</ol>
+<h3>4.3 Om een vorige versie van een van een op Cloud Station gesynchroniseerd bestand terug te zetten</h3>   
+<ol>
+    <li>Ga naar <strong>Cloud Station </strong>&gt; <strong>Versiegeschiedenis</strong> en selecteer de eerder aangemaakte map <strong>Back-up</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/31.png" border="1" />    
+    <li>Selecteer het bestand dat u wilt terughalen en klik op <strong>Actie</strong> > <strong>Vorige versies doorbladeren</strong>. </li>
+<img src="../../images/Backup/1x/backup_from_PC/34.png" border="1" />      
+    <li>Selecteer de versie van het bestand dat u wilt downloaden en klik op <strong>Downloaden</strong>. Als u zeker weet dat u de geselecteerde versie wilt terugzetten, klikt u op <strong>Terugzetten</strong> waarna uw huidige versie overschreven zal worden.</li>
+<img src="../../images/Backup/1x/backup_from_PC/35.png" border="1" />    
+  </ol>
+
+<h3 class="list_head">4. Belangrijke opmerkingen</h3>  
+  <ol>
+<li>Houd eerdere versies altijd bij voor het geval een bestand per ongeluk wordt verwijderd of overschreven.</li>
+<li>In Algemene instellingen kunt u configureren of een bestand van uw NAS zal worden teruggehaald of verwijderd als u een bestand op uw pc verwijdert.</li>
+</ol>
+  <h3 class="list_head">5. Extra bescherming van uw gegevens</h3>
+  
+<p>Als u nog andere manieren zoekt om uw gegevens te beschermen en te back-uppen, klik dan <a href="https://www.synology.com/en-global/knowledgebase/tutorials#BackupRestore" target="_blank">hier</a> om tutorials te bekijken met andere back-upservices op DSM.</p>
+
+</div>
+<div class="page-info">
+  <ul>
+    <li>Volgende in dit onderwerp: <a href="backup_backup.html">Gegevens van uw Synology NAS back-uppen</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>
