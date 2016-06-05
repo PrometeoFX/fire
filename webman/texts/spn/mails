@@ -726,12 +726,12 @@ Atentamente,
 
 [MyDSPasswordChanged]
 Category: System,Important
-Title: La contraseña de la Cuenta Synology ha cambiado
-Subject: Se ha cambiado la contraseña de su Cuenta Synology en %HOSTNAME%
+Title: La contraseña de la Cuenta eCore  ha cambiado
+Subject: Se ha cambiado la contraseña de su Cuenta eCore  en %HOSTNAME%
 
 Estimado usuario:
 
-Esto es una confirmación de que la contraseña de su Cuenta Synology [%MYDS_ACCOUNT%] ha cambiado a través de la Cuenta Synology de %HOSTNAME%.
+Esto es una confirmación de que la contraseña de su Cuenta eCore  [%MYDS_ACCOUNT%] ha cambiado a través de la Cuenta eCore  de %HOSTNAME%.
 
 Atentamente,
 %COMPANY_NAME%
