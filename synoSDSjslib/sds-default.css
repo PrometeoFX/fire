@@ -1453,19 +1453,25 @@ a,
 	.synohdpackdebug #sds-taskbuttons-panel li .x-btn.x-btn-icon.launched.active .x-btn-mc{
 		background-image:url("../../synohdpack/images/dsm/resources/images/taskbar/taskbar_bt.png") !important;
 		background-size:186px;
-		outline:1px green dashed}}
+		outline:1px green dashed
+		}
+	}
+/*Menu de usuario*/	
 .sds-user-menu{
 	min-width:140px;
 	padding:4px 10px 4px 10px;
-position:absolute;
-top:39px;right:0px;
-overflow:hidden;z-index:12000;
-		background:#fff repeat-x;
-		background-image:url("images/taskbar/taskbar_shadow.png");
-		box-shadow:-2px 5px 8px rgba(0,0,0,0.5);user-select:none;
-		-moz-user-select:-moz-none;
-		-khtml-user-select:none;
-		-webkit-user-select:none;}
+	position:absolute;
+	bottom:40px;
+	right:0px;
+	overflow:hidden;
+	z-index:12000;
+	background:#fff repeat-x;
+	box-shadow:-2px 5px 8px rgba(0,0,0,0.5);user-select:none;
+	-moz-user-select:-moz-none;
+	-khtml-user-select:none;
+	-webkit-user-select:none;
+}
+
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-resolution: 144dpi){
 	.synohdpack .sds-user-menu{
 		background-image:url("../../synohdpack/images/dsm/resources/images/taskbar/taskbar_shadow.png");
