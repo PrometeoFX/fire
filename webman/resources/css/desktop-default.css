@@ -2294,7 +2294,7 @@ input.x-form-text {
     position: absolute
 }
 .classical.syno-sds-appview .crossbrowser-background {
-    background-color: #F5FAFF;
+    background-color: #fff;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ieOpacity)";
