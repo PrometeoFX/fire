@@ -47,7 +47,7 @@
 <p>若要构建 high-availability 集群，请注意以下有关网络设置的说明。</p>
   <ul>
 <li><b>网络设置：</b>两台服务器必须有属于相同子网的静态 IP 地址。</li>
-<li><b>局域网端口数量：</b>两个服务器必须有相同数量的局域网端口。如果 Synology NAS 配有额外的网卡接口，这些网卡也算为额外的局域网端口。</li>
+<li><b>局域网端口数量：</b>两个服务器必须有相同数量的局域网端口。如果 eCore Server 配有额外的网卡接口，这些网卡也算为额外的局域网端口。</li>
 <li><b>连接限制：</b>服务器无法通过代理服务器、DHCP、IPv6、PPPoE 和 Wi-Fi 连接到网络。构建 high-availability 集群之前请确认这些功能已关闭。</li>
 <li><strong>无 DHCP 服务：</strong>已组合进集群的服务器无法使用内置的 DHCP 服务器选项。</li>
 <li><strong>Link Aggregation 设置：</strong>两台服务器必须拥有相同的 Link Aggregation 设置才能进行数据网络与 Heartbeat 连接。创建 High-Availability 集群后，Link Aggregation 设置将无法修改。</li>

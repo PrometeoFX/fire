@@ -47,7 +47,7 @@
   <p>在嘗試建立 high-availability 叢集時，請注意下列關於網路設定的指示。</p>
   <ul>
     <li><b>網路設定：</b>兩台伺服器都必須具備位於同一子網路內的固定 IP 位址。</li>
-    <li><b>網路孔數量：</b>兩台伺服器必須擁有相同的網路孔數量。若您的 Synology NAS 上裝有額外的網路卡介面，則該網路卡也算額外的網路孔。 </li>
+    <li><b>網路孔數量：</b>兩台伺服器必須擁有相同的網路孔數量。若您的 eCore Server 上裝有額外的網路卡介面，則該網路卡也算額外的網路孔。 </li>
     <li><b>連線限制：</b>伺服器無法透過 proxy 伺服器、DHCP、IPv6、PPPoE 及 Wi-Fi 連接至網路。在嘗試建立 high-availability 叢集前，請確認這些功能皆已停用。</li>
     <li><strong><strong><strong>無 DHCP </strong>服務：</strong></strong>伺服器組成叢集後，無法使用內建的 DHCP 伺服器選項。</li>
    <li><strong><strong><strong>Link Aggregation 設定</strong>：</strong></strong>兩台伺服器皆須擁有相同的 link aggregation 設定，以用於資料網路及 heartbeat 連線。建立 high-availability 叢集後，無法修改 link aggregation 設定。</li>

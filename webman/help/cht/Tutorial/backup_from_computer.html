@@ -17,14 +17,14 @@
 <div class="tutorials_content"><img src="../../images/Backup/1x/backup_from_PC/07_1_back_up_your_data_from_pc.png" /><h2>概述</h2>
 <p>Cloud Station 不僅是功能完整的跨平台同步軟體，亦可提供使用者更智慧的方式來備份個人電腦。 使用 Cloud Station 作為您的備份伙伴有數個優點。 首先，即時同步可提供較佳的復原點目標 (RPO)，亦即當您不慎遺失電腦上的資料時，便能縮短資料遺失 (無法復原) 的時間以降低損害。 Cloud Station 不僅能即時同步，相較於須消耗大量頻寬的傳統備份方式，Cloud Station 更可替您大幅節省頻寬。 只要在您的 PC 用戶端設定檔案大小或檔案類型，便能夠在相同資料夾中輕鬆過濾掉不想備份的檔案。 針對同一檔案，Cloud Station 能保留多達 32 個版本，任一版本皆可從伺服器 (NAS) 端還原至 PC 用戶端。</p>
 
-<h3 class="list_head">1. 在 Synology NAS 上設定 Cloud Station</h3>
+<h3 class="list_head">1. 在 eCore Server 上設定 Cloud Station</h3>
 <ol>
 
 <li>使用屬於 <strong>administrators</strong> 群組的帳號登入 DSM。</li>
 <li>開啟 <b>Cloud Station</b>。</li>
-<li>若您還未啟動使用者家目錄，系統會要求您先啟動該功能。 按一下<strong>確定</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/01.png" border="1" /><li>您將會被重新導向至使用者設定頁面。 啟動使用者家目錄，然後按一下<b>套用</b>。</li><img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" /><li>回到 <b>Cloud Station</b>，系統將會要求您先啟動此套件。 按一下<b>是</b>。</li><img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" /><div class="code_div"><b>注意</b>：QuickConnect 是一種轉送服務，讓您在區域網路外仍可輕而易舉地連線至您的 Synology NAS。 若您想隨時隨地同步您的檔案，建議您前往<b>控制台</b> &gt; <b>QuickConnect</b> 來設定此功能。</div>
+<li>若您還未啟動使用者家目錄，系統會要求您先啟動該功能。 按一下<strong>確定</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/01.png" border="1" /><li>您將會被重新導向至使用者設定頁面。 啟動使用者家目錄，然後按一下<b>套用</b>。</li><img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" /><li>回到 <b>Cloud Station</b>，系統將會要求您先啟動此套件。 按一下<b>是</b>。</li><img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" /><div class="code_div"><b>注意</b>：QuickConnect 是一種轉送服務，讓您在區域網路外仍可輕而易舉地連線至您的 eCore Server。 若您想隨時隨地同步您的檔案，建議您前往<b>控制台</b> &gt; <b>QuickConnect</b> 來設定此功能。</div>
 
-<li>前往<b>權限</b>來指定哪些使用者可以使用 Cloud Station。 按一下<b>儲存</b>。</li><img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" /><li>在您的 Synology NAS 建立備份時使用的資料夾&nbsp;。 若要設定，前往<strong>控制台</strong> &gt; <strong>共用資料夾</strong>並按一下<strong>新增</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" /><li>為您的資料夾命名並在欄位中填入您的資料。 按一下<strong>確定</strong>。 例如，資料夾命名為 <strong>Backup</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" /><li>在<strong>權限</strong>頁籤中，指定對此資料夾有存取權限的使用者。 例如，指派資料夾的 <strong>read/write </strong>權限給 <strong>admin</strong>。 按一下<strong>確定</strong>。 </li><img src="../../images/Backup/1x/backup_from_PC/07.png" border="1" /><li>前往 <strong>Cloud Station</strong> &gt; <strong>設訂</strong> &gt; <strong>分享</strong>，選擇<b>備份</b>資料夾並點一下<strong>啟動</strong>。 </li><img src="../../images/Backup/1x/backup_from_PC/08.png" border="1" /></ol>
+<li>前往<b>權限</b>來指定哪些使用者可以使用 Cloud Station。 按一下<b>儲存</b>。</li><img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" /><li>在您的 eCore Server 建立備份時使用的資料夾&nbsp;。 若要設定，前往<strong>控制台</strong> &gt; <strong>共用資料夾</strong>並按一下<strong>新增</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" /><li>為您的資料夾命名並在欄位中填入您的資料。 按一下<strong>確定</strong>。 例如，資料夾命名為 <strong>Backup</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" /><li>在<strong>權限</strong>頁籤中，指定對此資料夾有存取權限的使用者。 例如，指派資料夾的 <strong>read/write </strong>權限給 <strong>admin</strong>。 按一下<strong>確定</strong>。 </li><img src="../../images/Backup/1x/backup_from_PC/07.png" border="1" /><li>前往 <strong>Cloud Station</strong> &gt; <strong>設訂</strong> &gt; <strong>分享</strong>，選擇<b>備份</b>資料夾並點一下<strong>啟動</strong>。 </li><img src="../../images/Backup/1x/backup_from_PC/08.png" border="1" /></ol>
 
 <h3 class="list_head">2. 在 Mac 或 PC 上設定 Cloud Station</h3>
 <p>請依照下列步驟在 Mac 或 Windows 電腦上設定 Cloud Station</p>
@@ -35,23 +35,23 @@
 
 <li>前往 <strong>Cloud Station</strong> &gt; <strong>總覽</strong>，然後按一下<strong>下載</strong>按鈕。</li><img src="../../images/Backup/1x/backup_from_PC/09.png" border="1" /><li>按一下按鈕來下載適用 Windows PC 系統的 Cloud Station。 (亦可前往 <a href="https://www.synology.com/en-us/support/download" target="_blank">Synology 下載中心</a>進行下載。)</li>
 <li>在電腦上開啟安裝程式，並依照指示安裝 Cloud Station。 </li>
-<li>安裝完成後，在電腦上執行 <strong>Cloud Station</strong>。 按一下<strong>立即開始</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" /><li>輸入您的電腦名稱、執行 Cloud Station 的 Synology NAS 位址 (或 QuickConnect ID)、使用者名稱及密碼。 （您可以點一下右邊的搜尋圖示讓 Cloud Station 自動尋找 LAN 裡其他的 Synology NAS。） 按一下<strong>下一步</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" /><div class="code_div"><strong>注意</strong>：請確認您已賦予權限給該使用者帳號 (可前往 Synology NAS 上的 <b>Cloud Station</b> &gt; <strong>權限</strong>進行設定)。</div>
-<li>選擇您想要如何建立您的任務。（例如<strong>進階設定 </strong>來建立為了備份的資料夾。) 按一下<strong>下一步</strong>。 </li><img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" /><li>選擇一個電腦上的資料夾來與 Synology NAS 上的 Backup 資料夾保持同步。 按一下<strong>下一步</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" /><li>按一下<strong>完成</strong>來完成設定。</li><img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" /></ol>
+<li>安裝完成後，在電腦上執行 <strong>Cloud Station</strong>。 按一下<strong>立即開始</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" /><li>輸入您的電腦名稱、執行 Cloud Station 的 eCore Server 位址 (或 QuickConnect ID)、使用者名稱及密碼。 （您可以點一下右邊的搜尋圖示讓 Cloud Station 自動尋找 LAN 裡其他的 eCore Server。） 按一下<strong>下一步</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" /><div class="code_div"><strong>注意</strong>：請確認您已賦予權限給該使用者帳號 (可前往 eCore Server 上的 <b>Cloud Station</b> &gt; <strong>權限</strong>進行設定)。</div>
+<li>選擇您想要如何建立您的任務。（例如<strong>進階設定 </strong>來建立為了備份的資料夾。) 按一下<strong>下一步</strong>。 </li><img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" /><li>選擇一個電腦上的資料夾來與 eCore Server 上的 Backup 資料夾保持同步。 按一下<strong>下一步</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" /><li>按一下<strong>完成</strong>來完成設定。</li><img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" /></ol>
 
 <p>若要建立新任務：<ol>
-<li>前往 <strong>Cloud Station</strong> &gt; <strong>設定</strong>並為此新任務啟動資料夾。 例如，<strong>photo</strong>。確認您對 <strong>photo </strong>有 read/write 權限。</li><img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" /><li>在您 PC 上的 Cloud Station 按一下<strong>建立</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" /><li>為您的新任務選擇 Synology NAS。  例如<strong>已連線的 Synology NAS </strong>來為同一台 Synology NAS 建立任務。 按一下<strong>下一步</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" /><li>按一下<strong>進階設定</strong>並跟隨螢幕上的精靈指示來完成設定。 </li><img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" /></ol>
+<li>前往 <strong>Cloud Station</strong> &gt; <strong>設定</strong>並為此新任務啟動資料夾。 例如，<strong>photo</strong>。確認您對 <strong>photo </strong>有 read/write 權限。</li><img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" /><li>在您 PC 上的 Cloud Station 按一下<strong>建立</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" /><li>為您的新任務選擇 eCore Server。  例如<strong>已連線的 eCore Server </strong>來為同一台 eCore Server 建立任務。 按一下<strong>下一步</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" /><li>按一下<strong>進階設定</strong>並跟隨螢幕上的精靈指示來完成設定。 </li><img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" /></ol>
 
 <h4>2.2 在 Mac 上</h4>
   <ol>
     <li>前往 <strong>Cloud Station</strong> &gt; <strong>總覽</strong>，然後按一下<strong>下載</strong>按鈕。</li>
 
     <li>按一下按鈕來下載適用於 Mac 的 Cloud Station。 (亦可前往 <a href="https://www.synology.com/en-us/support/download" target="_blank">Synology 下載中心</a>進行下載。)</li><img src="../../images/Backup/1x/backup_from_PC/18.png" border="1" /><li>在電腦上開啟安裝程式，並依照指示安裝 Cloud Station。 </li>
-    <li>安裝完成後，在電腦上執行 <strong>Cloud Station</strong>。 按一下<strong>立即開始</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" /><li>輸入您的電腦名稱、執行 Cloud Station 的 Synology NAS 位址 (或 QuickConnect ID)、使用者名稱及密碼。 （您可以點一下右邊的搜尋圖示讓 Cloud Station 自動尋找 LAN 裡其他的 Synology NAS。） 按一下<strong>下一步</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" /><div class="code_div"><strong>注意</strong>：請確認您已賦予權限給該使用者帳號 (可前往 Synology NAS 上的 <b>Cloud Station</b> &gt; <strong>權限</strong>進行設定)。</div>
-<li>選擇您想要如何建立您的任務。（例如<strong>進階設定 </strong>來建立為了備份的資料夾。) 按一下<strong>下一步</strong>。 </li><img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" /><li>選擇一個電腦上的資料夾來與 Synology NAS 上的 Backup 資料夾保持同步。 按一下<strong>下一步</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" /><li>按一下<strong>完成</strong>來完成設定。</li>
+    <li>安裝完成後，在電腦上執行 <strong>Cloud Station</strong>。 按一下<strong>立即開始</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" /><li>輸入您的電腦名稱、執行 Cloud Station 的 eCore Server 位址 (或 QuickConnect ID)、使用者名稱及密碼。 （您可以點一下右邊的搜尋圖示讓 Cloud Station 自動尋找 LAN 裡其他的 eCore Server。） 按一下<strong>下一步</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" /><div class="code_div"><strong>注意</strong>：請確認您已賦予權限給該使用者帳號 (可前往 eCore Server 上的 <b>Cloud Station</b> &gt; <strong>權限</strong>進行設定)。</div>
+<li>選擇您想要如何建立您的任務。（例如<strong>進階設定 </strong>來建立為了備份的資料夾。) 按一下<strong>下一步</strong>。 </li><img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" /><li>選擇一個電腦上的資料夾來與 eCore Server 上的 Backup 資料夾保持同步。 按一下<strong>下一步</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" /><li>按一下<strong>完成</strong>來完成設定。</li>
   </ol>
   
 <p><strong>若要新增任務：</strong><ol>
-<li>前往 <strong>Cloud Station</strong> &gt; <strong>設定</strong>並為此新任務啟動資料夾。 例如，<strong>photo</strong>。確認您對 <strong>photo </strong>有 read/write 權限。</li><img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" /><li>在您 PC 上的 Cloud Station 按一下<strong>建立</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" /><li>為您的新任務選擇 Synology NAS。 例如<strong>已連線的 Synology NAS </strong>來為同一台 Synology NAS 建立任務。 按一下<strong>下一步</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" /><li>按一下<strong>進階設定</strong>並跟隨螢幕上的精靈指示來完成設定。 </li><img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" /></ol> 
+<li>前往 <strong>Cloud Station</strong> &gt; <strong>設定</strong>並為此新任務啟動資料夾。 例如，<strong>photo</strong>。確認您對 <strong>photo </strong>有 read/write 權限。</li><img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" /><li>在您 PC 上的 Cloud Station 按一下<strong>建立</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" /><li>為您的新任務選擇 eCore Server。 例如<strong>已連線的 eCore Server </strong>來為同一台 eCore Server 建立任務。 按一下<strong>下一步</strong>。</li><img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" /><li>按一下<strong>進階設定</strong>並跟隨螢幕上的精靈指示來完成設定。 </li><img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" /></ol> 
 
 <h3 class="list_head">3. 從 Cloud Station 取回您的資料</h3>
 <p>如果您不小心刪除或覆寫您的檔案，Cloud Station 能幫您輕鬆的取回您的資料 。 </p>  
@@ -78,7 +78,7 @@
 </div>
 <div class="page-info">
   <ul>
-    <li>同主題下一篇：<a href="backup_backup.html">備份您的 Synology NAS 以保障資料安全</a> </li>
+    <li>同主題下一篇：<a href="backup_backup.html">備份您的 eCore Server 以保障資料安全</a> </li>
   </ul>
 </div>
 </body>

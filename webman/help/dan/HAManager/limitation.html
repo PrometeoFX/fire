@@ -47,7 +47,7 @@
   <p>Bemærk følgende retningslinjer vedrørende netværksindstillinger ved forsøg på at danne en high-availability-klynge.</p>
   <ul>
     <li><b>Netværksindstillinger:</b> Begge servere skal have statiske IP-adresser, der hører til samme undernet.</li>
-    <li><b>Antal LAN-porte:</b> Begge servere skal have samme antal LAN-porte. Hvis din Synology NAS er udstyret med yderligere netværkskortinterfaces, tælles disse kort også med som yderligere LAN-porte. </li>
+    <li><b>Antal LAN-porte:</b> Begge servere skal have samme antal LAN-porte. Hvis din eCore Server er udstyret med yderligere netværkskortinterfaces, tælles disse kort også med som yderligere LAN-porte. </li>
     <li><b>Forbindelsesbegrænsninger:</b> Serverne kan ikke oprette forbindelse til netværket via en proxy-server, DHCP, IPv6, PPPoE og Wi-Fi. Sørg for, at disse funktioner er deaktiveret, før du forsøger at danne en high-availability-klynge.</li>
     <li><strong>Ingen DHCP-tjeneste:</strong> Serverne kan ikke bruge indbyggede DHCP-servervalg, når de kombineres i en klynge.</li>
    <li><strong>Indstillinger for Link Aggregation:</strong> Begge servere skal have de samme indstillinger for Link Aggregation til datanetværket og heartbeat-forbindelse. Når high-availability-klyngen er oprettet, kan indstillinger for Link Aggregation ikke ændres.</li>

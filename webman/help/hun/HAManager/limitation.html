@@ -47,7 +47,7 @@
   <p>High-availability klaszter kialakítása során vegye figyelembe az alábbi, hálózati környezetre vonatkozó útmutatást.</p>
   <ul>
     <li><b>Hálózati beállítások:</b> Mindkét kiszolgálónak egyazon alhálózathoz tartozó statikus IP-címmel kell rendelkeznie.</li>
-    <li><b>LAN-portok száma:</b> Mindkét kiszolgálónak egyforma számú LAN-porttal kell rendelkeznie. Ha a Synology NAS további hálózatikártya-interfészekkel rendelkezik, ezek a hálózati kártyák is további LAN-portoknak számítanak. </li>
+    <li><b>LAN-portok száma:</b> Mindkét kiszolgálónak egyforma számú LAN-porttal kell rendelkeznie. Ha a eCore Server további hálózatikártya-interfészekkel rendelkezik, ezek a hálózati kártyák is további LAN-portoknak számítanak. </li>
     <li><b>Kapcsolat korlátozásai:</b> A kiszolgáló nem csatlakozhat a hálózathoz proxyszerver, DHCP, IPv6, PPPoE és Wi-Fi segítségével. High-availability klaszter létrehozása előtt tiltsa le ezeket a funkciókat.</li>
     <li><strong>Nincs DHCP-szolgáltatás:</strong> Klaszterrel történő együttes használat esetén a kiszolgáló nem használhatja a beépített DHCP-kiszolgálóbeállításokat.</li>
    <li><strong>Linkaggregációs beállítások:</strong> Mindkét kiszolgálónak azonos linkaggregációs beállításokat kell alkalmaznia az adathálózatra és a heartbeat-kapcsolatra vonatkozóan. A high-availability klaszter létrehozását követően a linkaggregációs beállításokat nem lehet módosítani.</li>

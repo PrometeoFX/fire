@@ -47,7 +47,7 @@
   <p>Podczas tworzenia klastra high-availability należy uwzględnić następujące zalecenia dotyczące ustawień sieci.</p>
   <ul>
     <li><b>Ustawienia sieci:</b> Oba serwery muszą mieć statyczne adresy IP należące do tej samej podsieci.</li>
-    <li><b>Liczba portów LAN:</b> Oba serwery muszą mieć tę samą liczbę portów LAN. Jeżeli serwer Synology NAS wyposażono w dodatkowe karty sieciowe, te karty będą również liczone jako dodatkowe porty sieci LAN. </li>
+    <li><b>Liczba portów LAN:</b> Oba serwery muszą mieć tę samą liczbę portów LAN. Jeżeli serwer eCore Server wyposażono w dodatkowe karty sieciowe, te karty będą również liczone jako dodatkowe porty sieci LAN. </li>
     <li><b>Ograniczenia połączeń:</b> Serwery nie mogą być podłączone do sieci za pośrednictwem serwera proxy, protokołu DHCP, IPv6, PPPoE oraz Wi-Fi. Upewnij się, że funkcje te są wyłączone przed próbą utworzenia klastra high-availability.</li>
     <li><strong>Brak usługi DHCP:</strong> Serwery nie mogą korzystać z wbudowanej opcji serwera DHCP, jeżeli zostaną połączone w klaster.</li>
    <li><strong>Ustawienia Link Aggregation:</strong> Oba serwery muszą posiadać identyczne ustawienia Link Aggregation dla sieci danych oraz połączenia Heartbeat. Po utworzeniu klastra high-availability nie można edytować ustawień Link Aggregation.</li>

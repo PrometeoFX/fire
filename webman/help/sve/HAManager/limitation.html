@@ -47,7 +47,7 @@
   <p>Vänligen notera följande rekommendation beträffande nätverksinställningar vid ansats att skapa ett high-availability-kluster.</p>
   <ul>
     <li><b>Nätverksinställningar:</b> Båda servrarna måste ha statiska IP-adresser som hör till samma subnät.</li>
-    <li><b>Antal LAN-portar:</b> Båda servrarna måste ha samma antal LAN-portar. Om din Synology NAS är försedd med extra nätverkskort, räknas dessa nätverksort också som extra LAN-portar. </li>
+    <li><b>Antal LAN-portar:</b> Båda servrarna måste ha samma antal LAN-portar. Om din eCore Server är försedd med extra nätverkskort, räknas dessa nätverksort också som extra LAN-portar. </li>
     <li><b>Anslutningsbegränsningar:</b> Servrarna kan inte ansluta till nätverket via en proxyserver, DHCP, IPv6, PPPoE och WiFi. Vänligen säkerställ att dessa funktioner är avaktiverade innan ansatser att skapa ett high-availability-kluster görs.</li>
     <li><strong>Ingen DHCP-tjänst:</strong> Servrarna kan inte använda alternativen för den inbyggda DHCP-servern när de kombinerats till ett kluster.</li>
    <li><strong>Inställningar för Link Aggregation:</strong> Båda servrarna måste ha samma inställningar för link aggregation för datanätverket och heartbeat-anslutningen. När high-availability-klustret skapats kan inställningarna för link aggregation inte ändras.</li>

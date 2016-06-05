@@ -19,7 +19,7 @@
 <h2>Oversigt</h2>
 <p>Cloud Station er ikke kun en sofistikeret synkroniseringssoftware på tværs af platforme. Brugere kan bruge den som en smartere måde at udføre backup af deres personlige computere. Der er nogle fordele ved at bruge Cloud Station som backuppartner. For det første giver realtidskopiering en bedre RPO, kortere periode, hvor data kan være mistet (kan ikke gendannes) fra din computer i tilfælde af en større hændelse. Det reagerer ikke blot øjeblikkeligt, men det hjælper dig også med at spare båndbredde dramatisk sammenlignet med traditionel backup, der bruger store mængder båndbredde inden for et givet tidsrum. Du kan nemt filtrere filer i den samme mappe, som du ikke vil have udført backup på ved at indstille filstørrelse eller filtype på computerklienten. Cloud Station kan også opbevare op til 32 historikversioner af en fil, som Cloud Station sætter dig i stand til at gendanne på en PC-klient fra server (NAS)-siden.</p>
 
-<h3 class="list_head">1. Konfigurer Cloud Station på Synology NAS</h3>
+<h3 class="list_head">1. Konfigurer Cloud Station på eCore Server</h3>
 <ol>
 
 <li>Log ind på DSM med en konto fra <strong>administrator</strong>.</li>
@@ -30,11 +30,11 @@
 <img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" />
 <li>Gå så tilbage til <b>Cloud Station</b>, hvor du bedes om at aktivere den. Klik på <b>Ja</b>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" />
-<div class="code_div"><b>Bemærk:</b> QuickConnect er en afsendelsestjeneste, der sætter dig i stand til nemt at oprette forbindelse til din Synology NAS uden for det lokale netværk. Hvis du vil synkronisere dine filer, når du ikke er hjemme eller på kontoret, anbefaler vi, at du konfigurerer QuickConnect ved at gå til <b>Kontrolpanel</b> > <b>QuickConnect</b>.</div>
+<div class="code_div"><b>Bemærk:</b> QuickConnect er en afsendelsestjeneste, der sætter dig i stand til nemt at oprette forbindelse til din eCore Server uden for det lokale netværk. Hvis du vil synkronisere dine filer, når du ikke er hjemme eller på kontoret, anbefaler vi, at du konfigurerer QuickConnect ved at gå til <b>Kontrolpanel</b> > <b>QuickConnect</b>.</div>
 
 <li>Gå til <b>Privilegier</b>, og angiv de brugere, der kan bruge Cloud Station. Klik på <b>Gem</b>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" />
-<li>Konfigurer en delt mappe på din Synology NAS til backupformål. De gør du ved at gå til <strong>Kontrolpanel</strong> &gt; <strong>Delt mappe</strong> og klikke på <strong>Opret</strong>.</li>
+<li>Konfigurer en delt mappe på din eCore Server til backupformål. De gør du ved at gå til <strong>Kontrolpanel</strong> &gt; <strong>Delt mappe</strong> og klikke på <strong>Opret</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" />
 <li>Navngiv mappen, og udfyld detaljerne. Klik på <strong>OK</strong>. Vi vil f.eks. navngive mappen <strong>Backup</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" />
@@ -57,12 +57,12 @@
 <li>Start installationsprogrammet på computeren, og følg instruktionerne til installation af Cloud Station. </li>
 <li>Efter installationen kører du <strong>Cloud Station</strong> på computeren. Klik på <strong>Start nu</strong></li>
 <img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" />
-<li>Indtast adressen på den Synology NAS, der kører Cloud Station (eller QuickConnect ID), brugernavn og adgangskode. (Du kan også klikke på søgeikonet til højre, hvorefter Cloud Station automatisk vil søge efter andre Synology NAS på dit LAN). Klik på <strong>Næste</strong>.</li>
+<li>Indtast adressen på den eCore Server, der kører Cloud Station (eller QuickConnect ID), brugernavn og adgangskode. (Du kan også klikke på søgeikonet til højre, hvorefter Cloud Station automatisk vil søge efter andre eCore Server på dit LAN). Klik på <strong>Næste</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" />
-<div class="code_div"><b>Bemærk:</b> Sørg for, at den indtastede konto har tilladelser under <strong>Cloud Station</strong> > <strong>Privilegier</strong> på Synology NAS.</div>
+<div class="code_div"><b>Bemærk:</b> Sørg for, at den indtastede konto har tilladelser under <strong>Cloud Station</strong> > <strong>Privilegier</strong> på eCore Server.</div>
 <li>Vælg, hvordan vil du konfigurere din opgave (her vælger vi <strong>Avanceret konfiguration</strong>, da vi konfigurerer en mappe specielt til backup). Klik på <strong>Næste</strong>. </li>
 <img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
-<li>Vælg en mappe på computeren for at holde den synkroniseret med mappen Backup, som du tidligere oprettede på din Synology NAS. Klik på <strong>Næste</strong>.</li>
+<li>Vælg en mappe på computeren for at holde den synkroniseret med mappen Backup, som du tidligere oprettede på din eCore Server. Klik på <strong>Næste</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" />
 <li>Klik på <strong>Udført</strong> for af fuldføre konfiguration.</li>
 <img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" />
@@ -74,7 +74,7 @@
 <img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
 <li>Konfigurer Cloud Station på din PC ved at klikke på <strong>Opret</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" />
-<li>Vælg en Synology NAS til din nye opgave. Her skal vi vælge <strong>Tilsluttet Synology NAS</strong>, da vi opretter endnu en opgave til den samme Synology NAS. Klik på <strong>Næste</strong>.</li>
+<li>Vælg en eCore Server til din nye opgave. Her skal vi vælge <strong>Tilsluttet eCore Server</strong>, da vi opretter endnu en opgave til den samme eCore Server. Klik på <strong>Næste</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" />
 <li>Vælg <strong>Avanceret konfiguration</strong>, og følg resten af guiden for at fortsætte konfigurationen. </li>
 <img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
@@ -89,12 +89,12 @@
     <li>Start installationsprogrammet på computeren, og følg instruktionerne til installation af Cloud Station. </li>
     <li>Efter installationen kører du <strong>Cloud Station</strong> på computeren. Klik på <strong>Start nu</strong></li>
 <img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" />      
-<li>Indtast adressen på den Synology NAS, der kører Cloud Station (eller QuickConnect ID), brugernavn og adgangskode. (Du kan også klikke på søgeikonet til højre, hvorefter Cloud Station automatisk vil søge efter andre Synology NAS på dit LAN). Klik på <strong>Næste</strong>.</li>
+<li>Indtast adressen på den eCore Server, der kører Cloud Station (eller QuickConnect ID), brugernavn og adgangskode. (Du kan også klikke på søgeikonet til højre, hvorefter Cloud Station automatisk vil søge efter andre eCore Server på dit LAN). Klik på <strong>Næste</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" />   
-    <div class="code_div"><b>Bemærk:</b> Sørg for, at den indtastede konto har tilladelser under <strong>Cloud Station</strong> > <strong>Privilegier</strong> på Synology NAS.</div>
+    <div class="code_div"><b>Bemærk:</b> Sørg for, at den indtastede konto har tilladelser under <strong>Cloud Station</strong> > <strong>Privilegier</strong> på eCore Server.</div>
 <li>Vælg, hvordan vil du konfigurere din opgave (her vælger vi <strong>Avanceret konfiguration</strong>, da vi konfigurerer en mappe specielt til backup). Klik på <strong>Næste</strong>. </li>
 <img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
-<li>Vælg en mappe på computeren for at holde den synkroniseret med mappen Backup, som du tidligere oprettede på din Synology NAS. Klik på <strong>Næste</strong>.</li>
+<li>Vælg en mappe på computeren for at holde den synkroniseret med mappen Backup, som du tidligere oprettede på din eCore Server. Klik på <strong>Næste</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" />
 <li>Klik på <strong>Udført</strong> for af fuldføre konfiguration.</li>
   </ol>
@@ -105,7 +105,7 @@
 <img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
 <li>Konfigurer Cloud Station på computeren ved at klikke på <strong>Opret</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" />
-<li>Vælg en Synology NAS til din nye opgave. Her skal vi vælge <strong>Tilsluttet Synology NAS</strong>, da vi opretter endnu en opgave til den samme Synology NAS. Klik på <strong>Næste</strong>.</li>
+<li>Vælg en eCore Server til din nye opgave. Her skal vi vælge <strong>Tilsluttet eCore Server</strong>, da vi opretter endnu en opgave til den samme eCore Server. Klik på <strong>Næste</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" />
 <li>Vælg <strong>Avanceret konfiguration</strong>, og følg resten af guiden for at fortsætte konfigurationen. </li>
 <img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
@@ -156,7 +156,7 @@
 </div>
 <div class="page-info">
   <ul>
-    <li>Næste i dette emne: <a href="backup_backup.html">Backup data fra din Synology NAS</a> </li>
+    <li>Næste i dette emne: <a href="backup_backup.html">Backup data fra din eCore Server</a> </li>
   </ul>
 </div>
 </body>

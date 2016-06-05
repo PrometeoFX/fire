@@ -19,7 +19,7 @@
 <h2>Genel Bakış</h2>
 <p>Cloud Station sadece sofistike bir platformlar arası senkronizasyon yazılımı değil, kullanıcılar onu kişisel bilgisayarlarını yedeklemenin daha akıllı bir yöntemi olarak da kullanabilirler. Cloud Station'ı yedekleme ortağınız olarak kullanmanın bazı faydaları burada. Öncelikle, gerçek zamanlı çoğaltım daha iyi bir RPO sağlar, büyük bir olay sonucu bilgisayarınızdaki verilerin kaybedilebileceği (kurtarılamayacağı) süre daha kısa olur. Anlık olmasının yanı sıra, herhangi bir anda büyük miktarda bant genişliği kullanan geleneksel yedeklemelere göre bant genişliğinden önemli ölçüde tasarruf etmenize yardımcı olur. PC istemcinizde dosya boyutunu veya dosya tipini ayarlayarak aynı klasör içinde yedeklenmelerini istemediğiniz dosyaları kolaylıkla filtreleyebilirsiniz. Cloud Station ayrıca tek bir dosyanın 32 geçmiş sürümüne kadar koruyabilir ve sunucu (NAS) tarafından PC istemcinize geri yüklemenizi sağlayabilir.</p>
 
-<h3 class="list_head">1. Cloud Station'ın Synology NAS üzerinde kurulması</h3>
+<h3 class="list_head">1. Cloud Station'ın eCore Server üzerinde kurulması</h3>
 <ol>
 
 <li>DSM'de <strong>administrator</strong>'a ait bir hesapla oturum açın.</li>
@@ -30,11 +30,11 @@
 <img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" />
 <li>Ardından <b>Cloud Station</b>'a geri dönün, etkinleştirmeniz istenecek. <b>Evet</b>'e tıklayın.</li>
 <img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" />
-<div class="code_div"><b>Not:</b> QuickConnect, Synology NAS'ınızı yerel ağınızın dışından kolayca bağlayabilmenizi sağlayan bir aktarma hizmetidir. Evinizde veya ofisinizde değilken dosyalarınızı senkronize etmek istiyorsanız, <b>Denetim Masası</b> > <b>QuickConnect</b> öğesine giderek QuickConnect'i kurmanızı öneririz.</div>
+<div class="code_div"><b>Not:</b> QuickConnect, eCore Server'ınızı yerel ağınızın dışından kolayca bağlayabilmenizi sağlayan bir aktarma hizmetidir. Evinizde veya ofisinizde değilken dosyalarınızı senkronize etmek istiyorsanız, <b>Denetim Masası</b> > <b>QuickConnect</b> öğesine giderek QuickConnect'i kurmanızı öneririz.</div>
 
 <li><b>Ayrıcalıklar</b> bölümüne giderek hangi kullanıcıların Cloud Station'ı kullanabileceklerini belirleyin. <b>Kaydet</b>'e tıklayın.</li>
 <img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" />
-<li>Yedekleme amacıyla Synology NAS'ınızda bir paylaşımlı klasör ayarlayın. Bunu yapabilmek için, <strong>Denetim Masası</strong> &gt; <strong>Paylaşımlı Klasör</strong> öğesine gidin ve <strong>Oluştur</strong>'a tıklayın.</li>
+<li>Yedekleme amacıyla eCore Server'ınızda bir paylaşımlı klasör ayarlayın. Bunu yapabilmek için, <strong>Denetim Masası</strong> &gt; <strong>Paylaşımlı Klasör</strong> öğesine gidin ve <strong>Oluştur</strong>'a tıklayın.</li>
 <img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" />
 <li>Klasörünüzü adlandırarak ayrıntıları uygun biçimde doldurun. <strong>Tamam</strong>'a tıklayın. Örneğin, dosyayı <strong>Backup</strong> olarak adlandıralım.</li>
 <img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" />
@@ -57,12 +57,12 @@
 <li>Yükleyiciyi bilgisayarınızda başlatarak Cloud Station yükleme talimatlarını takip edin. </li>
 <li>Yüklemeden sonra <strong>Cloud Station</strong>'ı bilgisayarınızda çalıştırın. <strong>Şimdi Başlat</strong>'a tıklayın.</li>
 <img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" />
-<li>Cloud Station çalıştıran Synology NAS'ın adresini (veya QuickConnect ID'sini), kullanıcı adını ve parolayı girin. (Ayrıca sağ taraftaki arama simgesine de tıklayabilirsiniz; Cloud Station otomatik olarak LAN dahilindeki diğer Synology NAS sunucuları arayacaktır). <strong>İleri</strong>'ye tıklayın.</li>
+<li>Cloud Station çalıştıran eCore Server'ın adresini (veya QuickConnect ID'sini), kullanıcı adını ve parolayı girin. (Ayrıca sağ taraftaki arama simgesine de tıklayabilirsiniz; Cloud Station otomatik olarak LAN dahilindeki diğer eCore Server sunucuları arayacaktır). <strong>İleri</strong>'ye tıklayın.</li>
 <img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" />
-<div class="code_div"><b>Not:</b> Girdiğiniz hesaba Synology NAS'taki <strong>Cloud Station</strong> > <strong>Ayrıcalıklar</strong> konumunda ayrıcalık verildiğinden emin olun.</div>
+<div class="code_div"><b>Not:</b> Girdiğiniz hesaba eCore Server'taki <strong>Cloud Station</strong> > <strong>Ayrıcalıklar</strong> konumunda ayrıcalık verildiğinden emin olun.</div>
 <li>Görevinizi nasıl kurmak istediğinizi seçin (burada <strong>Gelişmiş Kurulum</strong>'u seçeceğiz, zira yedekleme için özel bir klasör kuruyoruz). <strong>İleri</strong>'ye tıklayın. </li>
 <img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
-<li>Daha önce Synology NAS'ınızda oluşturduğunuz Backup klasörü ile senkronize tutmak için bilgisayarınızda bir klasör seçin. <strong>İleri</strong>'ye tıklayın.</li>
+<li>Daha önce eCore Server'ınızda oluşturduğunuz Backup klasörü ile senkronize tutmak için bilgisayarınızda bir klasör seçin. <strong>İleri</strong>'ye tıklayın.</li>
 <img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" />
 <li><strong>Bitti</strong>'ye tıklayarak kurulumu tamamlayın.</li>
 <img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" />
@@ -74,7 +74,7 @@
 <img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
 <li>PC'nizde Cloud Station'da <strong>Oluştur</strong> üzerine tıklayın.</li>
 <img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" />
-<li>​Yeni göreviniz için bir Synology NAS seçin. Burada <strong>Bağlı Synology NAS</strong> seçimi yapacağız zira aynı Synology NAS için başka bir görev oluşturuyoruz. <strong>İleri</strong>'ye tıklayın.​</li>
+<li>​Yeni göreviniz için bir eCore Server seçin. Burada <strong>Bağlı eCore Server</strong> seçimi yapacağız zira aynı eCore Server için başka bir görev oluşturuyoruz. <strong>İleri</strong>'ye tıklayın.​</li>
 <img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" />
 <li><strong>Gelişmiş kurulum</strong> öğesini seçin ve kuruluma devam etmek için sihirbazın kalanını izleyin. </li>
 <img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
@@ -89,12 +89,12 @@
     <li>Yükleyiciyi bilgisayarınızda başlatarak Cloud Station yükleme talimatlarını takip edin. </li>
     <li>Yüklemeden sonra <strong>Cloud Station</strong>'ı bilgisayarınızda çalıştırın. <strong>Şimdi Başlat</strong>'a tıklayın.</li>
 <img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" />      
-<li>Cloud Station çalıştıran Synology NAS'ın adresini (veya QuickConnect ID'sini), kullanıcı adını ve parolayı girin. (Ayrıca sağ taraftaki arama simgesine de tıklayabilirsiniz; Cloud Station otomatik olarak LAN dahilindeki diğer Synology NAS sunucuları arayacaktır). <strong>İleri</strong>'ye tıklayın.</li>
+<li>Cloud Station çalıştıran eCore Server'ın adresini (veya QuickConnect ID'sini), kullanıcı adını ve parolayı girin. (Ayrıca sağ taraftaki arama simgesine de tıklayabilirsiniz; Cloud Station otomatik olarak LAN dahilindeki diğer eCore Server sunucuları arayacaktır). <strong>İleri</strong>'ye tıklayın.</li>
 <img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" />   
-    <div class="code_div"><b>Not:</b> Girdiğiniz hesaba Synology NAS'taki <strong>Cloud Station</strong> > <strong>Ayrıcalıklar</strong> konumunda ayrıcalık verildiğinden emin olun.</div>
+    <div class="code_div"><b>Not:</b> Girdiğiniz hesaba eCore Server'taki <strong>Cloud Station</strong> > <strong>Ayrıcalıklar</strong> konumunda ayrıcalık verildiğinden emin olun.</div>
 <li>Görevinizi nasıl kurmak istediğinizi seçin (burada <strong>Gelişmiş Kurulum</strong>'u seçeceğiz, zira yedekleme için özel bir klasör kuruyoruz). <strong>İleri</strong>'ye tıklayın. </li>
 <img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
-<li>Daha önce Synology NAS'ınızda oluşturduğunuz Backup klasörü ile senkronize tutmak için bilgisayarınızda bir klasör seçin. <strong>İleri</strong>'ye tıklayın.</li>
+<li>Daha önce eCore Server'ınızda oluşturduğunuz Backup klasörü ile senkronize tutmak için bilgisayarınızda bir klasör seçin. <strong>İleri</strong>'ye tıklayın.</li>
 <img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" />
 <li><strong>Bitti</strong>'ye tıklayarak kurulumu tamamlayın.</li>
   </ol>
@@ -105,7 +105,7 @@
 <img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
 <li>Bilgisayarınızdaki Cloud Station'da <strong>Oluştur</strong> üzerine tıklayın.</li>
 <img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" />
-<li>​Yeni göreviniz için bir Synology NAS seçin. Burada <strong>Bağlı Synology NAS</strong> seçimi yapacağız zira aynı Synology NAS için başka bir görev oluşturuyoruz. <strong>İleri</strong>'ye tıklayın.​</li>
+<li>​Yeni göreviniz için bir eCore Server seçin. Burada <strong>Bağlı eCore Server</strong> seçimi yapacağız zira aynı eCore Server için başka bir görev oluşturuyoruz. <strong>İleri</strong>'ye tıklayın.​</li>
 <img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" />
 <li><strong>Gelişmiş kurulum</strong> öğesini seçin ve kuruluma devam etmek için sihirbazın kalanını izleyin. </li>
 <img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
@@ -156,7 +156,7 @@
 </div>
 <div class="page-info">
   <ul>
-    <li>Bu konudaki sonraki: <a href="backup_backup.html">Synology NAS sunucusundaki verilerinizi yedekleyin</a> </li>
+    <li>Bu konudaki sonraki: <a href="backup_backup.html">eCore Server sunucusundaki verilerinizi yedekleyin</a> </li>
   </ul>
 </div>
 </body>

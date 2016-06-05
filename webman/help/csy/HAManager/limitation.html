@@ -47,7 +47,7 @@
   <p>Pročtěte si následující pokyny týkající se síťových nastavení při pokusu o vytvoření clusteru high-availability.</p>
   <ul>
     <li><b>Síťové nastavení:</b> Oba servery musí mít statické IP adresy patřící do stejné podsítě.</li>
-    <li><b>Počet portů místní sítě LAN:</b> Oba servery musí mít stejný počet portů místní sítě LAN. Je-li zařízení Synology NAS vybaveno přídavnými kartami síťového rozhraní, počítají se tyto síťové karty jako přídavné porty LAN. </li>
+    <li><b>Počet portů místní sítě LAN:</b> Oba servery musí mít stejný počet portů místní sítě LAN. Je-li zařízení eCore Server vybaveno přídavnými kartami síťového rozhraní, počítají se tyto síťové karty jako přídavné porty LAN. </li>
     <li><b>Omezení připojení:</b> Servery se nemohou připojovat do sítě prostřednictvím proxy serveru, DHCP, IPv6, PPPoE nebo Wi-Fi. Před pokusem o vytvoření clusteru high-availability zkontrolujte, zda jsou tyto funkce zakázané.</li>
     <li><strong>Žádná služba DHCP:</strong> Pokud jsou servery sloučené do clusteru, nemohou používat volby vestavěného serveru DHCP.</li>
    <li><strong>Nastavení Link Aggregation:</strong> Oba servery musí mít stejná nastavení Link Aggregation pro připojení k datové síti a připojení Heartbeat. Po vytvoření clusteru high-availability již nelze nastavení Link Aggregation měnit.</li>

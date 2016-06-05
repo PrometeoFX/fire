@@ -19,7 +19,7 @@
 <h2>Vis&atilde;o geral</h2>
 <p>O Cloud Station n&atilde;o &eacute; apenas um sofisticado software de sincroniza&ccedil;&atilde;o multiplataforma, os usu&aacute;rios tamb&eacute;m podem us&aacute;-lo como uma maneira mais inteligente de fazer backup de seus computadores pessoais. Esses s&atilde;o alguns benef&iacute;cios de usar o Cloud Station como auxiliar de backup. Em primeiro lugar, a replica&ccedil;&atilde;o em tempo real fornece um RPO melhor, um per&iacute;odo mais curto em que os dados podem se perder (irrecuper&aacute;veis) de seu PC devido a um grande incidente. Ele n&atilde;o apenas &eacute; instant&acirc;neo como tamb&eacute;m o ajudar&aacute; a economizar largura de banda drasticamente em compara&ccedil;&atilde;o com o backup tradicional que usa grandes quantidades de largura de banda em um determinado momento. Voc&ecirc; pode filtrar facilmente os arquivos dentro da mesma pasta que voc&ecirc; n&atilde;o quer fazer backup, configurando o tamanho ou o tipo do arquivo em seu cliente PC. O Cloud Station tamb&eacute;m pode manter at&eacute; 32 vers&otilde;es de hist&oacute;rico de um &uacute;nico arquivo que o Cloud Station permite que voc&ecirc; restaure a um cliente PC do lado do servidor (NAS).</p>
 
-<h3 class="list_head">1. Configura&ccedil;&atilde;o do Cloud Station no Synology NAS</h3>
+<h3 class="list_head">1. Configura&ccedil;&atilde;o do Cloud Station no eCore Server</h3>
 <ol>
 
 <li>Entre no DSM usando uma conta pertencente ao <strong>administrator</strong>.</li>
@@ -30,11 +30,11 @@
 <img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" />
 <li>Agora volte para o <b>Cloud Station</b>&nbsp;e o sistema solicitar&aacute; para habilit&aacute;-lo. Clique em <b>Sim</b>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" />
-<div class="code_div"><b>Observa&ccedil;&atilde;o:</b> O QuickConnect &eacute; um servi&ccedil;o de retransmiss&atilde;o que permite que voc&ecirc; se conecte facilmente ao seu Synology NAS de fora da rede local. Se quiser sincronizar seu arquivo longe de casa ou do escrit&oacute;rio, recomendamos que voc&ecirc; configure o QuickConnect indo at&eacute; <b>Painel de controle</b> &gt; <b>QuickConnect</b>.</div>
+<div class="code_div"><b>Observa&ccedil;&atilde;o:</b> O QuickConnect &eacute; um servi&ccedil;o de retransmiss&atilde;o que permite que voc&ecirc; se conecte facilmente ao seu eCore Server de fora da rede local. Se quiser sincronizar seu arquivo longe de casa ou do escrit&oacute;rio, recomendamos que voc&ecirc; configure o QuickConnect indo at&eacute; <b>Painel de controle</b> &gt; <b>QuickConnect</b>.</div>
 
 <li>V&aacute; para <b>Privil&eacute;gios</b> e especifique quais usu&aacute;rios poder&atilde;o usar o Cloud Station. Clique em <b>Salvar</b>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" />
-<li>Configure uma pasta compartilhada em seu Synology NAS para fins de backup. Para fazer isso, v&aacute; para <strong>Painel de controle</strong> &gt; <strong>Pasta compartilhada</strong> e clique em <strong>Criar</strong>.</li>
+<li>Configure uma pasta compartilhada em seu eCore Server para fins de backup. Para fazer isso, v&aacute; para <strong>Painel de controle</strong> &gt; <strong>Pasta compartilhada</strong> e clique em <strong>Criar</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" />
 <li>Nomeie sua pasta e preencha os detalhes da forma correspondente. Clique em <strong>OK</strong>. Por exemplo, n&oacute;s nomearemos a pasta como <strong>Backup</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" />
@@ -57,12 +57,12 @@
 <li>Inicie o instalador em seu computador e siga as instru&ccedil;&otilde;es para instalar o Cloud Station. </li>
 <li>Ap&oacute;s a instala&ccedil;&atilde;o, execute o <strong>Cloud Station</strong> em seu computador. Clique em <strong>Iniciar Agora</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" />
-<li>Digite o endere&ccedil;o do Synology NAS executando o Cloud Station (ou QuickConnect ID), nome de usu&aacute;rio e senha. (Voc&ecirc; tamb&eacute;m pode clicar no &iacute;cone &agrave; direita e o Cloud Station pesquisar&aacute; automaticamente outro Synology NAS dentro de sua LAN). Clique em <strong>Avan&ccedil;ar</strong>.</li>
+<li>Digite o endere&ccedil;o do eCore Server executando o Cloud Station (ou QuickConnect ID), nome de usu&aacute;rio e senha. (Voc&ecirc; tamb&eacute;m pode clicar no &iacute;cone &agrave; direita e o Cloud Station pesquisar&aacute; automaticamente outro eCore Server dentro de sua LAN). Clique em <strong>Avan&ccedil;ar</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" />
-<div class="code_div"><b>Observa&ccedil;&atilde;o:</b> Verifique se a conta inserida tem permiss&otilde;es concedidas em <strong>Cloud Station</strong> &gt; <strong>Privil&eacute;gios</strong> no Synology NAS.</div>
+<div class="code_div"><b>Observa&ccedil;&atilde;o:</b> Verifique se a conta inserida tem permiss&otilde;es concedidas em <strong>Cloud Station</strong> &gt; <strong>Privil&eacute;gios</strong> no eCore Server.</div>
 <li>Selecione como deseja configurar sua tarefa (aqui n&oacute;s selecionaremos <strong>Configura&ccedil;&atilde;o avan&ccedil;ada</strong> pois estamos configurando uma pasta especificamente para backup). Clique em <strong>Avan&ccedil;ar</strong>. </li>
 <img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
-<li>Selecione uma pasta no seu computador para manter sincronizada com a pasta Backup que voc&ecirc; criou anteriormente em seu Synology NAS. Clique em <strong>Avan&ccedil;ar</strong>.</li>
+<li>Selecione uma pasta no seu computador para manter sincronizada com a pasta Backup que voc&ecirc; criou anteriormente em seu eCore Server. Clique em <strong>Avan&ccedil;ar</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" />
 <li>Clique em <strong>Conclu&iacute;do</strong> para completar a configura&ccedil;&atilde;o.</li>
 <img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" />
@@ -74,7 +74,7 @@
 <img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
 <li>De volta ao Cloud Station em seu PC, clique em <strong>Criar</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" />
-<li>​Selecione um Synology NAS para sua nova tarefa Aqui selecionaremos <strong>Synology NAS conectado</strong> pois estamos criando outra tarefa para o mesmo Synology NAS. Clique em <strong>Avan&ccedil;ar</strong>.​</li>
+<li>​Selecione um eCore Server para sua nova tarefa Aqui selecionaremos <strong>eCore Server conectado</strong> pois estamos criando outra tarefa para o mesmo eCore Server. Clique em <strong>Avan&ccedil;ar</strong>.​</li>
 <img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" />
 <li>Clique em <strong>Configura&ccedil;&atilde;o avan&ccedil;ada</strong> e siga o restante do assistente para continuar a configura&ccedil;&atilde;o. </li>
 <img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
@@ -89,12 +89,12 @@
     <li>Inicie o instalador em seu computador e siga as instru&ccedil;&otilde;es para instalar o Cloud Station. </li>
     <li>Ap&oacute;s a instala&ccedil;&atilde;o, execute o <strong>Cloud Station</strong> em seu computador. Clique em <strong>Iniciar Agora</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" />      
-<li>Digite o endere&ccedil;o do Synology NAS executando o Cloud Station (ou QuickConnect ID), nome de usu&aacute;rio e senha. (Voc&ecirc; tamb&eacute;m pode clicar no &iacute;cone &agrave; direita e o Cloud Station pesquisar&aacute; automaticamente outro Synology NAS dentro de sua LAN). Clique em <strong>Avan&ccedil;ar</strong>.</li>
+<li>Digite o endere&ccedil;o do eCore Server executando o Cloud Station (ou QuickConnect ID), nome de usu&aacute;rio e senha. (Voc&ecirc; tamb&eacute;m pode clicar no &iacute;cone &agrave; direita e o Cloud Station pesquisar&aacute; automaticamente outro eCore Server dentro de sua LAN). Clique em <strong>Avan&ccedil;ar</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" />   
-    <div class="code_div"><b>Observa&ccedil;&atilde;o:</b> Verifique se a conta inserida tem permiss&otilde;es concedidas em <strong>Cloud Station</strong> &gt; <strong>Privil&eacute;gios</strong> no Synology NAS.</div>
+    <div class="code_div"><b>Observa&ccedil;&atilde;o:</b> Verifique se a conta inserida tem permiss&otilde;es concedidas em <strong>Cloud Station</strong> &gt; <strong>Privil&eacute;gios</strong> no eCore Server.</div>
 <li>Selecione como deseja configurar sua tarefa (aqui n&oacute;s selecionaremos <strong>Configura&ccedil;&atilde;o avan&ccedil;ada</strong> pois estamos configurando uma pasta especificamente para backup). Clique em <strong>Avan&ccedil;ar</strong>. </li>
 <img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
-<li>Selecione uma pasta no seu computador para manter sincronizada com a pasta Backup que voc&ecirc; criou anteriormente em seu Synology NAS. Clique em <strong>Avan&ccedil;ar</strong>.</li>
+<li>Selecione uma pasta no seu computador para manter sincronizada com a pasta Backup que voc&ecirc; criou anteriormente em seu eCore Server. Clique em <strong>Avan&ccedil;ar</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" />
 <li>Clique em <strong>Conclu&iacute;do</strong> para completar a configura&ccedil;&atilde;o.</li>
   </ol>
@@ -105,7 +105,7 @@
 <img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
 <li>De volta ao Cloud Station em seu computador, clique em <strong>Criar</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" />
-<li>​Selecione um Synology NAS para sua nova tarefa Aqui selecionaremos <strong>Synology NAS conectado</strong> pois estamos criando outra tarefa para o mesmo Synology NAS. Clique em <strong>Avan&ccedil;ar</strong>.​</li>
+<li>​Selecione um eCore Server para sua nova tarefa Aqui selecionaremos <strong>eCore Server conectado</strong> pois estamos criando outra tarefa para o mesmo eCore Server. Clique em <strong>Avan&ccedil;ar</strong>.​</li>
 <img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" />
 <li>Clique em <strong>Configura&ccedil;&atilde;o avan&ccedil;ada</strong> e siga o restante do assistente para continuar a configura&ccedil;&atilde;o. </li>
 <img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
@@ -156,7 +156,7 @@
 </div>
 <div class="page-info">
   <ul>
-    <li>A seguir nesse t&oacute;pico: <a href="backup_backup.html">Fa&ccedil;a backup dos dados de seu Synology NAS</a> </li>
+    <li>A seguir nesse t&oacute;pico: <a href="backup_backup.html">Fa&ccedil;a backup dos dados de seu eCore Server</a> </li>
   </ul>
 </div>
 </body>

@@ -47,7 +47,7 @@
   <p>Vær oppmerksom på følgende retningslinjer vedrørende nettverksinnstillinger ved danning av en high-availability-sky.</p>
   <ul>
     <li><b>Nettverksinnstillinger:</b> Begge servere må ha statiske IP-adresser som tilhører det samme delnettet.</li>
-    <li><b>Antall LAN-porter:</b> Begge servere må ha samme antall LAN-porter. Hvis din Synology NAS er utstyrt med ytterligere grensesnitt for nettverkskort, teller disse nettverkskortene oggså som ytterligere LAN-porter. </li>
+    <li><b>Antall LAN-porter:</b> Begge servere må ha samme antall LAN-porter. Hvis din eCore Server er utstyrt med ytterligere grensesnitt for nettverkskort, teller disse nettverkskortene oggså som ytterligere LAN-porter. </li>
     <li><b>Tilkoblingsbegrensning:</b> Serverne kan ikke kobles til nettverket via proxyserver, DHCP, IPv6, PPPoE og Wi-Fi. Kontroller at disse funksjonene er deaktivert før du prøver å danne en high-availability-sky.</li>
     <li><strong>Ingen DHCP-tjeneste:</strong> Serverne kan ikke bruke de innebygde DHCP-serveralternativene når de er kombinert i en klynge.</li>
    <li><strong>Innstillinger for Link Aggregation:</strong> Begge serverne må ha samme link aggregation-innstillinger for datanettverk og heartbeat-tilkobling. Når high-availability-skyen er opprettet, kan ikke link aggregation-innstillinger endres.</li>

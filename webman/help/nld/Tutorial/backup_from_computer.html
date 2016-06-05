@@ -19,7 +19,7 @@
 <h2>Overzicht</h2>
 <p>Cloud Station is meer dan alleen gesofisticeerde platformonafhankelijke synchronisatiesoftware. Gebruikers kunnen hem ook gebruiken als ze op een meer doeltreffende wijze een back-up van hun persoonlijke computer willen maken. Er zijn een aantal voordelen verbonden aan het gebruik van Cloud Station als back-upinstrument. Real-timereplicatie zorgt in de eerste plaats voor een betere RPO, een kortere periode waarin gegevens van uw pc definitief verloren kunnen gaan ten gevolge van een ernstig defect. Dat gaat niet alleen onmiddellijk, het helpt u ook bandbreedte besparen in vergelijking met een traditionele back-up die telkens grote hoeveelheden bandbreedte opslokt. U kunt bestanden in eenzelfde map die u niet wilt back-uppen gemakkelijk uitfilteren door bestandsgrootte en -type in te stellen op uw pc-client. Cloud Station kan bovendien tot 32 geschiedenisversies van een enkel bestand bijhouden. Zo kunt u met Cloud Station vanaf de server (NAS) een back-up terugzetten naar een pc-client.</p>
 
-<h3 class="list_head">1. Cloud Station instellen op Synology NAS</h3>
+<h3 class="list_head">1. Cloud Station instellen op eCore Server</h3>
 <ol>
 
 <li>Meld u bij DSM aan met een account van de groep <strong>administrator</strong>.</li>
@@ -30,11 +30,11 @@
 <img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" />
 <li>Ga terug naar <b>Cloud Station</b> en u wordt gevraagd om het in te schakelen. Klik op <b>Ja</b>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" />
-<div class="code_div"><b>Opmerking:</b> QuickConnect is een relayservice waarmee u van buiten uw lokaal netwerk gemakkelijk een verbinding kunt maken met uw Synology NAS. Als u uw bestanden wilt synchroniseren wanneer u onderweg bent, raden we u aan om QuickConnect te installeren. Ga hiervoor naar <b>Configuratiescherm</b> > <b>QuickConnect</b>.</div>
+<div class="code_div"><b>Opmerking:</b> QuickConnect is een relayservice waarmee u van buiten uw lokaal netwerk gemakkelijk een verbinding kunt maken met uw eCore Server. Als u uw bestanden wilt synchroniseren wanneer u onderweg bent, raden we u aan om QuickConnect te installeren. Ga hiervoor naar <b>Configuratiescherm</b> > <b>QuickConnect</b>.</div>
 
 <li>Ga naar <b>Rechten</b> en geef op welk gebruikers Cloud Station kunnen gebruiken. Klik op <b>Opslaan</b>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" />
-<li>Installeer een gedeelde map op uw Synology NAS voor back-updoeleinden. Ga hiervoor naar <strong>Configuratiescherm</strong> &gt; <strong>Gedeelde map</strong> en klik op <strong>Maken</strong>.</li>
+<li>Installeer een gedeelde map op uw eCore Server voor back-updoeleinden. Ga hiervoor naar <strong>Configuratiescherm</strong> &gt; <strong>Gedeelde map</strong> en klik op <strong>Maken</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" />
 <li>Geef uw map een naam en voer de overeenkomstige details in. Klik op <strong>OK</strong>. We zullen de map bijvoorbeeld <strong>Backup</strong> noemen.</li>
 <img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" />
@@ -57,12 +57,12 @@
 <li>Start het installatieprogramma op uw computer en volg de instructies om Cloud Station te installeren. </li>
 <li>Voer na de installatie <strong>Cloud Station</strong> uit op uw computer. Klik op <strong>Nu starten</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" />
-<li>Voer het adres in voor het Synology NAS waarop Cloud Station (of QuickConnect ID) wordt uitgevoerd, samen met uw gebruikersnaam en wachtwoord. (U kunt ook rechtsklikken op het zoekpictogram en Cloud Station zoekt automatisch naar andere Synology NAS in uw LAN). Klik op <strong>Volgende</strong>.</li>
+<li>Voer het adres in voor het eCore Server waarop Cloud Station (of QuickConnect ID) wordt uitgevoerd, samen met uw gebruikersnaam en wachtwoord. (U kunt ook rechtsklikken op het zoekpictogram en Cloud Station zoekt automatisch naar andere eCore Server in uw LAN). Klik op <strong>Volgende</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" />
-<div class="code_div"><b>Opmerking:</b> zorg ervoor dat de ingevoerde account gemachtigd is in <strong>Cloud Station</strong> > <strong>Rechten</strong> op het Synology NAS.</div>
+<div class="code_div"><b>Opmerking:</b> zorg ervoor dat de ingevoerde account gemachtigd is in <strong>Cloud Station</strong> > <strong>Rechten</strong> op het eCore Server.</div>
 <li>Selecteer hoeu de taak wilt instellen (in dit voorbeeld selecteren we <strong>Geavanceerde instelling</strong> aangezien we een map speciaal voor back-up willen instellen). Klik op <strong>Volgende</strong>. </li>
 <img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
-<li>Selecteer een map op uw computer om deze te synchroniseren met de back-upmap die u eerder op uw Synology NAS hebt aangemaakt. Klik op <strong>Volgende</strong>.</li>
+<li>Selecteer een map op uw computer om deze te synchroniseren met de back-upmap die u eerder op uw eCore Server hebt aangemaakt. Klik op <strong>Volgende</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" />
 <li>Klik op <strong>Voltooid</strong> om de installatie te voltooien.</li>
 <img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" />
@@ -74,7 +74,7 @@
 <img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
 <li>Klik in Cloud Station op uw pc op <strong>Maken</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" />
-<li>​Selecteer een Synology NAS voor de nieuwe taak. In dit voorbeeld selecteren we <strong>Aangesloten Synology NAS</strong> aangezien we een andere taak voor dezelfde Synology NAS willen maken. Klik op <strong>Volgende</strong>.​</li>
+<li>​Selecteer een eCore Server voor de nieuwe taak. In dit voorbeeld selecteren we <strong>Aangesloten eCore Server</strong> aangezien we een andere taak voor dezelfde eCore Server willen maken. Klik op <strong>Volgende</strong>.​</li>
 <img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" />
 <li>Klik op <strong>Geavanceerde instelling</strong> en volg de overige instructies van de wizard om de instelling te voltooien. </li>
 <img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
@@ -89,12 +89,12 @@
     <li>Start het installatieprogramma op uw computer en volg de instructies om Cloud Station te installeren. </li>
     <li>Voer na de installatie <strong>Cloud Station</strong> uit op uw computer. Klik op <strong>Nu starten</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" />      
-<li>Voer het adres in voor het Synology NAS waarop Cloud Station (of QuickConnect ID) wordt uitgevoerd, samen met uw gebruikersnaam en wachtwoord. (U kunt ook rechtsklikken op het zoekpictogram en Cloud Station zoekt automatisch naar andere Synology NAS in uw LAN). Klik op <strong>Volgende</strong>.</li>
+<li>Voer het adres in voor het eCore Server waarop Cloud Station (of QuickConnect ID) wordt uitgevoerd, samen met uw gebruikersnaam en wachtwoord. (U kunt ook rechtsklikken op het zoekpictogram en Cloud Station zoekt automatisch naar andere eCore Server in uw LAN). Klik op <strong>Volgende</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" />   
-    <div class="code_div"><b>Opmerking:</b> zorg ervoor dat de ingevoerde account gemachtigd is in <strong>Cloud Station</strong> > <strong>Rechten</strong> op het Synology NAS.</div>
+    <div class="code_div"><b>Opmerking:</b> zorg ervoor dat de ingevoerde account gemachtigd is in <strong>Cloud Station</strong> > <strong>Rechten</strong> op het eCore Server.</div>
 <li>Selecteer hoeu de taak wilt instellen (in dit voorbeeld selecteren we <strong>Geavanceerde instelling</strong> aangezien we een map speciaal voor back-up willen instellen). Klik op <strong>Volgende</strong>. </li>
 <img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
-<li>Selecteer een map op uw computer om deze te synchroniseren met de back-upmap die u eerder op uw Synology NAS hebt aangemaakt. Klik op <strong>Volgende</strong>.</li>
+<li>Selecteer een map op uw computer om deze te synchroniseren met de back-upmap die u eerder op uw eCore Server hebt aangemaakt. Klik op <strong>Volgende</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" />
 <li>Klik op <strong>Voltooid</strong> om de installatie te voltooien.</li>
   </ol>
@@ -105,7 +105,7 @@
 <img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
 <li>Klik in Cloud Station op uw computer op <strong>Maken</strong>.</li>
 <img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" />
-<li>​Selecteer een Synology NAS voor de nieuwe taak. In dit voorbeeld selecteren we <strong>Aangesloten Synology NAS</strong> aangezien we een andere taak voor dezelfde Synology NAS willen maken. Klik op <strong>Volgende</strong>.​</li>
+<li>​Selecteer een eCore Server voor de nieuwe taak. In dit voorbeeld selecteren we <strong>Aangesloten eCore Server</strong> aangezien we een andere taak voor dezelfde eCore Server willen maken. Klik op <strong>Volgende</strong>.​</li>
 <img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" />
 <li>Klik op <strong>Geavanceerde instelling</strong> en volg de overige instructies van de wizard om de instelling te voltooien. </li>
 <img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
@@ -156,7 +156,7 @@
 </div>
 <div class="page-info">
   <ul>
-    <li>Volgende in dit onderwerp: <a href="backup_backup.html">Gegevens van uw Synology NAS back-uppen</a> </li>
+    <li>Volgende in dit onderwerp: <a href="backup_backup.html">Gegevens van uw eCore Server back-uppen</a> </li>
   </ul>
 </div>
 </body>

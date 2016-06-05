@@ -47,7 +47,7 @@
   <p>Please note the following guidelines regarding network settings when attempting to form a high-availability cluster.</p>
   <ul>
     <li><b>Network Settings:</b> Both servers must have static IP addresses belonging to the same subnet.</li>
-    <li><b>Number of LAN Ports:</b> Both servers must have the same number of LAN ports. If your Synology NAS is equipped with additional network card interfaces, these network cards also count as additional LAN ports. </li>
+    <li><b>Number of LAN Ports:</b> Both servers must have the same number of LAN ports. If your eCore Server is equipped with additional network card interfaces, these network cards also count as additional LAN ports. </li>
     <li><b>Connection Restrictions:</b> The servers cannot connect to the network via a proxy server, DHCP, IPv6, PPPoE, and Wi-Fi. Please ensure that these functions are disabled before attempting to form a high-availability cluster.</li>
     <li><strong>No DHCP Service:</strong> The servers cannot use the built-in DHCP server options when combined into a cluster.</li>
    <li><strong>Link Aggregation Settings:</strong> Both servers must have the same link aggregation settings for the data network and heartbeat connection. Once the high-availability cluster is created, link aggregation settings cannot be modified.</li>

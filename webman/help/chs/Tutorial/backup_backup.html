@@ -8,22 +8,22 @@
 <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
 <meta content="en-us" http-equiv="Content-Language" />
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-<title>备份 Synology NAS 中的数据以确保数据安全</title>
+<title>备份 eCore Server 中的数据以确保数据安全</title>
 </head>
 
 <body class="tutorial-content-box" >
 
-<h1>备份 Synology NAS 中的数据以确保数据安全</h1>
+<h1>备份 eCore Server 中的数据以确保数据安全</h1>
 <div class="tutorials_content">
 <img src="../../images/Backup/1x/Backup/back_up_your_data_on_synology_nas_to_ensure_data_security.jpg" />
 <h2>总览</h2>
-<p>无法预测的服务器故障或卷损毁对重要的数据而言是一个极大的风险。Synology NAS 为用户提供多种选择（无论是本地还是远程）以备份最重要数据的安全副本，随时应对最糟糕的情况。您可以根据企业的要求和情况选择一种或多种方式进行备份，以降低数据丢失风险。</p>
+<p>无法预测的服务器故障或卷损毁对重要的数据而言是一个极大的风险。eCore Server 为用户提供多种选择（无论是本地还是远程）以备份最重要数据的安全副本，随时应对最糟糕的情况。您可以根据企业的要求和情况选择一种或多种方式进行备份，以降低数据丢失风险。</p>
 
 <h3 class="list_head">1. 备份到外接存储设备</h3>
-<p> 当进行本地备份时，您可选择将备份目的地设定到同一卷、RAID 群组或者甚至相同物理硬盘中的另一个文件夹。在此情况下，如果数据被误删除，您就可以从另一个文件夹中的备份副本进行回复。但如果不幸遭遇服务器故障或卷损毁，您的数据和备份副本都可能丢失。因此，我们建议您将重要数据备份到外接存储设备，而不是同一台服务器。Synology NAS 不仅可让用户将备份目的地设置到本地驱动器，还可设置到外接 USB 设备。您可在<b>主菜单 > 备份和复制</b>中找到此功能。有关步骤说明，请参见<a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=chs#local_backup">此处</a>。</p>
+<p> 当进行本地备份时，您可选择将备份目的地设定到同一卷、RAID 群组或者甚至相同物理硬盘中的另一个文件夹。在此情况下，如果数据被误删除，您就可以从另一个文件夹中的备份副本进行回复。但如果不幸遭遇服务器故障或卷损毁，您的数据和备份副本都可能丢失。因此，我们建议您将重要数据备份到外接存储设备，而不是同一台服务器。eCore Server 不仅可让用户将备份目的地设置到本地驱动器，还可设置到外接 USB 设备。您可在<b>主菜单 > 备份和复制</b>中找到此功能。有关步骤说明，请参见<a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=chs#local_backup">此处</a>。</p>
 
-<h3 class="list_head">2. 备份到网络中的另一台 Synology NAS</h3>
-<p>将数据备份到外接存储设备可提高数据可得性，但还应考虑服务器和存储设备所在地发生各种灾难的风险, 如火灾或地震。Synology NAS 可让用户设置异地备份，方法是通过网络将数据备份传输到其他地方的服务器，以使服务器所在地发生灾难导致数据丢失风险降至最低。备份数据传输据可以更高的安全性级别进行加密以保护您的重要数据。通过段落分块备份功能，您的 NAS 将只备份经修改过的段落，此功能在通过 Internet 执行备份时特别实用。您可在<b>主菜单 > 备份和复制</b>中找到此功能。有关步骤说明，请参见<a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=chs#network_backup">此处</a>。</p>
+<h3 class="list_head">2. 备份到网络中的另一台 eCore Server</h3>
+<p>将数据备份到外接存储设备可提高数据可得性，但还应考虑服务器和存储设备所在地发生各种灾难的风险, 如火灾或地震。eCore Server 可让用户设置异地备份，方法是通过网络将数据备份传输到其他地方的服务器，以使服务器所在地发生灾难导致数据丢失风险降至最低。备份数据传输据可以更高的安全性级别进行加密以保护您的重要数据。通过段落分块备份功能，您的 NAS 将只备份经修改过的段落，此功能在通过 Internet 执行备份时特别实用。您可在<b>主菜单 > 备份和复制</b>中找到此功能。有关步骤说明，请参见<a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=chs#network_backup">此处</a>。</p>
 
 <h3 class="list_head">3. 备份到公共云存储</h3>
 <p>在不同的 NAS 设备之间执行远程备份需要两台或更多服务器，包括放置在服务器内以及服务器所在地的一系列硬盘。您的企业环境可能不允许您使用多台 NAS 设备进行异地备份。为向无法部署 NAS 以进行网络备份的问题提供解决方案，Synology 的备份功能还支持多种公共云服务，可让您将数据直接备份至公共云帐户。您可根据偏好的公共云存储，在<b>备份和复制</b>或<b>套件中心</b>中找到此功能。有关步骤说明，请参见<a href="http://help.synology.com/dsm/?section=DSM&version=5.2&link=BackupApp%2Frepository.html&lang=chs#cloudservice_backup">此处</a>。</p>

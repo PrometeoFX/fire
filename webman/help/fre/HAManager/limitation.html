@@ -47,7 +47,7 @@
   <p>Veuillez prendre note des directives suivantes concernant la configuration du réseau lorsque que vous tentez de former un cluster high-availability.</p>
   <ul>
     <li><b>Paramètres réseau :</b> Les deux serveurs doivent posséder des adresses IP statiques appartenant au même sous-réseau.</li>
-    <li><b>Nombres de ports de réseau local :</b> Les deux serveurs doivent disposer des mêmes nombres de ports de réseau local. Si votre Synology NAS est équipé d'interfaces de carte réseau supplémentaires, ces cartes réseau sont également considérées comme des ports de réseau local supplémentaires. </li>
+    <li><b>Nombres de ports de réseau local :</b> Les deux serveurs doivent disposer des mêmes nombres de ports de réseau local. Si votre eCore Server est équipé d'interfaces de carte réseau supplémentaires, ces cartes réseau sont également considérées comme des ports de réseau local supplémentaires. </li>
     <li><b>Limites de connexion :</b> Les serveurs ne peuvent se connecter au réseau via un serveur proxy, DHCP, IPv6, PPPoE et Wi-Fi. Veuillez vous assurer que ces fonctions sont désactivées avant de tenter de former un cluster high-availability.</li>
     <li><strong>Pas de service DHCP :</strong> Les serveurs ne peuvent pas utiliser les options de serveur DHCP intégrées lorsqu'ils sont combinés en cluster.</li>
    <li><strong>Paramètres Link Aggregation :</strong> Les deux serveurs devront avoir les mêmes paramètres link aggregation pour le réseau de données et la connexion heartbeat. Dès que le cluster high-availability est créé, les paramètres link aggregation ne peuvent pas être modifiés.</li>

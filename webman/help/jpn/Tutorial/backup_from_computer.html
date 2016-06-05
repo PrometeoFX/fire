@@ -19,7 +19,7 @@
 <h2>概要</h2>
 <p>Cloud Station はプラットフォームをまたぐ同期ソフトウェアだけではなく、パソコンのスマートなバックアップ方法としても機能します。Cloud Station をバックアップ ツールとして使用すると、いくつかの利点があります。まず、リアルタイムの複製が RPO（目標復旧地点）を短くするため、大規模な事故が発生しても PC から複製できない部分の期間が短期間分ですみます。また、帯域を大量に使用してきた従来のバックアップ方式とは異なり、帯域も大幅に節約できます。PC クライアントでファイル サイズやファイル形式を設定すると、同一フォルダ内にある、バックアップしないファイルも簡単に振り分けることができます。Cloud Station では、1 個のファイルにつき最大で 32 個のバージョン履歴を保持することができ、サーバー（NAS）側から PC クライアントに復元することができます。</p>
 
-<h3 class="list_head">1. Synology NAS に Cloud Station を設定する</h3>
+<h3 class="list_head">1. eCore Server に Cloud Station を設定する</h3>
 <ol>
 
 <li><strong>administrator</strong> に属するアカウントで DSM にログインします。</li>
@@ -30,11 +30,11 @@
 <img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" />
 <li><b>Cloud Station</b> に戻ると、これを有効にするよう要求されます。<b>[はい]</b> をクリックしてください。</li>
 <img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" />
-<div class="code_div"><b>注：</b>QuickConnect は、ローカル ネットワーク外から Synology NAS に簡単に接続できるリレーサービスです。外出先からファイルを同期したい場合は、<b>[コントロール パネル]</b> &gt; <b>[QuickConnect]</b> を選択して、QuickConnect を設定するようお薦めします。</div>
+<div class="code_div"><b>注：</b>QuickConnect は、ローカル ネットワーク外から eCore Server に簡単に接続できるリレーサービスです。外出先からファイルを同期したい場合は、<b>[コントロール パネル]</b> &gt; <b>[QuickConnect]</b> を選択して、QuickConnect を設定するようお薦めします。</div>
 
 <li><b>[権限]</b> を選択し、Cloud Station を使用できるユーザーを指定します。<b>[保存]</b> をクリックします。</li>
 <img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" />
-<li>バックアップの目的で、Synology NAS に共有フォルダを設定します。これを実行するには、<strong>[コントロール パネル]</strong> &gt; <strong>[共有フォルダ]</strong> を選択した後、<strong>[作成]</strong> をクリックします。</li>
+<li>バックアップの目的で、eCore Server に共有フォルダを設定します。これを実行するには、<strong>[コントロール パネル]</strong> &gt; <strong>[共有フォルダ]</strong> を選択した後、<strong>[作成]</strong> をクリックします。</li>
 <img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" />
 <li>フォルダに名前を付けて、詳細を入力します。<strong>[OK]</strong> をクリックします。例えば、フォルダに「<strong>バックアップ</strong>」という名前を付けます。</li>
 <img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" />
@@ -57,12 +57,12 @@
 <li>コンピュータでインストーラを実行し、画面の指示に従って Cloud Station をインストールしてください </li>
 <li>インストール後は、コンピュータで <strong>Cloud Station</strong> を実行します。<strong>[今すぐスタート] </strong>をクリックします。</li>
 <img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" />
-<li>Cloud Station を起動している Synology NAS のアドレス（または QuickConnect ID）、ユーザー名、パスワードを入力します。（右側の検索アイコンをクリックすると、Cloud Station が LAN 内にある別の Synology NAS を検索します）。<strong>[次へ]</strong> をクリックします。</li>
+<li>Cloud Station を起動している eCore Server のアドレス（または QuickConnect ID）、ユーザー名、パスワードを入力します。（右側の検索アイコンをクリックすると、Cloud Station が LAN 内にある別の eCore Server を検索します）。<strong>[次へ]</strong> をクリックします。</li>
 <img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" />
-<div class="code_div"><b>注：</b> Synology NAS で <strong>[Cloud Station]</strong> &gt; <strong>[権限]</strong> を選択し、入力したアカウントに権限があるか確認してください。</div>
+<div class="code_div"><b>注：</b> eCore Server で <strong>[Cloud Station]</strong> &gt; <strong>[権限]</strong> を選択し、入力したアカウントに権限があるか確認してください。</div>
 <li>タスクを設定する方法を選択します（バックアップ専用のフォルダを設定しますので、ここでは <strong>[詳細設定]</strong> を選択します）。<strong>[次へ]</strong> をクリックします。</li>
 <img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
-<li>Synology NAS で先に作成しておいた「バックアップ」フォルダとの同期を維持するフォルダをコンピュータ上で選択します。<strong>[次へ]</strong> をクリックします。</li>
+<li>eCore Server で先に作成しておいた「バックアップ」フォルダとの同期を維持するフォルダをコンピュータ上で選択します。<strong>[次へ]</strong> をクリックします。</li>
 <img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" />
 <li><strong>[完了]</strong> をクリックすると、セットアップが完了します。</li>
 <img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" />
@@ -74,7 +74,7 @@
 <img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
 <li>PC で Cloud Station に戻り、<strong>[作成]</strong> をクリックします。</li>
 <img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" />
-<li>​新しいタスクを実行する Synology NAS を選択します。同じ Synology NAS に別のタスクを作成しますので、ここでは <strong>[接続した Synology NAS]</strong> を選択します。<strong>[次へ]</strong> をクリックします。​</li>
+<li>​新しいタスクを実行する eCore Server を選択します。同じ eCore Server に別のタスクを作成しますので、ここでは <strong>[接続した eCore Server]</strong> を選択します。<strong>[次へ]</strong> をクリックします。​</li>
 <img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" />
 <li><strong>[詳細設定]</strong> を選択し、ウィザードに従って設定を続行してください。</li>
 <img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
@@ -89,12 +89,12 @@
 <li>コンピュータでインストーラを実行し、画面の指示に従って Cloud Station をインストールしてください </li>
 <li>インストール後は、コンピュータで <strong>Cloud Station</strong> を実行します。<strong>[今すぐスタート] </strong>をクリックします。</li>
 <img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" />      
-<li>Cloud Station を起動している Synology NAS のアドレス（または QuickConnect ID）、ユーザー名、パスワードを入力します（右側の検索アイコンをクリックすると、Cloud Station が LAN 内にある別の Synology NAS を検索します）。<strong>[次へ]</strong> をクリックします。</li>
+<li>Cloud Station を起動している eCore Server のアドレス（または QuickConnect ID）、ユーザー名、パスワードを入力します（右側の検索アイコンをクリックすると、Cloud Station が LAN 内にある別の eCore Server を検索します）。<strong>[次へ]</strong> をクリックします。</li>
 <img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" />   
-<div class="code_div"><b>注：</b> Synology NAS で <strong>[Cloud Station]</strong> &gt; <strong>[権限]</strong> を選択し、入力したアカウントに権限があるか確認してください。</div>
+<div class="code_div"><b>注：</b> eCore Server で <strong>[Cloud Station]</strong> &gt; <strong>[権限]</strong> を選択し、入力したアカウントに権限があるか確認してください。</div>
 <li>タスクを設定する方法を選択します（バックアップ専用のフォルダを設定しますので、ここでは <strong>[詳細設定]</strong> を選択します）。<strong>[次へ]</strong> をクリックします。</li>
 <img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
-<li>Synology NAS で先に作成しておいた「バックアップ」フォルダとの同期を維持するフォルダをコンピュータ上で選択します。<strong>[次へ]</strong> をクリックします。</li>
+<li>eCore Server で先に作成しておいた「バックアップ」フォルダとの同期を維持するフォルダをコンピュータ上で選択します。<strong>[次へ]</strong> をクリックします。</li>
 <img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" />
 <li><strong>[完了]</strong> をクリックすると、セットアップが完了します。</li>
   </ol>
@@ -105,7 +105,7 @@
 <img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
 <li>PC で Cloud Station に戻り、<strong>[作成]</strong> をクリックします。</li>
 <img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" />
-<li>​新しいタスクを実行する Synology NAS を選択します。同じ Synology NAS に別のタスクを作成しますので、ここでは <strong>[接続した Synology NAS]</strong> を選択します。<strong>[次へ]</strong> をクリックします。​</li>
+<li>​新しいタスクを実行する eCore Server を選択します。同じ eCore Server に別のタスクを作成しますので、ここでは <strong>[接続した eCore Server]</strong> を選択します。<strong>[次へ]</strong> をクリックします。​</li>
 <img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" />
 <li><strong>[詳細設定]</strong> を選択し、ウィザードに従って設定を続行してください。</li>
 <img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
@@ -156,7 +156,7 @@
 </div>
 <div class="page-info">
   <ul>
-<li>このトピックで次：<a href="backup_backup.html">Synology NAS からデータをバックアップ</a> </li>
+<li>このトピックで次：<a href="backup_backup.html">eCore Server からデータをバックアップ</a> </li>
   </ul>
 </div>
 </body>

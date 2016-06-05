@@ -42,7 +42,7 @@
   <p>Observe as orienta&ccedil;&otilde;es de configura&ccedil;&atilde;o de rede a seguir ao tentar formar um cluster de high-availability.</p>
   <ul>
     <li><b>Configura&ccedil;&otilde;es de rede:</b> Os dois servidores devem ter endere&ccedil;os IP est&aacute;ticos pertencentes &agrave; mesma sub-rede.</li>
-    <li><b>N&uacute;mero de portas LAN:</b> Os dois servidores devem ter o mesmo n&uacute;mero de portas LAN. Se seu Synology NAS for equipado com interfaces de cart&atilde;o de rede adicionais, esses cart&otilde;es de rede tamb&eacute;m contam como portas LAN adicionais. </li>
+    <li><b>N&uacute;mero de portas LAN:</b> Os dois servidores devem ter o mesmo n&uacute;mero de portas LAN. Se seu eCore Server for equipado com interfaces de cart&atilde;o de rede adicionais, esses cart&otilde;es de rede tamb&eacute;m contam como portas LAN adicionais. </li>
     <li><b>Restri&ccedil;&otilde;es de conex&atilde;o:</b> Os servidores n&atilde;o podem se conectar &agrave; rede por servidor proxy, DHCP, IPv6, PPPoE ou Wi-Fi. Certifique-se de que essas fun&ccedil;&otilde;es estejam desabilitadas antes de tentar formar um cluster de high-availability.</li>
     <li><strong>Sem servi&ccedil;o DHCP:</strong> os servidores n&atilde;o podem usar as op&ccedil;&otilde;es do DHCP Server integrado quando combinados em um cluster.</li>
    <li><strong>Configura&ccedil;&otilde;es de Link Aggregation:</strong> os dois servidores devem ter as mesmas configura&ccedil;&otilde;es de Link Aggregation para a rede de dados e a conex&atilde;o Heartbeat. Ap&oacute;s a cria&ccedil;&atilde;o do cluster de high-availability, as configura&ccedil;&otilde;es de Link Aggregation n&atilde;o poder&atilde;o ser modificadas.</li>

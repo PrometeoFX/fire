@@ -19,7 +19,7 @@
 <h2>总览</h2>
 <p>Cloud Station 不仅是一款复杂的跨平台同步软件，用户还可将其用作更智能的备份个人计算机工具。以下是将 Cloud Station 用作备份工具的好处。首先，实时复制提供了更好的 RPO，由于一个重大的意外，在较短时间内数据就可能从您的 PC 上丢失 (无法还原)。它不仅是即时完成的，而且与传统的备份方法相比（在特定时间内使用大量带宽），还能够帮助您大幅节省带宽。通过在 PC 客户端上设置文件大小或文件类型，您可轻松过滤同一文件夹内不需要备份的文件。Cloud Station 还可保留多达 32 个单个文件的历史版本，让您从服务器 (NAS) 还原到 PC 客户端。</p>
 
-<h3 class="list_head">1. 在 Synology NAS 上设置 Cloud Station</h3>
+<h3 class="list_head">1. 在 eCore Server 上设置 Cloud Station</h3>
 <ol>
 
 <li>请使用属于 <strong>administrator</strong> 的帐户登录 DSM。</li>
@@ -30,11 +30,11 @@
 <img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" />
 <li>现在回到 <b>Cloud Station</b>，系统会提示您将其启用。单击<b>是</b>。</li>
 <img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" />
-<div class="code_div"><b>注：</b> QuickConnect 是一种发送服务，该服务可让您从本地网络外轻松连接到 Synology NAS。如果您要在离家或离开办公室时同步文件，我们建议您进入<b>控制面板</b> &gt; <b>QuickConnect</b> 设置 QuickConnect。</div>
+<div class="code_div"><b>注：</b> QuickConnect 是一种发送服务，该服务可让您从本地网络外轻松连接到 eCore Server。如果您要在离家或离开办公室时同步文件，我们建议您进入<b>控制面板</b> &gt; <b>QuickConnect</b> 设置 QuickConnect。</div>
 
 <li>进入<b>权限</b>并指定可用的 Cloud Station 用户。单击<b>保存</b>。</li>
 <img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" />
-<li>在 Synology NAS 设置备份所需的共享文件夹。要进行此操作，请进入<strong>控制面板</strong> &gt; <strong>共享文件夹</strong>然后单击<strong>创建</strong>。</li>
+<li>在 eCore Server 设置备份所需的共享文件夹。要进行此操作，请进入<strong>控制面板</strong> &gt; <strong>共享文件夹</strong>然后单击<strong>创建</strong>。</li>
 <img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" />
 <li>对文件夹命名并填入相应的详细信息。单击<strong>确定</strong>。例如，我们将对文件夹命名为 <strong>Backup</strong>。</li>
 <img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" />
@@ -57,12 +57,12 @@
 <li>启动计算机上的安装程序并按说明安装 Cloud Station。 </li>
 <li>安装后，在计算机上运行 <strong>Cloud Station</strong>。单击<strong>立即开始</strong>。</li>
 <img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" />
-<li>输入运行 Cloud Station 的 Synology NAS 地址（或 QuickConnect ID）、用户名和密码。（您还可单击右侧的搜索图标，Cloud Station 将自动搜索 LAN 中的其它 Synology NAS）。单击<strong>下一步</strong>。</li>
+<li>输入运行 Cloud Station 的 eCore Server 地址（或 QuickConnect ID）、用户名和密码。（您还可单击右侧的搜索图标，Cloud Station 将自动搜索 LAN 中的其它 eCore Server）。单击<strong>下一步</strong>。</li>
 <img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" />
-<div class="code_div"><b>注：</b> 确认输入的帐户拥有权限（在 Synology NAS 上 <strong>Cloud Station</strong> &gt; <strong>权限</strong>授予）。</div>
+<div class="code_div"><b>注：</b> 确认输入的帐户拥有权限（在 eCore Server 上 <strong>Cloud Station</strong> &gt; <strong>权限</strong>授予）。</div>
 <li>选择您要设置任务的方式 (我们将在此选择<strong>高级设置</strong>)，因为我们为备份设置了专门的文件夹。单击<strong>下一步</strong>。 </li>
 <img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
-<li>选择计算机上的文件夹以保持与您之前在 Synology NAS 上创建的 Backup 文件夹同步。单击<strong>下一步</strong>。</li>
+<li>选择计算机上的文件夹以保持与您之前在 eCore Server 上创建的 Backup 文件夹同步。单击<strong>下一步</strong>。</li>
 <img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" />
 <li>单击<strong>完成</strong>完成设置。</li>
 <img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" />
@@ -74,7 +74,7 @@
 <img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
 <li>在计算机的 Cloud Station 上进行备份，单击<strong>创建</strong>。</li>
 <img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" />
-<li>​为您的新任务选择 Synology NAS。在此，您将选择<strong>连接的 Synology NAS</strong>，因为我们将为同一 Synology NAS 创建另一个任务。单击<strong>下一步</strong>。​</li>
+<li>​为您的新任务选择 eCore Server。在此，您将选择<strong>连接的 eCore Server</strong>，因为我们将为同一 eCore Server 创建另一个任务。单击<strong>下一步</strong>。​</li>
 <img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" />
 <li>选择<strong>高级设置</strong>，并按照向导的其余指示继续进行设置。 </li>
 <img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
@@ -89,12 +89,12 @@
 <li>启动计算机上的安装程序并按说明安装 Cloud Station。 </li>
 <li>安装后，在计算机上运行 <strong>Cloud Station</strong>。单击<strong>立即开始</strong>。</li>
 <img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" />      
-<li>输入运行 Cloud Station 的 Synology NAS 地址（或 QuickConnect ID）、用户名和密码。（您还可单击右侧的搜索图标，Cloud Station 将自动搜索 LAN 中的其它 Synology NAS）。单击<strong>下一步</strong>。</li>
+<li>输入运行 Cloud Station 的 eCore Server 地址（或 QuickConnect ID）、用户名和密码。（您还可单击右侧的搜索图标，Cloud Station 将自动搜索 LAN 中的其它 eCore Server）。单击<strong>下一步</strong>。</li>
 <img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" />   
-<div class="code_div"><b>注：</b> 确认输入的帐户拥有权限（在 Synology NAS 上 <strong>Cloud Station</strong> &gt; <strong>权限</strong>授予）。</div>
+<div class="code_div"><b>注：</b> 确认输入的帐户拥有权限（在 eCore Server 上 <strong>Cloud Station</strong> &gt; <strong>权限</strong>授予）。</div>
 <li>选择您要设置任务的方式 (我们将在此选择<strong>高级设置</strong>)，因为我们为备份设置了专门的文件夹。单击<strong>下一步</strong>。 </li>
 <img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
-<li>选择计算机上的文件夹以保持与您之前在 Synology NAS 上创建的 Backup 文件夹同步。单击<strong>下一步</strong>。</li>
+<li>选择计算机上的文件夹以保持与您之前在 eCore Server 上创建的 Backup 文件夹同步。单击<strong>下一步</strong>。</li>
 <img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" />
 <li>单击<strong>完成</strong>完成设置。</li>
   </ol>
@@ -105,7 +105,7 @@
 <img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
 <li>在计算机的 Cloud Station 上进行备份，单击<strong>创建</strong>。</li>
 <img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" />
-<li>​为您的新任务选择 Synology NAS。在此，您将选择<strong>连接的 Synology NAS</strong>，因为我们将为同一 Synology NAS 创建另一个任务。单击<strong>下一步</strong>。​</li>
+<li>​为您的新任务选择 eCore Server。在此，您将选择<strong>连接的 eCore Server</strong>，因为我们将为同一 eCore Server 创建另一个任务。单击<strong>下一步</strong>。​</li>
 <img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" />
 <li>选择<strong>高级设置</strong>，并按照向导的其余指示继续进行设置。 </li>
 <img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
@@ -156,7 +156,7 @@
 </div>
 <div class="page-info">
   <ul>
-<li>此主题中的下一个：<a href="backup_backup.html">备份 Synology NAS 中的数据</a> </li>
+<li>此主题中的下一个：<a href="backup_backup.html">备份 eCore Server 中的数据</a> </li>
   </ul>
 </div>
 </body>

@@ -47,7 +47,7 @@
   <p>Observe las siguientes directrices referentes a las configuraciones de red cuando intente formar un clúster de High-Availability.</p>
   <ul>
     <li><b>Configuración de red:</b> Ambos servidores deben tener direcciones IP estáticas que pertenezcan a la misma subred.</li>
-    <li><b>Número de puertos LAN:</b> Ambos servidores deben tener el mismo número de puertos LAN. Si su Synology NAS cuenta con interfaces de tarjeta de red adicionales, estas tarjetas de red se considerarán puertos LAN adicionales. </li>
+    <li><b>Número de puertos LAN:</b> Ambos servidores deben tener el mismo número de puertos LAN. Si su eCore Server cuenta con interfaces de tarjeta de red adicionales, estas tarjetas de red se considerarán puertos LAN adicionales. </li>
     <li><b>Restricciones de conexión:</b> Los servidores no se pueden conectar a la red mediante un servidor proxy, DHCP, IPv6, PPPoE, ni Wi-Fi. Asegúrese de que estas funciones se deshabiliten antes de intentar formar un clúster High-Availability.</li>
     <li><strong>Sin servicio DHCP:</strong> Los servidores no pueden utilizar las opciones de DHCP server incorporadas al combinarlos en un clúster.</li>
    <li><strong>Configuración de Link Aggregation:</strong> Ambos servidores deben tener la misma configuración de Link Aggregation para la red de datos y la conexión Heartbeat. Cuando se haya creado el clúster de High-Availability, la configuración de Link Aggregation no se podrá modificar.</li>

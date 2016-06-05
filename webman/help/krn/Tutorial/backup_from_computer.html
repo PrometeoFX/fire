@@ -19,7 +19,7 @@
 <h2>개요</h2>
 <p>Cloud Station은 정교한 크로스 플랫폼 동기화 소프트웨어일 뿐 아니라, 사용자들은 개인 컴퓨터를 더 스마트하게 백업하는 수단으로서 이것을 사용할 수 있습니다. Cloud Station을 백업 동반자로 이용할 경우 다음과 같은 몇 가지 이점이 있습니다. 우선, 실시간 복제는 보다 나은 RPO를 제공하므로 큰 사고 시 PC에서 더 짧은 기간의 데이터가 손실(복구 불가)됩니다. 이는 즉각적일 뿐 아니라, 특정 시간에 많은 양의 대역폭을 소모하는 전통적인 백업과 비교할 때 대역폭을 획기적으로 절약할 수 있습니다. PC 클라이언트에서 파일 크기 또는 파일 유형을 설정함으로써 백업을 원치 않는 동일한 폴더 내에 있는 파일을 쉽게 제외시킬 수 있습니다. Cloud Station은 또한 단일 파일에 대해 최대 32개의 기록 버전을 보유할 수 있는데, 이는 Cloud Station이 서버(NAS) 측에서 PC 클라이언트로 복원을 허용하는 숫자입니다.</p>
 
-<h3 class="list_head">1. Synology NAS에서 Cloud Station 설정</h3>
+<h3 class="list_head">1. eCore Server에서 Cloud Station 설정</h3>
 <ol>
 
 <li><strong>Administrators</strong>에 속하는 계정으로 DSM에 로그인합니다.</li>
@@ -30,11 +30,11 @@
 <img src="../../images/Backup/1x/backup_from_PC/02.png" border="1" />
 <li>이제 <b>Cloud Station</b>으로 되돌아오고 이를 활성화하라는 메시지가 표시됩니다. <b>예</b>를 클릭합니다.</li>
 <img src="../../images/Backup/1x/backup_from_PC/03.png" border="1" />
-<div class="code_div"><b>참고:</b> QuickConnect는 로컬 네트워크 외부에서 쉽게 Synology NAS에 연결할 수 있도록 해주는 릴레이 서비스입니다. 집이나 사무실에서 멀리 떨어진 곳에 있을 때 파일을 동기화하기를 원하는 경우, <b>제어판</b> &gt; <b>QuickConnect</b>로 가서 QuickConnect를 활성화할 것을 권장합니다.</div>
+<div class="code_div"><b>참고:</b> QuickConnect는 로컬 네트워크 외부에서 쉽게 eCore Server에 연결할 수 있도록 해주는 릴레이 서비스입니다. 집이나 사무실에서 멀리 떨어진 곳에 있을 때 파일을 동기화하기를 원하는 경우, <b>제어판</b> &gt; <b>QuickConnect</b>로 가서 QuickConnect를 활성화할 것을 권장합니다.</div>
 
 <li><b>권한</b>으로 가서 Cloud Station 서비스를 이용할 수 있는 사용자를 지정합니다. <b>저장</b>을 클릭하십시오.</li>
 <img src="../../images/Backup/1x/backup_from_PC/04.png" border="1" />
-<li>Synology NAS에 백업 목적의 공유 폴더를 설정합니다. 이렇게 하려면 <strong>제어판</strong> &gt; <strong>공유 폴더</strong>로 이동하여 <strong>생성</strong>을 클릭합니다.</li>
+<li>eCore Server에 백업 목적의 공유 폴더를 설정합니다. 이렇게 하려면 <strong>제어판</strong> &gt; <strong>공유 폴더</strong>로 이동하여 <strong>생성</strong>을 클릭합니다.</li>
 <img src="../../images/Backup/1x/backup_from_PC/05.png" border="1" />
 <li>폴더 이름을 지정하고 그에 따라 상세 정보를 채웁니다. <strong>확인</strong>을 클릭합니다. 예를 들면, 폴더 이름을 <strong>백업</strong>으로 지정합니다.</li>
 <img src="../../images/Backup/1x/backup_from_PC/06.png" border="1" />
@@ -57,12 +57,12 @@
 <li>컴퓨터에서 설치 관리자를 실행하고 지침을 따라 Cloud Station을 설치합니다. </li>
 <li>설치를 마친 후 컴퓨터에서 <strong>Cloud Station</strong>을 실행합니다. <strong>지금 시작</strong>을 클릭합니다.</li>
 <img src="../../images/Backup/1x/backup_from_PC/10.png" border="1" />
-<li>Cloud Station을 실행 중인 Synology NAS의 주소(또는 QuickConnect ID), 사용자 이름 및 패스워드를 입력합니다. (오른쪽에서 검색 아이콘을 클릭하여 Cloud Station이 LAN 내에서 다른 Synology NAS를 자동으로 검색할 수도 있습니다.) <strong>다음</strong>을 클릭합니다.</li>
+<li>Cloud Station을 실행 중인 eCore Server의 주소(또는 QuickConnect ID), 사용자 이름 및 패스워드를 입력합니다. (오른쪽에서 검색 아이콘을 클릭하여 Cloud Station이 LAN 내에서 다른 eCore Server를 자동으로 검색할 수도 있습니다.) <strong>다음</strong>을 클릭합니다.</li>
 <img src="../../images/Backup/1x/backup_from_PC/11.png" border="1" />
-<div class="code_div"><b>참고:</b> 입력한 계정은 Synology NAS의 <strong>Cloud Station</strong> &gt; <strong>권한</strong>에서 부여되는 권한을 가지고 있어야 합니다.</div>
+<div class="code_div"><b>참고:</b> 입력한 계정은 eCore Server의 <strong>Cloud Station</strong> &gt; <strong>권한</strong>에서 부여되는 권한을 가지고 있어야 합니다.</div>
 <li>작업을 설정하려는 방법을 선택합니다(여기서에서는 특별히 백업을 위해 폴더를 설정하는 중이므로 <strong>빠른 설정</strong>을 선택할 것입니다). <strong>다음</strong>을 클릭합니다. </li>
 <img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
-<li>앞에서 Synology NAS에 생성한 백업 폴더와 동기화를 유지할 폴더를 컴퓨터에서 선택합니다. <strong>다음</strong>을 클릭합니다.</li>
+<li>앞에서 eCore Server에 생성한 백업 폴더와 동기화를 유지할 폴더를 컴퓨터에서 선택합니다. <strong>다음</strong>을 클릭합니다.</li>
 <img src="../../images/Backup/1x/backup_from_PC/13.png" border="1" />
 <li><strong>완료</strong>를 클릭하여 설정을 완료합니다.</li>
 <img src="../../images/Backup/1x/backup_from_PC/14.png" border="1" />
@@ -74,7 +74,7 @@
 <img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
 <li>PC의 Cloud Station으로 돌아가서 <strong>생성</strong>을 클릭합니다.</li>
 <img src="../../images/Backup/1x/backup_from_PC/16.png" border="1" />
-<li>​새 작업을 위한 Synology NAS를 선택합니다. 여기에서는 동일한 Synology NAS를 위한 또다른 작업을 생성하는 것이므로 <strong>연결된 Synology NAS</strong>를 선택할 것입니다. <strong>다음</strong>을 클릭합니다.​</li>
+<li>​새 작업을 위한 eCore Server를 선택합니다. 여기에서는 동일한 eCore Server를 위한 또다른 작업을 생성하는 것이므로 <strong>연결된 eCore Server</strong>를 선택할 것입니다. <strong>다음</strong>을 클릭합니다.​</li>
 <img src="../../images/Backup/1x/backup_from_PC/17.png" border="1" />
 <li><strong>고급 설정</strong>을 클릭하고 마법사의 나머지 단계에 따라 설정을 계속합니다. </li>
 <img src="../../images/Backup/1x/backup_from_PC/12.png" border="1" />
@@ -89,12 +89,12 @@
     <li>컴퓨터에서 설치 관리자를 실행하고 지침을 따라 Cloud Station을 설치합니다. </li>
     <li>설치를 마친 후 컴퓨터에서 <strong>Cloud Station</strong>을 실행합니다. <strong>지금 시작</strong>을 클릭합니다.</li>
 <img src="../../images/Backup/1x/backup_from_PC/19.png" border="1" />      
-<li>Cloud Station을 실행 중인 Synology NAS의 주소(또는 QuickConnect ID), 사용자 이름 및 패스워드를 입력합니다. (오른쪽에서 검색 아이콘을 클릭하여 Cloud Station이 LAN 내에서 다른 Synology NAS를 자동으로 검색할 수도 있습니다.) <strong>다음</strong>을 클릭합니다.</li>
+<li>Cloud Station을 실행 중인 eCore Server의 주소(또는 QuickConnect ID), 사용자 이름 및 패스워드를 입력합니다. (오른쪽에서 검색 아이콘을 클릭하여 Cloud Station이 LAN 내에서 다른 eCore Server를 자동으로 검색할 수도 있습니다.) <strong>다음</strong>을 클릭합니다.</li>
 <img src="../../images/Backup/1x/backup_from_PC/20.png" border="1" />   
-    <div class="code_div"><b>참고:</b> 입력한 계정은 Synology NAS의 <strong>Cloud Station</strong> &gt; <strong>권한</strong>에서 부여되는 권한을 가지고 있어야 합니다.</div>
+    <div class="code_div"><b>참고:</b> 입력한 계정은 eCore Server의 <strong>Cloud Station</strong> &gt; <strong>권한</strong>에서 부여되는 권한을 가지고 있어야 합니다.</div>
 <li>작업을 설정하려는 방법을 선택합니다(여기서에서는 특별히 백업을 위해 폴더를 설정하는 중이므로 <strong>빠른 설정</strong>을 선택할 것입니다). <strong>다음</strong>을 클릭합니다. </li>
 <img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
-<li>앞에서 Synology NAS에 생성한 백업 폴더와 동기화를 유지할 폴더를 컴퓨터에서 선택합니다. <strong>다음</strong>을 클릭합니다.</li>
+<li>앞에서 eCore Server에 생성한 백업 폴더와 동기화를 유지할 폴더를 컴퓨터에서 선택합니다. <strong>다음</strong>을 클릭합니다.</li>
 <img src="../../images/Backup/1x/backup_from_PC/22.png" border="1" />
 <li><strong>완료</strong>를 클릭하여 설정을 완료합니다.</li>
   </ol>
@@ -105,7 +105,7 @@
 <img src="../../images/Backup/1x/backup_from_PC/15.png" border="1" />
 <li>컴퓨터의 Cloud Station으로 돌아가서 <strong>생성</strong>을 클릭합니다.</li>
 <img src="../../images/Backup/1x/backup_from_PC/23.png" border="1" />
-<li>​새 작업을 위한 Synology NAS를 선택합니다. 여기에서는 동일한 Synology NAS를 위한 또다른 작업을 생성하는 것이므로 <strong>연결된 Synology NAS</strong>를 선택할 것입니다. <strong>다음</strong>을 클릭합니다.​</li>
+<li>​새 작업을 위한 eCore Server를 선택합니다. 여기에서는 동일한 eCore Server를 위한 또다른 작업을 생성하는 것이므로 <strong>연결된 eCore Server</strong>를 선택할 것입니다. <strong>다음</strong>을 클릭합니다.​</li>
 <img src="../../images/Backup/1x/backup_from_PC/24.png" border="1" />
 <li><strong>고급 설정</strong>을 클릭하고 마법사의 나머지 단계에 따라 설정을 계속합니다. </li>
 <img src="../../images/Backup/1x/backup_from_PC/21.png" border="1" />
@@ -156,7 +156,7 @@
 </div>
 <div class="page-info">
   <ul>
-    <li>이 항목의 다음: <a href="backup_backup.html">Synology NAS에서 데이터 백업</a> </li>
+    <li>이 항목의 다음: <a href="backup_backup.html">eCore Server에서 데이터 백업</a> </li>
   </ul>
 </div>
 </body>
