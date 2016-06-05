@@ -12090,7 +12090,7 @@ Ext.define("SYNO.SDS._System", {
             closable: false,
             maxWidth: 300,
             title: _D("product"),
-            msg: (true === b) ? _T("login", "error_system_getting_ready") : _JSLIBSTR("uicommon", "system_reboot").replace(/_SERVER_/g, _D("product"))
+            msg: (true === b) ? _T("login", "error_system_getting_ready") : _JSLIBSTR("uicommon", "system_reboot").replace(/_DISKSTATION_/g, _D("product"))
         });
         if (true === c) {
             d = "force_reboot"
@@ -12131,7 +12131,7 @@ Ext.define("SYNO.SDS._System", {
                             closable: false,
                             maxWidth: 300,
                             title: _D("product"),
-                            msg: _JSLIBSTR("uicommon", "system_reboot_timeout").replace(/_SERVER_/g, _D("product"))
+                            msg: _JSLIBSTR("uicommon", "system_reboot_timeout").replace(/_DISKSTATION_/g, _D("product"))
                         });
                         h.timeoutNotified = true
                     }
@@ -12145,7 +12145,7 @@ Ext.define("SYNO.SDS._System", {
             closable: false,
             maxWidth: 300,
             title: _D("product"),
-            msg: _JSLIBSTR("uicommon", "system_poweroff").replace(/_SERVER_/g, _D("product"))
+            msg: _JSLIBSTR("uicommon", "system_poweroff").replace(/_DISKSTATION_/g, _D("product"))
         });
         this._haltSystem((true === a) ? "force_shutdown" : "shutdown")
     },
