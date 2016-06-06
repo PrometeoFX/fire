@@ -1,4 +1,4 @@
-# Copyright (c) 2000-2014 Synology Inc. All rights reserved.
+# All rights reserved.
 ## ======================== Define  ==============================
 APP_NAME = "synosecurityscan"          #for synodsinfo.static
 

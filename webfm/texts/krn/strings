@@ -722,7 +722,7 @@ dates_desc	=	"<font color="red"><br>참고: </b></font>유효 기간은 "메인 
 dates_desc_content	=	"유효 기간은 "메인 메뉴" > "제어판" > "지역 옵션" > "시간"에 지정된 _OSNAME_의 시스템 시간에 따라 효력을 가집니다."
 delete_confirm	=	"선택한 공유 링크를 삭제하시겠습니까?"
 download_log_desc	=	"공유 링크 다운로드:"
-dsm_access_desc	=	"_OSNAME_ 계정을 사용하여 액세스합니다."
+dsm_access_desc	=	"eCore 계정을 사용하여 액세스합니다."
 dsm_user_alert	=	"계정을 최소한 하나 선택하십시오."
 edit_link	=	"공유 링크 편집"
 enable_duration	=	"유효 기간 사용자 지정"
@@ -750,7 +750,7 @@ mailto_desc	=	"이메일을 통해 링크를 공유하기 전에 <br>컴퓨터�
 mixed_access_desc	=	"소셜 네트워크 계정을 사용하여 로그인하거나 패스워드를 입력하여 액세스 권한을 얻습니다."
 month	=	"한 달"
 never	=	"영구"
-newlink_instruction	=	"공유 링크를 만들어 _OSNAME_ 사용자 자격 증명이 없는 사람들이 공유 파일을 다운로드할 수 있도록 하십시오."
+newlink_instruction	=	"공유 링크를 만들어 eCore 사용자 자격 증명이 없는 사람들이 공유 파일을 다운로드할 수 있도록 하십시오."
 notification_desc	=	"친구에게 초대를 보내시겠습니까?"
 notification_title	=	"초대"
 open_sharing_manager	=	"공유 링크 관리자를 열려면 여기를 클릭합니다"
@@ -762,7 +762,7 @@ restrict_alert	=	"최소한 친구를 한 명 선택하거나 패스워드를 �
 restrict_sharing	=	"보안 공유 활성화"
 result_instruction	=	"아래 링크를 복사하거나 링크를 {0}하여 파일을 공유하십시오."
 select_friends	=	"소셜 네트워크에서 친구를 선택하여 그들만이 위 공유 링크에 액세스할 수 있게 합니다."
-share_dsm_user	=	"_OSNAME_ 사용자와 공유"
+share_dsm_user	=	"eCore 사용자와 공유"
 share_public_user	=	"다른 사람과 공유"
 share_url	=	"공유 링크"
 share_with_me	=	"나와 공유된 링크"
@@ -787,7 +787,7 @@ valid_times_tip	=	"이 옵션은 폴더가 아니라 파일의 링크를 공유�
 week	=	"한 주"
 
 [shortcut]
-dsm_dekstop	=	"_OSNAME_ 바탕화면"
+dsm_dekstop	=	"eCore 바탕화면"
 make_to	=	"바로가기 만들기"
 make_to_dsm_dekstop	=	"바탕화면 바로가기 만들기"
 

@@ -79,7 +79,7 @@ ss_enable_warning	=	"NTP 機能は Surveillance Station が必要とするため
 too_many_groups	=	"総グループ数がシステムの制限を超えています。"
 too_many_shares	=	"総共有フォルダ数がシステムの制限を超えています。"
 too_many_users	=	"総ユーザーアカウント数がシステムの制限を超えています。"
-unknown	=	"作業に失敗しました。 再度 _OSNAME_ へログインして再試行してください。"
+unknown	=	"作業に失敗しました。 再度 eCore へログインして再試行してください。"
 user_exist	=	"ユーザー名が既に存在するかシステム使用専用に予約されています。別のユーザー名を入力してください。"
 
 [group]
@@ -90,7 +90,7 @@ share	=	"共有フォルダ"
 [log_viewer]
 backup	=	"バックアップ"
 conn_afp	=	"Mac のファイルサービス"
-conn_dsm	=	"_OSNAME_"
+conn_dsm	=	"eCore"
 conn_ftp	=	"FTP"
 conn_samba	=	"Windows ファイルサーバー"
 connection	=	"接続"

@@ -1,4 +1,4 @@
-# Copyright (c) 2000-2014 Synology Inc. All rights reserved.
+# All rights reserved.
 from Define import *
 from utils import *
 from multiprocessing import Queue
