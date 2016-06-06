@@ -748,8 +748,8 @@ make_to_dsm_dekstop	=	"Vytvořit zástupce na ploše"
 
 [tree]
 leaf_about	=	"O aplikaci"
-leaf_filebrowser	=	"File Station"
-leaf_filestation	=	"File Station"
+leaf_filebrowser	=	"Archivador"
+leaf_filestation	=	"Archivador"
 
 [upload]
 confirm_unload	=	"Budete odhlášeni z {0} nebo můžete stránku aktualizovat. Úlohy odesílání budou zrušeny."

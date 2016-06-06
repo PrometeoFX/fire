@@ -793,8 +793,8 @@ make_to_dsm_dekstop	=	"바탕화면 바로가기 만들기"
 
 [tree]
 leaf_about	=	"정보"
-leaf_filebrowser	=	"File Station"
-leaf_filestation	=	"File Station"
+leaf_filebrowser	=	"Archivador"
+leaf_filestation	=	"Archivador"
 
 [upload]
 confirm_unload	=	"{0}에서 로그 아웃하거나 페이지를 새로 고치려고 합니다. 업로드 작업이 취소됩니다."

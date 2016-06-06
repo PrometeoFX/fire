@@ -748,8 +748,8 @@ make_to_dsm_dekstop	=	"Opret skrivebordsgenvej"
 
 [tree]
 leaf_about	=	"Om"
-leaf_filebrowser	=	"File Station"
-leaf_filestation	=	"File Station"
+leaf_filebrowser	=	"Archivador"
+leaf_filestation	=	"Archivador"
 
 [upload]
 confirm_unload	=	"Du er ved at logge ud fra {0} eller opdatere siden. Uploadopgaver annulleres."

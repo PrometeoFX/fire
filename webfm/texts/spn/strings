@@ -748,8 +748,8 @@ make_to_dsm_dekstop	=	"Crear acceso directo de escritorio"
 
 [tree]
 leaf_about	=	"Acerca de"
-leaf_filebrowser	=	"File Station"
-leaf_filestation	=	"File Station"
+leaf_filebrowser	=	"Archivador"
+leaf_filestation	=	"Archivador"
 
 [upload]
 confirm_unload	=	"Está a punto de cerrar sesión en {0} o actualizar la página. Se cancelarán las tareas de carga."

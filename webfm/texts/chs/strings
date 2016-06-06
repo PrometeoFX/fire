@@ -748,8 +748,8 @@ make_to_dsm_dekstop	=	"创建桌面快捷方式"
 
 [tree]
 leaf_about	=	"关于"
-leaf_filebrowser	=	"File Station"
-leaf_filestation	=	"File Station"
+leaf_filebrowser	=	"Archivador"
+leaf_filestation	=	"Archivador"
 
 [upload]
 confirm_unload	=	"您将要退出 {0} 或刷新页面，上传任务将被取消。"

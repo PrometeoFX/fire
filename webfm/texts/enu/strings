@@ -748,8 +748,8 @@ make_to_dsm_dekstop	=	"Create desktop shortcut"
 
 [tree]
 leaf_about	=	"About"
-leaf_filebrowser	=	"File Station"
-leaf_filestation	=	"File Station"
+leaf_filebrowser	=	"Archivador"
+leaf_filestation	=	"Archivador"
 
 [upload]
 confirm_unload	=	"You are about to log out of {0} or refresh the page. Upload tasks will be cancelled."

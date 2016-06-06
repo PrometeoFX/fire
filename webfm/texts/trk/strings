@@ -748,8 +748,8 @@ make_to_dsm_dekstop	=	"Masaüstü kısayolu oluştur"
 
 [tree]
 leaf_about	=	"Hakkında"
-leaf_filebrowser	=	"File Station"
-leaf_filestation	=	"File Station"
+leaf_filebrowser	=	"Archivador"
+leaf_filestation	=	"Archivador"
 
 [upload]
 confirm_unload	=	"{0} oturumunuz kapanmak üzere, sayfayı yenileyin. Karşıya yükleme görevleri iptal edilecek."

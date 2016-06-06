@@ -748,8 +748,8 @@ make_to_dsm_dekstop	=	"Создать ярлык рабочего стола"
 
 [tree]
 leaf_about	=	"О продукте"
-leaf_filebrowser	=	"File Station"
-leaf_filestation	=	"File Station"
+leaf_filebrowser	=	"Archivador"
+leaf_filestation	=	"Archivador"
 
 [upload]
 confirm_unload	=	"Вы собираетесь выполнить выход из {0} или обновить страницу. Задачи выгрузки будут отменены."

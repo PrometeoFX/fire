@@ -748,8 +748,8 @@ make_to_dsm_dekstop	=	"Desktopverknüpfung erstellen"
 
 [tree]
 leaf_about	=	"Info"
-leaf_filebrowser	=	"File Station"
-leaf_filestation	=	"File Station"
+leaf_filebrowser	=	"Archivador"
+leaf_filestation	=	"Archivador"
 
 [upload]
 confirm_unload	=	"Sie sind dabei, sich von {0} abzumelden oder die Seite zu aktualisieren. Hochladungen werden abgebrochen."

@@ -748,8 +748,8 @@ make_to_dsm_dekstop	=	"Bureaubladsnelkoppeling maken"
 
 [tree]
 leaf_about	=	"Over"
-leaf_filebrowser	=	"File Station"
-leaf_filestation	=	"File Station"
+leaf_filebrowser	=	"Archivador"
+leaf_filestation	=	"Archivador"
 
 [upload]
 confirm_unload	=	"U staat op het punt om u af te melden bij {0} of de pagina te vernieuwen. De uploadtaken worden geannuleerd."

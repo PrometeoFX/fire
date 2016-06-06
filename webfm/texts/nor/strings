@@ -748,8 +748,8 @@ make_to_dsm_dekstop	=	"Opprett skrivebordssnarvei"
 
 [tree]
 leaf_about	=	"Om"
-leaf_filebrowser	=	"File Station"
-leaf_filestation	=	"File Station"
+leaf_filebrowser	=	"Archivador"
+leaf_filestation	=	"Archivador"
 
 [upload]
 confirm_unload	=	"Du er i ferd med å logge ut fra {0} eller oppdatere siden. Opplastingsoppgaver vil bli avbrutt."

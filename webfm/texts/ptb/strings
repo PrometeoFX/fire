@@ -748,8 +748,8 @@ make_to_dsm_dekstop	=	"Criar atalho na área de trabalho"
 
 [tree]
 leaf_about	=	"Sobre"
-leaf_filebrowser	=	"File Station"
-leaf_filestation	=	"File Station"
+leaf_filebrowser	=	"Archivador"
+leaf_filestation	=	"Archivador"
 
 [upload]
 confirm_unload	=	"Você está prestes a fazer logout de {0} ou atualizar a página. As tarefas de carregamento serão canceladas."
