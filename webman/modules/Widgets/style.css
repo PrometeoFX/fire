@@ -16,8 +16,7 @@
 .sds-widget-window.sds-window-v5 {
     width: 322px;
     box-shadow: none;
-    background: #f5faff;
-    background: rgba(245, 250, 255, 0.85);
+    background: #fff;
     border: 1px solid #AFB9C3
 }
 .ext-ie8 .sds-widget-window.sds-window-v5 {
@@ -185,8 +184,7 @@
 .syno-sds-widget {
     padding-bottom: 10px;
     border-radius: 3px;
-    background-color: #f5faff;
-    background-color: rgba(245, 250, 255, 0.7);
+    background-color: #fff;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5)
 }
 .syno-sds-widget.animate-move {
