@@ -1117,10 +1117,13 @@ a,
 		background-position:0px -96px !important;
 	}
 #sds-taskbar-showall{float:left}
-#sds-taskbar-showall .x-btn-ml,#sds-taskbar-showall .x-btn-mr{display:none;}
+#sds-taskbar-showall .x-btn-ml,#sds-taskbar-showall .x-btn-mr{
+	display:none;
+}
 #sds-taskbar-showall .x-btn-text{
-	width:22px;
+	width:15px;
 	height:39px;
+	border-right: 1px solid #ccc;
 }
 #sds-taskbar-showall .x-btn-mc{
 		background:transparent no-repeat;
