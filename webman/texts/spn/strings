@@ -1593,7 +1593,7 @@ shortcut	=	"Acceso directo"
 shortcut_existed	=	"Los siguientes accesos directos no se crearán porque ya están en su escritorio:"
 shortcut_zone_instruction	=	"Arrastre y suelte aplicaciones para crear accesos directos de escritorio"
 show_desktop	=	"Mostrar escritorio"
-taskbar_pin	=	"Clavar a la barra de tareas"
+taskbar_pin	=	"Anclar a la barra de tareas"
 taskbar_unpin	=	"Desclavar de la barra de tareas"
 upgrade_ie_browser	=	"Actualícese a la versión más reciente del navegador Internet Explorer para conseguir la mejor calidad."
 
